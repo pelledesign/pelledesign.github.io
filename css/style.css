@@ -17239,7 +17239,7 @@ height:100vh;
 
 .scroll-snap-container {
   /* overflow-y: scroll; */
-  overflow:auto;
+  /* overflow:auto; */
   scroll-snap-type: y proximity;
 /*   height:100vh; */
 }
