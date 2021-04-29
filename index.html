@@ -47,7 +47,7 @@
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 	
 		<!-- start test if touch device -->		
-<!-- 		<script>
+		<script>
 		function is_touch_device() {  
 		try {  
 		 document.createEvent("TouchEvent");  
@@ -56,7 +56,7 @@
 		 return false;  
 		}
 		}
-		</script> -->
+		</script>
 
 
 	
@@ -83,7 +83,7 @@
 	</script>
 		
 		<script>
-		alert('8');
+		alert('9');
 		</script>
 
 		<!-- start latest work --> 
@@ -2331,7 +2331,6 @@
 			</div>	 -->			
 		</div>
 
-	
 
 		<script type="text/javascript" src="js/lazyload.js"></script>
 		<script type="text/javascript" src="js/logos.js"></script>	
@@ -2342,7 +2341,25 @@
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>	<!-- only used for video popup -->
 		<script src="js/jquery.stellar.min.js"></script>		
+		<script src="js/rellax.min.js"></script>		
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/main.js"></script>	
+		<script src="js/stellar.js"></script>
+		<script src="js/load-more-button.js"></script>
 
+		<!-- add class scroll-snap-container to html or body based on device -->
+		<script>
+		<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
+		<!-- google dev tools might not pick up on it, so try it on the real device! -->
+		if(is_touch_device()) {
+			$('body').addClass('scroll-snap-container');
+		}
+		else
+		{ 
+		$('html').addClass('scroll-snap-container');
+		}
+		</script>
+		
 
 
 
