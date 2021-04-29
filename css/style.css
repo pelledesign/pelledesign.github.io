@@ -353,7 +353,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
@@ -364,10 +364,8 @@ body {
   background-color: #fff;
   -ms-touch-action: auto;
   touch-action: auto;
-/* overflow: hidden; */
-/*     height: 100%; */
 
-}
+} */
 
 /* html, body {
 height:100%;	
