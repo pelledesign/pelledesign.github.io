@@ -328,12 +328,12 @@ color:#d9d9d9;
 background-color: #fff;
 }
 
-*,
+/* *,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
+} */
 
 /* html {
   font-family: sans-serif;
@@ -15920,37 +15920,6 @@ overflow-y:hidden !important;
 }
 }
 
-/* width */
-::-webkit-scrollbar {
-/*   width: 5px; */
-  width: 0px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-/*   background: #f1f1f1; */  
-/* background: #303030; */
-background: none;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-/*   background: #888; */
-/*   background: #505050; */
-  background: none;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
-.hide-scrollbar
-{
-    -ms-overflow-style: none; /* IE 11 */
-    scrollbar-width: none; /* Firefox 64 */
-}
 
 #bagheera-process-popup img {
  height:100%;	
@@ -17171,12 +17140,12 @@ height: var(--this-height); width: calc(var(--this-height) * (16/9)); top: 50%; 
 
 
 
+	
 
 
-
-body {
+/* body {
     padding-top: 50px;
-}
+} */
 
 header {
   /*   background: #f5b335; */
