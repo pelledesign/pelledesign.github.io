@@ -17227,7 +17227,7 @@ height: calc(100vh - 50px) !important;
   scroll-snap-type: y mandatory;
 }
 .scroller {
-height:800px;
+height:100vh;
   scroll-snap-align: start;
 }
 
