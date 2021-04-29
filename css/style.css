@@ -328,14 +328,14 @@ color:#d9d9d9;
 background-color: #fff;
 }
 
-/* *,
+*,
 *::before,
 *::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-} */
+}
 
-/* html {
+html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -343,7 +343,7 @@ background-color: #fff;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
   background-color:#fff;
-} */
+}
 
 @-ms-viewport {
   width: device-width;
@@ -353,7 +353,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-/* body {
+body {
   margin: 0;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
@@ -364,8 +364,10 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   background-color: #fff;
   -ms-touch-action: auto;
   touch-action: auto;
+/* overflow: hidden; */
+/*     height: 100%; */
 
-} */
+}
 
 /* html, body {
 height:100%;	
@@ -11043,10 +11045,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-/* html {
+html {
   overflow-x: hidden;
 }
- */
+
 /* body {
   background: #fff;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -15919,6 +15921,37 @@ overflow-y:hidden !important;
 }
 }
 
+/* width */
+::-webkit-scrollbar {
+/*   width: 5px; */
+  width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+/*   background: #f1f1f1; */  
+/* background: #303030; */
+background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+/*   background: #888; */
+/*   background: #505050; */
+  background: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.hide-scrollbar
+{
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
+}
 
 #bagheera-process-popup img {
  height:100%;	
@@ -17139,12 +17172,12 @@ height: var(--this-height); width: calc(var(--this-height) * (16/9)); top: 50%; 
 
 
 
-	
 
 
-/* body {
+
+body {
     padding-top: 50px;
-} */
+}
 
 header {
   /*   background: #f5b335; */
