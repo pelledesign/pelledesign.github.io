@@ -46,3 +46,15 @@ html {
 .scroll-area:nth-of-type(4) {
   background: #8360A6;
 }
+
+
+
+.scroller {
+height:100vh;
+  scroll-snap-align: start;
+}
+
+.scroll-snap-container {
+  overflow: auto;
+  scroll-snap-type: y proximity;
+}
