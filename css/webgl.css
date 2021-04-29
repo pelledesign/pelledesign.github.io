@@ -1,0 +1,195 @@
+html {
+    height:100%;
+}
+ body{
+     font-family:arial,sans-serif;
+     color:white;
+     font-weight:100;
+     background-color:#ffffff;
+}
+ h2 {
+     font-weight:100;
+}
+ h3 {
+     font-weight:100;
+}
+ h4 {
+     font-weight:100;
+}
+ a:link{
+     text-decoration:none;
+     color:#777777;
+}
+ a:visited{
+     text-decoration:none;
+     color:#777777;
+}
+ a:active{
+     text-decoration:none;
+     color:#777777;
+}
+ a:focus{
+     text-decoration:none;
+     color:#777777;
+     outline: 0px solid #777777;
+}
+ a:hover{
+     text-decoration:none;
+     color:#ffffff;
+}
+ a img{
+     border: none;
+}
+ #Container{
+     background-color:#777777;
+     position: absolute;
+     left:0%;
+     top:0%;
+     width:100%;
+     height:100%;
+     border-width:0px;
+}
+ #GLCanvas{
+     position:absolute;
+     width:100%;
+     height:100%;
+     z-index:3;
+}
+ #Variants{
+     position:absolute;
+     top:0px;
+     left:0px;
+     width:8%;
+     height:100%;
+     z-index:5;
+     border-right:1px;
+     border-left:0px;
+     border-top:0px;
+     border-bottom:0px;
+     border-style:solid;
+     border-color:black;
+     overflow-x: hidden;
+    overflow-y: auto;
+}
+ #Variant{
+     position:relative;
+     top:5px;
+     left:5px;
+     width:85%;
+     background-color:transparent;
+    z-index:6;
+     margin-top:5px
+}
+ #HelpText{
+     position:absolute;
+     width:80%;
+     height:80%;
+     z-index:2;
+     text-align:left;
+     left:10%;
+     top:10%;
+     overflow: hidden;
+}
+ #ErrorText{
+     background-color:#ffffff;
+     position:absolute;
+     bottom:5%;
+     width:100%;
+     z-index:4;
+     text-align:center;
+     color:#777777;
+}
+ #GLPreview{
+     background-color:#777777;
+     background-repeat:no-repeat;
+     background-size:cover;
+     background-position:center;
+     display:block;
+     position:absolute;
+     width:100%;
+     height:100%;
+     z-index:3;
+     text-align:left;
+}
+ #Icon{
+     display:none;
+     position:absolute;
+     top:-6px;
+     right:-6px;
+     z-index:5;
+}
+ #Fold{
+     display:none;
+     position:absolute;
+     top:-6px;
+     right:-6px;
+     z-index:6;
+}
+ #Edge{
+     display:none;
+     position:absolute;
+     top:-6px;
+     right:-6px;
+     z-index:4;
+}
+ #STShadow{
+     position:absolute;
+     width:87%;
+     bottom:20px;
+     left:12%;
+     text-align:left;
+     color:#23487a;
+     z-index:4;
+     text-shadow:#555555 1px 1px 0px;
+}
+ #Logo{
+     position:absolute;
+     bottom:8px;
+     right:12%;
+     z-index:4;
+}
+ #LTShadow{
+     position:absolute;
+     width:89%;
+     height:10%;
+     top:0px;
+     left:10%;
+     text-align:left;
+     z-index:4;
+     text-shadow:#555555 1px 1px 0px;
+}
+ #TRL{
+     display:none;
+     position:fixed;
+     left:0px;
+     top:0px;
+     border-top: 100px solid black;
+     border-left: 50px solid transparent;
+     border-right: 50px solid transparent;
+     height: 0;
+     width: 100px;
+     opacity:0.2;
+     filter: alpha(opacity = 20);
+     -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.12)));
+}
+ #BX{
+     display:none;
+     position:fixed;
+     width:100%;
+     height:18%;
+     left:0px;
+     top:0px;
+     background-color:black;
+     opacity:0.2;
+     filter: alpha(opacity = 20);
+}
+#loading {
+     color: #555555;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     margin-top: -50px;
+     margin-left: -100px;
+     text-align: center;
+}
+ 

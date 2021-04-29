@@ -1,0 +1,16 @@
+{
+    "image": "web.2",
+    "model_sets": [
+        "Default"
+    ],
+    "multi_materials": [
+        {
+            "base_material": "Frame",
+            "sub_material": "Fire"
+        },
+        {
+            "base_material": "Side Piece",
+            "sub_material": "Cotton"
+        }
+    ]
+}

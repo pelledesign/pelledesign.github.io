@@ -1,0 +1,28 @@
+{
+    "image": "AKG.2",
+    "model_sets": [
+        "Default"
+    ],
+    "multi_materials": [
+        {
+            "base_material": "Pop Color",
+            "sub_material": "Pink"
+        },
+        {
+            "base_material": "Head Band",
+            "sub_material": "Nylon Weave"
+        },
+        {
+            "base_material": "Side Logo",
+            "sub_material": "Gold"
+        },
+        {
+            "base_material": "Mesh Logo",
+            "sub_material": "Gold"
+        },
+        {
+            "base_material": "Main Color",
+            "sub_material": "Gold"
+        }
+    ]
+}

@@ -1,0 +1,276 @@
+<head>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+<script>
+		$(function(){
+		  $(".lightbulb").load("images/process/bulb.svg"); 
+		  $(".folder").load("images/process/folder.svg"); 
+		  $(".box").load("images/process/box.svg"); 
+		  $(".evaluation").load("images/process/evaluation.svg"); 
+		});	
+</script>
+<script>
+$('#brainstorm-popup, #lateral-popup, #share-popup, #evaluate-popup, #cad-popup, #share-popup, #foam-popup, #contact-popup').addClass("popup fade-in-down mfp-hide");
+$("#popups .col-full").css({"height":"100%","display":"flex"});
+$('#popups .row').addClass("center-stuff-landscape"); $("#popups .row").css("margin","0px");
+$('.col1').addClass("col-xl-4 col-lg-5 row-lg-auto-portrait ml-auto mr-auto col1-padding"); <!-- $(".col1").css("padding","40px"); -->
+$('.col2').addClass("col-xl-6 col-lg-6 row-lg-auto-portrait ml-auto mr-auto mobile-hidden"); $(".col2").css({"height":"auto","display":"flex","align-items":"center"});
+$('.col2 > div').addClass("invisible flip-in-y"); $(".col2 > div").css({"width":"50%","margin-left":"auto","margin-right":"auto"});
+
+<!-- $(".col1").append('<div class="divider-normal mt-4"></div>') -->
+
+</script>	
+<style>
+#lateral-popup a {
+padding-right:10px;
+font-size:14px;
+}
+
+
+
+</style>
+</head>
+
+<html>
+<body>
+	<div id="popups"> 
+		<div id="brainstorm-popup" class="light-theme" style="background-color:gold;">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+						<h3 class="mb-4 section-title">Brain<strong>Storming</strong></h3>		  
+						<p> Brainstorming is a creative technique that is probably used in as many different ways as there are work places<br>
+						The one that is probably most commonly used, is the one where there is a whiteboard and you write down spontanous ideas on a topic, and that is pretty much all there is to it.</p>
+						<p>In design we use our research and analysis from the earlier design process phases and break it down to functions.<br>
+						In our user analysis, we might have encountered a problem with body injuries from a badly designed truck seat due to entering and exiting the truck cab. <br>We find that we must <strong>"facilitate exiting and entering"</strong> </p>
+						<p>We might also have done a context research and studied a hair salon, where employees have similar injuries (necks, backs shoulders etc). Now, we put the words "truck seat" and "hair salon" and our white board. This will make our brains </p>
+						<!-- <div class="divider-normal"></div> -->
+					</div>
+					<div class="col2">
+						<div class="box"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="lateral-popup" class="dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+					<h3 class="mb-4 section-title">Lateral <strong>Techniques</strong></h3>		  
+					<p> Lateral Thinking is a deliberate, systematic creative-thinking process that deliberately looks at challenges from completely different angles. <br>
+					By introducing specific, unconventional thinking techniques, lateral thinking enables thinkers to find novel solutions that would otherwise remain uncovered. Lateral thinking focuses on what could be rather than what is possible.</p>
+					<p> Techniques involved varies depending on the project, but may include:</p>
+					<div style="display:flex; flex-wrap: wrap;">
+						<a href="" target="_blank" ><strong>Brainstorming</strong></a>
+						<a href="https://en.wikipedia.org/wiki/S.C.A.M.P.E.R" target="_blank" ><strong>Scamper</strong></a>
+						<a href="https://en.wikipedia.org/wiki/SWOT_analysis" target="_blank" ><strong>Swot Analysis</strong></a>	
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Group Sketching</strong></a>
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Swot Analysis</strong></a>	
+					</div>								  					  						  
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="share-popup" class="dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+						<h3 class="mb-4 section-title">Shared <strong>Folders</strong></h3>		  
+						<p> Using Shared Cloud Folders.. <br>Headphones for Vienna based audio products company AKG. <br>
+						Retro styled light-weight and easy to handle headphones with focus on comfort.	
+						</p>
+					</div>
+					<div class="col2">
+						<div class="folder"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="evaluate-popup" class="dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+						<h3 class="mb-4 section-title">Concept <strong>Evaluation</strong></h3>		  
+						<p> In Product Design a design concepts functionality is evaluated by studying the products interaction with the users and its surroundings.</p>
+						<p> Breaking down the interactions to functions, we then organize them in flowcharts that visualize issues that might not be immidiately visible to the named eye.<br>
+						Some areas may then stand out as problematic, and it may be considered an area that needs to be refined or re-done   		  
+						</p>
+					</div>
+					<div class="col2">
+						<div class="evaluation"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="cad-popup" class="dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+						<h3 class="mb-5 section-title">Computer <strong>Aided </strong>Design</h3>		  
+						<p> Or "CAD" is the use of computers to aid in the creation, modification, analysis, or optimization of a design.</p>
+						<p> CAD software is used to increase the productivity of the designer, improve the quality of design, improve communications through documentation, and to create a database for manufacturing.</p>
+						<p>CAD output is often in the form of electronic files for print, machining, or other manufacturing operations.</p>
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+<!-- 		<div id="foam-popup" class="popup fade-in-down mfp-hide c-lg">
+				<div class="row c-lg">
+				  <div class="col-lg-6 mr-auto ml-auto popup-padding-margin">
+					 <h3 class="mb-4 section-title">Foam <strong>Modeling</strong></h3>		  
+					 <p> Lateral ... <br>Headphones for Vienna based audio products company AKG. <br>
+					Retro styled light-weight and easy to handle headphones with focus on comfort.	
+					</p>
+				  </div>
+				  <div class="col-lg-6 mobile-hidden" style="text-align:center;">
+				  <div style="width:100%; height:100%;" class="lazy">		
+					<img src="images/process/foam.png" data-src="images/process/foam.png"  style="object-fit:contain;  height:100%; width:100%;">
+				  </div>			
+				  </div>
+				</div>  
+		</div> -->
+		<div id="contact-popup" class="popup fade-in-down mfp-hide c-lg light-theme">
+			<div class=" c-lg">
+				<div class="container">
+					<div class="section" id="contact">
+						<div class="">
+							<h3 class="mb-4 section-title row align-items-center justify-content-center" style="color:black;">Contact&nbsp; <strong>Me</strong></h3>
+							<div class="row">
+								<div class="col-md mb-5 order-2">
+									<form action="https://formspree.io/xknqbela" method="post">
+										<div class="row">
+											<div class="col-md-6 form-group">
+												 <label for="name">Name</label>
+												 <input type="text" id="name" name="name" class="form-control ">
+											</div>
+											<div class="col-md-6 form-group">
+												 <label for="phone">Phone</label>
+												 <input type="text" id="phone" name="phone" class="form-control ">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 form-group">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 form-group">
+												 <label for="email">Email</label>
+												 <input type="email" id="email" name="_replyto" class="form-control ">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12 form-group">
+												 <label for="message">Write Message</label>
+												 <textarea name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6-left form-group">
+												<input type="submit" value="Send Message" class="btn btn-primary px-3 py-3">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<div id="product-design-popup" class="popup fade-in-down mfp-hide c-lg dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+					<h3 class="mb-4 section-title">Product <strong>Design</strong></h3>		  
+					<p>From rough concept idea, to polished end product, I take care of the whole design process</p>
+					<div style="display:flex; flex-wrap: wrap;">
+<!-- 						<a href="" target="_blank" ><strong>Brainstorming</strong></a>
+						<a href="https://en.wikipedia.org/wiki/S.C.A.M.P.E.R" target="_blank" ><strong>Scamper</strong></a>
+						<a href="https://en.wikipedia.org/wiki/SWOT_analysis" target="_blank" ><strong>Swot Analysis</strong></a>	
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Group Sketching</strong></a>
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Swot Analysis</strong></a>	 -->
+					</div>								  					  						  
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="ideation-design-popup" class="popup fade-in-down mfp-hide c-lg dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+					<h3 class="mb-4 section-title">Concept <strong>Ideation</strong></h3>		  
+					<p>Got an idea and want me to generate concepts from it? I'm up for it!</p>
+<!-- 					<div style="display:flex; flex-wrap: wrap;">
+						<a href="" target="_blank" ><strong>Brainstorming</strong></a>
+						<a href="https://en.wikipedia.org/wiki/S.C.A.M.P.E.R" target="_blank" ><strong>Scamper</strong></a>
+						<a href="https://en.wikipedia.org/wiki/SWOT_analysis" target="_blank" ><strong>Swot Analysis</strong></a>	
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Group Sketching</strong></a>
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Swot Analysis</strong></a>	
+					</div> -->								  					  						  
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div> 		
+		<div id="modeling-design-popup" class="popup fade-in-down mfp-hide c-lg dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+					<h3 class="mb-4 section-title">Modeling <strong>& Rendering</strong></h3>		  
+					<p>I create models with clean surfaces made with love - ready to send to manufacturer or rapid prototyping</p>
+<!-- 					<div style="display:flex; flex-wrap: wrap;">
+						<a href="" target="_blank" ><strong>Brainstorming</strong></a>
+						<a href="https://en.wikipedia.org/wiki/S.C.A.M.P.E.R" target="_blank" ><strong>Scamper</strong></a>
+						<a href="https://en.wikipedia.org/wiki/SWOT_analysis" target="_blank" ><strong>Swot Analysis</strong></a>	
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Group Sketching</strong></a>
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Swot Analysis</strong></a>	
+					</div>	 -->							  					  						  
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div> 		
+		<div id="branding-design-popup" class="popup fade-in-down mfp-hide c-lg dark-theme">
+			<div class="col-full">
+				<div class="row">
+					<div class="col1">
+					<h3 class="mb-4 section-title">Branding <strong></strong></h3>		  
+					<p>I can make your products become a family that belong together. From graphic profile to form guidelines, I'll create a package for you that makes your products stick together in the future. </p>
+<!-- 					<div style="display:flex; flex-wrap: wrap;">
+						<a href="" target="_blank" ><strong>Brainstorming</strong></a>
+						<a href="https://en.wikipedia.org/wiki/S.C.A.M.P.E.R" target="_blank" ><strong>Scamper</strong></a>
+						<a href="https://en.wikipedia.org/wiki/SWOT_analysis" target="_blank" ><strong>Swot Analysis</strong></a>	
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Group Sketching</strong></a>
+						<a href="Converse/webgl/shaded.html" target="_blank" ><strong>Swot Analysis</strong></a>	
+					</div>	 -->							  					  						  
+					</div>
+					<div class="col2">
+						<div class="lightbulb"></div>	
+					</div>
+				</div>
+			</div>  
+		</div>
+		<div id="webconfig-info-popup" class="popup fade-in mfp-hide c-lg dark-theme" style="z-index:9999999999;">
+			<div class="col">
+				<h3 class="mb-4 section-title">Info <strong></strong></h3>		  
+				<p>Use the color selector to explore different color, material and finish configurations</p>						  					  						  
+			</div>  
+		</div> 		
+	<script src="js/stellar.js"></script>
+<!-- 	<script type="text/javascript" src="js/magnific.js"></script> -->
+	
+</body>
+</html>

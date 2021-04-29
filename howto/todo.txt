@@ -1,0 +1,49 @@
+
+/* general */
+menubar + hero
+how show "pdf viewer on mobile?
+overlay colors - fade out bg instead?
+kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+bagheera new color, simple bright	
+check width 991. - check xs, md etc check small especially
+check all browsers
+/* converse */
+make one rough key sketch
+
+/* akg */
+/* poc */
+/* bagheera */
+/* colors slide / popup */
+/* haglöfs */
+one more img
+
+/* specialized */
+/* bel mar */
+text
+finish model
+
+/* design process */
+/* footer */
+
+
+function övrigt (
+tandtråd
+veckoplan när klart med detta - även privata måbra saker
+
+skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
+update pdf portfolio 
+ 
+watch .git
+
+.portrait-col-12 justerar höjd automatiskt istället för en bestämd procent
+
+
+march: with about: 35, 39
+without: 58
+
+78
+52-57 with about slider
+speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43
+lighthouse: desktop: 72, 79	
+lighthouse: mobile:	39, 
+)

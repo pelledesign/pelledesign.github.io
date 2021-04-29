@@ -1,0 +1,25 @@
+body {
+/* background-color:#212121 !important;	 */
+/* border: 1px solid #343434; */
+}
+
+
+.text-color,
+.ksfont-angle-dbl-left,
+.ksfont-angle-dbl-right,
+h3,
+.counter {
+color: #fff !important;	
+}
+
+.flowthumbnailitem > div.selected, 
+.flowthumbnailitem > div.selected:hover,
+.flowthumbnailitem > div:hover {
+border-color: #fff !important;		
+}
+
+.flowheadertext::after {
+    content: var(--headertext-value);
+    font-weight: normal;
+	 color:#fff
+}
