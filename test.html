@@ -8,46 +8,39 @@
 </head>
 
 	<body class="scroll-container">
-<!-- <div class="support-scrollsnap"></div> -->
-
-
-<!-- 	<div class="scroll-area">1</div>
-	<div class="scroll-area">2</div>
-	<div class="scroll-area">3</div>
-	<div class="scroll-area">4</div>
- -->
 	
-	  <div class="scroller" style="background:red"></div>
-	  <div class="scroller" style="background:green"></div>
-	  <div class="scroller" style="background:red"></div>
-	  <div class="scroller" style="background:green"></div>
-			<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-			
-			<!-- start test if touch device -->		
-<!-- 			<script>
-			function is_touch_device() {  
-			try {  
-			 document.createEvent("TouchEvent");  
-			 return true;  
-			} catch (e) {  
-			 return false;  
-			}
-			}
-			</script>
+		<div class="scroller" style="background:red"></div>
+		<div class="scroller" style="background:green"></div>
+		<div class="scroller" style="background:red"></div>
+		<div class="scroller" style="background:green"></div>
+	  
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-			<script>
-			if(is_touch_device()) {
-				$('body').addClass('scroll-snap-container');
-			}
-			else
-			{ 
-			$('html').addClass('scroll-snap-container');
-			}
-			</script> -->
-			
-			<script>
-			alert('6');
-			</script>
+		<!-- start test if touch device -->		
+		<script>
+		function is_touch_device() {  
+		try {  
+		document.createEvent("TouchEvent");  
+		return true;  
+		} catch (e) {  
+		return false;  
+		}
+		}
+		</script>
+
+		<script>
+		if(is_touch_device()) {
+		$('body').addClass('scroll-snap-container');
+		}
+		else
+		{ 
+		$('html').addClass('scroll-snap-container');
+		}
+		</script>
+
+		<script>
+		alert('7');
+		</script>
 
 	</body>
 </html>		
