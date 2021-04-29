@@ -335,7 +335,7 @@ background-color: #fff;
   box-sizing: border-box;
 }
 
-html {
+/* html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -343,7 +343,7 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
   background-color:#fff;
-}
+} */
 
 @-ms-viewport {
   width: device-width;
@@ -353,7 +353,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
-body {
+/* body {
   margin: 0;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
@@ -364,10 +364,9 @@ body {
   background-color: #fff;
   -ms-touch-action: auto;
   touch-action: auto;
-/* overflow: hidden; */
-/*     height: 100%; */
 
-}
+
+} */
 
 /* html, body {
 height:100%;	
@@ -11045,20 +11044,19 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-html {
+/* html {
   overflow-x: hidden;
 }
-
-body {
+ */
+/* body {
   background: #fff;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.8;
   color: #6c757d;
-/*   color: #212121; */
 }
-
+ */
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
@@ -17176,9 +17174,9 @@ height: var(--this-height); width: calc(var(--this-height) * (16/9)); top: 50%; 
 
 
 
-body {
+/* body {
     padding-top: 50px;
-}
+} */
 
 header {
   /*   background: #f5b335; */
