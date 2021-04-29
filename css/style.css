@@ -355,7 +355,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 /* messes up on phone close */
 
-/* body {
+body {
   margin: 0;
   font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
@@ -367,7 +367,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   -ms-touch-action: auto;
   touch-action: auto;
 
-} */
+}
 
 /* body {
   background: #fff;
@@ -11054,10 +11054,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-/* html {
+html {
   overflow-x: hidden;
 }
- */
+
 
 
 a {
@@ -17168,9 +17168,7 @@ height: var(--this-height); width: calc(var(--this-height) * (16/9)); top: 50%; 
 }
 
 
-
-
-
+/* messes up on phone close */
 
 /* body {
     padding-top: 50px;
