@@ -335,7 +335,7 @@ background-color: #fff;
   box-sizing: border-box;
 }
 
-/* html {
+html {
   font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -343,7 +343,7 @@ background-color: #fff;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
   background-color:#fff;
-} */
+}
 
 @-ms-viewport {
   width: device-width;
