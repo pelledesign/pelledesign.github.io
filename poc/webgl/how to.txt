@@ -1,3 +1,0 @@
-the css for the wbgl.html file
-is overridden by main style.css
-check custom section to do changes
