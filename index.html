@@ -66,45 +66,7 @@
 	</head>
 
 <body> <!-- height:100%; overflow:unset;" -->
-		<!-- start header -->
-		<header id="header" role="banner" class="nav-down x-theme bg-none">
-			 <nav class="navbar navbar-transparent navbar-expand-xl " style="align-items: normal; height:100%; padding:0;">
-				<div class="container-fluid x-theme" style="align-items: normal;">
-				  <a href="index.html" class="text-logo" style="padding-left:1rem; max-height:50px;">Pelle iDesign</a>
-				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
-					 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
-					 <span class="navbar-toggler-icon"></span>
-				  </button>				
-				  <div class="collapse navbar-collapse" id="navbarsExample06">
-					 <ul class="navbar-nav pl-md-5 ml-auto c-all">								
-						<li class="nav-item">
-						  <a class="nav-link" href="#portfolio">Latest Work</a>
-						</li>	
-						<li class="nav-item">									
-						  <a href="#designprocess-slider" title="Project Info" class="nav-link">How I Work</a>
-						</li>			
-						<li class="nav-item">
-						  <a class="nav-link" href="#services">Services</a>
-						</li>			
-						<li class="nav-item">
-						  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
-						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="test.html">Test Site</a>              
-						</li>
-						<li class="nav-item flex-xl-up c-lg">
-						  <p class="nav-link" style="padding-bottom: 0 !important;">Theme</p>    
-							<div id="theme-switcher-menu" class=" flex justify-content-center">
-							<div id="" class="dark-theme-button theme-circle dark"></div>
-							<div id="" class="light-theme-button theme-circle light"></div>					
-							</div>							  
-						</li>
-					 </ul>
-				  </div>
-				</div>
-			 </nav>
-		</header>	
-<div id="test" class="test">
+<!-- <div id="test" class="test"> -->
   <div class="scroller" style="background:red"></div>
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
@@ -113,14 +75,14 @@
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
   </div>
-</div>
+<!-- </div> -->
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
 
 	<script>
 
 	if(is_touch_device()) {
-		$('html').css({"height":"110%","overflow":"scroll"});
+		$('html').css({"height":"100%","overflow":"scroll"});
 		$('body').css({"height":"100%","overflow":"scroll","scroll-snap-type":"y proximity"});
 		$('.scroller').css({"height":"100vh"});		
 	}
@@ -158,7 +120,7 @@
 	</script> -->
 		
 		<script>
-		alert('knulla thereses stjärt');
+		alert('knulla thereses mun och stjärt');
 		</script>
 
 
@@ -4491,52 +4453,7 @@
 		<script src="js/stellar.js"></script>
 		<script src="js/load-more-button.js"></script>
 
-		<!-- header hide/show -->
-		<script>
-		// Hide Header on on scroll down
-		var didScroll;
-		var lastScrollTop = 0;
-		var delta = 5;
-		var navbarHeight = $('header').outerHeight();
 
-		$(window).scroll(function(event){
-			 didScroll = true;
-		});
-
-		setInterval(function() {
-			 if (didScroll) {
-				  hasScrolled();
-				  didScroll = false;
-			 }
-		}, 250);
-
-		function hasScrolled() {
-			 var st = $(this).scrollTop();
-			 
-			 // Make sure they scroll more than delta
-			 if(Math.abs(lastScrollTop - st) <= delta)
-				  return;
-			 
-			 // If they scrolled down and are past the navbar, add class .nav-up.
-			 // This is necessary so you never see what is "behind" the navbar.
-			 if (st > lastScrollTop && st > navbarHeight){
-				  // Scroll Down
-				  
-				  if (!$('.navbar-collapse').hasClass('show')) {
-					  <!-- alert('has class show'); -->
-					  $('header').removeClass('nav-down').addClass('nav-up');
-				  }
-				  
-			 } else {
-				  // Scroll Up
-				  if(st + $(window).height() < $(document).height()) {
-						$('header').removeClass('nav-up').addClass('nav-down');
-				  }	  
-			 }
-			 
-			 lastScrollTop = st;
-		}
-		</script>
 
 		<!-- fullscreen -->
 		<script>
