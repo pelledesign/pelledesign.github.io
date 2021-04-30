@@ -66,17 +66,15 @@
 	</head>
 
 <body> <!-- height:100%; overflow:unset;" -->
-<div class="babb">
-	<div id="test" class="test">
-	  <div class="scroller" style="background:red"></div>
-	  <div class="scroller">
-			<div class="inner hw100 invisible zoom-in" style="background:green"></div>
-	  </div>
-	  <div class="scroller" style="background:red"></div>
-	  <div class="scroller">
-			<div class="inner hw100 invisible zoom-in" style="background:green"></div>
-	  </div>
-	</div>
+<div id="test" class="test">
+  <div class="scroller" style="background:red"></div>
+  <div class="scroller">
+		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
+  </div>
+  <div class="scroller" style="background:red"></div>
+  <div class="scroller">
+		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
+  </div>
 </div>
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
@@ -84,11 +82,10 @@
 	<script>
 
 	if(is_touch_device()) {
-		//$('html').css({"height":"100%","overflow":"scroll"});
-		//$('body').css({"height":"100%","overflow":"scroll"});
-		<!-- $('.babb').css({"height":"100%"}); -->
-		<!-- $('.test').css({"height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"}); -->
-		<!-- $('.scroller').css({"height":"100vh"});		 -->
+		$('html').css({"height":"100%","overflow":"scroll"});
+		$('body').css({"height":"100%","overflow":"scroll"});
+		$('.test').css({"height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"});
+		$('.scroller').css({"height":"100vh"});		
 	}
 	else
 	{ 	
@@ -110,7 +107,7 @@
 	</script> -->
 		
 		<script>
-		alert('1');
+		alert('2');
 		</script>
 
 <!-- 		<script>
