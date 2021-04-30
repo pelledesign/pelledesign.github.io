@@ -82,9 +82,9 @@
 	$('.inner').css({"height":"100%","width":"100%"});
 
 	if(is_touch_device()) {
-		$('html').css({"height":"100vh","overflow":"unset"});
+		$('html').css({"height":"100vh","overflow":"hidden"});
 		//$('body').addClass('scroll-snap-container');
-		$('.test').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity"});
+		$('body').css({"height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"});
 		$('.scroller').css({"height":"100vh"});		
 	}
 	else
@@ -94,7 +94,7 @@
 	</script>
 		
 		<script>
-		alert('11');
+		alert('0');
 		</script>
 
 
