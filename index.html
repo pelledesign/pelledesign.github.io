@@ -83,19 +83,25 @@
 
 	if(is_touch_device()) {
 		$('html').css({"height":"100vh","overflow":"hidden"});
-		//$('body').addClass('scroll-snap-container');
 		$('body').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity"});
 		$('.scroller').css({"height":"100vh"});		
 	}
 	else
-	{ 
+	{ 	
 	$('html').addClass('scroll-snap-container');
 	}
 	</script>
 		
 		<script>
-		alert('00');
+		alert('1');
 		</script>
+
+<!-- 		<script>
+var waypoint = new Waypoint({
+  context: document.body
+})
+		</script> -->
+
 
 
 		<!-- start latest work --> 
@@ -2352,13 +2358,567 @@
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>	<!-- only used for video popup -->
 		<script src="js/jquery.stellar.min.js"></script>		
-<!-- 		<script src="js/rellax.min.js"></script>		
+		<script src="js/rellax.min.js"></script>		
 		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/main.js"></script>	 -->
+		<script src="js/main.js"></script>	
 		<script src="js/stellar.js"></script>
-<!-- 		<script src="js/load-more-button.js"></script> -->
+		<script src="js/load-more-button.js"></script>
+
+		<!-- header hide/show -->
+
+		<script>
+		// Hide Header on on scroll down
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			 didScroll = true;
+		});
+
+		setInterval(function() {
+			 if (didScroll) {
+				  hasScrolled();
+				  didScroll = false;
+			 }
+		}, 250);
+
+		function hasScrolled() {
+			 var st = $(this).scrollTop();
+			 
+			 // Make sure they scroll more than delta
+			 if(Math.abs(lastScrollTop - st) <= delta)
+				  return;
+			 
+			 // If they scrolled down and are past the navbar, add class .nav-up.
+			 // This is necessary so you never see what is "behind" the navbar.
+			 if (st > lastScrollTop && st > navbarHeight){
+				  // Scroll Down
+				  
+				  if (!$('.navbar-collapse').hasClass('show')) {
+					  <!-- alert('has class show'); -->
+					  $('header').removeClass('nav-down').addClass('nav-up');
+				  }
+				  
+			 } else {
+				  // Scroll Up
+				  if(st + $(window).height() < $(document).height()) {
+						$('header').removeClass('nav-up').addClass('nav-down');
+				  }	  
+			 }
+			 
+			 lastScrollTop = st;
+		}
+		</script>
+
+		<!-- fullscreen -->
+		<script>
+
+		$('.fullscreen').on('click', function () {
 
 
+			 var docelem = document.documentElement;
+
+
+				  if (docelem.requestFullscreen) {
+						docelem.requestFullscreen();
+				  }
+				  else if (docelem.mozRequestFullScreen) {
+						docelem.mozRequestFullScreen();
+				  }
+				  else if (docelem.webkitRequestFullScreen) {
+						docelem.webkitRequestFullScreen();
+				  }
+				  else if (docelem.msRequestFullscreen) {
+						docelem.msRequestFullscreen();
+				  }
+
+		});
+		</script>
+
+		<!-- x-theme -->
+		<script>
+		$('.dark-theme-button').on('click',function(){
+		$('.light-theme-button').removeClass('circle-shadow');
+			$(this).addClass('circle-shadow');
+			$('body').css({"background-color": darkBg});
+			$('body').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');
+			$('body').find(".x-theme, .fadeout-top, .fadeout-btm, .title").removeClass('light-theme').addClass('dark-theme');
+			$('body').find(".dropshadow").removeClass('dropshadow-light-theme').addClass('dropshadow-dark-theme');
+		});
+
+		$('.light-theme-button').on('click',function(){
+			$('body').css({"background-color": "#fff"});
+			$('.dark-theme-button').removeClass('circle-shadow');
+			$(this).addClass('circle-shadow');
+			$('body').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
+			$('body').find(".x-theme, .fadeout-top, .fadeout-btm, .title").removeClass('dark-theme').addClass('light-theme');
+			$('body').find(".dropshadow").removeClass('dropshadow-dark-theme').addClass('dropshadow-light-theme');
+		});
+		</script>
+
+		<!-- select icons -->
+		<script>
+		$('.zoom-icon').addClass('ion-ios-search-strong');
+		//$('.scroll-down').addClass('ion-android-arrow-dropdown-circle');
+		</script>
+		
+		<!-- start add more-icons  -->
+		<script>
+		if(is_touch_device()) {
+			$('.owl-carousel, #poc, #process-md-down').find('.textoverlay:not(.no-more-icon), .textoverlay-mobile:not(.no-more-icon)').not('.textoverlay.no-more-icon').prepend('<div class="ion-android-add big more-icon"></div>');
+		}
+		else
+		{ 
+		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add-circle big more-icon"></div>');
+		}
+		</script>
+		
+		<!-- rellax -->
+		<script>
+		  var rellax = new Rellax('.rellax', {
+			 breakpoints:[576, 768, 1201]
+		  });
+		</script>
+
+		<!-- add theme clr classes -->
+		<script>
+		
+		var darkBg = '#121212';		
+		
+		if(is_touch_device()) {
+		var theme = 'light-theme'; //	touch
+		}
+		else
+		{ 
+		var theme = 'light-theme'; // desktop			
+		}		
+				
+		if (theme == 'light-theme') {
+		$('body').css({"background-color": "#fff"});
+		$('.light-theme-button').addClass('circle-shadow');
+		}
+		else {
+		//$('body').css({"background-color": "#141414"});
+		$('body').css({"background-color": darkBg});
+		$('.dark-theme-button').addClass('circle-shadow');
+		//$('body').addClass('contrast-bg');
+		}
+		$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
+		$('body').find(".x-theme ,fadeout-top, fadeout-btm, .title").addClass(theme);
+		$('body').find(".title").addClass(theme).addClass('bg-none');
+		$('body').find(".dropshadow").addClass('dropshadow-' + theme);
+		</script>	
+
+<!-- 		<script>
+		if(is_touch_device()) {
+			$('.owl-carousel, #poc, #process-md-down').find('.textoverlay').prepend('<div class="ion-android-add more-icon"></div>');
+		}
+		else
+		{ 
+		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add more-icon"></div>');
+		}
+		</script> -->
+		
+		<!-- start reload iframe  -->							
+		<script>	
+		  $('.ion-refresh').on('click',function(){
+			iframe = $(this).closest('.iframe-container').find('iframe').first();
+			iframe.attr('src', iframe.attr('src'));				
+		  });
+		</script>
+		
+		<!-- start hide scroll-down icon  -->
+		<script>	
+		  $('.scrolldown-container').on('touchstart scroll',function(){
+			$(this).find('.scroll-down').addClass('invisible');			
+		  });
+		</script>		
+		
+		<!-- start touch and desktop hidden  -->
+		<script>
+		if(is_touch_device()) {
+			$('.touch-hidden').addClass('hidden');
+		}
+		else
+		{ 
+		$('.desktop-hidden').addClass('hidden');			
+		}
+		</script>
+		
+		<!-- start textoverlay  -->
+		<script>
+		if(is_touch_device()) {
+		  $('.textoverlay .overlay, .textoverlay-mobile .overlay').on('touchstart',function(){
+			 $(this).addClass('img-opacity');
+			 $(this).closest('.textoverlay').find('.ion-android-add').addClass('opacity-0');
+			 $(this).find('.text-animate').addClass('remove-margin');
+		  });
+			 $('.textoverlay, .textoverlay-mobile').not('.ion-android-add-circle').on('touchend',function(){
+			 $(this).find('.overlay').removeClass('img-opacity');
+			 $(this).closest('.textoverlay').find('.ion-android-add').removeClass('opacity-0');
+			 $(this).find('.text-animate').removeClass('remove-margin');
+		  });
+		}
+		else
+		{ 
+		  $('.textoverlay, .textoverlay-desktop').on('mouseenter',function(){
+			 $(this).find('.overlay').addClass('img-opacity');
+			 <!-- $(this).find('.ion-android-add').addClass('opacity-0'); -->
+			 $(this).find('.ion-android-add-circle').addClass('invisible');
+			 $(this).find('.text-animate').addClass('remove-margin');
+		  });
+			 $('.textoverlay, .textoverlay-desktop').on('mouseleave',function(){
+			 $(this).find('.overlay').removeClass('img-opacity');
+			 <!-- $(this).find('.ion-android-add').removeClass('opacity-0'); -->
+			 $(this).find('.ion-android-add-circle').removeClass('invisible');
+			 $(this).find('.text-animate').removeClass('remove-margin');
+		  });	
+		}
+		</script>
+		<!-- start textoverlay-inverse  -->		
+		<script>
+		if(is_touch_device()) {
+		  $('.textoverlay-inverse').on('touchstart',function(){
+			 $(this).find('.overlay').removeClass('img-opacity');
+			 $(this).find('.overlay').addClass('invisible');
+			 $(this).find('.text-animate').addClass('remove-margin');
+		  });
+			 $('.textoverlay-inverse').on('touchend',function(){
+			 $(this).find('.overlay').addClass('img-opacity');
+			  $(this).find('.overlay').removeClass('invisible');
+			 $(this).find('.text-animate').removeClass('remove-margin');
+		  });				
+		}
+		else
+		{
+		  $('.textoverlay-inverse').on('mouseenter',function(){
+			 $(this).find('.overlay').removeClass('img-opacity');
+			 $(this).find('.overlay').addClass('invisible');
+			 $(this).find('.text-animate').addClass('remove-margin');
+		  });
+			 $('.textoverlay-inverse').on('mouseleave',function(){
+			 $(this).find('.overlay').addClass('img-opacity');
+			  $(this).find('.overlay').removeClass('invisible');
+			 $(this).find('.text-animate').removeClass('remove-margin');
+		  });			
+		}
+		</script>
+		
+		<!-- start icon animations  -->	
+		<script>
+		if(is_touch_device()) {
+		}
+		else
+		{ 
+		  $('.info-icon').on('mouseenter',function(){
+			 $(this).find('div').removeClass("flip-in-y flipInY element-animated").addClass("flipInY element-animated");  
+		  });
+			 $('.info-icon').on('mouseleave',function(){
+			 $(this).find('div').removeClass("flipInY element-animated");
+		  });
+		  $('.zoom-icon').on('mouseenter',function(){
+			 $(this).addClass('info-icon-hover');
+		  });
+			 $('.zoom-icon').on('mouseleave',function(){
+			 $(this).removeClass('info-icon-hover');
+		  });
+		  $('.soft-zoom').on('mouseenter',function(){
+			 $(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
+		  });
+			 $('.soft-zoom').on('mouseleave',function(){
+			 $(this).addClass('zoomOutVisible animated-fast');
+		  });
+		}
+		</script>
+
+		<!-- start toggle xr styles  -->
+		<script>	
+			$(".akg, .bagheera, .bagheera-process, .converse, .converse-more, .poc, .poc-process, .specialized, .haglofs, .alcon, .akg-process").on("load", function() {
+			themeclr ="light";
+			brand = $(this).attr('class').split(' ')[0];
+<!-- console.log(brand); -->
+				$('#' + brand + '-xr-popup #bg-button').click(function(){
+					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("dark-theme");
+				});
+				$('#' + brand + '-xr-popup #bg-button2').click(function(){
+					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("light-theme");
+				});
+				$('#' + brand + '-xr-popup #bg-button3').click(function(){
+					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
+				});
+			
+			  head = $('.' + brand).contents().find("head");	
+				css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme-spinner.css">';
+			  $(head).append(css);
+				$('#' + brand + '-xr-popup').removeClass("loader");	  		
+			});
+		</script>
+
+		<!-- start inject web config styles  -->
+		<script>
+			$(".akg-webconfig, .converse-webconfig, .specialized-webconfig, .akg-webconfig-process").on("load", function() {
+			
+			themeclr ="dark";	
+			brand2 = $(this).attr('class').split(' ')[0];
+
+			$('#' + brand2 + '-popup' + ' div.ion-information-circled').addClass(themeclr +"-theme-btn");
+
+			  let head = $("." + brand2).contents().find("head");	
+			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+			  $(head).append(css);
+			  $('.' + brand2).addClass("visible");
+			});
+		</script>
+		<script>
+			$(".bagheera-webconfig").on("load", function() {
+			
+			themeclr ="medium";	
+			brand2 = $(this).attr('class').split(' ')[0];
+
+			$('#' + brand2 + '-popup' + ' div.ion-information-circled').addClass(themeclr +"-theme-btn");
+
+			  let head = $("." + brand2).contents().find("head");	
+			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+			  $(head).append(css);
+			  $('.' + brand2).addClass("visible");
+			});
+		</script>
+<!-- 		<script>
+			$(".akg-webconfig-process").on("load", function() {
+			
+			themeclr ="light";	
+			brand2 = $(this).attr('class').split(' ')[0];
+
+			$('#' + brand2 + '-popup' + ' div.ion-information-circled').addClass(themeclr +"-theme-btn");
+
+			  let head = $("." + brand2).contents().find("head");	
+			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+			  $(head).append(css);
+			  $('.' + brand2).addClass("visible");
+			});
+		</script> -->	
+				
+		<!-- start magnific -->		
+		<script>
+			let magnificPopupExists = false;
+
+			$('.open-popup').magnificPopup({	
+				type:'inline',
+				fixedContentPos: true,
+				fixedBgPos: true,
+				callbacks: {
+					beforeOpen: function() {		
+						$('html, body').addClass('mfp-active');
+						
+					},
+					beforeClose: function() {
+						$('html, body').removeClass('mfp-active');								
+					},			
+					open: function() {
+						magnificPopupExists = true;
+					},
+					close: function() {
+						magnificPopupExists = false;
+
+					//exit fullscreen on close popup
+					 var docElm = document.documentElement;
+
+						  if (document.exitFullscreen) {
+								document.exitFullscreen();
+						  } else if (document.webkitExitFullscreen) {
+								document.webkitExitFullscreen();
+						  } else if (document.mozCancelFullScreen) {
+								document.mozCancelFullScreen();
+						  } else if (document.msExitFullscreen) {
+								document.msExitFullscreen();
+						  }
+
+						
+					}		
+				}		
+			});
+
+			$(window).on('orientationchange', function(){
+				let closeVar,
+				openVar,
+				magnificPopup = $.magnificPopup.instance,
+				cur = magnificPopup.contentContainer,	
+				cur_firstchild = cur.children().first(),
+				popup_id = '#' + cur_firstchild.attr('id'); 	
+
+				function delayedClose() {
+					closeVar = setTimeout(closePopup, 0);
+				}
+				function delayedOpen() {
+					openVar = setTimeout(openPopup, 0); // watch refresh fix timout event in main here
+				}
+				function closePopup() {
+					magnificPopup.close(); 
+				}		
+				function openPopup() {
+					$.magnificPopup.open({
+						items: {
+							src: popup_id
+						},
+						type: 'inline',
+						fixedContentPos: true,
+						fixedBgPos: true,		
+				callbacks: {
+					beforeOpen: function() {		
+					$('html, body').addClass('mfp-active');
+					
+					},
+					beforeClose: function() {
+						$('html, body').removeClass('mfp-active');	
+					}	,		
+					open: function() {
+						magnificPopupExists = true;
+					//$('.mfp-wrap').css({"top":"0","padding-top":"30px"});
+					$('.mfp-bg, .mfp-wrap').addClass('mfp-test');			
+					},
+					close: function() {
+						magnificPopupExists = false;
+						$('.mfp-bg, .mfp-wrap').removeClass('mfp-test');
+					}
+				}						
+					});
+				}
+				
+				if(magnificPopupExists === true) {
+					delayedClose();
+					delayedOpen();
+				}
+			});	
+		</script>
+
+		<!-- start tooltips -->
+		<script>
+	<!-- start desktop -->	
+		if(is_touch_device()) {
+
+		 }
+		else
+	$(".info-icon").hover(function(e) {
+		if($(this).parents().hasClass("dark-theme"))
+		{
+		bgcolor ="#fff";
+		textcolor ="#121212";
+	<!-- 	alert('has dark theme'); -->
+		}
+		else
+		{ 
+		bgcolor ="#121212";
+		textcolor ="#fff";
+		<!-- alert('hasnt dark theme'); -->
+		}
+		$($(this).data("tooltip")).css({
+			left: e.pageX + 10,
+			top: e.pageY + 10,
+			backgroundColor: bgcolor,
+			color: textcolor,		  
+		}).stop().show(100);
+		}, function() {
+
+		$($(this).data("tooltip")).hide();
+
+		});
+		</script>			
+		<script>
+	<!-- start touch & desktop -->	
+	$(".info-icon-both").hover(function(e) {
+		if($(this).parents().hasClass("dark-theme"))
+		{
+		bgcolor ="#fff";
+		textcolor ="#121212";
+	<!-- 	alert('has dark theme'); -->
+		}
+		else
+		{ 
+		bgcolor ="#121212";
+		textcolor ="#fff";
+	<!-- 	alert('hasnt dark theme'); -->
+		}
+		$($(this).data("tooltip")).css({
+			left: e.pageX + 10,
+			top: e.pageY + 10,
+			backgroundColor: bgcolor,
+			color: textcolor,		  
+		}).stop().show(100);
+		}, function() {
+
+		$($(this).data("tooltip")).hide();
+
+		});
+		</script>	
+
+		<!-- start show buttons -->	
+		<script>	
+		$(".show-shaded").on("click", function() {
+		iframe = $(this).closest('.iframe-container').find('.showonclick').first();			
+		iframe.attr("src", iframe.data("src"));
+		//alert(iframe);
+		$(this).closest('.iframe-container').find(".hide-this").addClass('hidden');	 
+		});
+		</script>
+	
+		<!-- start smooth scroll -->		
+<!-- 		<script>	
+		function delay() {
+
+			 if (window.location.hash) {
+				  setTimeout(function () {
+						var hash = window.location.hash;
+						window.location.hash ="";
+				$('html').animate({
+				  scrollTop: $(hash).offset().top
+				}, 800, function(){
+
+				  // Add hash (#) to URL when done scrolling (default click behavior)
+				  window.location.hash = hash;
+				});
+				  }, 300);
+			 }
+		};	  
+
+		function start()
+		{
+		delay();
+		}
+
+		window.onload = start;  
+		</script> -->
+		
+		<!-- start scrolltop btn + scrollbar -->
+		<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+	var mybutton = document.getElementById("myBtn");
+
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+
+// When the user scrolls down 20px from the top of the document, show the button  
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	mybutton.style.display ="block";
+	} else {
+	mybutton.style.display ="none";
+	}
+
+	
+}		
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+	  document.body.scrollTop = 0;
+	  document.documentElement.scrollTop = 0;
+	}
+
+		</script>		
 
 </body>
 </html>	

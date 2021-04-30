@@ -171,6 +171,8 @@
 //		flip in Y		
 
 		$('.zoom-in').waypoint( function( direction ) {
+			
+
 
 			if( direction === 'down' && !$(this.element).hasClass('element-animated')) {
 				
