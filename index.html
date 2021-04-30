@@ -1,5 +1,5 @@
 	<!doctype html> 
-<html lang="en" style="scroll-behavior: smooth;">  <!-- height:100vh; -->
+<html lang="en" style="scroll-behavior: smooth;">
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173208168-1"></script>
@@ -65,21 +65,26 @@
 		</script> -->		
 	</head>
 
-<body class="" style=""> <!-- height:100%; overflow:unset;" -->
+<body> <!-- height:100%; overflow:unset;" -->
   <div class="scroller" style="background:red"></div>
-<!--   <div class="scroller">
-		<div class="scroller invisible zoom-in" style="background:green"></div>
-  </div> -->
+  <div class="scroller">
+		<div class="inner invisible zoom-in" style="background:green"></div>
+  </div>
   <div class="scroller" style="background:red"></div>
-  <div class="scroller" style="background:green"></div>	
+  <div class="scroller">
+		<div class="inner invisible zoom-in" style="background:green"></div>
+  </div>
 
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
 	<script>
 
 	if(is_touch_device()) {
-		$('html').addClass('scroll-snap-container');
-		$('body').css("height", "100vh" , "overflow", "auto");
+		//$('html').css({"height":"100%","overflow":"hidden"});
+		//$('body').addClass('scroll-snap-container');
+		$('html').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity"});
+		$('.scroller').css({"height":"100vh"});
+		$('.inner').css({"height":"100%"});
 	}
 	else
 	{ 
@@ -88,22 +93,15 @@
 	</script>
 		
 		<script>
-		alert('1');
+		alert('5');
 		</script>
 
-<!-- 		<script>
-$(window).on('orientationchange', function(){	
-
-$('.scroller').removeClass('scroller').addClass('scroller');
-
-});
-		</script> -->
 
 		<!-- start latest work --> 
 		<!-- <div id="porfolio-gallery"> -->
 			<!-- <div class="centerscroll" id="portfolio"></div> -->			
-			<div id="akg" class="snap-c col-lg-12 p0 invisible zoom-in medium-theme vh100	">
-<!-- 				<div id="akg-title" class="title row m0 title-auto-padding">
+<!-- 			<div id="akg" class="snap-c col-lg-12 p0 invisible zoom-in medium-theme vh100	">
+				<div id="akg-title" class="title row m0 title-auto-padding">
 					<div class="row p0 m0 flex w100">
 						<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
 						 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
@@ -379,8 +377,8 @@ $('.scroller').removeClass('scroller').addClass('scroller');
 						<span class="prev-btn btn btn-outline m-h">prev</span>	
 						<span class="more-btn btn btn-outline">next</span>
 					</div>	
-				</div>	 -->				
-			</div>			
+				</div>					
+			</div> -->			
 <!-- 			<div id="converse" class="snap-c col-lg-12 p0 dark-theme">
 			<div class="invisible zoom-in">
 				<div id="converse-title" class="title row m0 title-auto-padding">
