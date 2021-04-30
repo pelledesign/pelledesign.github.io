@@ -1,5 +1,5 @@
 	<!doctype html> 
-<html lang="en" style="scroll-behavior: smooth; height:100vh; overflow:hidden;">  <!-- height:100vh; -->
+<html lang="en" style="scroll-behavior: smooth;">  <!-- height:100vh; -->
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173208168-1"></script>
@@ -65,8 +65,7 @@
 		</script> -->		
 	</head>
 
-<body class="" style=" height:100vh; overflow:hidden;"> <!-- height:100%; overflow:unset;" -->
-<div id="here" style="height:100vh; overflow:scroll;">
+<body class="" style=""> <!-- height:100%; overflow:unset;" -->
   <div class="scroller" style="background:red"></div>
   <div class="scroller">
   <div class="scroller invisible zoom-in" style="background:green"></div>
@@ -79,7 +78,8 @@
 	<script>
 
 	if(is_touch_device()) {
-		$('#here').addClass('scroll-snap-container');
+		$('html').addClass('scroll-snap-container');
+		$('body').css("height", "100vh" , "overflow", "auto");
 	}
 	else
 	{ 
@@ -88,7 +88,7 @@
 	</script>
 		
 		<script>
-		alert('4');
+		alert('0');
 		</script>
 
 <!-- 		<script>
@@ -102,7 +102,7 @@ $('.scroller').removeClass('scroller').addClass('scroller');
 		<!-- start latest work --> 
 		<!-- <div id="porfolio-gallery"> -->
 			<!-- <div class="centerscroll" id="portfolio"></div> -->			
-			<div id="akg" class="snap-c col-lg-12 p0 invisible zoom-in medium-theme h100	">
+			<div id="akg" class="snap-c col-lg-12 p0 invisible zoom-in medium-theme vh100	">
 <!-- 				<div id="akg-title" class="title row m0 title-auto-padding">
 					<div class="row p0 m0 flex w100">
 						<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
@@ -2344,7 +2344,6 @@ $('.scroller').removeClass('scroller').addClass('scroller');
 			</div> -->				
 		<!-- </div> -->
 
-</div>
 		<script type="text/javascript" src="js/lazyload.js"></script>
 		<script type="text/javascript" src="js/logos.js"></script>	
 		<script src="js/popper.min.js"></script>
