@@ -66,7 +66,7 @@
 	</head>
 
 <body> <!-- height:100%; overflow:unset;" -->
-<div id="test" class="test">
+<!-- <div id="test" class="test"> -->
   <div class="scroller" style="background:red"></div>
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
@@ -75,11 +75,11 @@
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
   </div>
-</div>
+<!-- </div> -->
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
 
-	<script>
+<!-- 	<script>
 
 	if(is_touch_device()) {
 		$('html').css({"overflow":"scroll"});
@@ -91,10 +91,10 @@
 	{ 	
 	$('html').addClass('scroll-snap-container');
 	}
-	</script>
+	</script> -->
 	
 	
-<!-- 	<script>
+	<script>
 	// working mobile except address bar won't hide
 	if(is_touch_device()) {
 		$('html').css({"height":"100%","overflow":"hidden"});
@@ -105,7 +105,7 @@
 	{ 	
 	$('html').addClass('scroll-snap-container');
 	}
-	</script> -->
+	</script>
 
 <!-- 	<script>
 
