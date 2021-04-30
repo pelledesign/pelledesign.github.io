@@ -82,11 +82,9 @@
 	<script>
 
 	if(is_touch_device()) {
-		//$('html').css({"height":"100%","overflow":"hidden"});
-		//$('body').css({"height":"100%"});
-		$('html').css({"overflow":"visible"});
-		$('body').css({"overflow":"visible"});
-		$('.test').css({"height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"});
+		$('html').css({"height":"100%","overflow":"hidden","position":"relative"});
+		$('body').css({"height":"100%","overflow-y":"scroll","scroll-snap-type":"y proximity","position":"absolute","top":"0","left":"0","width":"100%"});
+		//$('.test').css({"min-height":"100%","overflow":"auto","scroll-snap-type":"y proximity"});
 		$('.scroller').css({"height":"100vh"});		
 	}
 	else
@@ -123,7 +121,7 @@
 	</script> -->
 		
 		<script>
-		alert('thereses mus3');
+		alert('thereses mus4');
 		</script>
 
 
