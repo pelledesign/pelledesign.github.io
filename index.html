@@ -171,7 +171,9 @@
 				<div class="light-theme-button theme-circle light"></div>				
 		</div>		 -->
 		<div id="hero" class="xl-up-hidden x-theme">
+			<div class="hw100 invisible zoom-in">
 			<div class="p-logo c-absolute"></div>
+			</div>
 		</div>		
 		<div id="about" class="snap p0 x-theme pt-4 relative hide-scroll section-auto-padding" style="">	
 			<div class="col-auto p0 h100 dropshadow">		
@@ -4614,8 +4616,11 @@
 		</script>
 
 		<!-- header hide/show -->
-		<script>
+<!-- 		<script>
 		// Hide Header on on scroll down
+		
+		$(header).addClass('auto-hide-header');		
+		
 		var didScroll;
 		var lastScrollTop = 0;
 		var delta = 5;
@@ -4645,7 +4650,7 @@
 				  // Scroll Down
 				  
 				  if (!$('.navbar-collapse').hasClass('show')) {
-					  <!-- alert('has class show'); -->
+					  //alert('has class show');
 					  $('header').removeClass('nav-down').addClass('nav-up');
 				  }
 				  
@@ -4658,7 +4663,7 @@
 			 
 			 lastScrollTop = st;
 		}
-		</script>
+		</script> -->
 
 		<!-- fullscreen -->
 		<script>
@@ -4693,7 +4698,7 @@
 			$('body').css({"background-color": darkBg});
 			$('body').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');
 			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
-			$('body').find(".dropshadow").removeClass('dropshadow-light-theme').addClass('dropshadow-dark-theme');
+			//$('body').find(".dropshadow").removeClass('dropshadow-light-theme').addClass('dropshadow-dark-theme');
 		});
 
 		$('.light-theme-button').on('click',function(){
@@ -4702,7 +4707,7 @@
 			$(this).addClass('circle-shadow');
 			$('body').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
 			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
-			$('body').find(".dropshadow").removeClass('dropshadow-dark-theme').addClass('dropshadow-light-theme');
+			//$('body').find(".dropshadow").removeClass('dropshadow-dark-theme').addClass('dropshadow-light-theme');
 		});
 		</script>
 
@@ -4756,7 +4761,7 @@
 		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
 		$('body').find(".x-theme ,fadeout-top, fadeout-btm, .title").addClass(theme);
 		$('body').find(".title").addClass(theme).addClass('bg-none');
-		$('body').find(".dropshadow").addClass('dropshadow-' + theme);
+		//$('body').find(".dropshadow").addClass('dropshadow-' + theme);
 		</script>	
 
 <!-- 		<script>

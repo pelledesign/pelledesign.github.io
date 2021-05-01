@@ -11212,11 +11212,11 @@ header .navbar-brand span {
   }
 }
 
-@media (max-width: 1199.98px) {
+/* @media (max-width: 1199.98px) {
   header {
     position:fixed;
   }
-}
+} */
 
 /* @media (max-width: 1199.98px) {
   header {
@@ -17172,14 +17172,13 @@ height: var(--this-height); width: calc(var(--this-height) * (16/9)); top: 50%; 
 }
 
 
-/* messes up on phone close */
+/* hide/show header */
 
 /* body {
     padding-top: 50px;
 } */
 
-header {
-  /*   background: #f5b335; */
+.auto-hide-header {
     height: 50px;
     position: fixed;
     top: 0;
