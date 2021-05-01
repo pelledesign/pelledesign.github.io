@@ -66,7 +66,7 @@
 	</head>
 
 <body> <!-- height:100%; overflow:unset;" -->
-<div id="test" class="test">
+<!-- <div id="test" class="test"> -->
   <div class="scroller" style="background:red"></div>
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
@@ -75,17 +75,17 @@
   <div class="scroller">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
   </div>
-</div>
+<!-- </div> -->
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
 
 	<script>
 
 	if(is_touch_device()) {
-		$('html').css({"overflow":"auto"});
+		$('html').css({"overflow":"hidden"});
 		//$('body').css({"height":"100vh"});
 		//$('.test').css({"height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"});
-		$('body').css({"min-height":"100vh","overflow":"scroll","scroll-snap-type":"y proximity"});
+		$('body').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity"});
 		$('.scroller').css({"height":"100vh"});		
 	}
 	else
@@ -122,7 +122,17 @@
 	</script> -->
 		
 		<script>
-		alert('222');
+		alert('1');
+		</script>
+
+		<script>
+window.addEventListener("load",function() {
+	// Set a timeout...
+	setTimeout(function(){
+		// Hide the address bar!
+		window.scrollTo(0, 1);
+	}, 0);
+});
 		</script>
 
 
