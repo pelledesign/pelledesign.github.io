@@ -275,9 +275,8 @@
 		 <!-- end about -->	
 		
 		<script>
-		alert('new bg');
+		alert('0');
 		</script>
-
 
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
@@ -4693,7 +4692,7 @@
 			$(this).addClass('circle-shadow');
 			$('body').css({"background-color": darkBg});
 			$('body').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');
-			$('body').find(".x-theme, .fadeout-top, .fadeout-btm, .title").removeClass('light-theme').addClass('dark-theme');
+			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
 			$('body').find(".dropshadow").removeClass('dropshadow-light-theme').addClass('dropshadow-dark-theme');
 		});
 
@@ -4702,7 +4701,7 @@
 			$('.dark-theme-button').removeClass('circle-shadow');
 			$(this).addClass('circle-shadow');
 			$('body').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
-			$('body').find(".x-theme, .fadeout-top, .fadeout-btm, .title").removeClass('dark-theme').addClass('light-theme');
+			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
 			$('body').find(".dropshadow").removeClass('dropshadow-dark-theme').addClass('dropshadow-light-theme');
 		});
 		</script>
@@ -4754,7 +4753,7 @@
 		$('.dark-theme-button').addClass('circle-shadow');
 		//$('body').addClass('contrast-bg');
 		}
-		$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
+		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
 		$('body').find(".x-theme ,fadeout-top, fadeout-btm, .title").addClass(theme);
 		$('body').find(".title").addClass(theme).addClass('bg-none');
 		$('body').find(".dropshadow").addClass('dropshadow-' + theme);
