@@ -17278,3 +17278,9 @@ height:100vh;
 .navbar-collapse.show {
 border-bottom: 1px solid #000;	
 } */
+
+
+/* jquery-scroll-snap */
+body.lock-scroll{
+  overflow: hidden;
+}

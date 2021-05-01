@@ -42,6 +42,7 @@
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery-scroll-snap.css">
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -68,7 +69,7 @@
 <body> <!-- height:100%; overflow:unset;" -->
 <!-- <div id="test" class="test"> -->
   <div class="scroller" style="background:red"></div>
-  <div class="scroller">
+  <div class="scroller snap">
 		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
   </div>
   <div class="scroller" style="background:red"></div>
@@ -79,18 +80,18 @@
 
 	<!-- desktop wants scroll-snap-container on html tag, touch on body tag -->
 
-	<script>
+<!-- 	<script>
 
 	if(is_touch_device()) {
 		$('html').css({"height":"100%","overflow":"visible"});
-		$('body').css({"height":"100vh","overflow":"auto"});
+		$('body').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity","position":"absolute"});
 		$('.scroller').css({"height":"100vh"});		
 	}
 	else
 	{ 	
 	$('html').addClass('scroll-snap-container');
 	}
-	</script>
+	</script> -->
 	
 	
 <!-- 	<script>
@@ -120,7 +121,7 @@
 	</script> -->
 		
 		<script>
-		alert('sss');
+		alert('new snap');
 		</script>
 
 
@@ -4454,6 +4455,14 @@
 		<script src="js/main.js"></script>	
 		<script src="js/stellar.js"></script>
 		<script src="js/load-more-button.js"></script>
+		<script src="js/jquery-scroll-snap.js"></script>
+		
+		<script>
+		// custom options
+$( '.snap' ).scrollSnap({
+  speed: 300
+});
+		</script>
 
 
 
