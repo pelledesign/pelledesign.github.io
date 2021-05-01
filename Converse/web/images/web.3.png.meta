@@ -1,0 +1,16 @@
+{
+    "image": "web.3",
+    "model_sets": [
+        "Default"
+    ],
+    "multi_materials": [
+        {
+            "base_material": "Frame",
+            "sub_material": "Snake Skin"
+        },
+        {
+            "base_material": "Side Piece",
+            "sub_material": "Coke"
+        }
+    ]
+}

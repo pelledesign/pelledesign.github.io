@@ -1,0 +1,36 @@
+{
+    "image": "web.1",
+    "model_sets": [
+        "Default"
+    ],
+    "multi_materials": [
+        {
+            "base_material": "Helmet Foam KS",
+            "sub_material": "Rubber #6"
+        },
+        {
+            "base_material": "Helmet Shell KS",
+            "sub_material": "Helmet Shell Clr 2"
+        },
+        {
+            "base_material": "Ear Pieces KS",
+            "sub_material": "Rubber #1"
+        },
+        {
+            "base_material": "Lens KS",
+            "sub_material": "Lens KS"
+        },
+        {
+            "base_material": "Strap KS",
+            "sub_material": "Strap Clr 2"
+        },
+        {
+            "base_material": "Frame KS",
+            "sub_material": "Frame Clr 2"
+        },
+        {
+            "base_material": "Foam KS",
+            "sub_material": "Scattering Medium Sponge"
+        }
+    ]
+}

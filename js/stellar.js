@@ -180,7 +180,7 @@
 
 				$(this.element).addClass('item-animate');
 				setTimeout(function(){
-					$('html .zoom-in.item-animate').each(function(k){
+					$('body .zoom-in.item-animate').each(function(k){
 						var el = $(this);
 						setTimeout( function () {
 							el.removeClass('invisible');

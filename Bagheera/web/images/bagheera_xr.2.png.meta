@@ -1,0 +1,28 @@
+{
+    "image": "bagheera_xr.2",
+    "model_sets": [
+        "Default"
+    ],
+    "multi_materials": [
+        {
+            "base_material": "Outsole",
+            "sub_material": "Outsole"
+        },
+        {
+            "base_material": "Toe & Heel",
+            "sub_material": "Clear Shiny Plastic Black #3"
+        },
+        {
+            "base_material": "Mid Side",
+            "sub_material": "Clear Rough Plastic Black #1"
+        },
+        {
+            "base_material": "Lining #1",
+            "sub_material": "white"
+        },
+        {
+            "base_material": "Main Mesh",
+            "sub_material": "RealCloth Twill Black #2"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+//changelog
+
+removed height 100vh
+added
+
+#akg-process {
+overflow-y:auto !important;	
+}
