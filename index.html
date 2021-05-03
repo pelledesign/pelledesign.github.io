@@ -65,65 +65,20 @@
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
 	</head>
+	<body> 
+		
+		<!-- alert -->
+		<script>
+		<!-- alert('poc loader'); -->
+		</script>	
 
-<body> <!-- height:100%; overflow:unset;" -->
-<!-- <div id="test" class="test"> -->
-<!--   <div class="scroller snap" style="background:red"></div>
-  <div class="scroller snap">
-		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
-  </div>
-  <div class="scroller snap" style="background:red"></div>
-  <div class="scroller snap">
-		<div class="inner hw100 invisible zoom-in" style="background:green"></div>
-  </div> -->
-<!-- </div> -->
-
-
-
-<!-- 	<script>
-
-	if(is_touch_device()) {
-		$('html').css({"height":"100%","overflow":"visible"});
-		$('body').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity","position":"absolute"});
-		$('.scroller').css({"height":"100vh"});		
-	}
-	else
-	{ 	
-	$('html').addClass('scroll-snap-container');
-	}
-	</script> -->	
-<!-- 	<script>
-	// working mobile except address bar won't hide
-	if(is_touch_device()) {
-		$('html').css({"height":"100%","overflow":"hidden"});
-		$('body').css({"height":"100vh","overflow":"auto","scroll-snap-type":"y proximity"});
-		$('.scroller').css({"height":"100vh"});		
-	}
-	else
-	{ 	
-	$('html').addClass('scroll-snap-container');
-	}
-	</script> -->
-<!-- 	<script>
-
-	if(is_touch_device()) {
-		$('html').css({"height":"100%","overflow":"scroll"});
-		$('body').css({"height":"100%","overflow":"auto","scroll-snap-type":"y proximity"});
-		$('.scroller').css({"height":"100vh"});		
-	}
-	else
-	{ 	
-	$('html').addClass('scroll-snap-container');
-	}
-	</script> -->
-
-		<!-- start up button -->
+		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
 		
-		<!-- start header -->
-		<header id="header" role="banner" class="nav-down x-theme bg-none">
+		<!-- header -->
+		<header id="header" role="banner" class="nav-down x-theme">
 			 <nav class="navbar navbar-transparent navbar-expand-xl " style="align-items: normal; height:100%; padding:0;">
-				<div class="container-fluid x-theme" style="align-items: normal;">
+				<div class="container-fluid " style="align-items: normal;">
 				  <a href="index.html" class="text-logo" style="padding-left:1rem; max-height:50px;">Pelle iDesign</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
 					 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -143,9 +98,6 @@
 						<li class="nav-item">
 						  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
 						</li>
-						<li class="nav-item">
-						  <a class="nav-link" href="test.html">Test Site</a>              
-						</li>
 						<li class="nav-item flex-xl-up c-lg">
 						  <p class="nav-link" style="padding-bottom: 0 !important;">Theme</p>    
 							<div id="theme-switcher-menu" class=" flex justify-content-center">
@@ -159,23 +111,30 @@
 			 </nav>
 		</header>	
 
-		<!-- start scroll indicator -->
+		<!-- scroll indicator -->
 		<div class="scroll-indicator">
 		  <div class="progress-container x-theme">
 			 <div class="progress-bar" id="myBar"></div>
 		  </div>
 		</div>
 		
-<!-- 		<div id="theme-switcher" class="lg-down-h flex justify-content-left" style="position: fixed; bottom: 10px; z-index: 2; left:50%; transform: translateX(-50%);">
+		<!-- btm scroll indicator -->
+		<div id="theme-switcher" class="lg-down-h" style="">
 				<div class="dark-theme-button theme-circle dark"></div>
 				<div class="light-theme-button theme-circle light"></div>				
-		</div>		 -->
+		</div>
+		
+		<!-- hero -->
 		<div id="hero" class="xl-up-hidden x-theme">
+			<!-- <div class="c-absolute hw100" style="background: url('images/bg/lips.jfif');"></div> -->
 			<div class="hw100 invisible zoom-in">
 			<div class="p-logo c-absolute"></div>
 			</div>
-		</div>		
+		</div>
+		
+		<!-- about -->
 		<div id="about" class="snap p0 x-theme pt-4 relative hide-scroll section-auto-padding" style="">	
+		<div id="bg-hero" class="c-absolute hw100" ></div>
 			<div class="col-auto p0 h100 dropshadow">		
 				<div id="about-slider" class="about-slider owl-carousel">				
 					<div class="invisible fade-in">			
@@ -274,17 +233,709 @@
 				</div>	
 			</div>	
 		</div>
-		 <!-- end about -->	
 		
-		<script>
-		alert('poc loader');
-		</script>
-
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
-			<!-- <div class="centerscroll" id="portfolio"></div>	 -->		
+			<div class="centerscroll" id="portfolio"></div>			
+			<div id="converse" class="snap col-lg-12 p0 dark-theme">
+				<div class="invisible zoom-in">
+					<div id="converse-title" class="title row m0 title-auto-padding">
+						<div class="row p0 m0 flex w100">
+							<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
+							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
+							</div>	
+							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto p0">  
+								<div class="c-100 justify-content-end">
+									<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle"></div></a>
+									<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
+									<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup fullscreen"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
+									<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup fullscreen"><div class="ion-grid invisible flip-in-y"></div></a>
+								</div>
+							</div>
+						</div>		
+					</div>	
+					<div id="slider-container" class="h100">		
+						<div class="vh75 section-auto-padding snap-this-center">		
+							<div id="converse-more" class="pelle-slider owl-carousel c-100 flexend-portrait p0 dropshadow">					
+								<div class="owl-hide-large-up padda col-lg-12 p0 ml-auto mr-auto">
+									<div class="cont">
+										<div id="title" class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="title h3 invisible fade-in-up txt-l m-h">Latest Work<strong></strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>
+										<div class="middle textoverlay dark-theme" style="position:unset;">							
+											<div class="dark-theme loader">
+												<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover" style="object-position: 50% 70%;">	
+											</div>				
+											<div class="dark-theme overlay c-all desktop-hidden">
+												<div class="text-animate ppp c-all">
+													<div>
+														<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
+															<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.
+															</p>
+															<div>
+															<p><span class="open-popup btn">Swipe to View</span></p>
+															</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>								
+								</div>	
+								<div class="owl-hide-large-up padda c-100 auto-scroll">
+									<div class="fadeout-top"></div>
+									<div class="ppp c-all h100">
+										<div class="txt-l h100">									
+											<h2 class="mb-4 s-t txt-l">Converse <strong>Suburban</strong></h2>
+											<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+											</p>		  
+											<p class="txt-l">My task was to analyze the brand's form language and create a product not already in the their arsenal. </p>
+											<p class="txt-l pb-6">Using southern suburban U.S as a contrasting theme to Converse's expression.		  
+											</p>														
+											<div class="fadeout-btm"></div>										
+										</div>
+									</div>						
+								</div>				
+								<div class="owl-hide-xs-down p0 col-lg-12 ml-auto mr-auto">				
+									<div class="dark-theme relative hide-scroll h100">	
+										<div class="cover  hw100 rellax-props"></div>
+										<div class=" rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.05">
+											<div class="converse-logo dark-theme hw100"></div>
+										</div>
+										<div class="row hw100 m0">								
+											<div class="md-down-h col-lg-4 col-sm c-lg-up p0-md-down auto-scroll h100">
+												<div class="row c-lg">
+													<div class="col-lg-8 ppp2 txt-l">
+														<h2 class="mb-4 s-t">Converse <strong>Suburban</strong></h2>
+														<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+														</p>		  
+														<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
+														</p>
+														<p><strong>Swipe Model to Rotate</strong></p>
+													</div>					
+												</div>
+											</div>			
+											<div class="col-lg-8 c-all textoverlay-desktop p0" style="overflow:hidden;">					
+												<iframe
+												class="converse-xr-inject lazy invisible fade-in soft-zoom" 
+												src="images/loaders/bars_fixed.svg"
+												data-src="Converse/xr/conversexr.html"																								
+												frameborder="0"
+												scrolling="no"
+												>
+												</iframe>
+												<div class="overlay bg-none arrow-left">
+													<div class="text-animate">
+														<div class="arrow-rotate-left ignore"></div>									
+													</div>
+												</div>
+												<div class="overlay bg-none  arrow-right">
+													<div class="text-animate">
+														<div class="arrow-rotate-right ignore"></div>											
+													</div>
+												</div>													
+											</div>
+										</div>			
+									</div>										
+								</div>							
+								<div class="owl-hide-medium-down p-portrait col-lg-12 ml-auto mr-auto">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Sketch <strong>Work</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>
+										<div class="middle textoverlay light-theme h100">							
+											<div class="dark-theme loader">
+												<img src="" data-src="images/process/sketch.png" class="owl-lazy cover">	
+											</div>				
+											<div class="dark-theme overlay c-all touch-hidden">
+												<div class="text-animate ppp c-all">
+													<div>
+														<h3 class="h3">GALLERY <strong></strong></h3>
+														<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
+													</div>
+												</div>
+											</div>
+											<div class="dark-theme overlay c-all desktop-hidden">
+												<div class="text-animate ppp c-all">
+													<div>
+														<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
+														<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate physiologic measurements.
+														</p>
+														<div>
+														<p><span class="open-popup btn">Swipe to View</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>								
+								</div>						
+								<div class="owl-hide-medium-down p-portrait col-lg-12 ml-auto mr-auto">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Image <strong>Gallery</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>
+										<div class="middle textoverlay dark-theme">							
+											<div class="dark-theme loader">
+												<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover" style="object-position: 50% 70%;">	
+											</div>				
+											<div class="dark-theme overlay c-all touch-hidden">
+												<div class="text-animate ppp c-all">
+													<div>
+														<h3 class="h3">GALLERY <strong></strong></h3>
+														<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
+													</div>
+												</div>
+											</div>
+											<div class="dark-theme overlay c-all desktop-hidden">
+												<div class="text-animate ppp c-all">
+													<div>
+														<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
+														<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate physiologic measurements.
+														</p>
+														<div>
+														<p><span class="open-popup btn">Swipe to View</span></p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>								
+								</div>					
+								<div class="owl-hide-xs-down ml-auto mr-auto">
+									<div class="cont">
+									<div class="row m-h">
+										<div class="col-12 flex">
+											<div class="col-lg-6">
+											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h"><strong>3d Model</strong></h3>
+											</div>	
+											<div class="col-lg-6">  
+											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+											</div>
+										</div>
+									</div>						
+									<div class="middle light-theme iframe-container c-all textoverlay">
+										<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
+										<div class="model-controls">
+											<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+											<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
+										</div>
+										<div class="c-all view-btn overlay img-opacity bg hide-this">									
+										</div>								
+										<iframe 
+										id="showonclick"
+										class="showonclick m-h unload-no-reload"
+										src="" 
+										data-src="Converse/webgl/rendered.html"		
+										frameborder="0"
+										scrolling="no">	 
+										</iframe>
+										<!-- <img src="" data-src="Converse/images/process/modeling.png" class="owl-lazy hide-this"> -->
+									<iframe 
+									src=""
+									id="popup-iframe"
+									class="converse-wireframe-injec lazy hide-this multiply unload"
+									data-src="Converse/webgl/pen.html" 											
+									frameborder="0"
+									scrolling="no"
+									>	
+</iframe>									
+									</div>	
+								</div>
+								</div>
+								<div class="p-portrait ml-auto mr-auto">
+									<div class="cont">
+									  <div class="top xs-down-h">
+										<div class="col-12 p0 flex">
+											<div class="col-lg-6">
+											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Brand <strong>Breakdown</strong></h3>
+											</div>	
+											<div class="col-lg-6">  
+											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+											</div>
+										</div>
+									  </div>
+									  <div class="middle">
+										<div class="light-theme bg-none row m0 h100">							
+											<div class="col-lg-6 col-md-6 loader c-all textoverlay padda">
+												<img src="" data-src="Converse/images/process/01.jpg" class="owl-lazy invisible fade-in cover" style="object-position: 100% 17%;">												
+												<div class="md-up-h light-theme overlay c-all">
+													<div class="text-animate c-all ppp">
+														<div>
+															<h3 class="h3">Brand <strong>Breakdown </strong></h3>
+															<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
+															<p class="txt-c">The brand radiates a relaxed attitude</p>
+															<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
+															<p>Geometrical shapes & minimalism</p>
+														</div>
+													</div>
+												</div>
+												<div class="xs-down-h dark-theme overlay c-all">
+													<div class="text-animate c-all ppp">
+														<div>
+															<h3 class="h3">Relaxed <strong>Attitude </strong></h3>
+															<p class="txt-c">The brand radiates a relaxed attitude</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="xs-down-h col-lg-6 col-md-6 c-all p0 hw100">
+												<div class="col-lg-6 loader textoverlay c-all padda">
+													<img src="" data-src="Converse/images/process/04.jpg" class="lazy cover" style="object-position: 100% 17%;">												
+													<div class="light-theme overlay c-all">
+														<div class="text-animate c-all ppp">
+															<div>
+																<h3 class="h3">Edgy & <strong>Artsy </strong></h3>
+																<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6 md-down-h loader c-all p0">
+													<div class="row m0 h100">
+														<div class="padda col-lg-12 textoverlay h50">
+															<img src="" data-src="Converse/images/process/03.png" class="lazy bg-offwhite">												
+															<div class="light-theme overlay c-all">
+																<div class="text-animate c-all ppp">
+																	<div>
+																		<h3 class="h3">Simple & <strong>Lazy </strong></h3>
+																	<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="padda col-lg-12 textoverlay h50">											
+															<div class="bg-offwhite h100">
+																<img src="" data-src="Converse/images/process/bag.jpg" class="lazy multiply">	
+															</div>										
+															<div class="light-theme overlay c-all">
+																<div class="text-animate c-all">
+																	<div>
+																		<h3 class="h3">Minimal<strong>ism </strong></h3>
+																		<p>Geometrical shapes & minimalism</p>	
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									  </div>
+									</div>								
+								</div>						
+								<div class="p-portrait ml-auto mr-auto">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Mood <strong>Board</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>				
+										<div class="middle row m0">
+											<div class="col-lg-6 c-all p0 hw100">
+												<div class="col-lg-6 loader c-all p0">
+													<div class="row m0 hw100">
+														<div class="padda col-lg-12 textoverlay h50">
+															<img src="" data-src="Converse/images/moodboard/coke.jpg" class="owl-lazy cover bg-offwhite" style="object-position: 50% 33%;">												
+															<div class="light-theme overlay c-all">
+																<div class="col-lg-10 text-animate c-all">
+																	<div>
+																		<h3 class="h3">60s <strong>Coca Cola Design </strong></h3>
+																		<p class="txt-c">Whats more American than Coca Cola? <br>
+																		This sign might make you think of a worker in the 50s-60s in dirty jeans taking a break at Coca-cola machine</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="padda col-lg-12 textoverlay dark-theme h50">											
+															<img src="" data-src="Converse/images/moodboard/snakeskin.jpg" class="owl-lazy cover">												
+															<div class="light-theme overlay c-all">
+																<div class="col-lg-10 text-animate c-all">
+																	<div>
+																		<h3 class="h3">Snake <strong>Skins Patterns </strong></h3>
+																		<p class="txt-c">Timber Rattlesnake, Eastern Coachwhip, Cottonmouth, Eastern Garter Snake.<br>
+																		when we're in the South, we should pay attention to the snakes</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-6 loader c-all p0">
+													<div class="row m0 hw100">
+														<div class="padda col-lg-12 textoverlay dark-theme h50">
+															<img src="" data-src="Converse/images/moodboard/bbq.jpg" class="owl-lazy cover bg-black">												
+															<div class="dark-theme overlay c-all">
+																<div class="col-lg-10 text-animate c-all">
+																	<div>
+																		<h3 class="h3">Southern<strong> Cooking</strong></h3>
+																		<p class="txt-c">Barbecue is strongly associated with Southern cooking and culture due to its long history and evolution in the region</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="padda col-lg-12 textoverlay dark-theme h50">											
+															<div class="bg-offwhite hw100">
+																<img src="" data-src="Converse/images/moodboard/swamp.jpg" class="owl-lazy cover">	
+															</div>										
+															<div class="dark-theme overlay c-all">
+																<div class="col-lg-10 text-animate c-all">
+																	<div>
+																		<h3 class="h3">Swamps & <strong>Wetlands </strong></h3>
+																		<p class="txt-c">Murky waters? Great inspiration for graphic textures</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>								
+											<div class="xs-down-h padda col-lg-6 loader c-all textoverlay p0">
+												<div class="desktop-hidden zoom-icon"></div>
+												<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
+												<img src="" data-src="Converse/images/moodboard/cotton.jpg" class="owl-lazy cover" style="object-position: 100% 17%;">												
+												<div class="dark-theme overlay c-all">
+													<div class="text-animate c-all ppp">
+														<div>
+															<h3 class="h3"><strong>The South</strong> of the 60s </h3>
+															<p class="txt-c">The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
+															<p class="txt-c">Here, a cotton field worker taking a break</p>
+														</div>
+													</div>
+												</div>
+											</div>						
+										</div>							
+									</div>
+								</div>
+								<div class="p-portrait ml-auto mr-auto">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Sketch <strong>Work</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>
+										<div class="middle textoverlay">							
+											<div class="loader c-all">
+												<img src="" data-src="Converse/images/process/sketch01.jpg" class="owl-lazy cover">	
+											</div>					
+											<div class="dark-theme overlay c-all">
+												<div class="text-animate ppp c-all">
+												<div>
+													<h3 class="h3">Sketch <strong>Work</strong></h3>
+													<p class="txt-c">Outtakes from the ideation process</p>
+												</div>
+												</div>
+											</div>
+										</div>							
+									</div>
+								</div>						
+								<div class="owl-hide-large-up padda ml-auto mr-auto light-theme">	
+									<div class="row m-h">
+										<div class="col-12 flex">
+											<div class="col-lg-6">
+											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">HEAD SCAN <strong>& MODELING </strong></h3>
+											</div>	
+											<div class="col-lg-6">  
+											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+											</div>
+										</div>
+									</div>							
+									<div class="row h100">
+										<div class="col-lg-6">
+											<div class="h100">
+												<div class="loader textoverlay">
+													<img src="" data-src="Converse/images/process/head_square.jpg" class="lazy cover" style="object-position: 25% 50%;">
+													<div class="overlay c-all ppp">
+														<div class="col-lg-6 text-animate c-all">
+															<div>
+																<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+																<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+																<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br>
+																</p>																																
+															</div>
+														</div>
+													</div>												
+												</div>									
+											</div>	
+										</div>							
+									</div>							
+								</div>
+								<div class="owl-hide-medium-up padda ml-auto mr-auto light-theme">		
+									<div class="row m0 h100">
+										<div class="col-lg-6 col-md-6 col-xs-12 h100">
+											<div>
+												<div class="iframe-container textoverlay-desktop">															
+													<iframe 
+													src="" data-src="Converse/webgl/spherebuild.html"
+													class="lazy vh65 unload"					
+													id="test"
+													frameborder="0"
+													scrolling="no">			 	 
+													</iframe>
+													<div class="desktop-hidden">
+														<div class="model-controls">
+															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+														</div>	
+													</div>
+													<div class="overlay mini c-all light-theme bg-none">
+														<div class="col-lg-6 text-animate c-all">
+															<div class="ignore model-controls">
+																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+															</div>	
+														</div>
+													</div>	
+												</div>									
+											</div>	
+										</div>	
+										<div class="col-lg-6 textoverlay">
+											<div class="loader c-all">
+												<img src="" data-src="Converse/images/process/head_square.jpg" class="lazy cover" style="object-position:0% 75%">	
+											</div>					
+											<div class="overlay c-all">
+												<div class="col-lg-6 text-animate">
+													<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+													<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+													<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+												</div>
+											</div>
+										</div>						
+									</div>							
+								</div>						
+								<div class="owl-hide-xs-down p-portrait ml-auto mr-auto">
+								<div class="cont">
+									<div class="row">
+										<div class="col-12 flex">
+											<div class="col-lg-6">
+											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Head Scan & <strong>Modeling</strong></h3>
+											</div>	
+											<div class="col-lg-6">  
+											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+											</div>
+										</div>
+									</div>				
+									<div class="middle row light-theme m0">
+										<div class="col-lg-6 p0 col-md-6 col-xs-6 h100">
+											<div class="h100">
+												<div class="iframe-container textoverlay-desktop">															
+													<iframe 
+													src="" data-src="Converse/webgl/spherebuild.html"
+													class="lazy unload"					
+													frameborder="0"
+													scrolling="no">			 	 
+													</iframe>
+													<div class="desktop-hidden">
+														<div class="model-controls">
+															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+														</div>	
+													</div>
+													<div class="overlay mini  light-theme bg-none">
+														<div class="col-lg-6 text-animate c-all">
+															<div class="ignore model-controls">
+																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+															</div>	
+														</div>
+													</div>	
+												</div>									
+											</div>	
+										</div>	
+										<div class="col-lg-6 textoverlay">
+											<div class="loader c-all">
+												<img src="" data-src="Converse/images/process/head_square.jpg" class="owl-lazy cover" style="object-position:0% 75%">	
+											</div>					
+											<div class="overlay c-all">
+												<div class="col-lg-6 text-animate h-auto">
+													<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+													<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+													<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+												</div>
+											</div>
+										</div>						
+									</div>	
+									</div>							
+								</div>						
+								<div class="owl-hide-large-up padda ml-auto mr-auto light-theme">
+									<div class="p0-md-down h100">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Views & <strong>Measurements</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>							
+										<div class="viewer loader scrolldown-container show-scroll pb-0">	
+											<div class="touch-hidden padda col-lg-4 ml-auto mr-auto textoverlay">
+												<div class="zoom-container">											
+													<div class="zoom-icon"></div>
+													<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
+													<div class="overlay c-all ppp">
+														<h3 class="h3">TOP <strong> VIEW</strong></h3>
+													</div>										
+												</div>	
+											</div>	
+											<div class="animate scroll-down"></div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon"></div>
+												<img class="owl-lazy" src="" data-src="Converse/images/process/modeling02_black.svg">
+											</div>	
+											<div class="slide zoom-container">
+												<div class="zoom-icon"></div>
+												<img class="owl-lazy" src="" data-src="Converse/images/process/modeling03_black.svg">
+												<div class="md-up-h overlay c-all ppp">
+													<h3 class="h3">SIDE <strong> VIEW</strong></h3>
+												</div>										
+											</div>	
+											<div class="slide zoom-container">
+												<div class="zoom-icon"></div>
+												<img class="owl-lazy" src="" data-src="Converse/images/process/modeling01_black.svg">
+												<div class="md-up-h overlay c-all ppp">
+													<h3 class="h3">MEASURE<strong>MENTS</strong></h3>
+												</div>										
+											</div>												
+										</div>
+										</div>
+									</div>						
+								</div>
+								<div class="owl-hide-medium-down p-portrait ml-auto mr-auto">
+									<div class="p0-md-down h100">
+									<div class="cont">
+										<div class="row m-h">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Views & <strong>Measurements</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
+											</div>
+										</div>							
+										<div class="middle row auto-scroll">		
+											<div class="desktop-hidden padda ml-auto mr-auto textoverlay light-theme">
+												<div class="viewer dropdown-container zoom-container loader props">
+												<div class="animate scroll-down desktop-hidden"></div>
+													<div class="ion-android-add-circle zoom-icon"></div>
+													<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
+													<div class="md-up-h overlay c-all ppp">
+														<h3 class="h3">TOP <strong> VIEW</strong></h3>
+													</div>					
+												</div>	
+											</div>										
+											<div class="md-down-h col-lg-12 col-md-6 col-xs-6 textoverlay no-more-icon">
+												<div class="loader">
+													<div class="loader md-up-h">
+													<img src="" data-src="Converse/images/process/spherebuild.png" class="owl-lazy">
+													</div>
+													<div class="iframe-container textoverlay">														
+														<iframe 
+														src="" data-src="Converse/webgl/measurements.html"
+														class="m-h lazy unload"
+														style=""												
+														id="popup-iframe3"
+														frameborder="0"
+														scrolling="no">			 	 
+														</iframe>
+														<div class="overlay mini light-theme bg-none">
+															<div class="col-lg-6 text-animate c-all">
+																<div class="ignore model-controls">
+																	<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+																	<a href="#converse-measures-popup" data-tooltip="#icon-info-large-popup" class="info-icon open-popup m-h"><div class="ion-android-open"></div></a>
+																</div>	
+															</div>
+														</div>												
+													</div>
+												</div>	
+											</div>					
+										</div>
+										</div>
+									</div>						
+								</div>						
+								<div class="ml-auto mr-auto">
+								<div class="cont">
+									<div class="row">
+										<div class="col-12 flex">
+											<div class="col-lg-6">
+											 <h3 class="xs-down-h h3 invisible fade-in-up txt-l s-t">Color & <strong>Material</strong></h3>
+											</div>	
+											<div class="col-lg-6">  
+											 <h3 class="xs-down-h h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+											</div>
+										</div>
+									</div>
+									<div class="middle dark-theme textoverlay">							
+										<div class="loader c-100">
+											<img class="owl-lazy" src="" data-src="Converse/web/images/web.1.png">
+										</div>	
+										<div class="c-all c-absolute hw100">
+										<a href="#converse-webconfig-popup" title="Project Info" class="xs-down-h open-popup btn btn-outline z999">View CMF Options</a>
+										<a href="#converse-cmf-popup-mobile" title="Project Info" class="md-up-h open-popup btn btn-outline z999">CMF</a>
+											<div class="dark-theme ppp overlay half img-opacity c-all">
+											</div>
+										</div>
+									</div>
+									</div>															
+								</div>				
+								<div class="p-portrait ml-auto mr-auto dark-theme">			
+									<div class="col-full col-md-12 col-sm">
+										<div class="popup-project-section row c-lg ppp h100 align-content-center">
+											<div class="col-lg-7 mr-auto ml-auto">
+											  <div class="col-lg-7 mr-auto ml-auto">
+												 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+												 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+												 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+											  </div>
+											</div>
+										</div>
+									</div>
+								</div>							
+							</div>
+						</div>								
+						<div class="c-all view-btn btn-auto-padding">
+							<span class="prev-btn btn btn-outline m-h">prev</span>	
+							<span class="more-btn btn btn-outline">next</span>
+						</div>	
+					</div>
+				</div>					
+			</div>				
 			<div id="akg" class="snap col-lg-12 p0  vh100">
-			<div class="invisible zoom-in hw100 medium-theme">
+			<div class="invisible zoom-in hw100 x-theme">
 				<div id="akg-title" class="title row m0 title-auto-padding">
 					<div class="row p0 m0 flex w100">
 						<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
@@ -388,7 +1039,7 @@
 									<img src="" data-src="akg/images/gallery/onhead.jpg" class="owl-lazy cover multiply">											
 									</div>
 								</div>								
-								<div class="owl-hide-medium-down medium-theme">
+								<div class="owl-hide-medium-down x-theme">
 									<div class="container row hw100 relative p0">
 										<div class="touch-hidden rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.035;">
 											<div class="akg-logo light-theme bg-none hw100"></div>
@@ -424,7 +1075,7 @@
 										</div>			
 									</div>
 								</div>
-								<div class="owl-hide-medium-down row m0 light-theme">
+								<div class="owl-hide-medium-down row m0 x-theme">
 									<div class="col-full col-md-12 col-sm c-lg-up p0">
 										<div class="row c-lg ppp w100">
 											<div class="mr-auto ml-auto col-lg-9 p0">  
@@ -454,7 +1105,7 @@
 								</div>
 								<div class="owl-hide-touch row m0">
 									<div class="col-lg-6 ml-auto mr-auto hw100 padda">
-										<div class="viewer owl-hide-medium-down loader scrolldown-container pb-0 show-scroll">						
+										<div class="viewer mandatory owl-hide-medium-down loader scrolldown-container pb-0 show-scroll">						
 											<div class="animate scroll-down dark-theme"></div>
 											<div class="slide zoom-container medium-theme">
 												<div class="zoom-icon loader"></div>
@@ -507,7 +1158,7 @@
 								<div class="xs-down-h col-lg-6 col-md-8 akg-webconfig-overlay"></div>							
 								</div>
 								<div class="owl-hide-xs-down ml-auto mr-auto light-theme">					
-									<div class="iframe-container c-all textoverlay-inverse">
+									<div class="iframe-container c-all textoverlay">
 										<span class="show-shaded btn btn-outline  hide-this">Load 3d - 57mb</span>	
 										<div class="model-controls">
 											<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
@@ -563,696 +1214,8 @@
 					</div>	
 				</div>			
 			</div>				
-			</div>			
-			<div id="converse" class="snap col-lg-12 p0 dark-theme">
-			<div class="invisible zoom-in">
-				<div id="converse-title" class="title row m0 title-auto-padding">
-					<div class="row p0 m0 flex w100">
-						<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
-						 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
-						</div>	
-						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto p0">  
-							<div class="c-100 justify-content-end">
-								<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle"></div></a>
-								<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
-								<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup fullscreen"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-								<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup fullscreen"><div class="ion-grid invisible flip-in-y"></div></a>
-							</div>
-						</div>
-					</div>		
-				</div>	
-				<div id="slider-container" class="h100">		
-					<div class="vh75 section-auto-padding snap-this-center">		
-						<div id="converse-more" class="pelle-slider owl-carousel c-100 flexend-portrait p0 dropshadow">					
-							<div class="owl-hide-large-up padda col-lg-12 p0 ml-auto mr-auto">
-								<div class="cont">
-									<div id="title" class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="title h3 invisible fade-in-up txt-l m-h">Latest Work<strong></strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>
-									<div class="middle textoverlay dark-theme" style="position:unset;">							
-										<div class="dark-theme loader">
-											<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover" style="object-position: 50% 70%;">	
-										</div>				
-										<div class="dark-theme overlay c-all desktop-hidden">
-											<div class="text-animate ppp c-all">
-												<div>
-													<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
-														<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.
-														</p>
-														<div>
-														<p><span class="open-popup btn">Swipe to View</span></p>
-														</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>								
-							</div>	
-							<div class="owl-hide-large-up padda c-100 auto-scroll">
-								<div class="fadeout-top"></div>
-								<div class="ppp c-all h100">
-									<div class="txt-l h100">									
-										<h2 class="mb-4 s-t txt-l">Converse <strong>Suburban</strong></h2>
-										<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
-										</p>		  
-										<p class="txt-l">My task was to analyze the brand's form language and create a product not already in the their arsenal. </p>
-										<p class="txt-l pb-6">Using southern suburban U.S as a contrasting theme to Converse's expression.		  
-										</p>														
-										<div class="fadeout-btm"></div>										
-									</div>
-								</div>						
-							</div>				
-							<div class="owl-hide-xs-down p0 col-lg-12 ml-auto mr-auto">				
-								<div class="dark-theme relative hide-scroll h100">	
-									<div class="cover  hw100 rellax-props"></div>
-									<div class=" rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.05">
-										<div class="converse-logo dark-theme hw100"></div>
-									</div>
-									<div class="row hw100 m0">								
-										<div class="md-down-h col-lg-4 col-sm c-lg-up p0-md-down auto-scroll h100">
-											<div class="row c-lg">
-												<div class="col-lg-8 ppp2 txt-l">
-													<h2 class="mb-4 s-t">Converse <strong>Suburban</strong></h2>
-													<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
-													</p>		  
-													<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
-													</p>
-													<p><strong>Swipe Model to Rotate</strong></p>
-												</div>					
-											</div>
-										</div>			
-										<div class="col-lg-8 c-all textoverlay-desktop p0" style="overflow:hidden;">					
-											<iframe
-											class="converse-xr-inject lazy invisible fade-in soft-zoom" 
-											src="images/loaders/bars_fixed.svg"
-											data-src="Converse/xr/conversexr.html"																								
-											frameborder="0"
-											scrolling="no"
-											>
-											</iframe>
-											<div class="overlay bg-none arrow-left">
-												<div class="text-animate">
-													<div class="arrow-rotate-left ignore"></div>									
-												</div>
-											</div>
-											<div class="overlay bg-none  arrow-right">
-												<div class="text-animate">
-													<div class="arrow-rotate-right ignore"></div>											
-												</div>
-											</div>													
-										</div>
-									</div>			
-								</div>										
-							</div>							
-							<div class="owl-hide-medium-down p-portrait col-lg-12 ml-auto mr-auto">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Sketch <strong>Work</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>
-									<div class="middle textoverlay light-theme h100">							
-										<div class="dark-theme loader">
-											<img src="" data-src="images/process/sketch.png" class="owl-lazy cover">	
-										</div>				
-										<div class="dark-theme overlay c-all touch-hidden">
-											<div class="text-animate ppp c-all">
-												<div>
-													<h3 class="h3">GALLERY <strong></strong></h3>
-													<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
-												</div>
-											</div>
-										</div>
-										<div class="dark-theme overlay c-all desktop-hidden">
-											<div class="text-animate ppp c-all">
-												<div>
-													<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
-													<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate physiologic measurements.
-													</p>
-													<div>
-													<p><span class="open-popup btn">Swipe to View</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>								
-							</div>						
-							<div class="owl-hide-medium-down p-portrait col-lg-12 ml-auto mr-auto">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Image <strong>Gallery</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>
-									<div class="middle textoverlay dark-theme">							
-										<div class="dark-theme loader">
-											<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover" style="object-position: 50% 70%;">	
-										</div>				
-										<div class="dark-theme overlay c-all touch-hidden">
-											<div class="text-animate ppp c-all">
-												<div>
-													<h3 class="h3">GALLERY <strong></strong></h3>
-													<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
-												</div>
-											</div>
-										</div>
-										<div class="dark-theme overlay c-all desktop-hidden">
-											<div class="text-animate ppp c-all">
-												<div>
-													<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
-													<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate physiologic measurements.
-													</p>
-													<div>
-													<p><span class="open-popup btn">Swipe to View</span></p>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>								
-							</div>					
-							<div class="owl-hide-xs-down ml-auto mr-auto">
-								<div class="cont">
-								<div class="row m-h">
-									<div class="col-12 flex">
-										<div class="col-lg-6">
-										 <h3 class="h3 invisible fade-in-up txt-l s-t m-h"><strong>3d Model</strong></h3>
-										</div>	
-										<div class="col-lg-6">  
-										 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-										</div>
-									</div>
-								</div>						
-								<div class="middle light-theme iframe-container c-all textoverlay-inverse">
-									<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
-									<div class="model-controls">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-										<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
-									</div>
-									<div class="c-all view-btn overlay img-opacity hide-this">									
-									</div>								
-									<iframe 
-									id="showonclick"
-									class="showonclick m-h unload-no-reload"
-									src="" 
-									data-src="Converse/webgl/rendered.html"		
-									frameborder="0"
-									scrolling="no">	 
-									</iframe>
-									<img src="" data-src="Converse/images/process/modeling.png" class="owl-lazy hide-this">						
-								</div>	
-							</div>
-							</div>
-							<div class="p-portrait ml-auto mr-auto">
-								<div class="cont">
-								  <div class="top xs-down-h">
-									<div class="col-12 p0 flex">
-										<div class="col-lg-6">
-										 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Brand <strong>Breakdown</strong></h3>
-										</div>	
-										<div class="col-lg-6">  
-										 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-										</div>
-									</div>
-								  </div>
-								  <div class="middle">
-									<div class="light-theme bg-none row m0 h100">							
-										<div class="col-lg-6 col-md-6 loader c-all textoverlay padda">
-											<img src="" data-src="Converse/images/process/01.jpg" class="owl-lazy invisible fade-in cover" style="object-position: 100% 17%;">												
-											<div class="md-up-h light-theme overlay c-all">
-												<div class="text-animate c-all ppp">
-													<div>
-														<h3 class="h3">Brand <strong>Breakdown </strong></h3>
-														<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
-														<p class="txt-c">The brand radiates a relaxed attitude</p>
-														<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
-														<p>Geometrical shapes & minimalism</p>
-													</div>
-												</div>
-											</div>
-											<div class="xs-down-h dark-theme overlay c-all">
-												<div class="text-animate c-all ppp">
-													<div>
-														<h3 class="h3">Relaxed <strong>Attitude </strong></h3>
-														<p class="txt-c">The brand radiates a relaxed attitude</p>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="xs-down-h col-lg-6 col-md-6 c-all p0 hw100">
-											<div class="col-lg-6 loader textoverlay c-all padda">
-												<img src="" data-src="Converse/images/process/04.jpg" class="lazy cover" style="object-position: 100% 17%;">												
-												<div class="light-theme overlay c-all">
-													<div class="text-animate c-all ppp">
-														<div>
-															<h3 class="h3">Edgy & <strong>Artsy </strong></h3>
-															<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 md-down-h loader c-all p0">
-												<div class="row m0 h100">
-													<div class="padda col-lg-12 textoverlay h50">
-														<img src="" data-src="Converse/images/process/03.png" class="lazy bg-offwhite">												
-														<div class="light-theme overlay c-all">
-															<div class="text-animate c-all ppp">
-																<div>
-																	<h3 class="h3">Simple & <strong>Lazy </strong></h3>
-																<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="padda col-lg-12 textoverlay h50">											
-														<div class="bg-offwhite h100">
-															<img src="" data-src="Converse/images/process/bag.jpg" class="lazy multiply">	
-														</div>										
-														<div class="light-theme overlay c-all">
-															<div class="text-animate c-all">
-																<div>
-																	<h3 class="h3">Minimal<strong>ism </strong></h3>
-																	<p>Geometrical shapes & minimalism</p>	
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								  </div>
-								</div>								
-							</div>						
-							<div class="p-portrait ml-auto mr-auto">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Mood <strong>Board</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>				
-									<div class="middle row m0">
-										<div class="col-lg-6 c-all p0 hw100">
-											<div class="col-lg-6 loader c-all p0">
-												<div class="row m0 hw100">
-													<div class="padda col-lg-12 textoverlay h50">
-														<img src="" data-src="Converse/images/moodboard/coke.jpg" class="owl-lazy cover bg-offwhite" style="object-position: 50% 33%;">												
-														<div class="light-theme overlay c-all">
-															<div class="col-lg-10 text-animate c-all">
-																<div>
-																	<h3 class="h3">60s <strong>Coca Cola Design </strong></h3>
-																	<p class="txt-c">Whats more American than Coca Cola? <br>
-																	This sign might make you think of a worker in the 50s-60s in dirty jeans taking a break at Coca-cola machine</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="padda col-lg-12 textoverlay dark-theme h50">											
-														<img src="" data-src="Converse/images/moodboard/snakeskin.jpg" class="owl-lazy cover">												
-														<div class="light-theme overlay c-all">
-															<div class="col-lg-10 text-animate c-all">
-																<div>
-																	<h3 class="h3">Snake <strong>Skins Patterns </strong></h3>
-																	<p class="txt-c">Timber Rattlesnake, Eastern Coachwhip, Cottonmouth, Eastern Garter Snake.<br>
-																	when we're in the South, we should pay attention to the snakes</p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-6 loader c-all p0">
-												<div class="row m0 hw100">
-													<div class="padda col-lg-12 textoverlay dark-theme h50">
-														<img src="" data-src="Converse/images/moodboard/bbq.jpg" class="owl-lazy cover bg-black">												
-														<div class="dark-theme overlay c-all">
-															<div class="col-lg-10 text-animate c-all">
-																<div>
-																	<h3 class="h3">Southern<strong> Cooking</strong></h3>
-																	<p class="txt-c">Barbecue is strongly associated with Southern cooking and culture due to its long history and evolution in the region</p>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="padda col-lg-12 textoverlay dark-theme h50">											
-														<div class="bg-offwhite hw100">
-															<img src="" data-src="Converse/images/moodboard/swamp.jpg" class="owl-lazy cover">	
-														</div>										
-														<div class="dark-theme overlay c-all">
-															<div class="col-lg-10 text-animate c-all">
-																<div>
-																	<h3 class="h3">Swamps & <strong>Wetlands </strong></h3>
-																	<p class="txt-c">Murky waters? Great inspiration for graphic textures</p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>								
-										<div class="xs-down-h padda col-lg-6 loader c-all textoverlay p0">
-											<div class="desktop-hidden zoom-icon"></div>
-											<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
-											<img src="" data-src="Converse/images/moodboard/cotton.jpg" class="owl-lazy cover" style="object-position: 100% 17%;">												
-											<div class="dark-theme overlay c-all">
-												<div class="text-animate c-all ppp">
-													<div>
-														<h3 class="h3"><strong>The South</strong> of the 60s </h3>
-														<p class="txt-c">The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
-														<p class="txt-c">Here, a cotton field worker taking a break</p>
-													</div>
-												</div>
-											</div>
-										</div>						
-									</div>							
-								</div>
-							</div>
-							<div class="p-portrait ml-auto mr-auto">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Sketch <strong>Work</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>
-									<div class="middle textoverlay">							
-										<div class="loader c-all">
-											<img src="" data-src="Converse/images/process/sketch01.jpg" class="owl-lazy cover">	
-										</div>					
-										<div class="dark-theme overlay c-all">
-											<div class="text-animate ppp c-all">
-											<div>
-												<h3 class="h3">Sketch <strong>Work</strong></h3>
-												<p class="txt-c">Outtakes from the ideation process</p>
-											</div>
-											</div>
-										</div>
-									</div>							
-								</div>
-							</div>						
-							<div class="owl-hide-large-up padda ml-auto mr-auto light-theme">	
-								<div class="row m-h">
-									<div class="col-12 flex">
-										<div class="col-lg-6">
-										 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">HEAD SCAN <strong>& MODELING </strong></h3>
-										</div>	
-										<div class="col-lg-6">  
-										 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-										</div>
-									</div>
-								</div>							
-								<div class="row h100">
-									<div class="col-lg-6">
-										<div class="h100">
-											<div class="loader textoverlay">
-												<img src="" data-src="Converse/images/process/head_square.jpg" class="lazy cover" style="object-position: 25% 50%;">
-												<div class="overlay c-all ppp">
-													<div class="col-lg-6 text-animate c-all">
-														<div>
-															<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
-															<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
-															<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br>
-															</p>																																
-														</div>
-													</div>
-												</div>												
-											</div>									
-										</div>	
-									</div>							
-								</div>							
-							</div>
-							<div class="owl-hide-medium-up padda ml-auto mr-auto light-theme">		
-								<div class="row m0 h100">
-									<div class="col-lg-6 col-md-6 col-xs-12 h100">
-										<div>
-											<div class="iframe-container textoverlay-desktop">															
-												<iframe 
-												src="" data-src="Converse/webgl/spherebuild.html"
-												class="lazy vh65 unload"					
-												id="test"
-												frameborder="0"
-												scrolling="no">			 	 
-												</iframe>
-												<div class="desktop-hidden">
-													<div class="model-controls">
-														<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-														<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
-													</div>	
-												</div>
-												<div class="overlay mini c-all light-theme bg-none">
-													<div class="col-lg-6 text-animate c-all">
-														<div class="ignore model-controls">
-															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
-														</div>	
-													</div>
-												</div>	
-											</div>									
-										</div>	
-									</div>	
-									<div class="col-lg-6 textoverlay">
-										<div class="loader c-all">
-											<img src="" data-src="Converse/images/process/head_square.jpg" class="lazy cover" style="object-position:0% 75%">	
-										</div>					
-										<div class="overlay c-all">
-											<div class="col-lg-6 text-animate">
-												<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
-												<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
-												<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
-											</div>
-										</div>
-									</div>						
-								</div>							
-							</div>						
-							<div class="owl-hide-xs-down p-portrait ml-auto mr-auto">
-							<div class="cont">
-								<div class="row">
-									<div class="col-12 flex">
-										<div class="col-lg-6">
-										 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Head Scan & <strong>Modeling</strong></h3>
-										</div>	
-										<div class="col-lg-6">  
-										 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-										</div>
-									</div>
-								</div>				
-								<div class="middle row light-theme m0">
-									<div class="col-lg-6 p0 col-md-6 col-xs-6 h100">
-										<div class="h100">
-											<div class="iframe-container textoverlay-desktop">															
-												<iframe 
-												src="" data-src="Converse/webgl/spherebuild.html"
-												class="lazy unload"					
-												frameborder="0"
-												scrolling="no">			 	 
-												</iframe>
-												<div class="desktop-hidden">
-													<div class="model-controls">
-														<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
-														<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-													</div>	
-												</div>
-												<div class="overlay mini  light-theme bg-none">
-													<div class="col-lg-6 text-animate c-all">
-														<div class="ignore model-controls">
-															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
-															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-														</div>	
-													</div>
-												</div>	
-											</div>									
-										</div>	
-									</div>	
-									<div class="col-lg-6 textoverlay">
-										<div class="loader c-all">
-											<img src="" data-src="Converse/images/process/head_square.jpg" class="owl-lazy cover" style="object-position:0% 75%">	
-										</div>					
-										<div class="overlay c-all">
-											<div class="col-lg-6 text-animate h-auto">
-												<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
-												<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
-												<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
-											</div>
-										</div>
-									</div>						
-								</div>	
-								</div>							
-							</div>						
-							<div class="owl-hide-large-up padda ml-auto mr-auto light-theme">
-								<div class="p0-md-down h100">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Views & <strong>Measurements</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>							
-									<div class="viewer loader scrolldown-container show-scroll pb-0">	
-										<div class="touch-hidden padda col-lg-4 ml-auto mr-auto textoverlay">
-											<div class="zoom-container">											
-												<div class="zoom-icon"></div>
-												<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
-												<div class="overlay c-all ppp">
-													<h3 class="h3">TOP <strong> VIEW</strong></h3>
-												</div>										
-											</div>	
-										</div>	
-										<div class="animate scroll-down"></div>
-										<div class="slide zoom-container">
-											<div class="zoom-icon"></div>
-											<img class="owl-lazy" src="" data-src="Converse/images/process/modeling02_black.svg">
-										</div>	
-										<div class="slide zoom-container">
-											<div class="zoom-icon"></div>
-											<img class="owl-lazy" src="" data-src="Converse/images/process/modeling03_black.svg">
-											<div class="md-up-h overlay c-all ppp">
-												<h3 class="h3">SIDE <strong> VIEW</strong></h3>
-											</div>										
-										</div>	
-										<div class="slide zoom-container">
-											<div class="zoom-icon"></div>
-											<img class="owl-lazy" src="" data-src="Converse/images/process/modeling01_black.svg">
-											<div class="md-up-h overlay c-all ppp">
-												<h3 class="h3">MEASURE<strong>MENTS</strong></h3>
-											</div>										
-										</div>												
-									</div>
-									</div>
-								</div>						
-							</div>
-							<div class="owl-hide-medium-down p-portrait ml-auto mr-auto">
-								<div class="p0-md-down h100">
-								<div class="cont">
-									<div class="row m-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Views & <strong>Measurements</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>							
-									<div class="middle row auto-scroll">		
-										<div class="desktop-hidden padda ml-auto mr-auto textoverlay light-theme">
-											<div class="viewer dropdown-container zoom-container loader props">
-											<div class="animate scroll-down desktop-hidden"></div>
-												<div class="ion-android-add-circle zoom-icon"></div>
-												<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
-												<div class="md-up-h overlay c-all ppp">
-													<h3 class="h3">TOP <strong> VIEW</strong></h3>
-												</div>					
-											</div>	
-										</div>										
-										<div class="md-down-h col-lg-12 col-md-6 col-xs-6 textoverlay no-more-icon">
-											<div class="loader">
-												<div class="loader md-up-h">
-												<img src="" data-src="Converse/images/process/spherebuild.png" class="owl-lazy">
-												</div>
-												<div class="iframe-container textoverlay">														
-													<iframe 
-													src="" data-src="Converse/webgl/measurements.html"
-													class="m-h lazy unload"
-													style=""												
-													id="popup-iframe3"
-													frameborder="0"
-													scrolling="no">			 	 
-													</iframe>
-													<div class="overlay mini light-theme bg-none">
-														<div class="col-lg-6 text-animate c-all">
-															<div class="ignore model-controls">
-																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
-																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-																<a href="#converse-measures-popup" data-tooltip="#icon-info-large-popup" class="info-icon open-popup m-h"><div class="ion-android-open"></div></a>
-															</div>	
-														</div>
-													</div>												
-												</div>
-											</div>	
-										</div>					
-									</div>
-									</div>
-								</div>						
-							</div>						
-							<div class="ml-auto mr-auto">
-							<div class="cont">
-								<div class="row">
-									<div class="col-12 flex">
-										<div class="col-lg-6">
-										 <h3 class="xs-down-h h3 invisible fade-in-up txt-l s-t">Color & <strong>Material</strong></h3>
-										</div>	
-										<div class="col-lg-6">  
-										 <h3 class="xs-down-h h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-										</div>
-									</div>
-								</div>
-								<div class="middle dark-theme textoverlay-inverse">							
-									<div class="loader c-100">
-										<img class="owl-lazy" src="" data-src="Converse/web/images/web.1.png">
-									</div>	
-									<div class="c-all c-absolute hw100">
-									<a href="#converse-webconfig-popup" title="Project Info" class="xs-down-h open-popup btn btn-outline z999">View CMF Options</a>
-									<a href="#converse-cmf-popup-mobile" title="Project Info" class="md-up-h open-popup btn btn-outline z999">CMF</a>
-										<div class="dark-theme ppp overlay half img-opacity c-all">
-										</div>
-									</div>
-								</div>
-								</div>															
-							</div>				
-							<div class="p-portrait ml-auto mr-auto dark-theme">			
-								<div class="col-full col-md-12 col-sm">
-									<div class="popup-project-section row c-lg ppp h100 align-content-center">
-										<div class="col-lg-7 mr-auto ml-auto">
-										  <div class="col-lg-7 mr-auto ml-auto">
-											 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-											 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-											 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-										  </div>
-										</div>
-									</div>
-								</div>
-							</div>							
-						</div>
-					</div>								
-					<div class="c-all view-btn btn-auto-padding">
-						<span class="prev-btn btn btn-outline m-h">prev</span>	
-						<span class="more-btn btn btn-outline">next</span>
-					</div>	
-				</div>
-			</div>					
-			</div>					
-			<div id="bagheera" class="snap col-lg-12 p0">
+			</div>							
+			<div id="bagheera" class="snap col-lg-12 p0 x-theme">
 				<div class="invisible zoom-in">			
 					<div id="bagheera-title" class="title x-theme row m0 title-auto-padding">
 						<div class="col-12 p0 flex">
@@ -1920,10 +1883,10 @@
 										</div>
 									</div>
 								</div>					
-								<div class="owl-hide-xs-down col-lg-12 p0 ml-auto mr-auto medium-theme">				
+								<div class="owl-hide-xs-down col-lg-12 p0 ml-auto mr-auto">				
 									<div class="row m0 hw100">
-											<div class="cover  hw100 rellax-props"></div>
-											<div class=" rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.05"><div class="specialized-logo dark-theme hw100" style="width:100% !important;"></div></div>								
+<!-- 											<div class="cover  hw100 rellax-props"></div>
+											<div class=" rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.05"><div class="specialized-logo dark-theme hw100" style="width:100% !important;"></div></div>	 -->							
 											<div class="col-lg-6 ml-auto mr-auto p0 c-all txt-l">
 												<div>										
 													<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
@@ -2149,9 +2112,9 @@
 			<div id="loadMore">
 				<a href="#">More Designs</a>
 			</div>	
-			<div id="designprocess-slider" class="snap col-lg-12 p0">
+			<div id="designprocess-slider" class="snap col-lg-12 p0 x-theme">
 				<div class="invisible zoom-in">	
-					<div id="mixed-title" class="title x-theme row m0 title-auto-padding">
+					<div id="mixed-title" class="title row m0 title-auto-padding">
 						<div class="col-12 p0 flex">
 							<div class="col-lg-6 c-all p0 justify-content-start">
 								<h3 class="h3 txt-l"><strong>Design </strong>Process</h3>						 
@@ -4403,6 +4366,8 @@
 				</div>						 
 			</div> -->
 		</div>
+		
+		<!-- popup themes -->
 		<script>
 		//$('#popups-div').children().addClass('popup mfp-hide');
 		<!-- dark-theme -->
@@ -4413,7 +4378,7 @@
 		$('#popups-div').find('#bagheera-webconfig-popup, #specialized-xr-popup, #alcon-xr-popup').addClass('medium-theme');
 		</script>		
 
-		<!-- start tooltips -->
+		<!-- tooltips -->
 		<div id="tooltips">
 			<div id="icon-project-info-popup">
 			Project Info
@@ -4587,11 +4552,12 @@
 		  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
 		  <circle class="path theme-stroke" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 			 /></svg></div> 
+		
+		<!-- add hw100 to .loader --> 		
 		<script>
 		$('body').find(".loader").not('.zoom-icon').addClass('hw100');		
 		</script>
 	
-
 		<script type="text/javascript" src="js/lazyload.js"></script>
 		<script type="text/javascript" src="js/logos.js"></script>	
 		<script src="js/popper.min.js"></script>
@@ -4607,6 +4573,7 @@
 		<script src="js/stellar.js"></script>
 		<script src="js/load-more-button.js"></script>
 		<script src="js/jquery-scroll-snap.js"></script>
+		<script src="js/smoothscroll.js"></script>
 
 		<!-- scroll snap -->		
 		<script>
@@ -4690,106 +4657,94 @@
 		});
 		</script>
 
-		<!-- x-theme -->
+		<!-- x-theme + theme-switcher -->
 		<script>
+		var darkBg = '#212121';		
+		
+		if(is_touch_device()) {
+		var theme = 'light-theme'; //	set theme for touch devices
+		}
+		else
+		{ 
+		var theme = 'dark-theme'; // set theme for desktop devices			
+		}		
+		
+		// apply chosen theme to bg - and mark clicked button with circle	
+		if (theme == 'light-theme') {
+		$('body').css({"background-color": "#fff"});
+		$('.light-theme-button').addClass('circle-shadow');
+		}
+		else {
+		$('body').css({"background-color": darkBg});
+		$('.dark-theme-button').addClass('circle-shadow');
+		}
+
+		// apply chosen theme to following the elements	
+		$('body').find(".x-theme ,fadeout-top, fadeout-btm, .title").addClass(theme);
+		$('body').find(".title").addClass(theme).addClass('bg-none');
+		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
+		//$('body').find(".dropshadow").addClass('dropshadow-' + theme);		
+		
+		
+		// on theme btn click - mark this btn - remove current theme - and apply new theme
 		$('.dark-theme-button').on('click',function(){
 		$('.light-theme-button').removeClass('circle-shadow');
-			$(this).addClass('circle-shadow');
+			$('.dark-theme-button').addClass('circle-shadow');
 			$('body').css({"background-color": darkBg});
 			$('body').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');
 			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
 			//$('body').find(".dropshadow").removeClass('dropshadow-light-theme').addClass('dropshadow-dark-theme');
 		});
-
 		$('.light-theme-button').on('click',function(){
 			$('body').css({"background-color": "#fff"});
 			$('.dark-theme-button').removeClass('circle-shadow');
-			$(this).addClass('circle-shadow');
+			$('.light-theme-button').addClass('circle-shadow');
 			$('body').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
 			$('body').find(".x-theme, .fadeout-top, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
 			//$('body').find(".dropshadow").removeClass('dropshadow-dark-theme').addClass('dropshadow-light-theme');
 		});
 		</script>
-
-		<!-- select icons -->
-		<script>
-		$('.zoom-icon').addClass('ion-ios-search-strong');
-		//$('.scroll-down').addClass('ion-android-arrow-dropdown-circle');
-		</script>
 		
-		<!-- start add more-icons  -->
+		<!-- add zoom-icon + more-icon + scroll-down  -->
 		<script>
+		//zoom icon
+		$('.zoom-icon').addClass('ion-ios-search-strong');
+		//$('.scroll-down').addClass('ion-android-arrow-dropdown-circle');		
+		
 		if(is_touch_device()) {
 			$('.owl-carousel, #poc, #process-md-down').find('.textoverlay:not(.no-more-icon), .textoverlay-mobile:not(.no-more-icon)').not('.textoverlay.no-more-icon').prepend('<div class="ion-android-add big more-icon"></div>');
+			//$('.owl-carousel, #poc, #process-md-down').find('.textoverlay').prepend('<div class="ion-android-add more-icon"></div>');
+			
 		}
 		else
 		{ 
 		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add-circle big more-icon"></div>');
+		//$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add more-icon"></div>');
 		}
+
+		//hide scroll-icon on scroll
+	  $('.scrolldown-container').on('touchstart scroll',function(){
+		$(this).find('.scroll-down').addClass('invisible');			
+	  });
+	
 		</script>
-		
+				
 		<!-- rellax -->
 		<script>
 		  var rellax = new Rellax('.rellax', {
 			 breakpoints:[576, 768, 1201]
 		  });
 		</script>
-
-		<!-- add theme clr classes -->
-		<script>
-		
-		var darkBg = '#212121';		
-		
-		if(is_touch_device()) {
-		var theme = 'light-theme'; //	touch
-		}
-		else
-		{ 
-		var theme = 'light-theme'; // desktop			
-		}		
-				
-		if (theme == 'light-theme') {
-		$('body').css({"background-color": "#fff"});
-		$('.light-theme-button').addClass('circle-shadow');
-		}
-		else {
-		//$('body').css({"background-color": "#141414"});
-		$('body').css({"background-color": darkBg});
-		$('.dark-theme-button').addClass('circle-shadow');
-		//$('body').addClass('contrast-bg');
-		}
-		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
-		$('body').find(".x-theme ,fadeout-top, fadeout-btm, .title").addClass(theme);
-		$('body').find(".title").addClass(theme).addClass('bg-none');
-		//$('body').find(".dropshadow").addClass('dropshadow-' + theme);
-		</script>	
-
-<!-- 		<script>
-		if(is_touch_device()) {
-			$('.owl-carousel, #poc, #process-md-down').find('.textoverlay').prepend('<div class="ion-android-add more-icon"></div>');
-		}
-		else
-		{ 
-		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add more-icon"></div>');
-		}
-		</script> -->
-		
-		<!-- start reload iframe  -->							
+	
+		<!-- reload iframe  -->							
 		<script>	
 		  $('.ion-refresh').on('click',function(){
 			iframe = $(this).closest('.iframe-container').find('iframe').first();
 			iframe.attr('src', iframe.attr('src'));				
 		  });
 		</script>
-		
-		<!-- start hide scroll-down icon  -->
-		<script>	
-		  $('.scrolldown-container').on('touchstart scroll',function(){
-			$(this).find('.scroll-down').addClass('invisible');			
-		  });
-		</script>		
-		
-		<!-- start touch and desktop hidden  -->
+				
+		<!-- touch and desktop hidden  -->
 		<script>
 		if(is_touch_device()) {
 			$('.touch-hidden').addClass('hidden');
@@ -4800,7 +4755,7 @@
 		}
 		</script>
 		
-		<!-- start textoverlay  -->
+		<!-- textoverlay  -->
 		<script>
 		if(is_touch_device()) {
 		  $('.textoverlay .overlay, .textoverlay-mobile .overlay').on('touchstart',function(){
@@ -4817,21 +4772,23 @@
 		else
 		{ 
 		  $('.textoverlay, .textoverlay-desktop').on('mouseenter',function(){
+			 $(this).find('img').addClass('half img-opacity');
 			 $(this).find('.overlay').addClass('img-opacity');
 			 <!-- $(this).find('.ion-android-add').addClass('opacity-0'); -->
 			 $(this).find('.ion-android-add-circle').addClass('invisible');
 			 $(this).find('.text-animate').addClass('remove-margin');
 		  });
 			 $('.textoverlay, .textoverlay-desktop').on('mouseleave',function(){
+			 $(this).find('img').removeClass('half img-opacity');
 			 $(this).find('.overlay').removeClass('img-opacity');
 			 <!-- $(this).find('.ion-android-add').removeClass('opacity-0'); -->
 			 $(this).find('.ion-android-add-circle').removeClass('invisible');
 			 $(this).find('.text-animate').removeClass('remove-margin');
 		  });	
 		}
-		</script>
-		<!-- start textoverlay-inverse  -->		
-		<script>
+		
+		<!-- textoverlay-inverse  -->		
+
 		if(is_touch_device()) {
 		  $('.textoverlay-inverse').on('touchstart',function(){
 			 $(this).find('.overlay').removeClass('img-opacity');
@@ -4856,10 +4813,11 @@
 			  $(this).find('.overlay').removeClass('invisible');
 			 $(this).find('.text-animate').removeClass('remove-margin');
 		  });			
-		}
-		</script>
+		}		
 		
-		<!-- start icon animations  -->	
+		</script>
+				
+		<!-- icon animations  -->	
 		<script>
 		if(is_touch_device()) {
 		}
@@ -4886,7 +4844,7 @@
 		}
 		</script>
 
-		<!-- start toggle xr styles  -->
+		<!-- inject xr styles + bg select buttons -->
 		<script>	
 			$(".akg, .bagheera, .bagheera-process, .converse, .converse-more, .poc, .poc-process, .specialized, .haglofs, .alcon, .akg-process").on("load", function() {
 			themeclr ="light";
@@ -4909,7 +4867,7 @@
 			});
 		</script>
 
-		<!-- start inject web config styles  -->
+		<!-- inject web config styles  -->
 		<script>
 			$(".akg-webconfig, .converse-webconfig, .specialized-webconfig, .akg-webconfig-process").on("load", function() {
 			
@@ -4923,8 +4881,7 @@
 			  $(head).append(css);
 			  $('.' + brand2).addClass("visible");
 			});
-		</script>
-		<script>
+
 			$(".bagheera-webconfig").on("load", function() {
 			
 			themeclr ="medium";	
@@ -4936,24 +4893,11 @@
 			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
 			  $(head).append(css);
 			  $('.' + brand2).addClass("visible");
-			});
-		</script>
-<!-- 		<script>
-			$(".akg-webconfig-process").on("load", function() {
+			});			
 			
-			themeclr ="light";	
-			brand2 = $(this).attr('class').split(' ')[0];
-
-			$('#' + brand2 + '-popup' + ' div.ion-information-circled').addClass(themeclr +"-theme-btn");
-
-			  let head = $("." + brand2).contents().find("head");	
-			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-			  $(head).append(css);
-			  $('.' + brand2).addClass("visible");
-			});
-		</script> -->	
+		</script>
 				
-		<!-- start magnific -->		
+		<!-- magnific -->		
 		<script>
 			let magnificPopupExists = false;
 
@@ -5046,7 +4990,7 @@
 			});	
 		</script>
 
-		<!-- start tooltips -->
+		<!-- tooltips -->
 		<script>
 	<!-- start desktop -->	
 		if(is_touch_device()) {
@@ -5077,8 +5021,8 @@
 		$($(this).data("tooltip")).hide();
 
 		});
-		</script>			
-		<script>
+		
+	
 	<!-- start touch & desktop -->	
 	$(".info-icon-both").hover(function(e) {
 		if($(this).parents().hasClass("dark-theme"))
@@ -5103,10 +5047,10 @@
 
 		$($(this).data("tooltip")).hide();
 
-		});
-		</script>	
+		});		
+		</script>			
 
-		<!-- start show buttons -->	
+		<!-- show buttons -->	
 		<script>	
 		$(".show-shaded").on("click", function() {
 		iframe = $(this).closest('.iframe-container').find('.showonclick').first();			
@@ -5115,35 +5059,8 @@
 		$(this).closest('.iframe-container').find(".hide-this").addClass('hidden');	 
 		});
 		</script>
-	
-		<!-- start smooth scroll -->		
-<!-- 		<script>	
-		function delay() {
-
-			 if (window.location.hash) {
-				  setTimeout(function () {
-						var hash = window.location.hash;
-						window.location.hash ="";
-				$('html').animate({
-				  scrollTop: $(hash).offset().top
-				}, 800, function(){
-
-				  // Add hash (#) to URL when done scrolling (default click behavior)
-				  window.location.hash = hash;
-				});
-				  }, 300);
-			 }
-		};	  
-
-		function start()
-		{
-		delay();
-		}
-
-		window.onload = start;  
-		</script> -->
-		
-		<!-- start scrolltop btn + scrollbar -->
+			
+		<!-- scrolltop btn + scrollbar -->
 		<script>
 // When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
@@ -5173,5 +5090,5 @@ function myFunction() {
 
 		</script>		
 
-</body>
+	</body>
 </html>	
