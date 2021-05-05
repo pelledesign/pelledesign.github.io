@@ -16052,6 +16052,7 @@ bottom:0;
 }
 
 .overlay {
+overflow: hidden;	
   position: absolute;
   top: 0;
   bottom: 0;
@@ -17268,7 +17269,7 @@ height: calc(100vh) !important;
 background: url('../images/bg/lips.jfif');	
 }
 
-@media (min-width:992px;) {
+@media (min-width:992px) {
 .light-theme #bg-hero {
 background: url('../images/bg/a.jpeg');	
 }
@@ -17349,3 +17350,6 @@ display:flex;
 justify-content:left;
 }
 
+#slider-container {
+overflow:hidden;	
+}
