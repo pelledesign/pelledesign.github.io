@@ -1,9 +1,8 @@
 
 /* general */
-overlay colors - fade out bg instead?
-fix scripts
+hero img
 change pre next btns
-fix specialized rellax
+fix specialized rellax		
 hero + font
 how show "pdf viewer on mobile?
 
