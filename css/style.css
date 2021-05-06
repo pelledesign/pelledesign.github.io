@@ -16315,6 +16315,11 @@ padding-bottom: 3px !important;
   opacity: .4 !important; 
 }
 
+.low.img-opacity {
+	transition: .3s ease;
+  opacity: .2 !important; 
+}
+
 .text-animate {
 transition: .3s ease;
 overflow-y:scroll;
@@ -17344,8 +17349,9 @@ body.lock-scroll{
 position: fixed; 
 bottom: 10px; 
 z-index: 2; 
-left:50%; 
-transform: translateX(-50%);
+/* left:50%;  */
+left:0; 
+/* transform: translateX(-50%); */
 display:flex;
 justify-content:left;
 }

@@ -1,9 +1,8 @@
 
 /* general */
-hero img
-change pre next btns
-fix specialized rellax		
-hero + font
+loading model.. font
+hero img + font
+change pre next btns	
 how show "pdf viewer on mobile?
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
