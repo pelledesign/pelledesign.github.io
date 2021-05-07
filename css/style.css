@@ -16150,8 +16150,13 @@ background-color: rgba(228, 229, 231,.9);
 }
 
 
-.view-btn{
+.view-btn {
 background:none;	
+}
+
+.view-btn.on-top {
+position:absolute; 
+bottom:0;	
 }
 
 .dark-theme.overlay a,
@@ -17393,4 +17398,11 @@ justify-content:left;
 
 #slider-container {
 overflow:hidden;	
+}
+
+
+.title.on-top {
+position:absolute;
+width: 100%;
+z-index: 2;	
 }

@@ -846,7 +846,7 @@
 								</div>							
 							</div>
 						</div>								
-						<div class="c-all view-btn" style="position:absolute; bottom:0;">
+						<div class="view-btn on-top c-all">
 							<span class="prev-btn btn btn-outline touch-hidden">prev</span>	
 							<span class="more-btn btn btn-outline touch-hidden">next</span>
 							<div class="more-btn ion-android-arrow-dropright-circle desktop-hidden" style="font-size: 3rem; z-index: 2;"></div>
@@ -4779,21 +4779,14 @@
 		if(is_touch_device()) {
 
 
-		$('.more-btn.ion-android-arrow-dropright-circle').on('click', function () {
-			//alert('ok');
-			
-			var this_btn = $(this);
-			
-			this_btn.addClass('flipInY element-animated');
+			$('.more-btn.ion-android-arrow-dropright-circle').on('touchstart', function () {			
+			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
+			});
 
-			setTimeout(function() {
-				//alert('Was called after 2 seconds');
-				 this_btn.removeClass('flipInY');
-			}, 500)
-
+			$('.more-btn.ion-android-arrow-dropright-circle').on('touchend', function () {			
+			$(this).addClass('zoomOutVisible animated-fast');
 			});			
 
-			
 		
 		}
 		else
