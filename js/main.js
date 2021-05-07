@@ -133,6 +133,25 @@ design_process  = $('#design-process'),
 all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 
+/* change nav clr depending on slide bg */
+$('#converse-more').on('translate.owl.carousel', function(event) {
+	
+	let element = jQuery(event.target);
+	let idx = event.item.index;
+	
+	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
+		  //alert('has class light-theme');
+		  $(this).closest('#slider-container').find('.view-btn').find('.more-btn').css({"color": "#000"});
+	  }
+	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
+		  //alert('has class dark-theme');
+		  $(this).closest('#slider-container').find('.view-btn').find('.more-btn').css({"color": "#fff"});
+	  }
+	  else {
+		  alert('error');
+	  }				  	
+	});
+
 /* remove slides for screens and devices on initialize  */
 all_sliders.on('initialize.owl.carousel', function(event) {
 	
@@ -274,7 +293,6 @@ $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
     });	
 
 /* mousewheel sliders */
-
 $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e) {
 	
 	var 
