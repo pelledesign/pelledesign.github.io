@@ -17398,8 +17398,22 @@ justify-content:left;
 
 #slider-container {
 overflow:hidden;	
+display: flex; 
+flex-flow: column; 
+height: 100%;
+position:relative;
 }
 
+#section-container {
+display: flex; 
+flex-flow: column; 
+height: 100%;
+}
+
+
+.more-btn.desktop-hidden {
+font-size: 3rem; z-index: 2;	
+}
 
 .title.on-top {
 position:absolute;

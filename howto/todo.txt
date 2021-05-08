@@ -1,6 +1,5 @@
 
 /* general */
-loading model.. font
 hero img + font
 change pre next btns	
 how show "pdf viewer on mobile?
