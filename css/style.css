@@ -12921,9 +12921,9 @@ figure figcaption {
   height: 400px;
 }
 
-.portfolio-section {
+/* .portfolio-section {
   background: #90a8af;
-}
+} */
 
 .work-thumb {
   display: block;
@@ -14341,7 +14341,7 @@ margin: 2em 0;
 }
 
 	
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
 .nav-middle-small .owl-nav {
   position: absolute;
   top: 50%;
@@ -14358,7 +14358,7 @@ margin: 2em 0;
 .nav-middle-small .owl-nav .owl-next {
   right: 15px !important;
 }
-}
+} */
 
 
 
@@ -16150,14 +16150,7 @@ background-color: rgba(228, 229, 231,.9);
 }
 
 
-.view-btn {
-background:none;	
-}
 
-.view-btn.on-top {
-position:absolute; 
-bottom:0;	
-}
 
 .dark-theme.overlay a,
 .dark-theme.overlay  h1,
@@ -17169,7 +17162,7 @@ background-color: #545454;
 }
 
 .theme-circle.light{
-background-color: white;
+background-color: #d7d7d7;
 }
 
 img:not([src]):not([srcset]) {
@@ -17415,8 +17408,23 @@ height: 100%;
 font-size: 3rem; z-index: 2;	
 }
 
+.view-btn {
+background:none;	
+}
+
+.view-btn.on-top {
+position:absolute; 
+bottom:0;	
+}
+
 .title.on-top {
 position:absolute;
 width: 100%;
 z-index: 2;	
+/* background-color: #ffffff59 !important; */
+}
+
+.portfolio-section {
+height:100vh !important;
+overflow:hidden;	
 }

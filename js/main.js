@@ -134,23 +134,51 @@ all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf
 
 
 /* change nav clr depending on slide bg */
-$('#converse-more').on('translate.owl.carousel', function(event) {
+
+all_sliders.on('initialized.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
 	
 	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
-		  //alert('has class light-theme');
-		  $(this).closest('#slider-container').find('.view-btn').find('.more-btn').css({"color": "#000"});
+		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme').addClass('light-theme');
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
-		  //alert('has class dark-theme');
-		  $(this).closest('#slider-container').find('.view-btn').find('.more-btn').css({"color": "#fff"});
+			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('dark-theme');
+	  }
+	  else {
+		  //alert('error');
+	  }				  	
+	});
+
+all_sliders.on('translate.owl.carousel', function(event) {
+	
+	let element = jQuery(event.target);
+	let idx = event.item.index;
+	
+	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
+		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme').addClass('light-theme');
+	  }
+	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
+			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('dark-theme');
 	  }
 	  else {
 		  alert('error');
-	  }				  	
+	  }	
+	  
 	});
+	
+	
+
+	
+	
+/* 		$('.dark-theme-button').on('click',function(){
+			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
+		});
+		$('.light-theme-button').on('click',function(){
+
+			$('body').find(".x-theme, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
+		}); */	
 
 /* remove slides for screens and devices on initialize  */
 all_sliders.on('initialize.owl.carousel', function(event) {
@@ -273,6 +301,7 @@ poc_process.trigger('refresh.owl.carousel');
  }
  setTimeout(refresh_this, 100)
 });
+
 
 /* disable dragging for specific slides */
 $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
