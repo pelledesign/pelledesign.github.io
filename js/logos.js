@@ -49,4 +49,7 @@
 		});	
 		$(function(){
 		  $(".akg-functions2").load("akg/images/functions2.svg"); 
+		});	
+		$(function(){
+		  $(".next-circle").load("images/icons/next_circle.svg"); 
 		});		

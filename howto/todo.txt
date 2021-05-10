@@ -1,5 +1,8 @@
 
 /* general */
+
+padda -> .item mobile
+
 hero img + font
 change pre next btns	
 how show "pdf viewer on mobile?
