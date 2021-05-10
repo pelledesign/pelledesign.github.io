@@ -4687,7 +4687,7 @@
 		if(is_touch_device()) {		
 		$('.owl-carousel, #poc, #process-md-down').find('.textoverlay:not(.no-more-icon), .textoverlay-mobile:not(.no-more-icon)').not('.textoverlay.no-more-icon').prepend('<div class="ion-android-add big more-icon"></div>');
 		//$('.owl-carousel, #poc, #process-md-down').find('.textoverlay').prepend('<div class="ion-android-add more-icon"></div>');
-		$('.more-btn').addClass('next-circle');			<!-- ion-android-arrow-dropright-circle -->
+		$('.more-btn').addClass('ion-android-arrow-dropright-circle');			<!-- next-circle --> 
 		}
 				
 		//select icons desktop
@@ -4800,11 +4800,11 @@
 		if(is_touch_device()) {
 
 
-			$('.more-btn.next-circle').on('touchstart', function () {			
+			$('.more-btn.ion-android-arrow-dropright-circle').on('touchstart', function () {			
 			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
 			});
 
-			$('.more-btn.next-circle').on('touchend', function () {			
+			$('.more-btn.ion-android-arrow-dropright-circle').on('touchend', function () {			
 			$(this).addClass('zoomOutVisible animated-fast');
 			});					
 		}
