@@ -77,8 +77,8 @@
 		
 		<!-- header -->
 		<header id="header" role="banner" class="nav-down x-theme">
-			 <nav class="navbar navbar-transparent navbar-expand-xl " style="align-items: normal; height:100%; padding:0;">
-				<div class="container-fluid " style="align-items: normal;">
+			 <nav class="navbar navbar-transparent navbar-expand-xl h100 p0">
+				<div class="container-fluid" style="align-items: normal;">
 				  <a href="index.html" class="text-logo" style="padding-left:1rem; max-height:50px;">Pelle iDesign</a>
 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
 					 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
 						  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
 						</li>
 						<li class="nav-item flex-xl-up c-lg">
-						  <p class="nav-link" style="padding-bottom: 0 !important;">Theme</p>    
+						  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
 							<div id="theme-switcher-menu" class=" flex justify-content-center">
 							<div id="" class="dark-theme-button theme-circle dark"></div>
 							<div id="" class="light-theme-button theme-circle light"></div>					
@@ -119,9 +119,9 @@
 		</div>
 		
 		<!-- btm scroll indicator -->
-		<div id="theme-switcher" class="" style="">
-				<div class="dark-theme-button theme-circle dark"></div>
-				<div class="light-theme-button theme-circle light"></div>				
+		<div id="theme-switcher">
+			<div class="dark-theme-button theme-circle dark"></div>
+			<div class="light-theme-button theme-circle light"></div>				
 		</div>
 		
 		<!-- hero -->
@@ -132,15 +132,15 @@
 		</div>
 		
 		<!-- about -->
-		<div id="about" class="snap p0 x-theme pt-4 relative hide-scroll section-auto-padding">	
-		<div id="bg-hero" class="c-absolute hw100" ></div>
-			<div class="col-auto p0 h100 dropshadow">		
+		<div id="about" class="snap x-theme pt-4 relative hide-scroll section-auto-padding">	
+		<div id="bg-hero" class="c-absolute hw100"></div>
+			<div class="col-auto h100 dropshadow">		
 				<div id="about-slider" class="about-slider owl-carousel">				
 					<div class="invisible fade-in">			
 						<div class="h100" data-hash="aboutme">
 							<div class="container c-md-up h100">
 								<div class="row">
-									<div class="col-lg-5 col-md-8 ml-auto mr-auto">
+									<div class="col-lg-5 col-md-8">
 										<span class="hidden d-block text-uppercase text-secondary">About</span>
 										<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> That Brings Your Ideas Alive</h2>					  
 										<p>I am Pelle Skogsberg. <br>With 10 years of experience in product design, my background includes designing products for brands such as 
@@ -163,7 +163,7 @@
 						<div class="h100" data-hash="myprocess">
 							<div class="container c-md-up h100">
 								<div class="row">
-									<div class="col-lg-5 col-md-8 ml-auto mr-auto">
+									<div class="col-lg-5 col-md-8">
 									  <span class="xs-down-h d-block text-uppercase text-secondary">Process</span>
 										<h2 class="mb-4">My <strong>Design Process</strong> Is Designed <strong>For You</strong></h2>
 										<p>My opinion is that in design, communication is fundamental to the outcome, and that's why 
@@ -183,7 +183,7 @@
 					<div class="c-md-up auto-scroll">
 						<div class="fadeout-top md-up-h"></div>					
 						<div data-hash="myservices">
-							<div class="col-md-9 ml-auto mr-auto c-all h100">								
+							<div class="container c-all h100">								
 								<div class="row h100">
 									<div class="col-lg-5 mr-auto mb-3 mb-lg-4">
 										<h2 class="element-animate">Featured <strong>Services</strong></h2>
@@ -193,7 +193,7 @@
 										<p class="mb-0 txt-l m-h"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>								
 									</div>
 									<div class="col-lg-6 animate">
-										<div class="row">
+										<div class="row m0">
 											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
 												  <div class="service">
 													<span class="icon icon-bulb mb-4 d-block"></span>
@@ -239,11 +239,11 @@
 			<div id="converse" class="portfolio-section"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">
 					<div id="converse-title" class="title row m0">
-						<div class="row p0 m0 flex w100">
-							<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
+						<div class="row m0 flex w100">
+							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
 							</div>	
-							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto p0">  
+							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
 								<div class="c-100 justify-content-end">
 									<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle"></div></a>
 									<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -253,20 +253,19 @@
 							</div>
 						</div>		
 					</div>	
-					<div id="slider-container">		
-						<div class="snap-this-center" style="flex: 1 1 100%;">		
-							<div id="converse-more" class="pelle-slider owl-carousel c-100 flexend-portrait p0 dropshadow">					
-								<div class="item owl-hide-large-up dark-theme">
+					<div id="slider-container">			
+							<div id="converse-more" class="owl-carousel c-100 dropshadow">					
+								<div class="item owl-hide-lg-up dark-theme">
 									<div class="cont">
-										<div class="middle textoverlay dark-theme" style="position:unset;">							
+										<div class="middle textoverlay dark-theme">							
 											<div class="dark-theme loader">
 												<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover hw100" style="object-position: 50% 70%;">	
 											</div>				
 											<div class="dark-theme overlay c-all desktop-hidden">
-												<div class="text-animate ppp c-all">
+												<div class="text-animate ppp c-all txt-l">
 													<div>
 														<h2 class="s-t element-animate">Converse <strong>Suburban</strong></h2>
-															<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.
+															<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.
 															</p>
 															<div>
 															<p><span class="open-popup btn">Swipe to View</span></p>
@@ -277,21 +276,18 @@
 										</div>
 									</div>								
 								</div>	
-								<div class="item owl-hide-large-up dark-theme">
+								<div class="item owl-hide-lg-up dark-theme">
 									<div class="cont">
-										<div class="middle dark-theme" style="position:unset;">	
-											<div class="fadeout-top"></div>										
-<!-- 											<div class="dark-theme loader">
-												<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy cover" style="object-position: 50% 70%;">	
-											</div> -->				
+										<div class="middle dark-theme">	
+											<div class="fadeout-top"></div>													
 											<div class="dark-theme overlay c-all desktop-hidden img-opacity">
-												<div class="text-animate ppp c-all">
+												<div class="text-animate ppp c-all txt-l">
 													<div>
 														<h2 class="mb-4 s-t txt-l">Converse <strong>Suburban</strong></h2>
-														<p class="txt-l">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+														<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
 														</p>		  
-														<p class="txt-l">My task was to analyze the brand's form language and create a product not already in the their arsenal. </p>
-														<p class="txt-l pb-6">Using southern suburban U.S as a contrasting theme to Converse's expression.</p>														
+														<p>My task was to analyze the brand's form language and create a product not already in the their arsenal. </p>
+														<p>Using southern suburban U.S as a contrasting theme to Converse's expression.</p>														
 													</div>
 												</div>
 											</div>
@@ -302,11 +298,11 @@
 								<div class="item owl-hide-xs-down dark-theme">				
 									<div class="dark-theme relative hide-scroll h100">	
 										<div class="cover hw100 rellax-props"></div>
-										<div class=" rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
+										<div class="rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5">
 											<div class="converse-logo dark-theme hw100"></div>
 										</div>
 										<div class="row hw100 m0">								
-											<div class="md-down-h col-lg-4 col-sm c-lg-up p0-md-down auto-scroll h100">
+											<div class="md-down-h col-lg-4 col-sm c-lg-up auto-scroll h100">
 												<div class="row c-lg">
 													<div class="col-lg-8 ppp2 txt-l">
 														<h2 class="mb-4 s-t">Converse <strong>Suburban</strong></h2>
@@ -318,7 +314,7 @@
 													</div>					
 												</div>
 											</div>			
-											<div class="col-lg-8 c-all textoverlay-desktop p0" style="overflow:hidden;">					
+											<div class="col-lg-8 c-all textoverlay-desktop hide-scroll">					
 												<iframe
 												class="converse-xr-inject lazy invisible fade-in soft-zoom" 
 												src="images/loaders/bars_fixed.svg"
@@ -326,17 +322,7 @@
 												frameborder="0"
 												scrolling="no"
 												>
-												</iframe>
-<!-- 												<div class="overlay bg-none arrow-left">
-													<div class="text-animate">
-														<div class="arrow-rotate-left ignore"></div>									
-													</div>
-												</div>
-												<div class="overlay bg-none  arrow-right">
-													<div class="text-animate">
-														<div class="arrow-rotate-right ignore"></div>											
-													</div>
-												</div>	 -->												
+												</iframe>												
 											</div>
 										</div>			
 									</div>										
@@ -359,12 +345,11 @@
 								<div class="item light-theme">
 									<div class="cont">
 										<div class="loader middle textoverlay">							
-												<img src="" data-src="images/process/sketch.png" class="owl-lazy absolute cover">												
+											<img src="" data-src="images/process/sketch.png" class="owl-lazy absolute cover">												
 											<div class="overlay c-all">
 												<div class="text-animate ppp c-all">
 													<div>
 														<h3 class="h3">SKETCH <strong>WORK</strong></h3>
-
 													</div>
 												</div>
 											</div>
@@ -411,35 +396,35 @@
 										</div>	
 									</div>
 								</div>
-								<div class="item dark-theme">
-										<div class="dark-theme textoverlay absolute">							
+								<div class="item light-theme">
+										<div class="absolute h100">							
 										<div class="light-theme bg-none row m0 h100">							
-											<div class="col-lg-6 col-md-6 loader c-all textoverlay padda">
+											<div class="col-lg-6 col-md-6 loader c-all textoverlay p-portrait">
 												<img src="" data-src="Converse/images/process/01.jpg" class="owl-lazy invisible fade-in cover" style="object-position: 100% 17%;">												
-												<div class="md-up-h dark-theme overlay c-all">
-													<div class="text-animate c-all ppp">
+												<div class="md-up-h overlay c-all">
+													<div class="text-animate c-all ppp txt-c">
 														<div>
 															<h3 class="h3">Brand <strong>Breakdown </strong></h3>
-															<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
-															<p class="txt-c">The brand radiates a relaxed attitude</p>
-															<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
+															<p>Converse draws inspiration from the street & creative cultures</p>
+															<p>The brand radiates a relaxed attitude</p>
+															<p>Forms are built from lazy curves and simple geometrical shapes </p>
 															<p>Geometrical shapes & minimalism</p>
 														</div>
 													</div>
 												</div>
-												<div class="xs-down-h dark-theme overlay c-all">
-													<div class="text-animate c-all ppp">
+												<div class="xs-down-h overlay c-all">
+													<div class="text-animate c-all ppp txt-c">
 														<div>
 															<h3 class="h3">Relaxed <strong>Attitude </strong></h3>
-															<p class="txt-c">The brand radiates a relaxed attitude</p>
+															<p>The brand radiates a relaxed attitude</p>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="xs-down-h col-lg-6 col-md-6 c-all p0 hw100">
+											<div class="xs-down-h col-lg-6 col-md-6 c-all hw100">
 												<div class="col-lg-6 loader textoverlay c-all padda">
 													<img src="" data-src="Converse/images/process/04.jpg" class="lazy cover" style="object-position: 100% 17%;">												
-													<div class="light-theme overlay c-all">
+													<div class="overlay c-all">
 														<div class="text-animate c-all ppp">
 															<div>
 																<h3 class="h3">Edgy & <strong>Artsy </strong></h3>
@@ -448,11 +433,11 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-6 md-down-h loader c-all p0">
+												<div class="col-lg-6 md-down-h loader c-all">
 													<div class="row m0 h100">
 														<div class="padda col-lg-12 textoverlay h50">
 															<img src="" data-src="Converse/images/process/03.png" class="lazy bg-offwhite">												
-															<div class="light-theme overlay c-all">
+															<div class="overlay c-all">
 																<div class="text-animate c-all ppp">
 																	<div>
 																		<h3 class="h3">Simple & <strong>Lazy </strong></h3>
@@ -465,7 +450,7 @@
 															<div class="bg-offwhite h100">
 																<img src="" data-src="Converse/images/process/bag.jpg" class="lazy multiply">	
 															</div>										
-															<div class="light-theme overlay c-all">
+															<div class="overlay c-all">
 																<div class="text-animate c-all">
 																	<div>
 																		<h3 class="h3">Minimal<strong>ism </strong></h3>
@@ -493,8 +478,8 @@
 											</div>
 										</div>				
 										<div class="absolute row m0 h100">
-											<div class="col-lg-6 c-all p0 hw100">
-												<div class="col-lg-6 loader c-all p0">
+											<div class="col-lg-6 c-all hw100">
+												<div class="col-lg-6 loader c-all">
 													<div class="row m0 hw100">
 														<div class="padda col-lg-12 textoverlay h50">
 															<img src="" data-src="Converse/images/moodboard/coke.jpg" class="owl-lazy cover bg-offwhite" style="object-position: 50% 33%;">												
@@ -522,7 +507,7 @@
 														</div>
 													</div>
 												</div>
-												<div class="col-lg-6 loader c-all p0">
+												<div class="col-lg-6 loader c-all">
 													<div class="row m0 hw100">
 														<div class="padda col-lg-12 textoverlay dark-theme h50">
 															<img src="" data-src="Converse/images/moodboard/bbq.jpg" class="owl-lazy cover bg-black">												
@@ -551,16 +536,16 @@
 													</div>
 												</div>
 											</div>								
-											<div class="md-down-h padda col-lg-6 loader c-all textoverlay p0">
+											<div class="md-down-h padda col-lg-6 loader c-all textoverlay">
 												<div class="desktop-hidden zoom-icon"></div>
 												<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
 												<img src="" data-src="Converse/images/moodboard/cotton.jpg" class="owl-lazy cover" style="object-position: 100% 17%;">												
 												<div class="dark-theme overlay c-all">
-													<div class="text-animate c-all ppp">
+													<div class="text-animate c-all ppp txt-c">
 														<div>
 															<h3 class="h3"><strong>The South</strong> of the 60s </h3>
-															<p class="txt-c">The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
-															<p class="txt-c">Here, a cotton field worker taking a break</p>
+															<p>The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
+															<p>Here, a cotton field worker taking a break</p>
 														</div>
 													</div>
 												</div>
@@ -595,7 +580,7 @@
 										</div>							
 									</div>
 								</div>						
-								<div class="item owl-hide-large-up padda light-theme">	
+								<div class="item owl-hide-lg-up light-theme">	
 									<div class="row m-h">
 										<div class="col-12 flex">
 											<div class="col-lg-6">
@@ -620,9 +605,9 @@
 										</div>												
 									</div>																					
 								</div>
-								<div class="item owl-hide-medium-up padda light-theme">		
+								<div class="item owl-hide-medium-up light-theme">		
 									<div class="row m0 h100">
-										<div class="col-lg-12 h100 p0">
+										<div class="col-lg-12 h100">
 												<div class="iframe-container textoverlay-desktop">															
 													<iframe 
 													src="" data-src="Converse/webgl/spherebuild.html"
@@ -650,73 +635,64 @@
 									</div>							
 								</div>					
 								<div class="item owl-hide-xs-down light-theme">
-								<div class="cont">
-									<div class="row">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Head Scan & <strong>Modeling</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+									<div class="cont">
+										<div class="row">
+											<div class="col-12 flex">
+												<div class="col-lg-6">
+												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Head Scan & <strong>Modeling</strong></h3>
+												</div>	
+												<div class="col-lg-6">  
+												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+												</div>
 											</div>
-										</div>
-									</div>				
-									<div class="middle row light-theme m0">
-										<div class="col-lg-6 p0 h100">
-											<div class="h100">
-												<div class="iframe-container textoverlay-desktop">															
-													<iframe 
-													src="" data-src="Converse/webgl/spherebuild.html"
-													class="lazy unload"					
-													frameborder="0"
-													scrolling="no">			 	 
-													</iframe>
-													<div class="desktop-hidden">
-														<div class="model-controls">
-															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
-															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-														</div>	
-													</div>
-													<div class="overlay mini  light-theme bg-none">
-														<div class="col-lg-6 text-animate c-all">
-															<div class="ignore model-controls">
+										</div>				
+										<div class="middle row light-theme m0">
+											<div class="col-lg-6 h100">
+												<div class="h100">
+													<div class="iframe-container textoverlay-desktop">															
+														<iframe 
+														src="" data-src="Converse/webgl/spherebuild.html"
+														class="lazy unload"					
+														frameborder="0"
+														scrolling="no">			 	 
+														</iframe>
+														<div class="desktop-hidden">
+															<div class="model-controls">
 																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
 																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 															</div>	
 														</div>
-													</div>	
-												</div>									
+														<div class="overlay mini  light-theme bg-none">
+															<div class="col-lg-6 text-animate c-all">
+																<div class="ignore model-controls">
+																	<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+																</div>	
+															</div>
+														</div>	
+													</div>									
+												</div>	
 											</div>	
-										</div>	
-										<div class="col-lg-6 textoverlay">
-											<div class="loader c-all">
-												<img src="" data-src="Converse/images/process/head_square.jpg" class="owl-lazy cover absolute" style="object-position:0% 75%">	
-											</div>					
-											<div class="overlay c-all">
-												<div class="col-lg-6 text-animate h-auto">
-													<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
-													<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
-													<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+											<div class="col-lg-6 textoverlay">
+												<div class="loader c-all">
+													<img src="" data-src="Converse/images/process/head_square.jpg" class="owl-lazy cover absolute" style="object-position:0% 75%">	
+												</div>					
+												<div class="overlay c-all">
+													<div class="col-lg-6 text-animate h-auto">
+														<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+														<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+														<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+													</div>
 												</div>
-											</div>
-										</div>						
-									</div>	
+											</div>						
+										</div>	
 									</div>							
 								</div>	
-								<div class="item owl-hide-large-up light-theme">
+								<div class="item owl-hide-lg-up light-theme">
 									<div class="cont">
 										<div class="middle light-theme">										
 											<div class="dark-theme overlay c-all desktop-hidden img-opacity">
 												<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">	
-													<div class="touch-hidden padda col-lg-4 ml-auto mr-auto textoverlay">
-														<div class="zoom-container">											
-															<div class="zoom-icon"></div>
-															<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
-															<div class="overlay c-all ppp">
-																<h3 class="h3">TOP <strong> VIEW</strong></h3>
-															</div>										
-														</div>	
-													</div>	
 													<div class="animate scroll-down"></div>
 													<div class="slide zoom-container">
 														<div class="zoom-icon"></div>
@@ -742,29 +718,9 @@
 									</div>								
 								</div>								
 								<div class="item owl-hide-medium-down light-theme">
-									<div class="p0-md-down h100">
-									<div class="cont">
-										<div class="row m-h">
-											<div class="col-12 flex">
-												<div class="col-lg-6">
-												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h">Views & <strong>Measurements</strong></h3>
-												</div>	
-												<div class="col-lg-6">  
-												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-												</div>
-											</div>
-										</div>							
-										<div class="middle row auto-scroll">		
-											<div class="desktop-hidden padda ml-auto mr-auto textoverlay light-theme">
-												<div class="viewer dropdown-container zoom-container loader props">
-												<div class="animate scroll-down desktop-hidden"></div>
-													<div class="ion-android-add-circle zoom-icon"></div>
-													<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
-													<div class="md-up-h overlay c-all ppp">
-														<h3 class="h3">TOP <strong> VIEW</strong></h3>
-													</div>					
-												</div>	
-											</div>										
+									<div class="h100">
+									<div class="cont">						
+										<div class="middle row auto-scroll">									
 											<div class="md-down-h col-lg-12 col-md-6 col-xs-6 textoverlay no-more-icon">
 												<div class="loader">
 													<div class="loader md-up-h">
@@ -833,8 +789,7 @@
 										</div>
 									</div>
 								</div>							
-							</div>
-						</div>								
+							</div>								
 						<div class="view-btn c-all">
 							<span class="prev-btn btn btn-outline touch-hidden">prev</span>	
 							<span class="more-btn btn btn-outline touch-hidden">next</span>
@@ -846,12 +801,12 @@
 			<div id="akg" class="portfolio-section"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">
 				<div id="akg-title" class="title row m0">
-					<div class="row p0 m0 flex w100">
-						<div class="col-lg-6 col-md-6 col-xs-7 c-all p0 justify-content-start">
+					<div class="row m0 flex w100">
+						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 						 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
 						 <h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3>
 						</div>	
-						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto p0">  
+						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
 							<div class="c-100 justify-content-end">
 								<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle"></div></a>
 								<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -861,10 +816,9 @@
 						</div>
 					</div>		
 				</div>	
-				<div id="slider-container">		
-					<div class="snap-this-center" style="flex: 1 1 100%;">		
-						<div id="akg-more3" class="pelle-slider owl-carousel c-100 flexend-portrait p0 dropshadow">					
-							<div class="item owl-hide-large-up invisible zoom-in x-theme">
+				<div id="slider-container">			
+						<div id="akg-more3" class="owl-carousel c-100 dropshadow">					
+							<div class="item owl-hide-lg-up invisible zoom-in x-theme">
 								<div class="textoverlay loader medium-theme relative">
 									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
@@ -881,9 +835,9 @@
 									</div>																
 								</div>
 							</div>
-							<div class="item owl-hide-large-up padda x-theme">
+							<div class="item owl-hide-lg-up x-theme">
 								<div class="cont">
-									<div class="middle" style="position:unset;">	
+									<div class="middle">	
 										<div class="fadeout-top"></div>												
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate ppp c-all">
@@ -905,8 +859,8 @@
 									</div>
 								</div>								
 							</div>									
-							<div class="item owl-hide-large-up auto-scroll dark-theme">
-								<div class="padda col-lg-6 ml-auto mr-auto textoverlay">
+							<div class="item owl-hide-lg-up auto-scroll dark-theme">
+								<div class="p-portrait col-lg-6 textoverlay">
 									<div class="loader">
 										<img src="" data-src="akg/images/functions.svg" class="owl-lazy">
 										<div class="dark-theme overlay c-all">
@@ -939,21 +893,21 @@
 								</div>
 							</div>								
 							<div class="item owl-hide-medium-down x-theme">
-								<div class="container row hw100 relative p0">
-									<div class="touch-hidden rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
+								<div class="container row hw100 relative">
+									<div class="touch-hidden rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
 										<div class="akg-logo x-theme bg-none hw100"></div>
 									</div>								
 									<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
 										<div class="txt-l">
-											<span class="d-block text-uppercase" style="">Product Design</span>
-											<h2 class="s-t" style="">AKG <strong>Over-ear Headphones</strong></h2>
-											<p style=""> Headphones for Vienna based audio products company AKG. <br>
+											<span class="d-block text-uppercase">Product Design</span>
+											<h2 class="s-t">AKG <strong>Over-ear Headphones</strong></h2>
+											<p> Headphones for Vienna based audio products company AKG. <br>
 											Retro styled light-weight and easy to handle headphones with focus on comfort.	
 											</p>
 											<p><a href="https://www.akg.com/" target="_blank" title="Visit AKG" class="btn btn-outline">Visit</a></p>
 										</div>
 									</div>
-									<div class="col-lg-7 col-md-12 p0 col-sm col-xs-12 textoverlay-desktop" style="text-align:center;">
+									<div class="col-lg-7 col-md-12 col-sm col-xs-12 textoverlay-desktop" style="text-align:center;">
 										<iframe 
 										class="lazy invisible fade-in soft-zoom unload" 
 										data-src="akg/xr/akgxr.html"																			
@@ -976,7 +930,7 @@
 							</div>
 							<div class="item owl-hide-medium-down x-theme">
 									<div class="row c-lg ppp hw100">
-										<div class="mr-auto ml-auto col-lg-9 p0">  
+										<div class="mr-auto ml-auto col-lg-9">  
 											<h2 class="mb-4 s-t">Project <strong>Info</strong></h2>
 										  <p> These headphones is a project made for the Vienna based audio products company AKG.<br> 
 											My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>
@@ -988,31 +942,22 @@
 									</div>
 							</div>								
 							<div class="item owl-hide-medium-down row m0 x-theme">
-								<div class="owl-hide-mobile padda col-lg-6 ml-auto mr-auto x-theme hw100">
+								<div class="owl-hide-mobile col-lg-6 x-theme hw100">
 									<div class="hw100">
 										<div class="akg-functions1 hw100" style="padding:5%; position: absolute;"></div>				
 									</div>	
 								</div> 	
-								<div class="owl-hide-mobile padda col-lg-6 ml-auto mr-auto x-theme hw100">
+								<div class="owl-hide-mobile col-lg-6 x-theme hw100">
 									<div class="hw100">
 										<div class="akg-functions2 hw100"  style="padding:5%; position: absolute;"></div>					
 									</div>	
 								</div> 							
 							</div>
-							<div class="item owl-hide-large-up padda">
+							<div class="item owl-hide-lg-up light-theme">
 								<div class="cont">
 									<div class="middle light-theme">										
 										<div class="dark-theme overlay c-all desktop-hidden img-opacity">
-											<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">	
-												<div class="touch-hidden padda col-lg-4 ml-auto mr-auto textoverlay">
-													<div class="zoom-container">											
-														<div class="zoom-icon"></div>
-														<img src="" data-src="Converse/images/process/modeling02_black.svg" class="owl-lazy">
-														<div class="overlay c-all ppp">
-															<h3 class="h3">TOP <strong> VIEW</strong></h3>
-														</div>										
-													</div>	
-												</div>	
+											<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">		
 												<div class="animate scroll-down"></div>
 											<div class="slide zoom-container medium-theme">
 												<div class="zoom-icon loader"></div>
@@ -1083,8 +1028,7 @@
 									</div>
 								</div> 
 							</div>												
-						</div>
-					</div>								
+						</div>								
 					<div class="c-all view-btn">
 						<span class="prev-btn btn btn-outline touch-hidden">prev</span>	
 						<span class="more-btn btn btn-outline touch-hidden">next</span>
@@ -1096,12 +1040,12 @@
 			<div id="bagheera" class="portfolio-section"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">			
 					<div id="bagheera-title" class=" light-theme row m0">
-						<div class="col-12 p0 flex">
-							<div class="col-lg-6 col-xs-8 c-all p0 justify-content-start">
+						<div class="col-12 flex">
+							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 							 <h3 class="m-h h3  txt-l"><strong>Bagheera </strong>/ Shoe Design</h3>
 							 <h3 class="md-up-h h3 txt-l"><strong>Bagheera </strong>Shoes</h3>
 							</div>	
-							<div class="col-lg-6 col-xs-4  p0">  
+							<div class="col-lg-6 col-xs-4">  
 								<div class="c-100 justify-content-end">
 									<a href="#bagheera-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 								</div>
@@ -1109,150 +1053,135 @@
 						</div>
 					</div>		
 					<div id="slider-container">
-						<div class="snap-this-center" style="flex: 1 1 100%;">
-							<div id="bagheera-more" class="pelle-slider owl-carousel p0 dropshadow">
-								<div class="item owl-hide-medium-up zoom-container textoverlay light-theme">	
-									<div class="desktop-hidden zoom-icon"></div>							
-									<img class="lazy invisible fade-in cover" src="" data-src="Bagheera/images/gallery/twisted.png">
-									<div class="overlay c-all">
-										<div class="text-animate ppp c-all">
-											<div class="h100">
-											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
-											<p>Position as product designer at Swedish Sports Company Bagheera<br>
-											</p>
-											<p><span class="open-popup btn">Swipe to View</span></p>
-											</div>
+						<div id="bagheera-more" class="owl-carousel dropshadow">
+							<div class="item owl-hide-medium-up zoom-container textoverlay light-theme">	
+								<div class="desktop-hidden zoom-icon"></div>							
+								<img class="lazy invisible fade-in cover" src="" data-src="Bagheera/images/gallery/twisted.png">
+								<div class="overlay c-all">
+									<div class="text-animate ppp c-all">
+										<div class="h100">
+										<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+										<p>Position as product designer at Swedish Sports Company Bagheera<br>
+										</p>
+										<p><span class="open-popup btn">Swipe to View</span></p>
+										</div>
+									</div>
+								</div>									
+							</div>							
+							<div class="item textoverlay-desktop light-theme">
+								<iframe 
+								class="bagheera lazy invisible fade-in soft-zoom" 
+								data-src="Bagheera/xr/bagheeraxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>							
+								<div id="overlay-container-mobile" class="desktop-hidden textoverlay-inverse" style="position:absolute; top:0; height:4rem;">								
+										<div class="light-theme overlay img-opacity">
+										<div class="text-animate txt-c">
+										<p><span class="btn">Swipe to View</span></p>
 										</div>
 									</div>									
-								</div>							
-								<div class="item textoverlay-desktop light-theme">
-									<iframe 
-									class="bagheera lazy invisible fade-in soft-zoom" 
-									data-src="Bagheera/xr/bagheeraxr.html"																			
-									frameborder="0"
-									scrolling="no"
-									>
-									</iframe>							
-									<div id="overlay-container-mobile" class="desktop-hidden textoverlay-inverse" style="position:absolute; top:0; height:4rem;">								
-											<div class="light-theme overlay img-opacity">
-											<div class="text-animate txt-c">
-											<p><span class="btn">Swipe to View</span></p>
-											</div>
-										</div>									
-									</div>								
-								</div>							
-								<div class="item owl-hide-xs-down textoverlay-mobile zoom-container light-theme">					
-								<div class="zoom-icon"></div>
-									<img class="lazy cover absolute multiply" src="" data-src="Bagheera/images/gallery/blue2.png">				
-									<div class="overlay c-all">
-										<div class="text-animate ppp c-all">
-											<div class="h100">
-											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
-											<p>Position as product designer at Swedish Sports Company Bagheera<br>
-											</p>
-											<p><span class="open-popup btn">Swipe to View</span></p>
-											</div>
-										</div>
-									</div>								
-								</div>
-								<div class="item owl-hide-large-up padda light-theme">
-									<div class="cont">
-										<div class="middle light-theme" style="position:unset;">	
-											<div class="fadeout-top"></div>												
-											<div class="light-theme overlay c-all desktop-hidden img-opacity">
-												<div class="text-animate ppp c-all">
-													<div>
-														<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
-														<p>Position as product designer at Swedish Sports Company Bagheera<br>
-														</p>		  
-														<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
-														</p>
-														<p class="txt-c text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>															
-															<div>
-															<p><span class="open-popup btn">Swipe to View</span></p>
-															</div>
-													</div>
-												</div>
-											</div>
-											<div class="fadeout-btm"></div>											
-										</div>
-									</div>								
 								</div>								
-								<div class="item owl-hide-medium-down light-theme">
-									<div class="row c-lg ppp w100">
-										<div class="col-lg-6 mr-auto ml-auto p0">  
-											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
-											<p>Position as product designer at Swedish Sports Company Bagheera<br>
-											</p>		  
-											<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
-											</p>
-											<p class="txt-c"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>
+							</div>							
+							<div class="item owl-hide-xs-down textoverlay-mobile zoom-container light-theme">					
+							<div class="zoom-icon"></div>
+								<img class="lazy cover absolute multiply" src="" data-src="Bagheera/images/gallery/blue2.png">				
+								<div class="overlay c-all">
+									<div class="text-animate ppp c-all">
+										<div class="h100">
+										<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+										<p>Position as product designer at Swedish Sports Company Bagheera<br>
+										</p>
+										<p><span class="open-popup btn">Swipe to View</span></p>
 										</div>
 									</div>
-								</div>
-								<div class="item light-theme">
-									<div class="cont">				
-										<div class="absolute row m0 h100">
-									  <div class="col-lg-6 ml-auto mr-auto p0 h100">
-										<div class="col-lg-12 ml-auto mr-auto textoverlay-desktop light-theme p0">
-											<div class="zoom-container loader">
-												<div class="touch-hidden overlay light-theme c-lg bg-none">
-													<div class="zoom-icon"></div>
-												</div>
-													<div class="desktop-hidden zoom-icon"></div>										
-												<img  data-src="Bagheera/images/gallery/twisted.png" class="owl-lazy cover">					
-											</div>	
-										</div>								
-									  </div>	
-										<div class="md-down-h col-lg-6 ml-auto mr-auto p0 h100">
-										<div id="outer">
-										  <div id="inner_fixed" class="padda">
-												<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
-													<div class="zoom-container loader">
-														<div class="overlay light-theme c-all bg-none">
-															<div class="zoom-icon"></div>
-														</div>	
-														<img data-src="Bagheera/images/gallery/top.png" class="owl-lazy cover">		
-													</div>	
-												</div>
-										  </div>
-										  <div id="inner_remaining" class="padda pt-0">
-												<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
-													<div class="zoom-container loader">
-														<div class="overlay light-theme c-all bg-none">
-															<div class="zoom-icon"></div>
-														</div>													
-														<img data-src="Bagheera/images/gallery/blue.jpg" class="owl-lazy">
-														<div class="overlay light-theme c-all bg-none">
-															<div class="zoom-icon"></div>
-														</div>							
-													</div>	
-												</div>
-										  </div>
-										</div>					  						
-									  </div>									  
-											<div class="md-down-h padda col-lg-6 loader c-all textoverlay p0">
-												<div class="desktop-hidden zoom-icon"></div>
-												<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
-												<img src="" data-src="Converse/images/moodboard/cotton.jpg" class="owl-lazy cover" style="object-position: 100% 17%;">												
-												<div class="dark-theme overlay c-all">
-													<div class="text-animate c-all ppp">
+								</div>								
+							</div>
+							<div class="item owl-hide-lg-up light-theme">
+								<div class="cont">
+									<div class="middle light-theme">	
+										<div class="fadeout-top"></div>												
+										<div class="light-theme overlay c-all desktop-hidden img-opacity">
+											<div class="text-animate ppp c-all">
+												<div>
+													<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+													<p>Position as product designer at Swedish Sports Company Bagheera<br>
+													</p>		  
+													<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
+													</p>
+													<p class="txt-c text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>															
 														<div>
-															<h3 class="h3"><strong>The South</strong> of the 60s </h3>
-															<p class="txt-c">The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
-															<p class="txt-c">Here, a cotton field worker taking a break</p>
+														<p><span class="open-popup btn">Swipe to View</span></p>
 														</div>
-													</div>
 												</div>
-											</div>						
-										</div>							
+											</div>
+										</div>
+										<div class="fadeout-btm"></div>											
+									</div>
+								</div>								
+							</div>								
+							<div class="item owl-hide-medium-down light-theme">
+								<div class="row c-lg ppp w100">
+									<div class="col-lg-6 mr-auto ml-auto">  
+										<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+										<p>Position as product designer at Swedish Sports Company Bagheera<br>
+										</p>		  
+										<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
+										</p>
+										<p class="txt-c"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>
 									</div>
 								</div>
-								<div class="item light-theme">
-									<div class="cont">				
-										<div class="absolute row m0 h100">
-									  <div class="col-lg-6 ml-auto mr-auto p0 h100">
-										<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
+							</div>
+							<div class="item light-theme">
+								<div class="cont">				
+									<div class="absolute row m0 h100">
+								  <div class="col-lg-6 h100">
+									<div class="col-lg-12 textoverlay-desktop light-theme">
+										<div class="zoom-container loader">
+											<div class="touch-hidden overlay light-theme c-lg bg-none">
+												<div class="zoom-icon"></div>
+											</div>
+												<div class="desktop-hidden zoom-icon"></div>										
+											<img  data-src="Bagh	eera/images/gallery/twisted.png" class="owl-lazy cover">					
+										</div>	
+									</div>								
+								  </div>	
+									<div class="col-lg-6 md-down-h h100">
+									<div id="outer">
+									  <div id="inner_fixed">
+											<div class="col-lg-12 textoverlay light-theme">
+												<div class="zoom-container loader">
+													<div class="overlay light-theme c-all bg-none">
+														<div class="zoom-icon"></div>
+													</div>	
+													<img data-src="Bagheera/images/gallery/top.png" class="owl-lazy cover">		
+												</div>	
+											</div>
+									  </div>
+									  <div id="inner_remaining" class="pt-0">
+											<div class="col-lg-12 textoverlay light-theme">
+												<div class="zoom-container loader">
+													<div class="overlay light-theme c-all bg-none">
+														<div class="zoom-icon"></div>
+													</div>													
+													<img data-src="Bagheera/images/gallery/blue.jpg" class="owl-lazy cover">
+													<div class="overlay light-theme c-all bg-none">
+														<div class="zoom-icon"></div>
+													</div>							
+												</div>	
+											</div>
+									  </div>
+									</div>					  						
+								  </div>									  						
+									</div>							
+								</div>
+							</div>
+							<div class="item light-theme">
+								<div class="cont">				
+									<div class="absolute row m0 h100">
+									  <div class="col-lg-6 h100">
+										<div class="col-lg-12 textoverlay light-theme">
 											<div class="zoom-container loader">
 											<div class="overlay light-theme c-all bg-none">
 												<div class="zoom-icon"></div>
@@ -1261,10 +1190,10 @@
 											</div>	
 										</div>								
 									  </div>
-										<div class="col-lg-6 ml-auto mr-auto md-down-h p0 h100">
+									<div class="col-lg-6 md-down-h h100">
 										<div id="outer">
-										  <div id="inner_fixed" class="padda">
-												<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
+										  <div id="inner_fixed">
+												<div class="col-lg-12 textoverlay light-theme">
 													<div class="zoom-container loader">
 														<div class="overlay light-theme c-all bg-none">
 															<div class="zoom-icon"></div>
@@ -1273,13 +1202,13 @@
 													</div>	
 												</div>
 										  </div>
-										  <div id="inner_remaining" class="padda pt-0">
-												<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
+										  <div id="inner_remaining" class="pt-0">
+												<div class="col-lg-12 textoverlay light-theme">
 													<div class="zoom-container loader">
 														<div class="overlay light-theme c-all bg-none">
 															<div class="zoom-icon"></div>
 														</div>													
-														<img data-src="Bagheera/images/gallery/blue.jpg" class="owl-lazy">
+														<img data-src="Bagheera/images/gallery/blue.jpg" class="owl-lazy cover">
 														<div class="overlay light-theme c-all bg-none">
 															<div class="zoom-icon"></div>
 														</div>							
@@ -1287,53 +1216,88 @@
 												</div>
 										  </div>
 										</div>					  						
-									  </div>								  
-											<div class="md-down-h padda col-lg-6 loader c-all textoverlay p0">
-												<div class="desktop-hidden zoom-icon"></div>
-												<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
-												<img src="" data-src="Converse/images/moodboard/cotton.jpg" class="owl-lazy cover" style="object-position: 100% 17%;">												
-												<div class="dark-theme overlay c-all">
-													<div class="text-animate c-all ppp">
-														<div>
-															<h3 class="h3"><strong>The South</strong> of the 60s </h3>
-															<p class="txt-c">The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
-															<p class="txt-c">Here, a cotton field worker taking a break</p>
-														</div>
-													</div>
-												</div>
-											</div>						
+								  </div>								  					
+									</div>							
+								</div>
+							</div>																							
+							<div class="item owl-hide-lg-up c-100 light-theme">				
+								<div class="textoverlay">
+									<div class="loader light-theme">
+										<img src="" data-src="Bagheera/images/process/01_square_black.svg" class="owl-lazy">
+										<div class="light-theme overlay c-all">
+											<div class="ppp">
+											<h3 class="h3">DESIGN <strong>PROCESS </strong></h3>
+											<div class="txt-c">
+											<p>Examples of concept sketching - in this case done in Illustrator</p>
+											</div>
+											</div>
+										</div>							
+									</div>	
+								</div>						
+							</div>
+							<div class="item owl-hide-lg-up textoverlay c-100 light-theme">
+								<div class="loader light-theme c-all">
+									<div class="loader medium-theme">
+										<img src="" data-src="Bagheera/images/process/03_square1.png" class="owl-lazy">
+										<div class="overlay c-all">
+											<div class="ppp">
+										<h3 class="h3">3D <strong>MODEL </strong></h3>
+										<p>3D Visualisations together with sketches helps manufacturer understand the goal</p>
+											</div>
 										</div>							
 									</div>
-								</div>																							
-								<div class="item owl-hide-large-up c-100 light-theme">				
-									<div class="padda textoverlay">
-										<div class="loader light-theme">
-											<img src="" data-src="Bagheera/images/process/01_square_black.svg" class="owl-lazy">
-											<div class="light-theme overlay c-all">
-												<div class="ppp">
-												<h3 class="h3">DESIGN <strong>PROCESS </strong></h3>
-												<div class="txt-c">
-												<p>Examples of concept sketching - in this case done in Illustrator</p>
-												</div>
-												</div>
-											</div>							
-										</div>	
-									</div>						
 								</div>
-								<div class="item owl-hide-large-up textoverlay c-100 light-theme">
-									<div class="loader light-theme c-all">
-										<div class="loader medium-theme">
-											<img src="" data-src="Bagheera/images/process/03_square1.png" class="owl-lazy">
-											<div class="overlay c-all">
-												<div class="ppp">
-											<h3 class="h3">3D <strong>MODEL </strong></h3>
-											<p>3D Visualisations together with sketches helps manufacturer understand the goal</p>
-												</div>
-											</div>							
+							</div>	
+							<div class="item owl-hide-lg-up textoverlay c-100 light-theme">
+								<div class="loader light-theme c-all">
+									<img src="" data-src="Bagheera/images/process/06.png" class="owl-lazy">
+									<div class="overlay c-all">
+										<div class="ppp">
+									<h3 class="h3">CMF <strong> </strong></h3>
+									<p>Color Material and finish visualisations</p>
 										</div>
-									</div>
+									</div>							
 								</div>	
-								<div class="item owl-hide-large-up textoverlay c-100 light-theme">
+							</div>							
+							<div class="item owl-hide-medium-down c-100 absolute row m0 h100 light-theme">				
+								<div class="col-lg-6 col-md-6 textoverlay">
+									<div class="loader dark-theme">
+										<img src="" data-src="Bagheera/images/process/01_square.svg" class="owl-lazy">
+										<div class="dark-theme overlay c-all">
+											<div class="ppp">
+											<h3 class="h3">DESIGN <strong>PROCESS </strong></h3>
+											<div class="txt-c">
+											<p>Examples of concept sketching - in this case done in Illustrator</p>
+											</div>
+											</div>
+										</div>							
+									</div>	
+								</div>
+								<div class="col-lg-6 col-md-6 textoverlay">
+									<div class="loader medium-theme">
+										<img src="" data-src="Bagheera/images/process/03_square1.png" class="owl-lazy cover">
+										<div class="overlay c-all">
+											<div class="ppp">
+										<h3 class="h3">3D <strong>MODEL </strong></h3>
+										<p>3D Visualisations together with sketches helps manufacturer understand the goal</p>
+											</div>
+										</div>							
+									</div>	
+								</div>						
+							</div>
+							<div class="item owl-hide-medium-down c-100 absolute row m0 h100 light-theme">				
+								<div class="col-lg-6 col-xs-12 textoverlay">
+									<div class="loader dark-theme">
+										<img src="" data-src="Bagheera/images/process/02_square.svg" class="owl-lazy">
+										<div class="dark-theme overlay c-all">
+											<div class="ppp">
+										<h3 class="h3">PATTERN <strong>MAKING </strong></h3>
+										<p>Exploded & flattened patterns as a foundation for the pattern making at the manufacturer</p>
+											</div>
+										</div>							
+									</div>	
+								</div>
+								<div class="col-lg-6 col-md-6  m-h textoverlay">
 									<div class="loader light-theme c-all">
 										<img src="" data-src="Bagheera/images/process/06.png" class="owl-lazy">
 										<div class="overlay c-all">
@@ -1343,72 +1307,22 @@
 											</div>
 										</div>							
 									</div>	
-								</div>							
-								<div class="item owl-hide-medium-down c-100 absolute row m0 h100 light-theme">				
-									<div class="col-lg-6 col-md-6 p0 textoverlay">
-										<div class="loader dark-theme">
-											<img src="" data-src="Bagheera/images/process/01_square.svg" class="owl-lazy">
-											<div class="dark-theme overlay c-all">
-												<div class="ppp">
-												<h3 class="h3">DESIGN <strong>PROCESS </strong></h3>
-												<div class="txt-c">
-												<p>Examples of concept sketching - in this case done in Illustrator</p>
-												</div>
-												</div>
-											</div>							
-										</div>	
-									</div>
-									<div class="col-lg-6 col-md-6 p0 textoverlay">
-										<div class="loader medium-theme">
-											<img src="" data-src="Bagheera/images/process/03_square1.png" class="owl-lazy cover">
-											<div class="overlay c-all">
-												<div class="ppp">
-											<h3 class="h3">3D <strong>MODEL </strong></h3>
-											<p>3D Visualisations together with sketches helps manufacturer understand the goal</p>
-												</div>
-											</div>							
-										</div>	
-									</div>						
-								</div>
-								<div class="item owl-hide-medium-down c-100 absolute row m0 h100 light-theme">				
-									<div class="col-lg-6 col-xs-12 p0 textoverlay">
-										<div class="loader dark-theme">
-											<img src="" data-src="Bagheera/images/process/02_square.svg" class="owl-lazy">
-											<div class="dark-theme overlay c-all">
-												<div class="ppp">
-											<h3 class="h3">PATTERN <strong>MAKING </strong></h3>
-											<p>Exploded & flattened patterns as a foundation for the pattern making at the manufacturer</p>
-												</div>
-											</div>							
-										</div>	
-									</div>
-									<div class="col-lg-6 col-md-6  m-h textoverlay">
-										<div class="loader light-theme c-all">
-											<img src="" data-src="Bagheera/images/process/06.png" class="owl-lazy">
-											<div class="overlay c-all">
-												<div class="ppp">
-											<h3 class="h3">CMF <strong> </strong></h3>
-											<p>Color Material and finish visualisations</p>
-												</div>
-											</div>							
-										</div>	
-									</div>						
-								</div>
-								<div class="item x-theme">			
-									<div class="col-full col-md-12 col-sm h100 p0">
-										<div class="popup-project-section row c-lg ppp h100 align-content-center">
-											<div class="col-lg-7 mr-auto ml-auto">
-											  <div class="col-lg-7 mr-auto ml-auto">
-												 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-												 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-												 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-											  </div>
-											</div>
+								</div>						
+							</div>
+							<div class="item x-theme">			
+								<div class="col-full col-md-12 col-sm h100">
+									<div class="popup-project-section row c-lg ppp h100 align-content-center">
+										<div class="col-lg-7 mr-auto ml-auto">
+										  <div class="col-lg-7 mr-auto ml-auto">
+											 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+											 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+											 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+										  </div>
 										</div>
 									</div>
-								</div>								
-							</div>
-						</div>	
+								</div>
+							</div>								
+						</div>
 					<div class="c-all view-btn">
 						<span class="prev-btn btn btn-outline touch-hidden">prev</span>	
 						<span class="more-btn btn btn-outline touch-hidden">next</span>
@@ -1420,11 +1334,11 @@
 			<div id="poc" class="portfolio-section x-theme"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="poc-title" class="title row m0">
-						<div class="col-12 p0 m0 flex w100">
-							<div class="col-lg-6 c-all p0 justify-content-start">
+						<div class="col-12 m0 flex w100">
+							<div class="col-lg-6 c-all justify-content-start">
 							 <h3 class="h3 txt-l"><strong>POC </strong>Ski Goggles</h3>
 							</div>	
-							<div class="col-lg-6 p0">  
+							<div class="col-lg-6 ">  
 								<div class="c-100 justify-content-end">
 										<a href="#poc-xr-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 										<a href="#poc-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -1433,7 +1347,6 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-						<div class="snap-this-center" style="flex: 1 1 100%;">	
 							<div class="hw100 dropshadow">					
 								<div class="lg-up-h loader textoverlay invisible zoom-in">				
 									<img class="lazy cover" src="" data-src="poc/xr/0_0.png" style="object-position: 41% 50%;">
@@ -1448,27 +1361,22 @@
 									</div>
 								</div>		
 								<div class="md-down-h x-theme relative hw100">	
-								<div class="touch-hidden rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
-									<div class="poc-logo x-theme bg-none hw100"></div>
-								</div>						
+									<div class="touch-hidden rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
+										<div class="poc-logo x-theme bg-none hw100"></div>
+									</div>						
 									<div class="row m0 h100">	
-										<div class="col-lg-4 p0 c-all">
+										<div class="col-lg-4 c-all">
 											<div class="row c-lg">
-												<div class="col-lg-8  ppp2">
-													<h2 class="mb-4 s-t txt-l">POC <strong>Lobes</strong></h2>
-														<p class="txt-l">Cylindrical Ski Goggle Made During Internship at Poc<br>
+												<div class="col-lg-8 ppp2 txt-l">
+													<h2 class="mb-4 s-t">POC <strong>Lobes</strong></h2>
+														<p>Cylindrical Ski Goggle Made During Internship at Poc<br>
 														<strong>Role - Redesign & Modelling</strong> 
 														</p>		  
-														<p class="txt-l hidden">From brainstorming ideas, making moodboards and trying to fit the product with the rest of the product line, I worked with lead designer for creative input and product developers for technical advice when sketching and modelling concepts for this poc goggle.<br>
-														A great deal of effort was put into making the google fit their range of helmets. 
-														The final result was then further developed, but later cancelled as it was competing with another poc google.
-														instead, the concept was turned into a spherical version, further developed, and released as the “poc lobes”.  
-														</p>
-														<p class="txt-l"><strong>Swipe Model to Rotate</strong></p>										
+														<p><strong>Swipe Model to Rotate</strong></p>										
 												</div>					
 											</div>
 										</div>					
-										<div class="col-lg-8 p0 ml-auto mr-auto textoverlay">
+										<div class="col-lg-8 textoverlay">
 											<div class="loader">								
 												<iframe 
 												class="specialized lazy invisible fade-in soft-zoom" 
@@ -1492,7 +1400,6 @@
 									</div>	
 								</div>													 
 							</div>
-						</div>
 						<div class="c-all view-btn">
 							<a href="#poc-process-popup" class="btn btn-outline open-popup">View</a>					
 						</div>							
@@ -1502,11 +1409,11 @@
 			<div id="spotify" class="portfolio-section x-theme"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="spotify-title" class="title on-top row m0">
-						<div class="col-12 p0 m0 flex w100">
-							<div class="col-lg-6 c-all p0 justify-content-start">
+						<div class="col-12 m0 flex w100">
+							<div class="col-lg-6 c-all justify-content-start">
 							 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>
 							</div>	
-							<div class="col-lg-6 p0">  
+							<div class="col-lg-6">  
 								<div class="c-100 justify-content-end">
 										<a href="#spotify-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 										<a href="#spotify-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -1515,168 +1422,162 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-						<div class="snap-this-center" style="flex: 1 1 100%;">	
 							<div class="hw100 dropshadow">					
 								<div class="loader textoverlay invisible zoom-in">				
 									<div class="cover hw100 rellax-props"></div>
-									<div class="rellax " data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%; opacity:0.5">
+									<div class="rellax " data-rellax-speed="5" data-rellax-percentage="0.5" style="opacity:0.5">
 										<img src="" data-src="spotify/images/bg.jpg" class="lazy cover">
 									</div>
 									<div class="x-theme medium-opacity overlay c-all">
-										<div class="text-animate ppp c-all">
+										<div class="text-animate ppp c-all txt-l">
 											<div>
 											  <span class="d-block text-uppercase">Product Design</span>
 												<h2 class="s-t element-animate">Spotify <strong>Colors</strong></h2>
-												<p class="txt-l">Research shows that despite all modern sources of music, the way we
+												<p>Research shows that despite all modern sources of music, the way we
 												most often share music, is still by word of mouth.
 												</p>	
-												<p class="txt-l">This project aims to improve the experience of sharing digital music
+												<p>This project aims to improve the experience of sharing digital music
 												</p>	  
 											</div>
 										</div>
 									</div>
 								</div>														 
 							</div>
-						</div>
 						<div class="c-all view-btn">
 							<a href="#spotify-process-popup" class="btn btn-outline open-popup">View</a>					
 						</div>							
-					</div>
-				
+					</div>				
 				</div>
 			</div>				
 			<div id="mixed-work" class="portfolio-section">
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="mixed-title" class="title x-theme row m0">
-						<div class="col-12 p0 m0 flex w100">
-							<div class="col-lg-6 col-xs-8 c-all p0 justify-content-start">
+						<div class="col-12 m0 flex w100">
+							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 							 <h3 class="h3 txt-l"><strong>MIXED </strong>Quick Projects</h3>
 							</div>	
 						</div>
 					</div>
 					<div id="slider-container">
-					<div class="snap-this-center" style="flex: 1 1 100%;">
-							<div id="mixed-more" class="pelle-slider owl-carousel p0 dropshadow">							
-								<div id="haglofs" class="item owl-hide-portrait dark-theme">				
-									<div class="row h100 m0">	
-										<div class="cover  hw100 rellax-props"></div>
-										<div class=" rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
-											<div class="haglofs-logo hw100" style="width:100% !important;"></div>
-										</div>							
-										<div class="col-lg-4 col-sm c-lg-up  p0-md-down m-h">
-											<div class="row c-lg">
-												<div class="col-lg-8  ppp2">
-													<h2 class="mb-4 s-t txt-l">HAGLÖFS <strong>Knife</strong></h2>	  
-													<p class="txt-l"> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
-													<p class="txt-l"> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+						<div id="mixed-more" class="owl-carousel dropshadow">							
+							<div id="haglofs" class="item owl-hide-portrait dark-theme">				
+								<div class="row h100 m0">	
+									<div class="cover  hw100 rellax-props"></div>
+									<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
+										<div class="haglofs-logo hw100" style="width:100% !important;"></div>
+									</div>							
+									<div class="col-lg-4 col-sm c-lg-up m-h">
+										<div class="row c-lg">
+											<div class="col-lg-8 ppp2 txt-l">
+												<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
+												<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
+												<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+												</p>
+												<p><strong>Swipe Model to Rotate</strong></p>
+											</div>					
+										</div>
+									</div>					
+									<div class="col-lg-8 textoverlay">
+										<div class="loader">								
+											<iframe 
+											class="specialized lazy invisible fade-in soft-zoom" 
+											data-src="haglofs/xr/haglofs.html"																					
+											frameborder="0"
+											scrolling="no"
+											>
+											</iframe>						
+										</div>			
+									</div>						
+								</div>	
+							</div>					
+							<div class="item owl-hide-lg-up dark-theme">
+								<div class="loader dark-theme textoverlay">
+									<img src="" data-src="haglofs/images/knife_c.png" class="lazy cover invisible fade-in" style="object-position: 23% 70%;">
+									<div class="dark-theme overlay c-all desktop-hidden txt-c">
+										<div class="text-animate ppp c-all">
+											<div class="h100">
+												<h2 class="s-t element-animate">Haglöfs <strong>Radius</strong></h2>
+													<p >Short bladed knife for Outdoor Equipment Company Haglöfs.
 													</p>
-													<p class="txt-l"><strong>Swipe Model to Rotate</strong></p>
-												</div>					
-											</div>
-										</div>					
-										<div class="col-lg-8 ml-auto mr-auto textoverlay">
-											<div class="loader">								
-												<iframe 
-												class="specialized lazy invisible fade-in soft-zoom" 
-												data-src="haglofs/xr/haglofs.html"																					
-												frameborder="0"
-												scrolling="no"
-												>
-												</iframe>						
-											</div>			
-										</div>						
-									</div>	
-								</div>					
-								<div class="item owl-hide-large-up padda dark-theme">
-									<div class="loader dark-theme textoverlay">
-										<img src="" data-src="haglofs/images/knife_c.png" class="lazy cover invisible fade-in" style="object-position: 23% 70%;">
-										<div class="dark-theme overlay c-all desktop-hidden txt-c">
-											<div class="text-animate ppp c-all">
-												<div class="h100">
-													<h2 class="s-t element-animate">Haglöfs <strong>Radius</strong></h2>
-														<p >Short bladed knife for Outdoor Equipment Company Haglöfs.
-														</p>
-														<div>
-														<p><span class="open-popup btn">Swipe to View</span></p>
-														</div>
-												</div>
-											</div>
-										</div>							
-									</div>												
-								</div>
-								<div class="item owl-hide-large-up padda p0 dark-theme">
-									<div class="cont">
-										<div class="middle dark-theme" style="position:unset;">	
-											<div class="fadeout-top"></div>												
-											<div class="dark-theme overlay c-all desktop-hidden img-opacity">
-												<div class="text-animate ppp c-all">
 													<div>
-														<h2 class="mb-4 s-t txt-l">HAGLÖFS <strong>Knife</strong></h2>	  
-														<p class="txt-l"> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
-														<p class="txt-l pb-6"> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
-														</p>													
-														<div>
-														<p><span class="open-popup btn">Swipe to View</span></p>
-														</div>
+													<p><span class="open-popup btn">Swipe to View</span></p>
+													</div>
+											</div>
+										</div>
+									</div>							
+								</div>												
+							</div>
+							<div class="item owl-hide-lg-up dark-theme">
+								<div class="cont">
+									<div class="middle dark-theme">	
+										<div class="fadeout-top"></div>												
+										<div class="dark-theme overlay c-all desktop-hidden img-opacity">
+											<div class="text-animate ppp c-all txt-l">
+												<div>
+													<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
+													<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
+													<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+													</p>													
+													<div>
 													</div>
 												</div>
 											</div>
-											<div class="fadeout-btm"></div>											
 										</div>
-									</div>								
-								</div>									
-								<div id="alcon" class="item padda x-theme">				
-									<div class="row h100 m0">	
-										<div class="cover  hw100 rellax-props"></div>
-										<div class=" rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
-											<div class="alcon-logo hw100" style="width:100% !important;"></div>
-										</div>
-										<div class="col-lg-4 ml-auto mb-5-md-down c-all">
-											<div>
-												<span class="d-block text-uppercase">Alcon</span>
-												<h2 class="mb-4 s-t txt-l">Lens <strong>Container</strong></h2>
-												<p>Lens container for eye care products company Alcon.<br>
-												This projects was focused on the user experience for the lens wearer	
-												</p>
-												<p><a href="https://www.alcon.com/" target="_blank" title="Visit Alcon" class="btn btn-outline xs-down-h">Visit</a></p>
-											</div>
-										</div>
-										<div class="col-lg-7 col-md-12 col-sm col-xs-12 txt-c">
-											<div class="absolute w100" style="right:0;">
-												<div class="flex justify-content-end">
-													<a href="#alcon-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-													<a href="#alcon-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
-												</div>
-											</div>
-											<div class="col-lg-8 ml-auto mr-auto textoverlay">
-												<div class="loader">
-													<iframe 
-													class="alcon lazy invisible fade-in soft-zoom" 
-													src="images/loaders/bars_fixed.svg"
-													data-src="alcon/xr/alconxr.html"																			
-													frameborder="0"
-													scrolling="no"
-													>
-													</iframe>											
-												</div>
-											</div>
-										</div>						
-									</div>	
-								</div>						
-								<div class="item padda x-theme">			
-									<div class="col-full col-md-12 col-sm h100">
-										<div class="popup-project-section row c-lg ppp h100 align-content-center">
-											<div class="col-lg-7 mr-auto ml-auto">
-											  <div class="col-lg-7 mr-auto ml-auto">
-												 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-												 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-												 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-											  </div>
-											</div>
+										<div class="fadeout-btm"></div>											
+									</div>
+								</div>								
+							</div>									
+							<div id="alcon" class="item x-theme">				
+								<div class="row h100 m0">	
+									<div class="cover  hw100 rellax-props"></div>
+									<div class=" rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
+										<div class="alcon-logo hw100" style="width:100% !important;"></div>
+									</div>
+									<div class="col-lg-4 ml-auto mb-5-md-down c-all">
+										<div>
+											<span class="d-block text-uppercase">Alcon</span>
+											<h2 class="mb-4 s-t txt-l">Lens <strong>Container</strong></h2>
+											<p>Lens container for eye care products company Alcon.<br>
+											This projects was focused on the user experience for the lens wearer	
+											</p>
+											<p><a href="https://www.alcon.com/" target="_blank" title="Visit Alcon" class="btn btn-outline xs-down-h">Visit</a></p>
 										</div>
 									</div>
-								</div>													
-							</div>
+									<div class="col-lg-7 col-md-12 col-sm col-xs-12 txt-c">
+										<div class="absolute w100" style="right:0;">
+											<div class="flex justify-content-end">
+												<a href="#alcon-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
+												<a href="#alcon-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
+											</div>
+										</div>
+										<div class="col-lg-8 textoverlay">
+											<div class="loader">
+												<iframe 
+												class="alcon lazy invisible fade-in soft-zoom" 
+												src="images/loaders/bars_fixed.svg"
+												data-src="alcon/xr/alconxr.html"																			
+												frameborder="0"
+												scrolling="no"
+												>
+												</iframe>											
+											</div>
+										</div>
+									</div>						
+								</div>	
+							</div>						
+							<div class="item x-theme">			
+								<div class="col-full col-md-12 col-sm h100">
+									<div class="popup-project-section row c-lg ppp h100 align-content-center">
+										<div class="col-lg-7 mr-auto ml-auto">
+										  <div class="col-lg-7 mr-auto ml-auto">
+											 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+											 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+											 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+										  </div>
+										</div>
+									</div>
+								</div>
+							</div>													
 						</div>
 						<div class="c-all view-btn">
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
@@ -1688,12 +1589,12 @@
 			<div id="specialized" class="portfolio-section"> <!-- OK -->	
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="specialized-title" class="title row m0">
-						<div class="col-12 flex p0">
-							<div class="col-lg-6  col-md-8 c-all p0 justify-content-start">
+						<div class="col-12 flex">
+							<div class="col-lg-6  col-md-8 c-all justify-content-start">
 							 <h3 class="m-h h3 txt-l"> <strong>Specialized </strong> / Fullface MTB Helmet</h3>
 							 <h3 class="md-up-h h3 txt-l"> <strong>Specialized </strong>MTB</h3>
 							</div>	
-							<div class="col-lg-6  p0">  
+							<div class="col-lg-6">  
 								<div class="c-100 justify-content-end">
 									<a href="#specialized-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 									<a href="#specialized-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>						
@@ -1702,171 +1603,169 @@
 						</div>
 					</div>	
 					<div id="slider-container">
-						<div class="snap-this-center" style="flex: 1 1 100%;">
-							<div id="specialized-more" class="pelle-slider owl-carousel c-100 p0 dropshadow">
-								<div class="item owl-hide-medium-up textoverlay invisible zoom-in x-theme">
+						<div id="specialized-more" class="owl-carousel c-100 dropshadow">
+							<div class="item owl-hide-medium-up textoverlay invisible zoom-in x-theme">
+								<div class="zoom-container loader">
+									<div class="touch-hidden overlay dark-theme c-all bg-none">
+										<div class="zoom-icon"></div>
+									</div>
+										<div class="desktop-hidden zoom-icon"></div>										
+									<img src="" data-src="Specialized/images/gallery/twisted.png" class="lazy">
+										<div class="x-theme overlay c-all">
+											<div class="text-animate ppp c-all txt-c">
+											<div>
+												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
+												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+												<p>Specialized creates bikes, components and bike equipment.</p>
+												<p><span class="open-popup btn">Swipe to View</span></p>
+											</div>
+											</div>
+										</div>													
+								</div>	
+							</div>
+							<div class="item owl-hide-medium-up c-100 x-theme auto-scroll">
+								<div class="ppp c-all h100">
+									<div class="txt-l h100">
+										<div class="fadeout-top"></div>
+											<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
+											<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+											<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>																			
+										<div class="fadeout-btm"></div>										
+									</div>
+								</div>
+							</div>					
+							<div class="item owl-hide-xs-down x-theme">				
+								<div class="row m0 hw100">
+										<div class="cover  hw100 rellax-props"></div>
+										<div class="rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5"><div class="specialized-logo x-theme hw100" style="width:100% !important;"></div></div>								
+										<div class="col-lg-6 c-all txt-l">
+											<div>										
+												<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
+												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+												<p>Specialized creates bikes, components and bike equipment.</p>
+												<p><a href="https://www.specialized.com/" target="_blank" title="Visit AKG" class="btn btn-outline">Visit</a></p>	
+											</div>
+										</div>
+										<div class="col-lg-6 textoverlay">
+											<div class="loader">
+												<iframe 
+												class="specialized lazy invisible fade-in soft-zoom" 
+												data-src="Specialized/xr/specializedxr.html"																						
+												frameborder="0"
+												scrolling="no"
+												>
+												</iframe>
+<!-- 												<div class="overlay bg-none arrow-left">
+												<div class="text-animate">
+													<div class="arrow-rotate-left ignore"></div>									
+												</div>
+											</div>
+											<div class="overlay bg-none arrow-right">
+												<div class="text-animate">
+													<div class="arrow-rotate-right ignore"></div>											
+												</div>
+											</div>	 -->												
+											</div>	
+										</div>	
+								</div>
+							</div>	
+							<div class="item c-100 textoverlay loader dark-theme">				
+								<img class="owl-lazy bg-black absolute" src="" data-src="Specialized/images/gallery/specialized.jpg">
+								<div class="dark-theme overlay c-all">
+									<div class="text-animate c-all">
+										<h3 class="h3 invisible fade-in-up txt-l"> <strong>Specialized </strong> Form Language</h3>		
+									</div>
+								</div>
+							</div>				
+							<div class="item owl-hide-xs-down row m0 absolute dark-theme">					
+							  <div class="col-lg-6 h100 pr-0">
+								<div class="col-lg-12 textoverlay-desktop dark-theme">
 									<div class="zoom-container loader">
 										<div class="touch-hidden overlay dark-theme c-all bg-none">
 											<div class="zoom-icon"></div>
 										</div>
 											<div class="desktop-hidden zoom-icon"></div>										
-										<img src="" data-src="Specialized/images/gallery/twisted.png" class="lazy">
-											<div class="x-theme overlay c-all">
-												<div class="text-animate ppp c-all">
-												<div>
-													<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
-													<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-													<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>
-													<p><span class="open-popup btn">Swipe to View</span></p>
-												</div>
-												</div>
-											</div>													
+										<img src="" data-src="Specialized/images/gallery/twisted.png" class="owl-lazy cover">					
 									</div>	
-								</div>
-								<div class="item owl-hide-medium-up c-100 x-theme auto-scroll">
-									<div class="ppp c-all h100">
-										<div class="txt-l h100">
-											<div class="fadeout-top"></div>
-												<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
-												<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-												<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>																			
-											<div class="fadeout-btm"></div>										
-										</div>
-									</div>
-								</div>					
-								<div class="item owl-hide-xs-down x-theme">				
-									<div class="row m0 hw100">
-											<div class="cover  hw100 rellax-props"></div>
-											<div class="rellax cover" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;"><div class="specialized-logo x-theme hw100" style="width:100% !important;"></div></div>								
-											<div class="col-lg-6 ml-auto mr-auto p0 c-all txt-l">
-												<div>										
-													<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
-													<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-													<p>Specialized creates bikes, components and bike equipment.</p>
-													<p><a href="https://www.specialized.com/" target="_blank" title="Visit AKG" class="btn btn-outline">Visit</a></p>	
+								</div>								
+							  </div>
+								<div class="col-lg-6 m0 md-down-h h100">
+								<div id="outer">
+								  <div id="inner_fixed">
+										<div class="col-lg-12 textoverlay light-theme">
+											<div class="zoom-container loader">
+												<div class="overlay dark-theme c-all bg-none">
+													<div class="zoom-icon"></div>
 												</div>
-											</div>
-											<div class="padda col-lg-6 ml-auto mr-auto textoverlay">
-												<div class="loader">
-													<iframe 
-													class="specialized lazy invisible fade-in soft-zoom" 
-													data-src="Specialized/xr/specializedxr.html"																						
-													frameborder="0"
-													scrolling="no"
-													>
-													</iframe>
-<!-- 												<div class="overlay bg-none arrow-left">
-													<div class="text-animate">
-														<div class="arrow-rotate-left ignore"></div>									
-													</div>
-												</div>
-												<div class="overlay bg-none arrow-right">
-													<div class="text-animate">
-														<div class="arrow-rotate-right ignore"></div>											
-													</div>
-												</div>	 -->												
-												</div>	
+												<img src="" data-src="Specialized/images/gallery/shield.png" class="owl-lazy cover">							
 											</div>	
-									</div>
-								</div>	
-								<div class="item c-100 textoverlay loader dark-theme">				
-									<img class="owl-lazy bg-black absolute" src="" data-src="Specialized/images/gallery/specialized.jpg">
-									<div class="dark-theme overlay c-all">
-										<div class="text-animate c-all">
-											<h3 class="h3 invisible fade-in-up txt-l"> <strong>Specialized </strong> Form Language</h3>		
 										</div>
-									</div>
-								</div>				
-								<div class="item owl-hide-xs-down row m0 absolute dark-theme">					
-								  <div class="p0 col-lg-6 ml-auto mr-auto h100 pr-0">
-									<div class="col-lg-12 ml-auto mr-auto textoverlay-desktop dark-theme p0">
-										<div class="zoom-container loader">
-											<div class="touch-hidden overlay dark-theme c-all bg-none">
-												<div class="zoom-icon"></div>
-											</div>
-												<div class="desktop-hidden zoom-icon"></div>										
-											<img src="" data-src="Specialized/images/gallery/twisted.png" class="owl-lazy cover">					
+								  </div>
+								  <div id="inner_remaining">
+										<div class="col-lg-12 textoverlay light-theme pt-0">
+											<div class="zoom-container loader">
+												<div class="overlay dark-theme c-all bg-none">
+													<div class="zoom-icon"></div>
+												</div>
+												<img src="" data-src="Specialized/images/gallery/logos.png" class="owl-lazy cover">							
+											</div>	
+										</div>
+								  </div>
+								</div>					  						
+							  </div>
+							</div>					
+							<div class="item owl-hide-xs-down light-theme">
+								<div class="row md-down-h">
+									<div class="col-12 flex">
+										<div class="col-lg-6">
+										 <h3 class="h3 invisible fade-in-up txt-l s-t m-h"><strong>3d Model</strong></h3>
 										</div>	
-									</div>								
-								  </div>
-									<div class="col-lg-6 m0 md-down-h h100 p0">
-									<div id="outer">
-									  <div id="inner_fixed">
-											<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
-												<div class="zoom-container loader">
-													<div class="overlay dark-theme c-all bg-none">
-														<div class="zoom-icon"></div>
-													</div>
-													<img src="" data-src="Specialized/images/gallery/shield.png" class="owl-lazy cover">							
-												</div>	
-											</div>
-									  </div>
-									  <div id="inner_remaining">
-											<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme pt-0">
-												<div class="zoom-container loader">
-													<div class="overlay dark-theme c-all bg-none">
-														<div class="zoom-icon"></div>
-													</div>
-													<img src="" data-src="Specialized/images/gallery/logos.png" class="owl-lazy cover">							
-												</div>	
-											</div>
-									  </div>
-									</div>					  						
-								  </div>
-								</div>					
-								<div class="item owl-hide-xs-down light-theme">
-									<div class="row md-down-h">
-										<div class="col-12 flex">
-											<div class="col-lg-6">
-											 <h3 class="h3 invisible fade-in-up txt-l s-t m-h"><strong>3d Model</strong></h3>
-											</div>	
-											<div class="col-lg-6">  
-											 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
-											</div>
-										</div>
-									</div>						
-									<div class="iframe-container c-all textoverlay-inverse relative">
-										<span class="show-shaded btn btn-outline hide-this">Load 3d</span>	
-										<div class="model-controls no-bg">
-											<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-											<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
-										</div>						
-										<iframe 
-										id="showonclick"
-										class="showonclick m-h unload"
-										src="" 
-										data-src="Specialized/webgl/rendered.html"		
-										frameborder="0"
-										scrolling="no">	 
-										</iframe>
-										<img src="" data-src="Specialized/images/gallery/wire.png" class="owl-lazy hide-this absolute" style="object-position: 50% 70%;">						
-									</div>	
-								</div>					
-								<div class="item owl-hide-medium-up textoverlay x-theme">							
-									<div class="loader">
-										<iframe 
-										class="specialized lazy invisible fade-in" 
-										data-src="Specialized/xr/specializedxr.html"																			
-										frameborder="0"
-										scrolling="no"
-										>
-										</iframe>													
-									</div>	
-								</div>
-								<div class="item padda x-theme">			
-									<div class="col-full col-md-12 col-sm h100">
-										<div class="popup-project-section row c-lg ppp h100 align-content-center">
-											<div class="col-lg-7 mr-auto ml-auto">
-											  <div class="col-lg-7 mr-auto ml-auto">
-												 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-												 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-												 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-											  </div>
-											</div>
+										<div class="col-lg-6">  
+										 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
 										</div>
 									</div>
-								</div>					
+								</div>						
+								<div class="iframe-container c-all textoverlay-inverse relative">
+									<span class="show-shaded btn btn-outline hide-this">Load 3d</span>	
+									<div class="model-controls no-bg">
+										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+										<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
+									</div>						
+									<iframe 
+									id="showonclick"
+									class="showonclick m-h unload"
+									src="" 
+									data-src="Specialized/webgl/rendered.html"		
+									frameborder="0"
+									scrolling="no">	 
+									</iframe>
+									<img src="" data-src="Specialized/images/gallery/wire.png" class="owl-lazy hide-this absolute" style="object-position: 50% 70%;">						
+								</div>	
+							</div>					
+							<div class="item owl-hide-medium-up textoverlay x-theme">							
+								<div class="loader">
+									<iframe 
+									class="specialized lazy invisible fade-in" 
+									data-src="Specialized/xr/specializedxr.html"																			
+									frameborder="0"
+									scrolling="no"
+									>
+									</iframe>													
+								</div>	
 							</div>
+							<div class="item x-theme">			
+								<div class="col-full col-md-12 col-sm h100">
+									<div class="popup-project-section row c-lg ppp h100 align-content-center">
+										<div class="col-lg-7 mr-auto ml-auto">
+										  <div class="col-lg-7 mr-auto ml-auto">
+											 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+											 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+											 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+										  </div>
+										</div>
+									</div>
+								</div>
+							</div>					
 						</div>
 						<div class="c-all view-btn">
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
@@ -1878,11 +1777,11 @@
 			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;"> <!-- OK -->
 				<div id="section-container" class="invisible zoom-in">
 					<div id="belmar-title" class="title row m0">
-						<div class="col-12 p0 flex">
-							<div class="col-lg-6 c-all p0 justify-content-start">
+						<div class="col-12 flex">
+							<div class="col-lg-6 c-all justify-content-start">
 							 <h3 class="h3 invisible fade-in-up txt-l"><strong>Bel Mar </strong>Bracelet</h3>
 							</div>	
-							<div class="col-lg-6 p0">  
+							<div class="col-lg-6">  
 									<div class="c-100 justify-content-end">
 										<a href="#belmar-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 										<a href="#belmar-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -1892,65 +1791,62 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-						<div class="" style="flex: 1 1 100%;">
-							<div id="belmar-more" class="pelle-slider owl-carousel c-100 p0 dropshadow">						
-								<div class="item row m0 textoverlay-mobile light-theme">	
-									<div class="md-down-h col-lg-4 col-sm c-lg-up light-theme p0-md-down">
-										<div class="row c-lg txt-l">
-											<div class="col-lg-8 ppp2">
-												<h2 class="mb-4 s-t">Bel Mar <strong>Bracelet</strong></h2>
-													<p>Bracelets for Swedish Bel Mar.</p> 
-											<p>A short project where I sketched quick concepts while drawing inspiration from the concept of interlocking.</p>
-											<p class="pb-6">The result is the Bel Mar Q</p>
-											</div>					
-										</div>
-									</div>					
-									<div class="col-lg-8 ml-auto mr-auto p0">
-										<div class="loader">								
-											<img src="" data-src="belmar/images/02.png" class="lazy invisible fade-in">				
-										</div>			
-									</div>	
-										<div class="overlay c-all light-theme">
-											<div class="text-animate ppp c-all">
-											<div>
-											  <h2 class="s-t element-animate">Belmar <strong>Q</strong></h2>
-											  <p> Bracelet for Swedish Bel Mar</p>
-											  <p></p>		  
-											  <p><span class="open-popup btn">Swipe to View</span></p>
-											</div>
-											</div>
-										</div>								
-								</div>
-								<div class="item owl-hide-medium-up c-100 light-theme auto-scroll">
-									<div class="ppp c-all h100">
-										<div class="txt-l h100">
-											<div class="fadeout-top"></div>
-											<h2 class="mb-4 s-t">Project <strong>Info</strong></h2>
-											<p>Bracelets for Swedish Bel Mar.</p> 
-											<p>This bracelet was a short project where I sketched quick concepts while drawing inspiration from the concept of interlocking.</p>
-											<p class="pb-6">
-											The inspiration drawn from it was really the lock idea that..</p>
-											<p class="pb-6">The result is the Bel Mar Q</p>																				
-											<div class="fadeout-btm"></div>										
-										</div>
-									</div>						
-								</div>									
-								<div class="item loader c-100 c-all light-theme">				
-									<img class="owl-lazy" src="" data-src="belmar/images/02.png">
-								</div>							
-								<div class="item padda ml-auto mr-auto light-theme">			
-									<div class="popup-project-section row c-lg ppp h100 align-content-center">
-										<div class="col-lg-7 mr-auto ml-auto">
-										  <div class="col-lg-7 mr-auto ml-auto">
-											 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-											 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-											 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-										  </div>
-										</div>
+						<div id="belmar-more" class="owl-carousel c-100 dropshadow">						
+							<div class="item row m0 textoverlay-mobile light-theme">	
+								<div class="md-down-h col-lg-4 col-sm c-lg-up light-theme">
+									<div class="row c-lg txt-l">
+										<div class="col-lg-8 ppp2">
+											<h2 class="mb-4 s-t">Bel Mar <strong>Bracelet</strong></h2>
+												<p>Bracelets for Swedish Bel Mar.</p> 
+										<p>A short project where I sketched quick concepts while drawing inspiration from the concept of interlocking.</p>
+										<p class="pb-6">The result is the Bel Mar Q</p>
+										</div>					
 									</div>
-								</div>								
+								</div>					
+								<div class="col-lg-8">
+									<div class="loader">								
+										<img src="" data-src="belmar/images/02.png" class="lazy invisible fade-in">				
+									</div>			
+								</div>	
+									<div class="overlay c-all light-theme">
+										<div class="text-animate ppp c-all">
+										<div>
+										  <h2 class="s-t element-animate">Belmar <strong>Q</strong></h2>
+										  <p> Bracelet for Swedish Bel Mar</p>
+										  <p></p>		  
+										  <p><span class="open-popup btn">Swipe to View</span></p>
+										</div>
+										</div>
+									</div>								
 							</div>
-								<!-- <div class="x-theme reflection md-down-h"></div>	 -->											
+							<div class="item owl-hide-medium-up c-100 light-theme auto-scroll">
+								<div class="ppp c-all h100">
+									<div class="txt-l h100">
+										<div class="fadeout-top"></div>
+										<h2 class="mb-4 s-t">Project <strong>Info</strong></h2>
+										<p>Bracelets for Swedish Bel Mar.</p> 
+										<p>This bracelet was a short project where I sketched quick concepts while drawing inspiration from the concept of interlocking.</p>
+										<p class="pb-6">
+										The inspiration drawn from it was really the lock idea that..</p>
+										<p class="pb-6">The result is the Bel Mar Q</p>																				
+										<div class="fadeout-btm"></div>										
+									</div>
+								</div>						
+							</div>									
+							<div class="item loader c-100 c-all light-theme">				
+								<img class="owl-lazy" src="" data-src="belmar/images/02.png">
+							</div>							
+							<div class="item light-theme">			
+								<div class="popup-project-section row c-lg ppp h100 align-content-center">
+									<div class="col-lg-7 mr-auto ml-auto">
+									  <div class="col-lg-7 mr-auto ml-auto">
+										 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+										 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+										 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+									  </div>
+									</div>
+								</div>
+							</div>								
 						</div>
 						<div class="c-all view-btn">							
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
@@ -1959,17 +1855,17 @@
 					</div>
 				</div>
 			</div>
-			<div id="loadMore" class="vh50 p0 relative">
+			<div id="loadMore" class="vh50 relative">
 				<a href="#" class="c-absolute">More Designs</a>
 			</div>	
-			<div id="designprocess-slider" class="snap col-lg-12 p0 x-theme vh100 hide-scroll">
+			<div id="designprocess-slider" class="snap col-lg-12 vh100 hide-scroll">
 				<div id="section-container" class="invisible zoom-in">	
-					<div id="mixed-title" class="title row m0">
-						<div class="col-12 p0 flex">
-							<div class="col-lg-6 c-all p0 justify-content-start">
+					<div id="design-process-title" class="title row m0">
+						<div class="col-12 flex">
+							<div class="col-lg-6 c-all justify-content-start">
 								<h3 class="h3 txt-l"><strong>Design </strong>Process</h3>						 
 							</div>	
-							<div class="col-lg-6 p0 xs-down-h">  
+							<div class="col-lg-6 xs-down-h">  
 								<div class="c-100 justify-content-end">
 								<div id="spacer" class="ion-android-open invisible"></div>
 									<h3 class="h3 txt-l"><strong>How I </strong>Work</h3>
@@ -1979,14 +1875,13 @@
 						</div>
 					</div>			
 					<div id="slider-container">		
-					<div class="snap-this-center" style="flex: 1 1 100%;">
-<!-- 						<div id="design-process" class="pelle-slider x-theme owl-carousel p0 w100 dropshadow">					
-							<div id="cogwheel" class="item">
-								<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5" style="width:100%;">
+						<div id="design-process" class="owl-carousel w100 dropshadow">					
+							<div id="cogwheel" class="item x-theme">
+								<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
 									<div class="cog-logo x-theme hw100 invisible rotate-in"></div>
 								</div>			
 								<div class=" row m0 h100">					
-									<div class="col-lg-6 p0 ml-auto mr-auto portrait-hidden">
+									<div class="col-lg-6 portrait-hidden">
 										<div class="ppp c-all h100">
 											<div >
 											  <h2 class="s-t">Design <strong>Process</strong></h2>
@@ -1995,21 +1890,20 @@
 											</div>								
 										</div>	
 									</div>
-									<div class="col-lg-6 p0 ml-auto mr-auto">
+									<div class="col-lg-6">
 										<div class="h100 ppp">
-											<div class="cog-logo animate p0 h100 invisible rotate-in"></div>							
+											<div class="cog-logo animate h100 invisible rotate-in"></div>							
 										</div>	
 									</div>	
 								</div>
 							</div>						
-							<div id="research" class="item cont">				
+							<div id="research" class="item cont light-theme">				
 								<div class="absolute row m0 hw100">					
-								  <div class="col-lg-6 ml-auto mr-auto h100 p0">
-									<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
-										<div class="loader light-theme" style="background-color: #dbdbdb;">
-										
+								  <div class="col-lg-6 h100">
+									<div class="col-lg-12 textoverlay">
+										<div class="loader" style="background-color: #dbdbdb;">									
 											<img src="" data-src="images/process/user.jpg" class="owl-lazy cover multiply flipx penis">
-											<div class="light-theme overlay c-all h100">
+											<div class="overlay c-all h100">
 												<div class="text-animate ppp txt-l">
 													<h2 class="mb-4 s-t">User <strong>Research</strong></h2>
 													<p>Who will be using the product?</p>
@@ -2022,39 +1916,39 @@
 										</div>	
 									</div>								
 								  </div>
-									<div class="col-lg-6 ml-auto mr-auto md-down-h h100 p0">
-									<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
-										<div class="loader light-theme">
-											<img src="" data-src="images/process/product.jpg" class="lazy cover multiply">
-											<div class="dark-theme low-opacity overlay c-all h100">
-												<div class="text-animate ppp txt-l">
-															<h3 class="mb-4 s-t txt-l">Context <strong>Research</strong></h3>
-															<p>
-															Now, we'll look at the environment where the product will be used.</p>
-															<p>
-															Where do you put the product when not in use?<br>
-															Will the surroundings be dark or light where the product will be used and how does that affect the design of the the product?</p>
-															<p>
-															One could say that the context is the"second user" and strongly affect how a product is designed.<br>
-															Analysing both existing products and mock-ups in its environment reveals issues that  need to be solved for the product to function correctly. 
-															</p>												
-															<h3 class="mb-4 s-t txt-l">Market <strong>Research</strong></h3>
-															<p>
-															Here, we take a look at what products yours is competing with, where in the market there is room for it and what technology and solutions are used.
-															</p>
-															<p>We look at products already available on the market, to see what should be improved.</p>
-															<p>
-															This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-both"><strong> concept evaluation</strong></span></p>
-												</div>
-											</div>							
-										</div>	
-									</div>														  						
+									<div class="col-lg-6 md-down-h h100">
+										<div class="col-lg-12 textoverlay">
+											<div class="loader">
+												<img src="" data-src="images/process/product.jpg" class="lazy cover multiply">
+												<div class="low-opacity overlay c-all h100">
+													<div class="text-animate ppp txt-l">
+														<h3 class="mb-4 s-t txt-l">Context <strong>Research</strong></h3>
+														<p>
+														Now, we'll look at the environment where the product will be used.</p>
+														<p>
+														Where do you put the product when not in use?<br>
+														Will the surroundings be dark or light where the product will be used and how does that affect the design of the the product?</p>
+														<p>
+														One could say that the context is the"second user" and strongly affect how a product is designed.<br>
+														Analysing both existing products and mock-ups in its environment reveals issues that  need to be solved for the product to function correctly. 
+														</p>												
+														<h3 class="mb-4 s-t txt-l">Market <strong>Research</strong></h3>
+														<p>
+														Here, we take a look at what products yours is competing with, where in the market there is room for it and what technology and solutions are used.
+														</p>
+														<p>We look at products already available on the market, to see what should be improved.</p>
+														<p>
+														This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-both"><strong> concept evaluation</strong></span></p>
+													</div>
+												</div>							
+											</div>	
+										</div>														  						
 								  </div>
 								</div>
 							</div>					
-							<div id="ideation" class="item cont">		
+							<div id="ideation" class="item cont light-theme">		
 								<div class="middle row m0">					
-								  <div class="col-lg-12 ml-auto mr-auto textoverlay p0 light-grey-bg">
+								  <div class="col-lg-12 textoverlay light-grey-bg">
 										<div class="loader">							
 											<img src="" data-src="images/process/brainstorm_black.svg" class="lazy cover">
 											<div class="light-theme high-opacity overlay c-all">
@@ -2078,8 +1972,8 @@
 								  </div>
 								</div>
 							</div>
-							<div id="moodboard-sketch" class="item owl-hide-medium-down c-100 absolute row m0 h100">				
-								<div class="col-lg-6 col-md-6 p0 textoverlay">
+<!-- 							<div id="moodboard-sketch" class="item owl-hide-medium-down c-100 absolute row m0 h100 dark-theme">				
+								<div class="col-lg-6 col-md-6 textoverlay">
 									<div class="loader dark-theme">
 										<img src="" data-src="Bagheera/images/process/01_square.svg" class="owl-lazy">
 										<div class="dark-theme overlay c-all">
@@ -2092,7 +1986,7 @@
 										</div>							
 									</div>	
 								</div>
-								<div class="col-lg-6 col-md-6 p0 textoverlay">
+								<div class="col-lg-6 col-md-6 textoverlay">
 									<div class="loader medium-theme">
 										<img src="" data-src="Bagheera/images/process/03_square1.png" class="owl-lazy cover">
 										<div class="overlay c-all">
@@ -2103,10 +1997,10 @@
 										</div>							
 									</div>	
 								</div>						
-							</div>
-							<div id="moodboard-sketch" class="item cont">					
+							</div> -->
+							<div id="moodboard-sketch" class="item cont light-theme">					
 								<div class="h100 row medium-theme m0 absolute">					
-								  <div class="col-lg-6 ml-auto mr-auto textoverlay p0">
+								  <div class="col-lg-6 textoverlay">
 										<div class="loader">							
 											<img src="" data-src="images/process/moodboard.png" class="lazy cover">
 											<div class="medium-theme overlay c-all">
@@ -2124,7 +2018,7 @@
 											</div>							
 										</div>								
 								  </div>
-								  <div class="col-lg-6 ml-auto mr-auto textoverlay p0" >
+								  <div class="col-lg-6 textoverlay" >
 										<div class="loader">								
 											<img src="" data-src="images/sketchgallery/8.png" class="lazy">
 												<div class="medium-theme overlay c-all">
@@ -2141,11 +2035,11 @@
 								  </div>
 								</div>
 							</div>
-							<div id="3d-modeling" class="item cont"> 	
+							<div id="3d-modeling" class="item cont light-theme"> 	
 								<div class="h100 iframe-container textoverlay medium-theme c-all absolute">
-									<div class="view-btn p0 medium-theme overlay hide-this">
+									<div class="view-btn medium-theme overlay hide-this">
 										<div class="row c-all h100 m0">					
-											<div class="col-lg-6 txt-c-ls ml-auto mr-auto ppp">
+											<div class="col-lg-6 txt-c-ls ppp">
 												<h2 class="mb-4 s-t">COncept <strong>Evaluation </strong></h2>										
 												<p>
 												Now, how do we know if this idea that we just came up with is any good?</p>
@@ -2186,11 +2080,11 @@
 									</iframe>													
 								</div>						
 							</div>	
-							<div id="keyshot" class="item cont"> 
-								<div class="h100 p0 padda col-lg-12 ml-auto mr-auto textoverlay light-theme absolute">
+							<div id="keyshot" class="item cont light-theme"> 
+								<div class="h100 col-lg-12 textoverlay light-theme absolute">
 									<div class="loader bg-offwhite">
 										<div class="h100">						
-											<img class="c-100 lazy ml-auto mr-auto multiply" data-src="images/process/keyshot.png">
+											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
 										</div>
 										<div class="light-theme overlay c-all">
 											<div class="col-lg-8 text-animate ppp txt-l">
@@ -2216,9 +2110,9 @@
 									</div>
 								</div>							
 							</div>
-							<div id="refine mobile txt" class="item owl-hide-large-up padda col-lg-12 p0 ml-auto mr-auto">
+							<div id="refine mobile txt" class="item owl-hide-lg-up col-lg-12">
 								<div class="cont">
-									<div class="middle light-theme" style="position:unset;">	
+									<div class="middle light-theme">	
 										<div class="fadeout-top"></div>												
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate ppp c-all">
@@ -2239,7 +2133,7 @@
 							</div>								
 							<div id="refine mobile xr" class="item owl-hide-medium-up cont"> 
 								<div id="akg-process-xr-popup" class="m0 h100 row medium-theme">						
-									<div class="padda col-lg-6 ml-auto mr-auto textoverlay">
+									<div class="col-lg-6 textoverlay">
 										<div class="process-object c-100">
 											<div class="hw100">							
 												<iframe
@@ -2265,10 +2159,10 @@
 									</div>
 								</div>	
 							</div>
-							<div id="refine desktop" class="item owl-hide-xs-down cont"> 
+							<div id="refine desktop" class="item owl-hide-xs-down cont dark-theme"> 
 								<div id="akg-process-xr-popup" class="m0 h100 row dark-theme">						
-									<div class="padda col-lg-6 ml-auto mr-auto h100">
-											<div class="col-lg-10 ml-auto mr-auto ppp h100">
+									<div class="col-lg-6 h100">
+											<div class="col-lg-10 ppp h100">
 												<h2 class="mb-4 s-t">Refine<strong>ment</strong></h2>
 												<p>
 												I also have the ability to share pre-rendered high quality rotatable models, to evaluate the product late in the process.</p>
@@ -2283,7 +2177,7 @@
 												</div>
 											</div>						
 									</div>
-									<div class="padda col-lg-6 ml-auto mr-auto textoverlay">
+									<div class="col-lg-6 textoverlay">
 										<div class="process-object c-100">
 											<div class="hw100">							
 												<iframe
@@ -2309,9 +2203,9 @@
 									</div>
 								</div>	
 							</div>
-							<div id="bunde mobile txt" class="item owl-hide-large-up padda col-lg-12 p0 ml-auto mr-auto">
+							<div id="bundle mobile txt" class="item owl-hide-lg-up col-lg-12">
 								<div class="cont">
-									<div class="middle light-theme" style="position:unset;">	
+									<div class="middle light-theme">	
 										<div class="fadeout-top"></div>													
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate ppp c-all">
@@ -2329,8 +2223,8 @@
 									</div>
 								</div>								
 							</div>								
-							<div id="bundle" class="item cont"> 
-									<div class="h100 padda col-lg-12 ml-auto mr-auto textoverlay-inverse dark-theme">
+							<div id="bundle" class="item cont dark-theme"> 
+									<div class="h100 col-lg-12 textoverlay-inverse">
 										<div class="loader dark-theme">
 											<iframe 
 											id="popup-iframe"
@@ -2344,8 +2238,8 @@
 										</div>											
 									</div>	
 							</div>
-							<div id="sustainability" class="item textoverlay cont"> 			
-									<div class="absolute p-portrait col-lg-12 ml-auto mr-auto textoverlay">
+							<div id="sustainability" class="item textoverlay cont light-theme"> 			
+									<div class="absolute p-portrait col-lg-12 textoverlay">
 										<div class="loader light-theme light-grey-bg c-all">
 											<img src="" data-src="images/process/green.png" class="lazy" style="object-position: 25% 50%;">																			
 											<div class="light-theme overlay c-all">
@@ -2363,51 +2257,50 @@
 										</div>	
 									</div>
 							</div>
-								<div class="item owl-hide-large-up padda col-lg-12 p0 ml-auto mr-auto">
-									<div class="cont">
-										<div class="middle x-theme" style="position:unset;">	
-											<div class="fadeout-top"></div>														
-											<div class="overlay c-all desktop-hidden img-opacity">
-												<div class="text-animate ppp c-all">
-													<div>
-														<h2 class="mb-4 s-t txt-l m-h"><strong>Documentation</strong></h2>
-														<h2 class="mb-4 s-t txt-l md-up-h"><strong>Project Docs</strong></h2>
-														<p>
-														I write a project documentation parallel to the design work that is accessible at all times for you. <br>
-														All information is live which makes it easy to stay on the same page and confirms our decisions.  </p>
-														<p>When the projects is finished the full design project with documentation will be downloadable and may be used for future reference, 
-														communication with producers, promotional material and so on.</p>								  
-														<p> Depending on the project the documentation may include, but is not limited to:</p>
-														<p>
-														<span data-tooltip="#specification-info" class="info-icon"><strong>Design Specification</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#revisions-info" href="a" class="info-icon"><strong>Revision History</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#results-info" href="" class="info-icon"><strong>Research and Analysis results</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#blueprints-info" href="" class="info-icon"><strong>Blueprints</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#graphic-profile-info" href="" class="info-icon"><strong>Graphic Profile</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#cad-model-info" href="" class="info-icon"><strong>CAD Model</strong></span><span> &#8226;</span>						  
-														<span data-tooltip="#renderings-info" href="" class="info-icon"><strong>Renderings</strong></span><span> &#8226;</span>						  
-														</p>	
-													</div>
+							<div class="item owl-hide-lg-up col-lg-12">
+								<div class="cont">
+									<div class="middle x-theme">	
+										<div class="fadeout-top"></div>														
+										<div class="overlay c-all desktop-hidden img-opacity">
+											<div class="text-animate ppp c-all">
+												<div>
+													<h2 class="mb-4 s-t txt-l m-h"><strong>Documentation</strong></h2>
+													<h2 class="mb-4 s-t txt-l md-up-h"><strong>Project Docs</strong></h2>
+													<p>
+													I write a project documentation parallel to the design work that is accessible at all times for you. <br>
+													All information is live which makes it easy to stay on the same page and confirms our decisions.  </p>
+													<p>When the projects is finished the full design project with documentation will be downloadable and may be used for future reference, 
+													communication with producers, promotional material and so on.</p>								  
+													<p> Depending on the project the documentation may include, but is not limited to:</p>
+													<p>
+													<span data-tooltip="#specification-info" class="info-icon"><strong>Design Specification</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#revisions-info" href="a" class="info-icon"><strong>Revision History</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#results-info" href="" class="info-icon"><strong>Research and Analysis results</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#blueprints-info" href="" class="info-icon"><strong>Blueprints</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#graphic-profile-info" href="" class="info-icon"><strong>Graphic Profile</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#cad-model-info" href="" class="info-icon"><strong>CAD Model</strong></span><span> &#8226;</span>						  
+													<span data-tooltip="#renderings-info" href="" class="info-icon"><strong>Renderings</strong></span><span> &#8226;</span>						  
+													</p>	
 												</div>
 											</div>
-											<div class="fadeout-btm"></div>											
 										</div>
-									</div>								
+										<div class="fadeout-btm"></div>											
+									</div>
 								</div>								
-							<div id="dropit" class="item"> 		
-									<div class="padda col-lg-12 ml-auto mr-auto light-theme h100">
-											<div class="light-theme c-all hw100">
-													<div class="ppp h100 c-all">
-														<div>
-															 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-															 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-															 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p> 
-														</div>
-													</div>									
-											</div>				
-									</div>	
+							</div>								
+							<div id="dropit" class="item x-theme"> 		
+								<div class="col-lg-12 h100">
+									<div class="c-all hw100">
+										<div class="ppp h100 c-all">
+											<div>
+												 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+												 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+												 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p> 
+											</div>
+										</div>									
+									</div>				
+								</div>	
 							</div>											
-						</div> -->
 						</div>
 						<div class="c-all view-btn">
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
@@ -2496,7 +2389,7 @@
 								</div>	
 							</div>			
 						</div>
-						<div class="middle col-lg-12 c-100 p0">				
+						<div class="middle col-lg-12 c-100">				
 							<div class="c-100 w100">
 								<iframe 
 								class="converse lazy invisible fade-in" 
@@ -2525,8 +2418,8 @@
 					</div>
 			</div>								 
 			<div id="converse-gallery-popup" class="c-lg popup mfp-hide">  
-					<div class="col-auto col-md-12 col-sm p0 h100">
-						<div id="converse-gallery" class="pelle-slider owl-carousel p0">						
+					<div class="col-auto col-md-12 col-sm h100">
+						<div id="converse-gallery" class="owl-carousel">						
 							<div class="loader props c-100">			
 								<img class="lazy cover" src="" data-src="Converse/images/gallery/01.png">
 							</div>
@@ -2602,8 +2495,8 @@
 				</div>								 
 			</div>
 			<div id="converse-cmf-popup-mobile" class="popup mfp-hide">
-				<div class="padda col-lg-12 ml-auto mr-auto h100">
-					<div id="converse-cmf" class="pelle-slider owl-carousel c-100 flexend-portrait dark-theme p0">			
+				<div class="padda col-lg-12 h100">
+					<div id="converse-cmf" class="owl-carousel c-100 dark-theme">			
 						<div class="loader c-100 textoverlay">
 							<img class="lazy" src="" data-src="Converse/web/images/web.1.png">
 							<div class="dark-theme overlay c-all">
@@ -2670,7 +2563,7 @@
 			</script>
 			<div id="akg-xr-popup" class="loader popup mfp-hide">
 			<!-- <div id="hora" class="absolute" style="height:50px; width:50px; background:red;"></div> -->
-				<div class="col p0 h100">
+				<div class="col h100">
 					<div class="row cont-md-down m0 h100">
 						<div class="col-lg-4 c-md-down ppp auto-scroll">	
 							<div>
@@ -2688,7 +2581,7 @@
 								</div>	
 							</div>	
 						</div>
-						<div class="middle col-lg-8 c-100 p0">				
+						<div class="middle col-lg-8 c-100">				
 							<div class="c-100 w100">
 								<iframe 
 								id="xr-iframe"
@@ -2746,9 +2639,9 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-4 row-lg-4 row-md-4 row-xs-4 c-100 xl-up-hidden">	
 							<div id="popup-logo-free" class="akg-logo"></div>
 						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 row-lg-8 row-md-8 row-xs-8 c-100 p0">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 row-lg-8 row-md-8 row-xs-8 c-100">
 							<div id="popup-logo" class="akg-logo md-down-h portrait-hidden"></div>				
-							<div id="akg-gallery" class="pelle-slider owl-carousel c-100 flexend-portrait p0">						
+							<div id="akg-gallery" class="owl-carousel c-100">						
 								<div class="c-100">				
 									<img class="lazy mr-auto ml-auto" src="" data-src="akg/images/gallery/01.png">
 								</div>
@@ -2781,7 +2674,7 @@
 								</div>							
 							</div>
 						</div>						
-						<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100 p0">				
+						<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
 								class="bagheera lazy invisible fade-in" 
@@ -2833,8 +2726,8 @@
 			</div>
 			<div id="poc-process-popup" class="popup mfp-hide x-theme zoom-in fullscreen" style="padding:4vw !important;"> 	
 <!-- 				<div id="spotify-title" class="title row m0">
-					<div class="col-12 p0 m0 flex">
-						<div class="col-lg-6 col-xs-8 c-all p0 justify-content-start">
+					<div class="col-12 m0 flex">
+						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="h3 txt-l"><strong>POC </strong>Lobes</h3>			 
 						</div>					
 					</div>		
@@ -2870,406 +2763,39 @@
 					<div class="slide loader h100">	
 						<img src="" data-src="poc/images/process/07.png" class="lazy invisible lazy-fade-in">		
 					</div>
-<!-- 					<div class="slide loader light-theme">	
+					<div class="slide loader light-theme">	
 						<img src="" data-src="poc/images/process/12.jpg" class="lazy cover multiply invisible lazy-fade-in">		
-					</div> -->
+					</div>
 					<div class="slide loader h100">	
 						<div class="row m0 h100">										
-							<div class="padda col-lg-6 ml-auto mr-auto light-theme">
+							<div class="col-lg-6 light-theme">
 								<div class="loader dark-theme">
 									<img src="" data-src="poc/images/process/svg/03_square.svg" class="lazy">							
 								</div>	
 							</div>
-							<div class="padda col-lg-6 ml-auto mr-auto"  style="min-height:40vh;">
+							<div class="col-lg-6"  style="min-height:40vh;">
 								<div class="loader dark-theme">
 									<img src="" data-src="poc/images/process/04_square.png" class="lazy cover">						
 								</div>	
 							</div>
 						</div>
 					</div>
-<!-- 					<div class="slide loader">	
+					<div class="slide loader">	
 						<div class="row m0 h100">										
-						<div class="col-lg-6 ml-auto mr-auto">
+						<div class="col-lg-6">
 							<div class="loader light-theme">
 								<img src="" data-src="poc/images/process/09_square.svg" class="lazy cover">							
 							</div>	
 						</div>					
-						<div class="col-lg-6 ml-auto mr-auto">
+						<div class="col-lg-6 ">
 							<div class="loader dark-theme c-all">
 								<img src="" data-src="poc/images/process/08_square.svg" class="lazy cover">							
 							</div>	
 						</div>
 						</div>
-					</div> -->
+					</div>
 				</div>																																									
-			</div>				
-			<div id="poc-process-popup2" class="popup mfp-hide"> 
-				<div class="lg-up-h light-theme">			
-					<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme vh100">
-						<div class="loader light-theme">
-							<img src="" data-src="poc/images/process/12.jpg" class="lazy cover" style="object-position: 100% 25%;">
-							
-						</div>	
-					</div>					
-					<div class="padda p-sec col-lg-12 ml-auto mr-auto textoverlay light-theme">
-						<div class="ppp col-lg-6">
-							<h2 class="mb-4 s-t">Poc <strong>Lobes</strong></h2>
-							<p>Cylindrical Ski Goggle Made During Internship at Poc<br>
-							<strong>Role - Redesign & Modelling</strong> 
-							</p>		  
-							<p>From brainstorming ideas, making moodboards and trying to fit the product with the rest of the product line, I worked with lead designer for creative input and product developers for technical advice when sketching and modelling concepts for this poc goggle.<br>
-							A great deal of effort was put into making the google fit their range of helmets. 
-							The final result was then further developed, but later cancelled as it was competing with another poc google.
-							instead, the concept was turned into a spherical version, further developed, and released as the “poc lobes”.  
-							</p>
-						</div>
-					</div>										
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto light-theme"  style="min-height:40vh;">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">MOODBOARD & <strong>ISSUES </strong></h3>
-						<div class="loader textoverlay dark-theme relative">
-							<img src="" data-src="poc/images/process/svg/03_square.svg" class="lazy cover">
-							<div class="dark-theme overlay c-all">
-								<div class="text-animate ppp">
-									<h2 class="mb-4 s-t">MOODBOARD & <strong>ISSUES </strong></h2>
-									<p>An analysis of the brands form language and an inspiration board describing what we want to add to it.</p>						
-								</div>
-							</div>							
-						</div>	
-					</div>						
-					<div class="padda col-lg-6 ml-auto mr-auto">
-						<p><strong>Lens is hard to change</strong><br>When the weather conditions change you might need to change the lens.
-						or you need to replace the lens when it’s damaged
-						as most lenses are mounted inside the frame, and considering the cold weather and wear of gloves this can be quite tricky.</p>
-						<p>
-						<strong>Goggle Straps Won’t Stay In Place</strong><br>
-						Goggle straps are constantly adjusted meaning the fit also change causing air draft and affecting ventilation.
-						they are also quite slippery and are easily lost when trying to get a sun tan in the ski lift
-						</p>								
-						<p><strong>Design Causes Water To Get Inside</strong>
-						The typical - lens in a frame - goggle design means a lot of corners where snow gets stuck, melts and gets inside the goggle - and then fogs up the lens
-						</p>									
-						<p><strong>Strap Attachment  Limits Vision</strong><br>
-						The nature of a typical strap to helmet attachment design creates limitation in the field of view
-						</p>								
-						<p>
-						<strong>Rigid Nose Arch</strong> Prevents Good Fitting and bad ventilation means fogging 
-						</p>								
-						<p>
-						<strong>Strap Holder Are Complicated To Use</strong><br>
-						Being located in the back, this is where the strap is fixed to the helmet - meaning either a lot of fiddling with you hands behind your head or taking the helmet off
-						</p>
-					</div>
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto textoverlay light-theme"  style="min-height:40vh;">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">ROUGH <strong>SKETCHING </strong></h3>
-						<div class="loader dark-theme">
-							<img src="" data-src="poc/images/process/04_square.png" class="lazy cover">
-							<div class="overlay c-all">
-								<div class="text-animate ppp">
-									<h2 class="mb-4 s-t">ROUGH <strong>SKETCHING </strong></h2>
-									<p>A few sketches from the concept development</p>
-								</div>
-							</div>							
-						</div>	
-					</div>				
-					<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme p-sec">
-						<h3 class="h3 invisible fade-in-up txt-l s-t">SEMANTICS & <strong> HELMET FITTING</strong></h3>
-						<div class="loader light-theme">
-							<img src="" data-src="poc/images/process/09_square.svg" class="lazy cover">
-							<div class="overlay c-all">
-								<div class="text-animate ppp">
-									<h2 class="mb-4 s-t">SEMANTICS & <strong> HELMET FITTING</strong></h2>
-										<p></p>
-										<p class="m-h"><strong>1. Helmet Fitting</strong><br>
-										The goggle has been designed to fit the whole range of pocs ski helmets, but an average of other brands helmet dimensions were used in the equation as well.</p>
-										<p class="m-h"><strong>2. Goggle Strap Holder</strong><br>
-										located inside of the goggle frame provides a better fit meaning less air draught and fogging</p>		
-										<p class="m-h"><strong>3. Contrast</strong><br>
-										The google is designed to complement the helmets by contrasting in colors, graphics (sizes) and detail juxtapositions
-										(see inspiration board)</p>
-								</div>
-							</div>							
-						</div>	
-					</div>
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto">
-							<p><strong>1. Helmet Fitting</strong><br>
-							The goggle has been designed to fit the whole range of pocs ski helmets, but an average of other brands helmet dimensions were used in the equation as well.</p>
-							<p><strong>2. Goggle Strap Holder</strong><br>
-							located inside of the goggle frame provides a better fit meaning less air draught and fogging</p>		
-							<p><strong>3. Contrast</strong><br>
-							The google is designed to complement the helmets by contrasting in colors, graphics (sizes) and detail juxtapositions
-							(see inspiration board)</p>
-					</div>						
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto textoverlay light-theme"  style="min-height:40vh;">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">Semantic <strong>Functions</strong></h3>
-						<div class="loader dark-theme c-all">
-							<img src="" data-src="poc/images/process/08_square.svg" class="lazy cover">
-							<div class="dark-theme overlay c-all">
-								<div class="text-animate ppp">
-									<h2 class="mb-4 s-t">Semantic <strong>Functions</strong></h2>
-									<p>Description of how the product is supposed to communicate with its user.</p>
-									<p class="m-h"><strong>1. Lens Holders</strong><br>
-									are designed to look as big buttons, saying - change lense here!</p>
-									<p class="m-h"><strong>2. Lens Frame</strong><br>
-									is based on the poc super ellipse, giving it a strong sense of poc identity</p>
-									<p class="m-h"><strong>3. Side logo</strong><br>
-									is subtle to give way for the helmets bold graphic logos</p>
-									<p class="m-h"><strong>4. Product Logos</strong><br>
-									is positioned under the lens for protection from wear and tear </p>
-									<p class="m-h"><strong>5. Lens Mount</strong><br>
-									is designed to resemble the industrial /technical aspects of the pilot helmet</p>
-									<p class="m-h"><strong>6. Solid Appearance</strong><br>
-									brings focus and contrast to the eye area in relation the helmet</p>	
-								</div>
-							</div>							
-						</div>	
-					</div>
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto">
-						<p>Description of how the product is supposed to communicate with its user.</p>
-						<p><strong>1. Lens Holders</strong><br>
-						are designed to look as big buttons, saying - change lense here!</p>
-						<p><strong>2. Lens Frame</strong><br>
-						is based on the poc super ellipse, giving it a strong sense of poc identity</p>
-						<p><strong>3. Side logo</strong><br>
-						is subtle to give way for the helmets bold graphic logos</p>
-						<p><strong>4. Product Logos</strong><br>
-						is positioned under the lens for protection from wear and tear </p>
-						<p><strong>5. Lens Mount</strong><br>
-						is designed to resemble the industrial /technical aspects of the pilot helmet</p>
-						<p><strong>6. Solid Appearance</strong><br>
-						brings focus and contrast to the eye area in relation the helmet</p>	
-					</div>						
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto textoverlay light-theme">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">Exploded View & <strong>Frame</strong></h3>
-						<div class="loader light-theme">
-							<img src="" data-src="poc/images/process/10_square.jpg" class="lazy cover">
-							<div class="overlay c-all">
-								<div class="text-animate ppp">
-									<h2 class="mb-4 s-t">Exploded <strong> View</strong></h2>
-								</div>
-							</div>							
-						</div>	
-					</div>
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto">
-						<p><strong>1. Lens Change</strong><br>
-						To change lens - simply push on the frame above the lens lock buttons to release it</p>
-						<p><strong>2. The Frame</strong><br>
-						The frame is made of injection molded pu enabling a construction that lets a lot of air through</p>
-						<p><strong>3. The Lens</strong><br>
-						Polycarbonate lens with clean edges and easy to fit slots for lens holders</p>						
-						<p><strong>6. Goggle Strap Attachment</strong><br>
-						is offset inwards to provide better air flow</p>	
-					</div>							
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto textoverlay light-theme" style="min-height:40vh;">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">Views & <strong>Functions</strong></h3>
-						<div class="loader dark-theme">
-							<img src="" data-src="poc/images/process/11_square.jpg" class="lazy cover">
-							<div class="dark-theme overlay c-all">
-								<div class="text-animate ppp">
-									<h3 class="h3 txt-c-portrait"><strong>VIEWS</strong></h3><p>Bottom, top & front view of goggle</p>
-								</div>
-							</div>							
-						</div>	
-					</div>
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto">
-						<p><strong>4. Main Air Intakes</strong><br>
-						Big intakes for good air circulation</p>							
-						<p><strong>5. Main Air Outlet</strong><br>
-						Big outlet letting out a lot of air</p>
-						<p><strong>6. Goggle Strap Attachment</strong><br>
-						is offset inwards to provide better air flow</p>
-						<p><strong>7. Side Outlets</strong><br>
-						provides even better circulation of air</p>	
-					</div>												
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto textoverlay light-theme">
-					<h3 class="h3 invisible fade-in-up txt-l s-t">Functions <strong></strong></h3>
-						<div class="loader dark-theme">
-							<img src="" data-src="poc/images/process/svg/06_square.svg" class="lazy cover">
-							<div class="dark-theme overlay c-all">
-								<div class="text-animate">
-								</div>
-							</div>							
-						</div>	
-					</div>					
-					<div class="padda p-sec col-lg-6 ml-auto mr-auto">
-						<p><strong>1. Lens Mounted On Top of Frame</strong><br>
-						maximizes the view, keeps the lens free from snow and facilitates lens replacement</p>	
-						<p><strong>2. Big Round Lens Holders</strong><br>
-						and a soft flexible frame makes it real easy to replace lens.</p>	
-						<p><strong>3. Moulded Strap</strong><br>
-						keeps the strap and logo from fraying due to wear from different sharp objects it also makes the strap stiff, making the goggle easier to put on </p>	
-						<p><strong>4. Goggle Strap Holder</strong><br>
-						located inside of the goggle frame - eneables a less vision limiting design and better air flow </p>	
-						<p><strong>5. Rubbery Anti Slip Material</strong><br>
-						on the inside of strap, keeps the goggle from slipping</p>	
-						<p><strong>6. Split Nose Arch</strong><br>
-						shapes the frame after the nose - the part of the face in this context that varies the most from person to person</p>
-						<p><strong>7. Wide Outer Nose Arch</strong><br>
-						in combination with the inner split nose arch, makes this goggle suitable for many different face types.</p>
-						<p><strong>8. Built With Two Clean Main Shapes</strong><br>
-						and not a lot of extra material used, a lot of space is used for ventilating air to prevent fogging.</p>								
-					</div>
-					<div class="padda p-sec col-lg-12 ml-auto mr-auto textoverlay light-theme">
-						<div class="light-theme c-all min-vh70">
-								<div class="text-animate ppp h100">
-									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-									 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-									 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p> 
-								</div>									
-						</div>	
-					</div>					
-				</div>					
-				<div id="poc-process" class="md-down-h pelle-slider owl-carousel c-100 flexend-portrait dark-theme p0">									
-					<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme bg-offwhite">
-						<div class="loader light-theme">
-							<img src="" data-src="poc/images/process/12.jpg" class="lazy cover" style="object-position: 100% 25%;">
-							<div class="dark-theme overlay c-all">
-								<div class="text-animate ppp col-lg-6">
-									<h2 class="mb-4 s-t">Poc <strong>Lobes</strong></h2>
-									<p>Cylindrical Ski Goggle Made During Internship at Poc<br>
-									<strong>Role - Redesign & Modelling</strong> 
-									</p>		  
-									<p>From brainstorming ideas, making moodboards and trying to fit the product with the rest of the product line, I worked with lead designer for creative input and product developers for technical advice when sketching and modelling concepts for this poc goggle.</p>
-									<p>
-									A great deal of effort was put into making the google fit their range of helmets. 
-									The final result was then further developed, but later cancelled as it was competing with another poc google.
-									instead, the concept was turned into a spherical version, further developed, and released as the “poc lobes”.  
-									</p>
-								</div>
-							</div>							
-						</div>	
-					</div>
-					<div class="row m0 h100">										
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite"  style="min-height:40vh;">
-							<div class="loader dark-theme">
-								<img src="" data-src="poc/images/process/svg/03_square.svg" class="lazy" style="object-position:50% 100%;">
-								<div class="dark-theme overlay c-all">
-									<div class="col-lg-8 text-animate">
-										<h2 class="mb-4 s-t">MOODBOARD & <strong>ISSUES </strong></h2>
-										<p>An analysis of the brands form language and an inspiration board describing what we want to add to it.</p>						
-										<p class="m-h"><strong>Lens is hard to change</strong><br>When the weather conditions change you might need to change the lens.
-										or you need to replace the lens when it’s damaged
-										as most lenses are mounted inside the frame, and considering the cold weather and wear of gloves this can be quite tricky.</p>
-										<p class="m-h">
-										<strong>Goggle Straps Won’t Stay In Place</strong><br>
-										Goggle straps are constantly adjusted meaning the fit also change causing air draft and affecting ventilation.
-										they are also quite slippery and are easily lost when trying to get a sun tan in the ski lift
-										</p>								
-										<p class="m-h"><strong>Design Causes Water To Get Inside</strong>
-										The typical - lens in a frame - goggle design means a lot of corners where snow gets stuck, melts and gets inside the goggle - and then fogs up the lens
-										</p>									
-										<p class="m-h"><strong>Strap Attachment  Limits Vision</strong><br>
-										The nature of a typical strap to helmet attachment design creates limitation in the field of view
-										</p>								
-										<p class="m-h">
-										<strong>Rigid Nose Arch</strong> Prevents Good Fitting and bad ventilation means fogging 
-										</p>								
-										<p class="m-h">
-										<strong>Strap Holder Are Complicated To Use</strong><br>
-										Being located in the back, this is where the strap is fixed to the helmet - meaning either a lot of fiddling with you hands behind your head or taking the helmet off
-										</p>
-									</div>
-								</div>							
-							</div>	
-						</div>
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite"  style="min-height:40vh;">
-							<div class="loader dark-theme">
-								<img src="" data-src="poc/images/process/04_square.png" class="lazy cover">
-								<div class="overlay c-all">
-									<div class="text-animate ppp">
-										<h2 class="mb-4 s-t">ROUGH <strong>SKETCHING </strong></h2>
-										<p>A few sketches from the concept development</p>
-									</div>
-								</div>							
-							</div>	
-						</div>
-					</div>
-					<div class="row m0 h100">					
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite">
-							<div class="loader light-theme">
-								<img src="" data-src="poc/images/process/09_square.svg" class="lazy cover">
-								<div class="overlay c-all">
-									<div class="col-lg-8 text-animate">
-										<h2 class="mb-4 s-t">SEMANTICS & <strong> HELMET FITTING</strong></h2>
-												<p></p>
-												<p class="m-h"><strong>1. Helmet Fitting</strong><br>
-												The goggle has been designed to fit the whole range of pocs ski helmets, but an average of other brands helmet dimensions were used in the equation as well.</p>
-												<p class="m-h"><strong>2. Goggle Strap Holder</strong><br>
-												located inside of the goggle frame provides a better fit meaning less air draught and fogging</p>		
-												<p class="m-h"><strong>3. Contrast</strong><br>
-												The google is designed to complement the helmets by contrasting in colors, graphics (sizes) and detail juxtapositions
-												(see inspiration board)</p>
-									</div>
-								</div>							
-							</div>	
-						</div>					
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite"  style="min-height:40vh;">
-							<div class="loader dark-theme c-all">
-								<img src="" data-src="poc/images/process/08_square.svg" class="lazy cover">
-								<div class="dark-theme overlay c-all">
-									<div class="col-lg-8 text-animate">
-										<h2 class="mb-4 s-t">Semantic <strong>Functions</strong></h2>
-
-										<p>Description of how the product is supposed to communicate with its user.</p>
-										<p class="m-h"><strong>1. Lens Holders</strong><br>
-										are designed to look as big buttons, saying - change lense here!</p>
-										<p class="m-h"><strong>2. Lens Frame</strong><br>
-										is based on the poc super ellipse, giving it a strong sense of poc identity</p>
-										<p class="m-h"><strong>3. Side logo</strong><br>
-										is subtle to give way for the helmets bold graphic logos</p>
-										<p class="m-h"><strong>4. Product Logos</strong><br>
-										is positioned under the lens for protection from wear and tear </p>
-										<p class="m-h"><strong>5. Lens Mount</strong><br>
-										is designed to resemble the industrial /technical aspects of the pilot helmet</p>
-										<p class="m-h"><strong>6. Solid Appearance</strong><br>
-										brings focus and contrast to the eye area in relation the helmet</p>	
-									</div>
-								</div>							
-							</div>	
-						</div>
-					</div>
-					<div class="row m0 h100">					
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite">
-							<div class="loader light-theme">
-								<img src="" data-src="poc/images/process/10_square.jpg" class="lazy" style="object-position: 50% 100%;">						
-							</div>	
-						</div>					
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite"  style="min-height:40vh;">
-							<div class="loader dark-theme">
-								<img src="" data-src="poc/images/process/11_square.jpg" class="lazy cover">
-								<div class="dark-theme overlay c-all">
-									<div class="text-animate ppp">
-										<h3 class="h3 txt-c"><strong>VIEWS</strong></h3><p>Bottom, top & front view of goggle</p>
-									</div>
-								</div>							
-							</div>	
-						</div>
-					</div>		
-					<div class="row m0 h100">					
-						<div class="padda col-lg-6 ml-auto mr-auto textoverlay light-theme blogBox3 moreBox3 bg-offwhite">
-							<div class="loader dark-theme">
-								<img src="" data-src="poc/images/process/svg/06_square.svg" class="lazy cover">
-								<div class="dark-theme overlay c-all">
-									<div class="text-animate">
-										<img src="" data-src="poc/images/process/svg/07_square.svg" class="lazy cover">
-									</div>
-								</div>							
-							</div>	
-						</div>					
-					</div>
-					<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme bg-offwhite">
-						<div class="loader">								
-								<iframe 
-								class="specialized lazy invisible fade-in" 
-								data-src="poc/xr/pocxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>						
-						</div>		
-					</div>
-											
-				</div>	
-			</div>	
+			</div>					
 			<div id="poc-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
 					<div class="row h100">
@@ -3286,7 +2812,7 @@
 									</div>							
 								</div>	
 						</div>
-						<div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100 p0"> 			
+						<div class="col-lg-10 col-md-8 col-sm-8 col-xs-12 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100"> 			
 							<div class="c-100">
 								<iframe 
 								class="poc lazy invisible fade-in" 				
@@ -3337,7 +2863,7 @@
 			</script>
 <!-- 			<div id="spotify-process-popup" class="popup mfp-hide x-theme zoom-in">
 			
-				<div class="p0 middle light-theme relative dropshadow" style="padding:4vw !important;">	
+				<div class="middle light-theme relative dropshadow" style="padding:4vw !important;">	
 				<p style="position:absolute; transform: translateX(-64%) translateY(118%) rotate(-90deg);">Pelle iDesign</p>	
 					<div class="medium-theme">	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover">		
@@ -3355,8 +2881,8 @@
 			</div> -->	
 			<div id="spotify-process-popup" class="popup mfp-hide x-theme zoom-in fullscreen"> 	  <!-- style="padding:4vw !important;" -->
 <!-- 				<div id="spotify-title" class="title row m0">
-					<div class="col-12 p0 m0 flex">
-						<div class="col-lg-6 col-xs-8 c-all p0 justify-content-start">
+					<div class="col-12 m0 flex">
+						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>			 
 						</div>					
 					</div>		
@@ -3410,12 +2936,6 @@
 					<div class="slide light-theme h100">	
 						<img src="" data-src="spotify/images/process/presentation.jpg" class="lazy invisible lazy-fade-in">		
 					</div>
-<!-- 					<div id="alt-presentation" class="slide light-theme hmax100">	
-						<img src="" data-src="spotify/images/process/alt-presentation.jpg" class="lazy invisible lazy-fade-in">		
-					</div> -->
-<!-- 					<div class="slide light-theme vh100">	
-						<img src="" data-src="spotify/images/process/usage.svg" class="lazy contain invisible lazy-fade-in">		
-					</div> -->
 					<div class="slide light-theme h100">	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
 					</div>
@@ -3462,7 +2982,7 @@
 								</div>							
 							</div>			
 						</div>
-						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100 p0">				
+						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
 								class="specialized lazy invisible fade-in" 
@@ -3503,7 +3023,7 @@
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 row-lg-4 row-md-4 row-sm-4 row-xs-4 c-100">	
 							<div id="popup-logo-free" class="haglofs-logo"></div>
 						</div>
-						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100 p0">				
+						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
 								class="haglofs lazy invisible fade-in" 
@@ -3539,8 +3059,8 @@
 				</div>								 
 			</div>
 			<div id="haglofs-gallery-popup" class="c-lg popup mfp-hide">  
-					<div class="col-auto col-md-12 col-sm p0 h100">
-						<div id="gallery-popup-haglofs" class="pelle-slider owl-carousel dark-theme p0">						
+					<div class="col-auto col-md-12 col-sm h100">
+						<div id="gallery-popup-haglofs" class="owl-carousel dark-theme">						
 							<div class="loader props c-100">			
 								<img class="lazy cover" src="" data-src="Converse/images/gallery/01.png">
 							</div>
@@ -3582,7 +3102,7 @@
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 row-lg-4 row-md-4 row-sm-4 row-xs-4 c-100">	
 							<div id="popup-logo-free" class="alcon-logo"></div>
 						</div>
-						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100 p0">				
+						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
 								class="alcon lazy invisible fade-in" 
@@ -3621,7 +3141,7 @@
 				<div class="row c-lg m0 auto-scroll h100">
 				<div class="col-lg-9 ppp">
 					<div class="txt-c popup-logo-padding text-center">	
-						<div id="popup-logo-center" class="alcon-logo ml-auto mr-auto"></div>
+						<div id="popup-logo-center" class="alcon-logo"></div>
 					</div>	
 					<h3 class="mb-4 s-t"><strong>Lens Container</strong></h3>		  
 					<p>Lens Container for eye care products company Alcon.</p>
@@ -3635,10 +3155,10 @@
 				<div id="slider-container" class="md-down-h hw100">
 					<div class="c-all h100">
 						<div class="w100">
-							<div id="design-process" class="pelle-slider owl-carousel c-100 flexend-portrait p0 vh75">
+							<div id="design-process" class="owl-carousel c-100 vh75">
 								<div id="start" class="cont">
 									<h3 class="h3 txt-l s-t"><strong>Design </strong>Process</h3>					
-									<div class="middle col-lg-4 ml-auto mr-auto textoverlay p0 vh75">
+									<div class="middle col-lg-4 textoverlay vh75">
 										<div class="loader">					
 										</div>	
 									</div>
@@ -3655,8 +3175,8 @@
 										</div>
 									</div>					
 									<div class="middle row m0">					
-									  <div class="col-lg-6 ml-auto mr-auto h100">
-										<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
+									  <div class="col-lg-6 h100">
+										<div class="col-lg-12 textoverlay light-theme">
 											<div class="loader pop-theme">
 												<img src="" data-src="images/process/user.jpg" class="lazy cover multiply">
 												<div class="light-theme overlay c-all h100">
@@ -3672,8 +3192,8 @@
 											</div>	
 										</div>								
 									  </div>
-										<div class="col-lg-6 ml-auto mr-auto md-down-h h100">
-										<div class="col-lg-12 ml-auto mr-auto textoverlay light-theme p0">
+										<div class="col-lg-6 md-down-h h100">
+										<div class="col-lg-12 textoverlay light-theme">
 											<div class="loader pop-theme">
 												<img src="" data-src="images/process/product.jpg" class="lazy cover multiply">
 												<div class="dark-theme low-opacity overlay c-all h100">
@@ -3714,7 +3234,7 @@
 										</div>
 									</div>				
 									<div class="middle row m0">					
-									  <div class="col-lg-12 ml-auto mr-auto textoverlay">
+									  <div class="col-lg-12 textoverlay">
 											<div class="loader medium-theme">							
 												<img src="" data-src="images/process/brainstorm_black.svg" class="lazy cover">
 												<div class="light-theme high-opacity overlay c-all">
@@ -3750,7 +3270,7 @@
 										</div>
 									</div>						
 									<div class="middle row medium-theme m0">					
-									  <div class="col-lg-6 ml-auto mr-auto textoverlay">
+									  <div class="col-lg-6 textoverlay">
 											<div class="loader medium-theme">							
 												<img src="" data-src="images/process/moodboard.jpeg" class="lazy">
 												<div class="dark-theme overlay c-all">
@@ -3768,7 +3288,7 @@
 												</div>							
 											</div>								
 									  </div>
-									  <div class="col-lg-6 ml-auto mr-auto textoverlay">
+									  <div class="col-lg-6 textoverlay">
 											<div class="loader medium-theme">								
 												<img src="" data-src="images/sketchgallery/8.png" class="lazy">
 													<div class="dark-theme overlay c-all">
@@ -3799,7 +3319,7 @@
 									<div class="middle iframe-container textoverlay c-all relative">
 										<div  class="view-btn dark-theme overlay hide-this">
 											<div class="row c-all h100">					
-												<div class="col-lg-4 ml-auto mr-auto ppp">								
+												<div class="col-lg-4 ppp">								
 													<p>
 													Now, how do we know if this idea that we just came up with is any good?</p>
 													<p>									  
@@ -3849,10 +3369,10 @@
 											</div>
 										</div>
 									</div>		
-									<div class="middle padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
+									<div class="middle col-lg-12 textoverlay light-theme">
 										<div class="loader bg-offwhite">
 											<div class="h100">						
-												<img class="c-100 lazy ml-auto mr-auto multiply" data-src="images/process/keyshot.png">
+												<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
 											</div>
 											<div class="light-theme overlay c-all">
 												<div class="text-animate ppp">
@@ -3890,8 +3410,8 @@
 										</div>
 									</div>
 									<div class="middle row dark-theme">						
-										<div class="padda col-lg-6 ml-auto mr-auto h100">
-												<div class="col-lg-8 ml-auto mr-auto ppp h100">
+										<div class="col-lg-6 h100">
+												<div class="col-lg-8 ppp h100">
 													<h2 class="mb-4 s-t">Refine<strong>ment</strong></h2>
 													<p>
 													I also have the ability to share pre-rendered <strong>high quality rotatable models</strong>, to evaluate the product late in the process.</p>
@@ -3901,7 +3421,7 @@
 													</p>			
 												</div>						
 										</div>
-										<div class="padda col-lg-6 ml-auto mr-auto textoverlay">
+										<div class="col-lg-6 textoverlay">
 											<div class="process-object c-100">
 												<div class="hw100">							
 													<iframe 
@@ -3927,7 +3447,7 @@
 											</div>
 										</div>
 									</div>	
-										<div class="middle padda col-lg-12 ml-auto mr-auto textoverlay-inverse dark-theme">
+										<div class="middle col-lg-12 textoverlay-inverse dark-theme">
 											<div class="loader dark-theme">
 												<iframe 
 												id="popup-iframe"
@@ -3968,7 +3488,7 @@
 											</div>
 										</div>
 									</div>				
-										<div class="middle padda col-lg-12 ml-auto mr-auto textoverlay">
+										<div class="middle col-lg-12 textoverlay">
 											<div class="loader dark-theme c-all">
 											<div class="c-all c-absolute"><h3 class="s-t">Sustainability</h3> </div>
 												<img src="" data-src="images/process/green_org.jpg" class="lazy cover">																			
@@ -3989,7 +3509,7 @@
 								</div>
 								<div id="documentation" class="cont"> 
 									<h3 class="h3 txt-l s-t"><strong>Documentation </strong></h3>			
-										<div class="middle padda col-lg-12 ml-auto mr-auto textoverlay dark-theme">
+										<div class="middle col-lg-12 textoverlay dark-theme">
 									<div class="h100">							
 										<div class="dark-theme c-all bg-none h100">
 											<div class="col-lg-6 ppp h100 auto-scroll">
@@ -4016,7 +3536,7 @@
 										</div>	
 								</div>	
 								<div id="dropit"> 		
-										<div class="padda col-lg-12 ml-auto mr-auto light-theme h100">
+										<div class="col-lg-12 light-theme h100">
 												<div class="light-theme c-all min-vh70">
 														<div class="ppp h100">
 															 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
@@ -4036,7 +3556,7 @@
 					</div>
 				</div>
 				<div id="process-md-down" class="light-theme lg-up-h">  
-					<div class="ml-auto mr-auto textoverlay dark-theme">
+					<div class="textoverlay dark-theme">
 						<div class="c-all vh75">
 							<div>
 							<h3 class="invisible fade-in-up">Design Process</h3>
@@ -4057,7 +3577,7 @@
 						Anything that can help me understand what you want to achieve is valueable and will be used later on in my design process!
 						</p>
 					</div>				
-					<div id="research-mobile" class="padda col-lg-12 ml-auto mr-auto light-theme">
+					<div id="research-mobile" class="col-lg-12 light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Design </strong>Research</h3>
 						<div class="loader pop-theme invisible zoom-in"  style="height:95vmin;">
 							<img src="" data-src="images/process/user.jpg" class="lazy cover multiply">			
@@ -4070,7 +3590,7 @@
 							</p>
 						</div>					
 					</div>					
-					<div id="ideation-mobile" class="padda col-lg-12 ml-auto mr-auto light-theme">
+					<div id="ideation-mobile" class="col-lg-12 light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Concept </strong>Ideation</h3>
 						<div class="loader dark-theme zoom-container textoverlay relative vh75">
 							<div class="zoom-icon"></div>						
@@ -4095,7 +3615,7 @@
 						  </p>	
 						</div>						
 					</div>
-					<div id="moodboard-mobile" class="padda col-lg-12 ml-auto mr-auto light-theme">
+					<div id="moodboard-mobile" class="col-lg-12 light-theme">
 						<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Mood </strong>Board</h3>
 						<div class="loader medium-theme textoverlay relative" style="height:95vmin;">								
 							<img src="" data-src="images/process/moodboard.jpeg" class="lazy">
@@ -4126,7 +3646,7 @@
 							  </p>
 						</div>						
 					</div>					
-					<div id="sketching-mobile" class="padda col-lg-12 ml-auto mr-auto light-theme">
+					<div id="sketching-mobile" class="col-lg-12 light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t">Concept <strong>Sketching</strong></h3>
 						<div class="loader medium-theme c-all textoverlay relative"  style="height:95vmin;">
 							<img src="" data-src="images/sketchgallery/8.png" class="lazy" style="padding:10%;">
@@ -4146,7 +3666,7 @@
 							</p>
 						</div>						
 					</div>
-					<div id="modeling-mobile" class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
+					<div id="modeling-mobile" class="col-lg-12 textoverlay light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Proto</strong>typing</h3>
 						<div class="loader pop-theme">								
 								<div>				
@@ -4178,7 +3698,7 @@
 							</p>
 						</div>						
 					</div>
-					<div id="interact-mobile" class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
+					<div id="interact-mobile" class="col-lg-12 textoverlay light-theme">
 						<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Refine</strong>ment</h3>					
 						<div class="loader medium-theme vh65">
 							<div class="process-object c-100">							
@@ -4200,7 +3720,7 @@
 							</p>			
 						</div>						
 					</div>						
-					<div id="keyshot-mobile" class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
+					<div id="keyshot-mobile" class="col-lg-12 textoverlay light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Color & </strong>Material</h3>
 						<div class="loader medium-theme">
 							<div  class="h100 relative">
@@ -4208,7 +3728,7 @@
 									<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
 									class="btn-play"><span class="ion ion-ios-play"></span></a></p>
 								</div>									
-								<img class="c-100 lazy ml-auto mr-auto multiply" data-src="images/process/keyshot.png">
+								<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
 							</div>						
 						</div>	
 						<div class="text-animate ppp">
@@ -4226,7 +3746,7 @@
 						</div>						
 					</div>
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>CMF</strong> Interaction</h3>
-					<div id="cmf-mobile" class="padda col-lg-12 ml-auto mr-auto dark-theme vh100">				
+					<div id="cmf-mobile" class="col-lg-12 dark-theme vh100">				
 						<div class="loader dark-theme">
 							<iframe 
 							id="popup-iframe"
@@ -4245,7 +3765,7 @@
 						Or just let me take care of the combinations.
 						</p>
 					</div>					
-					<div id="sustainabillity-mobile" class="padda col-lg-12 ml-auto mr-auto light-theme">
+					<div id="sustainabillity-mobile" class="col-lg-12 light-theme">
 					<h3 class="h3 invisible fade-in-up txt-l s-t"><strong>Sustainable </strong>Design</h3>
 						<div class="loader dark-theme textoverlay relative vh50">								
 							<img src="" data-src="images/process/green.jpg" class="lazy cover">	
@@ -4262,7 +3782,7 @@
 					</div>
 					<div id="documentation"> 
 						<h3 class="h3 txt-l s-t"><strong>Documentation </strong></h3>			
-							<div class="padda col-lg-12 ml-auto mr-auto light-theme">							
+							<div class="col-lg-12 light-theme">							
 								<div class="col-lg-6 ppp h100 auto-scroll">
 									<h2 class="mb-4 s-t txt-l m-h"><strong>Documentation</strong></h2>
 									<h2 class="mb-4 s-t txt-l md-up-h"><strong>Project Docs</strong></h2>
@@ -4284,7 +3804,7 @@
 								</div>									
 							</div>	
 					</div>						
-					<div class="padda col-lg-12 ml-auto mr-auto textoverlay light-theme">
+					<div class="col-lg-12 textoverlay light-theme">
 						<div class="dark-theme c-all min-vh70">
 								<div class="text-animate ppp">
 									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>

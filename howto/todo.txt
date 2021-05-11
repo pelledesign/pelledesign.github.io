@@ -1,6 +1,7 @@
 
 /* general */
 
+popup overflows mobile
 padda -> .item mobile
 
 hero img + font

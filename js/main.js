@@ -198,7 +198,7 @@ var slider_id =  $(this).attr('id');
 	}
 	
 	if ($(window).width() > 991) {
-	$('#' + slider_id + ' .owl-hide-large-up').remove();
+	$('#' + slider_id + ' .owl-hide-lg-up').remove();
 	}
 
 	if(window.innerHeight > window.innerWidth){
