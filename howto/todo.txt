@@ -1,12 +1,12 @@
 
 /* general */
-
+ipad props
+how show "pdf viewer on mobile?
 popup overflows mobile
-padda -> .item mobile
 
 hero img + font
 change pre next btns	
-how show "pdf viewer on mobile?
+
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 bagheera new color, simple bright	
