@@ -1,9 +1,9 @@
 
 /* general */
-ipad props
 how show "pdf viewer on mobile?
+ipad props
 popup overflows mobile
-
+btn hover or js
 hero img + font
 change pre next btns	
 
