@@ -130,12 +130,14 @@ mixed  = $('#mixed'),
 specialized_more  = $('#specialized-more'),
 belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
-all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+apa = design_process + $('#design-process'),
+all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
+main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 
 /* change nav clr depending on slide bg */
 
-all_sliders.on('initialized.owl.carousel', function(event) {
+main_sliders.on('initialized.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
@@ -151,7 +153,7 @@ all_sliders.on('initialized.owl.carousel', function(event) {
 	  }				  	
 	});
 
-all_sliders.on('translate.owl.carousel', function(event) {
+main_sliders.on('translate.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
@@ -165,14 +167,13 @@ all_sliders.on('translate.owl.carousel', function(event) {
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('medium-theme');
 	  }
+	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('no-theme')) {
+	  }
 	  else {
 		  alert('error');
 	  }	
 	  
 	});
-	
-	
-
 	
 	
 /* 		$('.dark-theme-button').on('click',function(){
@@ -318,7 +319,7 @@ $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
         $('#' + owl_id).trigger('prev.owl.carousel');
 		/* console.log(owl_id); */		  
     });	
-    $('.more-btn').on('click',  function () {
+    $('.more-btn, .more-btn-text').on('click',  function () {
 		let owl_id = $(this).closest('#slider-container').find('.owl-carousel').attr('id');			
         $('#' + owl_id).trigger('next.owl.carousel');
 		/* console.log(owl_id);	 */	  
@@ -405,9 +406,11 @@ responsive:{
 }	
 });
 converse_gallery.owlCarousel({
+/* rewind: true, */
 autoplay: false,
 autoHeight: false,
 lazyLoad : true, 
+loop: true,
 margin:0,
 stagePadding:0,
 nav:true,
@@ -522,7 +525,7 @@ responsive:{
 }	
 });	
 akg_gallery.owlCarousel({
-
+/* rewind: true, */
 autoplay: false,
 lazyLoad : true,
 loop: true,

@@ -1355,6 +1355,52 @@ animation-delay: 2s;
   animation-name: zoomOutVisible;
 }
 
+
+
+/*   */
+
+@keyframes zoomInVisibleLarge {
+  from {
+    opacity: 1;
+    /* transform: scale3d(.3, .3, .3); */
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+	 transform: scale(1.15);
+  }
+}
+
+.zoomInVisibleLarge {
+  animation-name: zoomInVisibleLarge;
+}
+
+@keyframes zoomOutVisibleLarge {
+  from {
+    opacity: 1;
+    /* transform: scale3d(.3, .3, .3); */
+    transform: scale(1.15);
+  }
+
+  100% {
+    opacity: 1;
+	 transform: scale(1);
+  }
+}
+
+.zoomOutVisibleLarge {
+  animation-name: zoomOutVisibleLarge;
+}
+
+
+
+
+
+
+
+
+
 @keyframes zoomInDown {
   from {
     opacity: 0;

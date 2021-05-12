@@ -14877,6 +14877,16 @@ padding:0 !important;
 }
 }
 
+.text-box {	
+padding:30px;
+}
+
+/* @media (max-width: 768px) {
+.text-box {
+padding-left:30px; 
+padding-right:30px;	
+}
+} */
 
 @media (max-width: 768px) {
 .padding-small {

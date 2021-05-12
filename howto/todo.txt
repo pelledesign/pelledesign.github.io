@@ -1,12 +1,9 @@
 
 /* general */
-how show "pdf viewer on mobile?
+pdf viewer on mobile
 ipad props
-popup overflows mobile
 btn hover or js
 hero img + font
-change pre next btns	
-
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 bagheera new color, simple bright	

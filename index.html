@@ -134,13 +134,13 @@
 		<!-- about -->
 		<div id="about" class="snap x-theme pt-4 relative hide-scroll section-auto-padding">	
 		<div id="bg-hero" class="c-absolute hw100"></div>
-			<div class="col-auto h100 dropshadow">		
+			<div id="slider-container" class="col-auto h100 dropshadow">		
 				<div id="about-slider" class="about-slider owl-carousel">				
-					<div class="invisible fade-in">			
+					<div class="item invisible fade-in">			
 						<div class="h100" data-hash="aboutme">
 							<div class="container c-md-up h100">
 								<div class="row">
-									<div class="col-lg-5 col-md-8">
+									<div class="col-lg-5 col-md-8 text-box">
 										<span class="hidden d-block text-uppercase text-secondary">About</span>
 										<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> That Brings Your Ideas Alive</h2>					  
 										<p>I am Pelle Skogsberg. <br>With 10 years of experience in product design, my background includes designing products for brands such as 
@@ -148,7 +148,7 @@
 										<a href="https://www.akg.com/" target="_blank"><strong>AKG</strong>,</a> 
 										<a href="https://www.pocsports.com/" target="_blank"><strong>Poc Sports</strong></a> and 
 										<a href="https://www.haglofs.com/" target="_blank"><strong>Haglöfs</strong></a> - in various fields like consumer products, sports products, shoe design, audio products & more.</p>						  
-										<p><a href="#myprocess" class="btn btn-outline">Learn More</a></p>	
+										<p class="more-btn-text btn btn-outline">Learn More</p>	
 									</div>
 									<div class="col-lg-6 md-down-h">
 										<div class="c-absolute w50">
@@ -159,16 +159,17 @@
 							</div>
 						</div>
 					</div>
-					<div class="c">			
+					<div class="item c">			
 						<div class="h100" data-hash="myprocess">
 							<div class="container c-md-up h100">
 								<div class="row">
-									<div class="col-lg-5 col-md-8">
+									<div class="col-lg-5 col-md-8 text-box">
 									  <span class="xs-down-h d-block text-uppercase text-secondary">Process</span>
 										<h2 class="mb-4">My <strong>Design Process</strong> Is Designed <strong>For You</strong></h2>
 										<p>My opinion is that in design, communication is fundamental to the outcome, and that's why 
 										<a href="#design-process-popup" title="Project Info" class="open-popup"><strong>my design process </strong></a>is built so that you may follow the process as it's developing - it makes sure we're constantly on the same page!</p>
-										<p><a href="#myservices" class="btn btn-outline">Learn More</a></p>
+										<!-- <p><a href="#myservices" class="btn btn-outline">Learn More</a></p> -->
+										<p class="more-btn-text btn btn-outline">Learn More</p>
 									</div>						
 									<div class="col-lg-6 md-down-h">
 										<div class="c-absolute w50">
@@ -180,16 +181,16 @@
 							</div>
 						</div>
 					</div>
-					<div class="c-md-up auto-scroll">
+					<div class="item c-md-up auto-scroll">
 						<div class="fadeout-top md-up-h"></div>					
 						<div data-hash="myservices">
 							<div class="container c-all h100">								
-								<div class="row h100">
-									<div class="col-lg-5 mr-auto mb-3 mb-lg-4">
+								<div class="row h100 text-box">
+									<div class="col-lg-5 mr-auto mb-3 mb-lg-4 ">
 										<h2 class="element-animate">Featured <strong>Services</strong></h2>
 										<p class="m-h">My main services are built to meet most popular demands.<br>
 										Have a project that doesn't fit here?<br></p>
-										<p class="m-h">No problem, just <a href="#contact-popup" class="open-popup"><strong>message me</strong></a>  and we'll talk about it.</p> 
+										<p class="m-h">No problem, just <a href="#contact-popup" class="open-popup"><strong>message me</strong></a>  and let's have a chat!</p> 
 										<p class="mb-0 txt-l m-h"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>								
 									</div>
 									<div class="col-lg-6 animate">
@@ -1349,7 +1350,7 @@
 					<div id="slider-container">	
 							<div class="hw100 dropshadow">					
 								<div class="lg-up-h loader textoverlay invisible zoom-in">				
-									<img class="lazy cover" src="" data-src="poc/xr/0_0.png" style="object-position: 41% 50%;">
+									<img class="lazy cover" src="" data-src="poc/xr/0_0.png" style="object-position: 44% 50%;">
 									<div class="x-theme medium-opacity overlay c-all">
 										<div class="text-animate ppp c-all">
 											<div>
@@ -2358,7 +2359,7 @@
 		<div id="popups-div">
 			<div id="converse-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
-					<div class="row upper h100">	
+					<div class="row m0 upper h100">	
 						<div>
 							<div class="center-logo-portrait text-center flex justify-content-center">
 								<div>
@@ -2386,36 +2387,34 @@
 				</div>		
 			</div>
 			<div id="converse-webconfig-popup" class="popup mfp-hide">
-				<div class="c-100">
-					<div class="config-orientation-height">
-						</div>	
-						<iframe 
-						id="popup-iframe"
-						class="converse-webconfig lazy invisible fade-in"
-						data-src="Converse/web/keyshot-configurator.html" 							
-						frameborder="0"
-						scrolling="no"
-						>
-						</iframe>
-					</div>
+				<div class="c-100">	
+					<iframe 
+					id="popup-iframe"
+					class="converse-webconfig lazy invisible fade-in"
+					data-src="Converse/web/keyshot-configurator.html" 							
+					frameborder="0"
+					scrolling="no"
+					>
+					</iframe>
+				</div>
 			</div>								 
 			<div id="converse-gallery-popup" class="c-lg popup mfp-hide">  
-					<div class="col-auto col-md-12 col-sm h100">
-						<div id="converse-gallery" class="owl-carousel">						
-							<div class="loader props c-100">			
-								<img class="lazy cover" src="" data-src="Converse/images/gallery/01.png">
-							</div>
-							<div class="loader props c-100">				
-								<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/02_2.png"  style="object-position: 13% 46%;">
-							</div>	
-							<div class="loader props c-100">			
-								<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/03.png">
-							</div>	
-							<div class="loader props c-100">				
-								<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/04.png">
-							</div>				
+				<div class="col-lg-12 col-md-12 col-sm h100">
+					<div id="converse-gallery" class="owl-carousel">						
+						<div class="item loader props c-100 dark-theme">			
+							<img class="lazy cover" src="" data-src="Converse/images/gallery/01.png">
 						</div>
+						<div class="item loader props c-100 dark-theme">				
+							<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/02_2.png"  style="object-position: 13% 46%;">
+						</div>	
+						<div class="item loader props c-100 dark-theme">			
+							<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/03.png">
+						</div>	
+						<div class="item loader props c-100 dark-theme">				
+							<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/04.png">
+						</div>				
 					</div>
+				</div>
 			</div>
 			<div id="converse-wireframe-popup" class="popup mfp-hide">
 				<div class="c-100">
@@ -2624,19 +2623,19 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 row-lg-8 row-md-8 row-xs-8 c-100">
 							<div id="popup-logo" class="akg-logo md-down-h portrait-hidden"></div>				
 							<div id="akg-gallery" class="owl-carousel c-100">						
-								<div class="c-100">				
+								<div class="item c-100 no-theme">				
 									<img class="lazy mr-auto ml-auto" src="" data-src="akg/images/gallery/01.png">
 								</div>
-								<div class="loader c-100">
+								<div class="item loader c-100 no-theme">
 									<img class="lazy" src="" data-src="akg/images/gallery/02.png">
 								</div>
-								<div class="loader c-100">
+								<div class="item loader c-100 no-theme">
 									<img class="owl-lazy" src="" data-src="akg/images/gallery/03.png">
 								</div>
-								<div class="loader c-100">
+								<div class="item loader c-100 no-theme">
 									<img class="owl-lazy" src="" data-src="akg/images/gallery/04.png">
 								</div>
-								<div class="loader c-100">
+								<div class="item loader c-100 no-theme">
 									<img class="lazy" src="" data-src="akg/images/gallery/05.png">
 								</div>															
 							</div>	
@@ -2646,7 +2645,7 @@
 			</div>	
 			<div id="bagheera-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
-					<div class="row h100">
+					<div class="row m0 h100">
 						<div class="col-lg-hidden col-md-4 col-sm-4 col-xs-hidden row-lg-4 row-md-4 row-sm-4 row-xs-4 xr-align ppp auto-scroll">	
 							<div>			
 								<h2 class="s-up-h  s-t  align-center-portrait">Bagheera <strong>Shoe Design</strong></h2>
@@ -2780,7 +2779,7 @@
 			</div>					
 			<div id="poc-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
-					<div class="row h100">
+					<div class="row m0 h100">
 						<div class="col-lg-2 col-md-4 col-sm-4 col-xs-hidden row-lg-4 row-md-4 row-sm-4 row-xs-4 xr-align ppp">	
 								<div>
 									<div id="popup-logo-free" class="poc-logo md-up-h"></div>					
@@ -2949,7 +2948,7 @@
 			</div>			
 			<div id="specialized-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
-					<div class="row h100">
+					<div class="row m0 h100">
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 row-lg-4 row-md-4 row-sm-4 row-xs-4 auto-scroll h100">	
 							<div class="ppp2">
 								<div id="popup-logo-free" class="specialized-logo align-center-portrait landscape-hidden" style="max-width:35px;"></div>					
@@ -3081,7 +3080,7 @@
 			</div>			
 			<div id="alcon-xr-popup" class="popup mfp-hide">
 				<div class="col h100">
-					<div class="row h100">
+					<div class="row m0 h100">
 						<div class="col-lg-3 col-md-4 col-sm-4 col-xs-4 row-lg-4 row-md-4 row-sm-4 row-xs-4 c-100">	
 							<div id="popup-logo-free" class="alcon-logo"></div>
 						</div>
@@ -4313,11 +4312,11 @@
 
 
 			$('.more-btn.ion-android-arrow-dropright-circle').on('touchstart', function () {			
-			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
+			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisibleLarge animated-fast").addClass('zoomInVisibleLarge animated-fast'); //remove animate.css classes that are already there, or they will trigger again
 			});
 
 			$('.more-btn.ion-android-arrow-dropright-circle').on('touchend', function () {			
-			$(this).addClass('zoomOutVisible animated-fast');
+			$(this).addClass('zoomOutVisibleLarge animated-fast');
 			});					
 		}
 		else
