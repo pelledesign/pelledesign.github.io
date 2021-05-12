@@ -11188,6 +11188,13 @@ header.dark-theme {
   background: rgb(33 33 33 / 45%);
 }
 
+@media (max-width:1199px) {
+header.dark-theme {
+  background: rgb(33 33 33 / 95%);
+}
+}
+
+
 
 
 
@@ -16337,7 +16344,7 @@ padding-bottom: 3px !important;
 
 .text-animate {
 transition: .3s ease;
-overflow-y:scroll;
+/* overflow-y:scroll; */
 height:100%;
 width:100%;
 text-align:center;
@@ -16349,6 +16356,7 @@ margin-top:30px;
 padding-top:50px;	
 padding-bottom:50px;	
 height:100%;
+overflow: scroll; /*   */
 }
 
 @media (orientation:landscape) {
@@ -17316,11 +17324,11 @@ margin-top: -50px;
 }
 } */
 
-@media (max-width: 1199.98px) {
+/* @media (max-width: 1199.98px) {
 #about {
 padding-top: 3rem !important;	
 }
-}
+} */
 
 @media (max-width: 1199.98px) {
 #hero {

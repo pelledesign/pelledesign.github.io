@@ -1,8 +1,7 @@
 
 /* general */
-pdf viewer on mobile
+pdf viewer on mobile and slides fixes
 ipad props
-btn hover or js
 hero img + font
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
