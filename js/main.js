@@ -160,9 +160,11 @@ main_sliders.on('translate.owl.carousel', function(event) {
 	
 	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
 		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme').addClass('light-theme');
+		  $(this).closest('#section-container').find('.title').removeClass('dark-theme').addClass('light-theme');
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('dark-theme');
+			$(this).closest('#section-container').find('.title').removeClass('light-theme').addClass('dark-theme');
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('medium-theme');
