@@ -127,7 +127,7 @@
 		<!-- hero -->
 		<div id="hero" class="xl-up-hidden x-theme">
 			<div class="hw100 invisible zoom-in">
-			<div class="p-logo c-absolute"></div>
+			<div class="p-logo c-absolute" style="fill:white;"></div>
 			</div>
 		</div>
 		
@@ -136,7 +136,7 @@
 		<div id="bg-hero" class="c-absolute hw100"></div>
 			<div id="slider-container" class="col-auto h100 dropshadow">		
 				<div id="about-slider" class="about-slider owl-carousel">				
-					<div class="item invisible fade-in">			
+					<div class="item">			
 						<div class="h100" data-hash="aboutme">
 							<div class="container c-md-up h100">
 								<div class="row">
@@ -193,7 +193,7 @@
 										<p class="m-h">No problem, just <a href="#contact-popup" class="open-popup"><strong>message me</strong></a>  and let's have a chat!</p> 
 										<p class="mb-0 txt-l m-h"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>								
 									</div>
-									<div class="col-lg-6 animate">
+									<div class="col-lg-6 ">
 										<div class="row m0">
 											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
 												  <div class="service">
@@ -237,7 +237,7 @@
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>			
-			<div id="converse" class="portfolio-section"> <!-- OK -->
+			<div id="converse" class="portfolio-section">
 				<div id="section-container" class="invisible zoom-in">
 					<div id="converse-title" class="title row m0 dark-theme">
 						<div class="row m0 flex w100">
@@ -344,7 +344,7 @@
 										</div>
 									</div>															
 								</div>									
-								<div class="item light-theme">
+<!-- 								<div class="item light-theme">
 									<div class="cont">
 										<div class="loader middle textoverlay">							
 											<img src="" data-src="images/process/sketch.png" class="owl-lazy absolute cover">												
@@ -357,7 +357,7 @@
 											</div>
 										</div>
 									</div>															
-								</div>																											
+								</div> -->																											
 								<div class="item owl-hide-xs-down light-theme">
 									<div class="cont">
 										<div class="row m-h">
@@ -627,7 +627,24 @@
 										</div>												
 									</div>																					
 								</div>
-								<div class="item owl-hide-medium-up light-theme">		
+								<div class="item owl-hide-medium-up light-theme">	
+									<div class="absolute hide-on-click">
+										<div class="cont">
+											<div class="middle">	
+												<div class="fadeout-top"></div>													
+												<div class="overlay c-all desktop-hidden img-opacity">
+													<div class="text-animate ppp c-all txt-c">
+														<div>
+															<h2 class="mb-4 s-t">Modeling <strong></strong></h2>
+																<p>Modeling made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear</p>
+																<p><span class="open-popup btn">Click to View</span></p>	
+														</div>
+													</div>
+												</div>
+												<div class="fadeout-btm"></div>											
+											</div>
+										</div>														
+									</div>	
 									<div class="row m0 h100">
 										<div class="col-lg-12 h100">
 												<div class="iframe-container textoverlay-desktop">															
@@ -745,25 +762,25 @@
 											<div class="dark-theme overlay c-all desktop-hidden img-opacity">
 												<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">	
 													<div class="animate scroll-down"></div>
-													<div class="slide zoom-container">
+													<div class="slide zoom-container dark-theme">
 														<div class="zoom-icon"></div>
-														<img class="owl-lazy" src="" data-src="Converse/images/gallery/01.png">
+														<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/01.png">
 													</div>	
-													<div class="slide zoom-container">
+													<div class="slide zoom-container dark-theme">
 														<div class="zoom-icon"></div>
 														<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/02_2.png"  style="object-position: 13% 46%;">
 														<div class="md-up-h overlay c-all ppp">
 															<h3 class="h3">SIDE <strong> VIEW</strong></h3>
 														</div>										
 													</div>	
-													<div class="slide zoom-container">
+													<div class="slide zoom-container dark-theme">
 														<div class="zoom-icon"></div>
 														<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/03.png">
 														<div class="md-up-h overlay c-all ppp">
 															<h3 class="h3">MEASURE<strong>MENTS</strong></h3>
 														</div>										
 													</div>
-													<div class="slide zoom-container">
+													<div class="slide zoom-container dark-theme">
 														<div class="zoom-icon"></div>
 														<img class="owl-lazy cover" src="" data-src="Converse/images/gallery/04.png">
 														<div class="md-up-h overlay c-all ppp">
@@ -809,7 +826,7 @@
 										</div>
 									</div>						
 								</div>						
-								<div class="item dark-theme">
+<!-- 								<div class="item dark-theme">
 									<div class="cont">
 										<div class="row">
 											<div class="col-12 flex">
@@ -833,6 +850,16 @@
 											</div>
 										</div>
 									</div>															
+								</div> -->
+								<div class="item dark-theme">
+									<iframe 
+									id="popup-iframe"
+									class="converse-webconfig lazy invisible fade-in"
+									data-src="Converse/web/keyshot-configurator.html" 							
+									frameborder="0"
+									scrolling="no"
+									>
+									</iframe>															
 								</div>				
 								<div class="item dark-theme">			
 									<div class="col-full col-md-12 col-sm h100">
@@ -856,7 +883,7 @@
 					</div>
 				</div>					
 			</div>					
-			<div id="akg" class="portfolio-section"> <!-- OK -->
+			<div id="akg" class="portfolio-section">
 				<div id="section-container" class="invisible zoom-in">
 				<div id="akg-title" class="title row m0">
 					<div class="row m0 flex w100">
@@ -876,8 +903,8 @@
 				</div>	
 				<div id="slider-container">			
 						<div id="akg-more3" class="owl-carousel c-100 dropshadow">					
-							<div class="item owl-hide-lg-up invisible zoom-in x-theme">
-								<div class="textoverlay loader medium-theme relative">
+							<div class="item owl-hide-lg-up invisible zoom-in medium-theme">
+								<div class="textoverlay loader relative">
 									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
 										<div class="text-animate ppp c-all" style="height:100%;">
@@ -935,8 +962,9 @@
 									</div>	
 								</div>						
 							</div>
-							<div class="item owl-hide-medium-up loader x-theme akg-theme">
-								<div class="h100 textoverlay">
+							<div class="item owl-hide-medium-up zoom-container medium-theme">
+							<div class="zoom-icon"></div>
+								<div class="h100 textoverlay loader">
 								<img src="" data-src="akg/images/gallery/onhead.jpg" class="owl-lazy cover multiply">	
 										<div class="overlay c-all">
 											<div class="text-animate ppp c-all">
@@ -1010,10 +1038,10 @@
 									</div>	
 								</div> 							
 							</div>
-							<div class="item owl-hide-lg-up light-theme">
+							<div class="item owl-hide-lg-up medium-theme">
 								<div class="cont">
-									<div class="middle light-theme">										
-										<div class="dark-theme overlay c-all desktop-hidden img-opacity">
+									<div class="middle">										
+										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">		
 												<div class="animate scroll-down"></div>
 											<div class="slide zoom-container medium-theme">
@@ -1026,15 +1054,15 @@
 											</div>
 											<div class="slide zoom-container medium-theme">
 												<div class="zoom-icon loader"></div>
-												<img class="owl-lazy medium-theme" src="" data-src="akg/images/gallery/03.png">
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/03.png">
 											</div>
 											<div class="slide zoom-container medium-theme">
 												<div class="zoom-icon loader"></div>
-												<img class="owl-lazy medium-theme" src="" data-src="akg/images/gallery/04.png">
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/04.png">
 											</div>
 											<div class="slide zoom-container medium-theme">
 												<div class="zoom-icon loader"></div>
-												<img class="owl-lazy medium-theme" src="" data-src="akg/images/gallery/05.png">
+												<img class="owl-lazy cover" src="" data-src="akg/images/gallery/05.png">
 											</div>												
 											</div>
 										</div>
@@ -1094,7 +1122,7 @@
 				</div>
 				</div>					
 			</div>										
-			<div id="bagheera" class="portfolio-section"> <!-- OK -->
+			<div id="bagheera" class="portfolio-section">
 				<div id="section-container" class="invisible zoom-in">			
 					<div id="bagheera-title" class="title light-theme row m0">
 						<div class="col-12 flex">
@@ -1205,8 +1233,7 @@
 										</div>
 									</div>
 								</div>								
-							</div>
-								
+							</div>								
 							<div class="item owl-hide-medium-down light-theme">
 								<div class="row c-lg ppp w100">
 									<div class="col-lg-6 mr-auto ml-auto">  
@@ -1417,7 +1444,7 @@
 					</div>													 						 
 				</div>
 			</div>						
-			<div id="poc" class="portfolio-section x-theme"> <!-- OK -->
+			<div id="poc" class="portfolio-section x-theme">
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="poc-title" class="title row m0">
 						<div class="col-12 m0 flex w100">
@@ -1492,8 +1519,8 @@
 					</div>				
 				</div>
 			</div>
-			<div id="spotify" class="portfolio-section x-theme"> <!-- OK -->
-				<div id="section-container" class="invisible zoom-in">				
+			<div id="spotify" class="portfolio-section dark-theme bg-none">
+				<div id="section-container" class="">				
 					<div id="spotify-title" class="title on-top row m0">
 						<div class="col-12 m0 flex w100">
 							<div class="col-lg-6 c-all justify-content-start">
@@ -1508,13 +1535,13 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-							<div class="hw100 dropshadow">					
-								<div class="loader textoverlay invisible zoom-in">				
-									<div class="cover hw100 rellax-props"></div>
-									<div class="rellax " data-rellax-speed="5" data-rellax-percentage="0.5" style="opacity:0.5">
+							<div class="item hw100 dropshadow medium-theme">					
+								<div class="loader relative textoverlay invisible zoom-in hide-scroll">				
+									<!-- <div class="cover hw100 rellax-props"></div> -->
+									<div class="rellax " data-rellax-speed="5" data-rellax-percentage="0.5" style="opacity:0.5 height:150% !important">
 										<img src="" data-src="spotify/images/bg.jpg" class="lazy cover">
 									</div>
-									<div class="x-theme medium-opacity overlay c-all">
+									<div class="medium-opacity overlay c-all">
 										<div class="text-animate ppp c-all txt-l">
 											<div>
 											  <span class="d-block text-uppercase">Product Design</span>
@@ -1672,11 +1699,11 @@
 					</div>
 				</div>
 			</div>					
-			<div id="specialized" class="portfolio-section"> <!-- OK -->	
+			<div id="specialized" class="portfolio-section">	
 				<div id="section-container" class="invisible zoom-in">				
 					<div id="specialized-title" class="title row m0">
 						<div class="col-12 flex">
-							<div class="col-lg-6  col-md-8 c-all justify-content-start">
+							<div class="col-lg-6  col-md-8 col-xs-8 c-all justify-content-start">
 							 <h3 class="m-h h3 txt-l"> <strong>Specialized </strong> / Fullface MTB Helmet</h3>
 							 <h3 class="md-up-h h3 txt-l"> <strong>Specialized </strong>MTB</h3>
 							</div>	
@@ -1690,14 +1717,14 @@
 					</div>	
 					<div id="slider-container">
 						<div id="specialized-more" class="owl-carousel c-100 dropshadow">
-							<div class="item owl-hide-medium-up textoverlay invisible zoom-in x-theme">
+							<div class="item owl-hide-medium-up textoverlay invisible zoom-in dark-theme">
 								<div class="zoom-container loader">
-									<div class="touch-hidden overlay dark-theme c-all bg-none">
+									<div class="touch-hidden overlay c-all bg-none">
 										<div class="zoom-icon"></div>
 									</div>
 										<div class="desktop-hidden zoom-icon"></div>										
 									<img src="" data-src="Specialized/images/gallery/twisted.png" class="lazy">
-										<div class="x-theme overlay c-all">
+										<div class="overlay c-all">
 											<div class="text-animate ppp c-all txt-c">
 											<div>
 												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
@@ -1709,17 +1736,23 @@
 										</div>													
 								</div>	
 							</div>
-							<div class="item owl-hide-medium-up c-100 x-theme auto-scroll">
-								<div class="ppp c-all h100">
-									<div class="txt-l h100">
-										<div class="fadeout-top"></div>
-											<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
-											<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-											<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>																			
-										<div class="fadeout-btm"></div>										
-									</div>
-								</div>
-							</div>					
+								<div class="item owl-hide-lg-up dark-theme">
+									<div class="cont">
+										<div class="middle dark-theme">	
+											<div class="fadeout-top"></div>													
+											<div class="dark-theme overlay c-all desktop-hidden img-opacity">
+												<div class="text-animate ppp c-all txt-c">
+													<div>
+														<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
+														<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+														<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>												
+													</div>
+												</div>
+											</div>
+											<div class="fadeout-btm"></div>											
+										</div>
+									</div>								
+								</div>												
 							<div class="item owl-hide-xs-down x-theme">				
 								<div class="row m0 hw100">
 										<div class="cover  hw100 rellax-props"></div>
@@ -1828,7 +1861,24 @@
 									<img src="" data-src="Specialized/images/gallery/wire.png" class="owl-lazy hide-this absolute" style="object-position: 50% 70%;">						
 								</div>	
 							</div>					
-							<div class="item owl-hide-medium-up textoverlay x-theme">							
+							<div class="item owl-hide-medium-up textoverlay dark-theme">	
+									<div class="absolute hide-on-click">
+										<div class="cont">
+											<div class="middle">	
+												<div class="fadeout-top"></div>													
+												<div class="overlay c-all desktop-hidden img-opacity">
+													<div class="ppp c-all txt-c">
+														<div>
+															<h2 class="mb-4 s-t">3d<strong>Model</strong></h2>
+																<p>Swipe model to rotate</p>
+																<p><span class="open-popup btn">Click to View</span></p>	
+														</div>
+													</div>
+												</div>
+												<div class="fadeout-btm"></div>											
+											</div>
+										</div>														
+									</div>								
 								<div class="loader">
 									<iframe 
 									class="specialized lazy invisible fade-in" 
@@ -1839,7 +1889,7 @@
 									</iframe>													
 								</div>	
 							</div>
-							<div class="item x-theme">			
+							<div class="item dark-theme">			
 								<div class="col-full col-md-12 col-sm h100">
 									<div class="popup-project-section row c-lg ppp h100 align-content-center">
 										<div class="col-lg-7 mr-auto ml-auto">
@@ -1860,7 +1910,7 @@
 					</div>				
 				</div>
 			</div>
-			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;"> <!-- OK -->
+			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;">
 				<div id="section-container" class="invisible zoom-in">
 					<div id="belmar-title" class="title row m0">
 						<div class="col-12 flex">
@@ -3984,7 +4034,7 @@
 							<div>
 								<h3 class="mb-4 s-t align-items-center justify-content-center txt-c">Contact&nbsp; <strong>Me</strong></h3>
 								<div class="row">
-									<div class="col-md mb-5 order-2">
+									<div class="col-md mb-5 order-2 text-box">
 										<form action="https://formspree.io/xknqbela" method="post">
 											<div class="row">
 												<div class="col-md-6 form-group">
@@ -4118,7 +4168,7 @@
 		}
 
 		// apply chosen theme to these elements	
-		$('body').find(".x-theme, .title").addClass(theme);
+		$('body').find(".x-theme").addClass(theme);
 		$('body').find(".title").addClass('bg-none');
 		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
 		//$('body').find(".dropshadow").addClass('dropshadow-' + theme);		
@@ -4304,6 +4354,11 @@
 		//hide scroll-icon on scroll
 	  $('.scrolldown-container').on('touchstart scroll',function(){
 		$(this).find('.scroll-down').addClass('invisible');			
+	  });
+
+
+	  $('.hide-on-click').on('touchstart scroll',function(){
+		$(this).addClass('invisible');			
 	  });
 
 		<!-- SHOW -->	
