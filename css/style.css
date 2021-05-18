@@ -65,8 +65,10 @@
   /* the threshold at which colors are considered "light." Range: integers from 0 to 100,
 recommended 50 - 70 */
   --threshold: 60;
-  
---section-padding: 5vw;  
+
+
+	/* paddings & margins */  
+--header-padding: 10px;  
 }
 
 /* <-----------------------------------------------------------				custom colors 			-----------------------------------------------------------------------------------------> */
@@ -13603,7 +13605,7 @@ visibility:visible !important;
   }
 }
 @media (min-width: 1200px) {
-  .xl-up-hidden {
+  .xl-up-h {
     display:none !important;
   }
 }
@@ -14012,6 +14014,10 @@ fill: var(--whites-lightest);
   background: #fff;
   border-color: #000;
   border: 2px solid #000;
+}
+
+.dark-theme #nav-icon3 span {
+background: #fff;	
 }
 
 .dark-theme {
@@ -14712,7 +14718,7 @@ float:right;
 
 /* ---------------------------------------------------------------------------		icons 		----------------------------------------------------------------------------------- */
 
-svg:not(.circular):not(.ignore svg) {
+svg:not(.circular):not(.ignore svg) :not(.text-logo-svg svg) {
 height:100%;
 width:100%;	
 }
@@ -17541,3 +17547,99 @@ background-size:contain !important;
 width: 75%;	
 }
 }
+
+
+
+
+
+#nav-icon3 {
+  width: 30px;
+  height: auto;
+  position: relative;
+  margin: var(--header-padding);
+/*   margin: 5px; */
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+#nav-icon3 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon3 span:nth-child(2),#nav-icon3 span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#nav-icon3 span:nth-child(4) {
+  /* top: 100%; */
+  bottom: 0;
+}
+
+#nav-icon3.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon3.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon3.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon3.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+.text-logo-svg{
+display:flex; 
+padding:var(--header-padding); 
+max-height: 40px; 
+width: 75%;	
+}
+.text-logo-svg svg{
+height:100%;
+width:auto;	
+transform: translateY(2px); /* to compansate for font sticking out */
+}
+
+
+
