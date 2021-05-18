@@ -68,9 +68,9 @@
 	<body> 
 		
 		<!-- alert -->
-<!-- 		<script>
-		alert('no select body');
-		</script>	 -->
+		<script>
+		alert('cog fix');
+		</script>	
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -93,7 +93,7 @@
 						  <a href="#designprocess-slider" title="Project Info" class="nav-link">How I Work</a>
 						</li>			
 						<li class="nav-item">
-						  <a class="nav-link" href="#services">Services</a>
+						  <a class="nav-link" href="#myservices">Services</a>
 						</li>			
 						<li class="nav-item">
 						  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
@@ -183,7 +183,7 @@
 					</div>
 					<div class="item c-md-up auto-scroll">
 						<div class="fadeout-top md-up-h"></div>					
-						<div data-hash="myservices">
+						<div id="myservices" data-hash="myservices">
 							<div class="container c-all h100">								
 								<div class="row h100 text-box">
 									<div class="col-lg-5 mr-auto mb-3 mb-lg-4 ">
@@ -1996,7 +1996,7 @@
 				<a href="#" class="c-absolute md-up-h">Show More</a>
 			</div>	
 			<div id="designprocess-slider" class="snap col-lg-12 vh100 hide-scroll">
-				<div id="section-container" class="invisible zoom-in">	
+				<div id="section-container" class="">	
 					<div id="design-process-title" class="title row m0">
 						<div class="col-12 flex">
 							<div class="col-lg-6 c-all justify-content-start">
@@ -2471,8 +2471,10 @@
 						<li><a href="index.html#about">About</a></li>          
 					<li><a href="#contact-popup" class="open-popup">Contact</a></li>
 					<li><a href="index.html#portfolio">Latest Work</a></li>
-					<li><a href="#services-popup" title="Project Info" class="open-popup">Services</a></li>
-					<li><a href="#design-process-popup" title="Project Info" class="open-popup">How I Work</a></li>
+					<!-- <li><a href="#services-popup" title="Project Info" class="open-popup">Services</a></li> -->
+					<li><a href="index.html#myservices" title="Project Info">Services</a></li>
+					<!-- <li><a href="#design-process-popup" title="Project Info" class="open-popup">How I Work</a></li> -->
+					<li><a href="index.html#designprocess-slider" title="Project Info">How I Work</a></li>
 					 </ul>
 				  </div>
 				  <div class="col-md-3">
