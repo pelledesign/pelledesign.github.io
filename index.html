@@ -46,6 +46,15 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+			$('#nav-icon3').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
+		</script>	
+
 	
 		<!-- start test if touch device -->		
 		<script>
@@ -71,19 +80,12 @@
 <!-- 		<script>
 		alert('cog fix2');
 		</script> -->	
-		<script>
-$(document).ready(function(){
-	$('#nav-icon3').click(function(){
-		$(this).toggleClass('open');
-	});
-});
-		</script>	
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
 		
 		<!-- header -->
-<!-- 		<header id="header" role="banner" class="nav-down x-theme lg-down-h">
+<!-- 		<header id="header" role="banner" class="nav-down x-theme">
 			 <nav class="navbar navbar-transparent navbar-expand-xl h100 p0">
 				<div class="container-fluid" style="align-items: normal;">
 				  <a href="index.html" class="text-logo" style="padding-left:1rem; max-height:50px;">Pelle iDesign</a>
@@ -121,17 +123,13 @@ $(document).ready(function(){
 			 <nav class="navbar navbar-transparent navbar-expand-xl h100 p0">
 				<div class="container-fluid" style="align-items: normal;">
 				  <a href="index.html" class="text-logo-svg" style=""></a>
-				  <div id="nav-icon3" type="button" data-toggle="collapse" data-target="#navbarsExample06"
+				  <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
 					 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
 						<span></span>
 						<span></span>
 						<span></span>  
 						<span></span>
-				  </div>		
-<!-- 				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
-					 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
-					 <span class="navbar-toggler-icon"></span>
-				  </button>	 -->					  
+				  </button>						  
 				  <div class="collapse navbar-collapse" id="navbarsExample06">
 					 <ul class="navbar-nav pl-md-5 ml-auto c-all">								
 						<li class="nav-item">
