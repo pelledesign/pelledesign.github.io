@@ -74,7 +74,7 @@
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 200 );
+      }, 300 ); //default 200
     } );
   };
 } )( jQuery );
