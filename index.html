@@ -3053,26 +3053,18 @@
 					</div>
 				</div>																																									
 			</div>	 -->
-			<div id="spotify-process-popup" class="popup mfp-hide x-theme zoom-in fullscreen"> 	  <!-- style="padding:4vw !important;" -->
-<!-- 				<div id="spotify-title" class="title row m0">
-					<div class="col-12 m0 flex">
-						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
-						 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>			 
-						</div>					
-					</div>		
-				</div>	 -->		
-<!-- <p style="position:absolute; transform: translateX(-64%) translateY(118%) rotate(-90deg);">Pelle iDesign</p>	 -->		
-	
+			<div id="spotify-process-popup" class="popup mfp-hide x-theme zoom-in fullscreen"> 	  <!-- style="padding:4vw !important;" -->	
+			
 				<!-- slide classes --> 
 				<!-- none: correct dimensions, free height. (height need for snap points)
 				h100: height 100% with ugly edges due to ratio difference between popup and 16/9 
 				hmax100: height and with 100% but cropped-->
 				
 				<div class="viewer middle medium-theme relative dropshadow r16_9 scrolldown-container">
-					<div style="position:absolute;  z-index:99; transform: translateX(-98px) translateY(65px);">
+<!-- 					<div style="position:absolute;  z-index:99; transform: translateX(-98px) translateY(65px);">
 					<h3 style=" transform:  rotate(-90deg);">Spotify <strong>Colors</strong></h3>
-					</div>
-<!-- 					<div class="slide light-theme h100">
+					</div> -->
+					<div class="landscape-hidden slide light-theme h100">
 						<div class="absolute z99 text-white" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">	
 							<div>
 								<h2 class="text-white">Spotify <strong>Colors</strong></h3>
@@ -3083,8 +3075,8 @@
 							</div>
 						</div>	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
-					</div> -->
-					<div class="slide light-theme h100">
+					</div>
+					<div class="portrait-hidden slide light-theme h100">
 						<div class="absolute z99 text-white" style="top: 67%; left: 5%;">	
 							<div>
 								<h2 class="text-white txt-l m0">Spotify <strong>Colors</strong></h3>
@@ -3104,34 +3096,37 @@
 					<div class="slide light-theme h-auto"> 	
 						<img src="" data-src="spotify/images/process/research2.jpg" class="lazy invisible lazy-fade-in">
 					</div>
-					<div class="slide dark-theme h100">	
+					<div class="slide dark-theme h-auto">	
 						<img src="" data-src="spotify/images/process/brainstorm.svg" class="lazy invisible lazy-fade-in">		
 					</div>
-					<div class="slide light-theme h100 overflow-x-scroll">	
+<!-- 					<div class="slide dark-theme h100">	
+						<img src="" data-src="spotify/images/process/brainstorm.svg" class="lazy invisible lazy-fade-in">		
+					</div> -->
+					<div class="slide light-theme h-auto overflow-x-scroll">	
 						<img src="" data-src="spotify/images/process/sketching.svg" class="lazy invisible lazy-fade-in w-auto">		
 					</div>	
-					<div class="slide dark-theme h100">	
+					<div class="slide dark-theme h-auto">	
 						<img src="" data-src="spotify/images/process/usage.jpg" class="lazy invisible lazy-fade-in">
 					</div>		
-					<div class="slide light-theme h100">	
+					<div class="slide light-theme h-auto">	
 						<img src="" data-src="spotify/images/process/scenario.svg" class="lazy invisible lazy-fade-in">		
 					</div>			
-					<div class="slide light-theme h100">	
+					<div class="slide light-theme h-auto">	
 						<img src="" data-src="spotify/images/process/functions.svg" class="lazy invisible lazy-fade-in">		
 					</div>
-					<div class="slide light-theme h100">	
+					<div class="slide light-theme h-auto">	
 						<img src="" data-src="spotify/images/process/prototyping.jpg" class="lazy invisible lazy-fade-in">		
 					</div>					
-					<div class="slide light-theme h100">	
+					<div class="slide light-theme h-auto">	
 						<img src="" data-src="spotify/images/process/presentation.jpg" class="lazy invisible lazy-fade-in">		
 					</div>
-					<div class="slide light-theme h100">	
+					<div class="slide light-theme h-auto">	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
 					</div>
-					<div class="slide pop-theme hw100">	
+<!-- 					<div class="slide pop-theme hw100">	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
-					</div>
-				</div>																																									
+					</div> -->
+				</div>			
 			</div>	
 			<div id="spotify-model-popup" class="popup mfp-hide">
 				<div class="c-100">
@@ -4005,7 +4000,15 @@
 				</div>						 
 			</div> -->
 		</div>
-		
+<script>
+if(window.innerHeight > window.innerWidth){
+	$('#spotify-process-popup .slide').on('click', function() {
+	<!-- alert('ok'); -->
+	$(this).toggleClass('h100').toggleClass('h-auto').toggleClass('overflow-x-scroll');
+	$(this).find('img').toggleClass('w-auto');
+	});
+}
+</script>			
 		<!-- popup themes -->
 		<script>
 		//$('#popups-div').children().addClass('popup mfp-hide');

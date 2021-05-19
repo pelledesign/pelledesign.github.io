@@ -4829,9 +4829,12 @@ input[type="button"].btn-block {
   position: relative;
   height: 0;
   overflow: hidden;
-  -webkit-transition: height 0.35s ease;
+/*   -webkit-transition: height 0.35s ease;
   -o-transition: height 0.35s ease;
-  transition: height 0.35s ease;
+  transition: height 0.35s ease; */
+  -webkit-transition: height 0.45s ease;
+  -o-transition: height 0.45s ease;
+  transition: height 0.45s ease;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
