@@ -277,6 +277,11 @@ if(is_touch_device()) {
 		}
 		else
 		{ 
+	all_sliders.on('initialize.owl.carousel', function(event) {
+		
+		var slider_id =  $(this).attr('id');	
+		$('#' + slider_id + ' .owl-hide-desktop').remove();		//att: spacing
+		});	
 		}	
 });		
 	

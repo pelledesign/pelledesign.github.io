@@ -11728,6 +11728,11 @@ bottom: -3em !important;
 
 /* ---------------------------------------------------------------------------		about slider 		----------------------------------------------------------------------------------- */	
 
+#about-slider {
+min-height:100vh;
+height:100vh;	
+}
+
 /* disable left or right arrow when first or last slide */
 
 /* .owl-nav .owl-prev.disabled, */
@@ -14817,7 +14822,7 @@ float:right;
 
 /* ---------------------------------------------------------------------------		icons 		----------------------------------------------------------------------------------- */
 
-svg:not(.circular):not(.ignore svg) :not(.text-logo-svg svg) {
+svg:not(.circular):not(.ignore svg):not(.text-logo-svg svg) {
 height:100%;
 width:100%;	
 }
@@ -16851,34 +16856,11 @@ left:0;
   scroll-snap-type: y mandatory;
 }
 
-.slide {
+.slide:not(#poc-process-popup .slide) {
 position:relative;
-/*   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; */
-
-  /* scroll-snap */
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }
-
-/* .slide:nth-child(1) {
-  background-color: #F49592;
-}
-
-.slide:nth-child(2) {
-  background-color: #00B1A0;
-}
-
-.slide:nth-child(3) {
-  background-color: #F4A838;
-}
-
-.slide:nth-child(4) {
-  background-color: #8F93B7;
-} */
-
 .scroll-down {
 position: absolute; 
 top: calc(50% - 2rem); 
