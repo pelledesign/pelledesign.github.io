@@ -3133,11 +3133,11 @@
 				h100: height 100% with ugly edges due to ratio difference between popup and 16/9 
 				hmax100: height and with 100% but cropped-->
 				
-				<div class="viewer middle medium-theme relative dropshadow r16_9 scrolldown-container">
+				<div class="viewer medium-theme relative dropshadow r16_9 scrolldown-container">
 <!-- 					<div style="position:absolute;  z-index:99; transform: translateX(-98px) translateY(65px);">
 					<h3 style=" transform:  rotate(-90deg);">Spotify <strong>Colors</strong></h3>
 					</div> -->
-					<div class="landscape-hidden slide light-theme h100">
+					<div class="landscape-hidden  light-theme h100">
 						<div class="absolute z99 text-white" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">	
 							<div>
 								<h2 class="text-white">Spotify <strong>Colors</strong></h3>
@@ -3176,7 +3176,7 @@
 						<img src="" data-src="spotify/images/process/brainstorm.svg" class="lazy invisible lazy-fade-in">		
 					</div> -->
 					<div class="slide light-theme height-animate">	
-						<img src="" data-src="spotify/images/process/sketching.svg" class="lazy invisible lazy-fade-in w-auto">		
+						<img src="" data-src="spotify/images/process/sketching.svg" class="lazy invisible lazy-fade-in">		
 					</div>	
 					<div class="slide dark-theme height-animate">	
 						<img src="" data-src="spotify/images/process/usage.jpg" class="lazy invisible lazy-fade-in">
@@ -4880,9 +4880,18 @@ function myFunction() {
 		<script>
 		if(window.innerHeight > window.innerWidth){
 			$('#spotify-process-popup .slide, #poc-process-popup .slide').on('click', function() {
-			<!-- alert('ok'); -->
+			 
+			var container = $('#spotify-process-popup .viewer');
+			var top = $(this).position().top,
+			currentScroll = container.scrollTop();
+
+			 container.animate({
+				  scrollTop: currentScroll + top
+			 }, 1000);
+
 			$(this).toggleClass('run').toggleClass('overflow-x-scroll');
 			$(this).find('img').toggleClass('w-auto');
+			
 			});
 		}
 		</script>

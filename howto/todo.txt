@@ -2,7 +2,6 @@
 /* general */
 rellax logos mobile
 larger p-logo zoomrom 0?
-pdf viewer on mobile and slides fixes - tap to add 'fullscreen' class?
 ipad props
 hero img + font
 

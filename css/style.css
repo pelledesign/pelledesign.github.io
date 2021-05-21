@@ -16090,7 +16090,8 @@ overflow-y:hidden !important;
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0px; /* also removes extra padding created by overflow:scroll/auto */
+  height:0px; /* also removes extra padding created by overflow:scroll/auto */
 }
 
 /* Track */
@@ -16951,6 +16952,7 @@ height:100%;
 
 @media (orientation:portrait) {
 .height-animate {
+/* height:auto; */
 /* height:auto; */
 /* height:200px; */
 /* max-height:0; */
