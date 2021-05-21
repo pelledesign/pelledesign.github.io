@@ -16856,11 +16856,17 @@ left:0;
   scroll-snap-type: y mandatory;
 }
 
-.slide:not(#poc-process-popup .slide) {
+.slide:not(#poc-process-popup .slide):not(#spotify-process-popup .slide) {
 position:relative;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }
+
+/* .slide:not(.ignore){
+position:relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+} */
 .scroll-down {
 position: absolute; 
 top: calc(50% - 2rem); 
@@ -16936,6 +16942,25 @@ width:50%;
 
 .h100 {	
 height:100%;	
+}
+
+.h100-animate {	
+height:100%;	
+/* transition: top 1.2s ease-in-out; */
+}
+
+@media (orientation:portrait) {
+.height-animate {
+/* height:auto; */
+/* height:200px; */
+/* max-height:0; */
+height:calc((100vmin - 4vw) * (9/16));
+transition: height .5s ease-out;	
+}}
+
+.height-animate.run {
+height:100% !important;
+transition: height .5s ease-in;
 }
 
 .h75 {	

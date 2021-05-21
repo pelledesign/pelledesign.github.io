@@ -3149,7 +3149,7 @@
 						</div>	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
 					</div>
-					<div class="portrait-hidden slide light-theme h100">
+					<div class="portrait-hidden slide light-theme height-animate">
 						<div class="absolute z99 text-white" style="top: 67%; left: 5%;">	
 							<div>
 								<h2 class="text-white txt-l m0">Spotify <strong>Colors</strong></h3>
@@ -3163,37 +3163,37 @@
 						</div>	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
 					</div>					
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/research.jpg" class="lazy invisible lazy-fade-in">
 					</div>
-					<div class="slide light-theme h-auto"> 	
+					<div class="slide light-theme height-animate"> 	
 						<img src="" data-src="spotify/images/process/research2.jpg" class="lazy invisible lazy-fade-in">
 					</div>
-					<div class="slide dark-theme h-auto">	
+					<div class="slide dark-theme height-animate">	
 						<img src="" data-src="spotify/images/process/brainstorm.svg" class="lazy invisible lazy-fade-in">		
 					</div>
 <!-- 					<div class="slide dark-theme h100">	
 						<img src="" data-src="spotify/images/process/brainstorm.svg" class="lazy invisible lazy-fade-in">		
 					</div> -->
-					<div class="slide light-theme h-auto overflow-x-scroll">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/sketching.svg" class="lazy invisible lazy-fade-in w-auto">		
 					</div>	
-					<div class="slide dark-theme h-auto">	
+					<div class="slide dark-theme height-animate">	
 						<img src="" data-src="spotify/images/process/usage.jpg" class="lazy invisible lazy-fade-in">
 					</div>		
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/scenario.svg" class="lazy invisible lazy-fade-in">		
 					</div>			
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/functions.svg" class="lazy invisible lazy-fade-in">		
 					</div>
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/prototyping.jpg" class="lazy invisible lazy-fade-in">		
 					</div>					
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/process/presentation.jpg" class="lazy invisible lazy-fade-in">		
 					</div>
-					<div class="slide light-theme h-auto">	
+					<div class="slide light-theme height-animate">	
 						<img src="" data-src="spotify/images/bg.jpg" class="lazy cover multiply invisible lazy-fade-in">		
 					</div>
 <!-- 					<div class="slide pop-theme hw100">	
@@ -4429,7 +4429,7 @@
 		</script> -->
 
 		<!-- fullscreen -->
-		<script>
+<!-- 		<script>
 		$('.fullscreen').on('click', function () {
 
 
@@ -4450,7 +4450,7 @@
 				  }
 
 		});
-		</script>
+		</script> -->
 		
 		<!-- buttons  -->
 		<script>
@@ -4881,11 +4881,29 @@ function myFunction() {
 		if(window.innerHeight > window.innerWidth){
 			$('#spotify-process-popup .slide, #poc-process-popup .slide').on('click', function() {
 			<!-- alert('ok'); -->
-			$(this).toggleClass('h100').toggleClass('h-auto').toggleClass('overflow-x-scroll');
+			$(this).toggleClass('run').toggleClass('overflow-x-scroll');
 			$(this).find('img').toggleClass('w-auto');
 			});
 		}
-		</script>	
+		</script>
+<!-- 		<script>
+		if(window.innerHeight > window.innerWidth){
+			$('#spotify-process-popup .slide, #poc-process-popup .slide').on('click', function() {
+			<!-- alert('ok'); -->
+			$(this).toggleClass('run').toggleClass('overflow-x-scroll').toggleClass('snap');
+			$(this).find('img').toggleClass('w-auto');
+			});
+		}
+		</script> -->
+<!-- 		<script>
+		if(window.innerHeight > window.innerWidth){
+			$('#spotify-process-popup .slide, #poc-process-popup .slide').on('click', function() {
+			alert('ok');
+			$(this).toggleClass('h100-animate').toggleClass('h-auto').toggleClass('overflow-x-scroll');
+			$(this).find('img').toggleClass('w-auto');
+			});
+		}
+		</script>	 -->
 
 	</body>
 </html>	
