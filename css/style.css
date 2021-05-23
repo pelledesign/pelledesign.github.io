@@ -17665,7 +17665,9 @@ width: 60%;
 }
 }
 
-
+#hero svg {
+fill: #e8e8e8;	
+}
 
 
 

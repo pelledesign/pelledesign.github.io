@@ -59,7 +59,7 @@ $('.navbar .dropdown > a').click(function(){
 
 
 /* zoom-icon function */
-$('.zoom-icon').on('click', function() {
+$('.zoom-icon').on('tap click', function() {
 	
 
 		// select popup background based on background of .item 	
