@@ -652,13 +652,7 @@ img {
   vertical-align: middle;
   border-style: none;
   object-fit:contain;
-  pointer-events: none; /* prevents edge to open save as dialog. not really */
-  
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;      /* IE 10+ */
-  user-select: none;          /* Likely future */  
-  
+  pointer-events: none; /* prevents edge to open save as dialog */
 }
 
 img:not(.mainimg) {
