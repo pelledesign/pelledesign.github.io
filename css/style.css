@@ -16599,7 +16599,7 @@ margin-bottom: 0.5em !important;
 
 /* --------------------------------------------------------				no select 			------------------------------------------------------------------------*/
 
-body, p, h1, h2, h3, a, ul, li .no-select {
+html, body, p, h1, h2, h3, a, ul, li .no-select {
   -webkit-touch-callout: none;
     -webkit-user-select: none;
      -khtml-user-select: none;
