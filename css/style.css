@@ -14889,7 +14889,7 @@ cursor: pointer;
 
 .ion-ios-search-strong {
 font-size:1.3rem;
-margin: 0 0.75rem;
+/* margin: 0 0.75rem; */
 cursor: pointer;
 cursor: pointer;
 font-weight:bold;
@@ -14978,6 +14978,7 @@ z-index:99999999999999;
 @media (orientation:portrait) {
 .zoom-icon {
 top:35px; 
+width: 2.5rem;
 }
 }
 
@@ -17618,7 +17619,7 @@ bottom:0;
 }
 
 .title {
-padding-left:5px;	
+padding-left:10px;	
 }
 
 .title.on-top {
