@@ -1,5 +1,7 @@
 
 /* general */
+viewers as akg gallery
+
 rellax logos mobile
 larger p-logo zoomrom 0?
 ipad props
