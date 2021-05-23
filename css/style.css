@@ -17597,11 +17597,13 @@ height: 100%;
 
 
 .more-btn.desktop-hidden {
-font-size: 3rem; z-index: 2;
+/* font-size: 3rem;  */
+z-index: 2;
 
 /* if not a font: */
 
 width:3rem;
+height:3rem;
 	
 }
 

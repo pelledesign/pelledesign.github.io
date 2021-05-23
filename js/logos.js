@@ -3,6 +3,9 @@
 		  $(".text-logo-svg").load("images/icons/text-logo.svg"); 
 		});
 		$(function(){
+		  $(".next-play-circle").load("images/icons/next_play_circle.svg"); 
+		});
+		$(function(){
 		  $(".akg-logo").load("akg/images/akg-logo.svg"); 
 		});
 		$(function(){

@@ -102,7 +102,7 @@ a, a:link, a:focus, a:active, a:visited {
 }
 
  #view-btn, .view-btn {
-    padding-bottom: 30px;
+    padding-bottom: 44px;
     padding-top: 30px;
     text-align: center;
     width: 100%;
@@ -110,7 +110,7 @@ a, a:link, a:focus, a:active, a:visited {
 
 @media (max-width:567px) {
  #view-btn, .view-btn {
-    padding-bottom: 10px;
+    padding-bottom: 44px;
     padding-top: auto;
 }
 }
