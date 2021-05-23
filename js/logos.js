@@ -6,6 +6,9 @@
 		  $(".next-play-circle").load("images/icons/next_play_circle.svg"); 
 		});
 		$(function(){
+		  $(".zoom-icon").load("images/icons/zoom-icon.svg"); 
+		});
+		$(function(){
 		  $(".akg-logo").load("akg/images/akg-logo.svg"); 
 		});
 		$(function(){
