@@ -78,7 +78,7 @@
 		
 		<!-- alert -->
 		<script>
-		alert('img pointer-events:none user-select none');
+		alert('img javascript');
 		</script>	
 
 		<!-- up button -->
@@ -674,7 +674,7 @@
 									</div>																					
 								</div>
 								<div class="item owl-hide-desktop light-theme">	
-									<div class="absolute hide-on-click">											
+									<div class="absolute hide-on-click desktop-hidden">											
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate ppp c-all txt-c">
 												<div class="h-auto">
@@ -1248,7 +1248,7 @@
 								<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 									<div class="rellax-logo bagheera-logo x-theme bg-none hw100"></div>
 								</div>
-									<div class="absolute hide-on-click">											
+									<div class="absolute hide-on-click desktop-hidden">											
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate ppp c-all txt-c">
 												<div class="h-auto">
@@ -1915,7 +1915,7 @@
 								</div>	
 							</div>					
 							<div class="item owl-hide-medium-up textoverlay dark-theme">	
-									<div class="absolute hide-on-click">
+									<div class="absolute hide-on-click desktop-hidden">
 										<div class="cont">
 											<div class="middle">	
 												<div class="fadeout-top"></div>													
@@ -4376,6 +4376,15 @@
 		$( '.portfolio-section' ).scrollSnap({
 		  speed: 200
 		});
+		</script>
+
+
+		<script>
+window.oncontextmenu = function(event) {
+     event.preventDefault();
+     event.stopPropagation();
+     return false;
+};
 		</script>
 
 		<!-- header hide/show -->
