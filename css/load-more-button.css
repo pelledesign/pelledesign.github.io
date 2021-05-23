@@ -102,7 +102,7 @@ a, a:link, a:focus, a:active, a:visited {
 }
 
  #view-btn, .view-btn {
-    padding-bottom: 44px;
+    padding-bottom: 44px; /* to avoid ios btm bar to pop up */
     padding-top: 30px;
     text-align: center;
     width: 100%;
