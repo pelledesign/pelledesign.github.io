@@ -16607,6 +16607,7 @@ html, body, p, h1, h2, h3, a, ul, li .no-select {
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */	
+											 
 }
 
 .fadeout-btm, .fadeout-top {
