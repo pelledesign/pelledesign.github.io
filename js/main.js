@@ -41,6 +41,10 @@ $('#dropdown04').on('show.bs.drop	down', function () {
 /* hide expanded menu on body and header links click*/
 $('body').on('click', ":not(header, header *)", function(){
 	$('.navbar-collapse').removeClass('show');
+	  if ($('.navbar-toggler').hasClass('open')) {
+		  $('.navbar-toggler').removeClass('open').addClass('collapsed');
+	  }	
+	//$('.navbar-toggler collapsed').removeClass('show');
 });
 
 $('header a.nav-link').on('click',  function(){
@@ -161,6 +165,14 @@ apa = design_process + $('#design-process'),
 all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
 main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
+$('.go-to-about').on('click',function(){
+about_slider.trigger('to.owl.carousel', [0, 500]);
+/* carousel.trigger('to.owl.carousel', [0, 500]); */
+});
+$('.go-to-services').on('click',function(){
+about_slider.trigger('to.owl.carousel', [2, 500]);
+/* carousel.trigger('to.owl.carousel', [0, 500]); */
+});
 
 /* change nav clr depending on slide bg */
 
