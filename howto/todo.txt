@@ -1,6 +1,6 @@
 
 /* general */
-overlay / zoom-icon
+haglöfs cant scroll touch
 rellax logos mobile
 larger p-logo zoomrom 0?
 ipad props

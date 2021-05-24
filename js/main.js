@@ -77,6 +77,7 @@ $('.zoom-icon').on('click', function() {
 		}
 		else {
 		var bg = '#fff';		
+		var theme = 'light-theme';		
 		alert('no bg');
 		};
 
