@@ -1,6 +1,6 @@
 
 /* general */
-hide-on-click transitions
+cog is off
 haglöfs cant scroll touch
 ipad props
 hero img + font

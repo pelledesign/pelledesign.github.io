@@ -1075,6 +1075,15 @@
 									</div>								
 								</div>								
 								<div class="item  light-theme">
+									<div class="absolute hide-on-click desktop-hidden">											
+										<div class="text-animate c-all txt-c">
+											<div class="h-auto">
+												<h2 class="mb-4 s-t">Modeling <strong></strong></h2>
+													<p>Modeling made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear</p>
+													<p><span class="open-popup btn">Click to View</span></p>	
+											</div>
+										</div>												
+									</div>
 									<div class="h100">
 									<div class="cont">						
 										<div class="middle row m0 auto-scroll">									
@@ -4461,10 +4470,21 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 	  });
 
 
-	  $('.hide-on-click').on('touchstart scroll',function(){
-		$(this).addClass('invisible');			
-		$(this).find('.overlay').removeClass('img-opacity');			
+		$('.hide-on-click').on('touchstart scroll',function(){
+		
+		var el = $(this);
+		
+		el.addClass('fadeOut animated-medium');
+		
+		setTimeout(
+		  function() 
+		  {
+		el.addClass('invisible');
+		  }, 500);							
 	  });
+	  
+	  
+	  
 
 		<!-- SHOW -->	
 		
