@@ -1321,6 +1321,22 @@ animation-delay: 2s;
   animation-name: zoomIn;
 }
 
+@keyframes zoomInLarge {
+  from {
+    opacity: 0;
+    /* transform: scale3d(.3, .3, .3); */
+    transform: scale3d(0, 0, 0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomInLarge {
+  animation-name: zoomInLarge;
+}
+
 @keyframes zoomInVisible {
   from {
     opacity: 1;

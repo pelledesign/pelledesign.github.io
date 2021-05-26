@@ -1,8 +1,7 @@
 
 /* general */
+hide-on-click transitions
 haglöfs cant scroll touch
-rellax logos mobile
-larger p-logo zoomrom 0?
 ipad props
 hero img + font
 
@@ -18,11 +17,8 @@ make one rough key sketch
 /* bagheera */
 /* colors slide / popup */
 /* haglöfs */
-one more img
-
 /* specialized */
 /* bel mar */
-text
 finish model
 
 /* design process */

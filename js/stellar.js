@@ -168,7 +168,7 @@
 			}
 		} , { offset: '75%' } );
 
-//		flip in Y		
+//		zoom in 		
 
 		$('.zoom-in').waypoint( function( direction ) {
 			
@@ -185,6 +185,30 @@
 						setTimeout( function () {
 							el.removeClass('invisible');
 							el.addClass('zoomIn element-animated');							
+							el.removeClass('item-animate');
+						},  k * 100);
+					});					
+				}, 100);				
+			}
+		} , { offset: '40%' } );
+		
+		//		zoom in large 		
+
+		$('.zoom-in-large').waypoint( function( direction ) {
+			
+
+
+			if( direction === 'down' && !$(this.element).hasClass('element-animated')) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+					$('body .zoom-in-large.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							el.removeClass('invisible');
+							el.addClass('zoomInLarge element-animated');							
 							el.removeClass('item-animate');
 						},  k * 100);
 					});					
