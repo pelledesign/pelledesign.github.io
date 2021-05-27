@@ -17379,14 +17379,14 @@ transform: translate(-50%, -50%);
 }
 }
 
-@media (orientation:portrait) {
+/* @media (orientation:portrait) {
 .h-auto-portrait {
 height:auto;
 top: 50%; 
 left: 50%; 
 transform: translate(-50%, -50%);		
 }
-}
+} */
 
 /* @media (orientation:portrait) {
 .r16_9 {
