@@ -2611,12 +2611,10 @@
 										</div>	
 									</div>
 							</div>
-							<div id="docs" class="item  col-lg-12 x-theme">
-								<div class="cont">
-									<div class="middle x-theme">	
+							<div id="docs" class="item col-lg-12 x-theme">
 										<div class="fadeout-top"></div>														
-										<div class="overlay c-all img-opacity">
-											<div class="text-animate txt-l c-all">
+										<div class="h100 show-scroll">
+											<div class="text-box txt-l c-all">
 												<div>
 													<h2 class="mb-4 s-t txt-l m-h"><strong>Documentation</strong></h2>
 													<h2 class="mb-4 s-t txt-l md-up-h"><strong>Project Docs</strong></h2>
@@ -2638,9 +2636,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="fadeout-btm"></div>											
-									</div>
-								</div>								
+										<div class="fadeout-btm"></div>																			
 							</div>								
 							<div id="dropit" class="item x-theme"> 		
 								<div class="col-lg-12 h100">
@@ -4711,10 +4707,10 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 		  });
 		  
 		  <!-- hide next button on touch  -->
-		  $('.textoverlay, .textoverlay-mobile, .overlay, .nxt-btn-h, .hide-next, .text-animate').on('touchstart',function(){
+		  $('.textoverlay, .textoverlay-mobile, .overlay, .nxt-btn-h, .hide-next, .text-animate, .text-box').on('touchstart',function(){
 			 $(this).closest('#slider-container').find('.view-btn').addClass('invisible');
 		  });
-			 $('.textoverlay, .textoverlay-mobile, .overlay, .nxt-btn-h, .text-animate').not('.ion-android-add-circle').on('touchend',function(){
+			 $('.textoverlay, .textoverlay-mobile, .overlay, .nxt-btn-h, .text-animate, .text-box').not('.ion-android-add-circle').on('touchend',function(){
 			 $(this).closest('#slider-container').find('.view-btn').removeClass('invisible');
 		  });
 		}
