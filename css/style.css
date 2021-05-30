@@ -1225,6 +1225,28 @@ height:100% !important;
 }
 }
 
+@media screen and (orientation:portrait) { 
+.c-portrait {
+padding:0;
+display:flex !important; 
+align-items:center !important; 
+justify-content: center !important; 
+text-align:center !important; 
+height:100% !important;	
+}
+}
+
+@media screen and (orientation:landscape) { 
+.c-landscape {
+padding:0;
+display:flex !important; 
+align-items:center !important; 
+justify-content: center !important; 
+text-align:center !important; 
+height:100% !important;	
+}
+}
+
 @media screen and (orientation:landscape) { 
 .c-ls {
 display:flex !important; 
@@ -17638,7 +17660,8 @@ bottom:0;
 }
 
 .title {
-padding-left:10px;	
+padding-left:9px;	
+padding-top: 5px;
 }
 
 .title.on-top {
