@@ -1,5 +1,6 @@
 
 /* general */
+padding text-animate mobile - no padding iframes
 ipad props
 hero img + font
 
