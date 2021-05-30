@@ -1,14 +1,12 @@
 
 /* general */
-cog is off
-haglöfs cant scroll touch
 ipad props
 hero img + font
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 bagheera new color, simple bright	
-check width 991. - check xs, md etc check small especially
-check all browsers
+check all browsers +  devices
+
 /* converse */
 make one rough key sketch
 
@@ -18,10 +16,14 @@ make one rough key sketch
 /* colors slide / popup */
 /* haglöfs */
 /* specialized */
+/* spotify */
+hero
+model
 /* bel mar */
 finish model
 
 /* design process */
+mobile
 /* footer */
 
 
