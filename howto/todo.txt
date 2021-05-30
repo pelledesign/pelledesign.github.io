@@ -1,5 +1,6 @@
 
 /* general */
+center info texts portrait/touch , bagheera got one slide with centered txt
 padding text-animate mobile - no padding iframes
 ipad props
 hero img + font

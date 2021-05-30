@@ -12547,6 +12547,14 @@ margin-top: 3em;
   width: 100px;
 
 }
+.btn-play-wrap-touch {
+position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
 
 /* ---------------------------------------------------------------------------		BUTTONS 		----------------------------------------------------------------------------------- */	
 

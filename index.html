@@ -191,7 +191,7 @@
 					<div class="item">			
 						<div class="h100">
 							<div class="container c-md-up h100">
-								<div class="row">
+								<div class="row c-all">
 									<div class="col-lg-5 col-md-8 text-box">
 										<span class="hidden d-block text-uppercase text-secondary">About</span>
 										<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> That Brings Your Ideas Alive</h2>					  
@@ -214,7 +214,7 @@
 					<div class="item">			
 						<div class="h100">
 							<div class="container c-md-up h100">
-								<div class="row">
+								<div class="row c-all">
 									<div class="col-lg-5 col-md-8 text-box">
 									  <span class="xs-down-h d-block text-uppercase text-secondary">Process</span>
 										<h2 class="mb-4">My <strong>Design Process</strong> Is Designed <strong>For You</strong></h2>
@@ -1018,7 +1018,7 @@
 									</div>							
 								</div>	
 								<div class="item owl-hide-lg-up light-theme">
-									<div class="absolute h100">									
+									<div class="absolute hw100">									
 										<div class="viewer mandatory loader scrolldown-container show-scroll pb-0">	
 											<div class="animate scroll-down"></div>
 											<div class="slide zoom-container">
@@ -1789,7 +1789,7 @@
 										</div>													
 								</div>	
 							</div> -->
-								<div class="item owl-hide-lg-up dark-theme">
+								<div class="item owl-hide-medium-up dark-theme">
 									<div class="fadeout-top"></div>													
 									<div class="absolute hw100 c-all">
 										<div class="text-animate c-all txt-c">
@@ -2210,6 +2210,40 @@
 							</div>
 							<div id="3d-modeling-mobile" class="owl-hide-desktop item cont light-theme"> 
 								<div class="fadeout-top"></div>													
+									<div class="iframe-container  absolute hw100 show-scroll">
+										<div class="text-box c-all txt-l">
+											<div>
+												<h2 class="mb-4 s-t">Concept <strong>Evaluation </strong></h2>										
+												<p>
+												Now, how do we know if this idea that we just came up with is any good?</p>
+												<p>									  
+												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
+												<p>
+												Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
+												This is an iterative process where the concept is further refined. </p>
+												<p>
+												We then transfer our model to digital space to refine it even more, and to start creating a 
+												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
+												</p>
+												<span class="show-shaded relative btn btn-outline">Load 3d - 19mb</span>																																	
+											</div>
+										</div>	
+										<div class="model-controls">
+											<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+											<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+										</div>						
+										<iframe
+										class="showonclick light-theme unload-no-reload soft-zoom"
+										src=""
+										data-src="Converse/webgl/rendered.html"		
+										frameborder="0"
+										scrolling="no">	 
+										</iframe>										
+									</div>
+									<div class="fadeout-btm"></div>											
+							</div>								
+<!-- 							<div id="3d-modeling-mobile" class="owl-hide-desktop item cont light-theme"> 
+								<div class="fadeout-top"></div>													
 									<div class="absolute hw100 c-all">
 										<div class="iframe-container text-animate c-all txt-l">
 											<div>
@@ -2225,78 +2259,24 @@
 												We then transfer our model to digital space to refine it even more, and to start creating a 
 												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
 												</p>
-											<span class="show-shaded relative btn btn-outline">Load 3d - 19mb</span>	
-											
-											<div class="model-controls">
-												<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-												<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
-											</div>						
-											<iframe
-											class="showonclick light-theme unload-no-reload soft-zoom"
-											src=""
-											data-src="Converse/webgl/rendered.html"		
-											frameborder="0"
-											scrolling="no">	 
-											</iframe>										
-<!-- 									<iframe 
-									src=""
-									id="popup-iframe"
-									class="converse-wireframe-injec lazy hide-this multiply unload fade-this"
-									data-src="Converse/webgl/pen.html" 											
-									frameborder="0"
-									scrolling="no"
-									>				 
-									</iframe> -->
-											
+												<span class="show-shaded relative btn btn-outline">Load 3d - 19mb</span>	
+												
+												<div class="model-controls">
+													<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+													<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+												</div>						
+												<iframe
+												class="showonclick light-theme unload-no-reload soft-zoom"
+												src=""
+												data-src="Converse/webgl/rendered.html"		
+												frameborder="0"
+												scrolling="no">	 
+												</iframe>																					
 											</div>
-										</div>
-										
+										</div>										
 									</div>
-									<div class="fadeout-btm"></div>							
-<!-- 								<div class="h100 iframe-container textoverlay-desktop medium-theme c-all absolute">
-									<div class="view-btn medium-theme overlay hide-this">
-										<div class="row c-all h100 m0">					
-											<div class="touch-hidden col-lg-6 txt-c-ls ppp">
-												<h2 class="mb-4 s-t">Concept <strong>Evaluation </strong></h2>										
-												<p>
-												Now, how do we know if this idea that we just came up with is any good?</p>
-												<p>									  
-												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
-												<p>
-												Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
-												This is an iterative process where the concept is further refined. </p>
-												<p>
-												We then transfer our model to digital space to refine it even more, and to start creating a 
-												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
-												</p>
-											</div>
-											<div class="col-lg-6 h100 c-all">	
-											<span class="show-shaded btn btn-outline m-h">Load 3d - 19mb</span>	
-											</div>
-										</div>								
-									</div>								
-									<div class="model-controls">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-										<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
-									</div>						
-									<iframe
-									class="showonclick  medium-theme unload-no-reload soft-zoom"
-									src=""
-									data-src="Converse/webgl/rendered.html"		
-									frameborder="0"
-									scrolling="no">	 
-									</iframe>										
-									<iframe 
-									src=""
-									id="popup-iframe"
-									class="converse-wireframe-injec lazy hide-this multiply unload fade-this"
-									data-src="Converse/webgl/pen.html" 											
-									frameborder="0"
-									scrolling="no"
-									>				 
-									</iframe>													
-								</div> -->						
-							</div>								
+									<div class="fadeout-btm"></div>											
+							</div>	 -->							
 							<div id="3d-modeling-desktop" class="owl-hide-touch item cont light-theme"> 
 <!-- 									<div class="absolute hide-on-click desktop-hidden">											
 										<div class="text-animate c-all txt-c">
@@ -2351,7 +2331,67 @@
 									</iframe>													
 								</div>						
 							</div>	
-							<div id="keyshot" class="item cont light-theme">
+							<div id="keyshot-mobile" class="item light-theme">
+									<div class="fadeout-top"></div>													
+									<div class="row m0 absolute hw100 c-all  show-scroll">
+										<div class="text-box c-all txt-l">
+											<div>
+												<h2 class="mb-4 s-t m-h">Color /<strong>Material </strong>/ Finish</h2>
+												<h2 class="mb-4 s-t md-up-h"><strong>CMF</strong></h2>
+												<p>
+												When we're happy with our model, it's time to give it its color, material and finish.</p>
+												<p>
+												To evaluate the progress, you may use a real-time rendering viewer downloadable from the link below.<br>
+												Check out the video below to see how it works!
+												</p>
+												<p>
+												Here, You may also open up the model I'm working on at any time, to see how things are shaping up!</p>
+												<p>
+												Get Keyshot Viewer free <a href="https://www.keyshot.com/viewer/" target="_blank"><strong>here</strong></a>
+												</p>												
+											</div>
+										</div>
+										<div class="h100 relative">						
+											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
+										<div class="btn-play-wrap-touch mx-auto my-auto">
+											<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
+											class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+										</div>												
+										</div>										
+									</div>
+									<div class="fadeout-btm"></div>							
+								<div class="touch-hidden h100 col-lg-12 textoverlay-desktop textoverlay-toggle light-theme absolute">
+									<div class="loader bg-offwhite">
+										<div class="h100">						
+											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
+										</div>
+										<div class="light-theme overlay c-all">
+											<div class="col-lg-8 text-animate txt-l c-all">
+												<div>
+													<h2 class="mb-4 s-t m-h">Color /<strong>Material </strong>/ Finish</h2>
+													<h2 class="mb-4 s-t md-up-h"><strong>CMF</strong></h2>
+													<p>
+													When we're happy with our model, it's time to give it its color, material and finish.</p>
+													<p>
+													To evaluate the progress, you may use a real-time rendering viewer downloadable from the link below.<br>
+													Check out the video below to see how it works!
+													</p>
+													<p>
+													Here, You may also open up the model I'm working on at any time, to see how things are shaping up!</p>
+													<p>
+													Get Keyshot Viewer free <a href="https://www.keyshot.com/viewer/" target="_blank"><strong>here</strong></a>
+													</p>	
+													<div class="btn-play-wrap mx-auto my-auto">
+														<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
+														class="btn-play"><span class="ion ion-ios-play"></span></a></p>
+													</div>
+												</div>
+											</div>
+										</div>							
+									</div>
+								</div>							
+							</div>							
+							<div id="keyshot-desktop" class="owl-hide-touch item cont light-theme">
 									<div class="fadeout-top"></div>													
 									<div class="absolute hw100 c-all">
 										<div class="text-animate c-all txt-l">
