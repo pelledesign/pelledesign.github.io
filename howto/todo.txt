@@ -2,8 +2,6 @@
 /* general */
 fix ipad 
 rellax logos ipad
-remove project icons mobile?
-load 3d btns and such - extoverlay prevents it
 center info texts portrait/touch 
 hero img + font
 
