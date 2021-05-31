@@ -17676,6 +17676,12 @@ height:100vh !important;
 overflow:hidden;	
 }
 
+@media screen and (min-width: 768px) and (orientation:portrait) {
+.portfolio-section {
+height:65vh !important;	
+}
+}
+
 
 .img-close {
 position:fixed;
@@ -17713,7 +17719,10 @@ fill: #e8e8e8;
 
 
 
-
-
+@media screen and (max-width: 575px) {
+.title .row div:nth-of-type(2) {
+display:none;	
+}
+}
 
 

@@ -1,8 +1,9 @@
 
 /* general */
+fix ipad 
+rellax logos ipad
 remove project icons mobile?
 center info texts portrait/touch 
-ipad props
 hero img + font
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc

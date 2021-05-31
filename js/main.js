@@ -49,6 +49,7 @@ $('body').on('click', ":not(header, header *)", function(){
 
 $('header a.nav-link').on('click',  function(){
 	$('.navbar-collapse').removeClass('show');
+	$('.navbar-toggler').removeClass('open').addClass('collapsed');
 });
 
 /* $('header .nav-link').on('click', function(){
@@ -266,11 +267,11 @@ var slider_id =  $(this).attr('id');
 	}
 	
 	if ($(window).width() < 992) {
-	$('#' + slider_id + ' .owl-hide-medium-down').remove();
+	$('#' + slider_id + ' .owl-hide-md-down').remove();
 	}
 
 	if ($(window).width() > 767) {
-	$('#' + slider_id + ' .owl-hide-medium-up').remove();
+	$('#' + slider_id + ' .owl-hide-md-up').remove();
 	}
 	
 	if ($(window).width() > 991) {
@@ -280,6 +281,10 @@ var slider_id =  $(this).attr('id');
 	if(window.innerHeight > window.innerWidth){
 	$('#' + slider_id + ' .owl-hide-portrait').remove();
 	}
+
+/* 	if(window.innerHeight > window.innerWidth && $(window).width() > 767){
+	alert('ok')
+	} */
 	
 if(is_touch_device()) {
 	all_sliders.on('initialize.owl.carousel', function(event) {
