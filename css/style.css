@@ -15046,10 +15046,7 @@ padding:0 !important;
 }
 }
 
-.text-box {	
-padding:30px;
-overflow-y:auto;
-}
+
 
 /* @media (max-width: 768px) {
 .text-box {
@@ -16510,9 +16507,14 @@ padding-bottom: 3px !important;
   opacity: .2 !important; 
 }
 
+.text-box {	
+padding:30px;
+/* overflow-y:auto; */
+}
+
 .text-animate {
 transition: .3s ease;
-/* overflow-y:scroll; */
+overflow-y:scroll;
 height:100%;
 width:100%;
 text-align:center;
@@ -16527,7 +16529,7 @@ margin-top:30px;
 padding-top:90px;	
 padding-bottom:50px;	
 height:100%;
-overflow: scroll; /*   */
+/* overflow: scroll; */ /*   */
 }
 
 @media (orientation:landscape) {
