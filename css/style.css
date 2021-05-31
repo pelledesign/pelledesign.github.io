@@ -16524,7 +16524,7 @@ margin-top:30px;
 
 .text-animate > div:first-child:not(.ignore),
 .text-box > div:first-child:not(.ignore) { 
-padding-top:50px;	
+padding-top:90px;	
 padding-bottom:50px;	
 height:100%;
 overflow: scroll; /*   */
