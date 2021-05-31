@@ -15048,6 +15048,7 @@ padding:0 !important;
 
 .text-box {	
 padding:30px;
+overflow-y:auto;
 }
 
 /* @media (max-width: 768px) {
@@ -16521,7 +16522,8 @@ margin-top:30px;
     padding-right: 1.75rem;
 }
 
-.text-animate > div:first-child:not(.ignore) {
+.text-animate > div:first-child:not(.ignore),
+.text-box > div:first-child:not(.ignore) { 
 padding-top:50px;	
 padding-bottom:50px;	
 height:100%;
