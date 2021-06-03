@@ -1256,30 +1256,44 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-							<div class="item hw100 dropshadow medium-theme">					
+							<div class="item hw100 dropshadow light-theme">	
+							<video id="spotify-video" muted class="lazy hw100" data-src="spotify/animations/path.mp4" data-poster="spotify/animations/poster.png">
+							  <source type="video/mp4" data-src="spotify/animations/path.mp4" />
+							</video>							
+<!-- 							<video id="spotify-video" class="hw100">
+							  <source src="spotify/animations/path.mp4" type="video/mp4" />
+							</video>	 -->
+							<div id="play-video" class="c-absolute btn btn-outline">play again</div>							
+<!-- 							<div class="invisible hidden">
+							video options:
+							loop
+							autoplay
+							muted - needed for autoplay
+							</div> -->
+<!-- 							<video 
+							class="hw100"
+							playsinline 
+							autoplay 
+							muted 							
+						   >
+							  <source src="spotify/animations/path.mp4" type="video/mp4" />
+							</video>	 -->						
+<!-- 								<video class="lazy" 
+								controls 
+								autoplay
+								width="620" 
+								data-src="spotify/animations/path.mp4" 
+								data-poster="lazy.jpg">
+								  <source type="video/mp4" data-src="spotify/animations/path.mp4"/>
+								</video>	 -->														 
+							</div>
+<!-- 							<div class="item hw100 dropshadow medium-theme">					
 								<div class="loader relative invisible zoom-in hide-scroll">				
-									<!-- <div class="cover hw100 rellax-props"></div> -->
-<!-- 									<div class="rellax medium-theme" data-rellax-speed="5" data-rellax-percentage="0.5" style="opacity:0.5 height:150% !important">
-										<img src="" data-src="spotify/images/bg.jpg" class="lazy cover color-burn">
-									</div> -->	
 									<div class="rellax medium-theme" data-rellax-speed="5" data-rellax-percentage="0.5" style="height:150% !important">
 										<img src="" data-src="spotify/images/bg.png" class="lazy cover">
 									</div>
-<!-- 									<div class="medium-opacity overlay c-all">
-										<div class="text-animate c-all txt-l">
-											<div>
-											  <span class="d-block text-uppercase">Product Design</span>
-												<h2 class="s-t element-animate">Spotify <strong>Colors</strong></h2>
-												<p>Research shows that despite all modern sources of music, the way we
-												most often share music, is still by word of mouth.
-												</p>	
-												<p>This project aims to improve the experience of sharing digital music
-												</p>	  
-											</div>
-										</div>
-									</div> -->
 								</div>														 
-							</div>
+							</div> -->
 						<div class="c-all view-btn">
 							<a href="#spotify-process-popup" class="btn btn-outline open-popup">View</a>					
 						</div>							
@@ -4508,7 +4522,37 @@
 		<script src="js/load-more-button.js"></script>
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script>
-
+		<script src="js/isInViewport.js"></script>
+		
+		<!-- video --> 
+		<script>
+			$(window).scroll(function() {
+				 clearTimeout($.data(this, 'scrollTimer'));
+				 $.data(this, 'scrollTimer', setTimeout(function() {
+						$('video').each(function(){
+							 if ($(this).is(":in-viewport")) {
+								  $(this)[0].play();
+								  //alert('visible');
+							 } else {
+								  $(this)[0].pause();
+							 }
+						})
+					  //alert('stopped scrolling');
+				 }, 250));
+			});
+		</script>
+		<script>
+		$('#play-video').on("click", function() {
+		$('#spotify-video')[0].play();	 
+		});			
+		</script>
+<!-- 		<script>
+  $('#spotify-video').on('loadeddata',function(){
+$('#spotify-video')[0].play();
+alert('loaded');
+});
+		</script> -->
+		
 		<!-- section proportions -->		
 		<script>
 		
@@ -4542,6 +4586,7 @@
 		//});	
 	
 		</script>
+
 
 		<!-- scroll snap  - for desktop popups -->		
 		<script>

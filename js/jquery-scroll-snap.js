@@ -74,7 +74,7 @@
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 400 ); //time after scroll  before snap. default 200
+      }, 700 ); //time after scroll  before snap. default 200
     } );
   };
 } )( jQuery );

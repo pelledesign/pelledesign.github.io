@@ -303,6 +303,11 @@ if(is_touch_device()) {
 		}	
 });		
 	
+/* lazy video*/
+/*   $('#spotify-video').on('loadstart',function(){
+$('#spotify-video')[0].play();
+alert('loaded');
+}); */
 
 /* remove loader when slide is done loading - Owl*/
 all_sliders.on('loaded.owl.lazy', function() {
