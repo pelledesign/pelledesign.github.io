@@ -77,9 +77,9 @@
 	<body> 
 		
 		<!-- alert -->
-		<script>
+<!-- 		<script>
 		alert('clean video');
-		</script>	
+		</script> -->	
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -1261,7 +1261,9 @@
 						<!-- video formats browser support -->
 						<!-- use multiple sources as fallback -->
 						<!-- MP4 is technically MPEG4 Part 14 -->
-						<!-- MP4 H.264 is supported by all major browsers -->
+						<!-- MP4 H.264 is supported by all major browsers -->						
+						<!-- desktop - chrome edge opera firefox OK
+							  firefox, opera NOT OK	 -->					
 						
 						<!-- Google Chrome: h.264, Ogg Theora, WebM with VP8 and VP9
 							 Internet Explorer 9: h.264
@@ -1271,13 +1273,13 @@
 							 Vivaldi: h.264, Ogg Theora, WebM with VP8 and VP9
 							 Microsoft Edge: MPEG-4 ASP, h.264, h.265		 -->					
 							
-							<video id="spotify-video"  controls class="hw100" poster="spotify/animations/poster.png"  >
-							  <source type="video/mp4" src="spotify/animations/path.mp4"/>
-							</video>	
+<!-- 							<video id="spotify-video"  muted class="hw100" poster="spotify/animations/poster.png"  >
+							  <source src="spotify/animations/path.m4v"/>
+							</video> -->	
 							
-<!-- 							<video id="spotify-video" playsinline muted class="lazy hw100" data-src="spotify/animations/path.mp4" data-poster="spotify/animations/poster.png">
-							  <source type="video/mp4" data-src="spotify/animations/path.mp4" />
-							</video>	 -->	
+							<video id="spotify-video" playsinline muted class="lazy hw100" data-poster="spotify/animations/poster.png">
+							  <source type="video/mp4" data-src="spotify/animations/path.m4v" />
+							</video>		
 							
 <!-- 							<video id="spotify-video" class="hw100">
 							  <source src="spotify/animations/path.mp4" type="video/mp4" />
@@ -4546,10 +4548,7 @@
 		
 		<!-- video --> 
 		<script>
-		
-		//desktop - chrome edge OK
-		//firefox, opera NOT OK
-		
+				
 		//mobile edge, firefox, chrome safari NOT OK
 			$(window).scroll(function() {
 				 clearTimeout($.data(this, 'scrollTimer'));
