@@ -78,7 +78,7 @@
 		
 		<!-- alert -->
 		<script>
-		alert('2 sources');
+		alert('2 sources + autoplay');
 		</script>	
 
 		<!-- up button -->
@@ -4516,7 +4516,24 @@
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- video --> 
-
+		<script>
+				
+		//mobile edge, firefox, chrome safari NOT OK
+			$(window).scroll(function() {
+				 clearTimeout($.data(this, 'scrollTimer'));
+				 $.data(this, 'scrollTimer', setTimeout(function() {
+						$('video').each(function(){
+							 if ($(this).is(":in-viewport")) {
+								  $(this)[0].play();
+								  //alert('visible');
+							 } else {
+								  $(this)[0].pause();
+							 }
+						})
+					  //alert('stopped scrolling');
+				 }, 250));
+			});
+		</script>
 		<script>
 		$('#play-video').on("click", function() {
 		$('#spotify-video')[0].play();	 
