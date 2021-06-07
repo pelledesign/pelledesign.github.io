@@ -78,7 +78,7 @@
 		
 		<!-- alert -->
 		<script>
-		alert('controls');
+		alert('removed autoplay');
 		</script>	
 
 		<!-- up button -->
@@ -1266,7 +1266,7 @@
 						mobile - 
 						-->				
 							
-							<video id="spotify-video" controls  playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
+							<video id="spotify-video" controls playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
 							  <source src="spotify/animations/path.m4v"/>
 							</video>	
 							
@@ -4513,24 +4513,7 @@
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- video --> 
-		<script>
-				
-		//mobile edge, firefox, chrome safari NOT OK
-			$(window).scroll(function() {
-				 clearTimeout($.data(this, 'scrollTimer'));
-				 $.data(this, 'scrollTimer', setTimeout(function() {
-						$('video').each(function(){
-							 if ($(this).is(":in-viewport")) {
-								  $(this)[0].play();
-								  //alert('visible');
-							 } else {
-								  $(this)[0].pause();
-							 }
-						})
-					  //alert('stopped scrolling');
-				 }, 250));
-			});
-		</script>
+
 		<script>
 		$('#play-video').on("click", function() {
 		$('#spotify-video')[0].play();	 
