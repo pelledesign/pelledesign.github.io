@@ -77,9 +77,9 @@
 	<body> 
 		
 		<!-- alert -->
-		<script>
+<!-- 		<script>
 		alert('lazy');
-		</script>	
+		</script>	 -->
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -1256,30 +1256,15 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-							<div class="item hw100 dropshadow light-theme">	
-							
-<!-- 				   video formats browser support
-						use multiple sources as fallback
-						MP4 is technically MPEG4 Part 14
-						MP4 H.264 is supported by all major browsers						
-						desktop - chrome edge opera firefox OK 
-						mobile - 
-						-->
-<!-- 
-						pc desktop -    chrome edge firefox opera OK
-						mobile - safari chrome edge firefox opera OK						 
--->
-							
+							<div class="item video-container hw100 dropshadow light-theme">													
+								<video id="spotify-video" playsinline muted class="lazy hw100" data-poster="spotify/animations/poster.png">
+								  <source data-src="spotify/animations/path.mpg"/>
+								  <source data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+								</video>
 <!-- 							<video id="spotify-video" playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
 							  <source src="spotify/animations/path.mpg"/>
 							  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-							</video>	 -->
-							
-								<video id="spotify-video" playsinline muted class="lazy hw100 invisible" data-poster="spotify/animations/poster.png">
-<!-- 								  <source type="video/mp4" data-src="spotify/animations/path.m4v" /> -->
-								  <source src="spotify/animations/path.mpg"/>
-								  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-								</video>																
+							</video>	 -->								
 								<div id="play-video" class="c-absolute next-play-circle invisible"></div>																				 
 							</div>
 <!-- 							<div class="item hw100 dropshadow medium-theme">					
@@ -4521,7 +4506,17 @@
 		
 		<!-- video --> 
 
-		<script>		
+		<script>	
+
+			//video formats browser support
+			//use multiple sources as fallback
+			//MP4 is technically MPEG4 Part 14
+			//MP4 H.264 is supported by all major browsers						
+			//desktop - chrome edge opera firefox OK 
+			//mobile - 						
+			//pc desktop -    chrome edge firefox opera OK
+			//mobile - safari chrome edge firefox opera OK						 
+		
 			$(window).scroll(function() {
 				 clearTimeout($.data(this, 'scrollTimer'));
 				 $.data(this, 'scrollTimer', setTimeout(function() {
@@ -4533,7 +4528,7 @@
 									$(this).addClass('played');
 									});
 									
-								  $('#play-video').addClass('invisible');
+								  $(this).closest('.video-container').find('play-video').addClass('invisible');
 
 							 } else {
 								  $(this)[0].pause();
@@ -4542,22 +4537,22 @@
 
 				 }, 250));
 			});
+			
+			$('#play-video').on("click", function() {
+			//$('#spotify-video')[0].play();
+			$(this).closest('.video-container').find('video')[0].play();
+			$(this).addClass('invisible');	
+			});					
+
+			  $(document).ready(function(){
+				 $('video').on('ended',function(){
+					//alert('Video has ended!');
+					$(this).closest('.video-container').find('#play-video').removeClass('invisible').addClass('fade-in');
+				 });
+			  });
+			
 		</script>
-<!-- 		<script>
-		$('#play-video').on("click", function() {
-		$('#spotify-video')[0].play();
-		$(this).addClass('invisible');	
-		});			
-		</script> -->
-		<script>
-		  $(document).ready(function(){
-			 $('video').on('ended',function(){
-				//alert('Video has ended!');
-				$('#play-video').removeClass('invisible').addClass('fade-in');
-			 });
-		  });
-		</script>		
-		
+
 		<!-- section proportions -->		
 		<script>
 		
