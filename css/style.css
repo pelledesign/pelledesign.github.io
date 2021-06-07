@@ -17740,4 +17740,10 @@ display:none;
 }
 }
 
+#play-video {
+width:100px;	
+}
 
+#play-video svg {
+fill:red;	
+}

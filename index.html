@@ -78,7 +78,7 @@
 		
 		<!-- alert -->
 		<script>
-		alert('2 sources + autoplay');
+		alert('lazy');
 		</script>	
 
 		<!-- up button -->
@@ -1264,19 +1264,23 @@
 						MP4 H.264 is supported by all major browsers						
 						desktop - chrome edge opera firefox OK 
 						mobile - 
-						-->				
+						-->
+<!-- 
+						pc desktop -    chrome edge firefox opera OK
+						mobile - safari chrome edge firefox opera OK						 
+-->
 							
-							<video id="spotify-video" playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
-<!-- 							  <source src="spotify/animations/path.m4v"/>
-							  <source src="spotify/animations/path.mp4"/> -->
+<!-- 							<video id="spotify-video" playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
 							  <source src="spotify/animations/path.mpg"/>
 							  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-							</video>	
+							</video>	 -->
 							
-<!-- 								<video id="spotify-video" playsinline muted class="lazy hw100" data-poster="spotify/animations/poster.png">
-								  <source type="video/mp4" data-src="spotify/animations/path.m4v" />
-								</video>	 -->															
-								<div id="play-video" class="c-absolute btn btn-outline">play again</div>																				 
+								<video id="spotify-video" playsinline muted class="lazy hw100 invisible" data-poster="spotify/animations/poster.png">
+<!-- 								  <source type="video/mp4" data-src="spotify/animations/path.m4v" /> -->
+								  <source src="spotify/animations/path.mpg"/>
+								  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+								</video>																
+								<div id="play-video" class="c-absolute next-play-circle invisible"></div>																				 
 							</div>
 <!-- 							<div class="item hw100 dropshadow medium-theme">					
 								<div class="loader relative invisible zoom-in hide-scroll">				
@@ -4516,35 +4520,43 @@
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- video --> 
-		<script>
-				
-		//mobile edge, firefox, chrome safari NOT OK
+
+		<script>		
 			$(window).scroll(function() {
 				 clearTimeout($.data(this, 'scrollTimer'));
 				 $.data(this, 'scrollTimer', setTimeout(function() {
 						$('video').each(function(){
-							 if ($(this).is(":in-viewport")) {
+							 if ( $(this).is(":in-viewport") && (!$(this).hasClass('played')) ){
 								  $(this)[0].play();
-								  //alert('visible');
+								  
+									$(this).on('ended',function(){
+									$(this).addClass('played');
+									});
+									
+								  $('#play-video').addClass('invisible');
+
 							 } else {
 								  $(this)[0].pause();
 							 }
 						})
-					  //alert('stopped scrolling');
+
 				 }, 250));
 			});
 		</script>
-		<script>
-		$('#play-video').on("click", function() {
-		$('#spotify-video')[0].play();	 
-		});			
-		</script>
 <!-- 		<script>
-  $('#spotify-video').on('loadeddata',function(){
-$('#spotify-video')[0].play();
-alert('loaded');
-});
+		$('#play-video').on("click", function() {
+		$('#spotify-video')[0].play();
+		$(this).addClass('invisible');	
+		});			
 		</script> -->
+		<script>
+		  $(document).ready(function(){
+			 $('video').on('ended',function(){
+				//alert('Video has ended!');
+				$('#play-video').removeClass('invisible').addClass('fade-in');
+			 });
+		  });
+		</script>		
 		
 		<!-- section proportions -->		
 		<script>
