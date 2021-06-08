@@ -15566,6 +15566,15 @@ border-bottom: none;
   background-position: center center;
   object-fit: cover;
 }
+
+@media (orientation:portrait) {
+.cover-portrait {
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+}
+
 .contain {
   background-size: contain;
   object-fit: contain;
@@ -17741,7 +17750,7 @@ display:none;
 }
 
 #play-video {
-width:100px;	
+width:4rem;	
 }
 
 #play-video svg {

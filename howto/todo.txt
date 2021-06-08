@@ -1,17 +1,18 @@
 
 /* general */
+spotify hero + xr + video
 fix ipad 
 rellax logos ipad
-center info texts portrait/touch 
 hero img + font
+belmar - finish model
+converse - make one rough key sketch
+bagheera - new color, simple bright	
 
-kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
-bagheera new color, simple bright	
-check all browsers +  devices
+
+
+function övrigt (
 
 /* converse */
-make one rough key sketch
-
 /* akg */
 /* poc */
 /* bagheera */
@@ -19,27 +20,17 @@ make one rough key sketch
 /* haglöfs */
 /* specialized */
 /* spotify */
-hero
-model
 /* bel mar */
-finish model
-
 /* design process */
-mobile
 /* footer */
 
-
-function övrigt (
-tandtråd
-veckoplan när klart med detta - även privata måbra saker
+kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+check all browsers +  devices
 
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
  
 watch .git
-
-.portrait-col-12 justerar höjd automatiskt istället för en bestämd procent
-
 
 march: with about: 35, 39
 without: 58
