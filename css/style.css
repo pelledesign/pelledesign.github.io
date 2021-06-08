@@ -17737,18 +17737,18 @@ width: 60%;
 }
 }
 
-#hero svg {
+/* #hero svg {
 fill: #e8e8e8;	
-}
+} */
 
 
-
-@media screen and (max-width: 575px) {
+/* show or hide title icons */
+/* @media screen and (max-width: 575px) {
 .title .row div:nth-of-type(2) {
 display:none;	
 }
 }
-
+ */
 #play-video {
 width:4rem;	
 }
