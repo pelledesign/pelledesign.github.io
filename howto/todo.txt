@@ -1,5 +1,7 @@
 
 /* general */
+test light / dark theme desktop and choose which is best for dektop and mobile
+drop shadows sections
 frames in premiere > transarent video
 spotify hero + xr + video
 fix ipad 
