@@ -77,9 +77,9 @@
 	<body> 
 		
 		<!-- alert -->
-<!-- 		<script>
-		alert('lazy');
-		</script>	 -->
+		<script>
+		alert('mpg only');
+		</script>	
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -1190,7 +1190,7 @@
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 							 <h3 class="h3 txt-l"><strong>POC </strong>Ski Goggles</h3>
 							</div>	
-							<div class="col-lg-6 ">  
+							<div class="col-lg-6 col-xs-4">  
 								<div class="c-100 justify-content-end">
 										<a href="#poc-xr-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 										<a href="#poc-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
@@ -1265,16 +1265,17 @@
 						</div>
 					</div>		
 					<div id="slider-container">	
-							<div class="item video-container hw100 dropshadow light-theme">													
-								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png">
+							<div class="item video-container hw100 dropshadow light-theme relative">													
+								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="">
 								  <source data-src="spotify/animations/path.mpg"/>
-								  <source data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+								  <!-- <source data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/> -->
 								</video>
 <!-- 							<video id="spotify-video" playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
 							  <source src="spotify/animations/path.mpg"/>
 							  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
 							</video>	 -->								
 								<div id="play-video" class="c-absolute next-play-circle invisible"></div>																				 
+								<div class="c-absolute hw100" style="background:gold;"></div>																				 
 							</div>
 <!-- 							<div class="item hw100 dropshadow medium-theme">					
 								<div class="loader relative invisible zoom-in hide-scroll">				
