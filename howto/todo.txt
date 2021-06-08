@@ -1,5 +1,6 @@
 
 /* general */
+frames in premiere > transarent video
 spotify hero + xr + video
 fix ipad 
 rellax logos ipad

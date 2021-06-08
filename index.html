@@ -78,7 +78,7 @@
 		
 		<!-- alert -->
 		<script>
-		alert('mp4 only');
+		alert('new bagheera');
 		</script>	
 
 		<!-- up button -->
@@ -258,7 +258,7 @@
 						<div class="fadeout-top md-up-h"></div>					
 						<div id="myservices" class="container c-all h100">								
 								<div class="row h100 c-all text-box">
-									<div class="col-lg-5 mr-auto mb-3 mb-lg-4 ">
+									<div class="col-lg-5 mr-auto mb-3 mb-lg-4 h-auto-portrait">
 										<h2 class="element-animate">Featured <strong>Services</strong></h2>
 										<p class="m-h">My main services are built to meet most popular demands.<br>
 										Have a project that doesn't fit here?<br></p>
@@ -304,7 +304,7 @@
 				</div>	
 			</div>	
 		</div>
-		
+		<h3 class="s-t element-animate">LATEST <strong>WORK</strong></h3>		
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -1306,6 +1306,26 @@
 					</div>		
 					<div id="slider-container">
 						<div id="bagheera-more" class="owl-carousel dropshadow">
+							<div class="item owl-hide-lg-up invisible zoom-in light-theme">
+<!-- 								<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
+									<div class="rellax-logo akg-logo light-theme bg-none hw100"></div>
+								</div> -->
+								<div class="textoverlay loader relative">
+									<img class="owl-lazy cover" src="" data-src="Bagheera/images/gallery/twisted.png">
+									<div class="x-theme overlay high-opacity c-all desktop-hidden">
+										<div class="text-animate c-all" style="height:100%;">
+											<div>
+												<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
+												<p> Headphones for Vienna based audio products company AKG. <br>
+												Retro styled light-weight and easy to handle headphones with focus on comfort.	
+												</p>										
+												<p><span class="open-popup btn">Swipe to View</span></p>												
+											</div>
+
+										</div>
+									</div>																
+								</div>
+							</div>						
 							<div class="item owl-hide-lg-up light-theme zoom-container">
 								<div class="zoom-icon"></div>
 								<div class="textoverlay">																
@@ -4575,18 +4595,14 @@
 		<!-- scroll snap  - for body -->		
 		<script>
 		
-	if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
-	//alert('large portrait');
-	$('.portfolio-section').addClass('snap');
-	}			
+		if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
+		$('.portfolio-section').addClass('snap');
+		}			
 		
 		$( '.snap' ).scrollSnap({
 		  speed: 200 // animation time
 		});
-		//$( '.portfolio-section' ).scrollSnap({
-		  //speed: 200
-		//});	
-	
+		
 		</script>
 
 
