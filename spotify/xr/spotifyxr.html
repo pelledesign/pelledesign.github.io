@@ -1,0 +1,86 @@
+<!-- instructions:
+
+1. change to the corresponding name at the marks 1, 2 3 etc
+inject color scheme in script in index.html:
+
+2. change to the corresponding resolution at "4"
+
+3. change to the corresponding mout of frames at "5"
+
+3. set starting frame at "6"
+
+4. set color theme in "popup themes script in index.html
+
+5. add iframe class to theme selectt button function in "iframe inject, reload + bg select buttons " script
+-->
+
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>KeyShotXR</title>
+    <style type="text/css">
+		body { -ms-touch-action: none; 
+		display:flex !important; 
+		align-items:center !important; 
+		justify-content: center !important; 
+		text-align:center !important; 
+		height:100% !important;
+		width:100%;	}
+		
+		div {margin-left:auto; margin-right:auto;}
+		html, body {height:100%;}
+    </style>
+
+<!-- 	<script type="text/javascript" src="Converse/xr/files/KeyShotXR.js"></script> -->
+		<script type="text/javascript" src="../../js/keyshotxr.js"></script>
+		<script type="text/javascript">
+	
+var create_spotifyxr; // 1
+
+      function keyshot_converse() { 		// 2
+        var nameOfDiv = "div_spotify";		// 3
+        var folderName = "";
+        var viewPortWidth = 400;				// 4
+        var viewPortHeight = 700;			// 4
+        var backgroundColor = "transparent";
+        var uCount = 36;						// 5
+        var vCount = 1;
+        var uWrap = false;
+        var vWrap = false;
+        var uMouseSensitivity = -0.2;
+        var vMouseSensitivity = 0.00555556;
+        var uStartIndex = 17;					// 6
+        var vStartIndex = 0;
+        var minZoom = 1;
+        var maxZoom = 1;
+        var rotationDamping = 0.96;
+        var downScaleToBrowser = true;
+        var addDownScaleGUIButton = false;
+        var downloadOnInteraction = true;
+        var imageExtension = "png";
+        var showLoading = true;
+		  var loadingIcon = "p_spinner_white.svg";
+        <!-- var loadingIcon = "ks_logo_white.png"; --> // Set to empty string for default icon.
+        var allowFullscreen = true; // Double-click in desktop browsers for fullscreen.
+        var uReverse = false;
+        var vReverse = false;
+        var hotspots = {};
+        var isIBooksWidget = false;
+<!--         var fullscreenId = "openfullscreen"; -->
+       
+		// 1
+        create_spotifyxr = new keyshotXR(nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots,isIBooksWidget);
+      }
+
+      window.onload = keyshot_converse; 	// 2
+    </script>
+  </head>
+  <body oncontextmenu="return false;">
+    <div id="div_spotify"></div>				<!-- 3 -->
+  </body>
+</html> 
+
+	  

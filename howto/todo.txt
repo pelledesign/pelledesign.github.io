@@ -1,9 +1,12 @@
 
 /* general */
+info popups go off screen
+center texts
+change concpt sketch in process
+spotify hero + xr + animate exploded xr + video
 test light / dark theme desktop and choose which is best for dektop and mobile
-drop shadows sections
+drop shadows sections?
 frames in premiere > transarent video
-spotify hero + xr + video
 fix ipad 
 rellax logos ipad
 hero img + font

@@ -77,9 +77,9 @@
 	<body> 
 		
 		<!-- alert -->
-		<script>
+<!-- 		<script>
 		alert('new ');
-		</script>	
+		</script>	 -->
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -305,6 +305,7 @@
 			</div>	
 		</div>
 		<h3 class="s-t element-animate">LATEST <strong>WORK</strong></h3>		
+		
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -1189,7 +1190,7 @@
 							</div>	
 							<div class="col-lg-6 col-xs-4">  
 								<div class="c-100 justify-content-end">
-										<a href="#poc-xr-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
+										<a href="#poc-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup fullscreen"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
 										<a href="#poc-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup fullscreen"><div class="ion-android-open invisible flip-in-y"></div></a>
 									</div>
 							</div>
@@ -2562,9 +2563,7 @@
 												Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p>
 												<p>
 												Try it out in the example below by selecting different cmf swatches for different part.
-<!-- 													</p>													<p>
-												Or just let me take care of the combinations.
-												</p> -->
+												</p>
 												
 											</div>
 										</div>
@@ -3279,6 +3278,35 @@
 					  $("#poc-wireframe-popup").removeClass("loader");
 				});
 			</script>
+			<div id="spotify-xr-popup" class="popup mfp-hide">
+				<div class="col h100">
+					<div class="row m0 upper h100">	
+						<div>
+							<div class="center-logo-portrait text-center flex justify-content-center">
+								<div>
+								<h3 class="h3 txt-c txt-l-landscape invisible fade-in-up w100"><strong>3D </strong>VIEW</h3>
+									<div class="flex justify-content-center">
+										<div id="bg-button" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
+										<div id="bg-button2" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
+										<div id="bg-button3" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>	
+									</div>
+								</div>	
+							</div>			
+						</div>
+						<div class="middle col-lg-12 c-100">				
+							<div class="c-100 w100">
+								<iframe 
+								class="spotify lazy invisible fade-in" 
+								data-src="spotify/xr/spotifyxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>							
+							</div>
+						</div>			
+					</div>
+				</div>		
+			</div>			
 			<div id="spotify-process-popup" class="popup mfp-hide x-theme zoom-in fullscreen"> 	  <!-- style="padding:4vw !important;" -->	
 			
 				<!-- slide classes --> 
@@ -4235,7 +4263,7 @@
 		<!-- light-theme -->
 		$('#popups-div').find('#converse-wireframe-popup, #converse-model-popup, #converse-measures-popup, #akg-process-popup2, #akg-model-popup, #bagheera-xr-popup, #poc-process-popup2, #poc-xr-popup, #poc-model-popup, #specialized-model-popup, #haglofs-model-popup, #design-process-popup, #belmar-model-popup, #services-popup').addClass('light-theme');
 		<!-- medium-theme -->
-		$('#popups-div').find('#bagheera-webconfig-popup, #specialized-xr-popup, #alcon-xr-popup').addClass('medium-theme');
+		$('#popups-div').find('#bagheera-webconfig-popup, #specialized-xr-popup, #alcon-xr-popup, #spotify-xr-popup').addClass('medium-theme');
 		</script>		
 
 		<!-- tooltips -->
@@ -4247,7 +4275,7 @@
 			Design Process
 			</div>
 			<div id="icon-info-3d-popup">
-			Rendered 3D View
+			<span><strong>Rendered</strong> 3D View </span>
 			</div>	
 			<div id="icon-info-swatches-popup">
 			Select Background
@@ -4403,7 +4431,8 @@
 			<p>CAD output is often in the form of electronic files for print, machining, or other manufacturing operations.</p>
 			</div>
 			<div id="renderings-info">
-		<p> Renderings are as opposed to rough sketches, more detailed drawings that are typically drawn when we want to explore a concept further and more in detail - to  explain functions, form, color, material and so on.</p>
+			<p> Renderings are as opposed to rough sketches, more detailed drawings that are typically drawn when we want to explore a concept further and more in detail - to  explain functions, form, color, material and so on.</p>
+			</div>
 		</div>
 		</div>
 
@@ -4872,7 +4901,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 		  });
 		
 			//inject xr styles 
-			$(".akg, .bagheera, .bagheera-process, .converse, .converse-more, .poc, .poc-process, .specialized, .haglofs, .alcon, .akg-process").on("load", function() {
+			$(".akg, .bagheera, .bagheera-process, .converse, .converse-more, .poc, .poc-process, .specialized, .spotify, .haglofs, .alcon, .akg-process").on("load", function() {
 			
 			themeclr ="light";
 			brand = $(this).attr('class').split(' ')[0];
@@ -5020,6 +5049,28 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 			});	
 		</script>
 
+
+<!-- <script>
+$(function() {
+    $('.info-icon').hover(function() {
+        var win=$(this);
+        if(win.length>0) {
+            var screenwidth=$('body').width();
+            var width=win.width();
+            var pos=win.position();
+				alert(win);
+            var rightpos=width+pos.left;
+            if(rightpos>screenwidth) {
+                var moveleft=rightpos-screenwidth;
+                win.css('margin-left','-'+moveleft+'px');
+            } else {
+                win.css('margin-left','0px');
+            }
+        }
+    });
+});
+</script> -->
+
 		<!-- tooltips -->
 		<script>
 	<!-- start desktop -->	
@@ -5030,29 +5081,39 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 	$(".info-icon").hover(function(e) {
 		if($(this).parents().hasClass("dark-theme"))
 		{
-		bgcolor ="#fff";
-		textcolor ="#121212";
+		bgcolor ="rgba(0, 0, 0, 0.7)";
+		textcolor ="#fff";
 	<!-- 	alert('has dark theme'); -->
 		}
 		else
 		{ 
-		bgcolor ="#121212";
-		textcolor ="#fff";
+		//bgcolor ="#fff";
+		bgcolor ="rgba(255, 255, 255, 0.9)";
+		textcolor ="#000";
+		
 		<!-- alert('hasnt dark theme'); -->
 		}
-		$($(this).data("tooltip")).css({
-			left: e.pageX + 10,
-			top: e.pageY + 10,
-			backgroundColor: bgcolor,
-			color: textcolor,		  
-		}).stop().show(100);
-		}, function() {
 
+	var screenTop = $(document).scrollTop();
+	$('#content').css('top', screenTop);
+$($(this).data("tooltip")).css('display', 'flex');
+		//$(this).data("tooltip").width('30%');		
+		$($(this).data("tooltip")).css({
+			//left: e.pageX + 10,
+			//top: e.pageY + 10,
+			//left:0,
+			top: screenTop + 50,
+			backgroundColor: bgcolor,
+			color: textcolor,		
+	//display:flex,			
+		}).stop().show(200);
+		}, function() {
+		//var apa = $($(this).data("tooltip")).width();
+		//alert(apa);	
 		$($(this).data("tooltip")).hide();
 
 		});
 		
-	
 	<!-- start touch & desktop -->	
 	$(".info-icon-both").hover(function(e) {
 		if($(this).parents().hasClass("dark-theme"))
