@@ -171,10 +171,10 @@
 		</div>
 		
 		<!-- btm scroll indicator -->
-		<div id="theme-switcher" class="md-down-h">
+<!-- 		<div id="theme-switcher" class="md-down-h">
 			<div class="dark-theme-button theme-circle dark"></div>
 			<div class="light-theme-button theme-circle light"></div>				
-		</div>
+		</div> -->
 		
 		<!-- hero -->
 		<div id="hero" class="xl-up-h x-theme">
@@ -4298,9 +4298,11 @@
 			<div id="config-info-popup" class="tool-ignore">
 			Use CMF picker to explore different Color Material & Finish options
 			</div>
-			<div id="config-info-popup-options" class="tool-ignore">
+			<div id="config-info-popup-options" class="tool-ignore ignore">
+			<span>
 			Use CMF picker to explore different Color Material & Finish options<br>
 			Use arrows or counter to select parts
+			</span>
 			</div>
 			<div id="wireframe-info-popup" class="tool-ignore">
 				<div class="touch-hidden">
@@ -5078,7 +5080,7 @@ $(function() {
 
 		 }
 		else
-	$(".info-icon").hover(function(e) {
+		$(".info-icon").hover(function(e) {
 		if($(this).parents().hasClass("dark-theme"))
 		{
 		bgcolor ="rgba(0, 0, 0, 0.7)";
@@ -5095,21 +5097,23 @@ $(function() {
 		}
 
 	var screenTop = $(document).scrollTop();
-	$('#content').css('top', screenTop);
-$($(this).data("tooltip")).css('display', 'flex');
-		//$(this).data("tooltip").width('30%');		
+
+		$($(this).data("tooltip")).css('display', 'flex');
+		$(this).closest('#section-container').prepend('<div id="tooltip-background"></div>');
+		$(this).closest('#section-container').find('#tooltip-background').css('background-color', bgcolor).addClass('pens');
 		$($(this).data("tooltip")).css({
 			//left: e.pageX + 10,
 			//top: e.pageY + 10,
 			//left:0,
-			top: screenTop + 50,
-			backgroundColor: bgcolor,
+			top: screenTop,
+			//backgroundColor: bgcolor,
 			color: textcolor,		
 	//display:flex,			
 		}).stop().show(200);
 		}, function() {
 		//var apa = $($(this).data("tooltip")).width();
 		//alert(apa);	
+		$(this).closest('#section-container').find('#tooltip-background').remove();
 		$($(this).data("tooltip")).hide();
 
 		});
@@ -5136,7 +5140,7 @@ $($(this).data("tooltip")).css('display', 'flex');
 		}).stop().show(100);
 		}, function() {
 
-		$($(this).data("tooltip")).hide();
+		//$($(this).data("tooltip")).hide();
 
 		});		
 		</script>			

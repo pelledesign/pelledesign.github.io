@@ -1,6 +1,6 @@
 
 /* general */
-info popups go off screen
+info popups in popups
 center texts
 change concpt sketch in process
 spotify hero + xr + animate exploded xr + video
