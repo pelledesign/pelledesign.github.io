@@ -154,8 +154,8 @@ converse_cmf  = $('#converse-cmf'),
 akg_more  = $('#akg-more'),
 akg_more3  = $('#akg-more3'),
 akg_gallery  = $('#akg-gallery'),
-poc_process  = $('#poc-process'),
-spotify_process  = $('#spotify-process'),
+poc_more = $('#poc-more'),
+spotify_more  = $('#spotify-more'),
 bagheera_more  = $('#bagheera-more'),
 mixed_more  = $('#mixed-more'),
 mixed  = $('#mixed'),
@@ -163,8 +163,8 @@ specialized_more  = $('#specialized-more'),
 belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 apa = design_process + $('#design-process'),
-all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #akg-gallery, #poc-process, #spotify-process, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-more3, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
+main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
 about_slider.trigger('to.owl.carousel', [0, 500]);
@@ -387,7 +387,7 @@ $(window).on('orientationchange', function(){
 
 function refresh_this() {   					
 bagheera_process.trigger('refresh.owl.carousel');		
-poc_process.trigger('refresh.owl.carousel');		
+poc_more.trigger('refresh.owl.carousel');		
 
  }
  setTimeout(refresh_this, 100)
@@ -646,7 +646,7 @@ navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-andr
 	}	
  }	
 });
-poc_process.owlCarousel({
+poc_more.owlCarousel({
 /* loop:true, */
 autoplay: false,
 autoHeight: true,
@@ -674,7 +674,7 @@ responsive:{
 }
 }	
 });
-spotify_process.owlCarousel({
+spotify_more.owlCarousel({
 rewind: true,
 loop: false,	
 autoplay: false,

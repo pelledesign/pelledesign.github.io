@@ -524,7 +524,7 @@
 								<div class="iframe-container c-all textoverlay">
 									<span class="show-shaded btn btn-outline  hide-this">Load 3d - 57mb</span>	
 									<div class="model-controls">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+										<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 										<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 									</div>
 									<div class="c-all view-btn overlay img-opacity hide-this z999">
@@ -668,7 +668,7 @@
 								</div>																																			
 								<div class="item owl-hide-xs-down light-theme">
 									<div class="cont">
-										<div class="row m-h">
+<!-- 										<div class="row m-h">
 											<div class="col-12 flex">
 												<div class="col-lg-6">
 												 <h3 class="h3 invisible fade-in-up txt-l s-t m-h"><strong>3d Model</strong></h3>
@@ -677,11 +677,11 @@
 												 <h3 class="h3 invisible fade-in-up txt-r s-t"><strong>Converse </strong>Eyewear</h3>
 												</div>
 											</div>
-										</div>						
+										</div> -->						
 										<div class="middle light-theme iframe-container c-all textoverlay">
 											<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
 											<div class="model-controls">
-												<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+												<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 												<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 											</div>
 											<div class="c-all view-btn overlay img-opacity bg hide-this">									
@@ -954,14 +954,14 @@
 													</iframe>
 													<div class="desktop-hidden">
 														<div class="model-controls">
-															<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+															<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 														</div>	
 													</div>
 													<div class="overlay mini c-all light-theme bg-none">
 														<div class="col-lg-6 text-animate c-all">
 															<div class="ignore model-controls">
-																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+																<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 															</div>	
 														</div>
@@ -994,14 +994,14 @@
 														</iframe>
 														<div class="desktop-hidden">
 															<div class="model-controls">
-																<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
 																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 															</div>	
 														</div>
 														<div class="overlay mini  light-theme bg-none">
 															<div class="col-lg-6 text-animate c-all">
 																<div class="ignore model-controls">
-																	<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																	<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
 																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 																</div>	
 															</div>
@@ -1111,7 +1111,7 @@
 														<div class="overlay mini light-theme bg-none">
 															<div class="col-lg-6 text-animate c-all">
 																<div class="ignore model-controls">
-																	<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled"></div>
+																	<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
 																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 																	<a href="#converse-measures-popup" data-tooltip="#icon-info-large-popup" class="info-icon open-popup m-h"><div class="ion-android-open"></div></a>
 																</div>	
@@ -1196,51 +1196,54 @@
 							</div>
 						</div>
 					</div>		
-					<div id="slider-container">	
-						<div class="item hw100 dropshadow zoom-container light-theme">
-							<div class="zoom-icon"></div>						
-							<div class="lg-up-h loader textoverlay invisible zoom-in">				
-								<img class="lazy cover" src="" data-src="poc/images/front.png">
-								<div class="x-theme medium-opacity overlay c-all">
-									<div class="text-animate c-all">
-										<div>
-										  <span class="d-block text-uppercase">Product Design</span>
-										  <h2 class="s-t">POC <strong>Lobes</strong></h2>
-										  <p> Cylindrical Ski Goggles</p>		  
+					<div id="slider-container">
+						<div id="poc-more" class="owl-carousel c-100 dropshadow">					
+							<div class="item hw100 dropshadow zoom-container light-theme">
+								<div class="zoom-icon"></div>						
+								<div class="lg-up-h loader textoverlay invisible zoom-in">				
+									<img class="lazy cover" src="" data-src="poc/images/front.png">
+									<div class="x-theme medium-opacity overlay c-all">
+										<div class="text-animate c-all">
+											<div>
+											  <span class="d-block text-uppercase">Product Design</span>
+											  <h2 class="s-t">POC <strong>Lobes</strong></h2>
+											  <p> Cylindrical Ski Goggles</p>		  
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>		
-							<div class="md-down-h x-theme relative hw100">	
-								<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-									<div class="rellax-logo poc-logo x-theme bg-none hw100"></div>
-								</div>						
-								<div class="row m0 h100">	
-									<div class="col-lg-4 c-all">
-										<div class="row c-lg">
-											<div class="col-lg-8 ppp2 txt-l">
-												<h2 class="mb-4 s-t">POC <strong>Lobes</strong></h2>
-													<p>Cylindrical Ski Goggle Made During Internship at Poc<br>
-													<strong>Role - Redesign & Modelling</strong> 
-													</p>		  
-													<p><strong>Swipe Model to Rotate</strong></p>										
-											</div>					
-										</div>
-									</div>					
-									<div class="col-lg-8 textoverlay">
-										<div class="loader">								
-											<iframe 
-											class="specialized lazy invisible fade-in soft-zoom" 
-											data-src="poc/xr/pocxr.html"																				
-											frameborder="0"
-											scrolling="no"
-											>
-											</iframe>						
-										</div>							
+								</div>		
+								<div class="md-down-h x-theme relative hw100">	
+									<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
+										<div class="rellax-logo poc-logo x-theme bg-none hw100"></div>
 									</div>						
-								</div>	
-							</div>													 
-						</div>
+									<div class="row m0 h100">	
+										<div class="col-lg-4 c-all">
+											<div class="row c-lg">
+												<div class="col-lg-8 ppp2 txt-l">
+													<h2 class="mb-4 s-t">POC <strong>Lobes</strong></h2>
+														<p>Cylindrical Ski Goggle Made During Internship at Poc<br>
+														<strong>Role - Redesign & Modelling</strong> 
+														</p>		  
+														<p><strong>Swipe Model to Rotate</strong></p>										
+												</div>					
+											</div>
+										</div>					
+										<div class="col-lg-8 textoverlay">
+											<div class="loader">								
+												<iframe 
+												class="specialized lazy invisible fade-in soft-zoom" 
+												data-src="poc/xr/pocxr.html"																				
+												frameborder="0"
+												scrolling="no"
+												>
+												</iframe>						
+											</div>							
+										</div>						
+									</div>	
+								</div>													 
+							</div>							
+						</div>					
+
 						<div class="c-all view-btn">
 							<a href="#poc-process-popup" class="btn btn-outline open-popup">View</a>					
 						</div>							
@@ -1262,7 +1265,8 @@
 							</div>
 						</div>
 					</div>		
-					<div id="slider-container">	
+					<div id="slider-container">
+						<div id="spotify-more" class="owl-carousel c-100 dropshadow">					
 							<div class="item video-container hw100 dropshadow medium-theme relative">													
 								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="">
 								  <!-- <source data-src="spotify/animations/path.mpg"/> -->
@@ -1273,7 +1277,9 @@
 							  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
 							</video>	 -->								
 								<div id="play-video" class="c-absolute next-play-circle invisible"></div>																																							 
-							</div>
+							</div>							
+						</div>						
+
 <!-- 							<div class="item hw100 dropshadow medium-theme">					
 								<div class="loader relative invisible zoom-in hide-scroll">				
 									<div class="rellax medium-theme" data-rellax-speed="5" data-rellax-percentage="0.5" style="height:150% !important">
@@ -1921,7 +1927,7 @@
 								<div class="iframe-container c-all textoverlay-inverse relative">
 									<span class="show-shaded btn btn-outline hide-this">Load 3d</span>	
 									<div class="model-controls no-bg">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+										<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 										<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 									</div>						
 									<iframe 
@@ -2130,7 +2136,7 @@
 														</p>
 														<p>We look at products already available on the market, to see what should be improved.</p>
 														<p>
-														This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-both"><strong> concept evaluation</strong></span></p>
+														This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-popup"><strong> concept evaluation</strong></span></p>
 													</div>
 												</div>							
 											</div>	
@@ -2151,8 +2157,8 @@
 												  In this stage of the process, it's time to start generating some ideas!</p>
 												  <p>
 												  From the gathered information in the analyze phase, creative techniques such as 
-												  <span data-tooltip="#brainstorming-info" href="" class="info-icon-both"><strong> brainstorming</strong></span>, quick sketching and other different 
-												  <span data-tooltip="#lateral-info" href="" class="info-icon-both"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
+												  <span data-tooltip="#brainstorming-info" href="" class="info-icon-popup"><strong> brainstorming</strong></span>, quick sketching and other different 
+												  <span data-tooltip="#lateral-info" href="" class="info-icon-popup"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
 												  </p>
 												  <p>
 													Example brainstorming wall from project with Spotify
@@ -2214,13 +2220,13 @@
 												<p>
 												Now, how do we know if this idea that we just came up with is any good?</p>
 												<p>									  
-												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
+												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-popup"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
 												<p>
 												Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
 												This is an iterative process where the concept is further refined. </p>
 												<p>
 												We then transfer our model to digital space to refine it even more, and to start creating a 
-												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
+												<span data-tooltip="#cad-info" class="info-icon-popup"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
 												</p>
 																																													
 											</div>
@@ -2237,7 +2243,7 @@
 											scrolling="no">	 
 											</iframe>
 											<div class="model-controls invisible showonclick">
-												<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+												<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 												<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 											</div>										
 										</div>										
@@ -2253,18 +2259,18 @@
 												<p>
 												Now, how do we know if this idea that we just came up with is any good?</p>
 												<p>									  
-												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
+												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-popup"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
 												<p>
 												Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
 												This is an iterative process where the concept is further refined. </p>
 												<p>
 												We then transfer our model to digital space to refine it even more, and to start creating a 
-												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
+												<span data-tooltip="#cad-info" class="info-icon-popup"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
 												</p>
 												<span class="show-shaded relative btn btn-outline">Load 3d - 19mb</span>	
 												
 												<div class="model-controls">
-													<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+													<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 													<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 												</div>						
 												<iframe
@@ -2297,13 +2303,13 @@
 												<p>
 												Now, how do we know if this idea that we just came up with is any good?</p>
 												<p>									  
-												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
+												Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-popup"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
 												<p>
 												Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
 												This is an iterative process where the concept is further refined. </p>
 												<p>
 												We then transfer our model to digital space to refine it even more, and to start creating a 
-												<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
+												<span data-tooltip="#cad-info" class="info-icon-popup"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
 												</p>
 											</div>
 											<div class="col-lg-6 h100 c-all">	
@@ -2312,7 +2318,7 @@
 										</div>								
 									</div>								
 									<div class="model-controls">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+										<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 										<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 									</div>						
 									<iframe
@@ -2791,7 +2797,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -2809,8 +2815,8 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon-popup ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
 						class="showonclick converse-wireframe-injec lazy"
@@ -2829,7 +2835,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -2953,8 +2959,8 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
-							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon-popup ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
 						class="showonclick converse-wireframe-injec lazy"
@@ -2972,7 +2978,7 @@
 			<div id="akg-webconfig-popup" class="popup mfp-hide">
 				<div class="c-100">
 					<div class="config-orientation-height">
-						<div data-tooltip="#config-info-popup-options" class="info-icon-both ion-information-circled invisible flip-in-y config-info">
+						<div data-tooltip="#config-info-popup-options" class="info-icon-popup ion-information-circled invisible flip-in-y config-info">
 						</div>
 						<iframe 
 						id="popup-iframe"
@@ -3044,7 +3050,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container	">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3063,7 +3069,7 @@
 			<div id="bagheera-webconfig-popup" class="popup mfp-hide">
 				<div class="c-100">
 					<div class="config-orientation-height">
-						<div data-tooltip="#config-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y config-info">
+						<div data-tooltip="#config-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y config-info">
 						</div>		
 						<iframe 
 						id="popup-iframe"
@@ -3247,7 +3253,7 @@
 				<div class="c-100 iframe-container">
 					<div class="config-orientation-height">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 					</div>	
@@ -3382,11 +3388,11 @@
 					</div> -->
 				</div>			
 			</div>	
-			<div id="spotify-model-popup" class="popup mfp-hide">
+			<div id="spotify-model-popup" class="popup mfp-hide light-theme">
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3438,7 +3444,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3480,7 +3486,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3518,7 +3524,7 @@
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container	">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3559,7 +3565,7 @@
 				<div class="c-100">
 					<div class="iframe-container hw100">
 						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
@@ -3652,7 +3658,7 @@
 																</p>
 																<p>We look at products already available on the market, to see what should be improved.</p>
 																<p>
-																This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-both"><strong> concept evaluation</strong></span></p>
+																This is done with a <span data-tooltip="#evaluation-info" href="" class="info-icon-popup"><strong> concept evaluation</strong></span></p>
 													</div>
 												</div>							
 											</div>	
@@ -3683,8 +3689,8 @@
 													  In this stage of the process, it's time to start generating some ideas!</p>
 													  <p>
 													  From the gathered information in the analyze phase, creative techniques such as 
-													  <span data-tooltip="#brainstorming-info" href="" class="info-icon-both"><strong> brainstorming</strong></span>, quick sketching and other different 
-													  <span data-tooltip="#lateral-info" href="" class="info-icon-both"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
+													  <span data-tooltip="#brainstorming-info" href="" class="info-icon-popup"><strong> brainstorming</strong></span>, quick sketching and other different 
+													  <span data-tooltip="#lateral-info" href="" class="info-icon-popup"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
 													  </p>
 													  <p>
 														Example brainstorming wall from project with Spotify
@@ -3761,13 +3767,13 @@
 													<p>
 													Now, how do we know if this idea that we just came up with is any good?</p>
 													<p>									  
-													Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
+													Our next step in the process is to <span data-tooltip="#evaluation-info" class="info-icon-popup"><strong> evaluate </strong></span> how our concept would work in the real world.</p>
 													<p>
 													Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
 													This is an iterative process where the concept is further refined. </p>
 													<p>
 													We then transfer our model to digital space to refine it even more, and to start creating a 
-													<span data-tooltip="#cad-info" class="info-icon-both"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
+													<span data-tooltip="#cad-info" class="info-icon-popup"><strong> CAD </strong></span> model that can be 3d printed or sent off to the manufacturer.  		
 													</p>
 												</div>
 												<div class="col-lg-6">	
@@ -3776,7 +3782,7 @@
 											</div>								
 										</div>	
 										<div class="model-controls">
-											<div data-tooltip="#wireframe-info-popup" class="info-icon-both ion-information-circled invisible flip-in-y"></div>
+											<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
 											<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 										</div>						
 										<iframe
@@ -4048,8 +4054,8 @@
 						  In this stage of the process, it's time to start generating some ideas!</p>
 						  <p>
 						  From the gathered information in the analyze phase, creative techniques such as 
-						  <span data-tooltip="#brainstorming-info" href="" class="info-icon-both"><strong> brainstorming</strong></span>, quick sketching and other different 
-						  <span data-tooltip="#lateral-info" href="" class="info-icon-both"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
+						  <span data-tooltip="#brainstorming-info" href="" class="info-icon-popup"><strong> brainstorming</strong></span>, quick sketching and other different 
+						  <span data-tooltip="#lateral-info" href="" class="info-icon-popup"><strong> lateral thinking methods</strong></span> are applied to generate ideas.
 						  </p>	
 						</div>						
 					</div>
@@ -4126,13 +4132,13 @@
 							<p>
 							Now, how do we know if this idea that we just came up with is any good?</p>
 							<p>									  
-							Our next step in the process is to <a data-tooltip="#evaluation-info" class="info-icon-both"><strong> evaluate </strong></a>how our concept would work in the real world.</p>
+							Our next step in the process is to <a data-tooltip="#evaluation-info" class="info-icon-popup"><strong> evaluate </strong></a>how our concept would work in the real world.</p>
 							<p>
 							Normally, we start off by making a quick and rough foam model which is evaluated together with users from our target group.<br>
 							This is an iterative process where the concept is further refined. </p>
 							<p>
 							We then transfer our model to digital space to refine it even more, and to start creating a 
-							<a data-tooltip="#cad-info" href="" class="info-icon-both"><strong> CAD </strong></a> model that can be 3d printed or sent off to the manufacturer.  		
+							<a data-tooltip="#cad-info" href="" class="info-icon-popup"><strong> CAD </strong></a> model that can be 3d printed or sent off to the manufacturer.  		
 							</p>
 						</div>						
 					</div>
@@ -4298,7 +4304,7 @@
 			<div id="config-info-popup" class="tool-ignore">
 			Use CMF picker to explore different Color Material & Finish options
 			</div>
-			<div id="config-info-popup-options" class="tool-ignore ignore">
+			<div id="config-info-popup-options" class="small-text">
 			<span>
 			Use CMF picker to explore different Color Material & Finish options<br>
 			Use arrows or counter to select parts
@@ -5051,7 +5057,6 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 			});	
 		</script>
 
-
 <!-- <script>
 $(function() {
     $('.info-icon').hover(function() {
@@ -5080,70 +5085,82 @@ $(function() {
 
 		 }
 		else
-		$(".info-icon").hover(function(e) {
-		if($(this).parents().hasClass("dark-theme"))
+	$(".info-icon").hover(function(e) {
+	
+		var screenTop = $(document).scrollTop();
+		var el = $(this).closest('.portfolio-section').find('.owl-item.active').find('.item')
+		
+		if(el.hasClass("dark-theme"))
 		{
 		bgcolor ="rgba(0, 0, 0, 0.7)";
 		textcolor ="#fff";
-	<!-- 	alert('has dark theme'); -->
 		}
-		else
+		else if(el.hasClass("light-theme"))
 		{ 
-		//bgcolor ="#fff";
 		bgcolor ="rgba(255, 255, 255, 0.9)";
 		textcolor ="#000";
-		
-		<!-- alert('hasnt dark theme'); -->
 		}
-
-	var screenTop = $(document).scrollTop();
-
-		$($(this).data("tooltip")).css('display', 'flex');
-		$(this).closest('#section-container').prepend('<div id="tooltip-background"></div>');
-		$(this).closest('#section-container').find('#tooltip-background').css('background-color', bgcolor).addClass('pens');
-		$($(this).data("tooltip")).css({
-			//left: e.pageX + 10,
-			//top: e.pageY + 10,
-			//left:0,
-			top: screenTop,
-			//backgroundColor: bgcolor,
-			color: textcolor,		
-	//display:flex,			
-		}).stop().show(200);
-		}, function() {
-		//var apa = $($(this).data("tooltip")).width();
-		//alert(apa);	
-		$(this).closest('#section-container').find('#tooltip-background').remove();
-		$($(this).data("tooltip")).hide();
-
-		});
-		
-	<!-- start touch & desktop -->	
-	$(".info-icon-both").hover(function(e) {
-		if($(this).parents().hasClass("dark-theme"))
-		{
-		bgcolor ="#fff";
-		textcolor ="#121212";
-	<!-- 	alert('has dark theme'); -->
-		}
-		else
+		else if(el.hasClass("medium-theme"))
 		{ 
-		bgcolor ="#121212";
-		textcolor ="#fff";
-	<!-- 	alert('hasnt dark theme'); -->
+		bgcolor ="rgba(228, 229, 231, 0.9)";
+		textcolor ="#000";
 		}
-		$($(this).data("tooltip")).css({
-			left: e.pageX + 10,
-			top: e.pageY + 10,
+		else 
+		{
+		alert('error');
+		}
+			
+		var tool_tip = $(this).data("tooltip");
+		$(this).closest('#section-container').prepend($(tool_tip)).find($(tool_tip)).addClass('tooltip-position').css({
 			backgroundColor: bgcolor,
-			color: textcolor,		  
+			color: textcolor,		
 		}).stop().show(100);
 		}, function() {
+		$($(this).data("tooltip")).hide();
+		});
+			
+	<!-- start touch & desktop -->	
+	$(".info-icon-popup").hover(function(e) {
+		
+		var bgcolor ="rgba(0, 0, 0, 0.7)";
+		var textcolor ="red";
+		var tool_tip = $(this).data("tooltip");
+		var popup_el = $(this).closest('.popup');
+		
+		<!-- note: themes are added to popups, hm where?  -->
+		if(popup_el.hasClass("dark-theme"))
+		{
+		bgcolor ="rgba(0, 0, 0, 0.7)";
+		textcolor ="#fff";
+		}
+		else if(popup_el.hasClass("light-theme"))
+		{ 
+		bgcolor ="rgba(255, 255, 255, 0.9)";
+		textcolor ="#000";
+		}
+		else if(popup_el.hasClass("medium-theme"))
+		{ 
+		bgcolor ="rgba(228, 229, 231, 0.9)";
+		textcolor ="#000";
+		}
+		else 
+		{
+		alert('error');
+		}
+				
+		$($(this).data("tooltip")).removeClass('hidden');		
+			
+		
+		$(this).closest('.popup').prepend($(tool_tip)).find($(tool_tip)).addClass('tooltip-position').css({
+			backgroundColor: bgcolor,
+			color: textcolor,		
+		}).stop().show(100);
 
-		//$($(this).data("tooltip")).hide();
-
-		});		
+		}, function() {
+		$($(this).data("tooltip")).addClass('hidden');
+		});	
 		</script>			
+		
 			
 		<!-- scrolltop btn + scrollbar -->
 		<script>
