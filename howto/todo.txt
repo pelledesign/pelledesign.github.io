@@ -1,6 +1,6 @@
 
 /* general */
-info popups in popups
+fix info boxes on swatches
 center texts
 change concpt sketch in process
 spotify hero + xr + animate exploded xr + video
