@@ -1,18 +1,11 @@
 
 /* general */
-fix info boxes on swatches
-center texts
-change concpt sketch in process
+hero img + font
 spotify hero + xr + animate exploded xr + video
 test light / dark theme desktop and choose which is best for dektop and mobile
-drop shadows sections?
-frames in premiere > transarent video
-fix ipad 
-rellax logos ipad
-hero img + font
-belmar - finish model
+change concept sketch in process
 converse - make one rough key sketch
-bagheera - new color, simple bright	
+check all devices
 
 
 
@@ -29,6 +22,11 @@ function övrigt (
 /* bel mar */
 /* design process */
 /* footer */
+
+belmar - finish model
+bagheera - new color, simple bright	
+frames in premiere > transarent video
+rellax logos ipad
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 check all browsers +  devices
