@@ -16969,6 +16969,12 @@ position:relative;
   scroll-snap-stop: normal;
 }
 
+/* .slide:not(#spotify-process-popup .slide) {
+position:relative;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+} */
+
 .slide.snap-desktop {
 position:relative;
   scroll-snap-align: start;
@@ -17658,6 +17664,10 @@ height:100vh;
 	  background-color:white;
 -webkit-overflow-scrolling:touch;	  
 } */
+html {
+scroll-behavior:smooth;	  
+}
+
 
 /* header {border-bottom: 2px solid green;}
 
