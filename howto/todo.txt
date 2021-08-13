@@ -1,12 +1,9 @@
 
 /* general */
 hero img + font
-spotify hero + xr + animate exploded xr + video
-test light / dark theme desktop and choose which is best for dektop and mobile
-change concept sketch in process
+spotify hero + animate exploded xr + new video
 converse - make one rough key sketch
 check all devices
-
 
 
 function övrigt (
@@ -23,9 +20,10 @@ function övrigt (
 /* design process */
 /* footer */
 
+test light / dark theme desktop and choose which is best for dektop and mobile
 belmar - finish model
 bagheera - new color, simple bright	
-frames in premiere > transarent video
+frames in premiere > transparent video
 rellax logos ipad
 
 kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc

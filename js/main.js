@@ -152,7 +152,6 @@ converse_more  = $('#converse-more'),
 converse_gallery  = $('#converse-gallery'),
 converse_cmf  = $('#converse-cmf'),
 akg_more  = $('#akg-more'),
-akg_more3  = $('#akg-more3'),
 akg_gallery  = $('#akg-gallery'),
 poc_more = $('#poc-more'),
 spotify_more  = $('#spotify-more'),
@@ -163,8 +162,8 @@ specialized_more  = $('#specialized-more'),
 belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 apa = design_process + $('#design-process'),
-all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-more3, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #akg-more3, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+all_sliders = $('#about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
+main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
 about_slider.trigger('to.owl.carousel', [0, 500]);
@@ -353,7 +352,7 @@ $('#about-slider').on('translate.owl.carousel', function(event) {
 	/* console.log(item); */
 	});
 	
- $('#converse-more, #akg-more, #akg-more3').on('translated.owl.carousel', function(event) {
+ $('#converse-more, #akg-more').on('translated.owl.carousel', function(event) {
 	 
 	let element = jQuery(event.target);
 	let idx = event.item.index;
@@ -551,37 +550,8 @@ responsive:{
 }
 }	
 });
+
 akg_more.owlCarousel({
-loop: false,	
-rewind: true,
-autoplay: false,
-autoHeight: true,
-lazyLoad : true,
-margin:0,
-stagePadding:0,
-nav:false,
-items: 1,
-touchDrag: true,
-mouseDrag: true,
-dots:false,
-navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-responsive:{
-0:{
-  items:1,
-  nav:false
-},
-600:{
-  items:1,
-  nav:false
-},
-1000:{
-  items:1,
-  nav:false,
-  autoHeight: true,
-}
-}	
-});
-akg_more3.owlCarousel({
 loop: false,	
 rewind: true,
 autoplay: false,

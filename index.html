@@ -110,13 +110,13 @@
 						<li class="nav-item">
 						  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
 						</li>
-						<li class="nav-item flex-xl-up c-lg">
+<!-- 						<li class="nav-item flex-xl-up c-lg">
 						  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
 							<div id="theme-switcher-menu" class=" flex justify-content-center">
 							<div id="" class="dark-theme-button theme-circle dark"></div>
 							<div id="" class="light-theme-button theme-circle light"></div>					
 							</div>							  
-						</li>
+						</li> -->
 					 </ul>
 				  </div>
 				</div>
@@ -194,7 +194,7 @@
 								<div class="row c-all">
 									<div class="col-lg-5 col-md-8 text-box">
 										<span class="hidden d-block text-uppercase text-secondary">About</span>
-										<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> That Brings Your Ideas Alive</h2>					  
+										<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> Who Brings Your Ideas Alive</h2>					  
 										<p>I am Pelle Skogsberg. <br>With 10 years of experience in product design, my background includes designing products for brands such as 
 										<a href="https://www.spotify.com/" target="_blank"><strong>Spotify</strong>,</a> 
 										<a href="https://www.akg.com/" target="_blank"><strong>AKG</strong>,</a> 
@@ -328,7 +328,7 @@
 					</div>		
 				</div>	
 				<div id="slider-container">			
-						<div id="akg-more3" class="owl-carousel c-100 dropshadow">					
+						<div id="akg-more" class="owl-carousel c-100 dropshadow">					
 							<div class="item owl-hide-lg-up invisible zoom-in medium-theme">
 <!-- 								<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 									<div class="rellax-logo akg-logo light-theme bg-none hw100"></div>
@@ -510,7 +510,7 @@
 									</div>
 								</div>							
 							</div>					
-							<div class="item dark-theme">				
+							<div class="item keyshotconfig dark-theme">				
 								<iframe 							
 								class="akg-webconfig-process lazy"
 								data-src="akg/web/keyshot-configurator.html"													
@@ -1149,7 +1149,7 @@
 										</div>
 									</div>															
 								</div> -->
-								<div class="item dark-theme">
+								<div class="item keyshotconfig dark-theme">
 									<iframe 
 									id="popup-iframe"
 									class="converse-webconfig lazy invisible fade-in"
@@ -1267,16 +1267,13 @@
 					</div>		
 					<div id="slider-container">
 						<div id="spotify-more" class="owl-carousel c-100 dropshadow">					
-							<div class="item video-container hw100 dropshadow medium-theme relative">													
-								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="">
-								  <!-- <source data-src="spotify/animations/path.mpg"/> -->
+							<div class="item video-container hw100 dropshadow medium-theme relative">
+								<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
+								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
 								  <source data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-								</video>
-<!-- 							<video id="spotify-video" playsinline muted class="hw100" poster="spotify/animations/poster.png"  >
-							  <source src="spotify/animations/path.mpg"/>
-							  <source src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-							</video>	 -->								
-								<div id="play-video" class="c-absolute next-play-circle invisible"></div>																																							 
+								</video>							
+								<div id="play-video" class="absolute hw100 c-all" style="top:0; left:0;"><div class="next-play-circle invisible"></div></div>			
+								
 							</div>							
 						</div>						
 
@@ -2170,8 +2167,8 @@
 								  </div>
 								</div>
 							</div>
-							<div id="moodboard-sketch" class="item cont light-theme">					
-								<div class="h100 row medium-theme m0 absolute">					
+							<div id="moodboard-sketch" class="item cont medium-theme">					
+								<div class="h100 row m0 absolute">					
 								  <div class="col-lg-6 textoverlay">
 										<div class="loader">							
 											<img src="" data-src="images/process/moodboard.png" class="lazy cover">
@@ -2192,7 +2189,19 @@
 											</div>							
 										</div>								
 								  </div>
-								  <div class="col-lg-6 textoverlay" >
+								  <div class="col-lg-6">							
+										<div class="col-lg-8 ml-auto mr-auto auto-scroll txt-l c-all h100">
+											<div>
+												<h2 class="mb-4 s-t">Concept <strong>Sketching </strong></h2>								
+												<p>
+												Next, we visualize our generated ideas with sketches.<br>
+												Rough sketches are drawn to quickly communicate an idea. </p>
+												<p>By using a shared folder with notifications, you can immediately check out a new sketch once it's finished. 
+												</p>
+											</div>
+										</div>													
+								  </div>
+<!-- 								  <div class="col-lg-6 textoverlay" >
 										<div class="loader">								
 											<img src="" data-src="images/sketchgallery/8.png" class="lazy">
 												<div class="medium-theme overlay c-all">
@@ -2208,8 +2217,28 @@
 													</div>
 												</div>							
 										</div>								
-								  </div>
+								  </div> -->
 								</div>
+							</div>
+							<div id="sketch" class="item cont light-theme textoverlay">									
+								<div class="loader">							
+									<img src="" data-src="images/process/front16_9.png" class="lazy cover">
+									<div class="medium-theme overlay c-all">
+										<div class="col-lg-8 text-animate auto-scroll txt-l c-all">
+										<div>
+											<h2 class="mb-4 s-t">Mood <strong>Board </strong></h2>								
+											  <p>
+											  A mood board is a visual presentation or collage consisting of images, text, and samples of objects in a composition, meant to convey a general idea or feeling about a particular topic.<br> In our case, we use it as a language to describe what expression the product will have. </p>
+											  <p>
+											  Is it supposed to express a safe feeling?<br>
+											  What does safe mean to you?</p>
+											  <p>
+											  How we react to a products semantics is depending on culture, personal experiences and other factors, meaning that we need to communicate what we are trying to achieve with tools that say more than just words.
+											  </p>
+										</div>
+										</div>
+									</div>							
+								</div>								
 							</div>
 							<div id="3d-modeling-mobile" class="owl-hide-desktop item cont light-theme"> 
 								<div class="fadeout-top"></div>													
@@ -2559,7 +2588,7 @@
 									</div>
 								</div>	
 							</div>
-							<div id="bundle mobile txt" class="item owl-hide-desktop col-lg-12 dark-theme">								
+							<div id="bundle mobile txt" class="item keyshotconfig owl-hide-desktop col-lg-12 dark-theme">								
 								<div class="fadeout-top"></div>													
 									<div class="row m0 absolute hw100 c-all show-scroll">
 										<div class="text-box c-all txt-l">
@@ -2585,7 +2614,7 @@
 									
 									<div class="fadeout-btm"></div>																														
 							</div>								
-							<div id="bundle" class="owl-hide-touch item cont dark-theme"> 
+							<div id="bundle" class="owl-hide-touch keyshotconfig item cont dark-theme"> 
 									<div class="h100 col-lg-12 textoverlay-inverse">
 										<div class="loader dark-theme">
 											<iframe 
@@ -4475,13 +4504,13 @@
 			$('#play-video').on("click", function() {
 			//$('#spotify-video')[0].play();
 			$(this).closest('.video-container').find('video')[0].play();
-			$(this).addClass('invisible');	
+			$(this).find('.next-play-circle').addClass('invisible');	
 			});					
 
 			  $(document).ready(function(){
 				 $('video').on('ended',function(){
 					//alert('Video has ended!');
-					$(this).closest('.video-container').find('#play-video').removeClass('invisible').addClass('fade-in');
+					$(this).closest('.video-container').find('.next-play-circle').removeClass('invisible').addClass('fade-in');
 				 });
 			  });
 			
@@ -4764,16 +4793,25 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 		if(is_touch_device()) {
 
 
-			$('.more-btn').on('touchstart', function () {			
+			$('.more-btn, .next-play-circle').on('touchstart', function () {			
 			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisibleLarge animated-fast").addClass('zoomInVisibleLarge animated-fast'); //remove animate.css classes that are already there, or they will trigger again
 			});
 
-			$('.more-btn').on('touchend', function () {			
+			$('.more-btn, .next-play-circle').on('touchend', function () {			
 			$(this).addClass('zoomOutVisibleLarge animated-fast');
 			});					
 		}
 		else
 		{ 
+			$('.next-play-circle').on('mouseenter', function () {			
+			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisibleLarge animated-fast").addClass('zoomInVisibleLarge animated-fast');
+			});
+
+			$('.next-play-circle').on('mouseleave', function () {			
+			$(this).addClass('zoomOutVisibleLarge animated-fast');
+			});		
+		
+		
 		  $('.info-icon').on('mouseenter',function(){
 			 $(this).find('div').removeClass("flip-in-y flipInY element-animated").addClass("flipInY element-animated");  
 		  });
@@ -4805,19 +4843,19 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 		  });
 		
 			//inject iframe styles & spinners
-			$(".akg, .akg-process, .akg-webconfig, .akg-model-popup, .converse, .converse-more, .converse-webconfig, .converse-wireframe-injec, .bagheera-xr-popup, .poc, .poc-process, .poc-wireframe-inject2,  .specialized-xr-popup, .specialized-model-popup, .spotify, .spotify-model-popup, .haglofs, .alcon-xr-popup, .alcon-model-popup, .akg-webconfig-process").on("load", function() {
+			$(".akg, .akg-webconfig, .akg-model-popup, .converse, .converse-more, .converse-webconfig, .bagheera-xr-popup, .poc, .poc-process, .poc-wireframe-inject2,  .specialized-xr-popup, .specialized-model-popup, .spotify, .spotify-model-popup, .haglofs, .alcon-xr-popup, .alcon-model-popup, .akg-webconfig-process").on("load", function() {
 			//alert('dd');
-			if ($(this).closest('.popup').hasClass('dark-theme'))
+			if ($(this).closest('.popup, .keyshotconfig').hasClass('dark-theme'))
 			{
 			themeclr ="dark";
 			//alert('dark-theme');
 			}
-			else if ($(this).closest('.popup').hasClass('light-theme'))
+			else if ($(this).closest('.popup, .keyshotconfig').hasClass('light-theme'))
 			{
 			themeclr ="light";
 			//alert('dark-theme');
 			}
-			else if ($(this).closest('.popup').hasClass('medium-theme'))
+			else if ($(this).closest('.popup, .keyshotconfig').hasClass('medium-theme'))
 			{
 			themeclr ="medium";
 			//alert('dark-theme');
@@ -4975,7 +5013,7 @@ $(function() {
 		else
 	$(".info-icon").hover(function(e) {
 	
-		var screenTop = $(document).scrollTop();
+		//var screenTop = $(document).scrollTop();
 		var el = $(this).closest('.portfolio-section').find('.owl-item.active').find('.item')
 		
 		if(el.hasClass("dark-theme"))
@@ -4995,12 +5033,15 @@ $(function() {
 		}
 			
 		var tool_tip = $(this).data("tooltip");
-		$(this).closest('#section-container').prepend($(tool_tip)).find($(tool_tip)).addClass('tooltip-position').css({
+		$(this).closest('#section-container').prepend($(tool_tip)).find($(tool_tip)).removeClass('hidden').addClass('tooltip-position').css({
+			'height': '100%',
+			'width': '100%',
 			backgroundColor: bgcolor,
 			color: textcolor,		
 		}).stop().show(100);
 		}, function() {
-		$($(this).data("tooltip")).hide();
+		//$($(this).data("tooltip")).hide();
+		$($(this).data("tooltip")).addClass('hidden');
 		});
 			
 	<!-- start touch & desktop -->	
