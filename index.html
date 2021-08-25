@@ -521,10 +521,10 @@
 								<div class="xs-down-h col-lg-6 col-md-8 akg-webconfig-overlay"></div>							
 							</div>
 							<div class="item owl-hide-xs-down light-theme">					
-								<div class="iframe-container c-all textoverlay">
-									<span class="show-shaded btn btn-outline  hide-this">Load 3d - 57mb</span>	
+								<div class="iframe-container c-all textoverlay ignore">
+									<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
 									<div class="model-controls">
-										<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
+										<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
 										<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 									</div>
 									<div class="c-all view-btn overlay img-opacity hide-this z999">
@@ -678,10 +678,10 @@
 												</div>
 											</div>
 										</div> -->						
-										<div class="middle light-theme iframe-container c-all textoverlay">
+										<div class="middle light-theme iframe-container c-all textoverlay ignore">
 											<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
 											<div class="model-controls">
-												<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
+												<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
 												<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 											</div>
 											<div class="c-all view-btn overlay img-opacity bg hide-this">									
@@ -992,20 +992,20 @@
 														frameborder="0"
 														scrolling="no">			 	 
 														</iframe>
-														<div class="desktop-hidden">
+														<div class="">
 															<div class="model-controls">
 																<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
 																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 															</div>	
 														</div>
-														<div class="overlay mini  light-theme bg-none">
-															<div class="col-lg-6 text-animate c-all">
+<!-- 														<div class="overlay mini  light-theme bg-none">
+															<div class="col-lg-6 text-animate ignore c-all">
 																<div class="ignore model-controls">
-																	<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
+																	<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled" style="padding-top:0 !important;"></div>
 																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 																</div>	
 															</div>
-														</div>	
+														</div> -->	
 													</div>									
 												</div>	
 											</div>	
@@ -1108,15 +1108,20 @@
 														frameborder="0"
 														scrolling="no">			 	 
 														</iframe>
-														<div class="overlay mini light-theme bg-none">
+															<div class="ignore model-controls">
+																<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon-popup ion-information-circled"></div>
+																<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+																<!-- <a href="#converse-measures-popup" data-tooltip="#icon-info-large-popup" class="info-icon open-popup m-h"><div class="ion-android-open"></div></a> -->
+															</div>															
+<!-- 														<div class="overlay mini light-theme bg-none">
 															<div class="col-lg-6 text-animate c-all">
 																<div class="ignore model-controls">
-																	<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled"></div>
+																	<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon-popup ion-information-circled"></div>
 																	<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 																	<a href="#converse-measures-popup" data-tooltip="#icon-info-large-popup" class="info-icon open-popup m-h"><div class="ion-android-open"></div></a>
 																</div>	
 															</div>
-														</div>												
+														</div> -->												
 													</div>
 												</div>	
 											</div>					
@@ -3186,7 +3191,7 @@
 				</div>		
 			</div>
 			<div id="poc-model-popup" class="loader popup mfp-hide medium-theme">
-				<div class="c-100 iframe-container">
+				<div id="section-container" class="c-100 iframe-container">
 					<div class="config-orientation-height">
 						<div class="model-controls">
 							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
@@ -3313,7 +3318,7 @@
 				</div>			
 			</div>				
 			<div id="spotify-model-popup" class="popup mfp-hide light-theme">
-				<div class="c-100">
+				<div id="section-container" class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
 							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
@@ -4232,7 +4237,7 @@
 					<!-- <p>Mouse wheel - Set Camera Focus Point</p> -->
 					<p>Click - Start/reverse turn table</p>
 				</div>			
-				<div class="desktop-hidden">
+				<div class="desktop-hidden ppp">
 					<p><strong>Controls</strong></p>
 					<p>Swipe - Rotate</p>
 					<p>Pinch - Zoom In/Out</p>
@@ -4640,7 +4645,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 				
 		//select icons desktop
 		else { 
-		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').prepend('<div class="ion-android-add-circle big more-icon"></div>');;
+		$('.owl-carousel, #poc').find('.textoverlay, .textoverlay-desktop').not('.ignore').prepend('<div class="ion-android-add-circle big more-icon"></div>');;
 		}
 
 		<!-- HIDE  -->
@@ -4996,7 +5001,6 @@ $(function() {
 		<script>
 	<!-- start desktop -->	
 		if(is_touch_device()) {
-
 		 }
 		else
 	$(".info-icon").hover(function(e) {
@@ -5033,14 +5037,15 @@ $(function() {
 		});
 			
 	<!-- start touch & desktop -->	
-	$(".info-icon-popup").hover(function(e) {
-		
+	
+	<!-- popup info-icons -->
+	$(".popup .info-icon-popup").hover(function(e) {
+			
 		var bgcolor ="rgba(0, 0, 0, 0.7)";
 		var textcolor ="red";
 		var tool_tip = $(this).data("tooltip");
 		var popup_el = $(this).closest('.popup');
 		
-		<!-- note: themes are added to popups, hm where?  -->
 		if(popup_el.hasClass("dark-theme"))
 		{
 		bgcolor ="rgba(0, 0, 0, 0.7)";
@@ -5069,10 +5074,63 @@ $(function() {
 			color: textcolor,		
 		}).stop().show(100);
 
+		//enables closing of the infobox on mobile as this is a hoverfunction
+		if(is_touch_device()) {
+		$(this).closest('.popup').find('.tooltip-position').css( 'pointer-events', 'auto' ) 
+		 }	
+
 		}, function() {
 		$($(this).data("tooltip")).addClass('hidden');
 		});	
-		</script>			
+
+		<!-- .item info-icons -->
+	$(".item .info-icon-popup").hover(function(e) {
+			
+		var bgcolor ="rgba(0, 0, 0, 0.7)";
+		var textcolor ="red";
+		var tool_tip = $(this).data("tooltip");
+		var item_el = $(this).closest('.item');
+		
+		if(item_el.hasClass("dark-theme"))
+		{
+		bgcolor ="rgba(0, 0, 0, 0.7)";
+		textcolor ="#fff";
+		}
+		else if(item_el.hasClass("light-theme"))
+		{ 
+		bgcolor ="rgba(255, 255, 255, 0.9)";
+		textcolor ="#000";
+		}
+		else if(item_el.hasClass("medium-theme"))
+		{ 
+		bgcolor ="rgba(228, 229, 231, 0.9)";
+		textcolor ="#000";
+		}
+		else 
+		{
+		alert('error');
+		}
+				
+		$($(this).data("tooltip")).removeClass('hidden');		
+			
+		
+		$(this).closest('.item').prepend($(tool_tip)).find($(tool_tip)).addClass('tooltip-position').css({
+			backgroundColor: bgcolor,
+			color: textcolor,		
+		}).stop().show(100);
+
+		//enables closing of the infobox on mobile as this is a hoverfunction
+		if(is_touch_device()) {
+		$(this).closest('.item').find('.tooltip-position').css( 'pointer-events', 'auto' ) 
+		 }	
+
+		}, function() {
+		$($(this).data("tooltip")).addClass('hidden');
+		});	
+	
+		</script>
+
+		
 		
 			
 		<!-- scrolltop btn + scrollbar -->

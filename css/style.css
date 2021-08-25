@@ -15748,6 +15748,20 @@ z-index:2;
 	font-size: 1.25rem;
 	pointer-events:none;
 }
+.tooltip-position-mobile {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+	letter-spacing: 5px;	
+	font-size: 1.25rem;
+	pointer-events:none;
+}
 /* #tooltips > div span {
 	font-size: 16px;		  
 } */
@@ -16306,9 +16320,9 @@ overflow: hidden;
 background:none !important;
 }
 
-.overlay.mini {
+/* .overlay.mini {
 height:60px !important	
-}
+} */
 
 /* .half.overlay {
   position: absolute;
