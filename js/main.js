@@ -431,8 +431,9 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 hero_slider.owlCarousel({
 autoplay: true,
 autoplayTimeout: 2000,	
-rewind: true,
-autoHeight: true,
+//rewind: true,
+animateOut: 'fadeOut',
+//autoHeight: true,
 /* checkVisible: false,	 */
 lazyLoad : true,		
 loop:true,
@@ -445,7 +446,7 @@ navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-andr
 responsive:{
   0:{
 	autoHeight: true,
-	loop:false,
+	//loop:false,
 	items:1,
 	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
 	nav:false,
