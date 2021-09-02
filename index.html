@@ -363,7 +363,7 @@
 			<div class="centerscroll" id="portfolio"></div>		
 			<div id="akg" class="portfolio-section">
 				<div id="section-container" class="invisible fade-in">
-					<div id="akg-title" class="title row m0">
+					<div id="akg-title" class="title ignore row m0 dark-theme">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
@@ -4441,7 +4441,7 @@
 
 		// apply chosen theme to these elements	
 		$('body').find(".x-theme").addClass(theme);
-		$('body').find(".title").addClass('bg-none');
+		$('body').find(".title").not('.ignore').addClass('bg-none');
 		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');
 		//$('body').find(".dropshadow").addClass('dropshadow-' + theme);		
 		
@@ -4561,7 +4561,7 @@
 		}
 		if (positioning_title == 'on top') {
 			//alert('on top');
-			$('.title').addClass('on-top');
+			$('.title').not('.ignore').addClass('on-top');
 		}
 
 		</script>

@@ -192,7 +192,7 @@ main_sliders.on('initialized.owl.carousel', function(event) {
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme dark-theme').addClass('medium-theme');
-			$(this).closest('#section-container').find('.title').removeClass('light-theme dark-theme').addClass('medium-theme');
+			$(this).closest('#section-container').find('.title').not('.ignore').removeClass('light-theme dark-theme').addClass('medium-theme');
 	  }
 	  else {
 		  //alert('error');
