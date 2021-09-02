@@ -100,7 +100,8 @@
 					});					
 				}, 100);				
 			}
-		} , { offset: '45%' } );
+		} , { offset: '75%' } );
+		//default 45%
 		
 //		fade in down
 

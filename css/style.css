@@ -17623,9 +17623,9 @@ height: calc(100vh) !important;
 }
 }
 
-.dark-theme #bg-hero {
+/* .dark-theme #bg-hero {
 background: url('../images/bg/lips.jfif');	
-}
+} */
 
 @media (min-width:992px) {
 .light-theme #bg-hero {
