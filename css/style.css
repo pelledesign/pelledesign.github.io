@@ -13248,6 +13248,12 @@ p {
   font-size:14px;
 }
 
+@media screen and (max-width:575px) { 
+#myservices p {
+  margin-bottom: 0;
+}
+}
+
 
 .slider-item:before {				/*		slider overlay color */
   content: "";

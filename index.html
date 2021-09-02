@@ -228,7 +228,7 @@
 		</div>
 		
 		<!-- about -->
-		<div id="about" class="snap x-theme relative hide-scroll section-auto-padding">	
+		<div id="about" class="snap light-theme relative hide-scroll section-auto-padding">	
 		<div id="bg-hero" class="c-absolute hw100"></div>
 			<div id="slider-container" class="col-auto h100 dropshadow">		
 				<div id="about-slider" class="about-slider owl-carousel">				
@@ -302,8 +302,9 @@
 						<div class="fadeout-top md-up-h"></div>					
 						<div id="myservices" class="container c-all h100">								
 								<div class="row h100 c-all text-box">
-									<div class="col-lg-5 mr-auto mb-3 mb-lg-4 h-auto">
-										<h2 class="element-animate ignore">Featured <strong>Services</strong></h2>
+									<div class="col-lg-5 mr-auto mb-lg-4 h-auto">
+										<h2 class="m-h element-animate ignore">Featured <strong>Services</strong></h2>
+										<h2 class="md-up-h element-animate ignore">My <strong>Services</strong></h2>
 										<p class="m-h">My main services are built to meet most popular demands.<br>
 										Have a project that doesn't fit here?<br></p>
 										<p class="m-h">No problem, just <a href="#contact-popup" class="open-popup"><strong>message me</strong></a>  and let's have a chat!</p> 
@@ -311,28 +312,28 @@
 									</div>
 									<div class="col-lg-6 ">
 										<div class="row m0">
-											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
+											<div class="col-lg-6 col-md-6 mb-lg-4">
 												  <div class="service">
 													<span class="icon icon-bulb mb-4 d-block"></span>
 													<h3>Product Design</h3>
 													<p>From rough concept idea, to polished end product, I take care of the whole design process</p>
 												  </div>
 											</div>
-											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
+											<div class="col-lg-6 col-md-6 mb-lg-4">
 												  <div class="service">
 													<span class="icon icon-pencil mb-4 d-block"></span>
 													<h3>Concept Ideation</h3>
 													<p>Got an idea and want me to generate concepts from it? I'm up for it!</p>
 												  </div>
 											</div>
-											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
+											<div class="col-lg-6 col-md-6 mb-lg-4">
 												  <div class="service">
 													<span class="icon icon-screen-smartphone mb-4 d-block"></span>
 													<h3>3d Modeling & Rendering</h3>
 													<p>I create models with clean surfaces made with love - ready to send to manufacturer or rapid prototyping</p>
 												  </div> 
 											</div>									
-											<div class="col-lg-6 col-md-6 mb-3 mb-lg-4">
+											<div class="col-lg-6 col-md-6 mb-lg-4">
 												  <div class="service">
 													<span class="icon icon-compass mb-4 d-block"></span>
 													<h3>Branding</h3>
@@ -348,7 +349,9 @@
 				</div>	
 			</div>	
 		</div>
-		<h3 class="s-t element-animate">LATEST <strong>WORK</strong></h3>		
+		<div class="md-up-h s-t vh100 c-all light-theme"> 
+			<h3 class="invisible fade-in-up">LATEST <strong>WORK</strong></h3>	
+		</div>		
 		
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
@@ -4425,7 +4428,7 @@
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'light-theme'; //	set theme for touch devices
+		var theme = 'dark-theme'; //	set theme for touch devices
 		}
 		else
 		{ 
@@ -4505,7 +4508,6 @@
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- video --> 
-
 		<script>	
 
 			//video formats browser support
@@ -4582,7 +4584,6 @@
 		});
 		
 		</script>
-
 
 		<!-- scroll snap  - for desktop popups -->		
 		<script>
@@ -5173,10 +5174,7 @@ $(function() {
 		});	
 	
 		</script>
-
-		
-		
-			
+					
 		<!-- scrolltop btn + scrollbar -->
 		<script>
 // When the user scrolls the page, execute myFunction
