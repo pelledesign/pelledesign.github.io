@@ -17864,3 +17864,17 @@ cursor:pointer;
 #play-video svg {
 fill:red;	
 }
+
+
+#grid { 
+margin-left: 3px;
+}
+#grid > div { 
+padding:3px;
+padding-top:0;
+padding-left:0;
+}
+
+/* #grid > div:nth-child(2n) {
+  padding-left:0;
+} */
