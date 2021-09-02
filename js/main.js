@@ -442,14 +442,16 @@ nav:false,
 dots:false,
 items: 1,
 dragTouch: false,
-navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+mouseDrag: false,
+touchDrag: false,
+//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
 responsive:{
   0:{
 	autoHeight: true,
 	//loop:false,
 	items:1,
-	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-	nav:false,
+	//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:true,
 	
   },
   768:{
