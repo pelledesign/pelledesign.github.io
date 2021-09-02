@@ -462,7 +462,6 @@ responsive:{
   992:{
 	items:1,
 	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	nav:true,
 	autoHeight: false	
   }	  
 }
