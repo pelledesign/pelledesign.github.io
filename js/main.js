@@ -598,7 +598,7 @@ autoHeight: true,
 lazyLoad : true,
 margin:0,
 stagePadding:0,
-nav:true,
+nav:false,
 items: 1,
 touchDrag: true,
 mouseDrag: true,
@@ -615,7 +615,7 @@ responsive:{
 },
 1000:{
   items:1,
-  nav:true,
+  nav:false,
   autoHeight: true,
 }
 }	
