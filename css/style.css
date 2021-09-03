@@ -17878,3 +17878,11 @@ padding-left:0;
 /* #grid > div:nth-child(2n) {
   padding-left:0;
 } */
+
+
+.img-text {
+position: absolute;
+top:0;
+left:0;
+transform: translate(-50%, -50%);	
+}

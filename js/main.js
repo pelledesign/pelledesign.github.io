@@ -63,10 +63,20 @@ $('.navbar .dropdown > a').click(function(){
 
 
 
-/* zoom-icon function */
-$('.zoom-icon').on('click', function() {
-	
 
+	  $('.zoomable').on('touchstart',function(){
+		$(this).find('.img-text').removeClass('hidden');			
+	  });
+	  $('.zoomable').on('touchend',function(){
+		$(this).find('.img-text').addClass('hidden');			
+	  });
+
+/* zoom-icon function */
+$('.zoom-icon, .zoomable').on('click', function() {
+
+	
+	
+/* alert('sss'); */
 		// select popup background based on background of .item 	
 		if ($(this).closest('.item').hasClass('dark-theme')){
 		var bg = '#141414';
