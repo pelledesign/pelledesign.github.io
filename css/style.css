@@ -13256,8 +13256,10 @@ border: 3px solid #fff;
 .separator
 {
 width:auto;
-height: 5px;	
-  background: black;
+height: 1px;	
+  background: var(--contrast);
+/*   padding-top: 3rem;
+  padding-bottom: 3rem; */
 }
 
 .separator-white
@@ -17882,7 +17884,7 @@ padding-left:0;
 
 .img-text {
 position: absolute;
-top:0;
-left:0;
+top: 50%;
+left: 50%;
 transform: translate(-50%, -50%);	
 }

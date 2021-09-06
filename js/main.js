@@ -174,7 +174,7 @@ belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 apa = design_process + $('#design-process'),
 all_sliders = $('#hero-slider, #about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
 about_slider.trigger('to.owl.carousel', [0, 500]);

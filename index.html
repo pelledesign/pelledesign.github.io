@@ -363,7 +363,7 @@
 			<div class="centerscroll" id="portfolio"></div>		
 			<div id="akg" class="portfolio-section">
 				<div id="section-container" class="invisible fade-in">
-					<div id="akg-title" class="title ignore row m0 dark-theme">
+					<div id="akg-title" class="title ignore row m0 x-theme">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
@@ -608,32 +608,50 @@
 					</div>				
 				</div>			
 			</div>
-			<div id="grid" class="item row m0 h100">							
-				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container">				
+			<div id="grid" class="item row m0 h100">		 <!-- container ml-auto mr-auto --> 					
+				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 					<div class="item zoomable hw100 medium-theme">
-						<img src="" data-src="akg/images/gallery/01.png" class="lazy invisible fade-in cover " style="object-position: 100% 17%;">	
+						<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 						<p class="img-text hidden absolute">test</p>
-					</div>	
-<!-- 					<div class="light-theme overlay c-all desktop-hidden">
-						<div class="text-animate c-all txt-c">
-							<div>
-								<p>Spherical shades</p>
-							</div>
-						</div>
-					</div>		 -->			
+					</div>			
 				</div>
-				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay">
-					<div class="zoom-icon"></div>
-					<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover medium-theme" style="object-position: 100% 17%;">												
+				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+					<div class="item zoomable hw100 medium-theme">
+					<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
+					<p class="img-text hidden absolute">Top View</p>					
+					</div>
 				</div>
-				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container">
-					<div class="zoom-icon"></div>
-					<img src="" data-src="akg/images/gallery/01.png" class="lazy invisible fade-in cover medium-theme" style="object-position: 100% 17%;">												
+				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+					<div class="item zoomable hw100 medium-theme">
+						<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
+						<p class="img-text hidden absolute">test</p>
+					</div>			
 				</div>
-				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay">
-					<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover medium-theme" style="object-position: 100% 17%;">												
+				<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+					<div class="item zoomable hw100 medium-theme">
+					<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
+					<p class="img-text hidden absolute">Top View</p>					
+					</div>
 				</div>
-			</div>				
+				<div class="col-lg-12 loader c-all textoverlay">
+					<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
+				</div>
+				<div class="col-lg-12 loader c-all textoverlay">
+					<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover dark-theme" style="object-position: 100% 17%;">												
+				</div>
+				<div class="col-lg-12 loader c-all textoverlay" style="height:65vh !important">
+					<iframe 
+					id="xr-iframe"
+					class=" lazy invisible fade-in dark-theme" 								
+					src=""
+					data-src="akg/xr/akgxr.html"																			
+					frameborder="0"
+					scrolling="no"
+					>
+					</iframe>												
+				</div>
+			</div>
+			<div class="separator"></div>				
 			<div id="converse" class="portfolio-section">
 				<div id="section-container" class="invisible fade-in">
 					<div id="converse-title" class="title row m0 dark-theme">
@@ -4432,7 +4450,7 @@
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'dark-theme'; //	set theme for touch devices
+		var theme = 'light-theme'; //	set theme for touch devices
 		}
 		else
 		{ 
