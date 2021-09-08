@@ -13255,7 +13255,7 @@ border: 3px solid #fff;
 	
 .separator
 {
-width:auto;
+width:100%;
 height: 1px;	
   background: var(--contrast);
 /*   padding-top: 3rem;
@@ -17871,7 +17871,7 @@ fill:red;
 #grid { 
 margin-left: 3px;
 }
-#grid > div { 
+#grid > div:not(.separator) { 
 padding:3px;
 padding-top:0;
 padding-left:0;
