@@ -437,11 +437,13 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 	e.preventDefault();
 });
 
-alert('dd');
+alert('aa');
+
 
 /* sliders */
 hero_slider.owlCarousel({
 autoplay: true,
+lazyLoadEager: 1,
 /* autoplayTimeout: 2500,	 */
 //rewind: true,
 animateOut: 'fadeOut',
