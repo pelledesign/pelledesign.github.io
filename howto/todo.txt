@@ -1,9 +1,14 @@
+/* desktop */
+latest work text
+about slider bg
+
 
 /* general */
 hero img + font
 spotify hero + animate exploded xr + new video
 converse - make one rough key sketch
 check all devices
+
 
 
 function övrigt (

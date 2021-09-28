@@ -17425,6 +17425,11 @@ width:100%;
 height: auto; position: absolute; top: 50%; transform: translateY(-50%);	
 }
 
+
+.rellax div svg {	
+opacity: 0.035;
+}
+
 .light-theme .rellax div svg {	
 opacity: 0.035;
 }

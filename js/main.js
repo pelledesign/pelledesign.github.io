@@ -174,7 +174,7 @@ belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 apa = design_process + $('#design-process'),
 all_sliders = $('#hero-slider, #about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-main_sliders = $('#converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
 about_slider.trigger('to.owl.carousel', [0, 500]);
@@ -234,21 +234,29 @@ main_sliders.on('initialized.owl.carousel', function(event) {
 	}); */
 	
 main_sliders.on('translate.owl.carousel', function(event) {
+
+
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
 	
 	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
 		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme medium-theme').addClass('light-theme');
-		  $(this).closest('#section-container').find('.title').removeClass('dark-theme medium-theme').addClass('light-theme');
+		  		if(!is_touch_device()) {		
+			  $(this).closest('#section-container').find('.title').removeClass('dark-theme medium-theme').addClass('light-theme');
+			  }
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme medium-theme').addClass('dark-theme');
+			if(!is_touch_device()) {
 			$(this).closest('#section-container').find('.title').removeClass('light-theme medium-theme').addClass('dark-theme');
+			}
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
 			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme dark-theme').addClass('medium-theme');
+			if(!is_touch_device()) {
 			$(this).closest('#section-container').find('.title').removeClass('light-theme dark-theme').addClass('medium-theme');
+			}
 	  }
 	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('no-theme')) {
 	  }
