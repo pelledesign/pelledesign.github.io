@@ -16243,12 +16243,74 @@ background: none;
   background: #555;
 }
 
+/* width */
+.add-scrollbar::-webkit-scrollbar {
+  width: 8px; /* also removes extra padding created by overflow:scroll/auto */
+  height:1; /* also removes extra padding created by overflow:scroll/auto */
+}
+
+/* Track */
+.add-scrollbar::-webkit-scrollbar-track {
+background: none;
+}
+
+/* Handle */
+.add-scrollbar::-webkit-scrollbar-thumb {
+  background: none;	
+  outline: 1px solid #000;
+	outline-offset: -2px;
+}
+
+/* Handle on hover */
+.add-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--contrast);	
+}
 
 .hide-scrollbar
 {
     -ms-overflow-style: none; /* IE 11 */
     scrollbar-width: none; /* Firefox 64 */
 }
+
+
+/* Buttons */
+::-webkit-scrollbar-button:single-button {
+    background-color: none;
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+/* Up */
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    height: 12px;
+    width: 16px;
+    background-position: center 4px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement:active {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(128, 128, 128)'><polygon points='50,00 0,50 100,50'/></svg>");
+}
+
+/* Down */
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    height: 12px;
+    width: 16px;
+    background-position: center 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(96, 96, 96)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(112, 112, 112)'><polygon points='0,0 100,0 50,50'/></svg>");
+}
+
+
+
 
 #bagheera-process-popup img {
  height:100%;	
@@ -17114,6 +17176,13 @@ width:50%;
 
 .h100 {	
 height:100%;	
+}
+
+.h75 {	
+height:75%;	
+}
+.h50 {	
+height:50%;	
 }
 
 .h100-animate {	
