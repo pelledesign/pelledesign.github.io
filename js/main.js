@@ -157,8 +157,10 @@ $('.zoom-icon, .zoomable').on('click', function() {
 		});
 
 var
+new_hero  = $('#new-hero'),
 hero_slider  = $('#hero-slider'),
 about_slider  = $('#about-slider'),
+about_slider_mobile  = $('#about-slider-mobile'),
 converse_more  = $('#converse-more'),
 converse_gallery  = $('#converse-gallery'),
 converse_cmf  = $('#converse-cmf'),
@@ -172,6 +174,7 @@ mixed  = $('#mixed'),
 specialized_more  = $('#specialized-more'),
 belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
+reviews  = $('#reviews'),
 apa = design_process + $('#design-process'),
 all_sliders = $('#hero-slider, #about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
 main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
@@ -446,6 +449,48 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 });
 
 /* sliders */
+new_hero.owlCarousel({
+loop:true,
+autoplay: true,
+lazyLoad : true,		
+lazyLoadEager: 1,
+/* autoplayTimeout: 2500,	 */
+//rewind: true,
+animateOut: 'fadeOut',
+autoHeight: true,
+/* checkVisible: false,	 */
+margin:0,
+nav:false,
+dots:false,
+items: 1,
+dragTouch: false,
+mouseDrag: false,
+touchDrag: false,
+//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+responsive:{
+  0:{
+	autoHeight: true,
+	//loop:false,
+	items:1,
+	//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:true,
+	
+  },
+  768:{
+	items:1,
+	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:false,
+	autoHeight: true,
+	dots:true,	
+  },
+  992:{
+	items:1,
+	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+	autoHeight: true	
+  }	  
+}
+});
+
 hero_slider.owlCarousel({
 loop:true,
 autoplay: true,
@@ -494,7 +539,7 @@ autoHeight: true,
 lazyLoad : true,		
 loop:false,
 margin:0,
-nav:true,
+nav:false,
 dots:false,
 items: 1,
 dragTouch: false,
@@ -518,7 +563,44 @@ responsive:{
   992:{
 	items:1,
 	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	nav:true,
+	nav:false,
+	autoHeight: true	
+  }	  
+}
+});
+
+about_slider_mobile.owlCarousel({
+rewind: true,
+autoHeight: true,
+/* checkVisible: false,	 */
+lazyLoad : true,		
+loop:false,
+margin:0,
+nav:false,
+dots:false,
+items: 1,
+dragTouch: false,
+navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+responsive:{
+  0:{
+	autoHeight: true,
+	loop:false,
+	items:1,
+	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:false,
+	
+  },
+  768:{
+	items:1,
+	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:false,
+	autoHeight: true,
+	dots:true,	
+  },
+  992:{
+	items:1,
+	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+	nav:false,
 	autoHeight: false	
   }	  
 }
@@ -906,6 +988,35 @@ responsive:{
 1000:{
   items:1,
   nav:true
+}
+}	
+});	 
+	
+reviews.owlCarousel({
+autoplay: true,
+autoplayHoverPause: true,
+loop: true,
+autoplayTimeout: 1700,	
+margin:0,
+stagePadding:0,
+nav:false,
+items: 1,
+touchDrag: true,
+mouseDrag: true,
+dots:false,
+navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+responsive:{
+0:{
+  items:1,
+  nav:false
+},
+600:{
+  items:1,
+  nav:false
+},
+1000:{
+  items:4,
+  nav:false
 }
 }	
 });	 

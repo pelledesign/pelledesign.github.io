@@ -1,6 +1,8 @@
 /* desktop */
+SNO EN SNYGG HERO
 latest work text
 about slider bg
+ew text logo
 
 
 /* general */

@@ -379,7 +379,8 @@ body {
   font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #6c757d;
+  /* color: #6c757d; */
+  color: #404040;
 }
 
 
@@ -11410,6 +11411,12 @@ header .navbar .nav-link {
 color: #fff;
 }
 
+@media (min-width: 1200px) {
+header .navbar .nav-link {
+  font-size: 0.75rem;
+}
+}
+
 header.light-theme .navbar .nav-link {
 color: var(--contrast);	
 }
@@ -11755,10 +11762,10 @@ bottom: -3em !important;
 
 /* ---------------------------------------------------------------------------		about slider 		----------------------------------------------------------------------------------- */	
 
-#about-slider {
+/* #about-slider {
 min-height:100vh;
 height:100vh;	
-}
+} */
 
 /* disable left or right arrow when first or last slide */
 
@@ -15949,6 +15956,21 @@ height: 100% !important;
 }
 
 
+#about-slider.owl-carousel .owl-stage {
+
+height: 0 !important;
+	
+}
+
+
+
+#about-slider, #about-slider.owl-carousel .owl-item.active {
+
+height: auto !important;
+	
+}
+
+
 
 
 @media (max-width:767px)  {
@@ -17253,7 +17275,9 @@ height:100%;
 }
 
 .text-logo {
-font-size:30px; font-weight:400; text-decoration:none;	
+font-size:21px; 
+font-weight:400; 
+text-decoration:none;	
 }
 
 @media (max-width:575px) {
