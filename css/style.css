@@ -17950,6 +17950,10 @@ width: 60%;
 }
 }
 
+.p-logo-new {
+ padding: 8px;	
+}
+
 /* #hero svg {
 fill: #e8e8e8;	
 } */
@@ -17992,4 +17996,13 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);	
+}
+
+
+#myservices .row > div {
+padding-right:2rem;	
+}
+
+#myservices h2, h3 {
+color:#d9d2b3;	
 }

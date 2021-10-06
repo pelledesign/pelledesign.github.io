@@ -29,9 +29,6 @@ $('nav .dropdown').hover(function(){
 		$this.find('.dropdown-menu').removeClass('show');
 });
 
-$('.navbar .dropdown > a').click(function(){
- location.href = this.href;
-});
 
 $('#dropdown04').on('show.bs.drop	down', function () {
   console.log('show');
@@ -51,17 +48,6 @@ $('header a.nav-link').on('click',  function(){
 	$('.navbar-collapse').removeClass('show');
 	$('.navbar-toggler').removeClass('open').addClass('collapsed');
 });
-
-/* $('header .nav-link').on('click', function(){
-	$('.navbar-collapse').removeClass('show');
-}); */
-
-
-$('.navbar .dropdown > a').click(function(){
- location.href = this.href;
-});
-
-
 
 
 	  $('.zoomable').on('touchstart',function(){
@@ -494,6 +480,7 @@ responsive:{
 hero_slider.owlCarousel({
 loop:true,
 autoplay: true,
+/* autoplayHoverPause: true, */
 lazyLoad : true,		
 lazyLoadEager: 1,
 /* autoplayTimeout: 2500,	 */
@@ -528,7 +515,7 @@ responsive:{
   992:{
 	items:1,
 	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	autoHeight: false	
+	autoHeight: true	
   }	  
 }
 });
