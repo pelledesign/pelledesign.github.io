@@ -12218,6 +12218,10 @@ margin-top: 3em;
   text-transform: uppercase;
 }
 
+.site-footer ul, .site-footer p {
+  font-size: 12px;
+}
+
 .site-footer .footer-link li {
   line-height: 1.5;
   margin-bottom: 15px;
