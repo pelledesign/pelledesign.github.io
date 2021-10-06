@@ -13271,7 +13271,7 @@ border: 3px solid #fff;
 {
 width:100%;
 height: 1px;	
-  background: var(--contrast);
+  background: #e1e1e1;
 /*   padding-top: 3rem;
   padding-bottom: 3rem; */
 }
@@ -18005,4 +18005,12 @@ padding-right:2rem;
 
 #myservices h2, h3 {
 color:#d9d2b3;	
+}
+
+#reviews p {
+	font-size:11px;
+}
+
+#reviews h2 {
+	font-size:1.6rem;
 }
