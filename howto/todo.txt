@@ -1,8 +1,10 @@
 /* desktop */
-
 latest work text
+header when snap back from below
+/* mobile */
+menu
 
-/* general */
+/* both */
 spotify hero + animate exploded xr + new video
 converse - make one rough key sketch
 check all devices
