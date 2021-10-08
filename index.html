@@ -45,7 +45,7 @@
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/jquery-scroll-snap.css">
+		<!-- <link rel="stylesheet" href="css/jquery-scroll-snap.css"> -->
 <!-- 		<script>
 			$('.navbar .dropdown > a').click(function(){
 			 location.href = this.href;
@@ -80,7 +80,7 @@
 		</script> -->		
 	</head>
 	<script>
-	console.log('removed font');
+	console.log('lazy videos + removed scroll snap cssfile');
 	</script>	
 	<body> 
 
@@ -1602,7 +1602,7 @@
 											<div class="item video-container hw100 relative">
 												<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
 												<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
-												  <source data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+												  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
 												</video>							
 												<div id="play-video" class="absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
 												
@@ -3898,6 +3898,7 @@
 			</div>
 			<div id="keyshot-video-popup" class="c-lg popup mfp-hide dark-theme">
 				<iframe
+				class="lazy"
 					src="https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1"
 					style="padding:5%;">
 				</iframe>
