@@ -1037,8 +1037,8 @@ all_sliders.on('changed.owl.carousel', function(event) {
 	/* get current slide index */
 	let element = jQuery(event.target);		 
 	var thisSlide = event.item.index;
-	console.log('current slide is: ' + thisSlide);
-	console.log('last slide is: ' + lastSlide);
+/* 	console.log('current slide is: ' + thisSlide);
+	console.log('last slide is: ' + lastSlide); */
 
 	/* if last visited slide has class unload and  lazy loading is finished - unload it by moving src to data-src + add class .unloaded  */
 	var oldslide = element.find('.owl-item').eq(lastSlide).find('.unload');
