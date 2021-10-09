@@ -1,10 +1,11 @@
 /* desktop */
-latest work text
+process
 header when snap back from below
 /* mobile */
 menu
 
 /* both */
+latest work text
 spotify hero + animate exploded xr + new video
 converse - make one rough key sketch
 check all devices
