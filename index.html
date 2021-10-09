@@ -2708,37 +2708,7 @@
 										</div>												
 										</div>										
 									</div>
-									<div class="fadeout-btm"></div>							
-								<div class="touch-hidden h100 col-lg-12 textoverlay-desktop textoverlay-toggle light-theme absolute">
-									<div class="loader bg-offwhite">
-										<div class="h100">						
-											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
-										</div>
-										<div class="light-theme overlay c-all">
-											<div class="col-lg-8 text-animate txt-l c-all">
-												<div>
-													<h2 class="mb-4 s-t m-h">Color /<strong>Material </strong>/ Finish</h2>
-													<h2 class="mb-4 s-t md-up-h"><strong>CMF</strong></h2>
-													<p>
-													When we're happy with our model, it's time to give it its color, material and finish.</p>
-													<p>
-													To evaluate the progress, you may use a real-time rendering viewer downloadable from the link below.<br>
-													Check out the video below to see how it works!
-													</p>
-													<p>
-													Here, You may also open up the model I'm working on at any time, to see how things are shaping up!</p>
-													<p>
-													Get Keyshot Viewer free <a href="https://www.keyshot.com/viewer/" target="_blank"><strong>here</strong></a>
-													</p>	
-													<div class="btn-play-wrap mx-auto my-auto">
-														<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
-														class="btn-play"><span class="ion ion-ios-play"></span></a></p>
-													</div>
-												</div>
-											</div>
-										</div>							
-									</div>
-								</div>							
+									<div class="fadeout-btm"></div>												
 							</div>							
 							<div id="keyshot-desktop" class="owl-hide-touch item cont light-theme">
 								<div class="absolute row m0 hw100">					
@@ -2747,7 +2717,7 @@
 											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
 										</div>
 										<div class="c-absolute absolute btn-play-wrap mx-auto my-auto">											
-											<p><a href="#keyshot-video-popup" class="btn-play open-popup"><span class="ion ion-ios-play"></span></a></p>
+											<p><a id="open-keyshot-video" href="#keyshot-video-popup" class="btn-play open-popup"><span class="ion ion-ios-play"></span></a></p>
 										</div>
 <!-- 										<div class="c-absolute absolute btn-play-wrap mx-auto my-auto">
 											<a href="#keyshot-video-popup" class="c-absolute absolute btn-play-wrap mx-auto my-auto open-popup"><div class="ion-android-add-circle"></div></a>
@@ -3886,22 +3856,23 @@
 			</div>
 			<div id="keyshot-video-popup" class="c-lg popup mfp-hide dark-theme">
 				<iframe
-				class="lazy"
-					src="https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1"
+				id="keyshot-video"
+				class=""
+					src=""
 					style="padding:5%;">
 				</iframe>
-<!-- 				<div class="row c-lg m0 auto-scroll h100">
-					<div class="col-lg-9 ppp">
-						<div class="txt-c popup-logo-padding text-center">	
-							<div id="popup-logo-center" class="alcon-logo"></div>
-						</div>	
-						<h3 class="mb-4 s-t"><strong>Lens Container</strong></h3>		  
-						<p>Lens Container for eye care products company Alcon.</p>
-						<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.  <br>
-									  
-						</p>
-					</div>
-				</div>   -->
+			
+		<script>
+
+		//open video	
+		  $('#open-keyshot-video').on('click',function(){
+			$('#keyshot-video').attr('src', "https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1");				
+		  });
+		//close video
+		//see inline magnific script below	
+  		  
+		</script>				
+				
 			</div>
 <!-- 			<div id="design-process-popup" class="popup mfp-hide">
 				<div id="slider-container" class="md-down-h hw100">
@@ -5280,6 +5251,11 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 					},
 					close: function() {
 						magnificPopupExists = false;
+
+						let this_href = this.st.el.attr('href');						
+						if(this_href == '#keyshot-video-popup') { 
+							$('#keyshot-video').attr('src', "");
+						}							
 
 					//exit fullscreen on close popup
 					 var docElm = document.documentElement;

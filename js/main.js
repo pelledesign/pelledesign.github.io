@@ -556,7 +556,7 @@ loop: false,
 autoplay: false,
 autoHeight: true,
 lazyLoad : true,
-lazyLoadEager: 1,
+
 margin:0,
 stagePadding:0,
 nav: false,

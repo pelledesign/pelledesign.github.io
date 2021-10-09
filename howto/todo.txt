@@ -1,4 +1,5 @@
 /* desktop */
+lazyoadeager where it's possible
 process
 header when snap back from below
 /* mobile */
