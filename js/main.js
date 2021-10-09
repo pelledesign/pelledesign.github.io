@@ -143,7 +143,6 @@ $('.zoom-icon, .zoomable').on('click', function() {
 		});
 
 var
-new_hero  = $('#new-hero'),
 hero_slider  = $('#hero-slider'),
 about_slider  = $('#about-slider'),
 about_slider_mobile  = $('#about-slider-mobile'),
@@ -435,47 +434,6 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 });
 
 /* sliders */
-new_hero.owlCarousel({
-loop:true,
-autoplay: true,
-lazyLoad : true,		
-lazyLoadEager: 1,
-/* autoplayTimeout: 2500,	 */
-//rewind: true,
-animateOut: 'fadeOut',
-autoHeight: true,
-/* checkVisible: false,	 */
-margin:0,
-nav:false,
-dots:false,
-items: 1,
-dragTouch: false,
-mouseDrag: false,
-touchDrag: false,
-//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-responsive:{
-  0:{
-	autoHeight: true,
-	//loop:false,
-	items:1,
-	//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-	nav:true,
-	
-  },
-  768:{
-	items:1,
-	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-	nav:false,
-	autoHeight: true,
-	dots:true,	
-  },
-  992:{
-	items:1,
-	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	autoHeight: true	
-  }	  
-}
-});
 
 hero_slider.owlCarousel({
 loop:true,
@@ -598,6 +556,7 @@ loop: false,
 autoplay: false,
 autoHeight: true,
 lazyLoad : true,
+lazyLoadEager: 1,
 margin:0,
 stagePadding:0,
 nav: false,
