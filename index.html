@@ -82,7 +82,7 @@
 		</script> -->		
 	</head>
 	<script>
-	console.log('smooth scrpt');
+	console.log('scroll test');
 	</script>	
 	<body> 
 
@@ -531,7 +531,10 @@
 			<h3 class="invisible fade-in">LATEST <strong>WORK</strong></h3>	
 			
 		</div>		
-		
+		<div class="vh100">
+			<h1 id="scrollState" style="text-align: center;">UNLOCKED</h1>
+			<button id="changeScrollState">Lock Scroll</button>
+		</div>		
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -3079,6 +3082,9 @@
 			</div>				
 		</div>
 		<div class="separator"></div>
+		<script src="https://cdn.jsdelivr.net/npm/tua-body-scroll-lock/dist/tua-bsl.umd.min.js"></script>
+
+
 		<!-- start footer -->
 		<footer class="site-footer x-theme m0" role="contentinfo">    
 			<div class="container text-box">
@@ -4701,6 +4707,54 @@
 					</div>
 				</div>	
 			</div> 
+<!-- 			<div id="contact-popup" class="popup mfp-hide c-lg light-theme auto-scroll invisible zoom-in">
+				<div class="c-lg">
+					<div class="container">
+						<div class="section" id="contact">
+							<div>
+								<h3 class="mb-4 s-t align-items-center justify-content-center txt-c">Contact&nbsp; <strong>Me</strong></h3>
+								<div class="row">
+									<div class="col-md mb-5 order-2 text-box">
+										<form action="https://formspree.io/xknqbela" method="post">
+											<div class="row">
+												<div class="col-md-6 form-group">
+													 <label for="name">Name</label>
+													 <input type="text" id="name" name="name" class="form-control">
+												</div>
+												<div class="col-md-6 form-group">
+													 <label for="phone">Phone</label>
+													 <input type="text" id="phone" name="phone" class="form-control">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 form-group">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 form-group">
+													 <label for="email">Email</label>
+													 <input type="email" id="email" name="_replyto" class="form-control">
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-12 form-group">
+													 <label for="message">Write Message</label>
+													 <textarea name="message" id="message" class="form-control" cols="30" rows="8"></textarea>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-6-left form-group">
+													<input type="submit" value="Send Message" class="btn btn-primary px-3 py-3">
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>  -->
 			<div id="brainstorming-info">
 			<p>In design we use our research and analysis from the earlier design process phases and break it down to functions.<br>
 			In our user analysis, we might have encountered a problem with body injuries from a badly designed truck seat due to entering and exiting the truck cab. <br>We find that we must <strong>"facilitate exiting and entering"</strong> 
@@ -4854,7 +4908,41 @@
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
+		<!-- <script src="js/TuaScrollLock.js"></script> -->
 		
+		
+		
+		<script>
+const scrollState = document.getElementById('scrollState');
+const changeScrollState = document.getElementById('changeScrollState');
+
+changeScrollState.addEventListener('click', modal);
+console.log(bodyScrollLock)
+function modal() {
+  const modal = Object.assign(document.createElement('div'), {
+    id: 'modal',
+    style: {
+
+    }
+  });
+  modal.append(Object.assign(document.createElement('div'), {
+    innerHTML: 'Tap the grey part to unlock<br>' + 'Modal Locked<br>'.repeat(10)
+  }));
+  document.body.append(modal);
+  bodyScrollLock.lock();
+  scrollState.innerText = 'Locked';
+
+  modal.addEventListener('click', e => {
+    if (e.target.id != 'modal') return;
+    bodyScrollLock.unlock();
+    modal.remove();
+    scrollState.innerText = 'Unlocked';
+  });
+}
+		</script>
+
+
+
 		<!-- video --> 
 		<script>	
 
