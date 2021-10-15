@@ -30,7 +30,7 @@ $('nav .dropdown').hover(function(){
 });
 
 
-$('#dropdown04').on('show.bs.drop	down', function () {
+$('#dropdown04').on('show.bs.dropdown', function () {
   console.log('show');
 });
 
@@ -358,6 +358,18 @@ $('#about-slider').on('translate.owl.carousel', function(event) {
 	$(this).find('.animate').eq(item).addClass('fadeIn element-animated');
 	/* console.log(item); */
 	});
+	
+
+	
+	
+$('#hero-slider').on('loaded.owl.lazy', function() {
+$(this).find('.p-logo').removeClass('.invisible').addClass('fadeIn element-animated');
+$(this).find('.p-logo-new').removeClass('.invisible').addClass('fadeIn element-animated');
+});	
+	
+	
+
+					
 	
  $('#converse-more, #akg-more').on('translated.owl.carousel', function(event) {
 	 
