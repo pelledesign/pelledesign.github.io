@@ -404,6 +404,12 @@
 				</div>
 			</div>
 		</div>
+
+<!-- 		<script src="https://cdn.jsdelivr.net/npm/tua-body-scroll-lock/dist/tua-bsl.umd.min.js"></script>
+		<div class="vh100">
+			<h1 id="scrollState" style="text-align: center;">UNLOCKED</h1>
+			<button id="changeScrollState">Lock Scroll</button>
+		</div>	 -->
 		
 		<!-- about -->
 		<div id="about" class="snap x-theme relative hide-scroll section-auto-padding lg-up-h">	
@@ -531,10 +537,7 @@
 			<h3 class="invisible fade-in">LATEST <strong>WORK</strong></h3>	
 			
 		</div>		
-		<div class="vh100">
-			<h1 id="scrollState" style="text-align: center;">UNLOCKED</h1>
-			<button id="changeScrollState">Lock Scroll</button>
-		</div>		
+	
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -3082,7 +3085,7 @@
 			</div>				
 		</div>
 		<div class="separator"></div>
-		<script src="https://cdn.jsdelivr.net/npm/tua-body-scroll-lock/dist/tua-bsl.umd.min.js"></script>
+
 
 
 		<!-- start footer -->
@@ -4912,34 +4915,34 @@
 		
 		
 		
-		<script>
-const scrollState = document.getElementById('scrollState');
-const changeScrollState = document.getElementById('changeScrollState');
+<!-- 		<script>
+			const scrollState = document.getElementById('scrollState');
+			const changeScrollState = document.getElementById('changeScrollState');
 
-changeScrollState.addEventListener('click', modal);
-console.log(bodyScrollLock)
-function modal() {
-  const modal = Object.assign(document.createElement('div'), {
-    id: 'modal',
-    style: {
+			changeScrollState.addEventListener('click', modal);
+			console.log(bodyScrollLock)
+			function modal() {
+			  const modal = Object.assign(document.createElement('div'), {
+				 id: 'modal',
+				 style: {
 
-    }
-  });
-  modal.append(Object.assign(document.createElement('div'), {
-    innerHTML: 'Tap the grey part to unlock<br>' + 'Modal Locked<br>'.repeat(10)
-  }));
-  document.body.append(modal);
-  bodyScrollLock.lock();
-  scrollState.innerText = 'Locked';
+				 }
+			  });
+			  modal.append(Object.assign(document.createElement('div'), {
+				 innerHTML: 'Tap the grey part to unlock<br>' + 'Modal Locked<br>'.repeat(10)
+			  }));
+			  document.body.append(modal);
+			  bodyScrollLock.lock();
+			  scrollState.innerText = 'Locked';
 
-  modal.addEventListener('click', e => {
-    if (e.target.id != 'modal') return;
-    bodyScrollLock.unlock();
-    modal.remove();
-    scrollState.innerText = 'Unlocked';
-  });
-}
-		</script>
+			  modal.addEventListener('click', e => {
+				 if (e.target.id != 'modal') return;
+				 bodyScrollLock.unlock();
+				 modal.remove();
+				 scrollState.innerText = 'Unlocked';
+			  });
+			}
+		</script> -->
 
 
 
