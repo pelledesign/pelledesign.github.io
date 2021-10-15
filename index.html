@@ -5096,7 +5096,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 		</script>
 
 		<!-- fullscreen -->
-		<script>
+<!-- 		<script>
 		$('.open-popup').on('click', function () {
 
 
@@ -5117,7 +5117,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 				  }
 
 		});
-		</script>
+		</script> -->
 		
 		<!-- buttons  -->
 		<script>
@@ -5388,7 +5388,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 				fixedBgPos: true,
 				callbacks: {
 					beforeOpen: function() {		
-				
+	window.scrollTo(0,1);			
 						$('html, body').addClass('mfp-active');
 						
 					},
