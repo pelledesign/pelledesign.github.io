@@ -82,7 +82,7 @@
 		</script> -->		
 	</head>
 	<script>
-	console.log('fullscreen');
+	console.log('window.scrollTo(0,1);');
 	</script>	
 	<body> 
 
@@ -5388,7 +5388,7 @@ if (document.documentMode || /Edge/.test(navigator.userAgent) || /Edg/.test(navi
 				fixedBgPos: true,
 				callbacks: {
 					beforeOpen: function() {		
-	window.scrollTo(0,1);			
+	window.scrollTo(0,1);				
 						$('html, body').addClass('mfp-active');
 						
 					},
