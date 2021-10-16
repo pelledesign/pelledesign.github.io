@@ -1,9 +1,9 @@
 /* desktop */
-
+header when snap back from below
 go through all website backups on e: pick the best
 lazyoadeager where it's possible
 process
-header when snap back from below
+
 /* mobile */
 menu
 
