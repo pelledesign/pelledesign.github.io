@@ -1,47 +1,75 @@
-/* desktop */
-header when snap back from below
-go through all website backups on e: pick the best
-lazyoadeager where it's possible
-process
 
-/* mobile */
+function desktop (
+
+header when snap back from below
+go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
+gpu keeps running on 3d model close
+process
+rellax logos ipad
+)
+
+function mobile (
+
 menu
 
-/* both */
+)
+
+function both (
+
 latest work text
 spotify hero + animate exploded xr + new video
 converse - make one rough key sketch
 check all devices
 
+)
 
-
-function övrigt (
+function brands (
 
 /* converse */
 /* akg */
 /* poc */
 /* bagheera */
+bagheera - new color, simple bright	or shades of black/gray
 /* colors slide / popup */
 /* haglöfs */
 /* specialized */
 /* spotify */
 /* bel mar */
+belmar - finish model
 /* design process */
 /* footer */
 
-test light / dark theme desktop and choose which is best for dektop and mobile
-belmar - finish model
-bagheera - new color, simple bright	
-frames in premiere > transparent video
-rellax logos ipad
 
-kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+
+
+frames in premiere > transparent video
+
+
+
 check all browsers +  devices
 
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
  
 watch .git
+
+
+)
+
+function övrigt (
+
+frames in premiere > transparent video
+check all browsers +  devices
+skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
+update pdf portfolio 
+ 
+watch .git
+
+
+)
+
+function pageSpeed (
 
 march: with about: 35, 39
 without: 58

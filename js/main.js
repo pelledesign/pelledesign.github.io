@@ -562,6 +562,73 @@ responsive:{
   }	  
 }
 });
+akg_more.owlCarousel({
+loop: false,	
+rewind: true,
+autoplay: false,
+autoHeight: true,
+lazyLoad : true,
+lazyLoadEager : 1,
+margin:0,
+stagePadding:0,
+nav:false,
+items: 1,
+touchDrag: true,
+mouseDrag: true,
+dots:false,
+navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+responsive:{
+0:{
+  items:1,
+  nav:false
+},
+600:{
+  items:1,
+  nav:false
+},
+1000:{
+  items:1,
+  nav:false,
+  autoHeight: true,
+}
+}	
+});	
+akg_gallery.owlCarousel({
+/* rewind: true, */
+autoplay: false,
+lazyLoad : true,
+lazyLoadEager: 1,
+loop: true,
+margin:0,
+stagePadding:0,
+nav:true,
+items: 1,
+touchDrag: true,
+mouseDrag: true,
+dots:true,
+navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+ responsive:{
+	0:{
+	items:1,
+	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
+	nav:false
+	},
+	600:{
+	items:1,
+	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+	nav:false,
+	dots:true,
+	},
+	1000:{
+	loop: true,
+	stagePadding:0,
+	items:1,
+	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
+	nav:true,
+	dots:false
+	}	
+ }	
+});
 converse_more.owlCarousel({
 rewind: true,
 loop: false,	
@@ -596,6 +663,7 @@ converse_gallery.owlCarousel({
 autoplay: false,
 autoHeight: false,
 lazyLoad : true, 
+lazyLoadEager: 1,
 loop: true,
 margin:0,
 stagePadding:0,
@@ -649,73 +717,6 @@ responsive:{
 	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"]
 }
 }	
-});
-
-akg_more.owlCarousel({
-loop: false,	
-rewind: true,
-autoplay: false,
-autoHeight: true,
-lazyLoad : true,
-lazyLoadEager : 1,
-margin:0,
-stagePadding:0,
-nav:false,
-items: 1,
-touchDrag: true,
-mouseDrag: true,
-dots:false,
-navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-responsive:{
-0:{
-  items:1,
-  nav:false
-},
-600:{
-  items:1,
-  nav:false
-},
-1000:{
-  items:1,
-  nav:false,
-  autoHeight: true,
-}
-}	
-});	
-akg_gallery.owlCarousel({
-/* rewind: true, */
-autoplay: false,
-lazyLoad : true,
-loop: true,
-margin:0,
-stagePadding:0,
-nav:true,
-items: 1,
-touchDrag: true,
-mouseDrag: true,
-dots:true,
-navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
- responsive:{
-	0:{
-	items:1,
-	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-	nav:false
-	},
-	600:{
-	items:1,
-	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	nav:false,
-	dots:true,
-	},
-	1000:{
-	loop: true,
-	stagePadding:0,
-	items:1,
-	navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
-	nav:true,
-	dots:false
-	}	
- }	
 });
 poc_more.owlCarousel({
 /* loop:true, */
@@ -809,7 +810,8 @@ mixed_more.owlCarousel({
 rewind: true,
 autoplay: false,
 autoHeight: true,
-lazyLoad : true, 
+lazyLoad : true,
+lazyLoadEager: 1, 
 margin:0,
 stagePadding:0,
 nav:false,

@@ -144,7 +144,49 @@
 					});					
 				}, 100);				
 			}
-		} , { offset: '95%' } );		
+		} , { offset: '95%' } );	
+		
+		//		fade in left
+
+		$('.fade-in-left').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('element-animated')) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+					$('body .fade-in-left.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							el.removeClass('invisible');
+							el.addClass('fadeInLeft element-animated');							
+							el.removeClass('item-animate');
+						},  k * 100);
+					});					
+				}, 100);				
+			}
+		} , { offset: '95%' } );
+
+		$('.fade-in-right').waypoint( function( direction ) {
+
+			if( direction === 'down' && !$(this.element).hasClass('element-animated')) {
+				
+				i++;
+
+				$(this.element).addClass('item-animate');
+				setTimeout(function(){
+					$('body .fade-in-right.item-animate').each(function(k){
+						var el = $(this);
+						setTimeout( function () {
+							el.removeClass('invisible');
+							el.addClass('fadeInRight element-animated');							
+							el.removeClass('item-animate');
+						},  k * 100);
+					});					
+				}, 100);				
+			}
+		} , { offset: '75%' } );		
 		
 //		flip in Y		
 
