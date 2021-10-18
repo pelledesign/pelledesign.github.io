@@ -11436,13 +11436,17 @@ header .navbar .nav-link {
   font-size: 1.05rem;
   font-weight: 300;
 /*   color: rgba(255, 255, 255, 0.9); */  
-color: #fff;
+color: #fff; 
 }
 
 @media (min-width: 1200px) {
 header .navbar .nav-link {
   font-size: 0.75rem;
 }
+}
+
+.header-link-animation {
+font-size: 1rem	
 }
 
 header.light-theme .navbar .nav-link {
@@ -17890,7 +17894,7 @@ position:relative;
 
 @media (orientation:portrait) {
 #slider-container {
-padding:3px;
+/* padding:3px; */
 }
 }
 

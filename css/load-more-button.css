@@ -114,7 +114,7 @@ a, a:link, a:focus, a:active, a:visited {
     padding-top: auto;
 }
 }
-#loadMore a, #loadMore2 a, #loadMore3 a, #loadMore4 a, #loadMore5 a, #loadMore6 a, #loadMore7 a, #loadMore8 a {
+#loadMore2 a, #loadMore3 a, #loadMore4 a, #loadMore5 a, #loadMore6 a, #loadMore7 a, #loadMore8 a {
     background: #faa635;
     border-radius: 3px;
     color: white;
@@ -122,8 +122,7 @@ a, a:link, a:focus, a:active, a:visited {
     padding: 10px 30px;
     transition: all 0.25s ease-out;
     -webkit-font-smoothing: antialiased;
-}
-#loadMore a:hover, #loadMore2 a:hover, #loadMore3 a:hover, #loadMore4 a:hover, #loadMore5 a:hover, #loadMore6 a:hover, #loadMore7 a:hover, #loadMore8 a:hover, #view-btn a:hover {
+}#loadMore2 a:hover, #loadMore3 a:hover, #loadMore4 a:hover, #loadMore5 a:hover, #loadMore6 a:hover, #loadMore7 a:hover, #loadMore8 a:hover, #view-btn a:hover {
     background-color: #212121;
 }
 

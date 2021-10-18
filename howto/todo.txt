@@ -10,16 +10,12 @@ rellax logos ipad
 )
 
 function mobile (
-
-menu
-
+fix X xlose button on image zoom (main)
 )
 
 function both (
 
 latest work text
-spotify hero + animate exploded xr + new video
-converse - make one rough key sketch
 check all devices
 
 )
@@ -27,33 +23,22 @@ check all devices
 function brands (
 
 /* converse */
+fix ugly moodboard
+make one rough key sketch
 /* akg */
 /* poc */
+xr with helmet?
 /* bagheera */
 bagheera - new color, simple bright	or shades of black/gray
 /* colors slide / popup */
 /* haglöfs */
 /* specialized */
 /* spotify */
+spotify hero + animate exploded xr + new video
 /* bel mar */
 belmar - finish model
 /* design process */
 /* footer */
-
-
-
-
-frames in premiere > transparent video
-
-
-
-check all browsers +  devices
-
-skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
-update pdf portfolio 
- 
-watch .git
-
 
 )
 
