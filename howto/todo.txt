@@ -15,6 +15,7 @@ fix X xlose button on image zoom (main)
 
 function both (
 
+make last image fill rest css as in akg grid mobile
 latest work text
 check all devices
 

@@ -15518,10 +15518,17 @@ min-height:40vh;
 padding: 2rem 0;
 }
 
-@media screen and (orientation:landscape) { 
+/* @media screen and (orientation:landscape) { 
 .config-orientation-height{
 height:calc(100vh - 8vw);
 width:calc(100vw - 8vw);
+}
+} */
+
+@media screen and (orientation:landscape) { 
+.config-orientation-height{
+height:100vh;
+width:100vw;
 }
 }
 
@@ -17984,6 +17991,7 @@ width: 60%;
 
 .p-logo-new {
  padding: 8px;	
+ max-width:100px;
 }
 
 .p-logo-new {
