@@ -6,7 +6,6 @@ go through all website backups on e: pick the best - test light / dark theme des
 lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
 on mousover zoomin on process images
 process
-rellax logos ipad
 )
 
 function mobile (

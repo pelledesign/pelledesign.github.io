@@ -18006,7 +18006,14 @@ header .p-logo-new {
 padding:6px;
 }
 
+/* #research img {
+opacity:1;	
+transition: 0.15s all ease;		
+}
 
+#research img:hover {
+opacity:0.6;		
+} */
 /* #hero svg {
 fill: #e8e8e8;	
 } */
