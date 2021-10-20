@@ -849,7 +849,7 @@ h3, .h3 {
 
 @media (max-width: 320px) {
 h3, .h3 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -17991,6 +17991,9 @@ width: 60%;
 
 .p-logo-new {
  padding: 8px;	
+}
+
+header .p-logo-new {
  max-width:100px;
 }
 
@@ -18086,4 +18089,7 @@ color:#d9d2b3;
   overflow: auto;
 }
 }
+
+
+
 

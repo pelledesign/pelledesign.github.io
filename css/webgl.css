@@ -193,3 +193,25 @@ html {
      text-align: center;
 }
  
+/* to use transparent background, use the following code:  */
+
+html {
+     background:none;
+}
+
+ body{
+     background-color:transparent;
+}
+
+#TRL, #BX{
+     display:none !important;
+}
+
+ #Container{
+/* mix-blend-mode: multiply; */
+background-color:transparent;
+}
+
+/* body div:nth-child(2) {
+  background: red;
+} */

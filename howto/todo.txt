@@ -4,18 +4,18 @@ function desktop (
 header when snap back from below
 go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
-gpu keeps running on 3d model close
+on mousover zoomin on process images
 process
 rellax logos ipad
 )
 
 function mobile (
 fix X xlose button on image zoom (main)
+youtube video not working
 )
 
 function both (
 
-make last image fill rest css as in akg grid mobile
 latest work text
 check all devices
 

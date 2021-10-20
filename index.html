@@ -536,10 +536,14 @@
 				</div>	
 			</div>	
 		</div>
-<!-- 		<div class="md-up-h s-t vh60 c-all x-theme"> 
-			<h3 class="invisible fade-in">LATEST <strong>WORK</strong></h3>	
+		<div class="md-up-h s-t vh60 c-all dark-theme">
+		<div>
+			<h3 class="invisible fade-in" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>
 			
-		</div> -->		
+			<p class="invisible fade-in-up" style="font-size:12px; text-align:center; text-transform: none;">Testing Poppop</p>
+		</div>
+			<!-- <div class="p-logo-new"></div> -->
+		</div>		
 	
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
@@ -566,7 +570,7 @@
 						<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 						</div>						
-						<div id="akg-more" class="owl-carousel">					
+						<div id="akg-more" class="owl-carousel">  <!-- style="background-image: url('akg/images/akg-logo.svg'); background-repeat: no-repeat; background-position: center;"	 -->				
 							<div class="item owl-hide-lg-up medium-theme">
 								<div class="textoverlay loader relative invisible zoom-in">
 									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
@@ -731,7 +735,7 @@
 									</div>
 								</div>							
 							</div>					
-							<div class="item keyshotconfig dark-theme">				
+							<div class="item keyshotconfig dark-theme" style="background-color:#000000d1">				
 								<iframe 							
 								class="akg-webconfig-process lazy"
 								data-src="akg/web/keyshot-configurator.html"													
@@ -822,7 +826,13 @@
 							<p class="img-text hidden absolute">test</p>
 						</div>			
 					</div>
-					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="item zoomable hw100 medium-theme">
+							<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
+							<p class="img-text hidden absolute">test</p>
+						</div>			
+					</div>
+					<div class="col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
 						<div class="item zoomable hw100 medium-theme">
 						<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
 						<p class="img-text hidden absolute">Top View</p>					
@@ -3202,6 +3212,106 @@
 
 		<!-- start popups -->		
 		<div id="popups-div">
+			<div id="akg-xr-popup" class="loader popup mfp-hide dark-theme">
+				<div class="col h100">
+					<div class="row cont-md-down m0 h100">
+						<div class="col-lg-4 c-md-down ppp auto-scroll">	
+							<div>
+								<div id="popup-logo-free" class="akg-logo md-up-h"></div>					
+								<h2 class="s-t m-h align-center-portrait">AKG <strong>Over Ear Headphones</strong></h2>
+								<p class="m-h align-center-portrait">Headphones for Vienna based audio products company AKG. <br>
+								Retro styled light-weight and easy to handle headphones with focus on comfort.</p>
+								<div class="justify-center-portrait">
+									<p class="btn btn-outline m-h landscape-md-hidden">Swipe to Rotate</p>
+								</div>	
+								<div class="justify-center-portrait">
+									<div id="bg-button" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
+									<div id="bg-button2" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
+									<div id="bg-button3" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>	
+								</div>	
+							</div>	
+						</div>
+						<div class="middle col-lg-8 c-100">				
+							<div class="c-100 w100">
+								<iframe 
+								id="xr-iframe"
+								class="akg lazy invisible fade-in" 								
+								src=""
+								data-src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>	
+							</div>
+						</div>			
+					</div>
+				</div>		
+			</div>
+			<div id="akg-model-popup" class="webgl popup mfp-hide light-theme">
+				<div class="c-100">
+					<div class="config-orientation-height iframe-container">
+						<div class="model-controls">
+							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon-popup ion-refresh invisible flip-in-y"></div>	
+						</div>
+						<iframe 
+						class="akg showonclick lazy"
+						data-src="akg/webgl/rendered.html" 							
+						frameborder="0"
+						scrolling="no"
+						>
+						</iframe>
+						<div class="popup-title">
+							<h3 class="h3 mb-2 s-t">3d <strong>Model</strong></h3>
+						</div>	
+					</div>
+				</div>								 
+			</div>			
+			<div id="akg-webconfig-popup" class="popup mfp-hide dark-theme">
+				<div class="c-100">
+					<div class="config-orientation-height">
+						<div data-tooltip="#config-info-popup-options" class="info-icon-popup ion-information-circled invisible flip-in-y config-info">
+						</div>
+						<iframe 
+						id="popup-iframe"
+						class="akg-webconfig lazy invisible fade-in bg-none"		
+						data-src="akg/web/keyshot-configurator.html"												
+						frameborder="0"
+						scrolling="no"
+						>			
+						</iframe>
+					</div>
+				</div>								 
+			</div>
+			<div id="akg-gallery-popup" class="c-lg popup mfp-hide  medium-theme">  
+				<div class="col h100">
+					<div class="row h100">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-4 row-lg-4 row-md-4 row-xs-4 c-100 xl-up-h">	
+							<div id="popup-logo-free" class="akg-logo"></div>
+						</div>
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 row-lg-8 row-md-8 row-xs-8 c-100">
+							<div id="popup-logo" class="akg-logo md-down-h portrait-hidden"></div>				
+							<div id="akg-gallery" class="owl-carousel c-100">						
+								<div class="item c-100 no-theme">				
+									<img class="lazy mr-auto ml-auto" src="" data-src="akg/images/gallery/01.png">
+								</div>
+								<div class="item loader c-100 no-theme">
+									<img class="owl-lazy" src="" data-src="akg/images/gallery/02.png">
+								</div>
+								<div class="item loader c-100 no-theme">
+									<img class="owl-lazy" src="" data-src="akg/images/gallery/03.png">
+								</div>
+								<div class="item loader c-100 no-theme">
+									<img class="owl-lazy" src="" data-src="akg/images/gallery/04.png">
+								</div>
+								<div class="item loader c-100 no-theme">
+									<img class="owl-lazy" src="" data-src="akg/images/gallery/05.png">
+								</div>															
+							</div>	
+						</div>	
+					</div>
+				</div>
+			</div>			
 			<div id="converse-xr-popup" class="popup mfp-hide dark-theme">
 				<div class="col h100">
 					<div class="row m0 upper h100">	
@@ -3279,7 +3389,7 @@
 					</div>
 				</div>								 
 			</div>
-			<div id="converse-model-popup" class="popup mfp-hide light-theme">
+			<div id="converse-model-popup" class="webgl popup mfp-hide light-theme">
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
@@ -3387,106 +3497,6 @@
 					  
 				});
 			</script>
-			<div id="akg-xr-popup" class="loader popup mfp-hide dark-theme">
-				<div class="col h100">
-					<div class="row cont-md-down m0 h100">
-						<div class="col-lg-4 c-md-down ppp auto-scroll">	
-							<div>
-								<div id="popup-logo-free" class="akg-logo md-up-h"></div>					
-								<h2 class="s-t m-h align-center-portrait">AKG <strong>Over Ear Headphones</strong></h2>
-								<p class="m-h align-center-portrait">Headphones for Vienna based audio products company AKG. <br>
-								Retro styled light-weight and easy to handle headphones with focus on comfort.</p>
-								<div class="justify-center-portrait">
-									<p class="btn btn-outline m-h landscape-md-hidden">Swipe to Rotate</p>
-								</div>	
-								<div class="justify-center-portrait">
-									<div id="bg-button" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
-									<div id="bg-button2" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>						
-									<div id="bg-button3" data-tooltip="#icon-info-swatches-popup" class="info-icon color-circle invisible bounce-in"></div>	
-								</div>	
-							</div>	
-						</div>
-						<div class="middle col-lg-8 c-100">				
-							<div class="c-100 w100">
-								<iframe 
-								id="xr-iframe"
-								class="akg lazy invisible fade-in" 								
-								src=""
-								data-src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>	
-							</div>
-						</div>			
-					</div>
-				</div>		
-			</div>
-			<div id="akg-model-popup" class="popup mfp-hide light-theme">
-				<div class="c-100">
-					<div class="config-orientation-height iframe-container">
-						<div class="model-controls">
-							<div data-tooltip="#wireframe-info-popup" class="info-icon-popup ion-information-circled invisible flip-in-y"></div>
-							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon-popup ion-refresh invisible flip-in-y"></div>	
-						</div>
-						<iframe 
-						class="akg showonclick lazy"
-						data-src="akg/webgl/rendered.html" 							
-						frameborder="0"
-						scrolling="no"
-						>
-						</iframe>
-						<div class="popup-title">
-							<h3 class="h3 mb-2 s-t">3d <strong>Model</strong></h3>
-						</div>	
-					</div>
-				</div>								 
-			</div>			
-			<div id="akg-webconfig-popup" class="popup mfp-hide dark-theme">
-				<div class="c-100">
-					<div class="config-orientation-height">
-						<div data-tooltip="#config-info-popup-options" class="info-icon-popup ion-information-circled invisible flip-in-y config-info">
-						</div>
-						<iframe 
-						id="popup-iframe"
-						class="akg-webconfig lazy invisible fade-in bg-none"		
-						data-src="akg/web/keyshot-configurator.html"												
-						frameborder="0"
-						scrolling="no"
-						>			
-						</iframe>
-					</div>
-				</div>								 
-			</div>
-			<div id="akg-gallery-popup" class="c-lg popup mfp-hide  medium-theme">  
-				<div class="col h100">
-					<div class="row h100">
-						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-4 row-lg-4 row-md-4 row-xs-4 c-100 xl-up-h">	
-							<div id="popup-logo-free" class="akg-logo"></div>
-						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-8 row-lg-8 row-md-8 row-xs-8 c-100">
-							<div id="popup-logo" class="akg-logo md-down-h portrait-hidden"></div>				
-							<div id="akg-gallery" class="owl-carousel c-100">						
-								<div class="item c-100 no-theme">				
-									<img class="lazy mr-auto ml-auto" src="" data-src="akg/images/gallery/01.png">
-								</div>
-								<div class="item loader c-100 no-theme">
-									<img class="owl-lazy" src="" data-src="akg/images/gallery/02.png">
-								</div>
-								<div class="item loader c-100 no-theme">
-									<img class="owl-lazy" src="" data-src="akg/images/gallery/03.png">
-								</div>
-								<div class="item loader c-100 no-theme">
-									<img class="owl-lazy" src="" data-src="akg/images/gallery/04.png">
-								</div>
-								<div class="item loader c-100 no-theme">
-									<img class="owl-lazy" src="" data-src="akg/images/gallery/05.png">
-								</div>															
-							</div>	
-						</div>	
-					</div>
-				</div>
-			</div>	
 			<div id="bagheera-xr-popup" class="popup mfp-hide light-theme">
 				<div class="col h100">
 					<div class="row m0 h100">
@@ -3643,7 +3653,7 @@
 					</div>
 				</div>		
 			</div>
-			<div id="poc-model-popup" class="loader popup mfp-hide medium-theme">
+			<div id="poc-model-popup" class="webgl loader popup mfp-hide medium-theme">
 				<div id="section-container" class="c-100 iframe-container">
 					<div class="config-orientation-height">
 						<div class="model-controls">
@@ -3770,7 +3780,7 @@
 					</div>								
 				</div>			
 			</div>				
-			<div id="spotify-model-popup" class="popup mfp-hide light-theme">
+			<div id="spotify-model-popup" class="webgl popup mfp-hide light-theme">
 				<div id="section-container" class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
@@ -3822,7 +3832,7 @@
 					</div>
 				</div>		
 			</div>
-			<div id="specialized-model-popup" class="popup mfp-hide light-theme">
+			<div id="specialized-model-popup" class="webgl popup mfp-hide light-theme">
 				<div class="c-100">
 					<div class="config-orientation-height">
 						<div class="model-controls">
@@ -3864,7 +3874,7 @@
 					</div>
 				</div>		
 			</div>			
-			<div id="haglofs-model-popup" class="popup mfp-hide">
+			<div id="haglofs-model-popup" class="webgl popup mfp-hide">
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
@@ -3902,7 +3912,7 @@
 						</div>
 					</div>
 			</div>			
-			<div id="belmar-model-popup" class="popup mfp-hide">
+			<div id="belmar-model-popup" class="webgl popup mfp-hide">
 				<div class="c-100">
 					<div class="config-orientation-height iframe-container	">
 						<div class="model-controls">
@@ -3943,7 +3953,7 @@
 					</div>
 				</div>		
 			</div>
-			<div id="alcon-model-popup" class="popup mfp-hide light-theme">
+			<div id="alcon-model-popup" class="webgl popup mfp-hide light-theme">
 				<div class="c-100">
 					<div class="iframe-container hw100">
 						<div class="model-controls">
@@ -5513,15 +5523,48 @@ $('.fullscreen').on('click', function () {
 						magnificPopupExists = true;
 						 //$('html, body').animate({ scrollTop: 50px }, 50);
 						 // Getting the height of the document
+						if($(this_href).hasClass('webgl')) {  
+						let this_href = this.st.el.attr('href'); 												
+						let this_data_src = $(this_href).find('iframe').attr('data-src');
+						
+						console.log(this_href);
+						console.log(this_data_src);
+						
+						$(this_href).find('iframe').attr('src', this_data_src).attr('data-src', '');
+					}			
 
 					},
 					close: function() {
 						magnificPopupExists = false;
 
-						let this_href = this.st.el.attr('href');						
+						let this_href = this.st.el.attr('href');	
+						console.log(this_href);				
+
+						//let this_src = $(this_href).find('iframe').attr('src');
+						//console.log(this_src);
+						//$(this_href).find('iframe').attr('src','').attr('data-src', this_src); //.removeAttr('data-ll-status')	
+						
+						if($(this_href).hasClass('webgl')) { 
+						console.log('has class webgl');
+						let this_src = $(this_href).find('iframe').attr('src');
+						//console.log(this_src);
+						$(this_href).find('iframe').attr('src','').attr('data-src', this_src); //.removeAttr('data-ll-status')
+						}
+						else {
+						console.log('error');
+						}						
+						
 						if(this_href == '#keyshot-video-popup') { 
 							$('#keyshot-video').attr('src', "");
-						}							
+						}
+						
+						//let this_src = $(this_href).find('iframe').attr('src');
+						//console.log(this_src);
+						
+						
+						
+						//$(this_href).find('iframe').attr('data-src',);
+						//$(this_href).find('iframe').attr('src','')
 
 					//exit fullscreen on close popup
 					 var docElm = document.documentElement;

@@ -50,12 +50,12 @@ $('header a.nav-link').on('click',  function(){
 });
 
 
-	  $('.zoomable').on('touchstart',function(){
-		$(this).find('.img-text').removeClass('hidden');			
-	  });
-	  $('.zoomable').on('touchend',function(){
-		$(this).find('.img-text').addClass('hidden');			
-	  });
+$('.zoomable').on('touchstart',function(){
+$(this).find('.img-text').removeClass('hidden');			
+});
+$('.zoomable').on('touchend',function(){
+$(this).find('.img-text').addClass('hidden');			
+});
 
 /* zoom-icon function */
 $('.zoom-icon, .zoomable').on('click', function() {
@@ -161,8 +161,8 @@ belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 reviews  = $('#reviews'),
 apa = design_process + $('#design-process'),
-all_sliders = $('#hero-slider, #about-slider, #converse-more, #converse-gallery, #converse-cmf, #akg-more, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+all_sliders = $('#hero-slider, #about-slider, #akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
+									 main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
 about_slider.trigger('to.owl.carousel', [0, 500]);
@@ -174,7 +174,6 @@ about_slider.trigger('to.owl.carousel', [2, 500]);
 });
 
 /* change nav clr depending on slide bg */
-
 main_sliders.on('initialized.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
@@ -196,7 +195,6 @@ main_sliders.on('initialized.owl.carousel', function(event) {
 		  //alert('error');
 	  }				  	
 	});
-
 main_sliders.on('translate.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
@@ -359,20 +357,11 @@ $('#about-slider').on('translate.owl.carousel', function(event) {
 	$(this).find('.animate').removeClass('fadeIn element-animated');
 	$(this).find('.animate').eq(item).addClass('fadeIn element-animated');
 	/* console.log(item); */
-	});
-	
-
-	
-	
+	});		
 $('#hero-slider').on('loaded.owl.lazy', function() {
 $(this).find('.p-logo').removeClass('.invisible').addClass('fadeIn element-animated');
 $(this).find('.p-logo-new').removeClass('.invisible').addClass('fadeIn element-animated');
-});	
-	
-	
-
-					
-	
+});							
  $('#converse-more, #akg-more').on('translated.owl.carousel', function(event) {
 	 
 	let element = jQuery(event.target);
@@ -451,7 +440,7 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 
 hero_slider.owlCarousel({
 loop:true,
-autoplay: true,
+/* autoplay: true, */
 /* autoplayHoverPause: true, */
 lazyLoad : true,		
 lazyLoadEager: 1,
@@ -1008,13 +997,13 @@ responsive:{
 	/* set default value */		
 	var lastSlide = 0;
 
-all_sliders.on('changed.owl.carousel', function(event) {
+main_sliders.on('changed.owl.carousel', function(event) {
 		
 	/* get current slide index */
 	let element = jQuery(event.target);		 
 	var thisSlide = event.item.index;
-/* 	console.log('current slide is: ' + thisSlide);
-	console.log('last slide is: ' + lastSlide); */
+	console.log('current slide is: ' + thisSlide);
+	console.log('last slide is: ' + lastSlide);
 
 	/* if last visited slide has class unload and  lazy loading is finished - unload it by moving src to data-src + add class .unloaded  */
 	var oldslide = element.find('.owl-item').eq(lastSlide).find('.unload');
@@ -1026,7 +1015,6 @@ all_sliders.on('changed.owl.carousel', function(event) {
 	oldslide.attr('src','').attr('data-src', oldsrc).removeClass('hidden').addClass('unloaded');	
 	}	
 	
-
 	
 	/* if last visited slide has class .unload-no-reload, unload by moving src to data-src */
 	var oldslide2 = element.find('.owl-item').eq(lastSlide).find('.unload-no-reload');	
@@ -1035,7 +1023,6 @@ all_sliders.on('changed.owl.carousel', function(event) {
 	{	
 	oldslide2.attr('src','').attr('data-src', oldsrc2).addClass('unloaded');
 	}	
-
 
 	/* if this slide with class .unload has been unloaded before - reload by moving data-src to src  */ 
 	var this_unload_slide = element.find('.owl-item').eq(thisSlide).find('.unload');
@@ -1050,15 +1037,17 @@ all_sliders.on('changed.owl.carousel', function(event) {
 	if (element.find('.owl-item').eq(thisSlide).find('.unload-no-reload').hasClass('unloaded')) {
 	element.find('.owl-item').eq(thisSlide).find('.unload-no-reload').closest('.iframe-container').find(".hide-this").removeClass('hidden');
 	}
+
+   if (thisSlide > lastSlide){
+       console.log('going right');
+   } else {
+      console.log('going left');
+   }
 	
 	//
    lastSlide = thisSlide;
 
-/*    if (thisSlide > lastSlide){
-       console.log('right');
-   } else {
-      console.log('left');
-   } */
+
 
 });
 
