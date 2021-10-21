@@ -544,24 +544,17 @@
 		</div>
 			<!-- <div class="p-logo-new"></div> -->
 		</div>		
-
+<!-- 			<div class="keyshot-container" style="width:100%;">
 				<iframe
-				id="keyshot-video"
-				class=""
+				id=""
+				class="keyshot-video invisible"
 				style="height:40vh"
 				src=""
 				style="padding:5%;">
 				</iframe>	
-<button class="apa">open</button>				
-				<script>
-				//open video	
-				  $('.apa').on('click',function(){
-					$('#keyshot-video').attr('src', "https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1");				
-				  });
-				//close video
-				//see inline magnific script below	
-				  
-				</script>	
+				<button class="open-video">open</button>
+			</div> -->			
+	
 	
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
@@ -2964,7 +2957,7 @@
 								</div>						
 							</div>	
 							<div id="keyshot-mobile" class="owl-hide-desktop item light-theme">
-									<div class="fadeout-top"></div>													
+																						
 									<div class="row m0 absolute hw100 c-all  show-scroll">
 										<div class="text-box c-all txt-l">
 											<div>
@@ -2983,26 +2976,48 @@
 												</p>												
 											</div>
 										</div>
-										<div class="w100 relative pb-6">						
+										<div class="w100 relative pb-6 hidden">						
 											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
-										<div class="btn-play-wrap-touch mx-auto my-auto">
-										<p><a href="#keyshot-video-popup" class="btn-play open-popup"><span class="ion ion-ios-play"></span></a></p>
-<!-- 											<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
-											class="btn-play"><span class="ion ion-ios-play"></span></a></p> -->
-										</div>												
-										</div>										
+											<div class="btn-play-wrap-touch mx-auto my-auto">
+												<p><a href="#keyshot-video-popup" class="btn-play open-popup"><span class="ion ion-ios-play"></span></a></p>
+	<!-- 											<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
+												class="btn-play"><span class="ion ion-ios-play"></span></a></p> -->
+											</div>												
+										</div>
+										<div class="keyshot-container relative" style="padding:3px; width:100%;">
+											<iframe
+											allowfullscreen
+											id=""
+											class="keyshot-video lazy unload"
+											style="height:40vh"
+											src="images/process/keyshot.png"
+											data-src="https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1"
+											style="padding:5%;">
+											</iframe>	
+											<!-- <button class="open-video c-absolute">open</button> -->
+										</div>																					
 									</div>
-									<div class="fadeout-btm"></div>												
 							</div>							
-							<div id="keyshot-desktop" class="owl-hide-touch item cont light-theme">
+							<div id="keyshot-desktop" class="owl-hide-touch item cont dark-theme">
 								<div class="absolute row m0 hw100">					
-								  <div class="col-lg-6 h100">
-										<div class="h100">						
+								  <div class="col-lg-6 h100 c-all">
+									<div class="keyshot-container relative" style="padding:1rem; width:100%;">
+										<iframe
+										id=""
+										class="keyshot-video lazy unload"
+										style="height:40vh"
+										src="images/process/keyshot.png"
+										data-src="https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1"
+										style="padding:5%;">
+										</iframe>	
+										<!-- <button class="open-video c-absolute">open</button> -->
+									</div>								  
+	<!-- 									<div class="h100">						
 											<img class="c-100 lazy multiply" data-src="images/process/keyshot.png">
 										</div>
 										<div class="c-absolute absolute btn-play-wrap mx-auto my-auto">											
 											<p><a id="open-keyshot-video" href="#keyshot-video-popup" class="btn-play open-popup"><span class="ion ion-ios-play"></span></a></p>
-										</div>
+										</div> -->
 <!-- 										<div class="c-absolute absolute btn-play-wrap mx-auto my-auto">
 											<a href="#keyshot-video-popup" class="c-absolute absolute btn-play-wrap mx-auto my-auto open-popup"><div class="ion-android-add-circle"></div></a>
 											<p><a href="https://www.youtube.com/watch?v=BWhIksyqksY" data-fancybox data-ratio="2"
@@ -5274,6 +5289,22 @@ $('html, body').animate({
 			  });
 			
 		</script>
+
+				<script>
+				//open video	
+				  $('.open-video').on('click',function(){
+				  $('.open-video').addClass('hidden');
+					$('.keyshot-video').attr('src', "https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1");
+					$('.keyshot-video').load(function(){ 
+					$('.keyshot-video').removeClass('invisible').addClass('fadeIn element-animated');
+					
+					});
+									
+				  });
+				//close video
+				//see inline magnific script below	
+				  
+				</script>
 
 		<!-- section proportions -->		
 		<script>
