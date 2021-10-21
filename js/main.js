@@ -440,7 +440,7 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 
 hero_slider.owlCarousel({
 loop:true,
-/* autoplay: true, */
+autoplay: true,
 /* autoplayHoverPause: true, */
 lazyLoad : true,		
 lazyLoadEager: 1,
@@ -920,6 +920,7 @@ autoplay: false,
 rewind: true,
 autoHeight: true,
 lazyLoad : true,
+lazyLoadEager: 1,
 margin:0,
 stagePadding:0,
 nav:true,
