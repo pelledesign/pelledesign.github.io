@@ -12,19 +12,8 @@ $( document ).ready(function () {
     });
   });
 
-$( document ).ready(function () {
-  $(".moreBox2").slice(0, 0).show();								//slice(a, b ) where b is the number of items to be shown from the start
-    if ($(".blogBox2:hidden").length != 0) {
-      $("#loadMore2").show();
-    }   
-    $("#loadMoreText").on('click', function (e) {
-      e.preventDefault();
-      $(".moreBox2:hidden").slice(0, 1).slideDown(); 		//slice(x, y ) where y is the number of items to be unhidden
-      if ($(".moreBox2:hidden").length == 0) {
-			$("#loadMoreText").fadeOut('slow');
-			//$("#loadMoreText p").text('Less');
-			//$("#loadMoreText").addClass('ss');
-      }
-    }); 
 
-  });
+
+	  
+
+

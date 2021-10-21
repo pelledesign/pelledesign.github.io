@@ -14,7 +14,7 @@ youtube video not working
 )
 
 function both (
-
+new p logo favicon
 latest work text
 check all devices
 
@@ -29,7 +29,7 @@ make one rough key sketch
 /* poc */
 xr with helmet?
 /* bagheera */
-bagheera - new color, simple bright	or shades of black/gray
+bagheera - new color, simple bright	or shades of black/gray - compress it
 /* colors slide / popup */
 /* haglöfs */
 /* specialized */
