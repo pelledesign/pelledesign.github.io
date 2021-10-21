@@ -548,13 +548,14 @@
 				<iframe
 				id="keyshot-video"
 				class=""
+				style="height:40vh"
 				src=""
 				style="padding:5%;">
 				</iframe>	
-				
+<button class="apa">open</button>				
 				<script>
 				//open video	
-				  $('#open-keyshot-video').on('click',function(){
+				  $('.apa').on('click',function(){
 					$('#keyshot-video').attr('src', "https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1");				
 				  });
 				//close video
