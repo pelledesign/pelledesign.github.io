@@ -2813,3 +2813,48 @@ max-width: 100% !important;
 }
 }
 
+
+
+
+.flowselectionheaderbox > div {
+    display: flex;
+    vertical-align: bottom;
+}
+
+.flowselectionheaderscrollbox.text-align-by-size {
+justify-content:center;	
+}
+
+
+.flowselectionheaderbox > div:first-of-type {
+flex-wrap:wrap;
+justify-content: center;	
+}
+
+
+/* desktop alt layout */
+@media (orientation:landscape) {
+	#one {
+	justify-content: flex-start !important;	
+	}
+
+
+	.flowselectionheaderbox h3 {
+	text-align:left !important;	
+	}
+
+	.flowwidgetbody.flowselectionbody {
+	align-content: flex-start;
+	}
+	
+	.flowselectionheaderscrollbox.text-align-by-size {
+	 justify-content: left;
+	}	
+	.flowselectionheaderbox > div:first-of-type {
+	flex-wrap:wrap;
+	justify-content: left;	
+	}	
+	.flowheadertextbox.selected {
+	padding-left:0;
+	}	
+}

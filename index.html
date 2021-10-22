@@ -2700,10 +2700,10 @@
 							</div>						
 							<div id="research" class="item cont light-theme">				
 								<div class="absolute row m0 hw100">					
-								  <div class="col-lg-6 h100">
+								  <div class="col-lg-6 h100 soft-zoom">
 									<div class="col-lg-12 textoverlay-mobile">
 										<div class="loader">									
-											<img src="" data-src="images/process/user.jpg" class="owl-lazy flipx cover">
+											<img src="" data-src="images/process/user.jpg" class="owl-lazy flipx cover ">
 											<div class="overlay c-all h100">
 												<div class="col-lg-8 text-animate txt-l">
 													<div>
@@ -2720,7 +2720,7 @@
 									</div>								
 								  </div>
 									<div class="col-lg-6 md-down-h h100 c-all">
-										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h50">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
 											<h3 class="mb-4 s-t">User <strong>Research</strong></h3>
 											<p>Who will be using the product?</p>
 											<p>
@@ -2774,9 +2774,9 @@
 								  </div>
 								</div>
 							</div>
-							<div id="moodboard-sketch" class="item cont medium-theme">					
+							<div id="moodboard" class="item cont light-theme">					
 								<div class="h100 row m0 absolute">					
-								  <div class="col-lg-6 textoverlay-mobile">
+								  <div class="col-lg-6 textoverlay-mobile soft-zoom">
 										<div class="loader">							
 											<img src="" data-src="images/process/moodboard.png" class="lazy cover">
 											<div class="medium-theme overlay c-all">
@@ -2797,7 +2797,7 @@
 										</div>								
 								  </div>
 									<div class="col-lg-6 md-down-h h100 c-all">
-										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h50">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
 											<h2 class="mb-4 s-t">Mood <strong>Board </strong></h2>								
 											  <p>
 											  A mood board is a visual presentation or collage consisting of images, text, and samples of objects in a composition, meant to convey a general idea or feeling about a particular topic.<br> In our case, we use it as a language to describe what expression the product will have. </p>
@@ -3004,14 +3004,14 @@
 							</div>							
 							<div id="keyshot-desktop" class="owl-hide-touch item cont dark-theme">
 								<div class="absolute row m0 hw100">					
-								  <div class="col-lg-6 h100 c-all">
+								  <div class="col-lg-7 h100 c-all">
 									<div class="keyshot-container relative" style="padding:1rem; width:100%;">
 										<iframe
 										allowfullscreen
 										id=""
 										class="keyshot-video lazy unload"
 										style="height:40vh"
-										src="images/process/keyshot.png"
+										src="images/icons/keyshot_logo.svg"
 										data-src="https://www.youtube.com/embed/BWhIksyqksY?&autoplay=1"
 										style="padding:5%;">
 										</iframe>	
@@ -3029,7 +3029,7 @@
 											class="btn-play"><span class="ion ion-ios-play"></span></a></p>
 										</div> -->							
 								  </div>
-									<div class="col-lg-6 md-down-h h100 c-all">
+									<div class="col-lg-5 md-down-h h100 c-all">
 										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h50">
 												<h2 class="mb-4 s-t m-h">Color /<strong>Material </strong>/ Finish</h2>
 												<h2 class="mb-4 s-t md-up-h"><strong>CMF</strong></h2>
@@ -3179,7 +3179,7 @@
 										<div class="loader dark-theme">
 											<iframe 
 											id="popup-iframe"
-											class="akg-webconfig lazy invisible fade-in bg-none"		
+											class="akg-webconfig-process lazy invisible fade-in bg-none"		
 											data-src="akg/web/keyshot-configurator.html"																		
 											frameborder="0"
 											scrolling="no"
@@ -3188,24 +3188,28 @@
 											<div class="col-lg-6 akg-webconfig-overlay2"></div>										
 										</div>											
 									</div>	
-		<script>	
-		
-			//inject iframe styles & spinners
-		if(!is_touch_device()) {
-		 			
-			$(".akg-webconfig").on("load", function() {
+									<script>	
+									
+										//inject iframe styles & spinners
+									if(!is_touch_device()) {
+												
+										$(".akg-webconfig-process").on("load", function() {
 
-			  let head = $(this).contents().find("#one");	
-			  let css = '<div id="cmf-text-box touch-hidden"><h2 class="mb-4 s-t">CMF <strong>Bundle</strong></h2><p>Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p><p>Try it out in the example below by selecting different cmf swatches for different part.</p></div>';
-			  $(head).prepend(css);			
-	  		
-			});
-		}							
-		</script>									
+										  let head = $(this).contents().find("head");	
+										  let css_head = '<link type="text/css" rel="stylesheet" href="../../css/dark-theme.css">';
+										  let col_one = $(this).contents().find("#one");	
+										  let css_col = '<div id="cmf-text-box touch-hidden"><h2 class="mb-4 s-t">CMF <strong>Bundle</strong></h2><p>Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p><p>Try it out in the example below by selecting different cmf swatches for different part.</p></div>';
+										  $(col_one).prepend(css_col);			
+										  $(head).append(css_head);
+											$(this).contents().find("h3").remove();										  
+										
+										});
+									}							
+									</script>									
 							</div>
 							<div id="sustainability" class="item cont light-theme"> 		
 								<div class="h100 row m0 absolute">					
-								  <div class="col-lg-6 textoverlay-mobile">
+								  <div class="col-lg-6 textoverlay-mobile soft-zoom">
 										<div class="loader">							
 											<img src="" data-src="images/process/green.png" class="lazy" style="object-position: 25% 100%;">
 											<div class="medium-theme overlay c-all">
@@ -3227,15 +3231,12 @@
 								  </div>
 									<div class="col-lg-6 md-down-h h100 c-all">
 										<div class="col-lg-8 txt-l auto-scroll add-scrollbar h50">
-											<h2 class="mb-4 s-t">Mood <strong>Board </strong></h2>								
-											  <p>
-											  A mood board is a visual presentation or collage consisting of images, text, and samples of objects in a composition, meant to convey a general idea or feeling about a particular topic.<br> In our case, we use it as a language to describe what expression the product will have. </p>
-											  <p>
-											  Is it supposed to express a safe feeling?<br>
-											  What does safe mean to you?</p>
-											  <p>
-											  How we react to a products semantics is depending on culture, personal experiences and other factors, meaning that we need to communicate what we are trying to achieve with tools that say more than just words.
-											  </p>
+											<h2 class="mb-4 s-t">Sustainable <strong>Design</strong></h2>
+											<p>
+											In every step in the design process - From the early design concepts to sourcing of producers - I work really hard to reduce the environmental footprint of the products</p>
+											<p>At this point in time we have nothing to lose. <br>
+											Making smart design decisions can both cut costs and the environmental impact - which also is a strong sellling point. 
+											</p>
 										</div>												  						
 								  </div>	
 								</div>							
@@ -5628,12 +5629,14 @@ $('.fullscreen').on('click', function () {
 			 $('.info-icon').on('mouseleave',function(){
 			 $(this).find('div').removeClass("flipInY element-animated");
 		  });
+		  
 		  $('.zoom-icon').on('mouseenter',function(){
 			 $(this).addClass('info-icon-hover');
 		  });
 			 $('.zoom-icon').on('mouseleave',function(){
 			 $(this).removeClass('info-icon-hover');
 		  });
+		  
 		  $('.soft-zoom').on('mouseenter',function(){
 			 $(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
 		  });
@@ -5672,14 +5675,16 @@ $('.fullscreen').on('click', function () {
 			}
 			else {
 			ppp = $(this).attr('class').split(' ')[0];
-			alert('no theme found for ' +ppp);
+			//alert('no theme found for ' +ppp);
 			}
+			
 			brand = $(this).attr('class').split(' ')[0];
 
 			  let head = $("." + brand).contents().find("head");	
 			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
 			  $(head).append(css);
-			  $('.' + brand).addClass("visible");			
+			  $('.' + brand).addClass("visible");
+			  $('#' + brand + '-xr-popup').removeClass("loader");			  
 			
 				//bg select buttons
 				$('#' + brand + '-xr-popup #bg-button').click(function(){
@@ -5692,10 +5697,7 @@ $('.fullscreen').on('click', function () {
 					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
 				});
 			
-			  head = $('.' + brand).contents().find("head");	
-				css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme-spinner.css">';
-			  $(head).append(css);
-				$('#' + brand + '-xr-popup').removeClass("loader");	  		
+	  		
 			});
 									
 		</script>
