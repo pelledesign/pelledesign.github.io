@@ -1,6 +1,7 @@
 
 function desktop (
 
+hover popups fix
 process
 header when snap back from below
 go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc

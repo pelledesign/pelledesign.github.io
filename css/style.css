@@ -15813,7 +15813,7 @@ z-index:2;
 	line-height: 1.2;
 	font-size: 3rem;
 	align-items: center;
-	width: 100%;
+	width: 50%;
 	height:100%;
 	justify-content: center;
 	pointer-events:none;
@@ -15830,14 +15830,34 @@ z-index:2;
     position: absolute;
     top: 0;
     height: 100%;
-    width: 100%;
+    width: 50%;
     left: 0;
     z-index: 2;
     align-items: center;
     justify-content: center;
-	letter-spacing: 5px;	
+/* 	letter-spacing: 5px;	 */
 	font-size: 1.25rem;
 	pointer-events:none;
+	padding:25%;
+	    font-weight: 700;	
+}
+
+.tooltip-position-alt {
+    display: flex;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+/* 	letter-spacing: 5px;	 */
+	font-size: 1.25rem;
+	pointer-events:none;
+	/* padding:25%; */
+	padding:2rem;
+	    font-weight: 700;	
 }
 .tooltip-position-mobile {
     display: flex;
