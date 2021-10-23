@@ -5889,6 +5889,12 @@ $(function() {
 				backgroundColor: bgcolor,
 				color: textcolor,		
 			}).stop().show(100);
+			
+			//enables closing of the infobox on mobile as this is a hoverfunction
+			if(is_touch_device()) {
+			$(this).closest('.item').find('.tooltip-position').css( 'pointer-events', 'auto' ) 
+			 }				
+			
 			}, function() {
 			$($(this).data("tooltip")).addClass('hidden');				
 			});				
