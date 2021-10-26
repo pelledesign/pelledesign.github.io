@@ -93,7 +93,13 @@
 	console.log('cont');
 	</script>	
 	<body> 
-<div class="p-logo-new c-absolute" style="position:fixed; fill: #515151; width: 25%;"></div>	
+	<!-- <div class="p-logo-new c-absolute" style="position:fixed; fill: #515151; width: 25%;"></div>	 -->
+	<div class="c-absolute x-theme" style="position:fixed; fill: #515151;">
+		<div>
+			<h3 class="invisible fade-in desktop-hidden" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>		
+			<!-- <p class="invisible fade-in-up" style="font-size:12px; text-align:center; text-transform: none;">Testing Poppop</p> -->
+		</div>
+	</div>	
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
 		
@@ -518,14 +524,12 @@
 				</div>	
 			</div>	
 		</div>
-		<div class="md-up-h s-t vh60 c-all dark-theme">
-		<div>
-			<h3 class="invisible fade-in" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>
-			
-			<p class="invisible fade-in-up" style="font-size:12px; text-align:center; text-transform: none;">Testing Poppop</p>
-		</div>
-			<!-- <div class="p-logo-new"></div> -->
-		</div>		
+<!-- 		<div class="md-up-h s-t vh60 c-all x-theme relative">
+			<div>
+				<h3 class="invisible fade-in" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>				
+				<p class="invisible fade-in-up" style="font-size:12px; text-align:center; text-transform: none;">Testing Poppop</p>
+			</div>
+		</div> -->		
 <!-- 			<div class="keyshot-container" style="width:100%;">
 				<iframe
 				id=""
@@ -536,7 +540,7 @@
 				</iframe>	
 				<button class="open-video">open</button>
 			</div> -->			
-		
+<div id="section-space" class="landscape-hidden"></div>			
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -775,9 +779,9 @@
 				</div>			
 			</div>
 			<div class="xl-up-h x-theme">	 	
-				<div class="col-lg-12  invisible fade-in-left">
+				<div class="col-lg-12 x-theme">
 					<div class="item c-all">			
-						<div class="text-box c-all txt-l">
+						<div class="text-box c-all txt-l  invisible fade-in-left">
 							<div class="">
 								<h2 class="s-t ignore">AKG <strong>K92</strong></h2>
 								<p> Headphones for the Vienna based audio products company AKG.</p> 
@@ -797,7 +801,7 @@
 						</div>
 					</div>										
 				</div>			
-				<div id="grid" class="item row m0 h100">		 <!-- container ml-auto mr-auto --> 	
+				<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
 				
 					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 						<div class="item zoomable hw100 medium-theme">
@@ -855,14 +859,15 @@
 					</div>
 				</div>
 			</div>
-				<div class="text-box c-all txt-l lg-up-h fade-in-left x-theme bg-none">
+				<div class="text-box c-all txt-l lg-up-h fade-in-left x-theme">
 					<div class="">
 						<h2 class="s-t ignore"><strong>"I think Pelle</strong></h2>
 						<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
 						<!-- <strong class="text-black">Jamie, PeoplePerHour</strong></p> -->
 						<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
 					</div>
-				</div>			
+				</div>	
+				<div id="section-space" class="landscape-hidden"></div>				
 			<!-- <div class="separator xl-up-h"></div> -->				
 			<div id="converse" class="portfolio-section">
 				<div id="section-container" class="">
@@ -1547,7 +1552,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="text-box txt-l vh100 snap lg-up-h x-theme">
+			<div class="text-box txt-l vh100 snap lg-up-h x-theme relative">
 				<div class="h-auto">
 				<div class="h100 fade-in-left ignore">
 					<h2 class="s-t ignore">My Design Process Is Designed <strong>For You</strong></h2>
@@ -1556,7 +1561,8 @@
 					<!-- <a href="#designprocess-slider" title="Design Process" class="nav-link">How I Work</a> -->
 					<!-- <p><a href="#myservices" class="btn btn-outline">Learn More</a></p> -->											
 				</div></div>
-			</div>					
+			</div>
+			<div id="section-space" class="landscape-hidden"></div>					
 			<div id="poc" class="portfolio-section light-theme">
 				<div id="section-container" class="invisible fade-in">				
 					<div id="poc-title" class="title row m0">
@@ -1694,8 +1700,9 @@
 					</div>				
 				</div>
 			</div>
+			<div id="section-space" class="landscape-hidden"></div>					
 			<div id="bagheera" class="portfolio-section">
-				<div id="section-container" class="invisible fade-in">			
+				<div id="section-container">			
 					<div id="bagheera-title" class="title light-theme row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2227,8 +2234,9 @@
 						</div>				
 					</div>
 				</div>
-			</div>	
-			<div id="alcon" class="item x-theme landscape-hidden vh75">
+			</div>
+			<div id="section-space" class="landscape-hidden"></div>					
+			<div id="alcon" class="item x-theme landscape-hidden vh75 relative">
 					<div id="alcon-title" class="title light-theme row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2329,7 +2337,8 @@
 						</iframe>												
 					</div> -->
 				</div>
-			</div>			
+			</div>
+			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="specialized" class="portfolio-section">	
 				<div id="section-container" class="invisible fade-in">				
 					<div id="specialized-title" class="title row m0">
@@ -3388,7 +3397,7 @@
 		<div class="separator"></div>
 		
 		<!-- start footer -->
-		<footer class="site-footer x-theme m0" role="contentinfo">    
+		<footer class="site-footer x-theme m0 relative" role="contentinfo">    
 			<div class="container text-box">
 				<div class="row mb-5">
 				  <div class="col-md-4 mb-5 ignore">        
@@ -5147,7 +5156,7 @@
 		//$('body').css({"background-color": darkBg});
 		$('.dark-theme-button-hero').addClass('circle-shadow	');
 		$('#hero').find('.item').addClass('dark-theme');	
-		$('body').css("background-color", "#212121");
+		$('body').css("background-color", "#262626");
 		}
 
 		// apply chosen theme to these elements	
