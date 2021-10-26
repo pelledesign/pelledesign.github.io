@@ -1718,7 +1718,7 @@ $window.scroll(function() {
 			<div id="section-space" class="landscape-hidden"></div>					
 			<div id="bagheera" class="portfolio-section">
 				<div id="section-container">			
-					<div id="bagheera-title" class="title light-theme row m0">
+					<div id="bagheera-title" class="title x-theme bg-none row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 							 <h3 class="m-h h3  txt-l"><strong>Bagheera </strong>/ Shoe Design</h3>
@@ -5145,7 +5145,7 @@ $window.scroll(function() {
 		</script>
 	
 
-		<!-- x-theme + theme-switcher -->			
+		<!-- x-theme + theme-switcher + dropshadow -->			
 		<script>
 		
 		//must be placed before main.js as it needs classes from x-theme to be able to execute
@@ -5153,7 +5153,7 @@ $window.scroll(function() {
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'dark-theme'; //	set theme for touch devices
+		var theme = 'dark-theme'; //	set theme for touch devices	
 		}
 		else
 		{ 
@@ -5189,7 +5189,8 @@ $window.scroll(function() {
 			$('body').css({"background-color": darkBg});
 			$('.light-theme-button').removeClass('circle-shadow');
 			$('.dark-theme-button-hero').addClass('circle-shadow');
-			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');	
+			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
+			$('body').find('.portfolio-section').removeClass('dropshadow');			
 						
 				//$('body').find(".title").removeClass('light-theme').addClass('dark-theme');			
 			
@@ -5201,7 +5202,7 @@ $window.scroll(function() {
 			// if the active slide has x-theme class - only then change the colors of prev/next buttons
 			$(".owl-item.active").each(function(){		
 			  if ($(this).find('.item').hasClass('x-theme')) {				
-				$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');
+				$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');				
 			  }
 			});			
 		});	
@@ -5218,6 +5219,7 @@ $window.scroll(function() {
 			$('.light-theme-button').addClass('circle-shadow');
 			$('#hero').find('.item').removeClass('dark-theme').addClass('light-theme');	
 			$('nav').removeClass('dark-theme').addClass('light-theme');
+			$('body').find('.portfolio-section').addClass('dropshadow');
 			
 			// if the active slide has x-theme class - only then change the colors of prev/next buttons
 			$(".owl-item.active").each(function(){
