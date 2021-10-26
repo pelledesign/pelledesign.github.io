@@ -249,7 +249,7 @@
 					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Hero Theme</p>    
 						<div id="theme-switcher-menu" class=" flex justify-content-center">
 						<div id="" class="dark-theme-button-hero theme-circle dark"></div>
-						<div id="" class="light-theme-button-hero theme-circle light"></div>					
+						<div id="" class="light-theme-button theme-circle light"></div>					
 						</div>							  
 					</li>
 					<!-- 						<li class="nav-item flex-xl-up c-lg">
@@ -395,30 +395,7 @@
 				</div>
 			</div>
 		</div>
-		<script>
 
-		if(is_touch_device()) {
-		$('#hero').find('.item').addClass('dark-theme');	
-		$('body').addClass('dark-theme');	
-		}								
-				//dark-theme button
-				$('.dark-theme-button-hero').on('click',function(){
-					$('.light-theme-button-hero').removeClass('circle-shadow');
-					$('.dark-theme-button-hero').addClass('circle-shadow');
-					$('#hero').find('.item').removeClass('light-theme').addClass('dark-theme');	
-					$('nav, body').removeClass('light-theme').addClass('dark-theme');	
-								
-				});	
-				
-				//light-theme button
-				$('.light-theme-button-hero').on('click',function(){				
-					$('.dark-theme-button-hero').removeClass('circle-shadow');
-					$('.light-theme-button-hero').addClass('circle-shadow');
-					$('#hero').find('.item').removeClass('dark-theme').addClass('light-theme');						
-					$('nav, body').removeClass('dark-theme').addClass('light-theme');						
-				});
-					
-		</script>
 		
 		<!-- about -->
 		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h">	
@@ -567,7 +544,7 @@
 			<div class="centerscroll" id="portfolio"></div>		
 			<div id="akg" class="portfolio-section">
 				<div id="section-container" class="">
-					<div id="akg-title" class="title row m0 x-theme"> <!-- ignore -->
+					<div id="akg-title" class="title row m0 medium-theme bg-none"> <!-- ignore -->
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
@@ -799,30 +776,31 @@
 					</div>				
 				</div>			
 			</div>
-			<div class="xl-up-h">	 		
-				<div id="grid" class="item row m0 h100">		 <!-- container ml-auto mr-auto --> 	
-					<div class="col-lg-12  invisible fade-in-left">
-						<div class="item c-all">			
-							<div class="text-box c-all txt-l">
-								<div class="">
-									<h2 class="s-t ignore">AKG <strong>K92</strong></h2>
-									<p> Headphones for the Vienna based audio products company AKG.</p> 
-									<div class="ShowMoreBox">
-										<div class="MoreText">
-											<p>
-											My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>										
-											<p>
-											The result is the k92 headphones with an easily adjustable head band, weighing only 200g and with a modern retro style
-											</p>
-										</div>
-										<strong>
-											<p class="loadMoreBtn">More</p>
-										</strong>
-									</div>	
-								</div>
+			<div class="xl-up-h x-theme">	 	
+				<div class="col-lg-12  invisible fade-in-left">
+					<div class="item c-all">			
+						<div class="text-box c-all txt-l">
+							<div class="">
+								<h2 class="s-t ignore">AKG <strong>K92</strong></h2>
+								<p> Headphones for the Vienna based audio products company AKG.</p> 
+								<div class="ShowMoreBox">
+									<div class="MoreText">
+										<p>
+										My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>										
+										<p>
+										The result is the k92 headphones with an easily adjustable head band, weighing only 200g and with a modern retro style
+										</p>
+									</div>
+									<strong>
+										<p class="loadMoreBtn">More</p>
+									</strong>
+								</div>	
 							</div>
-						</div>										
-					</div>				
+						</div>
+					</div>										
+				</div>			
+				<div id="grid" class="item row m0 h100">		 <!-- container ml-auto mr-auto --> 	
+				
 					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 						<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -879,7 +857,7 @@
 					</div>
 				</div>
 			</div>
-				<div class="text-box c-all txt-l lg-up-h fade-in-left">
+				<div class="text-box c-all txt-l lg-up-h fade-in-left x-theme bg-none">
 					<div class="">
 						<h2 class="s-t ignore"><strong>"I think Pelle</strong></h2>
 						<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
@@ -1505,9 +1483,8 @@
 					</div>
 				</div>					
 			</div>	
-			<div class="xl-up-h">	 		
-				<div id="grid" class="item row m0 h100">	
-					<div class="col-lg-12 ">
+			<div class="xl-up-h">
+					<div class="col-lg-12 x-theme">
 						<div class="item c-all">			
 							<div class="text-box c-all txt-l">
 								<div class="invisible fade-in">
@@ -1526,7 +1503,9 @@
 								</div>
 							</div>
 						</div>										
-					</div>				
+					</div>	 		
+				<div id="grid" class="item row m0 h100">	
+				
 					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 						<div class="item zoomable hw100 dark-theme">
 							<img src="" data-src="Converse/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -1570,7 +1549,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="text-box txt-l vh100 snap lg-up-h">
+			<div class="text-box txt-l vh100 snap lg-up-h x-theme">
 				<div class="h-auto">
 				<div class="h100 fade-in-left ignore">
 					<h2 class="s-t ignore">My Design Process Is Designed <strong>For You</strong></h2>
@@ -2031,9 +2010,8 @@
 					</div>													 						 
 				</div>				
 			</div>
-			<div class="xl-up-h">	 		
-				<div id="grid" class="item row m0 h100">	
-					<div class="col-lg-12">
+			<div class="xl-up-h">	 	
+					<div class="col-lg-12 x-theme">
 						<div class="item c-all">			
 							<div class="text-box c-all txt-l">
 								<div class="invisible fade-in">
@@ -2055,6 +2033,7 @@
 							</div>
 						</div>										
 					</div>				
+				<div id="grid" class="item row m0 h100">				
 					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 						<div class="item zoomable hw100 dark-theme">
 							<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -5150,7 +5129,7 @@
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'light-theme'; //	set theme for touch devices
+		var theme = 'dark-theme'; //	set theme for touch devices
 		}
 		else
 		{ 
@@ -5161,10 +5140,14 @@
 		if (theme == 'light-theme') {
 		//$('body').css({"background-color": "#fff"});
 		$('.light-theme-button').addClass('circle-shadow');
+		$('#hero').find('.item').addClass('light-theme');	
+		$('body').css("background-color", "#fff");		
 		}
 		else {
 		//$('body').css({"background-color": darkBg});
-		$('.dark-theme-button').addClass('circle-shadow');
+		$('.dark-theme-button-hero').addClass('circle-shadow	');
+		$('#hero').find('.item').addClass('dark-theme');	
+		$('body').css("background-color", "#212121");
 		}
 
 		// apply chosen theme to these elements	
@@ -5177,12 +5160,19 @@
 		// on theme btn click - mark this btn - if this .item has class x-theme - remove current theme - and apply new theme			
 		
 		//dark-theme button
-		$('.dark-theme-button').on('click',function(){
+		$('.dark-theme-button-hero').on('click',function(){
 		
 			$('body').css({"background-color": darkBg});
 			$('.light-theme-button').removeClass('circle-shadow');
-			$('.dark-theme-button').addClass('circle-shadow');
-			$('body').find(".x-theme, .fadeout-btm, .title").removeClass('light-theme').addClass('dark-theme');	
+			$('.dark-theme-button-hero').addClass('circle-shadow');
+			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');	
+						
+				//$('body').find(".title").removeClass('light-theme').addClass('dark-theme');			
+			
+			$('.light-theme-button').removeClass('circle-shadow');
+			$('.dark-theme-button-hero').addClass('circle-shadow');
+			$('#hero').find('.item').removeClass('light-theme').addClass('dark-theme');	
+			$('nav').removeClass('light-theme').addClass('dark-theme');	
 			
 			// if the active slide has x-theme class - only then change the colors of prev/next buttons
 			$(".owl-item.active").each(function(){		
@@ -5196,9 +5186,14 @@
 		$('.light-theme-button').on('click',function(){
 		
 			$('body').css({"background-color": "#fff"});
-			$('.dark-theme-button').removeClass('circle-shadow');
+			$('.dark-theme-button-hero').removeClass('circle-shadow');
 			$('.light-theme-button').addClass('circle-shadow');
-			$('body').find(".x-theme, .fadeout-btm, .title").removeClass('dark-theme').addClass('light-theme');
+			$('body').find(".x-theme, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
+			
+			$('.dark-theme-button-hero').removeClass('circle-shadow');
+			$('.light-theme-button').addClass('circle-shadow');
+			$('#hero').find('.item').removeClass('dark-theme').addClass('light-theme');	
+			$('nav').removeClass('dark-theme').addClass('light-theme');
 			
 			// if the active slide has x-theme class - only then change the colors of prev/next buttons
 			$(".owl-item.active").each(function(){
@@ -5206,9 +5201,7 @@
 				$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
 				}		
 			});						
-		});
-			
-		
+		});				
 		</script>
 			
 		<script type="text/javascript" src="js/lazyload.js"></script>
