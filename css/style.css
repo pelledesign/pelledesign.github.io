@@ -15292,7 +15292,7 @@ border-radius: 0;
 }
 
 @media screen and (max-width:767px) {
-.popup {
+.popup, #scroll {
 border-radius: 5px;
 }
 }
@@ -18012,12 +18012,15 @@ transform: translateX(-50%;);
 
 #scroll {
 width:100%; 
-height: calc(100% + 16px); /* because of buggy overflowpadding */
+/* height: calc(100% + 16px); */ /* because of buggy overflowpadding */
+height: calc(100vh - 4vw);
+width: 96vw;
 position:fixed;
 z-index:10000;
 top:0; left:0;
 cursor: zoom-out;
-overflow-x: scroll;	
+overflow-x: scroll;
+margin:2vw;	
 }
 
 .scroll-inner {

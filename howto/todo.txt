@@ -9,7 +9,6 @@ lazyloadeager where it's possible - lazyoadeager on converse where there are sev
 )
 
 function mobile (
-fix X xlose button on image zoom (main)
 )
 
 function both (
