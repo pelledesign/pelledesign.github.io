@@ -14,7 +14,6 @@ fix X xlose button on image zoom (main)
 
 function both (
 
-latest work text
 check all devices + browsers
 
 )
