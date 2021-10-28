@@ -26,42 +26,22 @@
 		<link rel="manifest" href="/site.webmanifest">
 		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
 		
-		<!-- 	<link rel="preload" as="font" type="font/eot" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.eot" crossorigin>
-		<link rel="preload" as="font" type="font/eot" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.eot?#iefix" crossorigin>
-		<link rel="preload" as="font" type="font/woff2" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2" crossorigin>
-		<link rel="preload" as="font" type="font/ttf" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.ttf" crossorigin>
-		<link rel="preload" as="font" type="font/svg" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.svg#Raleway" crossorigin>	
-		<link rel="preload" as="font" type="font/eot" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.eot" crossorigin>
-		<link rel="preload" as="font" type="font/eot" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.eot?#iefix" crossorigin>
-		<link rel="preload" as="font" type="font/woff2" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.woff2" crossorigin>
-		<link rel="preload" as="font" type="font/ttf" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.ttf" crossorigin>
-		<link rel="preload" as="font" type="font/svg" href="../fonts/ralewayraleway-v18-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.svg#Raleway" crossorigin>	
-		 -->
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<meta charset="utf-8">
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
-<!-- 		<link href="fonts\R\Raleway-Italic-VariableFont_wght.ttf" rel="stylesheet">
-		<link href="fonts\R\Raleway-VariableFont_wght.ttf" rel="stylesheet"> -->
 
 		<link rel="stylesheet" href="css/animate.css">  
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<!-- <link rel="stylesheet" href="css/jquery.fancybox.min.css">	 -->
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/style.css">
-		<!-- <link rel="stylesheet" href="css/jquery-scroll-snap.css"> -->
-<!-- 		<script>
-			$('.navbar .dropdown > a').click(function(){
-			 location.href = this.href;
-			});
-		</script> -->
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-
+		
 		<script>
 		$(document).ready(function(){
 			$('#nav-icon3').click(function(){
@@ -92,6 +72,8 @@
 	console.log('cont');
 	</script>	
 	<body> 
+<!-- 		<section class="vh100" style="background:red;"></section>		
+		<section class="vh100" style="background:green;"></section>		 -->	
 	<!-- <div class="p-logo-new c-absolute" style="position:fixed; fill: #515151; width: 25%;"></div>	 -->
 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
 		<div>
@@ -144,7 +126,7 @@
 			</div>
 		 </nav>
 		</header>
-		<header role="banner" class="xl-up-h">
+		<header id="header-mobile" role="banner" class="xl-up-h">
 		 <nav class="navbar navbar-transparent navbar-expand-xl p0 dark-theme">
 			<div class="container-fluid" style="align-items: normal;">
 			  <a href="index.html" class="text-logo-svg" style=" padding-bottom: 9px;"></a>
@@ -316,7 +298,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- about -->
 		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h">	
 		<div id="bg-hero" class="c-absolute hw100"></div>
@@ -1985,7 +1967,7 @@ $window.scroll(function() {
 					</div> -->
 				</div>
 			</div>
-<div id="section-space" class="landscape-hidden"></div>			
+			<div id="section-space" class="landscape-hidden"></div>			
 			<div class="text-box c-all txt-l lg-up-h fade-in-left x-theme">
 				<div class="">
 					<h2 class="s-t ignore">"Pelle stayed</h2>
@@ -1997,7 +1979,7 @@ $window.scroll(function() {
 					<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
 				</div>
 			</div>
-<div id="section-space" class="landscape-hidden"></div>			
+			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="mixed-work" class="portfolio-section">
 				<div id="section-container" class="invisible fade-in">				
 					<div id="mixed-title" class="title x-theme row m0">
@@ -5118,10 +5100,10 @@ $window.scroll(function() {
 		});				
 		</script>
 			
-		<script type="text/javascript" src="js/lazyload.js"></script>
-		<script type="text/javascript" src="js/logos.js"></script>	
+		<script src="js/lazyload.js"></script>
+		<script src="js/logos.js"></script>	
 		<script src="js/bootstrap.min.js"></script> <!-- needed for mobile menu -->
-		<script type="text/javascript" src="js/magnific.js"></script>	
+		<script src="js/magnific.js"></script>	
 		<script src="js/owl.carousel2.js"></script>	
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.stellar.min.js"></script>		
@@ -5133,91 +5115,92 @@ $window.scroll(function() {
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
-
+		
 		<!-- zoom-icon function -->
-		<script>
-
+		<script>		
 		$('.zoom-icon, .zoomable').on('click', function() {
 
+			
+			
 		/* alert('sss'); */
-		// select popup background based on background of .item 	
-		if ($(this).closest('.item').hasClass('dark-theme')){
-		var bg = '#141414';
-		var theme = 'dark-theme';			
-		}
-		else if ($(this).closest('.item').hasClass('light-theme')){
-		var bg = '#fff';
-		var theme = 'light-theme';			
-		}
-		else if ($(this).closest('.item').hasClass('medium-theme')){
-		var bg = '#e7e8e9'; 
-		var theme = 'medium-theme';	
-		}
-		else {
-		var bg = '#fff';		
-		var theme = 'light-theme';		
-		alert('no bg');
-		};
+				// select popup background based on background of .item 	
+				if ($(this).closest('.item').hasClass('dark-theme')){
+				var bg = '#141414';
+				var theme = 'dark-theme';			
+				}
+				else if ($(this).closest('.item').hasClass('light-theme')){
+				var bg = '#fff';
+				var theme = 'light-theme';			
+				}
+				else if ($(this).closest('.item').hasClass('medium-theme')){
+				var bg = '#e7e8e9'; 
+				var theme = 'medium-theme';	
+				}
+				else {
+				var bg = '#fff';		
+				var theme = 'light-theme';		
+				alert('no bg');
+				};
 
-		// if there's a slide-class with a theme - override selection above
-/* 		if ($(this).closest('.slide').hasClass('dark-theme')){
-		var bg = '#141414';
-		var theme = 'dark-theme';	
-		}
-		else if ($(this).closest('.slide').hasClass('light-theme')){
-		var bg = '#fff'; 
-		var theme = 'light-theme';	
-		}
-		else if ($(this).closest('.slide').hasClass('medium-theme')){
-		var bg = '#e7e8e9'; 
-		var theme = 'medium-theme';	
-		}
-		else {
-		var bg = '#fff'; 
-		alert('no bg');
-		}	 */
+				// if there's a slide-class with a theme - override selection above
+		/* 		if ($(this).closest('.slide').hasClass('dark-theme')){
+				var bg = '#141414';
+				var theme = 'dark-theme';	
+				}
+				else if ($(this).closest('.slide').hasClass('light-theme')){
+				var bg = '#fff'; 
+				var theme = 'light-theme';	
+				}
+				else if ($(this).closest('.slide').hasClass('medium-theme')){
+				var bg = '#e7e8e9'; 
+				var theme = 'medium-theme';	
+				}
+				else {
+				var bg = '#fff'; 
+				alert('no bg');
+				}	 */
 
-		//check if image got blend-mode
-		var blendmode = '';
-		if($(this).closest('.item').find('img').hasClass('multiply')){
-			 var blendmode = 'multiply';
-		}		
+				//check if image got blend-mode
+				var blendmode = '';
+				if($(this).closest('.item').find('img').hasClass('multiply')){
+					 var blendmode = 'multiply';
+				}		
 
-		//contain or cover 		
-		if(window.innerHeight > window.innerWidth){
-			 var bgsize = 'cover';
-		}	 
-		else {
-		var bgsize = 'contain' 
-		};
+				//contain or cover 		
+				if(window.innerHeight > window.innerWidth){
+					 var bgsize = 'cover';
+				}	 
+				else {
+				var bgsize = 'contain' 
+				};
 
-		//create popup
-		var src = $(this).closest('.zoom-container').find('img').first().attr("src");
-		var modal;
-		var scrollwidth = '99vh'
-		function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-		modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">×</button></div>').css({
-		  //backgroundColor: bg,
-		  backgroundSize: bgsize,
-		}).click(function(){
-		  removeModal();
-		}).appendTo('body');
+				//create popup
+				var src = $(this).closest('.zoom-container').find('img').first().attr("src");
+				var modal;
+				var scrollwidth = '99vh'
+				function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+				modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">x</button></div>').css({
+				  //backgroundColor: bg,
+				  backgroundSize: bgsize,
+				}).click(function(){
+				  removeModal();
+				}).appendTo('body');
 
 
-		//scroll image to center position
-		var imglength = $(this).next('img').width();	
-		var $container = $("#scroll");
-		var $img = $("#scroll div");
-		var cWidth = $container.width();
-		var iWidth = $img.width();
-		var left = (iWidth - cWidth) / 2; 
+				//scroll image to center position
+				var imglength = $(this).next('img').width();	
+				var $container = $("#scroll");
+				var $img = $("#scroll div");
+				var cWidth = $container.width();
+				var iWidth = $img.width();
+				var left = (iWidth - cWidth) / 2; 
 
-		$container.scrollLeft(left);
+				$container.scrollLeft(left);
 
-		$('body').on('keyup.modal-close', function(e){
-		if(e.key==='Escape'){ removeModal(); } 
-		});	
-		});
+				$('body').on('keyup.modal-close', function(e){
+				if(e.key==='Escape'){ removeModal(); } 
+				});	
+				});
 		</script>
 		
 		<!-- specific dark and light themes for desktop / touch -->
@@ -5327,31 +5310,11 @@ $window.scroll(function() {
 
 		</script>
 
-		<!-- scroll snap - for body -->		
-		<script>
-		
-		if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
-		$('.portfolio-section').addClass('snap');
-		}			
-		
-		$( '.snap' ).scrollSnap({
-		  speed: 200 // animation time
-		});
-		
-		</script>
-
-		<!-- scroll snap  - for desktop popups -->		
-		<script>
-		if(!is_touch_device()) {
-		$( '#spotify-process-popup .slide, #poc-process-popup .slide' ).addClass('snap-desktop');
-		}			
-		</script>
-
 		<!-- header hide/show -->
 		<script>
 		// Hide Header on on scroll down
 		
-		$(header).addClass('auto-hide-header');		
+		$('#header, #header-mobile').addClass('auto-hide-header');		
 		
 		var didScroll;
 		var lastScrollTop = 0;
@@ -5370,14 +5333,15 @@ $window.scroll(function() {
 		}, 250);
 
 		function hasScrolled() {
-			 var st = $(this).scrollTop();
+			 var st = $(this).scrollTop(); // distance from 
+			 //console.log(st);
+			 //console.log(scrollTo);
 			 
 			 // Make sure they scroll more than delta
 			 if(Math.abs(lastScrollTop - st) <= delta)
 				  return;
 			 
-			 // If they scrolled down and are past the navbar, add class .nav-up.
-			 // This is necessary so you never see what is "behind" the navbar.
+			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
 			 if (st > lastScrollTop && st > navbarHeight){
 				  // Scroll Down
 				  
@@ -5394,7 +5358,32 @@ $window.scroll(function() {
 			 }
 			 
 			 lastScrollTop = st;
+console.log(isSnapping);
+			
 		}
+		</script>
+
+		<!-- scroll snap - for body -->
+		<script>		
+		$(header).addClass('auto-hide-header');				
+		</script>		
+		<script>
+		
+		if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
+		$('.portfolio-section').addClass('snap');
+		}			
+		
+		$( '.snap' ).scrollSnap({
+		  speed: 200 // animation time
+		});
+		
+		</script>
+
+		<!-- scroll snap  - for desktop popups -->		
+		<script>
+		if(!is_touch_device()) {
+		$( '#spotify-process-popup .slide, #poc-process-popup .slide' ).addClass('snap-desktop');
+		}			
 		</script>
 
 		<!-- fullscreen -->

@@ -1,5 +1,8 @@
 /*! jQuery Scroll Snap 1.0.0 | MIT *
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
+ 
+var isSnapping = false; 
+ 
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
@@ -39,7 +42,9 @@
           )
         ){
           $( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
-          scrollTo = $( this ).offset().top;
+          scrollTo = $( this ).offset().top; //position it will scroll to
+			 test = scrollTo;			 
+			 
         }
       } );
 
@@ -49,11 +54,20 @@
           settings.speed,
           function(){
             $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
+				console.log(direction);	// checking direction when snapping
+				if ((direction == 'up') && (scrollTo > 1000)) {$('header').removeClass('nav-down').addClass('nav-up');
+				}
+/* 				else if (direction == 'down') {
+					$('header').removeClass('nav-up').addClass('nav-down')
+					} */
             /*setTimeout( function(){
               $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
             }, 600 );*/
           }
         );
+		  //var isSnapping = true;
+/* 			console.log(isSnapping);
+			console.log(direction); */
       }
     }
 
@@ -68,13 +82,23 @@
 			var direction = 'up';
       if( scroll > lastScrollTop )
         direction = 'down';
+		console.log(direction); //continously checking up or down scroll 
+			if (direction == 'down') {
+					$('header').removeClass('nav-down').addClass('nav-up')
+					}
+			else {
+			$('header').removeClass('nav-up').addClass('nav-down')	
+			}
+		
 
       lastScrollTop = scroll;
 
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 700 ); //time after scroll  before snap. default 200
+		//console.log(test);
+		//if (test > 1000) {$('header').removeClass('nav-down').addClass('nav-up');}
+      }, 200 );
     } );
   };
 } )( jQuery );
