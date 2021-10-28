@@ -1,22 +1,19 @@
 
 function desktop (
 
-process
-go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
-lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
-
 )
 
 function mobile (
-menu services links not working
+
 )
 
 function both (
 
-if snapping - removeClass .nav-down
+lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
 lazy loader earlier but animate when isVisible
 check all devices + browsers
-
+go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+process
 )
 
 function brands (
@@ -63,3 +60,12 @@ speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43
 lighthouse: desktop: 72, 79	
 lighthouse: mobile:	39, 
 )
+
+
+function changeLog (
+
+211028
+commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
+added on-click trigger to about_slider_mobile in main.js
+)
+

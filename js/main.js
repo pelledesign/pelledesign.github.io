@@ -82,12 +82,15 @@ all_sliders = $('#hero-slider, #about-slider, #akg-more, #converse-more, #conver
 									 main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
 
 $('.go-to-about').on('click',function(){
+console.log('ok');	
 about_slider.trigger('to.owl.carousel', [0, 500]);
-/* carousel.trigger('to.owl.carousel', [0, 500]); */
+about_slider_mobile.trigger('to.owl.carousel', [0, 500]);
 });
+
 $('.go-to-services').on('click',function(){
+//console.log('ok');	
 about_slider.trigger('to.owl.carousel', [2, 500]);
-/* carousel.trigger('to.owl.carousel', [0, 500]); */
+about_slider_mobile.trigger('to.owl.carousel', [2, 500]);
 });
 
 /* change nav clr depending on slide bg */
@@ -312,7 +315,7 @@ $('#poc-process, #design-process').on('changed.owl.carousel', function(event) {
 $(window).on('orientationchange', function(){	
 
 function refresh_this() {   					
-bagheera_process.trigger('refresh.owl.carousel');		
+bagheera_more.trigger('refresh.owl.carousel');		
 poc_more.trigger('refresh.owl.carousel');		
 
  }

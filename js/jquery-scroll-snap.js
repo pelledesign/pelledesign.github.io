@@ -53,7 +53,7 @@
           function(){
             $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
 				console.log(direction);	// checking direction when snapping
-				if ((direction == 'up') && (scrollTo > 1000)) {$('header').removeClass('nav-down').addClass('nav-up');
+				if ((direction == 'up') && (scrollTo > 500)) {$('header').removeClass('nav-down').addClass('nav-up');
 				}
           }
         );
