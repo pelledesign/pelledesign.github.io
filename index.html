@@ -42,18 +42,8 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 		
-		<script>
-		$(document).ready(function(){
-			$('#nav-icon3').click(function(){
-				$(this).toggleClass('open');
-				//$(this).closest('.navbar').toggleClass('h100');
-			});
-		});
-		</script>	
 
-	
-		<!-- start test if touch device -->		
-		<script>
+		<script> <!-- start test if touch device -->	
 		function is_touch_device() {  
 		try {  
 		 document.createEvent("TouchEvent");  
@@ -62,18 +52,21 @@
 		 return false;  
 		}
 		}
-		</script>
-		
+		</script>		
+		<!-- 		<script>
+		$(document).ready(function(){
+			$('#nav-icon3').click(function(){
+				$(this).toggleClass('open');
+				//$(this).closest('.navbar').toggleClass('h100');
+			});
+		});
+		</script>	 -->		
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
-	</head>
-	<script>
-	console.log('cont');
-	</script>	
+	</head>	
 	<body> 
-<!-- 		<section class="vh100" style="background:red;"></section>		
-		<section class="vh100" style="background:green;"></section>		 -->	
+	
 	<!-- <div class="p-logo-new c-absolute" style="position:fixed; fill: #515151; width: 25%;"></div>	 -->
 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
 		<div>
@@ -253,7 +246,10 @@
 							<div id="hero-slider" class="owl-carousel">					
 								<div class="item owl-hide-lg-up">					
 									<div class="c-absolute w50">
-										<div class="p-logo-new invisible mr-auto ml-auto hw100"></div>								
+										<div class="p-logo-new invisible mr-auto ml-auto hw100"></div>			
+		<script> <!-- p-logo-new -->	
+			$(".p-logo-new").load("images/icons/p-logo-new.svg");
+		</script>										
 									</div>								
 								</div>
 								<div class="item">					
@@ -444,7 +440,7 @@
 						</div>						
 						<div id="akg-more" class="owl-carousel">  <!-- style="background-image: url('akg/images/akg-logo.svg'); background-repeat: no-repeat; background-position: center;"	 -->				
 							<div class="item owl-hide-lg-up medium-theme">
-								<div class="loader relative invisible zoom-in"> <!-- textoverlay -->
+								<div class="loader relative"> <!-- textoverlay  invisible zoom-in--> 
 									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
 <!-- 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
 										<div class="text-animate c-all" style="height:100%;">
@@ -2115,7 +2111,7 @@ $window.scroll(function() {
 				</div>
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>					
-			<div id="alcon" class="item x-theme landscape-hidden vh75 relative">
+			<div id="alcon" class="portfolio-section x-theme landscape-hidden vh75 relative">
 					<div id="alcon-title" class="title light-theme row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -5110,90 +5106,78 @@ $window.scroll(function() {
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- zoom-icon function -->
-		<script>		
+		<script>
+		
+		//show and hide text on touch 
+		$('.zoomable').on('touchstart',function(){
+			$(this).find('.img-text').removeClass('hidden');			
+			});
+			$('.zoomable').on('touchend',function(){
+			$(this).find('.img-text').addClass('hidden');			
+		});
+		
 		$('.zoom-icon, .zoomable').on('click', function() {
-
 			
-			
-		/* alert('sss'); */
-				// select popup background based on background of .item 	
-				if ($(this).closest('.item').hasClass('dark-theme')){
-				var bg = '#141414';
-				var theme = 'dark-theme';			
-				}
-				else if ($(this).closest('.item').hasClass('light-theme')){
-				var bg = '#fff';
-				var theme = 'light-theme';			
-				}
-				else if ($(this).closest('.item').hasClass('medium-theme')){
-				var bg = '#e7e8e9'; 
-				var theme = 'medium-theme';	
-				}
-				else {
-				var bg = '#fff';		
-				var theme = 'light-theme';		
-				alert('no bg');
-				};
+			// select popup background based on background of .item 	
+			if ($(this).closest('.item').hasClass('dark-theme')){
+			var bg = '#141414';
+			var theme = 'dark-theme';			
+			}
+			else if ($(this).closest('.item').hasClass('light-theme')){
+			var bg = '#fff';
+			var theme = 'light-theme';			
+			}
+			else if ($(this).closest('.item').hasClass('medium-theme')){
+			var bg = '#e7e8e9'; 
+			var theme = 'medium-theme';	
+			}
+			else {
+			var bg = '#fff';		
+			var theme = 'light-theme';		
+			alert('no bg');
+			};
 
-				// if there's a slide-class with a theme - override selection above
-		/* 		if ($(this).closest('.slide').hasClass('dark-theme')){
-				var bg = '#141414';
-				var theme = 'dark-theme';	
-				}
-				else if ($(this).closest('.slide').hasClass('light-theme')){
-				var bg = '#fff'; 
-				var theme = 'light-theme';	
-				}
-				else if ($(this).closest('.slide').hasClass('medium-theme')){
-				var bg = '#e7e8e9'; 
-				var theme = 'medium-theme';	
-				}
-				else {
-				var bg = '#fff'; 
-				alert('no bg');
-				}	 */
+			//check if image got blend-mode
+			var blendmode = '';
+			if($(this).closest('.item').find('img').hasClass('multiply')){
+				 var blendmode = 'multiply';
+			}		
 
-				//check if image got blend-mode
-				var blendmode = '';
-				if($(this).closest('.item').find('img').hasClass('multiply')){
-					 var blendmode = 'multiply';
-				}		
+			//select contain or cover depending on screen orientation 		
+			if(window.innerHeight > window.innerWidth){
+				 var bgsize = 'cover';
+			}	 
+			else {
+			var bgsize = 'contain' 
+			};
 
-				//contain or cover 		
-				if(window.innerHeight > window.innerWidth){
-					 var bgsize = 'cover';
-				}	 
-				else {
-				var bgsize = 'contain' 
-				};
-
-				//create popup
-				var src = $(this).closest('.zoom-container').find('img').first().attr("src");
-				var modal;
-				var scrollwidth = '99vh'
-				function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-				modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">x</button></div>').css({
-				  //backgroundColor: bg,
-				  backgroundSize: bgsize,
-				}).click(function(){
-				  removeModal();
-				}).appendTo('body');
+			//create popup
+			var src = $(this).closest('.zoom-container').find('img').first().attr("src");
+			var modal;
+			var scrollwidth = '99vh'
+			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+			modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">x</button></div>').css({
+			  //backgroundColor: bg,
+			  backgroundSize: bgsize,
+			}).click(function(){
+			  removeModal();
+			}).appendTo('body');
 
 
-				//scroll image to center position
-				var imglength = $(this).next('img').width();	
-				var $container = $("#scroll");
-				var $img = $("#scroll div");
-				var cWidth = $container.width();
-				var iWidth = $img.width();
-				var left = (iWidth - cWidth) / 2; 
+			//scroll image to center position
+			var imglength = $(this).next('img').width();	
+			var $container = $("#scroll");
+			var $img = $("#scroll div");
+			var cWidth = $container.width();
+			var iWidth = $img.width();
+			var left = (iWidth - cWidth) / 2; 
 
-				$container.scrollLeft(left);
+			$container.scrollLeft(left);
 
-				$('body').on('keyup.modal-close', function(e){
-				if(e.key==='Escape'){ removeModal(); } 
-				});	
-				});
+			$('body').on('keyup.modal-close', function(e){
+			if(e.key==='Escape'){ removeModal(); } 
+			});	
+			});
 		</script>
 		
 		<!-- specific dark and light themes for desktop / touch -->
@@ -5223,8 +5207,29 @@ $window.scroll(function() {
 			});
 		</script>
 
-		<!-- video --> 
+		<!-- video isInViewport --> 
 		<script>	
+
+			$(window).scroll(function() {
+				 clearTimeout($.data(this, 'scrollTimer'));
+				 $.data(this, 'scrollTimer', setTimeout(function() {
+						$('if-in-viewport').each(function(){
+							 if ( $(this).is(":in-viewport") && (!$(this).hasClass('played')) ){
+								  $(this)[0].play();
+								  
+									$(this).on('ended',function(){
+									$(this).addClass('played');
+									});
+									
+								  $(this).closest('.video-container').find('play-video').addClass('invisible');
+
+							 } else {
+								  $(this)[0].pause();
+							 }
+						})
+
+				 }, 250));
+			});
 
 			//video formats browser support
 			//use multiple sources as fallback
@@ -5303,14 +5308,52 @@ $window.scroll(function() {
 
 		</script>
 
-		<!-- header hide/show -->
-		<script>
-		// Hide Header on on scroll down
-		
-		$('#header, #header-mobile').addClass('auto-hide-header');		
-		
+<!-- 		<script>
+		var didScroll;
+		var lastScrollTop = 0;
+		var delta = 5;
+		var navbarHeight = $('header').outerHeight();
 
-		</script>
+		$(window).scroll(function(event){
+			 didScroll = true;
+		});
+
+		setInterval(function() {
+			 if (didScroll) {
+				  hasScrolled();
+				  didScroll = false;
+			 }
+		}, 250);
+
+		function hasScrolled() {
+			 var st = $(this).scrollTop(); // distance from 
+			 //console.log(st);
+			 //console.log(scrollTo);
+			 
+			 // Make sure they scroll more than delta
+			 if(Math.abs(lastScrollTop - st) <= delta)
+				  return;
+			 
+			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
+			 if (st > lastScrollTop && st > navbarHeight){
+				  // Scroll Down
+				  
+				  if (!$('.navbar-collapse').hasClass('show')) {
+					  //alert('has class show');
+					  $('header').removeClass('nav-down').addClass('nav-up');
+				  }
+				  
+			 } else {
+				  // Scroll Up
+				  if(st + $(window).height() < $(document).height()) {
+						$('header').removeClass('nav-up').addClass('nav-down');
+				  }	  
+			 }
+			 
+			 lastScrollTop = st;
+			
+		}
+		</script> -->
 
 		<!-- scroll snap - for body -->
 		<script>		
@@ -5530,28 +5573,19 @@ $('.fullscreen').on('click', function () {
 				
 		<!-- animations  -->	
 		<script>
-		if(is_touch_device()) {
+		
+		
+		if(is_touch_device()) { //animations touch devices
 
-
+			//slider next button
 			$('.more-btn, .next-play-circle').on('touchstart', function () {			
 			$(this).removeClass("fade-in fadeIn element-animated zoomOutVisibleLarge animated-fast").addClass('zoomInVisibleLarge animated-fast'); //remove animate.css classes that are already there, or they will trigger again
 			});
-
 			$('.more-btn, .next-play-circle').on('touchend', function () {			
 			$(this).addClass('zoomOutVisibleLarge animated-fast');
-			});
-
-
-			$('.push-zoom').on('touchstart', function () {	
-			alert('push');	
-			$(this).addClass('zoomInVisibleLarge animated-fast');
-			});
-
-			$('.push-zoom').on('touchend', function () {			
-			$(this).removeClass('zoomOutVisibleLarge animated-fast');
 			});					
 		}
-		else
+		else //animations desktop
 		{ 		
 		  $('.info-icon').on('mouseenter',function(){
 			 $(this).find('div').removeClass("flip-in-y flipInY element-animated").addClass("flipInY element-animated");  

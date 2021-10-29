@@ -1,6 +1,8 @@
 /*! jQuery Scroll Snap 1.0.0 | MIT *
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
-  
+ 
+ $('#header, #header-mobile').addClass('auto-hide-header'); 
+ 
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
@@ -78,8 +80,8 @@
 
 		}
 		else if ( scroll < lastScrollTop ){
-			console.log('lastScrollTop is', lastScrollTop); //continously checking up or down scroll 
-			console.log('scroll is', scroll); //continously checking up or down scroll 
+			//console.log('lastScrollTop is', lastScrollTop); //continously checking up or down scroll 
+			//console.log('scroll is', scroll); //continously checking up or down scroll 
 			//	console.log(window.scrollY);
 			$('header').removeClass('nav-up').addClass('nav-down')	
 			}	
