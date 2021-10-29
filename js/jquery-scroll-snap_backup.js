@@ -69,21 +69,17 @@
               0;
 
 			var direction = 'up';
-      if( scroll > lastScrollTop ) {
+      if( scroll > lastScrollTop )
         direction = 'down';
 		console.log(direction); //continously checking up or down scroll 
-			if (direction == 'down') {
+			if ((direction == 'down') && (scrollTo > 50)) {
 					$('header').removeClass('nav-down').addClass('nav-up')
 					}
-
-		}
-		else if ( scroll < lastScrollTop ){
-			console.log('lastScrollTop is', lastScrollTop); //continously checking up or down scroll 
-			console.log('scroll is', scroll); //continously checking up or down scroll 
-			//	console.log(window.scrollY);
+			else if (direction == 'up'){
 			$('header').removeClass('nav-up').addClass('nav-down')	
-			}	
-			
+			}
+		
+
       lastScrollTop = scroll;
 
       clearTimeout( scrollStop );
