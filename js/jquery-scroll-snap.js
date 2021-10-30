@@ -2,7 +2,7 @@
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
- console.log('2');
+ console.log('3');
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
@@ -83,11 +83,11 @@
       if( scroll > lastScrollTop ) {
 			direction = 'down';
 			//console.log(direction); //continously checking up or down scroll 
-			$('header').removeClass('nav-down').addClass('nav-up')
+			//$('header').removeClass('nav-down').addClass('nav-up')
 		}
 		else if ( scroll < lastScrollTop ){
 			//console.log(direction); 
-			$('header').removeClass('nav-up').addClass('nav-down')	
+			//$('header').removeClass('nav-up').addClass('nav-down')	
 			}				
       lastScrollTop = scroll;
       clearTimeout( scrollStop );
