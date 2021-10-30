@@ -70,7 +70,16 @@
         );
       }
     }
+	 
+
+	 
 /*--------------------------	start scroll register	------------------------------- */
+		$('body').on('touchstart',function(){
+			console.log('touchstart');			
+			});	
+			$('body').on('touchend',function(){
+			console.log('touchend');			
+			});	
     var $snap = this;
     $( window ).on( 'scroll', function(){
       var scroll =
@@ -95,7 +104,7 @@
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 500 ); // time to start of scroll 		
+      }, 600 ); // time to start of scroll 		
     } );
   };
 } )( jQuery );
