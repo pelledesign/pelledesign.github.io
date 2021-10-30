@@ -2,7 +2,6 @@
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
- var snapped = false;
  
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
@@ -69,16 +68,11 @@
 				}
           }
         );
-		  console.log('snapped');
-		  snapped = true; 
       }
     }
 /*--------------------------	start scroll register	------------------------------- */
     var $snap = this;
-	 var delta = 500;
-	 var didScroll;
     $( window ).on( 'scroll', function(){
-		 didScroll = true;
       var scroll =
         window.pageYOffset ||
           document.documentElement.scrollTop ||
@@ -89,19 +83,17 @@
       if( scroll > lastScrollTop ) {
 			direction = 'down';
 			//console.log(direction); //continously checking up or down scroll 
-			//$('header').removeClass('nav-down').addClass('nav-up')
+			$('header').removeClass('nav-down').addClass('nav-up')
 		}
 		else if ( scroll < lastScrollTop ){
 			//console.log(direction); 
-			//$('header').removeClass('nav-up').addClass('nav-down')	
+			$('header').removeClass('nav-up').addClass('nav-down')	
 			}				
       lastScrollTop = scroll;
-		snapped = false;
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 200 ); // time to start of scroll 
-		
+      }, 200 ); // time to start of scroll 		
     } );
   };
 } )( jQuery );
