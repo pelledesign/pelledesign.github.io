@@ -2,6 +2,7 @@
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
+ var snapped = false;
  
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
@@ -18,6 +19,7 @@
             document.body.scrollTop ||
               0;
 
+/*--------------------------	start snapScroll	------------------------------- */
     function snapScroll( $snap, scroll, direction ){
       if( $( 'body' ).hasClass( 'lock-scroll' ) )
         return;
@@ -40,11 +42,18 @@
             // stabilize
             ( direction == 'down' && scroll <= $( this ).offset().top + ( windowHeight * 1 / 5 ) )
           )
-        ){
-          $( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
-          scrollTo = $( this ).offset().top; //position it will scroll to
-			 test = scrollTo;			 
-			 
+        ){			  
+			var this_height = $(this).height(); // get height of this element
+			var centeringSpace = (windowHeight - this_height) / 2; // get the space needed to center it on screen
+			var scrollToMiddle = $( this ).offset().top - centeringSpace;
+			
+			if(is_touch_device()) {
+			scrollTo = $( this ).offset().top; //position it will scroll to - top of element	
+			}
+			else {
+			scrollTo = scrollToMiddle; //position it will scroll to - center of element	
+			}	
+			$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );			 					 
         }
       } );
 
@@ -55,45 +64,44 @@
           function(){
             $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
 				console.log(direction);	// checking direction when snapping
-				if ((direction == 'up') && (scrollTo > 500)) {$('header').removeClass('nav-down').addClass('nav-up');
+				if ((direction == 'up') && (scrollTo > 500)) {
+				$('header').removeClass('nav-down').addClass('nav-up');
 				}
           }
         );
+		  console.log('snapped');
+		  snapped = true; 
       }
     }
-
+/*--------------------------	start scroll register	------------------------------- */
     var $snap = this;
+	 var delta = 500;
+	 var didScroll;
     $( window ).on( 'scroll', function(){
+		 didScroll = true;
       var scroll =
         window.pageYOffset ||
           document.documentElement.scrollTop ||
             document.body.scrollTop ||
               0;
-
-			var direction = 'up';
+		
+		var direction = 'up';
       if( scroll > lastScrollTop ) {
-        direction = 'down';
-		console.log(direction); //continously checking up or down scroll 
-			if (direction == 'down') {
-					$('header').removeClass('nav-down').addClass('nav-up')
-					}
-
+			direction = 'down';
+			//console.log(direction); //continously checking up or down scroll 
+			//$('header').removeClass('nav-down').addClass('nav-up')
 		}
 		else if ( scroll < lastScrollTop ){
-			//console.log('lastScrollTop is', lastScrollTop); //continously checking up or down scroll 
-			//console.log('scroll is', scroll); //continously checking up or down scroll 
-			//	console.log(window.scrollY);
-			$('header').removeClass('nav-up').addClass('nav-down')	
-			}	
-			
+			//console.log(direction); 
+			//$('header').removeClass('nav-up').addClass('nav-down')	
+			}				
       lastScrollTop = scroll;
-
+		snapped = false;
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-		//console.log(test);
-		//if (test > 1000) {$('header').removeClass('nav-down').addClass('nav-up');}
-      }, 200 );
+      }, 200 ); // time to start of scroll 
+		
     } );
   };
 } )( jQuery );

@@ -17992,7 +17992,7 @@ z-index: 2;
 }
 
 .portfolio-section {
-height:70vh !important;
+height:70vh;
 -webkit-box-shadow: 0 0 20px #e3e3e3;
 box-shadow: 0 0 20px #e3e3e3;		  
 overflow:hidden;	
@@ -18000,7 +18000,8 @@ overflow:hidden;
 
 @media screen and (orientation:landscape) {
 .portfolio-section {
-padding-bottom: 1rem;		
+padding-bottom: 1rem;
+height:75vh;		
 }
 }
 

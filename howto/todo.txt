@@ -9,13 +9,12 @@ function mobile (
 
 function both (
 
-lazy loader earlier but animate when isVisible
+lazy load earlier but animate when isVisible
 add some extra space to scrollup
 lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
-async defer
-check all devices + browsers
 go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
 process
+check all devices + browsers
 )
 
 function brands (

@@ -247,7 +247,7 @@
 								<div class="item owl-hide-lg-up">					
 									<div class="c-absolute w50">
 										<div class="p-logo-new invisible mr-auto ml-auto hw100"></div>			
-		<script> <!-- p-logo-new -->	
+		<script>	
 			$(".p-logo-new").load("images/icons/p-logo-new.svg");
 		</script>										
 									</div>								
@@ -5308,10 +5308,10 @@ $window.scroll(function() {
 
 		</script>
 
-<!-- 		<script>
+		<script>
 		var didScroll;
 		var lastScrollTop = 0;
-		var delta = 5;
+		var delta = 300; //def 5
 		var navbarHeight = $('header').outerHeight();
 
 		$(window).scroll(function(event){
@@ -5327,8 +5327,6 @@ $window.scroll(function() {
 
 		function hasScrolled() {
 			 var st = $(this).scrollTop(); // distance from 
-			 //console.log(st);
-			 //console.log(scrollTo);
 			 
 			 // Make sure they scroll more than delta
 			 if(Math.abs(lastScrollTop - st) <= delta)
@@ -5337,10 +5335,12 @@ $window.scroll(function() {
 			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
 			 if (st > lastScrollTop && st > navbarHeight){
 				  // Scroll Down
+
 				  
 				  if (!$('.navbar-collapse').hasClass('show')) {
 					  //alert('has class show');
 					  $('header').removeClass('nav-down').addClass('nav-up');
+					  console.log('jhj');
 				  }
 				  
 			 } else {
@@ -5351,9 +5351,9 @@ $window.scroll(function() {
 			 }
 			 
 			 lastScrollTop = st;
-			
+		console.log(snapped);	
 		}
-		</script> -->
+		</script>
 
 		<!-- scroll snap - for body -->
 		<script>		
