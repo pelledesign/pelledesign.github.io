@@ -3,6 +3,16 @@
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
 
+var apa = "";
+$('body').on('touchstart',function(){
+	apa = 'pressing';
+	console.log('touchstart');		
+	});
+	$('body').on('touchend',function (){
+	apa = 'released';
+	console.log('touchend');			
+	});	
+	
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
@@ -52,11 +62,12 @@
 			else {
 			scrollTo = scrollToMiddle; //position it will scroll to - center of element	
 			}	
-			$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );			 					 
+			//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );			 					 
         }
       } );
 
-      if( scrollTo !== false ){
+      if( (scrollTo !== false) && (apa != 'pressing')){
+			//console.log(apa);
         $( 'html, body' ).animate(
           { scrollTop: scrollTo },
           settings.speed,
@@ -74,12 +85,6 @@
 
 	 
 /*--------------------------	start scroll register	------------------------------- */
-		$('body').on('touchstart',function(){
-			console.log('touchstart');			
-			});	
-			$('body').on('touchend',function(){
-			console.log('touchend');			
-			});	
     var $snap = this;
     $( window ).on( 'scroll', function(){
       var scroll =
@@ -102,8 +107,10 @@
       lastScrollTop = scroll;
 		
       clearTimeout( scrollStop );
+		//apa = 'pressning';
+			console.log(apa);
       scrollStop = setTimeout( function(){
-        snapScroll( $snap, scroll, direction );
+        snapScroll( $snap, scroll, direction ); 
       }, 600 ); // time to start of scroll 		
     } );
   };
