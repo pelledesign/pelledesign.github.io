@@ -14268,7 +14268,7 @@ background-color: var(--contrast);
 
 nav.dark-theme {
 /* background-color: var(--contrast-dark); */
-background-color: rgb(33 33 33 / 85%);
+background-color: rgb(33 33 33 / 90%);
 }
 
 .dark-theme .hide-on-click{
