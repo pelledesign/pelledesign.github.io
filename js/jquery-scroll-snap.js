@@ -88,11 +88,13 @@
 		else if ( scroll < lastScrollTop ){
 			//console.log(direction); 
 			$('header').removeClass('nav-up').addClass('nav-down')	
-			}				
+			}			
+			
       lastScrollTop = scroll;
+		
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
-        //snapScroll( $snap, scroll, direction );
+        snapScroll( $snap, scroll, direction );
       }, 200 ); // time to start of scroll 		
     } );
   };
