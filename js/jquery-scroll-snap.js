@@ -64,7 +64,7 @@
             $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
 				console.log(direction);	// checking direction when snapping
 				if ((direction == 'up') && (scrollTo > 500)) {
-				//$('header').removeClass('nav-down').addClass('nav-up');
+				$('header').removeClass('nav-down').addClass('nav-up');
 				}
           }
         );
@@ -83,11 +83,11 @@
       if( scroll > lastScrollTop ) {
 			direction = 'down';
 			//console.log(direction); //continously checking up or down scroll 
-			//$('header').removeClass('nav-down').addClass('nav-up')
+			$('header').removeClass('nav-down').addClass('nav-up')
 		}
 		else if ( scroll < lastScrollTop ){
 			//console.log(direction); 
-			//$('header').removeClass('nav-up').addClass('nav-down')	
+			$('header').removeClass('nav-up').addClass('nav-down')	
 			}				
       lastScrollTop = scroll;
       clearTimeout( scrollStop );
