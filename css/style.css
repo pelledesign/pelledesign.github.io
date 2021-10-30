@@ -17810,7 +17810,7 @@ transform: translate(-50%, -50%);
 }
 
 .nav-up {
-    //top: -50px;
+    /* top: -50px; */
 	 opacity:0;
 }
 
