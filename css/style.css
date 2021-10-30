@@ -17802,14 +17802,16 @@ transform: translate(-50%, -50%);
 
 .auto-hide-header {
     height: 50px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    transition: top 0.2s ease-in-out;
+	 opacity:1;
+    transition: opacity 0.7s ease-in-out;
     width: 100%;
 }
 
 .nav-up {
-    top: -50px;
+    //top: -50px;
+	 opacity:0;
 }
 
 .theme-desktop {
