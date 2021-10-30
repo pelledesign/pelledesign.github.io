@@ -1506,7 +1506,7 @@ $window.scroll(function() {
 				</div>
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
-			<div id="spotify" class="portfolio-section light-theme bg-none">
+			<div id="spotify" class="portfolio-section light-theme bg-none" style="height:100vh;">
 				<div id="section-container" class="">				
 					<div id="spotify-title" class="title on-top row m0">
 						<div class="col-12 row m0 flex w100">
@@ -1593,7 +1593,7 @@ $window.scroll(function() {
 						<div id="bagheera-more" class="owl-carousel">
 							<div class="item owl-hide-lg-up x-theme zoom-container">
 								<div class="zoom-icon"></div>
-								<div class="loader relative invisible zoom-in">
+								<div class="loader relative">
 									<img class="push-zoom owl-lazy cover" src="" data-src="Bagheera/images/gallery/twisted.png">
 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
 										<div class="text-animate c-all" style="height:100%;">
@@ -1970,7 +1970,7 @@ $window.scroll(function() {
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="mixed-work" class="portfolio-section">
-				<div id="section-container" class="invisible fade-in">				
+				<div id="section-container" class="">				
 					<div id="mixed-title" class="title x-theme row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1980,7 +1980,7 @@ $window.scroll(function() {
 					</div>
 					<div id="slider-container">
 						<div id="mixed-more" class="owl-carousel">							
-							<div id="haglofs" class="item dark-theme">				
+							<div id="haglofs" class="item dark-theme invisible zoom-in">				
 								<div class="row h100 m0">									
 									<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
 										<div class="rellax-logo haglofs-logo hw100" style="width:100% !important;"></div>
@@ -5156,7 +5156,7 @@ $window.scroll(function() {
 			var modal;
 			var scrollwidth = '99vh'
 			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-			modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">x</button></div>').css({
+			modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">&#215;</button></div>').css({
 			  //backgroundColor: bg,
 			  backgroundSize: bgsize,
 			}).click(function(){
@@ -5359,7 +5359,7 @@ $window.scroll(function() {
 		<script>
 		
 		if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
-		$('.portfolio-section').addClass('snap');
+		$('.portfolio-section').not('.ignore').addClass('snap');
 		}			
 		
 		$( '.snap' ).scrollSnap({
