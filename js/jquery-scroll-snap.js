@@ -95,7 +95,7 @@
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction );
-      }, 200 ); // time to start of scroll 		
+      }, 500 ); // time to start of scroll 		
     } );
   };
 } )( jQuery );
