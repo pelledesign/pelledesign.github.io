@@ -2,7 +2,7 @@
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
- console.log('tatt');
+ console.log('2');
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
