@@ -17802,7 +17802,7 @@ transform: translate(-50%, -50%);
 
 .auto-hide-header {
     height: 50px;
-    position: fixed;
+    position: sticky;
     top: 0;
     transition: top 0.2s ease-in-out;
     width: 100%;
