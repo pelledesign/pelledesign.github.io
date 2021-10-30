@@ -5101,7 +5101,7 @@ $window.scroll(function() {
 		<script src="js/main.js"></script>	
 		<script src="js/stellar.js"></script>
 		<script src="js/load-more-button.js"></script>
-		<script src="js/jquery-scroll-snap.js"></script>
+		<!-- <script src="js/jquery-scroll-snap.js"></script> -->
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 		
@@ -5309,8 +5309,11 @@ $window.scroll(function() {
 		</script>
 
 		<script>
+		console.log(1);
+		$('#header, #header-mobile').addClass('auto-hide-header'); 
+		
 		var didScroll;
-		var lastScrollTop = 0;
+		var last_st = 0;
 		var delta = 300; //def 5
 		var navbarHeight = $('header').outerHeight();
 
@@ -5329,18 +5332,18 @@ $window.scroll(function() {
 			 var st = $(this).scrollTop(); // distance from 
 			 
 			 // Make sure they scroll more than delta
-			 if(Math.abs(lastScrollTop - st) <= delta)
+			 if(Math.abs(last_st - st) <= delta)
 				  return;
 			 
 			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
-			 if (st > lastScrollTop && st > navbarHeight){
+			 if (st > last_st && st > navbarHeight){
 				  // Scroll Down
 
 				  
 				  if (!$('.navbar-collapse').hasClass('show')) {
 					  //alert('has class show');
 					  $('header').removeClass('nav-down').addClass('nav-up');
-					  console.log('jhj');
+					  //console.log('jhj');
 				  }
 				  
 			 } else {
@@ -5350,7 +5353,7 @@ $window.scroll(function() {
 				  }	  
 			 }
 			 
-			 lastScrollTop = st;	
+			 last_st = st;	
 		}
 		</script>
 
