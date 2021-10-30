@@ -2,7 +2,7 @@
  * https://github.com/jpcurrier/jquery-scroll-snap !*/
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
- console.log('4');
+ console.log('5');
 ( function( $ ){
   $.fn.scrollSnap = function( options ){
 
@@ -92,7 +92,7 @@
       lastScrollTop = scroll;
       clearTimeout( scrollStop );
       scrollStop = setTimeout( function(){
-        snapScroll( $snap, scroll, direction );
+        //snapScroll( $snap, scroll, direction );
       }, 200 ); // time to start of scroll 		
     } );
   };
