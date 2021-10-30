@@ -7031,7 +7031,7 @@ height:calc(100vh - 46px);
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #fff;
+  color: var(theme-color);
   text-align: center;
   white-space: nowrap;
   background-color: #20c997;
@@ -17664,7 +17664,7 @@ fill: var(--whites-lightest);
 }
 .dark-theme .progress-bar {
   height: 3px;
-  background: #fff;
+  background: var(--theme-color);
   width: 0%;
 }
 

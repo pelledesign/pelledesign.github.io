@@ -66,7 +66,7 @@ $('body').on('touchstart',function(){
         }
       } );
 
-      if( (scrollTo !== false) && (apa != 'pressing')){
+      if( (scrollTo !== false) && (apa !== 'pressing')){
 			//console.log(apa);
         $( 'html, body' ).animate(
           { scrollTop: scrollTo },
