@@ -62,7 +62,7 @@ $('body').on('touchstart',function(){
 			else {
 			scrollTo = scrollToMiddle; //position it will scroll to - center of element	
 			}	
-			//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );			 					 
+			$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' ); // will stop user from interacting while scrolling, but also prohibits user from press-stopping			 					 
         }
       } );
 

@@ -9,7 +9,6 @@ function mobile (
 
 function both (
 
-on touchend then run bodyscrollsnap
 lazy load earlier but animate when isVisible
 lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
 go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
