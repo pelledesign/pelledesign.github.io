@@ -5357,8 +5357,13 @@ $window.scroll(function() {
 		$(header).addClass('auto-hide-header');				
 		</script>		
 		<script>
+		// add class'snap' if NOT portrait & md-up (tablets in portrait)
+		//if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				
+		//$('.portfolio-section').not('.ignore').addClass('snap');
+		//}			
 		
-		if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				// add class'snap' if NOT portrait & md-up (tablets in portrait)
+		// add class'snap' if not touch
+		if(!is_touch_device()) {				
 		$('.portfolio-section').not('.ignore').addClass('snap');
 		}			
 		
