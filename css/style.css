@@ -17857,10 +17857,6 @@ background: url('../images/bg/a.jpeg');
 }
 }
 
-body {
-scroll-snap-type: y mandatory;
-}
-
 .scroll-box {
   height: 400vh;
   overflow-y: scroll;
