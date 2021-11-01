@@ -81,7 +81,7 @@ $('body').on('touchstart',function(){
 				}
           }
         );
-$("body,html").bind("touchstart touchmove scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
+$("body,html").bind("touchstart touchmove", function(e){
     $("html,body").stop();
 });  		  
       }

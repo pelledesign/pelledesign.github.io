@@ -5353,7 +5353,7 @@ $window.scroll(function() {
 
 		<!-- scroll snap - for body -->		
 		<script>
-		alert('stop animation on touch + add snap to touch');
+		alert('stop animation on touch + add snap to touch 2');
 		// add class'snap' if NOT portrait & md-up (tablets in portrait)
 		//if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				
 		//$('.portfolio-section').not('.ignore').addClass('snap');
@@ -5687,6 +5687,7 @@ $('.fullscreen').on('click', function () {
 						magnificPopupExists = true;
 						 //$('html, body').animate({ scrollTop: 50px }, 50);
 						 // Getting the height of the document
+						 let this_href = this.st.el.attr('href');
 						if($(this_href).hasClass('webgl')) {  
 						let this_href = this.st.el.attr('href'); 												
 						let this_data_src = $(this_href).find('iframe').attr('data-src');
