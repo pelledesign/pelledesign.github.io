@@ -3,13 +3,13 @@
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
 
-var apa = "";
+var touchStatus = "";
 $('body').on('touchstart',function(){
-	apa = 'pressing';
+	touchStatus = 'pressing';
 	console.log('touchstart');		
 	});
 	$('body').on('touchend',function (){
-	apa = 'released';
+	touchStatus = 'released';
 	console.log('touchend');			
 	});	
 	
@@ -68,9 +68,9 @@ $('body').on('touchstart',function(){
 		  }
       } );
 
-      if( (scrollTo !== false) && (apa !== 'pressing')){
-			//console.log(apa);
-        $( 'html, body' ).animate(
+      if( (scrollTo !== false) && (touchStatus !== 'pressing')){
+			//console.log(touchStatus);
+        $( 'html, body' ).stop().animate(
           { scrollTop: scrollTo },
           settings.speed,
           function(){
@@ -81,6 +81,9 @@ $('body').on('touchstart',function(){
 				}
           }
         );
+$("body,html").bind("touchstart touchmove scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
+    $("html,body").stop();
+});  		  
       }
     }
 	 
@@ -109,8 +112,8 @@ $('body').on('touchstart',function(){
       lastScrollTop = scroll;
 		
       clearTimeout( scrollStop );
-		//apa = 'pressning';
-			console.log(apa);
+		//touchStatus = 'pressning';
+			console.log(touchStatus);
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction ); 
       }, 600 ); // time to start of scroll 		
