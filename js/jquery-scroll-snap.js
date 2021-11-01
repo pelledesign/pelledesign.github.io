@@ -81,7 +81,7 @@ $('body').on('touchstart',function(){
 				}
           }
         );
-		//stop animation on touchstart & touchmove		
+		//stop animation on touchstart & touchmove - added by me		
 		$("body,html").bind("touchstart touchmove", function(e){
 			 $("html,body").stop();
 		});  		  
