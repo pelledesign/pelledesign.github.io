@@ -5353,16 +5353,16 @@ $window.scroll(function() {
 
 		<!-- scroll snap - for body -->		
 		<script>
-		alert('stop animation on touch');
+		alert('stop animation on touch + add snap to touch');
 		// add class'snap' if NOT portrait & md-up (tablets in portrait)
 		//if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				
 		//$('.portfolio-section').not('.ignore').addClass('snap');
 		//}			
 		
 		// add class'snap' if not touch
-		if(!is_touch_device()) {				
+		//if(!is_touch_device()) {				
 		$('.portfolio-section').not('.ignore').addClass('snap');
-		}			
+		//}			
 		
 		$( '.snap' ).scrollSnap({
 		  //speed: 200
