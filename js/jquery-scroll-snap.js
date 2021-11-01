@@ -70,7 +70,7 @@ $('body').on('touchstart',function(){
 
       if( (scrollTo !== false) && (touchStatus !== 'pressing')){
 			//console.log(touchStatus);
-        $( 'html, body' ).stop().animate(
+        $( 'html, body' ).stop().animate( //added stop 
           { scrollTop: scrollTo },
           settings.speed,
           function(){
@@ -81,9 +81,10 @@ $('body').on('touchstart',function(){
 				}
           }
         );
-$("body,html").bind("touchstart touchmove", function(e){
-    $("html,body").stop();
-});  		  
+		//stop animation on touchstart & touchmove		
+		$("body,html").bind("touchstart touchmove", function(e){
+			 $("html,body").stop();
+		});  		  
       }
     }
 	 

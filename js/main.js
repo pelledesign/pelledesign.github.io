@@ -182,8 +182,8 @@ var i_d =  $(this).attr('id');
 /* 	alert(i_d); */	 
 });
 
-/* remove loader + add animation when slide is done loading - Verlok*/
-/*   $('img.lazy, iframe.lazy').on('load',function(){
+/* remove loader + add animation when slide is done loading - Verlok - used also for popups */
+  $('img.lazy, iframe.lazy').on('load',function(){
 	$(this).closest('.loader').removeClass('loader'); 
 
     if ($(this).hasClass('lazy-fade-in')){
@@ -200,7 +200,7 @@ var i_d =  $(this).attr('id');
 				});					
 			}, 100);			
     }	
-}); */
+});
 
 
 /* add slider element animations */
