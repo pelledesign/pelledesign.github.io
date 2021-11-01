@@ -3,6 +3,8 @@
  
  $('#header, #header-mobile').addClass('auto-hide-header'); 
 
+
+//detect user interaction
 var touchStatus = "";
 $('body').on('touchstart',function(){
 	touchStatus = 'pressing';
@@ -63,7 +65,7 @@ $('body').on('touchstart',function(){
 			scrollTo = scrollToMiddle; //position it will scroll to - center of element	
 			}
 			if(!is_touch_device()) {		
-			$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' ); // will stop user from interacting while scrolling, but also prohibits user from press-stopping			 					 
+			$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' ); // will stop user from interacting while snapScroll animates, but also prohibits user from touchstart = only lock body for desktop		 					 
          }
 		  }
       } );
@@ -78,6 +80,7 @@ $('body').on('touchstart',function(){
 				console.log(direction);	// checking direction when snapping
 				if ((direction == 'up') && (scrollTo > 500)) {
 				//$('header').removeClass('nav-down').addClass('nav-up');
+				$('header').removeClass('nav-down').addClass('nav-up');
 				}
           }
         );

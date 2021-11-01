@@ -67,13 +67,12 @@
 	</head>	
 	<body> 
 	
-	<!-- <div class="p-logo-new c-absolute" style="position:fixed; fill: #515151; width: 25%;"></div>	 -->
-	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
+	<div class="p-logo-new c-absolute" style="position:fixed; fill: #a9a9a9; width: 25%;"></div>	
+<!-- 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
 		<div>
 			<h3 class="invisible fade-in desktop-hidden" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>		
-			<!-- <p class="invisible fade-in-up" style="font-size:12px; text-align:center; text-transform: none;">Testing Poppop</p> -->
 		</div>
-	</div>	
+	</div>	 -->
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
 		
@@ -411,13 +410,16 @@
 			</div>	
 		</div>	
 		<div id="section-space" class="landscape-hidden"></div>	
-		
+<!-- <div class="shadow-test"></div>		 -->
 		<!-- start latest work --> 
 		<div class="dark-theme bg-none"><h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3></div>		
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
+			<!-- <div class="blended-boxshadow"></div> -->
 			<div id="akg" class="portfolio-section">
+			
 				<div id="section-container">
+				<!-- <div class="shadow-test"></div>	 -->
 					<div id="akg-title" class="title row m0 medium-theme bg-none"> <!-- ignore -->
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
@@ -5012,11 +5014,12 @@ $window.scroll(function() {
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'dark-theme'; //	set theme for touch devices	
+		var theme = 'dark-theme'; //	set theme for touch devices			
 		}
 		else
 		{ 
-		var theme = 'light-theme'; // set theme for desktop devices			
+		var theme = 'light-theme'; // set theme for desktop devices	
+		$('.portfolio-section').addClass('light-theme-shadow');		
 		}		
 		
 		// apply chosen theme to bg - and mark clicked button with circle	
@@ -5024,13 +5027,15 @@ $window.scroll(function() {
 		//$('body').css({"background-color": "#fff"});
 		$('.light-theme-button').addClass('circle-shadow');
 		$('#hero').find('.item').addClass('light-theme');	
-		$('body').css("background-color", "#fff");		
+		$('body').css("background-color", "#fff");
+		$('.portfolio-section').addClass('light-theme-shadow');		
 		}
 		else {
 		//$('body').css({"background-color": darkBg});
 		$('.dark-theme-button-hero').addClass('circle-shadow	');
 		$('#hero').find('.item').addClass('dark-theme');	
-		$('body').css("background-color", "#262626");
+		$('body').css("background-color", "#242424");
+		$('.portfolio-section').addClass('dark-theme-shadow');
 		}
 
 		// apply chosen theme to these elements	
@@ -5049,7 +5054,7 @@ $window.scroll(function() {
 			$('.light-theme-button').removeClass('circle-shadow');
 			$('.dark-theme-button-hero').addClass('circle-shadow');
 			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
-			$('body').find('.portfolio-section').removeClass('dropshadow');			
+			$('body').find('.portfolio-section').removeClass('light-theme-shadow').addClass('dark-theme-shadow');			
 						
 				//$('body').find(".title").removeClass('light-theme').addClass('dark-theme');			
 			
@@ -5073,12 +5078,13 @@ $window.scroll(function() {
 			$('.dark-theme-button-hero').removeClass('circle-shadow');
 			$('.light-theme-button').addClass('circle-shadow');
 			$('body').find(".x-theme, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
+			$('body').find('.portfolio-section').removeClass('dark-theme-shadow').addClass('light-theme-shadow');	
 			
 			$('.dark-theme-button-hero').removeClass('circle-shadow');
 			$('.light-theme-button').addClass('circle-shadow');
 			$('#hero').find('.item').removeClass('dark-theme').addClass('light-theme');	
 			$('nav').removeClass('dark-theme').addClass('light-theme');
-			$('body').find('.portfolio-section').addClass('dropshadow');
+			//$('body').find('.portfolio-section').addClass('dropshadow');
 			
 			// if the active slide has x-theme class - only then change the colors of prev/next buttons
 			$(".owl-item.active").each(function(){
@@ -5353,7 +5359,7 @@ $window.scroll(function() {
 
 		<!-- scroll snap - for body -->		
 		<script>
-		alert('poc ok?2');
+		//alert('poc ok?2');
 		// add class'snap' if NOT portrait & md-up (tablets in portrait)
 		//if(!(window.innerHeight > window.innerWidth && $(window).width() > 767)){				
 		//$('.portfolio-section').not('.ignore').addClass('snap');
