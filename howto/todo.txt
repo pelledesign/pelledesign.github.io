@@ -9,9 +9,8 @@ function mobile (
 
 function both (
 
-lazy load earlier but animate when isVisible
-lazyloadeager where it's possible - lazyoadeager on converse where there are several owl-lazy i one slide?
-go through all website backups on e: pick the best - test light / dark theme desktop and choose which is best for dektop and mobile - kolla igenom alla website backups och plocka det bästa - gråsvart som bild i tfn etc
+snyggare loads / animations - slide w/ several owl-lazy's? 
+check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
 process
 check all devices + browsers
 )
