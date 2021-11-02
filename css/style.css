@@ -18082,23 +18082,20 @@ display:block;
 -webkit-box-shadow: 0 0 20px #a8a8a8;
 box-shadow: 0 0 20px #a8a8a8;		  
 overflow:hidden;	
-/* position: absolute;
+position: absolute;
 height: 100%;
-width: 100%; */
+width: 100%;
 content: '';
 display:block;
 }
 
-.light-theme-shadow:after {
+/* .light-theme-shadow:after {
 -webkit-box-shadow: 0 0 20px #a8a8a8;
 box-shadow: 0 0 20px #a8a8a8;		  
 overflow:hidden;	
-/* position: absolute;
-height: 100%;
-width: 100%; */
 content: '';
 display:block;
-}
+} */
 
 .img-close {
 position:fixed;
