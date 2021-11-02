@@ -53,15 +53,8 @@
 		}
 		}
 		</script>		
-				<script>
-		$(document).ready(function(){
-			$('#nav-icon3').click(function(){
-				//$(this).toggleClass('open');
-				$('html, body').toggleClass('lock-scroll');
-				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
-			});
-		});
-		</script>			
+		
+			
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
@@ -5269,7 +5262,7 @@ $window.scroll(function() {
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'light-theme'; //	set theme for touch devices			
+		var theme = 'dark-theme'; //	set theme for touch devices			
 		}
 		else
 		{ 
@@ -5365,6 +5358,18 @@ $window.scroll(function() {
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
+
+
+		<!-- lock body on nav open -->	
+		<script>
+		$(document).ready(function(){
+			$('#nav-icon3').click(function(){
+
+				$('body').toggleClass('no-touch');
+				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
+			});
+		});
+		</script>
 		
 		<!-- zoom-icon function -->
 		<script>
