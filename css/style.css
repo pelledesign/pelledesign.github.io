@@ -18291,3 +18291,8 @@ color: var(--theme-color) !important;
 #section-space {
 height:30vh;
 }
+
+
+#header-mobile .navbar {
+touch-action: none;	
+}
