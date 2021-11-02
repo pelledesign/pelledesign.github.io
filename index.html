@@ -3313,7 +3313,15 @@ $window.scroll(function() {
 		</div>
 		<div id="section-space" class="landscape-hidden"></div>		
 		<div class="separator touch-hidden"></div>
-		<div id="reviews" class="owl-carousel light-theme dark-theme-touch x-shadow">						
+		<div id="reviews-title" class="x-theme bg-none row m0" style="padding-left: 0.5em;">
+			<div class="col-12 row m0 flex w100">
+				<div class="col-lg-6 col-xs-8 c-all justify-content-start">
+				 <h3 class="h3 txt-l"><strong>Re</strong>views</h3>
+				</div>	
+			</div>
+		</div>
+		<div id="reviews" class="owl-carousel light-theme dark-theme-touch x-shadow">	
+	
 			<div class="item cover-portrait props c-100">			
 				<div class="text-box c-all txt-l">
 					<div class="">
@@ -5401,7 +5409,7 @@ $window.scroll(function() {
 		
 		var didScroll;
 		var last_st = 0;
-		var delta = 150; //def 5
+		var delta = 100; //def 5
 		var navbarHeight = $('header').outerHeight();
 
 		$(window).scroll(function(event){
