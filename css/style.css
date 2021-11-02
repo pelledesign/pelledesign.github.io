@@ -17958,6 +17958,12 @@ flex-flow: column;
 height: 100%;
 }
 
+@media (orientation:portrait) {
+#section-container {
+height:65vh;
+}
+}
+
 
 .more-btn.desktop-hidden {
 /* font-size: 3rem;  */

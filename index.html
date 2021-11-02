@@ -119,7 +119,7 @@
 		 </nav>
 		</header>
 		<header id="header-mobile" role="banner" class="xl-up-h">
-		 <nav class="navbar navbar-transparent navbar-expand-xl p0 dark-theme">
+		 <nav class="navbar navbar-transparent navbar-expand-xl p0 x-theme">
 			<div class="container-fluid" style="align-items: normal;">
 			  <a href="index.html" class="text-logo-svg" style=" padding-bottom: 9px;"></a>
 			  <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
@@ -655,8 +655,8 @@
 						<div class="item c-all">			
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
-									<h2 class="s-t ignore">AKG <strong>K92</strong></h2>
-									<p> Headphones for the Vienna based audio products company AKG.</p> 
+									<!-- <h2 class="s-t ignore">AKG <strong>K92</strong></h2> -->
+									<p class="p0"> Headphones for the Vienna based audio products company AKG.</p> 
 									<div class="ShowMoreBox">
 										<div class="MoreText">
 											<p>
@@ -1366,8 +1366,8 @@ $window.scroll(function() {
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
 									<div class="invisible fade-in">
-										<h2 class="mb-4 s-t ignore">Converse <strong>Suburban</strong></h2>
-										<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+										<!-- <h2 class="mb-4 s-t ignore">Converse <strong>Suburban</strong></h2> -->
+										<p class="p0">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
 										</p>
 										<div class="ShowMoreBox">
 											<div class="MoreText">
@@ -1505,10 +1505,89 @@ $window.scroll(function() {
 						</div>							
 					</div>				
 				</div>
+				<div class="xl-up-h x-theme">	 	
+					<div class="col-lg-12 x-theme">
+						<div class="item c-all">			
+							<div class="text-box c-all txt-l">
+								<div class="invisible fade-in">
+									<!-- <h2 class="mb-4 s-t">POC <strong>Lobes</strong></h2> -->
+									<p class="p0">Cylindrical Ski Goggle Made During Internship at Poc<br>
+									<!-- <strong>Role - Redesign & Modelling</strong>  -->
+									</p>		  	
+									<div class="ShowMoreBox">
+										<div class="MoreText">
+											<p class="ignore">Cylindrical Ski Goggle Made During Internship at Poc</p>	
+										</div>
+										<strong>
+											<p class="loadMoreBtn">More</p>
+										</strong>
+									</div>														
+								</div>
+							</div>
+						</div>										
+					</div>			
+					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
+					
+						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+							<div class="item zoomable hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden absolute">test</p>
+							</div>			
+						</div>					
+						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+							<div class="item zoomable hw100 medium-theme">
+							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
+							<p class="img-text hidden absolute">Top View</p>					
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+							<div class="item zoomable hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden absolute">test</p>
+							</div>			
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+							<div class="item zoomable hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden absolute">test</p>
+							</div>			
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
+							<div class="item zoomable hw100 medium-theme">
+							<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
+							<p class="img-text hidden absolute">Top View</p>					
+							</div>
+						</div>
+	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
+							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
+						</div> -->
+	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
+							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover dark-theme" style="object-position: 100% 17%;">												
+						</div> -->
+						<!-- <div class="separator xl-up-h"></div>	 -->
+	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
+							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
+						</div>	 -->					
+						<div class="col-lg-12 loader c-all invisible fade-in" style="height:65vh !important">
+							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
+								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
+							</div>						
+							<iframe 
+							id="xr-iframe"
+							class=" lazy dark-theme" 								
+							src=""
+							data-src="poc/xr/pocxr.html"																			
+							frameborder="0"
+							scrolling="no"
+							>
+							</iframe>												
+						</div>
+					</div>
+				</div>				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
 			<div id="spotify" class="portfolio-section light-theme bg-none" style="height:100vh;">
-				<div id="section-container" class="">				
+				<div id="section-container" class="" style="height:100vh;">				
 					<div id="spotify-title" class="title on-top row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1958,7 +2037,7 @@ $window.scroll(function() {
 			</div>				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>			
-			<div class="text-box c-all txt-l lg-up-h fade-in-left x-theme x-shadow">
+			<div class="text-box c-all txt-l lg-up-h fade-in-left relative x-theme x-shadow">
 				<div class="">
 					<h2 class="s-t ignore">"Pelle stayed</h2>
 					<p>with us at Bagheera AB, Sweden for a few years. <br>
@@ -2105,11 +2184,12 @@ $window.scroll(function() {
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
 							<span class="more-btn desktop-hidden"></span>							
 						</div>				
-					</div>
+					</div>					
 				</div>
 			</div>
-			<div id="section-space" class="landscape-hidden"></div>					
-			<div id="alcon" class="portfolio-section x-theme landscape-hidden vh75 relative">
+			<div id="section-space" class="landscape-hidden"></div>	
+			
+			<div id="alcon" class="portfolio-section x-theme landscape-hidden  relative">
 					<div id="alcon-title" class="title light-theme row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2141,14 +2221,13 @@ $window.scroll(function() {
 							</div>
 						</div>
 					</div>						
-				</div>	
-			</div>
+				</div>
 			<div class="xl-up-h">
 					<div class="col-lg-12 x-theme">
 						<div class="item c-all">			
 							<div class="text-box c-all txt-l">
 								<div class="invisible fade-in">
-									<h2 class="mb-4 s-t txt-l ignore">Alcon <strong>Lens Container</strong></h2>
+									<!-- <h2 class="mb-4 s-t txt-l ignore">Alcon <strong>Lens Container</strong></h2> -->
 										<p>Lens container for eye care products company Alcon.<br>
 										This projects was focused on the user experience for the lens wearer	
 										</p>	
@@ -2166,9 +2245,8 @@ $window.scroll(function() {
 							</div>
 						</div>										
 					</div>		 		
-				<div id="grid" class="item row m0 h100">	
-			
-<!-- 					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+				<div id="grid" class="item row m0 h100">			
+					<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 						<div class="item zoomable hw100 dark-theme">
 							<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
 							<p class="img-text hidden absolute">test</p>
@@ -2208,9 +2286,11 @@ $window.scroll(function() {
 						scrolling="no"
 						>
 						</iframe>												
-					</div> -->
+					</div>
 				</div>
+			</div>				
 			</div>
+
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="specialized" class="portfolio-section">	
 				<div id="section-container" class="invisible fade-in">				
@@ -2432,7 +2512,7 @@ $window.scroll(function() {
 							<span class="more-btn btn btn-outline touch-hidden">more</span>	
 							<span class="more-btn desktop-hidden"></span>
 						</div>				
-					</div>				
+					</div>					
 				</div>
 			</div>
 			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;">
@@ -2520,7 +2600,7 @@ $window.scroll(function() {
 				<a href="#" class="c-absolute xs-down-h more-btn-text btn btn-outline">More Designs</a>
 				<a href="#" class="c-absolute md-up-h more-btn-text btn btn-outline">Show More</a>
 			</div>	
-			<div id="designprocess-slider" class="snap col-lg-12 vh100 hide-scroll">
+			<div id="designprocess-slider" class="portfolio-section snap col-lg-12 vh100 hide-scroll">
 				<div id="section-container" class="">	
 					<div id="design-process-title" class="title row m0">
 						<div class="col-12 flex">
@@ -3272,7 +3352,7 @@ $window.scroll(function() {
 		<div id="section-space" class="landscape-hidden"></div>
 		
 		<!-- start footer -->
-		<footer class="site-footer x-theme m0 relative" role="contentinfo">    
+		<footer class="site-footer x-theme x-shadow m0 relative" role="contentinfo">    
 			<div class="container text-box">
 				<div class="row mb-5">
 				  <div class="col-md-4 mb-5 ignore">        
@@ -5012,7 +5092,7 @@ $window.scroll(function() {
 		var darkBg = '#212121';		
 		
 		if(is_touch_device()) {
-		var theme = 'dark-theme'; //	set theme for touch devices			
+		var theme = 'light-theme'; //	set theme for touch devices			
 		}
 		else
 		{ 
