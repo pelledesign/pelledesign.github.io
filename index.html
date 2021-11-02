@@ -53,14 +53,15 @@
 		}
 		}
 		</script>		
-		<!-- 		<script>
+				<script>
 		$(document).ready(function(){
 			$('#nav-icon3').click(function(){
-				$(this).toggleClass('open');
-				//$(this).closest('.navbar').toggleClass('h100');
+				//$(this).toggleClass('open');
+				$('body').toggleClass('lock-scroll');
+				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
 			});
 		});
-		</script>	 -->		
+		</script>			
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
@@ -2270,7 +2271,7 @@ $window.scroll(function() {
 							scrolling="no"
 							>
 							</iframe>	 -->											
-						</div>
+						
 					</div>
 				</div>				
 			</div>
@@ -2674,7 +2675,7 @@ $window.scroll(function() {
 							id="xr-iframe"
 							class=" lazy dark-theme" 								
 							src=""
-							data-src="specialized/xr/specializedxr.html"																			
+							data-src="Specialized/xr/specializedxr.html"																			
 							frameborder="0"
 							scrolling="no"
 							>
@@ -2769,7 +2770,7 @@ $window.scroll(function() {
 				<a href="#" class="c-absolute md-up-h more-btn-text btn btn-outline">Show More</a>
 			</div>	
 			<div id="designprocess-slider" class="portfolio-section snap col-lg-12 vh100">  <!-- hide-scroll -->
-				<div id="section-container" class="hw100">	
+				<div id="section-container" style="height:100% !important;">	
 					<div id="design-process-title" class="title row m0 x-theme">
 						<div class="col-12 flex">
 							<div class="col-lg-6 c-all justify-content-start">
