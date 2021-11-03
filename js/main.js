@@ -78,50 +78,30 @@ about_slider_mobile.trigger('to.owl.carousel', [2, 500]);
 });
 
 /* change nav clr depending on slide bg */
-main_sliders.on('initialized.owl.carousel', function(event) {
+
+main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
+	let element_item = element.find('.owl-item').eq(idx).find('.item');
+	let this_view_btn = $(this).closest('#slider-container').find('.view-btn');
+	let this_title = $(this).closest('#section-container').find('.title');	
 	
-	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
-		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme medium-theme').addClass('light-theme');
-		  $(this).closest('#section-container').find('.title').removeClass('dark-theme medium-theme').addClass('light-theme');
-	  }
-	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
-			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme medium-theme').addClass('dark-theme');
-			$(this).closest('#section-container').find('.title').removeClass('light-theme medium-theme').addClass('dark-theme');
-	  }
-	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
-			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme dark-theme').addClass('medium-theme');
-			$(this).closest('#section-container').find('.title').not('.ignore').removeClass('light-theme dark-theme').addClass('medium-theme');
-	  }
-	  else {
-		  //alert('error');
-	  }				  	
-	});
-main_sliders.on('translate.owl.carousel', function(event) {
-	
-	let element = jQuery(event.target);
-	let idx = event.item.index;
-	
-	  if (element.find('.owl-item').eq(idx).find('.item').hasClass('light-theme')) {
-		  $(this).closest('#slider-container').find('.view-btn').removeClass('dark-theme').addClass('light-theme');
-		  $(this).closest('#section-container').find('.title').removeClass('dark-theme').addClass('light-theme');
-	  }
-	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('dark-theme')) {
-			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('dark-theme');
-			$(this).closest('#section-container').find('.title').removeClass('light-theme').addClass('dark-theme');
-	  }
-	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('medium-theme')) {
-			$(this).closest('#slider-container').find('.view-btn').removeClass('light-theme').addClass('medium-theme');
-	  }
-	  else if (element.find('.owl-item').eq(idx).find('.item').hasClass('no-theme')) {
-	  }
-	  else {
-		  alert('error');
-	  }	
-	  
-	});
+	if (element_item.hasClass('light-theme')) {
+	  this_view_btn.add(this_title).removeClass('dark-theme').addClass('light-theme');
+	}
+	else if (element_item.hasClass('dark-theme')) {
+		this_view_btn.add(this_title).removeClass('light-theme').addClass('dark-theme');
+	}
+	else if (element_item.hasClass('medium-theme')) {
+		this_view_btn.add(this_title).removeClass('light-theme dark-theme').addClass('medium-theme');
+		//$(this).closest('#section-container').find('.title').not('.ignore').removeClass('light-theme dark-theme').addClass('medium-theme');
+	}
+	else {
+	  //alert('error');
+	}				  	
+});
+
 
 /* remove slides for screens and devices on initialize  */
 all_sliders.on('initialize.owl.carousel', function(event) {

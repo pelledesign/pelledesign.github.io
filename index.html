@@ -143,7 +143,7 @@
 					<li class="nav-item flex-xl-up c-lg">
 					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
 						<div id="theme-switcher-menu" class=" flex justify-content-center">
-						<div id="" class="dark-theme-button-hero theme-circle dark"></div>
+						<div id="" class="dark-theme-button theme-circle dark"></div>
 						<div id="" class="light-theme-button theme-circle light"></div>					
 						</div>							  
 					</li>
@@ -161,7 +161,7 @@
 		</div>
 			
 		<!-- hero -->
-		<div id="hero-container" class="col-full">
+		<div id="hero-container" class="col-full" style="background: chocolate;">
 			<div class="row c-all hw100 m0">
 				<div id="slider-container" class="col-lg-6 col-md-8 md-down-h c-all">		
 					<div id="about-slider" class="about-slider owl-carousel">
@@ -278,7 +278,7 @@
 				</div>
 			</div>
 		</div>
-
+<div id="section-space" class="landscape-hidden"></div>
 		<!-- about -->
 		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h">
 		<div id="bg-hero" class="c-absolute hw100"></div>
@@ -424,7 +424,6 @@
 		</div>	
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
-			<!-- <div class="blended-boxshadow"></div> -->
 			<div id="akg" class="portfolio-section z3">		
 				<div id="section-container">
 				<!-- <div class="shadow-test"></div>	 -->
@@ -739,22 +738,7 @@
 						</div>
 					</div>
 				</div>				
-			</div>
-<!-- <script>
-
-
-var distance = $('#akg').offset().top,
-    $window = $(window),
-	 scroll_position = 'not top';
-
-$window.scroll(function() {
-    if ( $window.scrollTop() >= distance ) {
-        console.log('is in top');
-		  
-    }
-});
-
-</script> -->			
+			</div>			
 			<div id="section-space" class="landscape-hidden"></div>
 			<div class="text-box c-all txt-l lg-up-h relative fade-in-left x-theme x-shadow">
 					<div class="">
@@ -809,8 +793,8 @@ $window.scroll(function() {
 								</div>
 								<div class="fadeout-btm"></div>																		
 							</div>		 -->		
-							<div class="item owl-hide-xs-down dark-theme">				
-								<div class="dark-theme relative hide-scroll h100"  style="background:#dec9ac">	
+							<div class="item owl-hide-xs-down pop-theme">				
+								<div class="relative hide-scroll h100">	
 									<!-- <div class="cover hw100 rellax-props"></div> -->
 <!-- 									<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 										<div class="rellax-logo converse-logo dark-theme hw100"></div>
@@ -868,6 +852,49 @@ $window.scroll(function() {
 										</div>
 									</div>			
 								</div>										
+							</div> -->
+<!-- 							<div class="item owl-hide-xs-down dark-bg">				
+								<div class="relative hide-scroll h100">	
+									<div class="row hw100 m0">								
+										<div class="md-down-h col-lg-4 col-sm c-lg-up auto-scroll h100">
+											<div class="row c-lg">
+												<div class="col-lg-8 ppp2 txt-l">
+													<h2 class="mb-4 s-t" style="color:#8d2720">Converse <strong>Suburban</strong></h2>
+													<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+													</p>		  
+													<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
+													</p>
+													<p><strong>Swipe Model to Rotate</strong></p>
+												</div>					
+											</div>
+										</div>			
+										<div class="col-lg-8 c-all textoverlay-desktop hide-scroll">					
+											<iframe
+											class="converse-xr-inject lazy invisible fade-in soft-zoom" 
+											src="images/loaders/bars_fixed.svg"
+											data-src="Converse/xr/conversexr.html"																								
+											frameborder="0"
+											scrolling="no"
+											>
+											</iframe>												
+										</div>
+									</div>			
+								</div>										
+							</div>							
+							<div class="item owl-hide-touch light-bg">
+								<div class="cont">
+									<div class="middle textoverlay">							
+										<img src="" data-src="Converse/images/gallery/01.png" class="owl-lazy absolute cover" style="object-position: 100% 75%;">												
+										<div class="dark-theme overlay c-all">
+											<div class="text-animate c-all">
+												<div>
+													<h3 class="h3">GALLERY <strong></strong></h3>
+													<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>															
 							</div> -->
 							<div class="item owl-hide-touch dark-theme">
 								<div class="cont">
@@ -1490,7 +1517,7 @@ $window.scroll(function() {
 					</div>		
 					<div id="slider-container">
 						<div id="poc-more" class="owl-carousel c-100">					
-							<div class="item hw100 dropshadow zoom-container x-theme">
+							<div class="item hw100 dropshadow zoom-container dark-theme">
 								<div class="zoom-icon"></div>						
 								<div class="lg-up-h loader invisible zoom-in"> <!-- textoverlay -->				
 									<img class="lazy cover" src="" data-src="poc/images/front.png">
@@ -1504,9 +1531,9 @@ $window.scroll(function() {
 										</div>
 									</div> -->
 								</div>		
-								<div class="md-down-h x-theme relative hw100">	
+								<div class="md-down-h relative hw100">	
 									<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-										<div class="rellax-logo poc-logo x-theme bg-none hw100"></div>
+										<div class="rellax-logo poc-logo bg-none hw100"></div>
 									</div>						
 									<div class="row m0 h100">	
 										<div class="col-lg-4 c-all">
@@ -2294,8 +2321,7 @@ $window.scroll(function() {
 					</div>
 				</div>				
 			</div>
-			<div id="section-space" class="landscape-hidden"></div>	
-			
+			<div id="section-space" class="landscape-hidden"></div>				
 			<div id="alcon" class="portfolio-section x-theme landscape-hidden  relative  z3">
 				<div id="alcon-title" class="title light-theme row m0">
 					<div class="col-12 row m0 flex">
@@ -2397,7 +2423,6 @@ $window.scroll(function() {
 					</div>
 				</div>				
 			</div>
-
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="specialized" class="portfolio-section">	
 				<div id="section-container" class="invisible fade-in">				
@@ -2465,10 +2490,10 @@ $window.scroll(function() {
 									</div>
 									<div class="fadeout-btm"></div>																		
 								</div>												
-							<div class="item owl-hide-md-down x-theme">				
+							<div class="item owl-hide-md-down pop-theme">				
 								<div class="row m0 hw100">										
 										<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-											<div class="rellax-logo specialized-logo x-theme hw100" style="height:100%"></div>
+											<div class="rellax-logo specialized-logo hw100" style="height:100%"></div>
 										</div>								
 										<div class="col-lg-6 c-all txt-l">
 											<div>										
@@ -3500,7 +3525,7 @@ $window.scroll(function() {
 			<!-- <span class="more-btn desktop-hidden"></span> -->
 		</div>
 		<div id="section-space" class="landscape-hidden"></div>		
-		<div class="separator touch-hidden"></div>
+		<!-- <div class="separator touch-hidden"></div> -->
 		<div id="reviews-title" class="x-theme bg-none row m0" style="padding-left: 0.5em;">
 			<div class="col-12 row m0 flex w100">
 				<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -3544,7 +3569,7 @@ $window.scroll(function() {
 				</div>
 			</div>				
 		</div>
-		<div class="separator touch-hidden"></div>
+		<!-- <div class="separator touch-hidden"></div> -->
 		<div id="section-space" class="landscape-hidden"></div>
 		
 		<!-- start footer -->
@@ -5285,88 +5310,67 @@ $window.scroll(function() {
 		
 		//must be placed before main.js as it needs classes from x-theme to be able to execute
 		
-		var darkBg = '#212121';		
+		var darkBg = '#242424';		
+		var lightBg = '#fff';
 		
 		if(is_touch_device()) {
 		var theme = 'dark-theme'; //	set theme for touch devices			
+		var this_bg = '#242424'; //	set theme for touch devices			
 		}
 		else
 		{ 
 		var theme = 'light-theme'; // set theme for desktop devices	
-		$('.portfolio-section').addClass('light-theme-shadow');		
+		var this_bg = '#fff';		
 		}		
 		
-		// apply chosen theme to bg - and mark clicked button with circle	
-		if (theme == 'light-theme') {
-		//$('body').css({"background-color": "#fff"});
-		$('.light-theme-button').addClass('circle-shadow');
-		$('#hero').find('.item').addClass('light-theme');	
-		$('body').css("background-color", "#fff");
-		$('.portfolio-section, .x-shadow').addClass('light-theme-shadow');		
-		}
-		else {
-		//$('body').css({"background-color": darkBg});
-		$('.dark-theme-button-hero').addClass('circle-shadow	');
-		$('#hero').find('.item').addClass('dark-theme');	
-		$('body').css("background-color", "#242424"); <!-- #242424 -->
-		$('.portfolio-section, .x-shadow').addClass('dark-theme-shadow');
-		}
-
-		// apply chosen theme to these elements	
+		// apply chosen theme to elements - and mark clicked button with circle	
+		
+		$('body').css({"background-color": this_bg});
+		$('.' + theme + '-button').addClass('circle-shadow');
+		$('#hero').find('.item').addClass(theme);	
 		$('body').find(".x-theme").addClass(theme);
-		//$('body').find(".x-shadow").addClass(theme + '-shadow');
+		$('.portfolio-section, .x-shadow').addClass(theme + '-shadow');		
 		$('body').find(".title").not('.ignore').addClass('bg-none');
-		//$('body').find(".view-btn").not('.hide-this').addClass(theme).addClass('bg-none');	
 		
 		
 		// on theme btn click - mark this btn - if this .item has class x-theme - remove current theme - and apply new theme			
 		
 		//dark-theme button
-		$('.dark-theme-button-hero').on('click',function(){
+		$('.light-theme-button, .dark-theme-button').on('click',function(){
 		
-			$('body').css({"background-color": darkBg});
-			$('.light-theme-button').removeClass('circle-shadow');
-			$('.dark-theme-button-hero').addClass('circle-shadow');
-			$('body').find(".x-theme, .fadeout-btm").removeClass('light-theme').addClass('dark-theme');
-			$('body').find('.portfolio-section, .x-shadow').removeClass('light-theme-shadow').addClass('dark-theme-shadow');			
-						
-				//$('body').find(".title").removeClass('light-theme').addClass('dark-theme');			
-			
-			$('.light-theme-button').removeClass('circle-shadow');
-			$('.dark-theme-button-hero').addClass('circle-shadow');
-			$('#hero').find('.item').removeClass('light-theme').addClass('dark-theme');	
-			$('nav').removeClass('light-theme').addClass('dark-theme');	
-			
-			// if the active slide has x-theme class - only then change the colors of prev/next buttons
-			$(".owl-item.active").each(function(){		
-			  if ($(this).find('.item').hasClass('x-theme')) {				
-				$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass('light-theme').addClass('dark-theme');				
-			  }
-			});			
-		});	
+		if ($(this).hasClass('light-theme-button')) {
+		var this_theme = 'light-theme';
+		var other_theme = 'dark-theme';
+		var this_button = $('.light-theme-button');
+		var other_button = $('.dark-theme-button');
+		var this_theme_clr = '#fff';
+		}
+		else if ($(this).hasClass('dark-theme-button')) {
+		var this_theme = 'dark-theme';
+		var other_theme = 'light-theme';
+		var this_button = $('.dark-theme-button');
+		var other_button = $('.light-theme-button');
+		var this_theme_clr = '#242424';
+		}
 		
-		//light-theme button
-		$('.light-theme-button').on('click',function(){
+		$('body').css({"background-color": this_theme_clr});
+		other_button.removeClass('circle-shadow');
+		this_button.addClass('circle-shadow');
 		
-			$('body').css({"background-color": "#fff"});
-			$('.dark-theme-button-hero').removeClass('circle-shadow');
-			$('.light-theme-button').addClass('circle-shadow');
-			$('body').find(".x-theme, .fadeout-btm").removeClass('dark-theme').addClass('light-theme');
-			$('body').find('.portfolio-section, .x-shadow').removeClass('dark-theme-shadow').addClass('light-theme-shadow');	
-			
-			$('.dark-theme-button-hero').removeClass('circle-shadow');
-			$('.light-theme-button').addClass('circle-shadow');
-			$('#hero').find('.item').removeClass('dark-theme').addClass('light-theme');	
-			$('nav').removeClass('dark-theme').addClass('light-theme');
-			//$('body').find('.portfolio-section').addClass('dropshadow');
-			
-			// if the active slide has x-theme class - only then change the colors of prev/next buttons
-			$(".owl-item.active").each(function(){
-				if ($(this).find('.item').hasClass('x-theme')) {				
-				$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass('dark-theme').addClass('light-theme');
-				}		
-			});						
-		});				
+		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
+		$('body').find(".x-theme, .fadeout-btm, .title").removeClass(other_theme).addClass(this_theme);
+		$('body').find('.portfolio-section, .x-shadow').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
+					
+		$('nav').removeClass(other_theme).addClass(this_theme);	
+		
+		// if the active slide has x-theme class - only then change the colors of prev/next buttons
+		$(".owl-item.active").each(function(){		
+		  if ($(this).find('.item').hasClass('x-theme')) {				
+			$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass(other_theme).addClass(this_theme);				
+		  }
+		});			
+	});	
+				
 		</script>
 			
 		<script src="js/lazyload.js"></script>
@@ -5387,7 +5391,7 @@ $window.scroll(function() {
 
 
 		<!-- lock body on nav open -->	
-		<script>
+<!-- 		<script>
 		$(document).ready(function(){
 			$('#nav-icon3').click(function(){
 
@@ -5398,7 +5402,7 @@ $window.scroll(function() {
 				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
 			});
 		});
-		</script>
+		</script> -->
 		
 		<!-- zoom-icon function -->
 		<script>

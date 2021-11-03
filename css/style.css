@@ -59,6 +59,9 @@
 --red: #f0552f;	
 --orange: #F25C05;
 --bright-green: #00ffb5;
+--converse-pop-theme-bg: #dec9ac;
+--specialized-pop-theme-bg: #d2e2e1;
+--converse-pop-theme-text: #8d2720;
 
 	
 	 --light: 80;
@@ -14329,9 +14332,9 @@ background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmln
 }
 }
 
-.pop-theme {
+/* .pop-theme {
 background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 1900 1080' enable-background='new 0 0 1900 1080' xml:space='preserve' preserveAspectRatio='none'%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='205.0005' y1='1285' x2='1695.0005' y2='-205'%3E%3Cstop offset='0' style='stop-color:%23d2e2e1'/%3E%3Cstop offset='0.7' style='stop-color:%23cbdbd9'/%3E%3C/linearGradient%3E%3Crect fill='url(%23SVGID_1_)' width='1900' height='1080'/%3E%3C/svg%3E") !important; background-size:cover;	
-}
+} */
 
 
 /* #item-color .item {
@@ -15861,7 +15864,7 @@ z-index:2;
 /* 	letter-spacing: 5px;	 */
 	font-size: 1.25rem;
 	pointer-events:none;
-	padding:25%;
+	/* padding:25%; */
 	    font-weight: 700;	
 }
 
@@ -18352,3 +18355,46 @@ z-index:3;
 /* #header-mobile .navbar {
 touch-action: none;	
 } */
+
+.bg-animate, #slider-container {
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .3s ease-in-out;
+/* background:none !important; */
+}
+
+/* #slider-container.run, .bg-animate.run {
+
+background: #212121 !important;
+} */
+
+/* #slider-container.dark-bg,  {
+background: #212121 !important;
+}
+
+#slider-container.light-bg {
+background: #fff;
+} */
+
+#slider-container.dark-bg.run {
+background: #212121;
+}
+
+#converse .pop-theme {
+background-color: var(--converse-pop-theme-bg) !important;	
+/* color: var(--converse-pop-theme-text) !important;	 */
+}
+
+#specialized .pop-theme {
+background-color: var(--specialized-pop-theme-bg) !important;	
+/* color: var(--converse-pop-theme-text) !important;	 */
+}
+
+#converse .pop-theme h2 {
+color: var(--converse-pop-theme-text) !important;	
+}
+
+#slider-container.light-bg.run {
+background: #fff;
+}
