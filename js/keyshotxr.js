@@ -490,15 +490,15 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         C.height = e;
         s.style.width = c + "px";
         a.l && window.innerHeight < B.height && (e = window.innerHeight);
-        s.style.height = e + "px";
+        s.style.height = e + "px"; //turntable
         s.style.left = m.left + "px";
         s.style.top = m.top + "px";
         na();
         n.style.width = b + "px";
         a.l && window.innerHeight < B.height && (d = window.innerHeight);
         n.style.height = d + "px";
-        a.h.style.height =
-            d + "px";
+        //a.h.style.height =
+            //d + "px";		removed calculations of top div height
         n.Ba && n.Ba(b, d);
         ba && (a.N.style.height = window.innerHeight + "px", a.N.style.width = window.innerWidth + "px")
     };
@@ -840,6 +840,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         b += "left: 0px;";
         b += "position: relative;";
 		  b += "cursor: grab;";								/* iframe cursor same as 959*/
+		  b += "height: 100%;";								/* iframe cursor same as 959*/
         v.setAttribute("style", b);
         a.h.appendChild(v);
 		  

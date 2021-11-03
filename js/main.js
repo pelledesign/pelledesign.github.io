@@ -322,7 +322,7 @@ responsive:{
   768:{
 	items:1,
 	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
-	nav:false,
+	nav:true,
 	autoHeight: true,
 	dots:true,	
   },
@@ -817,7 +817,7 @@ responsive:{
   nav:false
 },
 600:{
-  items:1,
+  items:2,
   nav:false
 },
 1000:{
