@@ -61,7 +61,7 @@
 	</head>	
 	<body> 
 	
-	<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; width: 25%;"></div>	
+	<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; width: 25%; height:25%;"></div>	
 <!-- 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
 		<div>
 			<h3 class="invisible fade-in desktop-hidden" style="font-size:1rem;">LATEST <strong>WORK</strong></h3>		
@@ -5366,6 +5366,9 @@ $window.scroll(function() {
 			$('#nav-icon3').click(function(){
 
 				$('body').toggleClass('no-touch');
+				$('body.no-touch').on("touchstart touchmove", function(e){
+				//preventDefault(); 
+				});
 				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
 			});
 		});
