@@ -161,14 +161,14 @@
 		</div>
 			
 		<!-- hero -->
-		<div id="hero-container" class="col-full" style="background: chocolate;">
+		<div id="hero-container" class="col-full">  <!-- style="background: chocolate;" -->
 			<div class="row c-all hw100 m0">
 				<div id="slider-container" class="col-lg-6 col-md-8 md-down-h c-all">		
 					<div id="about-slider" class="about-slider owl-carousel">
 <!-- 					<div class="item" style="background:red;"></div>
 					<div class="item" style="background:green;"></div>
 					<div class="item" style="background:blue;"></div> -->
-						<div class="item" style="padding:22%;">				
+						<div class="item x-theme" style="padding:22%;">				
 							<span class=" d-block text-uppercase text-secondary">About</span>
 							<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> Who Brings Your Ideas Alive</h2>					  
 							<p>I am Pelle Skogsberg. <br>With 10 years of experience in product design, my background includes designing products for brands such as 
@@ -179,14 +179,14 @@
 							<p class="more-btn-text btn btn-outline">Learn More</p>	
 							<a class="btn btn-outline" href="#portfolio">Latest Work</a>	
 						</div>															
-						<div class="item" style="padding:22%;">			
+						<div class="item x-theme" style="padding:22%;">			
 						  <span class="xs-down-h d-block text-uppercase text-secondary">Process</span>
 							<h2 class="mb-4">My <strong>Design Process</strong> Is Designed <strong>For You</strong></h2>
 							<p>My opinion is that in design, communication is fundamental to the outcome, and that's why 
 							<a href="#design-process-popup" title="Project Info" class="open-popup"><strong>my design process </strong></a>is built so that you may follow the process as it's developing - it makes sure we're constantly on the same page!</p>
 							<p class="more-btn-text btn btn-outline">Learn More</p>
 						</div>
-						<div class="item c-md-up auto-scroll" style="padding:10%;">				
+						<div class="item x-theme c-md-up auto-scroll" style="padding:10%;">				
 							<div id="myservices" class="container c-all h100">								
 									<div class="row h100 c-all text-box">
 										<div class="h-auto">
@@ -278,7 +278,7 @@
 				</div>
 			</div>
 		</div>
-<div id="section-space" class="landscape-hidden"></div>
+		<div id="section-space" class="landscape-hidden"></div>
 		<!-- about -->
 		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h">
 		<div id="bg-hero" class="c-absolute hw100"></div>
@@ -682,19 +682,19 @@
 					</div>			
 					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
 					
-						<div class="col-lg-6 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden absolute">Top View</p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
@@ -706,7 +706,7 @@
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
+						<div class="lg-up-h col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden absolute">Top View</p>					
@@ -722,7 +722,7 @@
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="col-lg-12 loader c-all invisible fade-in" style="height:65vh !important">
+						<div class="col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
@@ -1486,7 +1486,18 @@
 							frameborder="0"
 							scrolling="no"
 							>
-							</iframe>												
+							</iframe>
+<script>
+$(document).ready(function() {
+    $("#xr-iframe").on('load', function() {
+        alert('loaded');
+		  var test = (this).height;
+		  alert(test);
+		  //var ratio = $img.height() / $img.width();
+    });
+});
+
+</script>							
 						</div>
 					</div>
 				</div>				
@@ -1589,27 +1600,26 @@
 							</div>
 						</div>										
 					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
-					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 						
+						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden absolute">Top View</p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="lg-up-h col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
@@ -1631,7 +1641,7 @@
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="col-lg-12 loader c-all invisible fade-in" style="height:65vh !important">
+						<div class="col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
@@ -1800,7 +1810,7 @@
 											</div>					
 										</div>
 									</div>			
-									<div class="col-lg-8 c-all textoverlay-desktop hide-scroll absolute hide-on-click desktop-hidden">											
+									<div class="col-lg-8 c-all textoverlay-desktop hide-scroll absolute hide-on-click desktop-hidden landscape-hidden">											
 										<div class="overlay c-all desktop-hidden img-opacity">
 											<div class="text-animate c-all txt-c">
 												<div class="h-auto">
@@ -1811,7 +1821,7 @@
 											</div>
 										</div>													
 									</div>
-									<div class="col-lg-8 c-all touch-hidden">										
+									<div class="col-lg-8 c-all portrait-hidden">										
 										<iframe 
 										style="max-width:1250px;"
 										class="bagheera lazy invisible fade-in soft-zoom" 
@@ -1830,7 +1840,7 @@
 									</div>									
 								</div>	 -->							
 							</div>															
-							<div class="item owl-hide-md-down light-theme">
+<!-- 							<div class="item owl-hide-md-down light-theme">
 								<div class="row c-lg w100">
 									<div class="col-lg-6 mr-auto ml-auto">  
 										<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
@@ -1841,7 +1851,7 @@
 										<p class="txt-c"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="item owl-hide-md-down light-theme">
 								<div class="cont">				
 									<div class="absolute row m0 h100">
@@ -2671,26 +2681,32 @@
 					</div>			
 					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
 					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
+						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden absolute">Top View</p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
+						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
 							<div class="item zoomable hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden absolute">test</p>
+							</div>			
+						</div>
+						<div class="col-lg-6 md-down-h loader c-all textoverlay zoom-container invisible fade-in">				
+							<div class="item zoomable hw100 pop-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden absolute">test</p>
 							</div>			
@@ -2711,7 +2727,7 @@
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="col-lg-12 loader c-all invisible fade-in" style="height:65vh !important">
+						<div class="col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						

@@ -8,10 +8,10 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
+if landscape bady scroll to ceneter
 pop-themes
 p-logo-new fixed?
 if last grid item make col-12
-snygga till x-theme kod
 snyggare loads / animations - slide w/ several owl-lazy's? 
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
 process

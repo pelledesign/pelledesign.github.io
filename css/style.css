@@ -17954,11 +17954,11 @@ background:red;
 z-index:3;		
 } */
 
-@media screen and (orientation:landscape) {
+/* @media screen and (orientation:landscape) {
 .portfolio-section {
 height:75vh;		
 }
-}
+} */
 
 @media screen and (min-width: 768px) and (orientation:portrait) {
 .portfolio-section {
@@ -17992,6 +17992,12 @@ height: 100%;
 @media (orientation:portrait) {
 #section-container {
 height:65vh;
+}
+}
+
+@media (orientation:landscape) {
+#section-container {
+height:75vh;
 }
 }
 
@@ -18397,4 +18403,8 @@ color: var(--converse-pop-theme-text) !important;
 
 #slider-container.light-bg.run {
 background: #fff;
+}
+
+#backbuffer{
+width:50vw;	
 }

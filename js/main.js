@@ -801,6 +801,10 @@ responsive:{
   nav:false
 },
 1000:{
+  items:3,
+  nav:false
+},
+1200:{
   items:4,
   nav:false
 }
