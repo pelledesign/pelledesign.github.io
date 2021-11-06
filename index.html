@@ -425,7 +425,7 @@
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
 			<div id="akg" class="portfolio-section z3">		
-				<div id="section-container">
+				<div class="section-container">
 				<!-- <div class="shadow-test"></div>	 -->
 					<div id="akg-title" class="touch-hidden title row m0 medium-theme bg-none">
 						<div class="row m0 flex w100">
@@ -722,13 +722,13 @@
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
+						<div class="auto-props col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
 							<iframe 
-							id="xr-iframe"
-							class=" lazy dark-theme" 								
+							id=""
+							class="xr-iframe lazy dark-theme"					
 							src=""
 							data-src="akg/xr/akgxr.html"																			
 							frameborder="0"
@@ -750,7 +750,7 @@
 			</div>	
 			<div id="section-space" class="landscape-hidden"></div>								
 			<div id="converse" class="portfolio-section">
-				<div id="section-container" class="">
+				<div class="section-container">
 					<div id="converse-title" class="title row m0 dark-theme"> <!-- ignore -->
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
@@ -1474,31 +1474,34 @@
 <!-- 						<div class="col-lg-12 loader c-all textoverlay">
 							<img src="" data-src="Converse/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
 						</div> -->
-						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start ignore">
+<!-- 						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start ignore">
 						 <h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
-						</div>						
-						<div class="col-lg-12 loader c-all invisible fade-in" style="height: 25vh;">
+						</div> -->						
+<!-- 						<div  class="col-lg-6 col-md-6 loader invisible fade-in">
 							<iframe 
-							id="xr-iframe"
-							class=" lazy dark-theme" 								
+							id=""
+							class="xr-iframe lazy dark-theme" 								
 							src=""
 							data-src="Converse/xr/conversexr.html"																			
 							frameborder="0"
 							scrolling="no"
 							>
+							</iframe>							
+						</div> -->
+						
+						<div class="auto-props col-lg-12 col-md-12 loader c-all invisible fade-in" style="padding:0;">  <!-- style="height: 25vh;" -->
+							<iframe 
+							id=""
+							class="xr-iframe lazy dark-theme krabba" 								
+							src=""
+							data-src="Converse/xr/conversexr.html"																			
+							frameborder="0"
+							scrolling="no"							
+							>
 							</iframe>
-<script>
-$(document).ready(function() {
-    $("#xr-iframe").on('load', function() {
-        alert('loaded');
-		  var test = (this).height;
-		  alert(test);
-		  //var ratio = $img.height() / $img.width();
-    });
-});
-
-</script>							
+							
 						</div>
+						
 					</div>
 				</div>				
 			</div>
@@ -1512,7 +1515,7 @@ $(document).ready(function() {
 			</div>				
 			<div id="section-space" class="landscape-hidden"></div>					
 			<div id="poc" class="portfolio-section z3">
-				<div id="section-container">				
+				<div class="section-container">				
 					<div id="poc-title" class="title row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1641,13 +1644,13 @@ $(document).ready(function() {
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
+						<div class="auto-props col-lg-6 loader c-all invisible fade-in">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
 							<iframe 
-							id="xr-iframe"
-							class=" lazy dark-theme" 								
+							id=""
+							class="xr-iframe lazy dark-theme" 								
 							src=""
 							data-src="poc/xr/pocxr.html"																			
 							frameborder="0"
@@ -1660,7 +1663,7 @@ $(document).ready(function() {
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
 			<div id="spotify" class="portfolio-section light-theme bg-none" style="height:100vh;">
-				<div id="section-container" class="" style="height:100vh;">				
+				<div class="section-container" style="height:100vh;">				
 					<div id="spotify-title" class="title on-top row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1728,7 +1731,7 @@ $(document).ready(function() {
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>					
 			<div id="bagheera" class="portfolio-section z3">
-				<div id="section-container">			
+				<div class="section-container">			
 					<div id="bagheera-title" class="title x-theme bg-none row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2123,7 +2126,7 @@ $(document).ready(function() {
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="haglofs" class="portfolio-section">
-				<div id="section-container" class="">				
+				<div class="section-container">				
 					<div id="mixed-title" class="title x-theme row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2435,7 +2438,7 @@ $(document).ready(function() {
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="specialized" class="portfolio-section">	
-				<div id="section-container" class="invisible fade-in">				
+				<div id="" class="section-container invisible fade-in">				
 					<div id="specialized-title" class="title row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-md-8 col-xs-8 c-all justify-content-start">
@@ -2732,8 +2735,8 @@ $(document).ready(function() {
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
 							<iframe 
-							id="xr-iframe"
-							class=" lazy dark-theme" 								
+							id=""
+							class="xr-iframe lazy dark-theme" 								
 							src=""
 							data-src="Specialized/xr/specializedxr.html"																			
 							frameborder="0"
@@ -2745,7 +2748,7 @@ $(document).ready(function() {
 				</div>				
 			</div>
 			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;">
-				<div id="section-container" class="invisible fade-in">
+				<div class="section-container" class="invisible fade-in">
 					<div id="belmar-title" class="title row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 c-all justify-content-start">
@@ -2830,7 +2833,7 @@ $(document).ready(function() {
 				<a href="#" class="c-absolute md-up-h more-btn-text btn btn-outline">Show More</a>
 			</div>	
 			<div id="designprocess-slider" class="portfolio-section snap col-lg-12 vh100">  <!-- hide-scroll -->
-				<div id="section-container" style="height:100% !important;">	
+				<div class="section-container" style="height:100% !important;">	
 					<div id="design-process-title" class="title row m0 x-theme">
 						<div class="col-12 flex">
 							<div class="col-lg-6 c-all justify-content-start">
@@ -3675,8 +3678,8 @@ $(document).ready(function() {
 						<div class="middle col-lg-8 c-100">				
 							<div class="c-100 w100">
 								<iframe 
-								id="xr-iframe"
-								class="akg lazy invisible fade-in" 								
+								id=""
+								class="xr-iframe akg lazy invisible fade-in" 								
 								src=""
 								data-src="akg/xr/akgxr.html"																			
 								frameborder="0"
@@ -4095,7 +4098,7 @@ $(document).ready(function() {
 				</div>		
 			</div>
 			<div id="poc-model-popup" class="webgl loader popup mfp-hide medium-theme">
-				<div id="section-container" class="c-100 iframe-container">
+				<div id="" class="section-container c-100 iframe-container">
 					<div class="config-orientation-height">
 						<div class="model-controls">
 							<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
@@ -4222,7 +4225,7 @@ $(document).ready(function() {
 				</div>			
 			</div>				
 			<div id="spotify-model-popup" class="webgl popup mfp-hide light-theme">
-				<div id="section-container" class="c-100">
+				<div id="" class="section-container c-100">
 					<div class="config-orientation-height iframe-container">
 						<div class="model-controls">
 							<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
@@ -5405,7 +5408,45 @@ $(document).ready(function() {
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
+					
+		<!-- xr auto-props -->
+		<script>
+							 
+		$("iframe.xr-iframe").on('load', function() {
 
+			//get proportions of index div
+			var height = $(this).closest('.auto-props').height();
+			var width = $(this).closest('.auto-props').width();						
+			var this_src = $(this).attr('src');
+			var babb = $(this);
+																							
+			//get proportions of iframe #backbuffer
+			var iframe = this;
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var xr_image = innerDoc.getElementById('backbuffer');
+			
+			xr_image.onload = function(){
+				var natural_width = this.naturalWidth;
+				var natural_height = this.naturalHeight;
+				var aspect_ratio = natural_width / natural_height;
+				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
+				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
+				
+				if (aspect_ratio > 1) {
+				var set_height = width / aspect_ratio;
+				console.log('Set height to: ', set_height);
+				babb.closest('.auto-props').css("height",set_height+"px");						
+				}
+
+				else if (aspect_ratio < 1) {
+				var set_width = height / aspect_ratio;
+				console.log('Set width to: ', set_width);
+				babb.closest('.auto-props').css("width",set_width+"px");						
+				}
+			}
+		});
+
+		</script>
 		<!-- lock body on nav open -->	
 <!-- 		<script>
 		$(document).ready(function(){
@@ -5682,7 +5723,7 @@ $(document).ready(function() {
 		
 		// add class'snap' if not touch
 		//if(!is_touch_device()) {				
-		$('.portfolio-section').not('.ignore').addClass('snap');
+		$('.section-container').not('.ignore').addClass('snap');
 		//}			
 		
 		$( '.snap' ).scrollSnap({
@@ -6134,8 +6175,8 @@ $('.fullscreen').on('click', function () {
 			var this_container = $(this).closest('.popup');
 			}
 			else {
-			var el = $(this).closest('#section-container').find('.owl-item.active').find('.item');
-			var this_container = $(this).closest('#section-container');
+			var el = $(this).closest('.section-container').find('.owl-item.active').find('.item');
+			var this_container = $(this).closest('.section-container');
 			}	
 			var tool_tip = $(this).data("tooltip");
 			

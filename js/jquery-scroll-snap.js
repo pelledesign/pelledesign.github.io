@@ -36,6 +36,7 @@ $('body').on('touchstart',function(){
         return;
 
       var windowHeight = $( window ).height();
+      var windowWidth = $( window ).width();
       direction = typeof direction !== 'undefined' ? direction : 'up';
 
       var scrollTo = false;
@@ -57,8 +58,8 @@ $('body').on('touchstart',function(){
 			var this_height = $(this).height(); // get height of this element
 			var centeringSpace = (windowHeight - this_height) / 2; // get the space needed to center it on screen
 			var scrollToMiddle = $( this ).offset().top - centeringSpace;
-			
-			if(is_touch_device()) {
+			//alert(windowWidth);
+			if((is_touch_device()) && (windowHeight > windowWidth)) {
 			scrollTo = $( this ).offset().top; //position it will scroll to - top of element	
 			}
 			else {

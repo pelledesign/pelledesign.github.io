@@ -85,7 +85,7 @@ main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(eve
 	let idx = event.item.index;
 	let element_item = element.find('.owl-item').eq(idx).find('.item');
 	let this_view_btn = $(this).closest('#slider-container').find('.view-btn');
-	let this_title = $(this).closest('#section-container').find('.title');	
+	let this_title = $(this).closest('.section-container').find('.title');	
 	
 	if (element_item.hasClass('light-theme')) {
 	  this_view_btn.add(this_title).removeClass('dark-theme').addClass('light-theme');
@@ -95,7 +95,7 @@ main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(eve
 	}
 	else if (element_item.hasClass('medium-theme')) {
 		this_view_btn.add(this_title).removeClass('light-theme dark-theme').addClass('medium-theme');
-		//$(this).closest('#section-container').find('.title').not('.ignore').removeClass('light-theme dark-theme').addClass('medium-theme');
+		//$(this).closest('.section-container').find('.title').not('.ignore').removeClass('light-theme dark-theme').addClass('medium-theme');
 	}
 	else {
 	  //alert('error');

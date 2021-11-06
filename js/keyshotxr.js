@@ -1,5 +1,7 @@
 // to revert to original keyshotxr file just export another one
 
+// (nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots,isIBooksWidget)
+
 var p = !0,
     t = null,
     u = !1;
@@ -23,7 +25,9 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
             navigator.appVersion.indexOf("MSIE") && (a = p);
         return a
     }
-																																																						/* go fullscreen */
+
+/* ---------------------------------------------------------------------------		go fullscreen			----------------------------------------------------------------------------------- */
+																																																				
     function Ja() {
         var a = document.getElementById(X),
             d = a.requestFullScreen || a.webkitRequestFullScreen || a.mozRequestFullScreen || a.msRequestFullScreen;
@@ -482,6 +486,9 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         m.bottom = e;
         N()
     };
+
+/* ---------------------------------------------------------------------------		calculate turntable height			----------------------------------------------------------------------------------- */		  
+
     this.Ua = function(b, d) {
         a.l || (b = window.innerWidth, d = window.innerHeight);
         var c = b - m.left - m.right,
@@ -497,8 +504,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         n.style.width = b + "px";
         a.l && window.innerHeight < B.height && (d = window.innerHeight);
         n.style.height = d + "px";
-        //a.h.style.height =
-            //d + "px";		removed calculations of top div height
+        //a.h.style.height = d + "px";		//removed calculations of div_container height
         n.Ba && n.Ba(b, d);
         ba && (a.N.style.height = window.innerHeight + "px", a.N.style.width = window.innerWidth + "px")
     };
@@ -525,7 +531,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         };
 		  
 /* ---------------------------------------------------------------------------		Loader		----------------------------------------------------------------------------------- */			  
-		  
+/* -------------------		Spinner		-------------------- */			  		  
     this.ua = function() {
         a.p = document.createElement("div");
         a.U(a.p);
@@ -636,6 +642,8 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         }, k(n, "pointerdown", b.bind(t,
             ka)), k(n, "pointermove", b.bind(t, ia)), k(n, "pointerup", b.bind(t, ga)), k(n, "pointercancel", b.bind(t, ea))))
     };
+	 
+/* ---------------------------------------------------------------------------		div_container	/ image / #backbuffer		----------------------------------------------------------------------------------- */		 	 
     if (document.createElement("canvas").getContext) {
         var a = this,
             v = a.h = t,
@@ -827,6 +835,9 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         w = ["Webkit", "Moz", "0", "ms", "Ms"];
         for (D = 0; D < w.length; D++) "undefined" != typeof document.documentElement.style[w[D] + "Transform"] && (z = "-" + w[D].toLowerCase() + "-", M = w[D] + "Transform");
         var b = "";
+		  
+/* ---------------------------------------------------------------------------		div_container			----------------------------------------------------------------------------------- */			  
+		  
         a.h = document.getElementById(X);
         //b = "width: " + G + "px;"; 		G = viewPortWidth in xr.html
 		  //b += "height: " + Y + "px;";		Y = viewPortHeight in xr.html
@@ -897,6 +908,9 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         apa.setAttribute("style", b);
         v.appendChild(apa);	
 		   */
+			
+/* ---------------------------------------------------------------------------		image / #backbuffer			----------------------------------------------------------------------------------- */				
+			
         q = document.createElement("img");
         q.setAttribute("id", "backbuffer");
         b = "top:  0px;";
@@ -1034,4 +1048,14 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
             N()
         }, 15)
     } else alert("Your browser must support HTML5 to show KeyShotXR")
+	
+
+
+ var element = document.getElementById('backbuffer');
+var positionInfo = element.getBoundingClientRect();
+var height = positionInfo.naturalHeight;
+var width = positionInfo.width;
+//console.log('xr:', height, width);
+
+//salert(width);	 
 };

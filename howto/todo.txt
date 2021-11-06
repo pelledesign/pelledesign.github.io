@@ -8,7 +8,6 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
-if landscape bady scroll to ceneter
 pop-themes
 p-logo-new fixed?
 if last grid item make col-12
@@ -70,3 +69,9 @@ function changeLog (
 commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
 added on-click trigger to about_slider_mobile in main.js
 )
+
+2.36
+
+1919/800=2,39875	
+
+calc(765px * 0.4168);
