@@ -8,6 +8,8 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
+om popup innehåll är landscape by nature then open popup in forced landscape view
+on orientation change fix
 pop-themes
 p-logo-new fixed?
 if last grid item make col-12

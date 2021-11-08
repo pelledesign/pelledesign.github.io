@@ -273,7 +273,7 @@ $('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e)
 
 hero_slider.owlCarousel({
 loop:true,
-autoplay: true,
+/* autoplay: true, */
 /* autoplayHoverPause: true, */
 lazyLoad : true,		
 lazyLoadEager: 1,
@@ -289,13 +289,10 @@ items: 1,
 dragTouch: false,
 mouseDrag: false,
 touchDrag: false,
-//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
 responsive:{
   0:{
 	autoHeight: true,
-	//loop:false,
 	items:1,
-	//navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
 	nav:true,
 	
   },
@@ -304,7 +301,6 @@ responsive:{
 	navText : ["<span class='ion-android-arrow-back'></span>","<span class='ion-android-arrow-forward'></span>"],
 	nav:true,
 	autoHeight: true,
-	dots:true,	
   },
   992:{
 	items:1,

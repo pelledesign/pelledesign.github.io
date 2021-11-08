@@ -18176,7 +18176,8 @@ padding:6px;
 }
 
 #hero-slider .p-logo-new {
-max-height: 100px;	
+height: 100px;	
+width: 100px;	
 }
 
 /* #research img {
