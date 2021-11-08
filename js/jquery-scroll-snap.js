@@ -59,10 +59,10 @@ $('body').on('touchstart',function(){
 			var centeringSpace = (windowHeight - this_height) / 2; // get the space needed to center it on screen
 			var scrollToMiddle = $( this ).offset().top - centeringSpace;
 			//alert(windowWidth);
-			if((is_touch_device()) && (windowHeight > windowWidth)) {
+			if((is_touch_device()) && (windowHeight > windowWidth) && (windowWidth < 576)) { //if touch device & orientation is portrait and screen width is less xs
 			scrollTo = $( this ).offset().top; //position it will scroll to - top of element	
 			}
-			else {
+			else if (windowWidth > windowHeight) {
 			scrollTo = scrollToMiddle; //position it will scroll to - center of element	
 			}
 			if(!is_touch_device()) {		

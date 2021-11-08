@@ -8,11 +8,13 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
+loc kphone orientation?
+test text chage to magnifying glass?
 om popup innehåll är landscape by nature then open popup in forced landscape view
 on orientation change fix
 pop-themes
 p-logo-new fixed?
-if last grid item make col-12
+
 snyggare loads / animations - slide w/ several owl-lazy's? 
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
 process
@@ -70,6 +72,8 @@ function changeLog (
 211028
 commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
 added on-click trigger to about_slider_mobile in main.js
+
+/* removed class .zoom-container {height:100%;width:100%;} to create dynamic equal row heights */
 )
 
 2.36
