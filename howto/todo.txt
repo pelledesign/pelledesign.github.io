@@ -9,6 +9,7 @@ hide header on swipedown or prevent swipe
 
 function both (
 loc kphone orientation?
+titles
 test text chage to magnifying glass?
 om popup innehåll är landscape by nature then open popup in forced landscape view
 on orientation change fix
@@ -56,12 +57,9 @@ watch .git
 
 function pageSpeed (
 
-march: with about: 35, 39
-without: 58
-
 78
 52-57 with about slider
-speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43
+speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43, 41 nov
 lighthouse: desktop: 72, 79	
 lighthouse: mobile:	39, 
 )

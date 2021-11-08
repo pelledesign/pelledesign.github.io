@@ -13785,6 +13785,13 @@ opacity:0 !important;
 transition: .3s ease;
 }
 
+@media (max-width: 576px) {
+.opacity-0-xs-down {
+opacity:0 !important;	
+transition: .3s ease;
+}
+}
+
 .opacity-1 {
 opacity:1;	
 }
@@ -14047,6 +14054,7 @@ fill:var(--contrast);
 @media (max-width: 575px) {
 .light-theme-xs a,
 .light-theme-xs h3,
+.light-theme-xs.h3,
 .light-theme-xs h6,
 .light-theme-xs h2,
 .light-theme-xs p,
@@ -14213,6 +14221,7 @@ background-position: 50% 50%;
 .item.dark-theme svg,
 .dark-theme a,
 .dark-theme h3,
+.dark-theme.h3,
 .dark-theme h6,
 .dark-theme h2,
 .dark-theme p,
@@ -18001,6 +18010,11 @@ height:75vh;
 }
 }
 
+@media (max-height: 575px) and (orientation:portrait) {
+#spotify .section-container, #designprocess-slider .section-container, #designprocess-slider {
+height:100vh;
+}
+}
 
 .more-btn.desktop-hidden {
 /* font-size: 3rem;  */
