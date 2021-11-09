@@ -405,7 +405,6 @@
 			</div>	
 		</div>	
 		<div id="section-space" class="landscape-hidden"></div>	
-<!-- <div class="shadow-test"></div>		 -->
 
 		<!-- start latest work --> 
 		<!-- <div class="dark-theme bg-none"><h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3></div>		 -->
@@ -724,12 +723,12 @@
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="auto-props col-lg-6 loader c-all invisible fade-in" style="height:65vh !important">
+<!-- 						<div class="auto-props col-lg-6 col-xs-12 loader c-all invisible fade-in" style="">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
 							<iframe 
-							id=""
+							id="krabba"
 							class="xr-iframe lazy dark-theme"					
 							src=""
 							data-src="akg/xr/akgxr.html"																			
@@ -737,6 +736,28 @@
 							scrolling="no"
 							>
 							</iframe>												
+						</div> -->
+						<div class="col-lg-6 col-md-6 col-xs-12" style="margin-right: auto; margin-left: auto;">
+						<div class="auto-padding loader c-all invisible fade-in" style="height: 0; overflow: hidden; position: relative;">
+<!-- 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
+								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
+							</div>	 -->					
+							<iframe 
+							id="krabba"
+							class="xr-iframe lazy dark-theme"		
+							style="  
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;"							
+							src=""
+							data-src="akg/xr/akgxr.html"																			
+							frameborder="0"
+							scrolling="no"
+							>
+							</iframe>												
+						</div>
 						</div>
 							<div class="item keyshotconfig dark-theme vh65 w100">				
 								<iframe 							
@@ -2211,7 +2232,7 @@
 							<div class="auto-props col-lg-12 col-md-12 loader c-all invisible fade-in" style="padding:0;">  <!-- style="height: 25vh;" -->
 								<iframe 
 								id=""
-								class="xr-iframe lazy dark-theme krabba" 								
+								class="xr-iframe lazy dark-theme" 								
 								src=""
 								data-src="Bagheera/xr/bagheeraxr.html"																			
 								frameborder="0"
@@ -2413,7 +2434,7 @@
 						<div class="auto-props col-lg-12 col-md-12 loader c-all invisible fade-in" style="padding:0;">  <!-- style="height: 25vh;" -->
 							<iframe 
 							id=""
-							class="xr-iframe lazy dark-theme krabba" 								
+							class="xr-iframe lazy dark-theme" 								
 							src=""
 							data-src="haglofs/xr/haglofs.html"																			
 							frameborder="0"
@@ -2494,7 +2515,7 @@
 							<div class="auto-props col-lg-12 col-md-12 loader c-all invisible fade-in" style="padding:0;">  <!-- style="height: 25vh;" -->
 								<iframe 
 								id=""
-								class="xr-iframe lazy dark-theme krabba" 								
+								class="xr-iframe lazy dark-theme" 								
 								src=""
 								data-src="alcon/xr/alconxr.html"																			
 								frameborder="0"
@@ -3680,7 +3701,6 @@
 		</div>
 		<div id="page" class="c-all desktop-hidden">
 			<a href="process.html"><span class="btn btn-outline">page</span>	</a>
-			<!-- <span class="more-btn desktop-hidden"></span> -->
 		</div>
 		<div id="section-space" class="landscape-hidden"></div>		
 		<!-- <div class="separator touch-hidden"></div> -->
@@ -5541,11 +5561,40 @@
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
-<script>					
+<!-- <script>					
 alert('no auto props');
-</script>					
-		<!-- xr auto-props -->
-<!-- 		<script>
+</script>			 -->		
+
+				<script>
+							 
+		$("iframe.xr-iframe").on('load', function() {
+
+			//get proportions of index div					
+			var this_src = $(this).attr('src');
+			var this_iframe = $(this);
+																							
+			//get proportions of iframe #backbuffer
+			var iframe = this;
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var xr_image = innerDoc.getElementById('backbuffer');
+			
+			xr_image.onload = function(){
+				var natural_width = this.naturalWidth;
+				var natural_height = this.naturalHeight;
+				var aspect_ratio = natural_width / natural_height;
+				console.log('Source:', this_src);
+				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
+				
+
+				var set_padding = aspect_ratio * 100;
+				console.log('Set top-padding to: ', set_padding, '%');
+				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");						
+			}
+		});
+
+		</script>
+		
+<!-- 				<script>
 							 
 		$("iframe.xr-iframe").on('load', function() {
 console.log('dd');
@@ -5567,52 +5616,54 @@ console.log('dd');
 				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
 				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
 				
-				if (aspect_ratio > 1) {
+
 				var set_height = width / aspect_ratio;
 				console.log('Set height to: ', set_height);
 				babb.closest('.auto-props').css("height",set_height+"px");						
-				}
 
-				else if (aspect_ratio < 1) {
-				var set_width = height / aspect_ratio;
-				console.log('Set width to: ', set_width);
-				babb.closest('.auto-props').css("width",set_width+"px");						
-				}
+
+				//if (aspect_ratio > 1) {
+				//var set_height = width / aspect_ratio;
+				//console.log('Set height to: ', set_height);
+				//babb.closest('.auto-props').css("height",set_height+"px");						
+				//}
+
+				//else if (aspect_ratio < 1) {
+				//var set_height = width / aspect_ratio;
+				//console.log('Set height to: ', set_height);
+				//babb.closest('.auto-props').css("height",set_height+"px");					
+				//}
 			}
 		});
 
-		$("iframe.xr-iframe").on('orientationchange', function() {
+		$(window).on('orientationchange', function() {
 
+			console.log('orientation was changed');
+			var this_iframe = $(".krabba");
+			
 			//get proportions of index div
-			var height = $(this).closest('.auto-props').height();
-			var width = $(this).closest('.auto-props').width();						
-			var this_src = $(this).attr('src');
-			var babb = $(this);
+			var height = this_iframe.closest('.auto-props').height();
+			var width = this_iframe.closest('.auto-props').width();						
+			var this_src = this_iframe.attr('src');
+			//var babb = this_iframe;
 																							
 			//get proportions of iframe #backbuffer
-			var iframe = this;
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var iframe = document.getElementById('krabba');
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;				
 			var xr_image = innerDoc.getElementById('backbuffer');
 			
-			xr_image.onload = function(){
-				var natural_width = this.naturalWidth;
-				var natural_height = this.naturalHeight;
+console.log('no break');			
+				var natural_width = xr_image.naturalWidth;
+				var natural_height = xr_image.naturalHeight;
 				var aspect_ratio = natural_width / natural_height;
 				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
 				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
 				
-				if (aspect_ratio > 1) {
+
 				var set_height = width / aspect_ratio;
 				console.log('Set height to: ', set_height);
-				babb.closest('.auto-props').css("height",set_height+"px");						
-				}
+				this_iframe.closest('.auto-props').css("height",set_height+"px");						
 
-				else if (aspect_ratio < 1) {
-				var set_width = height / aspect_ratio;
-				console.log('Set width to: ', set_width);
-				babb.closest('.auto-props').css("width",set_width+"px");						
-				}
-			}
 		});
 
 		</script> -->

@@ -228,13 +228,13 @@ $('#poc-process, #design-process').on('changed.owl.carousel', function(event) {
 /* $(window).on('orientationchange', function(){	
 
 function refresh_this() {   					
-all_sliders.trigger('refresh.owl.carousel');		
+bagheera_more.trigger('refresh.owl.carousel');		
 poc_more.trigger('refresh.owl.carousel');		
 
  }
  setTimeout(refresh_this, 100)
-});
- */
+}); */
+
 
 /* disable dragging for specific slides */
 $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
@@ -836,8 +836,8 @@ main_sliders.on('changed.owl.carousel', function(event) {
 	/* get current slide index */
 	let element = jQuery(event.target);		 
 	var thisSlide = event.item.index;
-	console.log('current slide is: ' + thisSlide);
-	console.log('last slide is: ' + lastSlide);
+	//console.log('current slide is: ' + thisSlide);
+	//console.log('last slide is: ' + lastSlide);
 
 	/* if last visited slide has class unload and  lazy loading is finished - unload it by moving src to data-src + add class .unloaded  */
 	var oldslide = element.find('.owl-item').eq(lastSlide).find('.unload');
