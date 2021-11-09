@@ -228,8 +228,8 @@ $('#poc-process, #design-process').on('changed.owl.carousel', function(event) {
 $(window).on('orientationchange', function(){	
 
 function refresh_this() {   					
-bagheera_more.trigger('refresh.owl.carousel');		
-poc_more.trigger('refresh.owl.carousel');		
+all_sliders.trigger('refresh.owl.carousel');		
+//poc_more.trigger('refresh.owl.carousel');		
 
  }
  setTimeout(refresh_this, 100)
