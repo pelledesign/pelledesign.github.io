@@ -14157,8 +14157,8 @@ border-color: var(--contrast) !important;
 .medium-theme .ion-information-circled:before,
 .medium-theme .ion-refresh:before,
 .medium-theme .ion-android-color-palette:before,
-.medium-theme .btn-outline
-.medium-theme .zoom-icon {
+.medium-theme .btn-outline,
+.medium-theme p.img-text.ion-ios-search-strong {
 color: var(--contrast);
 fill:var(--contrast);
 }
@@ -17955,7 +17955,8 @@ justify-content:left;
 
 .portfolio-section {
 /* height:65vh; */
-position:relative;		
+position:relative;
+z-index:3;			
 }
 
 /* .portfolio-section :nth-of-type(odd){
@@ -18245,7 +18246,8 @@ padding-left:0;
 position: absolute;
 top: 50%;
 left: 50%;
-transform: translate(-50%, -50%);	
+transform: translate(-50%, -50%);
+/* display:none;	 */
 }
 
 @media (min-width: 768px) {

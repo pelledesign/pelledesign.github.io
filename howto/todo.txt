@@ -8,14 +8,15 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
-menu btns touch
-loc kphone orientation?
-titles
-test text chage to magnifying glass?
+
+lock phone orientation? on popup open?
+add 3d models, ks configs,  etc
+test text change to magnifying glass?
 om popup innehåll är landscape by nature then open popup in forced landscape view
 on orientation change fix
 pop-themes
 p-logo-new fixed?
+evaluate title styles
 
 snyggare loads / animations - slide w/ several owl-lazy's? 
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
