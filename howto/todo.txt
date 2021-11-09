@@ -8,6 +8,7 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
+menu btns touch
 loc kphone orientation?
 titles
 test text chage to magnifying glass?

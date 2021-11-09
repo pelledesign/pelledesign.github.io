@@ -18040,12 +18040,13 @@ bottom:0;
 padding-left:9px;	
 padding-top: 5px;
 padding-right:9px;
+z-index: 2;	
 }
 
 .title.on-top {
 position:absolute;
 width: 100%;
-z-index: 2;	
+
 /* background-color: #ffffff59 !important; */
 }
 
@@ -18444,9 +18445,6 @@ margin-left: auto;
   grid-column: 1 / span 4;
 }
 
-.col {
-  background: red;
-}
 
 
 .list {
