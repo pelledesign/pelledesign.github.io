@@ -5546,6 +5546,40 @@
 		<script>
 							 
 		$("iframe.xr-iframe").on('load', function() {
+console.log('dd');
+			//get proportions of index div
+			var height = $(this).closest('.auto-props').height();
+			var width = $(this).closest('.auto-props').width();						
+			var this_src = $(this).attr('src');
+			var babb = $(this);
+																							
+			//get proportions of iframe #backbuffer
+			var iframe = this;
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var xr_image = innerDoc.getElementById('backbuffer');
+			
+			xr_image.onload = function(){
+				var natural_width = this.naturalWidth;
+				var natural_height = this.naturalHeight;
+				var aspect_ratio = natural_width / natural_height;
+				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
+				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
+				
+				if (aspect_ratio > 1) {
+				var set_height = width / aspect_ratio;
+				console.log('Set height to: ', set_height);
+				babb.closest('.auto-props').css("height",set_height+"px");						
+				}
+
+				else if (aspect_ratio < 1) {
+				var set_width = height / aspect_ratio;
+				console.log('Set width to: ', set_width);
+				babb.closest('.auto-props').css("width",set_width+"px");						
+				}
+			}
+		});
+
+		$("iframe.xr-iframe").on('orientationchange', function() {
 
 			//get proportions of index div
 			var height = $(this).closest('.auto-props').height();
