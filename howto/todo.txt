@@ -9,10 +9,8 @@ hide header on swipedown or prevent swipe
 
 function both (
 
-lock phone orientation? on popup open?
 add 3d models, ks configs,  etc
-test text change to magnifying glass?
-om popup innehåll är landscape by nature then open popup in forced landscape view
+lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view
 on orientation change fix
 pop-themes
 p-logo-new fixed?
