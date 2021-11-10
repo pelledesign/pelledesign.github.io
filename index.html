@@ -730,8 +730,11 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>
+<script>
+alert('no loader');						
+</script>						
 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape"> <!--  -->
-							<div class="auto-padding loader invisible fade-in">			
+							<div class="auto-padding  invisible fade-in">	 <!-- loader -->		
 								<iframe 
 								class="xr-iframe lazy dark-theme"							
 								src=""
@@ -5550,7 +5553,7 @@ alert('no auto props');
 
 				<script>
 							 
-		$("iframe.xr-iframe").one('load', function() {
+		$("iframe.xr-iframe").on('load', function() {
 
 			//get proportions of index div					
 			var this_src = $(this).attr('src');
