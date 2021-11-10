@@ -794,9 +794,9 @@
 						</div>							
 					</div>	 -->									
 				</div>
-<script>
+<!-- <script>
 alert('calculate screen before');						
-</script>						
+</script>	 -->					
 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!--  -->
 							<div class="auto-padding  invisible fade-in">	 <!-- loader -->		
 								<iframe 
@@ -5594,7 +5594,7 @@ alert('no auto props');
 				console.log('Source:', this_src);
 				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
 				
-				var set_padding = aspect_ratio_reverse * 100;
+				var set_padding = aspect_ratio * 100;
 				var maxWidth = smallest * aspect_ratio;
 				console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
 				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		
