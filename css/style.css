@@ -18431,6 +18431,11 @@ margin-right: auto;
 max-height:100vh;	
 }
 
+.auto-padding-container {
+margin-right:auto;
+margin-left:auto;
+}
+
 .auto-padding {
 height: 0; overflow: hidden; position: relative;
 }
@@ -18470,4 +18475,12 @@ max-height: 100vh;
 }
 .list-content {
   width: 100%;
+}
+
+.xr-iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;	
 }
