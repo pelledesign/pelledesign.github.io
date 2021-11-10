@@ -795,7 +795,7 @@
 					</div>	 -->									
 				</div>
 <script>
-alert('outerHeight');						
+alert('calculate screen before');						
 </script>						
 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!--  -->
 							<div class="auto-padding  invisible fade-in">	 <!-- loader -->		
@@ -5575,6 +5575,16 @@ alert('no auto props');
 			var iframe = this;
 			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 			var xr_image = innerDoc.getElementById('backbuffer');
+			var smallest;
+			var windowHeight = $( window ).outerHeight();
+			var windowWidth = $( window ).outerWidth();
+				
+				if (windowHeight < windowWidth ) {
+				var smallest = windowHeight;
+				}
+				else {
+				var smallest = windowWidth;
+				}
 			
 			xr_image.onload = function(){
 				var natural_width = this.naturalWidth;
@@ -5584,22 +5594,12 @@ alert('no auto props');
 				console.log('Source:', this_src);
 				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
 				
-
 				var set_padding = aspect_ratio_reverse * 100;
-				var windowHeight = $( window ).outerHeight();
-				var windowWidth = $( window ).outerWidth();
-				
-				if (windowHeight < windowWidth ) {
-				var smallest = windowHeight;
-				}
-				else {
-				var smallest = windowWidth;
-				}
 				var maxWidth = smallest * aspect_ratio;
 				console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
 				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		
 				//this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
-//calc(100vh * 0.94);				
+				//calc(100vh * 0.94);				
 			}
 		});
 
