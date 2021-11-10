@@ -730,22 +730,8 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>
-<script>
-alert('no loader + conv');						
-</script>						
-						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape"> <!--  -->
-							<div class="auto-padding  invisible fade-in">	 <!-- loader -->		
-								<iframe 
-								class="xr-iframe lazy dark-theme"							
-								src=""
-								data-src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>												
-							</div>
-						</div>
-							<div class="item keyshotconfig dark-theme vh65 w100">				
+
+<!-- 							<div class="item keyshotconfig dark-theme vh65 w100">				
 								<iframe 							
 								class="akg-webconfig-process lazy dark-theme"
 								data-src="akg/web/keyshot-configurator.html"													
@@ -754,7 +740,7 @@ alert('no loader + conv');
 								>			
 								</iframe>
 								<div class="xs-down-h col-lg-6 col-md-8 akg-webconfig-overlay"></div>							
-							</div>						
+							</div> -->						
 <!-- 						<div class="iframe-container relative c-all textoverlay ignore vh65">
 							<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
 							<div class="model-controls">
@@ -807,7 +793,22 @@ alert('no loader + conv');
 							</div>
 						</div>							
 					</div>	 -->									
-				</div>				
+				</div>
+<script>
+alert('div');						
+</script>						
+						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!--  -->
+							<div class="auto-padding  invisible fade-in">	 <!-- loader -->		
+								<iframe 
+								class="xr-iframe lazy dark-theme"							
+								src=""
+								data-src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>												
+							</div>
+						</div>				
 			</div>			
 			<div id="section-space" class="landscape-hidden"></div>
 			<!-- <div class="dark-theme no-bg" style="padding: 9px;"> -->
@@ -5597,7 +5598,7 @@ alert('no auto props');
 				var maxWidth = smallest * aspect_ratio;
 				console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
 				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		
-				this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
+				//this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
 //calc(100vh * 0.94);				
 			}
 		});
