@@ -5560,7 +5560,7 @@ alert('calculate screen before');
 		<script src="js/isInViewport.js"></script>
 
 <script>					
-alert('vw');
+alert('body overflow-x hidden');
 </script>					
 
 				<script>
@@ -5597,7 +5597,7 @@ alert('vw');
 				var set_padding = aspect_ratio_reverse * 100; //dont change
 				var maxWidth = smallest * aspect_ratio;
 				console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
-				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"vw");				//padding-top 50% is same as 50% width of element		
+				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		vw??
 				//this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
 				//calc(100vh * 0.94);	col-xs-6-landscape width:284, col-xs-12 width in portrait:320 -> this is why the same top-padding (based on the widths) is different. it works now on dev tools but not irl??		
 				//th etop padding should be the same in portrait and landscape i.e 98% as it is calculated based on the width of the element, so when it expands it should be dynamic ( test dragging resizing the window in responsive mode
