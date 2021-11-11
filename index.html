@@ -5502,7 +5502,7 @@ alert('old');
 		<script src="js/isInViewport.js"></script>
 
 <script>					
-alert('added subbed 1px');
+alert(moved code');
 </script>					
 
 				<!-- iframe auto-padding -->
@@ -5519,7 +5519,10 @@ alert('added subbed 1px');
 					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 					var xr_image = innerDoc.getElementById('backbuffer');
 					var smallest;
-					var windowHeight = $( window ).outerHeight();
+
+					
+					xr_image.onload = function(){
+										var windowHeight = $( window ).outerHeight();
 					var windowWidth = $( window ).outerWidth();
 						
 					if (windowHeight < windowWidth ) {
@@ -5528,8 +5531,6 @@ alert('added subbed 1px');
 					else {
 					var smallest = windowWidth;
 					}
-					
-					xr_image.onload = function(){
 						var natural_width = this.naturalWidth;
 						var natural_height = this.naturalHeight;
 						var aspect_ratio_reverse = natural_height / natural_width;
