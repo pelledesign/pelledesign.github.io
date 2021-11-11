@@ -18441,8 +18441,19 @@ margin-left:auto;
 height: 0; overflow: hidden; position: relative;
 }
 
-.auto-padding iframe{
+/* .auto-padding iframe{
 max-height: 100vh;
+} */
+
+.xr-iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;	
+/* from instructions */
+width: 1px; 
+min-width: 100%;
 }
 
 .equal-rows {
@@ -18478,10 +18489,3 @@ max-height: 100vh;
   width: 100%;
 }
 
-.xr-iframe {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;	
-}

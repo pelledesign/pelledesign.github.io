@@ -719,7 +719,19 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape"> <!-- col-xs-6-landscape -->
+						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+							<div class="auto-padding invisible fade-in">		
+								<iframe 
+								class="xr-iframe lazy dark-theme"							
+								src=""
+								data-src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>												
+							</div>
+						</div>
+<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
 							<div style="max-width: 799px; max-height: 829px;">
 							  <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 103.755%; overflow: hidden;">
 								 <iframe 
@@ -731,10 +743,10 @@
 								 </iframe>
 							  </div>
 							</div>	
-						</div>
-<script>
+						</div> -->
+<!-- <script>
 alert('old');
-</script>
+</script> -->
 				
 					</div>								
 				</div>
@@ -5490,51 +5502,53 @@ alert('old');
 		<script src="js/isInViewport.js"></script>
 
 <script>					
-//alert('body overflow-x hidden');
+alert('sdded 50px');
 </script>					
 
-<!-- 				<script>
+				<!-- iframe auto-padding -->
+				<script>
 							 
-		$("iframe.xr-iframe").on('load', function() {
+				$("iframe.xr-iframe").on('load', function() {
 
-			//get proportions of index div					
-			var this_src = $(this).attr('src');
-			var this_iframe = $(this);
-																							
-			//get proportions of iframe #backbuffer
-			var iframe = this;
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-			var xr_image = innerDoc.getElementById('backbuffer');
-			var smallest;
-			var windowHeight = $( window ).outerHeight();
-			var windowWidth = $( window ).outerWidth();
-				
-				if (windowHeight < windowWidth ) {
-				var smallest = windowHeight;
-				}
-				else {
-				var smallest = windowWidth;
-				}
-			
-			xr_image.onload = function(){
-				var natural_width = this.naturalWidth;
-				var natural_height = this.naturalHeight;
-				var aspect_ratio = natural_width / natural_height;
-				var aspect_ratio_reverse = natural_height / natural_width;
-				console.log('Source:', this_src);
-				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
-				
-				var set_padding = aspect_ratio_reverse * 100; //dont change
-				var maxWidth = smallest * aspect_ratio;
-				console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
-				this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		vw??
-				//this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
-				//calc(100vh * 0.94);	col-xs-6-landscape width:284, col-xs-12 width in portrait:320 -> this is why the same top-padding (based on the widths) is different. it works now on dev tools but not irl??		
-				//th etop padding should be the same in portrait and landscape i.e 98% as it is calculated based on the width of the element, so when it expands it should be dynamic ( test dragging resizing the window in responsive mode
-			}
-		});
+					//get proportions of index div					
+					var this_src = $(this).attr('src');
+					var this_iframe = $(this);
+																									
+					//get proportions of iframe #backbuffer
+					var iframe = this;
+					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+					var xr_image = innerDoc.getElementById('backbuffer');
+					var smallest;
+					var windowHeight = $( window ).outerHeight();
+					var windowWidth = $( window ).outerWidth();
+						
+					if (windowHeight < windowWidth ) {
+					var smallest = windowHeight;
+					}
+					else {
+					var smallest = windowWidth;
+					}
+					
+					xr_image.onload = function(){
+						var natural_width = this.naturalWidth;
+						var natural_height = this.naturalHeight;
+						var aspect_ratio = natural_width / natural_height;
+						var aspect_ratio_reverse = natural_height / natural_width;
+						console.log('Source:', this_src);
+						console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
+						
+						var set_padding = aspect_ratio_reverse * 100; //dont change
+						var maxWidth = smallest * aspect_ratio;
+						console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
+						//this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		vw??
+						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=50px');				//padding-top 50% is same as 50% width of element		vw??
+						//this_iframe.closest('.auto-padding-container').css("max-width",maxWidth+"px");		
+						//calc(100vh * 0.94);	col-xs-6-landscape width:284, col-xs-12 width in portrait:320 -> this is why the same top-padding (based on the widths) is different. it works now on dev tools but not irl??		
+						//th etop padding should be the same in portrait and landscape i.e 98% as it is calculated based on the width of the element, so when it expands it should be dynamic ( test dragging resizing the window in responsive mode
+					}
+				});
 
-		</script> -->
+		</script>
 
 <!-- 		<script>
 		var this_src = $('#krabba').attr('src');
