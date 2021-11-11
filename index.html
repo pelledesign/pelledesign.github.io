@@ -5502,7 +5502,7 @@ alert('old');
 		<script src="js/isInViewport.js"></script>
 
 <script>					
-alert('added 50px');
+alert('added subbed 1px');
 </script>					
 
 				<!-- iframe auto-padding -->
@@ -5532,16 +5532,10 @@ alert('added 50px');
 					xr_image.onload = function(){
 						var natural_width = this.naturalWidth;
 						var natural_height = this.naturalHeight;
-						var aspect_ratio = natural_width / natural_height;
 						var aspect_ratio_reverse = natural_height / natural_width;
-						console.log('Source:', this_src);
-						console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
 						
 						var set_padding = aspect_ratio_reverse * 100; //dont change
-						var maxWidth = smallest * aspect_ratio;
-						console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
-						//this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		vw??
-						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=50px');				//padding-top 50% is same as 50% width of element		vw??
+						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 					}
 				});
 
