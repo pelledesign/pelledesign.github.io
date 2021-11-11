@@ -1700,7 +1700,19 @@ alert('old');
 	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
 							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
 						</div>	 -->					
-						<div class="auto-props col-lg-12 loader c-all invisible fade-in">
+						<div class="auto-padding-container col-lg-12 col-md-12 col-xs-12 p0"> <!--  -->
+							<div class="auto-padding invisible fade-in">	 <!-- loader -->		
+								<iframe 
+								class="xr-iframe lazy dark-theme"							
+								src=""
+								data-src="poc/xr/pocxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>												
+							</div>
+						</div>
+<!-- 						<div class="auto-props col-lg-12 loader c-all invisible fade-in">
 							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
 								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
 							</div>						
@@ -1713,7 +1725,7 @@ alert('old');
 							scrolling="no"
 							>
 							</iframe>												
-						</div>
+						</div> -->
 					</div>
 				</div>				
 			</div>
@@ -5501,9 +5513,9 @@ alert('old');
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
-<!-- 		<script>					
-		alert('working?');
-		</script>	 -->				
+		<script>					
+		alert('all 3?');
+		</script>					
 
 				<!-- iframe auto-padding -->
 		<script>
@@ -5526,6 +5538,7 @@ alert('old');
 			
 			var set_padding = aspect_ratio_reverse * 100; //dont change
 			this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+			this_iframe.addClass('loaded');
 			}
 		});
 
@@ -5537,12 +5550,16 @@ alert('old');
 				$(window).on('resize', function() {
 
 					$('iframe.xr-iframe').each(function() {
-						//get proportions of index div					
+						//get proportions of index div		
+						
 						var this_iframe = $(this);					
 						var iframe = this;
 						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 						var xr_image = innerDoc.getElementById('backbuffer');
 
+						if (this_iframe.hasClass('loaded') ) {
+						
+						
 						var natural_height = xr_image.naturalHeight;
 						var natural_width = xr_image.naturalWidth;
 
@@ -5550,6 +5567,7 @@ alert('old');
 						var set_padding = aspect_ratio_reverse * 100; //dont change
 						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
 						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px'); //should be the other way around
+						}
 					});
 	
 
