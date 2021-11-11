@@ -5502,7 +5502,7 @@ alert('old');
 		<script src="js/isInViewport.js"></script>
 
 <script>					
-alert('0');
+alert('added 50px');
 </script>					
 
 				<!-- iframe auto-padding -->
@@ -5541,7 +5541,7 @@ alert('0');
 						var maxWidth = smallest * aspect_ratio;
 						console.log('Set top-padding to: ', set_padding, '%', 'window height is: ',windowHeight);
 						//this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%");				//padding-top 50% is same as 50% width of element		vw??
-						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%"); //.css('padding-top', '+=50px');				//padding-top 50% is same as 50% width of element		vw??
+						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=50px');				//padding-top 50% is same as 50% width of element		vw??
 					}
 				});
 
