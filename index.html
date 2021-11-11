@@ -5501,33 +5501,33 @@ alert('old');
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
-<script>					
-alert('working?');
-</script>					
+<!-- 		<script>					
+		alert('working?');
+		</script>	 -->				
 
 				<!-- iframe auto-padding -->
-				<script>
-					
-				$("iframe.xr-iframe").on('load', function() {
+		<script>
+			
+		$("iframe.xr-iframe").on('load', function() {
 
-					//get proportions of index div					
-					var this_iframe = $(this);																								
-					var iframe = this;
-					
-					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-					var xr_image = innerDoc.getElementById('backbuffer');
-					
-					xr_image.onload = function(){ //every time the image updates
-						//var this_width = this.width;
-					console.log(this);
-					var natural_width = this.naturalWidth;
-					var natural_height = this.naturalHeight;
-					var aspect_ratio_reverse = natural_height / natural_width;
-					
-					var set_padding = aspect_ratio_reverse * 100; //dont change
-					this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
-					}
-				});
+			//get proportions of index div					
+			var this_iframe = $(this);																								
+			var iframe = this;
+			
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var xr_image = innerDoc.getElementById('backbuffer');
+			
+			xr_image.onload = function(){ //every time the image updates
+				//var this_width = this.width;
+			console.log(this);
+			var natural_width = this.naturalWidth;
+			var natural_height = this.naturalHeight;
+			var aspect_ratio_reverse = natural_height / natural_width;
+			
+			var set_padding = aspect_ratio_reverse * 100; //dont change
+			this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+			}
+		});
 
 
 
@@ -5535,11 +5535,36 @@ alert('working?');
 		<script>
 						
 				$(window).on('resize', function() {
-					<!-- alert('changed'); -->
+
+					$('iframe.xr-iframe').each(function() {
+						//get proportions of index div					
+						var this_iframe = $(this);					
+						var iframe = this;
+						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+						var xr_image = innerDoc.getElementById('backbuffer');
+
+						var natural_height = xr_image.naturalHeight;
+						var natural_width = xr_image.naturalWidth;
+
+						var aspect_ratio_reverse = natural_height / natural_width;
+						var set_padding = aspect_ratio_reverse * 100; //dont change
+						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
+						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px'); //should be the other way around
+					});
+	
+
+
+				});
+///473.219
+
+		</script>		
+<!-- 		<script>
+						
+				$(window).on('resize', function() {
 					
 					//get proportions of index div					
 					var this_iframe = $('#apan');	
-console.log(this_iframe.width);					
+					console.log(this_iframe.width);					
 					var iframe = document.getElementById('apan');
 					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 					var xr_image = innerDoc.getElementById('backbuffer');
@@ -5548,14 +5573,12 @@ console.log(this_iframe.width);
 					var natural_width = xr_image.naturalWidth;
 					
 					var aspect_ratio_reverse = natural_height / natural_width;
-					var set_padding = aspect_ratio_reverse * 100; //dont change
+					var set_padding = aspect_ratio_reverse * 100;
 					console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-					this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px'); //should be the other way around
 
 				});
-///473.219
 
-		</script>
+		</script> -->
 
 <!-- 		<script>
 		var this_src = $('#krabba').attr('src');
