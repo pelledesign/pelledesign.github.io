@@ -718,7 +718,26 @@
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>									
+						</div>	
+<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+								<iframe id="experimental"
+								class="lazy dark-theme"							
+								src=""
+								data-src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+						</div> -->				
+<!-- <script>
+var window_height = $(window).height();
+var window_width = $(window).width();
+if ( window_height > window_width) {
+
+$('#experimental').addclass('');
+
+}
+</script> -->								
 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="auto-padding invisible fade-in">		
 								<iframe id="apan"
@@ -731,22 +750,6 @@
 								</iframe>												
 							</div>
 						</div>
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
-							<div style="max-width: 799px; max-height: 829px;">
-							  <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 103.755%; overflow: hidden;">
-								 <iframe 
-									src="akg/xr/akgxr.html"
-									allowfullscreen
-									style="position: absolute; top: 0px; left: 0px; height: 100%; width: 1px; min-width: 100%; *width: 100%;"
-									frameborder="0"
-									scrolling="no">
-								 </iframe>
-							  </div>
-							</div>	
-						</div> -->
-<!-- <script>
-alert('old');
-</script> -->
 				
 					</div>								
 				</div>
@@ -5513,10 +5516,6 @@ alert('old');
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
-		<script>					
-		alert('working');
-		</script>					
-
 				<!-- iframe auto-padding -->
 		<script>
 			
@@ -5525,19 +5524,22 @@ alert('old');
 			//get proportions of index div					
 			var this_iframe = $(this);																								
 			var iframe = this;
-			
+
 			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 			var xr_image = innerDoc.getElementById('backbuffer');
 			
 			xr_image.onload = function(){ //every time the image updates
-				//var this_width = this.width;
-			console.log(this);
+			var this_container_width = this_iframe.closest('.auto-padding').width();
+			console.log('container width is: ', this_container_width);
+			//console.log(this);
 			var natural_width = this.naturalWidth;
 			var natural_height = this.naturalHeight;
 			var aspect_ratio_reverse = natural_height / natural_width;
+			var this_src = xr_image.src;
+			console.log('current image src is:', this_src);
 			
-			var set_padding = aspect_ratio_reverse * 100; //dont change
-			this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+			var set_padding = aspect_ratio_reverse * 100;
+			this_iframe.closest('.auto-padding').delay( 3000 ).css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 			this_iframe.addClass('loaded');
 			}
 		});
@@ -5553,10 +5555,51 @@ alert('old');
 						//get proportions of index div		
 						
 						var this_iframe = $(this);					
+						//console.log(this_iframe);
 						var iframe = this;
 						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 						var xr_image = innerDoc.getElementById('backbuffer');
+						
 
+						
+						if (this_iframe.hasClass('loaded') ) {
+
+						var this_src = xr_image.src;
+						console.log('orientation changed. current image src is:', this_src);						
+						
+						var natural_height = xr_image.naturalHeight;
+						var natural_width = xr_image.naturalWidth;
+
+						var aspect_ratio_reverse = natural_height / natural_width;
+						var set_padding = aspect_ratio_reverse * 100;
+						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
+						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+						
+						xr_image.src = this_src;
+						}
+					});
+	
+		alert('re-src'd');
+		</script>
+
+				});
+///473.219
+
+		</script>		
+<!-- 		<script>
+						
+				$(window).on('resize', function() {
+
+					$('iframe.xr-iframe').each(function() {
+						//get proportions of index div		
+						
+						var this_iframe = $(this);					
+						console.log(this_iframe);
+						var iframe = this;
+						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+						var xr_image = innerDoc.getElementById('backbuffer');
+var this_container_width = this_iframe.closest('.auto-padding').width();
+			console.log('container width is: ', this_container_width);
 						if (this_iframe.hasClass('loaded') ) {
 						
 						
@@ -5564,9 +5607,9 @@ alert('old');
 						var natural_width = xr_image.naturalWidth;
 
 						var aspect_ratio_reverse = natural_height / natural_width;
-						var set_padding = aspect_ratio_reverse * 100; //dont change
+						var set_padding = aspect_ratio_reverse * 100;
 						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px'); //should be the other way around
+						this_iframe.closest('.auto-padding').delay( 3000 ).css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 						}
 					});
 	
@@ -5575,7 +5618,7 @@ alert('old');
 				});
 ///473.219
 
-		</script>		
+		</script> -->		
 <!-- 		<script>
 						
 				$(window).on('resize', function() {
