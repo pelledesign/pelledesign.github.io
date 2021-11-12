@@ -18489,3 +18489,19 @@ min-width: 100%;
   width: 100%;
 }
 
+
+/* @media screen and (max-width: 575px) and (orientation:portrait) {   
+
+  #experimental {
+	  
+	height: calc(100vmin * (829/799));  
+  }
+  }
+  
+  @media screen and (max-width: 575px) and (orientation:landscape) {   
+
+  #experimental {
+	  
+	height: calc(100vmin * (799/829));  
+  } */
+  }

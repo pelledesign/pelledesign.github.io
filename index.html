@@ -719,7 +719,7 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all">
 								<iframe id="experimental"
 								class="lazy dark-theme"							
 								src=""
@@ -728,14 +728,7 @@
 								scrolling="no"
 								>
 								</iframe>
-						</div> -->
-<!-- 						<script>
-												
-						$("#experimental").on('load', function() {
-
-
-						});
-						</script> -->								
+						</div> -->								
 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 								<iframe id="experimental"
 								class="lazy dark-theme"							
@@ -749,7 +742,7 @@
 						<script>
 												
 		$("#experimental").on('load', function() {
-alert('test');
+alert('apa');
 			//get proportions of index div					
 			var this_iframe = $(this);																								
 			var iframe = this;
@@ -773,19 +766,11 @@ alert('test');
 			}
 			else {
 			var screen_orientation = 'portrait';}
-			var set_converted_height = aspect_ratio_reverse * window_width; 
-			var set_converted_height2 = aspect_ratio_reverse * this_container_width; 
+			var set_converted_height = aspect_ratio_reverse * this_container_width; 
 			
 			console.log('aspect ratio: ', aspect_ratio_reverse, 'set height to:', set_height, 'window height:', window_height, 'orientation:', screen_orientation);
 			
-			if (screen_orientation == 'landscape') {
-			this_iframe.closest('div').css("height", set_converted_height2+"px");
-			}
-			else {
-			this_iframe.closest('div').css("height", set_converted_height+"px");
-			}
-			
-			
+			this_iframe.closest('div').css("height", set_converted_height+"px");				
 			}
 		});
 						</script>								
