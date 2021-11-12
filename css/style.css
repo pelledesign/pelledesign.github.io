@@ -18503,5 +18503,49 @@ min-width: 100%;
   #experimental {
 	  
 	height: calc(100vmin * (799/829));  
-  } */
   }
+  }
+ */
+
+@media screen and (orientation:portrait) {   
+  .col-lg-12 #experimental, .col-md-12 #experimental, .col-sm-12 #experimental, .col-xs-12 #experimental {
+	  
+	height: calc(100vmin * (799/829));  
+  }
+
+  .col-lg-6 #experimental, .col-md-6 #experimental, .col-sm-6 #experimental, .col-xs-6 #experimental {
+	  
+	height: calc(50vmin * (799/829));  
+  }
+
+  .col-lg-4 #experimental, .col-md-4 #experimental, .col-sm-4 #experimental, .col-xs-4 #experimental {
+	  
+	height: calc(33.33333vmin * (799/829));  
+  }
+}
+
+@media screen and (orientation:landscape) {   
+  .col-lg-12 #experimental, .col-md-12 #experimental, .col-sm-12 #experimental, .col-xs-12 #experimental {
+	  
+	height: calc(100vmax * (799/829));  
+  }
+
+  .col-lg-6 #experimental, .col-md-6 #experimental, .col-sm-6 #experimental, .col-xs-6 #experimental, .col-xs-6-landscape #experimental  {
+	  
+	height: calc(50vmax * (799/829));  
+  }
+
+  .col-lg-4 #experimental, .col-md-4 #experimental, .col-sm-4 #experimental, .col-xs-4 #experimental {
+	  
+	height: calc(33.33333vmax * (799/829));  
+  }
+}
+
+  
+/*   @media screen and (max-width: 768px) and (orientation:portrait) {   
+
+  .col-md-6 #experimental {
+	  
+	height: calc(50vmin * (799/829));  
+  }
+  } */

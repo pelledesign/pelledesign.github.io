@@ -61,7 +61,14 @@
 	</head>	
 	<body> 
 	<script>
-	console.log('sticky');
+	var window_height = window.outerHeight;
+	var window_width = window.outerWidth;
+	if (window_height > window_width) {
+	var screen_orientation = 'portrait';
+	}
+	else {
+	var screen_orientation = 'landscape';
+	}
 	</script>
 	<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; height: 75px; width: 75px;"></div>	
 <!-- 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
@@ -719,7 +726,7 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all">
+						<div class=""> <!-- col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all -->
 								<iframe id="experimental"
 								class="lazy dark-theme"							
 								src=""
@@ -728,8 +735,15 @@
 								scrolling="no"
 								>
 								</iframe>
-						</div> -->								
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+						</div>	
+				<script>
+				alert('css solution');
+				if (window_width < 575 ) {
+				$('#experimental').closest('div').addClass('col-xs-12 col-xs-6-landscape');
+				}
+				console.log(window_width, window_height, screen_orientation);
+				</script>						
+<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 								<iframe id="experimental"
 								class="lazy dark-theme"							
 								src=""
@@ -738,17 +752,24 @@
 								scrolling="no"
 								>
 								</iframe>
-						</div>				
-						<script>
+						</div>	 -->			
+<!-- <script>
+elem = $("#experimental")[0];
 
-						</script>
+let resizeObserver = new ResizeObserver(() => {
+console.log("The element was resized");
 
-						<script>
-																
+});
+resizeObserver.observe(elem)
+
+</script> -->
+
+<!-- 						<script>
+	//alert('resizeObserver');															
 		$("#experimental").on('load', function() {
 		
 
-alert('resizeObserver');
+
 			//get proportions of index div					
 			var this_iframe = $(this);																								
 			var iframe = this;
@@ -778,7 +799,7 @@ alert('resizeObserver');
             console.log("The element was resized");
 				var new_width = document.getElementById('experimental').offsetWidth;
 				var set_new_height = aspect_ratio_reverse * new_width; 
-				$(this).addClass('huh');
+
 				console.log(new_width);
 				this_iframe.closest('div').css("height", set_new_height+"px");	
         });
@@ -791,7 +812,7 @@ alert('resizeObserver');
 		
 		
 		
-						</script>								
+						</script>	 -->							
 <!-- 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="auto-padding invisible fade-in">		
 								<iframe id="apan"
