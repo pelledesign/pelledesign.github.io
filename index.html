@@ -5541,6 +5541,7 @@ $('#experimental').addclass('');
 			var set_padding = aspect_ratio_reverse * 100;
 			this_iframe.closest('.auto-padding').delay( 3000 ).css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 			this_iframe.addClass('loaded');
+			xr_image.src = xr_image.src;
 			}
 		});
 
@@ -5549,7 +5550,7 @@ $('#experimental').addclass('');
 		</script>
 		<script>
 						
-				$(window).on('resize', function() {
+				$(window).on('orientationchange', function() {
 
 					$('iframe.xr-iframe').each(function() {
 						//get proportions of index div		
@@ -5562,7 +5563,7 @@ $('#experimental').addclass('');
 						
 
 						
-						if (this_iframe.hasClass('loaded') ) {
+						//if (this_iframe.hasClass('loaded') ) {
 
 						var this_src = xr_image.src;
 						console.log('orientation changed. current image src is:', this_src);						
@@ -5573,13 +5574,13 @@ $('#experimental').addclass('');
 						var aspect_ratio_reverse = natural_height / natural_width;
 						var set_padding = aspect_ratio_reverse * 100;
 						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-						this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+						//this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 						
-						xr_image.src = this_src;
-						}
+						xr_image.src = 'file:///C:/Users/pelle/Google%20Drive/Portfolio/pelledesign.github.io/akg/xr//0_15.png';
+						//}
 					});
 	
-alert('re-srcd3');
+alert('re-srcd4');
 
 				});
 
