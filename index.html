@@ -740,9 +740,15 @@
 								</iframe>
 						</div>				
 						<script>
-												
+
+						</script>
+
+						<script>
+																
 		$("#experimental").on('load', function() {
-alert('apa');
+		
+
+alert('resizeObserver');
 			//get proportions of index div					
 			var this_iframe = $(this);																								
 			var iframe = this;
@@ -760,19 +766,31 @@ alert('apa');
 			var set_height = this_container_width * aspect_ratio_reverse;			
 			var window_height = window.outerHeight;
 			var window_width = window.outerWidth;
-			var screen_orientation;
-			if (window_width > window_height) {
-			var screen_orientation = 'landscape';
-			}
-			else {
-			var screen_orientation = 'portrait';}
+
 			var set_converted_height = aspect_ratio_reverse * this_container_width; 
 			
-			console.log('aspect ratio: ', aspect_ratio_reverse, 'set height to:', set_height, 'window height:', window_height, 'orientation:', screen_orientation);
+			console.log('aspect ratio: ', aspect_ratio_reverse, 'set height to:', set_height, 'window height:', window_height);
 			
-			this_iframe.closest('div').css("height", set_converted_height+"px");				
+			this_iframe.closest('div').css("height", set_converted_height+"px");	
+					 elem = $("#experimental")[0];
+  
+        let resizeObserver = new ResizeObserver(() => {
+            console.log("The element was resized");
+				var new_width = document.getElementById('experimental').offsetWidth;
+				var set_new_height = aspect_ratio_reverse * new_width; 
+				$(this).addClass('huh');
+				console.log(new_width);
+				this_iframe.closest('div').css("height", set_new_height+"px");	
+        });
+        resizeObserver.observe(elem);	
 			}
+
+		
+			
 		});
+		
+		
+		
 						</script>								
 <!-- 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="auto-padding invisible fade-in">		
