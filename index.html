@@ -728,17 +728,68 @@
 								scrolling="no"
 								>
 								</iframe>
-						</div> -->				
-<!-- <script>
-var window_height = $(window).height();
-var window_width = $(window).width();
-if ( window_height > window_width) {
+						</div> -->
+<!-- 						<script>
+												
+						$("#experimental").on('load', function() {
 
-$('#experimental').addclass('');
 
-}
-</script> -->								
-						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+						});
+						</script> -->								
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+								<iframe id="experimental"
+								class="lazy dark-theme"							
+								src=""
+								data-src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+						</div>				
+						<script>
+												
+		$("#experimental").on('load', function() {
+alert('test');
+			//get proportions of index div					
+			var this_iframe = $(this);																								
+			var iframe = this;
+
+			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
+			var xr_image = innerDoc.getElementById('backbuffer');
+							
+			xr_image.onload = function(){ //every time the image updates
+			var this_container_width = this_iframe.closest('div').width();
+			console.log('container width is: ', this_container_width);
+			
+			var natural_width = this.naturalWidth;
+			var natural_height = this.naturalHeight;
+			var aspect_ratio_reverse = natural_height / natural_width;			
+			var set_height = this_container_width * aspect_ratio_reverse;			
+			var window_height = window.outerHeight;
+			var window_width = window.outerWidth;
+			var screen_orientation;
+			if (window_width > window_height) {
+			var screen_orientation = 'landscape';
+			}
+			else {
+			var screen_orientation = 'portrait';}
+			var set_converted_height = aspect_ratio_reverse * window_width; 
+			var set_converted_height2 = aspect_ratio_reverse * this_container_width; 
+			
+			console.log('aspect ratio: ', aspect_ratio_reverse, 'set height to:', set_height, 'window height:', window_height, 'orientation:', screen_orientation);
+			
+			if (screen_orientation == 'landscape') {
+			this_iframe.closest('div').css("height", set_converted_height2+"px");
+			}
+			else {
+			this_iframe.closest('div').css("height", set_converted_height+"px");
+			}
+			
+			
+			}
+		});
+						</script>								
+<!-- 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="auto-padding invisible fade-in">		
 								<iframe id="apan"
 								class="xr-iframe lazy dark-theme"							
@@ -749,7 +800,7 @@ $('#experimental').addclass('');
 								>
 								</iframe>												
 							</div>
-						</div>
+						</div> -->
 				
 					</div>								
 				</div>
@@ -5517,9 +5568,8 @@ $('#experimental').addclass('');
 		<script src="js/isInViewport.js"></script>
 
 				<!-- iframe auto-padding -->
-		<script>
-alert('re-srcd4');			
-alert('re-srcd4');			
+<!-- 		<script>
+
 		$("iframe.xr-iframe").on('load', function() {
 
 			//get proportions of index div					
@@ -5540,24 +5590,23 @@ alert('re-srcd4');
 			console.log('current image src is:', this_src);
 			
 			var set_padding = aspect_ratio_reverse * 100;
-			this_iframe.closest('.auto-padding').delay( 3000 ).css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+			this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
 			this_iframe.addClass('loaded');
-			xr_image.src = xr_image.src;
+			console.log('change');
+			
 			}
 		});
 
 
 
-		</script>
+		</script> -->
 <!-- 		<script>
 						
 				$(window).on('orientationchange', function() {
 
-					$('iframe.xr-iframe').each(function() {
-						//get proportions of index div		
+					$('iframe.xr-iframe').each(function() {	
 						
 						var this_iframe = $(this);					
-						//console.log(this_iframe);
 						var iframe = this;
 						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
 						var xr_image = innerDoc.getElementById('backbuffer');
@@ -5575,9 +5624,11 @@ alert('re-srcd4');
 						var aspect_ratio_reverse = natural_height / natural_width;
 						var set_padding = aspect_ratio_reverse * 100;
 						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-						//this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+						this_iframe.closest('.auto-padding').css("padding-top", "300%").css('padding-top', '+=1px').css('padding-top', '-=1px');
+						//alert('test');
 						
-						xr_image.src = 'file:///C:/Users/pelle/Google%20Drive/Portfolio/pelledesign.github.io/akg/xr//0_15.png';
+						//xr_image.src = 'file:///C:/Users/pelle/Google%20Drive/Portfolio/pelledesign.github.io/akg/xr//0_15.png';
+						
 						//}
 					});
 	
@@ -5585,7 +5636,7 @@ alert('re-srcd4');
 
 				});
 
-		</script>	 -->	
+		</script>		 -->
 <!-- 		<script>
 						
 				$(window).on('resize', function() {
