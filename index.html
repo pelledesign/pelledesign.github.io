@@ -762,6 +762,23 @@
 							>
 							</iframe>
 						</div>
+						<script>
+							$(window).resize(function(){    
+
+								var this_iframe = $('#experimental2');																																	
+								var aspect_ratio = 899 / 829;
+
+								if (window.matchMedia("(max-width: 400000px)").matches) {
+
+								var this_container_width = this_iframe.closest('div').width();	
+								$('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
+								console.log(this_container_width);
+								//$("html").css("background-color", "yellow");
+								} else {
+								$("html").css("background-color", "red");
+								}
+							}).resize()// trigger on page load
+						</script>						
 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
