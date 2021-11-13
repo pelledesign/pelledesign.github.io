@@ -69,6 +69,7 @@
 				</div>		
 				
 				<script>
+					console.log('1');
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
@@ -79,13 +80,14 @@
 						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
 						  console.log(this_container_width);
 						 
-					  } else {
-							var this_container_width = this_iframe.closest('div').width();
+						} else if (maxWidth2.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log(this_container_width);
+						  console.log('matched!');
 					  }
 					}
-					 var maxWidth = window.matchMedia("(max-width: 565px) and (orientation:portrait)"); 
+					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
+					 var maxWidth2 = window.matchMedia("(max-width: 768px)"); 
 					 
 					 responsive(maxWidth);
 					 maxWidth.addListener(responsive);
