@@ -752,25 +752,25 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	 -->
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
-							<iframe id="experimental2"
-							style="display:flex;"
-							class="lazy dark-theme"							
-							src=""
-							data-src="akg/xr/akgxr.html"																			
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>	
-						</div>					
-						<script>
-						alert('disp flex');
+				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all">
+					<iframe id="experimental2"
+					style="vertical-align: bottom;"
+					class=""							
+					src="akg/xr/akgxr.html"																		
+					frameborder="0"
+					scrolling="no"
+					>
+					</iframe>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+					<div class="item hw100 medium-theme">
+						<img src="akg/images/gallery/03.png" class="lazy cover">	
+					</div>	
+				</div>		
+				
+
+				<script>
+				alert('v-align btm');
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
@@ -785,17 +785,14 @@
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
 						  console.log('matched!');
-						  
 					  } else if (maxWidth3.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
 						  console.log('matched!');
-						  
 					  } else if (maxWidth4.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
 						  console.log('matched!');
-						  
 					  } else if (maxWidth5.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
@@ -810,10 +807,8 @@
 					 
 					 responsive(maxWidth);
 					 maxWidth.addListener(responsive);
-					 maxWidth2.addListener(responsive);
-					 maxWidth3.addListener(responsive);
 
-						</script>
+				</script>
 
 					</div>								
 				</div>
