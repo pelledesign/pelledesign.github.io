@@ -770,6 +770,28 @@
 				
 
 				<script>
+				alert('2018');
+					$(window).resize(function(){    
+					
+					var this_iframe = $('#experimental2');																																	
+					var aspect_ratio = 899 / 829;
+					
+						 if (window.matchMedia("(max-width: 565px)").matches) {
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio})
+						 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'green','height': this_container_width * aspect_ratio})
+						 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'red','height': this_container_width * aspect_ratio})
+						 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'pink','height': this_container_width * aspect_ratio})
+						 }
+					}).resize()// trigger on page load
+				</script>
+<!-- 				<script>
 				//alert('v-align btm');
 					function responsive(maxWidth) {
 					
@@ -803,7 +825,7 @@
 					 responsive(maxWidth);
 					 maxWidth.addListener(responsive); //leave it alo	ne	
 
-				</script>
+				</script> -->
 
 					</div>								
 				</div>
