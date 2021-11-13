@@ -716,7 +716,7 @@
 						</div>										
 					</div>			
 					<div id="grid" class="item row m0 h100 relative x-theme">						
-<!-- 						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
@@ -751,61 +751,53 @@
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>	 -->
-<!-- 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
+						</div>	
+
 							<iframe id="experimental2"
-							class="lazy dark-theme"							
+							style="background: #262626"
+							class="lazy dark-theme col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0"							
 							src=""
 							data-src="akg/xr/akgxr.html"																			
 							frameborder="0"
 							scrolling="no"
 							>
 							</iframe>
-						</div> -->
-						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
-							<div class="auto-padding">		
-								<iframe 
-								id="#experimental2"
-								class="terra dark-theme"							
-								src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>												
-							</div>
-						</div>
-<!-- 						  <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 103.755%; overflow: hidden;">
-							 <iframe src="AKG K92_XR.15.html"
-											  allowfullscreen
-											  style="position: absolute; top: 0px; left: 0px; height: 100%; width: 1px; min-width: 100%; *width: 100%;"
-											  frameborder="0"
-											  scrolling="no">
-							 </iframe>
-						  </div> -->
+<!-- 						</div> -->
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>					
+						</div>		
+						
 						<script>
-					function responsive(maxWidth) {
-					alert('auto-padding');
-					var this_iframe = $('#experimental2');																																	
-					var aspect_ratio = 899 / 829;
-					
-					  if (maxWidth.matches) { 
-						  $('.terra').closest('.auto-padding').css({'padding-top': aspect_ratio * 100 + '%'});
-					  } else if (maxWidth2.matches) {
-						  $('.terra').closest('.auto-padding').css({'padding-top': aspect_ratio * 100 + '%'});
-					  } else if (maxWidth3.matches) {
-						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
-					  } else if (maxWidth4.matches) {
-						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
-					  } else if (maxWidth5.matches) {
-						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
-					  }
-					}
+						alert('optimized code');
+						var create_height = function() {
+						var this_iframe = $('#experimental2');
+						var aspect_ratio = 899 / 829;					
+						var this_container_width = this_iframe.width();	
+						$('#experimental2').css({'height': this_container_width * aspect_ratio});
+						console.log(this_container_width);
+						}		
+						
+						function responsive(maxWidth) {					
+
+						  if (maxWidth.matches) { 
+						  create_height();
+							 
+						  } else if (maxWidth2.matches) {
+							 create_height();
+							  
+						  } else if (maxWidth3.matches) {
+							  create_height();
+							  
+						  } else if (maxWidth4.matches) {
+							  create_height();
+							  
+						  } else if (maxWidth5.matches) {
+							  create_height();
+						  }
+						}
 					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
 					 var maxWidth2 = window.matchMedia("(min-width: 566px) and (max-width: 767px)"); 
 					 var maxWidth3 = window.matchMedia("(min-width: 768px) and (max-width: 991px)"); 
@@ -818,50 +810,7 @@
 					 maxWidth3.addListener(responsive);
 
 						</script>
-<!-- 						<script>
-					function responsive(maxWidth) {
-					
-					var this_iframe = $('#experimental2');																																	
-					var aspect_ratio = 899 / 829;
-					
-					  if (maxWidth.matches) { 
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
-						  console.log(this_container_width);
-						 
-					  } else if (maxWidth2.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
-						  
-					  } else if (maxWidth3.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
-						  
-					  } else if (maxWidth4.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
-						  
-					  } else if (maxWidth5.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
-					  }
-					}
-					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
-					 var maxWidth2 = window.matchMedia("(min-width: 566px) and (max-width: 767px)"); 
-					 var maxWidth3 = window.matchMedia("(min-width: 768px) and (max-width: 991px)"); 
-					 var maxWidth4 = window.matchMedia("(min-width: 992px) and (max-width: 1199px)"); 
-					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
-					 
-					 responsive(maxWidth);
-					 maxWidth.addListener(responsive);
-					 maxWidth2.addListener(responsive);
-					 maxWidth3.addListener(responsive);
 
-						</script> -->
 					</div>								
 				</div>
 			

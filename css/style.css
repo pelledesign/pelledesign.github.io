@@ -18448,7 +18448,7 @@ height: 0; overflow: hidden; position: relative;
 max-height: 100vh;
 } */
 
-.xr-iframe, .terra {
+.xr-iframe, .auto-padding-iframe {
 position: absolute;
 top: 0;
 left: 0;
