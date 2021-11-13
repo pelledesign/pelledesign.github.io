@@ -752,7 +752,7 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	 -->
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
+<!-- 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 							<iframe id="experimental2"
 							style="display:block;"
 							class="lazy dark-theme"							
@@ -762,7 +762,16 @@
 							scrolling="no"
 							>
 							</iframe>
-						</div>
+						</div> -->	
+							<iframe id="experimental2"
+							style="width:auto;"
+							class="lazy dark-theme col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0"							
+							src=""
+							data-src="akg/xr/akgxr.html"																			
+							frameborder="0"
+							scrolling="no"
+							>
+							</iframe>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -770,19 +779,19 @@
 							</div>	
 						</div>					
 						<script>
-						alert('forwards');
+						alert('width auto');
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
 					var aspect_ratio = 899 / 829;
 					
 					  if (maxWidth.matches) { 
-							var this_container_width = this_iframe.closest('div').width();	
+							var this_container_width = this_iframe.width();	
 						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
 						  console.log(this_container_width);
 						 
 					  } else if (maxWidth2.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
+						  var this_container_width = this_iframe.width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
 						  console.log('matched!');
 						  
