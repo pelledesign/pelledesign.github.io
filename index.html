@@ -752,7 +752,7 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	 -->
-				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 					<iframe id="experimental2"
 					style="vertical-align: bottom;"
 					class=""							
@@ -770,7 +770,7 @@
 				
 
 				<script>
-				alert('v-align btm');
+				//alert('v-align btm');
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
@@ -779,24 +779,19 @@
 					  if (maxWidth.matches) { 
 							var this_container_width = this_iframe.closest('div').width();	
 						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
-						  console.log(this_container_width);
-						 
+						  console.log(this_container_width);						 
 					  } else if (maxWidth2.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
+						  $('#experimental2').css({'background-color':'green','height': this_container_width * aspect_ratio});
 					  } else if (maxWidth3.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
+						  $('#experimental2').css({'background-color':'red','height': this_container_width * aspect_ratio});
 					  } else if (maxWidth4.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
+						  $('#experimental2').css({'background-color':'yellow','height': this_container_width * aspect_ratio});
 					  } else if (maxWidth5.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
 					  }
 					}
 					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
@@ -806,7 +801,7 @@
 					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
 					 
 					 responsive(maxWidth);
-					 maxWidth.addListener(responsive);
+					 maxWidth.addListener(responsive); //leave it alo	ne	
 
 				</script>
 
@@ -6436,57 +6431,6 @@ $('.fullscreen').on('click', function () {
 				}		
 			});
 
-			$(window).on('orientationchange', function(){
-				let closeVar,
-				openVar,
-				magnificPopup = $.magnificPopup.instance,
-				cur = magnificPopup.contentContainer,	
-				cur_firstchild = cur.children().first(),
-				popup_id = '#' + cur_firstchild.attr('id'); 	
-
-				function delayedClose() {
-					closeVar = setTimeout(closePopup, 0);
-				}
-				function delayedOpen() {
-					openVar = setTimeout(openPopup, 0); // watch refresh fix timout event in main here
-				}
-				function closePopup() {
-					magnificPopup.close(); 
-				}		
-				function openPopup() {
-					$.magnificPopup.open({
-						items: {
-							src: popup_id
-						},
-						type: 'inline',
-						fixedContentPos: true,
-						fixedBgPos: true,		
-				callbacks: {
-					beforeOpen: function() {		
-					$('html, body').addClass('mfp-active');
-					
-					},
-					beforeClose: function() {
-						$('html, body').removeClass('mfp-active');	
-					}	,		
-					open: function() {
-						magnificPopupExists = true;
-					//$('.mfp-wrap').css({"top":"0","padding-top":"30px"});
-					$('.mfp-bg, .mfp-wrap').addClass('mfp-test');			
-					},
-					close: function() {
-						magnificPopupExists = false;
-						$('.mfp-bg, .mfp-wrap').removeClass('mfp-test');
-					}
-				}						
-					});
-				}
-				
-				if(magnificPopupExists === true) {
-					delayedClose();
-					delayedOpen();
-				}
-			});	
 		</script>
 
 		<!-- tooltips -->
