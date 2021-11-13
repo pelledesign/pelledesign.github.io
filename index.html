@@ -715,8 +715,8 @@
 							</div>
 						</div>										
 					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 						
-						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+					<div id="grid" class="item row m0 h100 relative x-theme">						
+<!-- 						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
@@ -746,13 +746,13 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>	
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
+						</div>	 -->
+<!-- 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 							<iframe id="experimental2"
 							class="lazy dark-theme"							
 							src=""
@@ -761,15 +761,64 @@
 							scrolling="no"
 							>
 							</iframe>
+						</div> -->
+						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+							<div class="auto-padding">		
+								<iframe 
+								id="#experimental2"
+								class="terra dark-theme"							
+								src="akg/xr/akgxr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>												
+							</div>
 						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
+<!-- 						  <div style="left: 0px; width: 100%; height: 0px; position: relative; padding-bottom: 103.755%; overflow: hidden;">
+							 <iframe src="AKG K92_XR.15.html"
+											  allowfullscreen
+											  style="position: absolute; top: 0px; left: 0px; height: 100%; width: 1px; min-width: 100%; *width: 100%;"
+											  frameborder="0"
+											  scrolling="no">
+							 </iframe>
+						  </div> -->
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>						
+						</div>					
 						<script>
+					function responsive(maxWidth) {
+					alert('auto-padding');
+					var this_iframe = $('#experimental2');																																	
+					var aspect_ratio = 899 / 829;
+					
+					  if (maxWidth.matches) { 
+						  $('.terra').closest('.auto-padding').css({'padding-top': aspect_ratio * 100 + '%'});
+					  } else if (maxWidth2.matches) {
+						  $('.terra').closest('.auto-padding').css({'padding-top': aspect_ratio * 100 + '%'});
+					  } else if (maxWidth3.matches) {
+						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
+					  } else if (maxWidth4.matches) {
+						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
+					  } else if (maxWidth5.matches) {
+						  $('.terra').closest('.auto-padding').css({'padding-top':  aspect_ratio * 100});
+					  }
+					}
+					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
+					 var maxWidth2 = window.matchMedia("(min-width: 566px) and (max-width: 767px)"); 
+					 var maxWidth3 = window.matchMedia("(min-width: 768px) and (max-width: 991px)"); 
+					 var maxWidth4 = window.matchMedia("(min-width: 992px) and (max-width: 1199px)"); 
+					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
+					 
+					 responsive(maxWidth);
+					 maxWidth.addListener(responsive);
+					 maxWidth2.addListener(responsive);
+					 maxWidth3.addListener(responsive);
+
+						</script>
+<!-- 						<script>
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
@@ -812,139 +861,7 @@
 					 maxWidth2.addListener(responsive);
 					 maxWidth3.addListener(responsive);
 
-						</script>
-						
-<!-- 						<script>
-						var aspect_ratio = 899 / 829;
-						if (screen_orientation == 'portrait') {
-						console.log(screen_orientation);
-						$('#experimental2').css("height", aspect_ratio * window_width);	
-						}
-						else {
-						console.log(screen_orientation);
-						$('#experimental2').css("height", (window_width / 2) * aspect_ratio,"px");	
-						$('#experimental2').css("width", (window_width / 2));	
-						}
-						
-						$(window).on('resize', function() {
-						var window_height = window.outerHeight;
-						var window_width = window.outerWidth;
-						
-						if (window_height > window_width) {
-						console.log(screen_orientation, window_width	);
-						$('#experimental2').css("height", aspect_ratio * window_width);
-						$('#experimental2').css("width", "100%");
-						}
-						else {
-						$('#experimental2').css("height", (window_width / 2) * aspect_ratio,"px");	
-						//$('#experimental2').css("width", (window_width / 2));	
-						}
-						//console.log(screen_orientation);	
-						});
-
-						//console.log(window_width, window_height, screen_orientation, aspect_ratio);
-						</script> -->	
-						
-<!-- 						<div class="">
-								<iframe id="experimental"
-								class="lazy dark-theme"							
-								src=""
-								data-src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>
-						</div>	
-						<script>
-						alert('css solution');
-						if (window_width < 575 ) {
-						$('#experimental').closest('div').addClass('col-xs-12 col-xs-6-landscape');
-						}
-						console.log(window_width, window_height, screen_orientation);
-						</script> -->						
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
-								<iframe id="experimental"
-								class="lazy dark-theme"							
-								src=""
-								data-src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>
-						</div>	 -->			
-<!-- <script>
-elem = $("#experimental")[0];
-
-let resizeObserver = new ResizeObserver(() => {
-console.log("The element was resized");
-
-});
-resizeObserver.observe(elem)
-
-</script> -->
-
-<!-- 						<script>
-	//alert('resizeObserver');															
-		$("#experimental").on('load', function() {
-		
-
-
-			//get proportions of index div					
-			var this_iframe = $(this);																								
-			var iframe = this;
-
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-			var xr_image = innerDoc.getElementById('backbuffer');
-							
-			xr_image.onload = function(){ //every time the image updates
-			var this_container_width = this_iframe.closest('div').width();
-			console.log('container width is: ', this_container_width);
-			
-			var natural_width = this.naturalWidth;
-			var natural_height = this.naturalHeight;
-			var aspect_ratio_reverse = natural_height / natural_width;			
-			var set_height = this_container_width * aspect_ratio_reverse;			
-			var window_height = window.outerHeight;
-			var window_width = window.outerWidth;
-
-			var set_converted_height = aspect_ratio_reverse * this_container_width; 
-			
-			console.log('aspect ratio: ', aspect_ratio_reverse, 'set height to:', set_height, 'window height:', window_height);
-			
-			this_iframe.closest('div').css("height", set_converted_height+"px");	
-					 elem = $("#experimental")[0];
-  
-        let resizeObserver = new ResizeObserver(() => {
-            console.log("The element was resized");
-				var new_width = document.getElementById('experimental').offsetWidth;
-				var set_new_height = aspect_ratio_reverse * new_width; 
-
-				console.log(new_width);
-				this_iframe.closest('div').css("height", set_new_height+"px");	
-        });
-        resizeObserver.observe(elem);	
-			}
-
-		
-			
-		});
-		
-		
-		
-						</script>	 -->							
-<!-- 						<div class="auto-padding-container col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
-							<div class="auto-padding invisible fade-in">		
-								<iframe id="apan"
-								class="xr-iframe lazy dark-theme"							
-								src=""
-								data-src="akg/xr/akgxr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>												
-							</div>
-						</div> -->
-				
+						</script> -->
 					</div>								
 				</div>
 			

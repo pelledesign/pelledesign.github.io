@@ -18230,15 +18230,14 @@ fill:red;
 }
 
 
-#grid { 
+/* #grid { 
 margin-left: 3px;
-/* margin-top: 3px; */
 }
 #grid > div:not(.separator):not(.ingore) { 
 padding:3px;
 padding-top:0;
 padding-left:0;
-}
+} */
 
 /* #grid > div:nth-child(2n) {
   padding-left:0;
@@ -18449,7 +18448,7 @@ height: 0; overflow: hidden; position: relative;
 max-height: 100vh;
 } */
 
-.xr-iframe {
+.xr-iframe, .terra {
 position: absolute;
 top: 0;
 left: 0;
