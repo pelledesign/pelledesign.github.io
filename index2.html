@@ -45,37 +45,6 @@
 	</head>	
 	<body> 
 	
-	<!-- check window ratios -->
-	<script>
-	var screen_orientation;
-	var window_height = window.outerHeight;
-	var window_width = window.outerWidth;
-	var smallest;
-	
-	if (window_height > window_width) {
-	var screen_orientation = 'portrait';
-	}
-	else {
-	var screen_orientation = 'landscape';
-	}
-	
-	$(window).on('resize', function() {
-	var window_height = window.outerHeight;
-	var window_width = window.outerWidth;
-	
-	if (window_height > window_width) {
-	var screen_orientation = 'portrait';
-	var smallest = window_width;
-	}
-	else {
-	var screen_orientation = 'landscape';
-	var smallest = window_width;
-	}
-	console.log(screen_orientation);	
-	});
-	
-	</script>
-	
 <!--  xs max 575px
 		sm min 576 -
 		md min 768
@@ -107,14 +76,16 @@
 					
 					  if (maxWidth.matches) { 
 							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
 						  console.log(this_container_width);
 						 
 					  } else {
-						  $('#experimental2').css({'background-color':'#fff','font-size':'20px'});
+							var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
 					  }
 					}
-					 var maxWidth = window.matchMedia("(max-width: 10000px)"); 
+					 var maxWidth = window.matchMedia("(max-width: 565px) and (orientation:portrait)"); 
 					 
 					 responsive(maxWidth);
 					 maxWidth.addListener(responsive);
