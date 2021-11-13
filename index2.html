@@ -1,0 +1,127 @@
+	<!doctype html> 
+<html lang="en">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173208168-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-173208168-1');
+		</script> -->
+
+		<title> Pelle iDesign</title>  
+		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">		
+<!-- 		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
+		
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<meta charset="utf-8">
+		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	  
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/animate.css">  
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
+		<link rel="stylesheet" href="css/magnific.css">
+		<link rel="stylesheet" href="css/load-more-button.css">	
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	
+	</head>	
+	<body> 
+	
+	<!-- check window ratios -->
+	<script>
+	var screen_orientation;
+	var window_height = window.outerHeight;
+	var window_width = window.outerWidth;
+	var smallest;
+	
+	if (window_height > window_width) {
+	var screen_orientation = 'portrait';
+	}
+	else {
+	var screen_orientation = 'landscape';
+	}
+	
+	$(window).on('resize', function() {
+	var window_height = window.outerHeight;
+	var window_width = window.outerWidth;
+	
+	if (window_height > window_width) {
+	var screen_orientation = 'portrait';
+	var smallest = window_width;
+	}
+	else {
+	var screen_orientation = 'landscape';
+	var smallest = window_width;
+	}
+	console.log(screen_orientation);	
+	});
+	
+	</script>
+	
+<!--  xs max 575px
+		sm min 576 -
+		md min 768
+		lg min 992
+		xl min 1200 -->	
+	
+		<div>	 				
+			<div id="grid" class="row h100 relative" style="margin:0 !important">						
+				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all">
+					<iframe id="experimental2"
+					class=""							
+					src="akg/xr/akgxr.html"																		
+					frameborder="0"
+					scrolling="no"
+					>
+					</iframe>
+				</div>
+				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+					<div class="item hw100 medium-theme">
+						<img src="akg/images/gallery/03.png" class="lazy cover">	
+					</div>	
+				</div>		
+				
+				<script>
+					function responsive(maxWidth) {
+					
+					var this_iframe = $('#experimental2');																																	
+					var aspect_ratio = 899 / 829;
+					
+					  if (maxWidth.matches) { 
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
+						 
+					  } else {
+						  $('#experimental2').css({'background-color':'#fff','font-size':'20px'});
+					  }
+					}
+					 var maxWidth = window.matchMedia("(max-width: 10000px)"); 
+					 
+					 responsive(maxWidth);
+					 maxWidth.addListener(responsive);
+
+				</script>		
+			</div>								
+		</div>
+
+	</body>
+</html>	

@@ -60,15 +60,35 @@
 		</script> -->		
 	</head>	
 	<body> 
+	<!-- check window ratios -->
 	<script>
+	var screen_orientation;
 	var window_height = window.outerHeight;
 	var window_width = window.outerWidth;
+	var smallest;
+	
 	if (window_height > window_width) {
 	var screen_orientation = 'portrait';
 	}
 	else {
 	var screen_orientation = 'landscape';
 	}
+	
+	$(window).on('resize', function() {
+	var window_height = window.outerHeight;
+	var window_width = window.outerWidth;
+	
+	if (window_height > window_width) {
+	var screen_orientation = 'portrait';
+	var smallest = window_width;
+	}
+	else {
+	var screen_orientation = 'landscape';
+	var smallest = window_width;
+	}
+	console.log(screen_orientation);	
+	});
+	
 	</script>
 	<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; height: 75px; width: 75px;"></div>	
 <!-- 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
@@ -720,13 +740,60 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape"> <!-- col-xs-6-landscape -->
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	
-						<div class=""> <!-- col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0 c-all -->
+						<div class="col-xs-12 col-xs-6-landscape p0">
+							<iframe id="experimental2"
+							class="lazy dark-theme"							
+							src=""
+							data-src="akg/xr/akgxr.html"																			
+							frameborder="0"
+							scrolling="no"
+							>
+							</iframe>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
+							<div class="item zoomable hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>	
+						</div>						
+						<script>
+						var aspect_ratio = 899 / 829;
+						if (screen_orientation == 'portrait') {
+						console.log(screen_orientation);
+						$('#experimental2').css("height", aspect_ratio * window_width);	
+						}
+						else {
+						console.log(screen_orientation);
+						$('#experimental2').css("height", (window_width / 2) * aspect_ratio,"px");	
+						$('#experimental2').css("width", (window_width / 2));	
+						}
+						
+						$(window).on('resize', function() {
+						var window_height = window.outerHeight;
+						var window_width = window.outerWidth;
+						
+						if (window_height > window_width) {
+						console.log(screen_orientation, window_width	);
+						$('#experimental2').css("height", aspect_ratio * window_width);
+						$('#experimental2').css("width", "100%");
+						}
+						else {
+						$('#experimental2').css("height", (window_width / 2) * aspect_ratio,"px");	
+						//$('#experimental2').css("width", (window_width / 2));	
+						}
+						//console.log(screen_orientation);	
+						});
+
+						//console.log(window_width, window_height, screen_orientation, aspect_ratio);
+						</script>	
+						
+<!-- 						<div class="">
 								<iframe id="experimental"
 								class="lazy dark-theme"							
 								src=""
@@ -736,13 +803,13 @@
 								>
 								</iframe>
 						</div>	
-				<script>
-				alert('css solution');
-				if (window_width < 575 ) {
-				$('#experimental').closest('div').addClass('col-xs-12 col-xs-6-landscape');
-				}
-				console.log(window_width, window_height, screen_orientation);
-				</script>						
+						<script>
+						alert('css solution');
+						if (window_width < 575 ) {
+						$('#experimental').closest('div').addClass('col-xs-12 col-xs-6-landscape');
+						}
+						console.log(window_width, window_height, screen_orientation);
+						</script> -->						
 <!-- 						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 								<iframe id="experimental"
 								class="lazy dark-theme"							
