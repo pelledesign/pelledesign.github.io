@@ -752,7 +752,7 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	
-						<div class="col-xs-12 col-xs-6-landscape p0">
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
 							<iframe id="experimental2"
 							class="lazy dark-theme"							
 							src=""
@@ -762,30 +762,59 @@
 							>
 							</iframe>
 						</div>
-						<script>
-							$(window).resize(function(){    
-
-								var this_iframe = $('#experimental2');																																	
-								var aspect_ratio = 899 / 829;
-
-								if (window.matchMedia("(max-width: 400000px)").matches) {
-
-								var this_container_width = this_iframe.closest('div').width();	
-								$('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
-								console.log(this_container_width);
-								//$("html").css("background-color", "yellow");
-								} else {
-								$("html").css("background-color", "red");
-								}
-							}).resize()// trigger on page load
-						</script>						
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
+						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0"> <!-- col-xs-6-landscape -->
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>						
 						<script>
+					function responsive(maxWidth) {
+					
+					var this_iframe = $('#experimental2');																																	
+					var aspect_ratio = 899 / 829;
+					
+					  if (maxWidth.matches) { 
+							var this_container_width = this_iframe.closest('div').width();	
+						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
+						 
+					  } else if (maxWidth2.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log('matched!');
+						  
+					  } else if (maxWidth3.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log('matched!');
+						  
+					  } else if (maxWidth4.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log('matched!');
+						  
+					  } else if (maxWidth5.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log('matched!');
+					  }
+					}
+					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
+					 var maxWidth2 = window.matchMedia("(min-width: 566px) and (max-width: 767px)"); 
+					 var maxWidth3 = window.matchMedia("(min-width: 768px) and (max-width: 991px)"); 
+					 var maxWidth4 = window.matchMedia("(min-width: 992px) and (max-width: 1199px)"); 
+					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
+					 
+					 responsive(maxWidth);
+					 maxWidth.addListener(responsive);
+					 maxWidth2.addListener(responsive);
+					 maxWidth3.addListener(responsive);
+
+						</script>
+						
+<!-- 						<script>
 						var aspect_ratio = 899 / 829;
 						if (screen_orientation == 'portrait') {
 						console.log(screen_orientation);
@@ -814,7 +843,7 @@
 						});
 
 						//console.log(window_width, window_height, screen_orientation, aspect_ratio);
-						</script>	
+						</script> -->	
 						
 <!-- 						<div class="">
 								<iframe id="experimental"
