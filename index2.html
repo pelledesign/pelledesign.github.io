@@ -69,7 +69,23 @@
 				</div>		
 				
 				<script>
-					console.log('1');
+					$(window).resize(function(){    
+
+						var this_iframe = $('#experimental2');																																	
+						var aspect_ratio = 899 / 829;
+
+						if (window.matchMedia("(max-width: 400000px)").matches) {
+
+						var this_container_width = this_iframe.closest('div').width();	
+						$('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
+						console.log(this_container_width);
+						$("html").css("background-color", "yellow");
+						} else {
+						$("html").css("background-color", "red");
+						}
+					}).resize()// trigger on page load
+				</script>
+<!-- 				<script>
 					function responsive(maxWidth) {
 					
 					var this_iframe = $('#experimental2');																																	
@@ -83,16 +99,34 @@
 						} else if (maxWidth2.matches) {
 						  var this_container_width = this_iframe.closest('div').width();
 						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-						  console.log('matched!');
+						  console.log(this_container_width);
+					  
+					  } else if (maxWidth3.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
+					  
+					  } else if (maxWidth4.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
+	
+					  } else if (maxWidth5.matches) {
+						  var this_container_width = this_iframe.closest('div').width();
+						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
+						  console.log(this_container_width);
 					  }
 					}
 					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
-					 var maxWidth2 = window.matchMedia("(max-width: 768px)"); 
+					 var maxWidth2 = window.matchMedia("(min-width: 566px)"); 
+					 var maxWidth3 = window.matchMedia("(min-width: 768px)"); 
+					 var maxWidth4 = window.matchMedia("(min-width: 992px)"); 
+					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
 					 
 					 responsive(maxWidth);
 					 maxWidth.addListener(responsive);
 
-				</script>		
+				</script>	 -->	
 			</div>								
 		</div>
 
