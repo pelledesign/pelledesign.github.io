@@ -42,7 +42,6 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 		
-
 		<script> <!-- start test if touch device -->	
 		function is_touch_device() {  
 		try {  
@@ -54,7 +53,30 @@
 		}
 		</script>		
 		
-			
+						<script>
+						alert('on doc load');
+						$(document).ready(function() {
+							$(window).on('resize', function(){    
+							
+								var this_iframe = $('#experimental2');																																	
+								var aspect_ratio = 899 / 829;
+							
+								 if (window.matchMedia("(max-width: 565px)").matches) {
+									var this_container_width = this_iframe.closest('div').width();	
+								  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio,'width': this_container_width})
+								 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
+									var this_container_width = this_iframe.closest('div').width();	
+								  $('#experimental2').css({'background-color':'green','height': this_container_width * aspect_ratio,'width': this_container_width})
+								 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+									var this_container_width = this_iframe.closest('div').width();	
+								  $('#experimental2').css({'background-color':'red','height': this_container_width * aspect_ratio})
+								 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
+									var this_container_width = this_iframe.closest('div').width();	
+								  $('#experimental2').css({'background-color':'pink','height': this_container_width * aspect_ratio})
+								 }
+							}).resize()// trigger on page load
+							})
+						</script>			
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
@@ -483,8 +505,8 @@
 							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 						</div>						
 						<div id="akg-more" class="owl-carousel">  <!-- style="background-image: url('akg/images/akg-logo.svg'); background-repeat: no-repeat; background-position: center;"	 -->				
-							<div class="item owl-hide-lg-up medium-theme">
-								<div class="loader relative"> <!-- textoverlay  invisible zoom-in--> 
+							<div class="item row owl-hide-lg-up medium-theme m0">
+								<div class="col-xs-12 col-xs-6-landscape loader relative"> <!-- textoverlay  invisible zoom-in--> 
 									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
 <!-- 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
 										<div class="text-animate c-all" style="height:100%;">
@@ -496,6 +518,14 @@
 											</div>
 										</div>
 									</div> -->																
+								</div>
+								<div class="portrait-hidden col-xs-6-landscape loader relative c-all"> <!-- textoverlay  invisible zoom-in--> 
+											<div>
+												<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
+												<p> Headphones for Vienna based audio products company AKG. <br>
+												Retro styled light-weight and easy to handle headphones with focus on comfort.	
+												</p>																				
+											</div>														
 								</div>
 							</div>
 <!-- 							<div class="item owl-hide-lg-up x-theme">	
@@ -752,80 +782,23 @@
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	 -->
-				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
-					<iframe id="experimental2"
-					style="display:flex;"
-					class=""							
-					src="akg/xr/akgxr.html"																		
-					frameborder="0"
-					scrolling="no"
-					>
-					</iframe>
-				</div>
-				<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
-					<div class="item hw100 medium-theme">
-						<img src="akg/images/gallery/03.png" class="lazy cover">	
-					</div>	
-				</div>		
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
+							<iframe id="experimental2"
+							style="display:flex;"
+							class=""							
+							src="akg/xr/akgxr.html"																		
+							frameborder="0"
+							scrolling="no"
+							>
+							</iframe>
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+							<div class="item hw100 medium-theme">
+								<img src="akg/images/gallery/03.png" class="lazy cover">	
+							</div>	
+						</div>
+						
 				
-
-				<script>
-				//alert('set width');
-					$(window).resize(function(){    
-					
-					var this_iframe = $('#experimental2');																																	
-					var aspect_ratio = 899 / 829;
-					
-						 if (window.matchMedia("(max-width: 565px)").matches) {
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio,'width': this_container_width})
-						 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'green','height': this_container_width * aspect_ratio,'width': this_container_width})
-						 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'red','height': this_container_width * aspect_ratio})
-						 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'pink','height': this_container_width * aspect_ratio})
-						 }
-					}).resize()// trigger on page load
-				</script>
-<!-- 				<script>
-				//alert('v-align btm');
-					function responsive(maxWidth) {
-					
-					var this_iframe = $('#experimental2');																																	
-					var aspect_ratio = 899 / 829;
-					
-					  if (maxWidth.matches) { 
-							var this_container_width = this_iframe.closest('div').width();	
-						  $('#experimental2').css({'background-color':'#fff','height': this_container_width * aspect_ratio});
-						  console.log(this_container_width);						 
-					  } else if (maxWidth2.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'green','height': this_container_width * aspect_ratio});
-					  } else if (maxWidth3.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'red','height': this_container_width * aspect_ratio});
-					  } else if (maxWidth4.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'yellow','height': this_container_width * aspect_ratio});
-					  } else if (maxWidth5.matches) {
-						  var this_container_width = this_iframe.closest('div').width();
-						  $('#experimental2').css({'background-color':'#212121','height': this_container_width * aspect_ratio});
-					  }
-					}
-					 var maxWidth = window.matchMedia("(max-width: 565px)"); 
-					 var maxWidth2 = window.matchMedia("(min-width: 566px) and (max-width: 767px)"); 
-					 var maxWidth3 = window.matchMedia("(min-width: 768px) and (max-width: 991px)"); 
-					 var maxWidth4 = window.matchMedia("(min-width: 992px) and (max-width: 1199px)"); 
-					 var maxWidth5 = window.matchMedia("(min-width: 1200px)"); 
-					 
-					 responsive(maxWidth);
-					 maxWidth.addListener(responsive); //leave it alo	ne	
-
-				</script> -->
 
 					</div>								
 				</div>
