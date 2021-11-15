@@ -14222,7 +14222,7 @@ background-position: 50% 50%;
 
 .dark-theme svg,
 .item.dark-theme svg,
-.dark-theme a,
+.dark-theme a,	
 .dark-theme h3,
 .dark-theme.h3,
 .dark-theme h6,
@@ -14317,6 +14317,12 @@ background-position: 50% 50%;
 
 .h3:not(.title .h3):not(#title .h3) {
  margin-bottom:.5em;	
+}
+
+.xrtext {
+font-size: 0.8rem;	
+line-height: 0.8rem;	
+padding: 1rem 1rem 0 0 ;
 }
 
 /* .popup.medium-theme{
@@ -18014,6 +18020,12 @@ height:75vh;
 }
 }
 
+@media (orientation:landscape) and (max-width:575px) {
+.section-container {
+height:100vh;
+}
+}
+
 @media (max-height: 575px) and (orientation:portrait) {
 #spotify .section-container, #designprocess-slider .section-container, #designprocess-slider {
 height:100vh;
@@ -18230,14 +18242,15 @@ fill:red;
 }
 
 
-/* #grid { 
+#grid { 
 margin-left: 3px;
+/* margin-left: 3px; */
 }
 #grid > div:not(.separator):not(.ingore) { 
 padding:3px;
 padding-top:0;
 padding-left:0;
-} */
+}
 
 /* #grid > div:nth-child(2n) {
   padding-left:0;
@@ -18492,63 +18505,29 @@ min-width: 100%;
   width: 100%;
 }
 
-
-/* @media screen and (max-width: 575px) and (orientation:portrait) {   
-
-  #experimental {
-	  
-	height: calc(100vmin * (829/799));  
-  }
-  }
-  
-  @media screen and (max-width: 575px) and (orientation:landscape) {   
-
-  #experimental {
-	  
-	height: calc(100vmin * (799/829));  
-  }
-  }
- */
-
-@media screen and (orientation:portrait) {   
-  .col-lg-12 #experimental, .col-md-12 #experimental, .col-sm-12 #experimental, .col-xs-12 #experimental {
-	  
-	height: calc(100vmin * (799/829));  
-  }
-
-  .col-lg-6 #experimental, .col-md-6 #experimental, .col-sm-6 #experimental, .col-xs-6 #experimental {
-	  
-	height: calc(50vmin * (799/829));  
-  }
-
-  .col-lg-4 #experimental, .col-md-4 #experimental, .col-sm-4 #experimental, .col-xs-4 #experimental {
-	  
-	height: calc(33.33333vmin * (799/829));  
-  }
+.xrtext {
+top: 0;
+right: 0;
+color: white;
+position: absolute;
+padding-right: 1rem;	
 }
-
-@media screen and (orientation:landscape) {   
-  .col-lg-12 #experimental, .col-md-12 #experimental, .col-sm-12 #experimental, .col-xs-12 #experimental {
-	  
-	height: calc(100vmax * (799/829));  
-  }
-
-  .col-lg-6 #experimental, .col-md-6 #experimental, .col-sm-6 #experimental, .col-xs-6 #experimental, .col-xs-6-landscape #experimental  {
-	  
-	height: calc(50vmax * (799/829));  
-  }
-
-  .col-lg-4 #experimental, .col-md-4 #experimental, .col-sm-4 #experimental, .col-xs-4 #experimental {
-	  
-	height: calc(33.33333vmax * (799/829));  
-  }
+/* .xr-auto:before {
+content: "3d View";
+color: #000;
+position: absolute;
+top: 0;
+right: 0;
+padding-right: 1rem;
 }
+#grid .col-xs-12:before {
 
-  
-/*   @media screen and (max-width: 768px) and (orientation:portrait) {   
-
-  .col-md-6 #experimental {
-	  
-	height: calc(50vmin * (799/829));  
-  }
-  } */
+} */
+/* #grid .col-xs-12:before {
+content: "3d View";
+color: #000;
+position: absolute;
+top: 0;
+right: 0;
+padding-right: 1rem;
+} */

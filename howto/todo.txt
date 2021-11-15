@@ -8,14 +8,13 @@ hide header on swipedown or prevent swipe
 )
 
 function both (
-
 add 3d models, ks configs,  etc
-lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view
-on orientation change fix
+enable vertical scolling on big xr
+lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
 pop-themes
 p-logo-new fixed?
 evaluate title styles
-
+xr hotspots
 snyggare loads / animations - slide w/ several owl-lazy's? 
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
 process

@@ -2,7 +2,7 @@
 
 // (nameOfDiv,folderName,viewPortWidth,viewPortHeight,backgroundColor,uCount,vCount,uWrap,vWrap,uMouseSensitivity,vMouseSensitivity,uStartIndex,vStartIndex,minZoom,maxZoom,rotationDamping,downScaleToBrowser,addDownScaleGUIButton,downloadOnInteraction,imageExtension,showLoading,loadingIcon,allowFullscreen,uReverse,vReverse,hotspots,isIBooksWidget)
 
-
+// xa, ya
 
 var p = !0,
     t = null,
@@ -1049,15 +1049,5 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         setTimeout(function() {
             N()
         }, 15)
-    } else alert("Your browser must support HTML5 to show KeyShotXR")
-	
-
-
- var element = document.getElementById('backbuffer');
-var positionInfo = element.getBoundingClientRect();
-var height = positionInfo.naturalHeight;
-var width = positionInfo.width;
-//console.log('xr:', height, width);
-
-//salert(width);	 
+    } else alert("Your browser must support HTML5 to show KeyShotXR")	 
 };

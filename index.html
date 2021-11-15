@@ -53,75 +53,78 @@
 		}
 		</script>		
 		
-						<script>
-						//alert('on doc load + resize');
-						$(document).ready(function() {  
-														
-							$(window).on('resize', function(){    
-							
-							var this_iframe;
-							//var this_iframe_is = $('.xr-auto');
-							var this_container_width;
-							var aspect_ratio;
-							var this_src;
-							
-							$('.xr-auto').each(function() {
-								var this_iframe = $(this);
-								this_iframe.addClass('test');
-								this_src = $(this).attr('src');
-								console.log(this_src);
-								
-								if (this_src =='akg/xr/akgxr.html') {
-								aspect_ratio = 899 / 829;
-								}
-								else if (this_src == 'Converse/xr/conversexr.html') {
-								aspect_ratio = 800 / 1919;
-								}
-								else if (this_src == 'poc/xr/pocxr.html') {
-								aspect_ratio = 1080 / 1920;
-								}
-								else if (this_src == 'Bagheera/xr/bagheeraxr.html') {
-								aspect_ratio = 890 / 1583;
-								}
-								else if (this_src == 'haglofs/xr/haglofs.html') {
-								aspect_ratio = 440 / 1600;
-								}
-								else if (this_src == 'alcon/xr/alconxr.html') {
-								aspect_ratio = 800 / 815;
-								}
-								else if (this_src == 'Specialized/xr/specializedxr.html') {
-								aspect_ratio = 829 / 799;
-								}
-								else {
-								alert('xr error');
-								}
-								
-							 if (window.matchMedia("(max-width: 565px)").matches) {
-								var this_container_width = this_iframe.closest('div').width();	
-							  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
-							 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
-								var this_container_width = this_iframe.closest('div').width();	
-							  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
-							 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
-								var this_container_width = this_iframe.closest('div').width();	
-							  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
-							 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
-								var this_container_width = this_iframe.closest('div').width();	
-							  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
-							 }
-							 });	
-							}).resize()// trigger on page load
-							});
+		<!-- xr resize -->
+		<script>
+		
+		var xr_resize = function() {
+			var this_iframe;
+			//var this_iframe_is = $('.xr-auto');
+			var this_container_width;
+			var aspect_ratio;
+			var this_src;
+			
+			$('.xr-auto').each(function() {
+				var this_iframe = $(this);
+				this_iframe.addClass('test');
+				this_src = $(this).attr('src');
+				console.log(this_src);
+				
+				if (this_src =='akg/xr/akgxr.html') {
+				aspect_ratio = 899 / 829;
+				}
+				else if (this_src == 'Converse/xr/conversexr.html') {
+				aspect_ratio = 800 / 1919;
+				}
+				else if (this_src == 'poc/xr/pocxr.html') {
+				aspect_ratio = 1080 / 1920;
+				}
+				else if (this_src == 'Bagheera/xr/bagheeraxr.html') {
+				aspect_ratio = 890 / 1583;
+				}
+				else if (this_src == 'haglofs/xr/haglofs.html') {
+				aspect_ratio = 440 / 1600;
+				}
+				else if (this_src == 'alcon/xr/alconxr.html') {
+				aspect_ratio = 800 / 815;
+				}
+				else if (this_src == 'Specialized/xr/specializedxr.html') {
+				aspect_ratio = 829 / 799;
+				}
+				else {
+				alert('xr error');
+				}
+				
+			 if (window.matchMedia("(max-width: 565px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			 }
+			 });	
+		}
 
+		$(document).ready(function() {  
+			xr_resize();
+		});
 
-						</script>		
+		$(window).on('resize', function(){    							
+			xr_resize();	
+		}).resize()// trigger on page load
+		</script>		
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
 		</script> -->		
 	</head>	
 	<body> 
 	<!-- check window ratios -->
-	<script>
+<!-- 	<script>
 	var screen_orientation;
 	var window_height = window.outerHeight;
 	var window_width = window.outerWidth;
@@ -149,7 +152,7 @@
 	console.log(screen_orientation);	
 	});
 	
-	</script>
+	</script> -->
 	<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; height: 75px; width: 75px;"></div>	
 <!-- 	<div class="c-absolute x-theme bg-none" style="position:fixed; fill: #515151;">
 		<div>
@@ -188,9 +191,6 @@
 					</li>
 					<li class="nav-item">
 					  <a class="nav-link open-popup fullscreen" href="#pdf">View Pdf</a>              
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="index2.html">Index2</a>              
 					</li>
 		<!-- 						<li class="nav-item flex-xl-up c-lg">
 					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
@@ -238,10 +238,7 @@
 						<div id="" class="dark-theme-button theme-circle dark"></div>
 						<div id="" class="light-theme-button theme-circle light"></div>					
 						</div>							  
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link" href="index2.html">Index2</a>              
-					</li>					
+					</li>				
 				 </ul>
 			  </div>
 			</div>
@@ -376,7 +373,7 @@
 		<div id="section-space" class="landscape-hidden"></div>
 		<!-- about -->
 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
-		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h">
+		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
 		<div id="bg-hero" class="c-absolute hw100"></div>
 			<div id="slider-container" class="col-auto h100 dropshadow">		
 				<div id="about-slider-mobile" class="about-slider owl-carousel">				
@@ -543,29 +540,32 @@
 							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 						</div>						
 						<div id="akg-more" class="owl-carousel">  <!-- style="background-image: url('akg/images/akg-logo.svg'); background-repeat: no-repeat; background-position: center;"	 -->				
-							<div class="item row owl-hide-lg-up medium-theme m0">
-								<div class="col-xs-12 col-xs-6-landscape loader relative"> <!-- textoverlay  invisible zoom-in--> 
-									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">
-<!-- 									<div class="x-theme overlay high-opacity c-all desktop-hidden">
-										<div class="text-animate c-all" style="height:100%;">
-											<div>
-												<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
-												<p> Headphones for Vienna based audio products company AKG. <br>
-												Retro styled light-weight and easy to handle headphones with focus on comfort.	
-												</p>																				
-											</div>
-										</div>
-									</div> -->																
+<!-- 							<div class="item row owl-hide-lg-up medium-theme m0">
+								<div class="col-xs-12 col-xs-6-landscape loader relative">
+									<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">															
 								</div>
-								<div class="portrait-hidden col-xs-6-landscape loader relative c-all"> <!-- textoverlay  invisible zoom-in--> 
-											<div>
-												<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
-												<p> Headphones for Vienna based audio products company AKG. <br>
-												Retro styled light-weight and easy to handle headphones with focus on comfort.	
-												</p>																				
-											</div>														
+								<div class="portrait-hidden col-xs-6-landscape loader relative c-all p-3">
+									<div>
+										<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
+										<p> Headphones for Vienna based audio products company AKG. <br>
+										Retro styled light-weight and easy to handle headphones with focus on comfort.	
+										</p>																				
+									</div>														
 								</div>
-							</div>
+							</div> -->
+							<div class="item row owl-hide-lg-up medium-theme m0">				
+								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100 loader">								
+										<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">															
+								  </div>
+									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
+											<p> Headphones for Vienna based audio products company AKG. <br>
+											Retro styled light-weight and easy to handle headphones with focus on comfort.	
+											</p>	
+										</div>												  						
+								  </div>								  
+							</div>														
 <!-- 							<div class="item owl-hide-lg-up x-theme">	
 								<div class="fadeout-top"></div>												
 								<div class="absolute hw100 c-all show-scroll">
@@ -783,8 +783,8 @@
 							</div>
 						</div>										
 					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">						
-<!-- 						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+					<div id="grid" class="item row m0 h100 relative x-theme">	
+						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
@@ -808,19 +808,19 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>
-						<div class="lg-up-h col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto">
+						<div class="lg-up-h col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto" style="max-height:100vh;">
 							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
+							<img src="" data-src="akg/images/gallery/04.png" class="lazy " style="object-position: 100% 17%;">		
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
-						</div>	 -->
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
+						</div>						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
 							<iframe 
 							id=""
 							style="display:flex;"
@@ -831,7 +831,7 @@
 							>
 							</iframe>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape p0">
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
 							<div class="item hw100 medium-theme">
 								<img src="akg/images/gallery/03.png" class="lazy cover">	
 							</div>	
@@ -1834,7 +1834,7 @@
 											</div>
 										</div>					
 										<div class="col-lg-8">
-											<div class="item video-container hw100 relative">
+											<div class="item video-container hw100 relative light-theme">
 												<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
 												<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
 												  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
@@ -1899,24 +1899,43 @@
 					</div>		
 					<div id="slider-container">
 						<div id="bagheera-more" class="owl-carousel">
-							<div class="item owl-hide-lg-up x-theme zoom-container">
-								<div class="zoom-icon"></div>
-								<div class="loader relative">
-									<img class="push-zoom owl-lazy cover" src="" data-src="Bagheera/images/gallery/twisted.png">
-									<div class="x-theme overlay high-opacity c-all desktop-hidden">
-										<div class="text-animate c-all" style="height:100%;">
-											<div>
-												<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+							<div class="item row x-theme-touch medium-theme-desktop m0">				
+									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
 											<p>Position as product designer at Swedish Sports Company Bagheera<br>
 											</p>		  
 											<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
-											</p>																			
+											</p>
+											<p class="txt-l text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>	
+										</div>												  						
+								  </div>	
+								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100">
+									<div class="col-lg-12 loader">								
+										<img class="owl-lazy contain" src="" data-src="Bagheera/images/gallery/twisted.png">									
+									</div>								
+								  </div>
+							</div>						
+<!-- 							<div class="item row m0 x-theme">
+										<div class="col-lg-6 col-xs-6 c-lg-up auto-scroll h100">
+											<div class=" c-lg">
+												<div class="col-lg-8 ppp2 txt-l">
+													<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+											<p>Position as product designer at Swedish Sports Company Bagheera<br>
+											</p>		  
+											<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
+											</p>
+											<p class="txt-l text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>
+												</div>					
 											</div>
-
-										</div>
-									</div>																
+										</div>						
+								<div class="item col-lg-6 col-xs-6 col-xs-6-landscape x-theme zoom-container">
+									<div class="zoom-icon"></div>
+									<div class="loader relative">
+										<img class="push-zoom owl-lazy cover" src="" data-src="Bagheera/images/gallery/twisted.png">															
+									</div>
 								</div>
-							</div>	
+							</div>	 -->
 <!-- 							<div class="item owl-hide-lg-up light-theme zoom-container">
 								<div class="zoom-icon"></div>
 								<div class="textoverlay loader relative invisible zoom-in">
@@ -2225,19 +2244,20 @@
 									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
 									<p class="img-text hidden"></p>
 								</div>			
+							</div>
+							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+								<div class="item zoomable hw100 medium-theme">
+									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
+									<p class="img-text hidden"></p>
+								</div>			
+							</div>
+							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+								<div class="item zoomable hw100 medium-theme">
+									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
+									<p class="img-text hidden"></p>
+								</div>			
 							</div>					
-							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-								<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="poc/xr//0_14.png" class="lazy  cover" style="object-position: 100% 17%;">		
-								<p class="img-text hidden"></p>					
-								</div>
-							</div>
-							<div class="col-lg-4 m col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-								<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="poc/xr//0_14.png" class="lazy  cover" style="object-position: 100% 17%;">		
-								<p class="img-text hidden"></p>					
-								</div>
-							</div>
+
 							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
 								<iframe 
 								id=""
@@ -2282,7 +2302,7 @@
 									<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
 										<div class="rellax-logo haglofs-logo hw100" style="width:100% !important;"></div>
 									</div>							
-									<div class="col-lg-4 col-sm c-lg-up portrait-hidden">
+									<div class="col-lg-4 col-sm c-lg-up xs-down-h">
 										<div class="row c-lg">
 											<div class="col-lg-8 ppp2 txt-l">
 												<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
@@ -2486,7 +2506,7 @@
 				</div>				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>				
-			<div id="alcon" class="portfolio-section x-theme landscape-hidden">
+			<div id="alcon" class="portfolio-section x-theme">
 				<div class="section-container">
 					<div id="alcon-title" class="title light-theme row m0">
 						<div class="col-12 row m0 flex">
@@ -2501,35 +2521,28 @@
 							</div>
 						</div>
 					</div>				
-					<div class="row h100 m0 vh65">										
-	<!-- 					<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-							<div class="rellax-logo alcon-logo hw100" style="width:100% !important;"></div>
-						</div> -->
-	<!-- 					<div class="col-lg-7 col-md-12 col-sm col-xs-12 txt-c">
-							<div class="col-lg-8 textoverlay hide-next">
-								<div class="loader">
-									<iframe 
-									class="alcon lazy invisible fade-in soft-zoom" 
-									src="images/loaders/bars_fixed.svg"
-									data-src="alcon/xr/alconxr.html"																			
-									frameborder="0"
-									scrolling="no"
-									>
-									</iframe>											
-								</div>
-							</div>
-						</div>	 -->
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="alcon/xr/alconxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>						
+					<div class="row h100 m0">										
+							<div class="item row owl-hide-lg-up x-theme m0">				
+								  <div class="ol-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape h100 loader">								
+										<iframe 
+										id=""
+										style="display:flex;"
+										class="xr-auto"							
+										src="alcon/xr/alconxr.html"																		
+										frameborder="0"
+										scrolling="no"
+										>
+										</iframe>											
+								  </div>
+									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="s-t element-animate">Alcon <strong>Lens Container</strong></h2>
+												<p>Lens container for eye care products company Alcon.<br>
+												This projects was focused on the user experience for the lens wearer	
+												</p>	
+										</div>												  						
+								  </div>								  
+							</div>						
 					</div>
 
 				</div>
@@ -2620,7 +2633,35 @@
 						</div>
 					</div>	
 					<div id="slider-container">
-						<div id="specialized-more" class="owl-carousel c-100">
+						<div id="specialized-more" class="owl-carousel">
+<!-- 						<div class="item owl-hide-lg-up row m0 x-theme">
+							<div class="portrait-hidden col-xs-6-landscape relative c-all p-3 hw100">
+								<div>
+									<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
+									<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+									<p>Specialized creates bikes, components and bike equipment.</p>																				
+								</div>														
+							</div>						
+							<div class="item owl-hide-lg-up co-xs-12 col-xs-6-landscape x-theme zoom-container">
+								<div class="zoom-icon"></div>
+								<div class="loader relative">
+									<img class="push-zoom owl-lazy cover" src="" data-src="Specialized/images/gallery/twisted.png">															
+								</div>
+							</div>
+						</div>	 -->					
+							<div class="item row owl-hide-lg-up x-theme m0">
+									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
+												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+												<p>Specialized creates bikes, components and bike equipment.</p>	
+										</div>												  						
+								  </div>								
+								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100 loader">								
+										<img class="owl-lazy contain" src="" data-src="Specialized/images/gallery/twisted.png">															
+								  </div>
+							  
+							</div>						
 							<div class="item owl-hide-lg-up zoom-container dark-theme">
 							<div class="zoom-icon"></div>	
 								<div class="loader textoverlay invisible zoom-in">																		
@@ -2631,12 +2672,11 @@
 												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
 												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
 												<p>Specialized creates bikes, components and bike equipment.</p>
-												<!-- <p><span class="open-popup btn">Swipe to View</span></p> -->
 											</div>
 											</div>
 										</div>													
 								</div>	
-							</div>
+							</div>								
 <!-- 							<div class="item owl-hide-md-up textoverlay invisible zoom-in dark-theme">
 								<div class="zoom-container loader">
 									<div class="touch-hidden overlay c-all bg-none">
@@ -3021,10 +3061,10 @@
 									</div>	
 								</div>								
 								<div class="portrait-hidden row m0 h100">					
-									<div class="col-lg-4 mr-auto ml-auto">
+									<div class="col-lg-4 mr-auto ml-auto h100">
 										<div class="ppp c-all h100">
 											<div >
-											  <h2 class="s-t">Design <strong>Process</strong></h2>
+											  <h2 class="s-t xs-down-h">Design <strong>Process</strong></h2>
 												<p>My opinion is that in design, communication is fundamental to the outcome, and that's why my design process is built so that you may follow the process as it's developing - it makes sure we're constantly on the same page!</p>
 												<a href="#design-process-popup" class="btn btn-outline open-popup">View</a>								  
 											</div>								
@@ -5490,12 +5530,14 @@
 		
 		if(is_touch_device()) {
 		var theme = 'dark-theme'; //	set theme for touch devices			
-		var this_bg = '#242424'; //	set theme for touch devices			
+		var this_bg = '#242424'; //	set theme for touch devices	
+		$('.x-theme-touch').addClass(theme);	
 		}
 		else
 		{ 
 		var theme = 'light-theme'; // set theme for desktop devices	
 		var this_bg = '#fff';		
+		$('.x-theme-desktop').addClass(theme);
 		}		
 		
 		// apply chosen theme to elements - and mark clicked button with circle	
@@ -5555,7 +5597,7 @@
 		<script src="js/owl.carousel2.js"></script>	
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.stellar.min.js"></script>		
-		<script src="js/rellax.min.js"></script>		
+		<!-- <script src="js/rellax.min.js"></script> -->		
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/main.js"></script>	
 		<script src="js/stellar.js"></script>
@@ -5783,7 +5825,8 @@ console.log('no break');
 		
 		<!-- zoom-icon function -->
 		<script>
-		
+$('.xr-auto').closest('div').append('<div class="xrtext"<h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+
 		//show and hide text on touch 
 		$('.zoomable').on('touchstart touchend',function(){
 			$(this).find('.img-text').toggleClass('hidden ion-ios-search-strong');					
@@ -5858,10 +5901,12 @@ console.log('no break');
 		if(is_touch_device()) {
 		$( '.dark-theme-touch' ).addClass('dark-theme');
 		$( '.light-theme-touch' ).addClass('light-theme');
+		$( '.medium-theme-touch' ).addClass('medium-theme');
 		}		
 		else {
 		$( '.dark-theme-desktop' ).addClass('dark-theme');
-		$( '.light-theme-desktop' ).addClass('dark-theme');
+		$( '.light-theme-desktop' ).addClass('light-theme');
+		$( '.medium-theme-desktop' ).addClass('medium-theme');
 		}	
 		</script>	
 				
