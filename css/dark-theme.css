@@ -1,29 +1,47 @@
-body {
-/* background-color:#212121 !important;	 */
-/* border: 1px solid #343434; */
+:root {
+    --primary-color: rgb(255 255 255);
+    --opacity-color: rgb(255 255 255 / 15%);
+    --secondary-color: rgb(33 33 33 / 30%);
+    --secondary-color-full: rgb(33 33 33 / 90%);
+}
+
+.flowthumbnailitem > div.selected, 
+.flowthumbnailitem > div.selected:hover,
+.flowthumbnailitem > div:hover {
+border-color: var(--primary-color);			
+}
+
+.flowheadertext::after,
+.flowselectionheaderscrollbox > div {
+    content: var(--headertext-value);
+    font-weight: normal;
+	 color:var(--primary-color);	
 }
 
 
 .text-color,
 .ksfont-angle-dbl-left,
 .ksfont-angle-dbl-right,
-h3,
-.counter {
-color: #fff !important;	
+h3, .counter, p, h2, span, .flowselectionheaderscrollbox > div:hover {
+color: var(--primary-color);		
 }
 
-.flowthumbnailitem > div.selected, 
-.flowthumbnailitem > div.selected:hover,
-.flowthumbnailitem > div:hover {
-border-color: #fff !important;		
+.flowheadertextbox.selected:hover, .flowaccordiongroup.selected > .flowheadertextbox:hover, .flowselectionheaderscrollbox > div:hover {
+    color: var(--color-title-text-hover);
+    background: var(--opacity-color);
 }
 
-.flowheadertext::after {
-    content: var(--headertext-value);
-    font-weight: normal;
-	 color:#fff
+.flowheadertextbox.selected, .flowselectionheaderscrollbox > div {
+    color: var(--primary-color);
+    background: var(--secondary-color);
 }
 
-p, h2{
-color:#fff;		
+.flowheadertextbox:hover, .flowselectionheaderscrollbox > div:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color-full);
+}
+
+.flowheadertextbox {
+    color: var(--color-title-text-hover);
+    background: var(--secondary-color);
 }

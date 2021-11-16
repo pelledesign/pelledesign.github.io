@@ -1,26 +1,47 @@
-body {
-/* background-color:#f7f7f7 !important;	 */
-background-color: none !important;	
-/* border: 1px solid #e3e3e3; */
+:root {
+    --primary-color: rgb(0 0 0);
+    --opacity-color: rgb(255 255 255 / 5%);
+    --secondary-color: rgb(255 255 255 / 50%);
+    --secondary-color-full: rgb(255 255 255);
+}
+
+.flowthumbnailitem > div.selected, 
+.flowthumbnailitem > div.selected:hover,
+.flowthumbnailitem > div:hover {
+border-color: var(--primary-color);			
+}
+
+.flowheadertext::after,
+.flowselectionheaderscrollbox > div {
+    content: var(--headertext-value);
+    font-weight: normal;
+	 color:var(--primary-color);	
 }
 
 
 .text-color,
 .ksfont-angle-dbl-left,
 .ksfont-angle-dbl-right,
-h3,
-.counter {
-color: #000 !important;	
+h3, .counter, p, h2, span, .flowselectionheaderscrollbox > div:hover, .flowselectionheaderscrollbox > div {
+color: var(--primary-color);		
 }
 
-.flowthumbnailitem > div.selected, 
-.flowthumbnailitem > div.selected:hover,
-.flowthumbnailitem > div:hover {
-border-color: #000 !important;		
+.flowheadertextbox.selected:hover, .flowaccordiongroup.selected > .flowheadertextbox:hover, .flowselectionheaderscrollbox > div:hover {
+    color: var(--color-title-text-hover);
+    background: var(--opacity-color);
 }
 
-.flowheadertext::after {
-    content: var(--headertext-value);
-    font-weight: normal;
-	 color:#000
+.flowheadertextbox.selected, .flowselectionheaderscrollbox > div {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.flowheadertextbox:hover, .flowselectionheaderscrollbox > div:hover {
+    color: var(--primary-color);
+    background: var(--secondary-color-full);
+}
+
+.flowheadertextbox {
+    color: var(--color-title-text-hover);
+    background: var(--secondary-color);
 }

@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function() {
     setup();
 });
 
-window.addEventListener("load", function() {
+/* window.addEventListener("load", function() {
     calculatefitzoomfactor();
     let zoomfactor = Math.min(fittoviewzoomfactor, 1);
     setzoomfactor(zoomfactor, true);
-});
+}); */
 
 window.addEventListener("resize", function() {
     calculatefitzoomfactor();
@@ -368,7 +368,7 @@ function setup() {
         panelarea.classList.add('layoutvertical');
     }
 
-    let button = document.getElementById('toolbar-reset');
+/*     let button = document.getElementById('toolbar-reset');
     button.addEventListener('click', resetconfiguration);
     button = document.getElementById('toolbar-savecfg');
     button.addEventListener('click', saveconfiguration);
@@ -379,7 +379,7 @@ function setup() {
     button = document.getElementById('toolbar-fittoview');
     button.addEventListener('click', fittoview);
     button = document.getElementById('toolbar-actualsize');
-    button.addEventListener('click', actualsize);
+    button.addEventListener('click', actualsize); */
 
     let imgelm = document.querySelector('.mainimg');
     imgelm.addEventListener('mousedown', imagemousedown);

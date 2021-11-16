@@ -193,7 +193,7 @@ class FlowSelection extends FlowBase {
         this.menuindexelement.addEventListener('click', this.showmenuhandler.bind(this));
 
         this.selectiondisplayelement = this.flowelement.querySelector('.flowselectionheadermenu + .flowheadertextbox');
-/*         this.selectiondisplayelement.addEventListener('click', this.showmenuhandler.bind(this)); */												/* removes menu */
+        this.selectiondisplayelement.addEventListener('click', this.showmenuhandler.bind(this));
 
         this.updateactiondisplay();
         let menuscrollerparent = menuscrollers[0].parentNode;
@@ -456,7 +456,6 @@ function showselectedimage() {
     let imagename = imagemappings[idstr] || 'missing_image.png';
     let imgelm = document.querySelector('.mainimg');
     imgelm.src = 'images/' + encodeURIComponent(imagename);
-/*     imgelm.src = 'akg/web/images/' + encodeURIComponent(imagename); */
 }
 
 function initcheckeditem(group) {
@@ -480,7 +479,6 @@ function augmentmodel() {
             item.parentitem = group;
             if ('icon' in item) {
                 item.icon = 'icons/' + encodeURIComponent(item.icon);
-/* 			   item.icon = 'akg/web/icons/' + encodeURIComponent(item.icon); */
             }
             item.materialgroups = (item.materialgroups || []).map(groupname => materialgroupsmap[groupname]);
             for (let subgroup of item.productoptiongroups || [])

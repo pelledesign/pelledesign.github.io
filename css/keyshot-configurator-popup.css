@@ -57,6 +57,11 @@ touch-action: auto;
 pointer-events: auto;
 }
 
+/* .mainimg { 
+max-height: 100%;
+    max-width: 100%;;
+}
+ */
 /* start from style.css */	
 
 body {

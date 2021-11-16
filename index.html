@@ -53,7 +53,7 @@
 		}
 		</script>		
 		
-		<!-- xr resize -->
+		<!-- xr & config resize -->
 		<script>
 		
 		var xr_resize = function() {
@@ -63,16 +63,16 @@
 			var aspect_ratio;
 			var this_src;
 			
-			$('.xr-auto').each(function() {
+			$('.xr-auto, .config-auto').each(function() {
 				var this_iframe = $(this);
 				this_iframe.addClass('test');
 				this_src = $(this).attr('src');
 				console.log(this_src);
 				
-				if (this_src =='akg/xr/akgxr.html') {
+				if (this_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') {
 				aspect_ratio = 899 / 829;
 				}
-				else if (this_src == 'Converse/xr/conversexr.html') {
+				else if (this_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html') {
 				aspect_ratio = 800 / 1919;
 				}
 				else if (this_src == 'poc/xr/pocxr.html') {
@@ -91,7 +91,7 @@
 				aspect_ratio = 829 / 799;
 				}
 				else {
-				alert('xr error');
+				//alert('xr error');
 				}
 				
 			 if (window.matchMedia("(max-width: 565px)").matches) {
@@ -103,7 +103,7 @@
 			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
 			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
-			 } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
+			 } else if (window.matchMedia("(min-width: 992px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
 			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
 			 }
@@ -597,7 +597,7 @@
 								</div>								
 								<div class="loader">
 									<iframe 
-									class="specialized lazy invisible fade-in" 
+									class="lazy invisible fade-in" 
 									data-src="akg/xr/akgxr.html"																			
 									frameborder="0"
 									scrolling="no"
@@ -714,9 +714,9 @@
 									</div>
 								</div>							
 							</div>					
-							<div class="item keyshotconfig dark-theme" style="background-color:#000000d1">				
+							<div class="item dark-theme" style="background-color:#000000d1">				
 								<iframe 							
-								class="akg-webconfig-process lazy"
+								class="ks-config lazy"
 								data-src="akg/web/keyshot-configurator.html"													
 								frameborder="0"
 								scrolling="no"
@@ -760,7 +760,7 @@
 						</div>	
 					</div>				
 				</div>	
-				<div class="xl-up-h x-theme">	 	
+				<div class=" x-theme">	 	
 					<div class="col-lg-12 x-theme">
 						<div class="item c-all">			
 							<div class="text-box c-all txt-l  invisible fade-in-left">
@@ -802,25 +802,25 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover">	
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>
-						<div class="lg-up-h col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto" style="max-height:100vh;">
+						<div class="lg-up-h col-lg- col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto" style="max-height:100vh;">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/04.png" class="lazy " style="object-position: 100% 17%;">		
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
+						<div class="col-lg-4 col-md-6 col-xs-12 col-xs-6-landscape">
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
+						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
 							<iframe 
 							id=""
 							style="display:flex;"
@@ -836,6 +836,27 @@
 								<img src="akg/images/gallery/03.png" class="lazy cover">	
 							</div>	
 						</div>
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape ">
+							<iframe
+							style="display:flex;"							
+							class="config-auto lazy invisible fade-in dark-theme"		
+							data-src="akg/web/keyshot-configurator.html"												
+							frameborder="0"
+							scrolling="no"
+							>			
+							</iframe>	
+						</div>
+						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape ">
+							<iframe
+							style="display:flex;"							
+							class="config-auto lazy invisible fade-in light-theme"		
+							data-src="akg/web/keyshot-configurator.html"												
+							frameborder="0"
+							scrolling="no"
+							>			
+							</iframe>	
+						</div>
+						
 					</div>								
 				</div>			
 			</div>			
@@ -932,7 +953,7 @@
 										</div>			
 										<div class="col-lg-8 c-all textoverlay-desktop hide-scroll">					
 											<iframe
-											class="converse-xr-inject lazy invisible fade-in soft-zoom" 
+											class="lazy invisible fade-in soft-zoom" 
 											src="images/loaders/bars_fixed.svg"
 											data-src="Converse/xr/conversexr.html"																								
 											frameborder="0"
@@ -1517,10 +1538,10 @@
 									</div>
 								</div>															
 							</div> -->
-							<div class="item keyshotconfig dark-theme">
+							<div class="item dark-theme">
 								<iframe 
 								id="popup-iframe"
-								class="converse-webconfig lazy invisible fade-in"
+								class="ks-config lazy invisible fade-in"
 								data-src="Converse/web/keyshot-configurator.html" 							
 								frameborder="0"
 								scrolling="no"
@@ -1589,23 +1610,6 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-<!-- 						<div class="col-lg-12 loader c-all textoverlay">
-							<img src="" data-src="Converse/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
-						</div> -->
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start ignore">
-						 <h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
-						</div> -->						
-<!-- 						<div  class="col-lg-6 col-md-6 loader invisible fade-in">
-							<iframe 
-							id=""
-							class="xr-iframe lazy dark-theme" 								
-							src=""
-							data-src="Converse/xr/conversexr.html"																			
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>							
-						</div> -->
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
 							<iframe 
 							id=""
@@ -1616,6 +1620,16 @@
 							scrolling="no"
 							>
 							</iframe>
+						</div>	
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
+							<iframe
+							style="display:flex;"							
+							class="config-auto lazy invisible fade-in dark-theme"		
+							data-src="Converse/web/keyshot-configurator.html"												
+							frameborder="0"
+							scrolling="no"
+							>			
+							</iframe>	
 						</div>					
 					</div>				
 				</div>				
@@ -1693,7 +1707,7 @@
 										<div class="col-lg-8 textoverlay">
 											<div class="loader">								
 												<iframe 
-												class="specialized lazy invisible fade-in soft-zoom" 
+												class="lazy invisible fade-in soft-zoom" 
 												data-src="poc/xr/pocxr.html"																				
 												frameborder="0"
 												scrolling="no"
@@ -1998,7 +2012,7 @@
 									<div class="col-lg-8 c-all portrait-hidden">										
 										<iframe 
 										style="max-width:1250px;"
-										class="bagheera lazy invisible fade-in soft-zoom" 
+										class=" lazy invisible fade-in soft-zoom" 
 										data-src="Bagheera/xr/bagheeraxr.html"																			
 										frameborder="0"
 										scrolling="no"
@@ -2381,7 +2395,7 @@
 										<div class="col-lg-8 textoverlay hide-next">
 											<div class="loader">
 												<iframe 
-												class="alcon lazy invisible fade-in soft-zoom" 
+												class="lazy invisible fade-in soft-zoom" 
 												src="images/loaders/bars_fixed.svg"
 												data-src="alcon/xr/alconxr.html"																			
 												frameborder="0"
@@ -2469,39 +2483,7 @@
 							scrolling="no"
 							>
 							</iframe>
-						</div>						
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>		
-						<div class="col-lg-12 loader c-all invisible fade-in" style="height:65vh !important">
-							<div class="justify-content-center absolute  dark-theme no-bg" style="top: 0; right: 0; margin-right: 3px; padding: 9px;">
-								<h3 class="h3 txt-l text-xs-center mb-0" style="font-size:1rem;"><strong>3D </strong>View</h3>
-							</div>						
-							<iframe 
-							id="xr-iframe"
-							class=" lazy dark-theme" 								
-							src=""
-							data-src="akg/xr/akgxr.html"																			
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>	 -->											
-						
+						</div>																					
 					</div>
 				</div>				
 			</div>
@@ -2594,23 +2576,6 @@
 								<p class="img-text hidden"></p>					
 								</div>
 							</div>
-	<!-- 						<div class="col-lg-12 loader c-all textoverlay">
-								<img src="" data-src="Converse/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
-							</div>
-									<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-									 <h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
-									</div>						
-							<div class="col-lg-12 loader c-all invisible fade-in" style="">
-								<iframe 
-								id="xr-iframe"
-								class=" lazy dark-theme" 								
-								src=""
-								data-src="Converse/xr/conversexr.html"																			
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>												
-							</div> -->
 						</div>
 					</div>				
 			</div>
@@ -2725,7 +2690,7 @@
 										<div class="col-lg-6 textoverlay">
 											<div class="loader">
 												<iframe 
-												class="specialized lazy invisible fade-in soft-zoom" 
+												class="lazy invisible fade-in soft-zoom" 
 												data-src="Specialized/xr/specializedxr.html"																						
 												frameborder="0"
 												scrolling="no"
@@ -2765,7 +2730,7 @@
 									</div>									
 								<div class="loader">
 									<iframe 
-									class="specialized lazy invisible fade-in" 
+									class="lazy invisible fade-in" 
 									data-src="Specialized/xr/specializedxr.html"																			
 									frameborder="0"
 									scrolling="no"
@@ -3463,7 +3428,7 @@
 										</div>
 										<iframe
 										id=""	
-										class="akg-process lazy vh75 pb-6" 
+										class="xr-auto lazy vh75 pb-6" 
 										src="" 
 										data-src="akg/xr/akgxr.html"																								
 										frameborder="0"
@@ -3472,34 +3437,6 @@
 									</div>
 									<div class="fadeout-btm"></div>																														
 							</div>								
-<!-- 							<div id="refine mobile xr" class="item owl-hide-md-up cont medium-theme"> 
-								<div id="akg-process-xr-popup" class="m0 h100 row medium-theme">						
-									<div class="col-lg-6 textoverlay">
-										<div class="process-object c-100">
-											<div class="hw100">							
-												<iframe
-												id=""	
-												class="akg-process lazy" 
-												src="" 
-												data-src="akg/xr/akgxr.html"																								
-												frameborder="0"
-												scrolling="no">
-												</iframe>	
-												<div class="overlay bg-none arrow-left">
-													<div class="text-animate">
-														<div class="arrow-rotate-left ignore"></div>									
-													</div>
-												</div>
-												<div class="overlay bg-none arrow-right">
-													<div class="text-animate">
-														<div class="arrow-rotate-right ignore"></div>											
-													</div>
-												</div>												
-											</div>	
-										</div>				
-									</div>
-								</div>	
-							</div> -->
 							<div id="refine desktop" class="item owl-hide-xs-down cont dark-theme"> 
 								<div id="akg-process-xr-popup" class="m0 h100 row">						
 									<div class="col-lg-6 h100 c-all">
@@ -3525,7 +3462,7 @@
 											<div class="hw100">							
 												<iframe
 												id=""	
-												class="akg-process lazy" 
+												class="lazy" 
 												src="" 
 												data-src="akg/xr/akgxr.html"																								
 												frameborder="0"
@@ -3546,7 +3483,7 @@
 									</div>
 								</div>	
 							</div>
-							<div id="bundle mobile txt" class="item keyshotconfig owl-hide-desktop col-lg-12 dark-theme">								
+							<div id="bundle mobile txt" class="item owl-hide-desktop col-lg-12 dark-theme">								
 								<div class="fadeout-top"></div>													
 									<div class="row m0 absolute hw100 c-all show-scroll">
 										<div class="text-box c-all txt-l">
@@ -3562,7 +3499,7 @@
 										</div>
 											<iframe 
 											id=""
-											class="akg-webconfig lazy invisible fade-in bg-none"		
+											class="ks-config lazy invisible fade-in bg-none"		
 											data-src="akg/web/keyshot-configurator.html"																		
 											frameborder="0"
 											scrolling="no"
@@ -3572,13 +3509,13 @@
 									
 									<div class="fadeout-btm"></div>																														
 							</div>								
-							<div id="bundle" class="owl-hide-touch keyshotconfig item cont dark-theme"> 
+							<div id="bundle" class="owl-hide-touch item cont dark-theme"> 
 									<div class="h100 col-lg-12 textoverlay-inverse">
 										<div class="loader dark-theme">
 											<iframe 
 											id="popup-iframe"
-											class="akg-webconfig-process lazy invisible fade-in bg-none"		
-											data-src="akg/web/keyshot-configurator.html"																		
+											class="ks-config lazy invisible fade-in bg-none"		
+											data-src="akg/web/keyshot-configurator-org.html"																		
 											frameborder="0"
 											scrolling="no"
 											>			
@@ -3594,11 +3531,9 @@
 										$(".akg-webconfig-process").on("load", function() {
 
 										  let head = $(this).contents().find("head");	
-										  let css_head = '<link type="text/css" rel="stylesheet" href="../../css/dark-theme.css">';
 										  let col_one = $(this).contents().find("#one");	
 										  let css_col = '<div id="cmf-text-box touch-hidden"><h2 class="mb-4 s-t">CMF <strong>Bundle</strong></h2><p>Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p><p>Try it out in the example below by selecting different cmf swatches for different part.</p></div>';
 										  $(col_one).prepend(css_col);			
-										  $(head).append(css_head);
 											$(this).contents().find("h3").remove();										  
 										
 										});
@@ -3875,7 +3810,7 @@
 							<div class="c-100 w100">
 								<iframe 
 								id=""
-								class="xr-iframe akg lazy invisible fade-in" 								
+								class="	akg lazy invisible fade-in" 								
 								src=""
 								data-src="akg/xr/akgxr.html"																			
 								frameborder="0"
@@ -3895,7 +3830,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="akg showonclick lazy"
+						class=" showonclick lazy"
 						data-src="akg/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -3914,8 +3849,8 @@
 						</div>
 						<iframe 
 						id="popup-iframe"
-						class="akg-webconfig lazy invisible fade-in bg-none"		
-						data-src="akg/web/keyshot-configurator.html"												
+						class="ks-config lazy invisible fade-in bg-none"		
+						data-src="akg/web/keyshot-configurator-org.html"												
 						frameborder="0"
 						scrolling="no"
 						>			
@@ -3970,7 +3905,7 @@
 						<div class="middle col-lg-12 c-100">				
 							<div class="c-100 w100">
 								<iframe 
-								class="converse lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								data-src="Converse/xr/conversexr.html"																			
 								frameborder="0"
 								scrolling="no"
@@ -3985,7 +3920,7 @@
 				<div class="c-100">	
 					<iframe 
 					id="popup-iframe"
-					class="converse-webconfig lazy invisible fade-in"
+					class="ks-config lazy invisible fade-in"
 					data-src="Converse/web/keyshot-configurator.html" 							
 					frameborder="0"
 					scrolling="no"
@@ -4020,7 +3955,7 @@
 						</div>
 						<iframe 
 						id="popup-iframe"
-						class="converse-wireframe-injec lazy"
+						class="lazy"
 						data-src="Converse/webgl/pen.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4037,7 +3972,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="showonclick converse-wireframe-injec lazy"
+						class="showonclick lazy"
 						data-src="Converse/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4058,7 +3993,7 @@
 						</div>
 						<iframe 
 						id="popup-iframe2"
-						class="converse-wireframe-injec lazy"
+						class="lazy"
 						data-src="Converse/webgl/measurements.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4152,7 +4087,7 @@
 						<div class="col-lg-12 col-md-8 col-sm-8 col-xs-12 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
-								class="bagheera-xr-popup lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								data-src="Bagheera/xr/bagheeraxr.html"																			
 								frameborder="0"
 								scrolling="no"
@@ -4163,22 +4098,6 @@
 					</div>
 				</div>		
 			</div>			
-<!-- 			<div id="bagheera-webconfig-popup" class="popup mfp-hide">
-				<div class="c-100">
-					<div class="config-orientation-height">
-						<div data-tooltip="#config-info-popup" class="info-icon ion-information-circled invisible flip-in-y config-info">
-						</div>		
-						<iframe 
-						id="popup-iframe"
-						class="bagheera-webconfig lazy invisible fade-in"			
-						data-src="Bagheera/web/keyshot-configurator.html" 						
-						frameborder="0"
-						scrolling="no"
-						>				 	  
-						</iframe>
-					</div>
-				</div>								 
-			</div> -->
 			<div id="poc-process-popup" class="popup mfp-hide dark-theme fullscreen"> 	  <!-- style="padding:4vw !important;" -->				
 				<div class="viewer medium-theme relative r16_9 scrolldown-container">	 <!-- dropshadow -->				
 <!-- 					<div class="slide light-theme h-auto">	
@@ -4215,15 +4134,15 @@
 							</div>	
 						</div>
 						<div class="col-lg-6 col-md-6 textoverlay">
-											<div class="loader">								
-												<iframe 
-												class="specialized lazy invisible fade-in soft-zoom" 
-												data-src="poc/xr/pocxr.html"																				
-												frameborder="0"
-												scrolling="no"
-												>
-												</iframe>						
-											</div>	
+							<div class="loader">								
+								<iframe 
+								class="lazy invisible fade-in soft-zoom" 
+								data-src="poc/xr/pocxr.html"																				
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>						
+							</div>	
 						</div>						
 					</div>
 					
@@ -4303,7 +4222,7 @@
 					</div>	
 					<iframe 
 					id="popup-iframe"
-					class="poc-wireframe-inject2 lazy"
+					class="lazy"
 					src=""
 					data-src="poc/webgl/rendered.html" 						
 					frameborder="0"
@@ -4346,7 +4265,7 @@
 						<div class="middle col-lg-12 c-100">				
 							<div class="c-100 w100">
 								<iframe 
-								class="spotify lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								data-src="spotify/xr/spotifyxr.html"																			
 								frameborder="0"
 								scrolling="no"
@@ -4428,7 +4347,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="spotify-model-popup showonclick  lazy"
+						class="showonclick  lazy"
 						data-src="spotify/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4461,7 +4380,7 @@
 						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
-								class="specialized-xr-popup lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								data-src="Specialized/xr/specializedxr.html"																			
 								frameborder="0"
 								scrolling="no"
@@ -4481,7 +4400,7 @@
 						</div>
 						<iframe 
 						id="popup-iframe"
-						class="specialized-model-popup lazy"
+						class="lazy"
 						data-src="Specialized/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4502,7 +4421,7 @@
 						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
-								class="haglofs lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								src="images/loaders/bars_fixed.svg"
 								data-src="haglofs/xr/haglofs.html"																			
 								frameborder="0"
@@ -4522,7 +4441,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="showonclick converse-wireframe-injec lazy"
+						class="showonclick lazy"
 						data-src="haglofs/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4560,7 +4479,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="showonclick converse-wireframe-injec lazy"
+						class="showonclick lazy"
 						data-src="belmar/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -4581,7 +4500,7 @@
 						<div class="col-lg-9 col-md-8 col-sm-8 col-xs-8 row-lg-8 row-md-8 row-sm-8 row-xs-8 c-100">				
 							<div class="c-100">
 								<iframe 
-								class="alcon-xr-popup lazy invisible fade-in" 
+								class="lazy invisible fade-in" 
 								src="images/loaders/bars_fixed.svg"
 								data-src="alcon/xr/alconxr.html"																			
 								frameborder="0"
@@ -4601,7 +4520,7 @@
 							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh invisible flip-in-y"></div>	
 						</div>
 						<iframe 
-						class="alcon-model-popup lazy"
+						class="lazy"
 						data-src="alcon/webgl/rendered.html" 							
 						frameborder="0"
 						scrolling="no"
@@ -5596,8 +5515,7 @@
 		<script src="js/magnific.js"></script>	
 		<script src="js/owl.carousel2.js"></script>	
 		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>		
-		<!-- <script src="js/rellax.min.js"></script> -->		
+		<script src="js/jquery.stellar.min.js"></script>				
 		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/main.js"></script>	
 		<script src="js/stellar.js"></script>
@@ -5606,209 +5524,7 @@
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 
-				<!-- iframe auto-padding -->
-<!-- 		<script>
 
-		$("iframe.xr-iframe").on('load', function() {
-
-			//get proportions of index div					
-			var this_iframe = $(this);																								
-			var iframe = this;
-
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-			var xr_image = innerDoc.getElementById('backbuffer');
-			
-			xr_image.onload = function(){ //every time the image updates
-			var this_container_width = this_iframe.closest('.auto-padding').width();
-			console.log('container width is: ', this_container_width);
-			//console.log(this);
-			var natural_width = this.naturalWidth;
-			var natural_height = this.naturalHeight;
-			var aspect_ratio_reverse = natural_height / natural_width;
-			var this_src = xr_image.src;
-			console.log('current image src is:', this_src);
-			
-			var set_padding = aspect_ratio_reverse * 100;
-			this_iframe.closest('.auto-padding').css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
-			this_iframe.addClass('loaded');
-			console.log('change');
-			
-			}
-		});
-
-
-
-		</script> -->
-<!-- 		<script>
-						
-				$(window).on('orientationchange', function() {
-
-					$('iframe.xr-iframe').each(function() {	
-						
-						var this_iframe = $(this);					
-						var iframe = this;
-						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-						var xr_image = innerDoc.getElementById('backbuffer');
-						
-
-						
-						//if (this_iframe.hasClass('loaded') ) {
-
-						var this_src = xr_image.src;
-						console.log('orientation changed. current image src is:', this_src);						
-						
-						var natural_height = xr_image.naturalHeight;
-						var natural_width = xr_image.naturalWidth;
-
-						var aspect_ratio_reverse = natural_height / natural_width;
-						var set_padding = aspect_ratio_reverse * 100;
-						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-						this_iframe.closest('.auto-padding').css("padding-top", "300%").css('padding-top', '+=1px').css('padding-top', '-=1px');
-						//alert('test');
-						
-						//xr_image.src = 'file:///C:/Users/pelle/Google%20Drive/Portfolio/pelledesign.github.io/akg/xr//0_15.png';
-						
-						//}
-					});
-	
-
-
-				});
-
-		</script>		 -->
-<!-- 		<script>
-						
-				$(window).on('resize', function() {
-
-					$('iframe.xr-iframe').each(function() {
-						//get proportions of index div		
-						
-						var this_iframe = $(this);					
-						console.log(this_iframe);
-						var iframe = this;
-						var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-						var xr_image = innerDoc.getElementById('backbuffer');
-var this_container_width = this_iframe.closest('.auto-padding').width();
-			console.log('container width is: ', this_container_width);
-						if (this_iframe.hasClass('loaded') ) {
-						
-						
-						var natural_height = xr_image.naturalHeight;
-						var natural_width = xr_image.naturalWidth;
-
-						var aspect_ratio_reverse = natural_height / natural_width;
-						var set_padding = aspect_ratio_reverse * 100;
-						console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-						this_iframe.closest('.auto-padding').delay( 3000 ).css("padding-top",set_padding+"%").css('padding-top', '+=1px').css('padding-top', '-=1px');
-						}
-					});
-	
-
-
-				});
-///473.219
-
-		</script> -->		
-<!-- 		<script>
-						
-				$(window).on('resize', function() {
-					
-					//get proportions of index div					
-					var this_iframe = $('#apan');	
-					console.log(this_iframe.width);					
-					var iframe = document.getElementById('apan');
-					var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-					var xr_image = innerDoc.getElementById('backbuffer');
-
-					var natural_height = xr_image.naturalHeight;
-					var natural_width = xr_image.naturalWidth;
-					
-					var aspect_ratio_reverse = natural_height / natural_width;
-					var set_padding = aspect_ratio_reverse * 100;
-					console.log(natural_height, natural_width, aspect_ratio_reverse, set_padding);
-
-				});
-
-		</script> -->
-
-<!-- 		<script>
-		var this_src = $('#krabba').attr('src');
-		console.log('Source:', this_src);
-		</script> -->
-		
-<!-- 				<script>
-							 
-		$("iframe.xr-iframe").on('load', function() {
-console.log('dd');
-			//get proportions of index div
-			var height = $(this).closest('.auto-props').height();
-			var width = $(this).closest('.auto-props').width();						
-			var this_src = $(this).attr('src');
-			var babb = $(this);
-																							
-			//get proportions of iframe #backbuffer
-			var iframe = this;
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;						
-			var xr_image = innerDoc.getElementById('backbuffer');
-			
-			xr_image.onload = function(){
-				var natural_width = this.naturalWidth;
-				var natural_height = this.naturalHeight;
-				var aspect_ratio = natural_width / natural_height;
-				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
-				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
-				
-
-				var set_height = width / aspect_ratio;
-				console.log('Set height to: ', set_height);
-				babb.closest('.auto-props').css("height",set_height+"px");						
-
-
-				//if (aspect_ratio > 1) {
-				//var set_height = width / aspect_ratio;
-				//console.log('Set height to: ', set_height);
-				//babb.closest('.auto-props').css("height",set_height+"px");						
-				//}
-
-				//else if (aspect_ratio < 1) {
-				//var set_height = width / aspect_ratio;
-				//console.log('Set height to: ', set_height);
-				//babb.closest('.auto-props').css("height",set_height+"px");					
-				//}
-			}
-		});
-
-		$(window).on('orientationchange', function() {
-
-			console.log('orientation was changed');
-			var this_iframe = $(".krabba");
-			
-			//get proportions of index div
-			var height = this_iframe.closest('.auto-props').height();
-			var width = this_iframe.closest('.auto-props').width();						
-			var this_src = this_iframe.attr('src');
-			//var babb = this_iframe;
-																							
-			//get proportions of iframe #backbuffer
-			var iframe = document.getElementById('krabba');
-			var innerDoc = iframe.contentDocument || iframe.contentWindow.document;				
-			var xr_image = innerDoc.getElementById('backbuffer');
-			
-console.log('no break');			
-				var natural_width = xr_image.naturalWidth;
-				var natural_height = xr_image.naturalHeight;
-				var aspect_ratio = natural_width / natural_height;
-				console.log('Source:', this_src, 'container width:', width, 'container height:', height);
-				console.log('Image Original Width:', natural_width, 'Image Original Height:', natural_height, 'Aspect Ratio:', aspect_ratio);
-				
-
-				var set_height = width / aspect_ratio;
-				console.log('Set height to: ', set_height);
-				this_iframe.closest('.auto-props').css("height",set_height+"px");						
-
-		});
-
-		</script> -->
 		<!-- lock body on nav open -->	
 <!-- 		<script>
 		$(document).ready(function(){
@@ -6196,14 +5912,7 @@ $('.fullscreen').on('click', function () {
 		});
 	
 		</script>
-				
-		<!-- rellax -->
-		<script>
-		  var rellax = new Rellax('.rellax', {
-			 breakpoints:[576, 768, 1201]
-		  });
-		</script>
-					
+									
 		<!-- touch and desktop hidden  -->
 		<script>
 		if(is_touch_device()) {
@@ -6331,7 +6040,7 @@ $('.fullscreen').on('click', function () {
 		</script>
 
 		<!-- iframe inject, reload + bg select buttons -->
-		<script>	
+<!-- 		<script>	
 
 			//reload iframes
 		  $('.ion-refresh').on('click',function(){
@@ -6341,50 +6050,121 @@ $('.fullscreen').on('click', function () {
 		
 			//inject iframe styles & spinners
 			$(".akg, .akg-webconfig, .akg-model-popup, .converse, .converse-more, .converse-webconfig, .bagheera-xr-popup, .poc, .poc-process, .poc-wireframe-inject2,  .specialized-xr-popup, .specialized-model-popup, .spotify, .spotify-model-popup, .haglofs, .alcon-xr-popup, .alcon-model-popup, .akg-webconfig-process").on("load", function() {
-			//alert('dd');
-			if ($(this).closest('.popup, .keyshotconfig').hasClass('dark-theme'))
+			
+			this_iframe = $(this);
+
+			if (this_iframe.closest('.popup, .item').hasClass('dark-theme') || this_iframe.hasClass('dark-theme'))
 			{
 			themeclr ="dark";
-			//alert('dark-theme');
 			}
-			else if ($(this).closest('.popup, .keyshotconfig').hasClass('light-theme'))
+			else if (this_iframe.closest('.popup, .item').hasClass('light-theme') || this_iframe.hasClass('light-theme'))
 			{
 			themeclr ="light";
 			//alert('dark-theme');
 			}
-			else if ($(this).closest('.popup, .keyshotconfig').hasClass('medium-theme'))
+			else if (this_iframe.closest('.popup, .item').hasClass('medium-theme') || this_iframe.hasClass('medium-theme'))
 			{
 			themeclr ="medium";
 			//alert('dark-theme');
 			}
 			else {
-			ppp = $(this).attr('class').split(' ')[0];
-			//alert('no theme found for ' +ppp);
+			iframe_classes = $(this).attr('class');
+			alert('no theme found for: ' +iframe_classes);
 			}
 			
-			brand = $(this).attr('class').split(' ')[0];
+		  let head = this_iframe.contents().find("head");	
+		  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+		  $(head).append(css);
+		  this_iframe.addClass("visible");
+		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
+		});
+		</script> -->
+		<script>	
+		
+			$('.ks-config, .config-auto').each(function() {
+			 		
+			//inject iframe styles & spinners
+			$(this).on("load", function() {
+			
+			this_iframe = $(this);
 
-			  let head = $("." + brand).contents().find("head");	
-			  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-			  $(head).append(css);
-			  $('.' + brand).addClass("visible");
-			  $('#' + brand + '-xr-popup').removeClass("loader");			  
+			if (this_iframe.closest('.popup, .item').hasClass('dark-theme') || this_iframe.hasClass('dark-theme'))
+			{
+			themeclr ="dark";
+			}
+			else if (this_iframe.closest('.popup, .item').hasClass('light-theme') || this_iframe.hasClass('light-theme'))
+			{
+			themeclr ="light";
+			//alert('dark-theme');
+			}
+			else if (this_iframe.closest('.popup, .item').hasClass('medium-theme') || this_iframe.hasClass('medium-theme'))
+			{
+			themeclr ="medium";
+			//alert('dark-theme');
+			}
+			else {
+			iframe_classes = $(this).attr('class');
+			alert('no theme found for: ' +iframe_classes);
+			}
 			
-				//bg select buttons
-				$('#' + brand + '-xr-popup #bg-button').click(function(){
-					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("dark-theme");
-				});
-				$('#' + brand + '-xr-popup #bg-button2').click(function(){
-					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("light-theme");
-				});
-				$('#' + brand + '-xr-popup #bg-button3').click(function(){
-					 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
-				});
+		  let head = this_iframe.contents().find("head");	
+		  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+		  $(head).append(css);
+		  this_iframe.addClass("visible");
+		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
+		});
+	});	
+		</script>		
+<!-- 		<script>	
+		
+			$('.config-auto').each(function() {
+			 		
+			//inject iframe styles & spinners
+			$(this).on("load", function() {
 			
-	  		
+			this_iframe = $(this);
+
+			if (this_iframe.hasClass('dark-theme'))
+			{
+			themeclr ="dark";
+			}
+			else if (this_iframe.hasClass('light-theme'))
+			{
+			themeclr ="light";
+			//alert('dark-theme');
+			}
+			else if (this_iframe.hasClass('medium-theme'))
+			{
+			themeclr ="medium";
+			//alert('dark-theme');
+			}
+			else {
+			iframe_classes = $(this).attr('class');
+			alert('no theme found for: ' +iframe_classes);
+			}
+			
+		  let head = this_iframe.contents().find("head");	
+		  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
+		  $(head).append(css);
+		  this_iframe.addClass("visible");
+		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
+		});
+	});	
+		</script> -->
+<!-- 		<script>
+			//bg select buttons
+			$('#' + brand + '-xr-popup #bg-button').click(function(){
+				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("dark-theme");
+			});
+			$('#' + brand + '-xr-popup #bg-button2').click(function(){
+				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("light-theme");
+			});
+			$('#' + brand + '-xr-popup #bg-button3').click(function(){
+				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
+			});				  		
 			});
 									
-		</script>
+		</script> -->
 				
 		<!-- magnific -->		
 		<script>
