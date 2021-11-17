@@ -14096,7 +14096,8 @@ fill:var(--contrast);
 .light-theme-xs .ion-refresh:before,
 .light-theme-xs .ion-android-color-palette:before,
 .light-theme-xs .btn-outline
-.light-theme-xs .zoom-icon {
+.light-theme-xs .zoom-icon,
+.light-theme .ion-ios-plus.ion-ios-plus-color {
 color: var(--contrast)!important;
 fill:var(--contrast)!important;
 }
@@ -14163,7 +14164,8 @@ border-color: var(--contrast) !important;
 .medium-theme .ion-refresh:before,
 .medium-theme .ion-android-color-palette:before,
 .medium-theme .btn-outline,
-.medium-theme p.img-text.ion-ios-search-strong {
+.medium-theme p.img-text.ion-ios-search-strong,
+.medium-theme div.ion-ios-plus.ion-ios-plus-color {
 color: var(--contrast);
 fill:var(--contrast);
 }
@@ -14264,7 +14266,9 @@ background-position: 50% 50%;
 .dark-theme .btn-outline
 .dark-theme .zoom-icon,
 .dark-theme .configtext,
-.dark-theme .xrtext { 
+.dark-theme .xrtext,
+.dark-theme .ion-ios-plus.ion-ios-plus-color
+ { 
 color: var(--whites-lightest);
 fill: var(--whites-lightest);
 }
@@ -18546,4 +18550,13 @@ padding-right: 1rem;
 } */
 
 
+.ion-ios-plus {
+color: rgb(176,176,176, 0.6);	
+}
+.ion-ios-plus:before {
+font-size:21px;
+}
 
+.ion-ios-plus-color {
+
+}

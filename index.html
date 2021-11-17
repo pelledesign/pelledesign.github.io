@@ -53,8 +53,11 @@
 		}
 		</script>		
 		
-		<!-- xr & config resize -->
+		<!-- xr-auto & config-auto resize & texts -->
 		<script>
+		
+		$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+		$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>');
 		
 		var xr_resize = function() {
 			var this_iframe;
@@ -784,25 +787,25 @@
 						</div>										
 					</div>			
 					<div id="grid" class="item row m0 h100 relative x-theme">	
-						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>					
-						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
+						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>
-						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
+						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover">	
 								<p class="img-text hidden"></p>
@@ -5508,10 +5511,7 @@
 	});	
 				
 		</script>
-		
-<!-- navbar-toggler collapsed
-aria-expanded="false" -->
-		
+				
 		<script src="js/lazyload.js"></script>
 		<script src="js/logos.js"></script>	
 		<script src="js/bootstrap.min.js"></script> <!-- needed for mobile menu -->
@@ -5528,15 +5528,21 @@ aria-expanded="false" -->
 		<script src="js/isInViewport.js"></script>
 		
 		<!-- zoom-icon function -->
-		<script>
-$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
-$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>');		
+		<script>	
+		
+		<!-- ion-ios-plus -->
+		$('.zoom-icon').addClass('ion-ios-search-strong');	
+		
+		//show zoom icon on touch / add zoom-icon 
+		//$('.zoomable').on('touchstart touchend',function(){
+			//$(this).find('.img-text').toggleClass('hidden ion-ios-search-strong');					
+		//});
 
-		//show and hide text on touch 
-		$('.zoomable').on('touchstart touchend',function(){
-			$(this).find('.img-text').toggleClass('hidden ion-ios-search-strong');					
+			$('.zoomable').prepend('<div class="ion-ios-plus c-absolute"></div>');
+			$('.zoomable').on('touchstart touchend mouseenter mouseleave',function(){
+			$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color');					
 			});
-			
+		<!-- zoom-icon function -->		
 		$('.zoom-icon, .zoomable').on('click', function() {
 			
 			// select popup background based on background of .item 	
@@ -5583,7 +5589,6 @@ $('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 t
 			}).click(function(){
 			  removeModal();
 			}).appendTo('body');
-
 
 			//scroll image to center position
 			var imglength = $(this).next('img').width();	
@@ -5778,7 +5783,7 @@ $('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 t
 		});
 		</script>
 
-		<!-- auto hide header	 -->
+		<!-- auto hide header -->
 		<script>
 			 		
 		console.log(1);
@@ -5886,15 +5891,10 @@ $('.fullscreen').on('click', function () {
 		});
 		</script>
 		
-		<!-- buttons  -->
+		<!-- buttons & icons-->
 		<script>
-		
-		<!-- SELECT  -->
-		
-		//select icons all devices
-		<!-- $('.zoom-icon').addClass('ion-ios-search-strong');	 -->			
-				
-		//select icons mobile
+									
+		//add textoverlay icon
 		if(is_touch_device()) {		
 		//$('.owl-carousel, #poc, #process-md-down').find('.textoverlay:not(.no-more-icon), .textoverlay-mobile:not(.no-more-icon)').not('.textoverlay.no-more-icon').prepend('<div class="ion-android-add big more-icon"></div>');
 		//$('.owl-carousel, #poc, #process-md-down').find('.textoverlay').prepend('<div class="ion-android-add more-icon"></div>');
@@ -5914,7 +5914,6 @@ $('.fullscreen').on('click', function () {
 		$(this).find('.scroll-down').addClass('invisible');			
 	  });
 
-
 		$('.hide-on-click').on('touchstart scroll',function(){
 		
 		var el = $(this);
@@ -5928,9 +5927,6 @@ $('.fullscreen').on('click', function () {
 		  }, 500);							
 	  });
 	  
-	  
-	  
-
 		<!-- SHOW -->	
 		
 		$(".show-shaded").on("click", function() {
@@ -6069,48 +6065,13 @@ $('.fullscreen').on('click', function () {
 		}
 		</script>
 
-		<!-- iframe inject, reload + bg select buttons -->
-<!-- 		<script>	
-
-			//reload iframes
+		<!-- iframes inject css & refresh -->
+		<script>	
 		  $('.ion-refresh').on('click',function(){
 			iframe = $(this).closest('.iframe-container').find('iframe').first();
 			iframe.attr('src', iframe.attr('src'));				
 		  });
-		
-			//inject iframe styles & spinners
-			$(".akg, .akg-webconfig, .akg-model-popup, .converse, .converse-more, .converse-webconfig, .bagheera-xr-popup, .poc, .poc-process, .poc-wireframe-inject2,  .specialized-xr-popup, .specialized-model-popup, .spotify, .spotify-model-popup, .haglofs, .alcon-xr-popup, .alcon-model-popup, .akg-webconfig-process").on("load", function() {
-			
-			this_iframe = $(this);
-
-			if (this_iframe.closest('.popup, .item').hasClass('dark-theme') || this_iframe.hasClass('dark-theme'))
-			{
-			themeclr ="dark";
-			}
-			else if (this_iframe.closest('.popup, .item').hasClass('light-theme') || this_iframe.hasClass('light-theme'))
-			{
-			themeclr ="light";
-			//alert('dark-theme');
-			}
-			else if (this_iframe.closest('.popup, .item').hasClass('medium-theme') || this_iframe.hasClass('medium-theme'))
-			{
-			themeclr ="medium";
-			//alert('dark-theme');
-			}
-			else {
-			iframe_classes = $(this).attr('class');
-			alert('no theme found for: ' +iframe_classes);
-			}
-			
-		  let head = this_iframe.contents().find("head");	
-		  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-		  $(head).append(css);
-		  this_iframe.addClass("visible");
-		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
-		});
-		</script> -->
-		<script>	
-		
+		  
 			$('.ks-config, .config-auto').each(function() {
 			 		
 			//inject iframe styles & spinners
@@ -6125,12 +6086,10 @@ $('.fullscreen').on('click', function () {
 			else if (this_iframe.closest('.popup, .item').hasClass('light-theme') || this_iframe.hasClass('light-theme'))
 			{
 			themeclr ="light";
-			//alert('dark-theme');
 			}
 			else if (this_iframe.closest('.popup, .item').hasClass('medium-theme') || this_iframe.hasClass('medium-theme'))
 			{
 			themeclr ="medium";
-			//alert('dark-theme');
 			}
 			else {
 			iframe_classes = $(this).attr('class');
@@ -6144,43 +6103,9 @@ $('.fullscreen').on('click', function () {
 		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
 		});
 	});	
-		</script>		
-<!-- 		<script>	
+		</script>	
 		
-			$('.config-auto').each(function() {
-			 		
-			//inject iframe styles & spinners
-			$(this).on("load", function() {
-			
-			this_iframe = $(this);
-
-			if (this_iframe.hasClass('dark-theme'))
-			{
-			themeclr ="dark";
-			}
-			else if (this_iframe.hasClass('light-theme'))
-			{
-			themeclr ="light";
-			//alert('dark-theme');
-			}
-			else if (this_iframe.hasClass('medium-theme'))
-			{
-			themeclr ="medium";
-			//alert('dark-theme');
-			}
-			else {
-			iframe_classes = $(this).attr('class');
-			alert('no theme found for: ' +iframe_classes);
-			}
-			
-		  let head = this_iframe.contents().find("head");	
-		  let css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-		  $(head).append(css);
-		  this_iframe.addClass("visible");
-		  //$('#' + brand + '-xr-popup').removeClass("loader");			  
-		});
-	});	
-		</script> -->
+		<!-- background select -->
 <!-- 		<script>
 			//bg select buttons
 			$('#' + brand + '-xr-popup #bg-button').click(function(){

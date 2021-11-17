@@ -7,13 +7,14 @@ function mobile (
 )
 
 function both (
-
-evaluate title styles
+fix grid - then speed insight
 use akgxr popup (mobile) as reference for how to separate the ks configs
 injects for xr
 add 3d models
-enable vertical scolling on big xr
-orientationchange jumps + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
+evaluate title styles
+
+enable vertical scolling on tall xr
+orientationchange jumps https://css-tricks.com/content-jumping-avoid/ + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
 pop-themes
 p-logo-new fixed?
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
@@ -45,7 +46,7 @@ belmar - finish model
 )
 
 function övrigt (
-
+why '?' in speed insights? "#grid"?
 frames in premiere > transparent video
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
