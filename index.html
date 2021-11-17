@@ -836,20 +836,20 @@
 								<img src="akg/images/gallery/03.png" class="lazy cover">	
 							</div>	
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape ">
+						<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape dark-theme">
 							<iframe
 							style="display:flex;"							
-							class="config-auto lazy invisible fade-in dark-theme"		
+							class="config-auto lazy invisible fade-in"		
 							data-src="akg/web/keyshot-configurator.html"												
 							frameborder="0"
 							scrolling="no"
 							>			
 							</iframe>	
 						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape ">
+						<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape light-theme">
 							<iframe
 							style="display:flex;"							
-							class="config-auto lazy invisible fade-in light-theme"		
+							class="config-auto lazy invisible fade-in"		
 							data-src="akg/web/keyshot-configurator.html"												
 							frameborder="0"
 							scrolling="no"
@@ -5508,7 +5508,10 @@
 	});	
 				
 		</script>
-			
+		
+<!-- navbar-toggler collapsed
+aria-expanded="false" -->
+		
 		<script src="js/lazyload.js"></script>
 		<script src="js/logos.js"></script>	
 		<script src="js/bootstrap.min.js"></script> <!-- needed for mobile menu -->
@@ -5523,25 +5526,11 @@
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
-
-
-		<!-- lock body on nav open -->	
-<!-- 		<script>
-		$(document).ready(function(){
-			$('#nav-icon3').click(function(){
-
-				$('body').toggleClass('no-touch');
-				$('body.no-touch').on("touchstart touchmove", function(e){
-				//preventDefault(); 
-				});
-				//$( 'body:not( .lock-scroll )' ).addClass( 'lock-scroll' );
-			});
-		});
-		</script> -->
 		
 		<!-- zoom-icon function -->
 		<script>
-$('.xr-auto').closest('div').append('<div class="xrtext"<h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>');		
 
 		//show and hide text on touch 
 		$('.zoomable').on('touchstart touchend',function(){
@@ -5748,6 +5737,47 @@ $('.xr-auto').closest('div').append('<div class="xrtext"<h3 class="h3 txt-l text
 
 		</script>
 			
+		<!-- header	 -->
+		<script>
+		
+		<!-- lock body on nav open -->	
+		$(document).ready(function(){
+			$('#nav-icon3').click(function(){
+				$('body').toggleClass('lock-scroll');
+			});
+		});	
+		
+		/* header */
+			
+			/* $('nav .dropdown').hover(function(){
+				var $this = $(this);
+				$this.addClass('show');
+				$this.find('> a').attr('aria-expanded', true);
+				$this.find('.dropdown-menu').addClass('show');
+			}, function(){
+				var $this = $(this);
+					$this.removeClass('show');
+					$this.find('> a').attr('aria-expanded', false);
+					$this.find('.dropdown-menu').removeClass('show');
+			}); */
+
+		/* hide expanded menu on body and header links click*/
+		$('body').on('click', ":not(header, header *)", function(){
+			$('.navbar-collapse').removeClass('show');
+			  if ($('.navbar-toggler').hasClass('open')) {
+				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
+				  
+			  }	
+			//$('.navbar-toggler collapsed').removeClass('show');
+		});
+
+		$('header a.nav-link').on('click',  function(){
+			$('.navbar-collapse').removeClass('show');
+			$('.navbar-toggler').removeClass('open').addClass('collapsed');
+			$('body').toggleClass('lock-scroll');
+		});
+		</script>
+
 		<!-- auto hide header	 -->
 		<script>
 			 		

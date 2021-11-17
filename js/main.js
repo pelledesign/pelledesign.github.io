@@ -1,9 +1,6 @@
 (function($) {
 
-
 	'use strict';
-
-	// bootstrap dropdown hover
 
   // loader
   var loader = function() {
@@ -14,34 +11,6 @@
     }, 1);
   };
   loader();
-
-/* header */
-	
-	/* $('nav .dropdown').hover(function(){
-		var $this = $(this);
-		$this.addClass('show');
-		$this.find('> a').attr('aria-expanded', true);
-		$this.find('.dropdown-menu').addClass('show');
-	}, function(){
-		var $this = $(this);
-			$this.removeClass('show');
-			$this.find('> a').attr('aria-expanded', false);
-			$this.find('.dropdown-menu').removeClass('show');
-	}); */
-
-/* hide expanded menu on body and header links click*/
-$('body').on('click', ":not(header, header *)", function(){
-	$('.navbar-collapse').removeClass('show');
-	  if ($('.navbar-toggler').hasClass('open')) {
-		  $('.navbar-toggler').removeClass('open').addClass('collapsed');
-	  }	
-	//$('.navbar-toggler collapsed').removeClass('show');
-});
-
-$('header a.nav-link').on('click',  function(){
-	$('.navbar-collapse').removeClass('show');
-	$('.navbar-toggler').removeClass('open').addClass('collapsed');
-});
 
 var
 hero_slider  = $('#hero-slider'),
@@ -163,23 +132,23 @@ var i_d =  $(this).attr('id');
 });
 
 /* remove loader + add animation when slide is done loading - Verlok - used also for popups */
-  $('img.lazy, iframe.lazy').on('load',function(){
-	$(this).closest('.loader').removeClass('loader'); 
+$('img.lazy, iframe.lazy').on('load',function(){
+$(this).closest('.loader').removeClass('loader'); 
 
-    if ($(this).hasClass('lazy-fade-in')){
-		 
-			$(this).addClass('item-animate');
-			setTimeout(function(){
-				$('body .lazy-fade-in.item-animate').each(function(k){
-					var el = $(this);
-					setTimeout( function () {
-						el.removeClass('invisible');
-						el.addClass('fadeIn element-animated');							
-						el.removeClass('item-animate');
-					},  k * 100);
-				});					
-			}, 100);			
-    }	
+ if ($(this).hasClass('lazy-fade-in')){
+	 
+		$(this).addClass('item-animate');
+		setTimeout(function(){
+			$('body .lazy-fade-in.item-animate').each(function(k){
+				var el = $(this);
+				setTimeout( function () {
+					el.removeClass('invisible');
+					el.addClass('fadeIn element-animated');							
+					el.removeClass('item-animate');
+				},  k * 100);
+			});					
+		}, 100);			
+ }	
 });
 
 

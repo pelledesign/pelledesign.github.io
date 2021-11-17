@@ -14049,7 +14049,9 @@ div.light-theme svg,
 .light-theme .overlay .ion-android-color-palette:before,
 .light-theme .overlay .btn-outline
 .light-theme .overlay .zoom-icon
-.light-theme .overlay .btn {
+.light-theme .overlay .btn,
+.light-theme .configtext h3,
+.light-theme .xrtext h3 {
 color: var(--contrast);
 fill:var(--contrast);
 }
@@ -14260,7 +14262,9 @@ background-position: 50% 50%;
 .dark-theme .ion-android-color-palette:before,
 .dark-theme .ion-android-color-palette:before,
 .dark-theme .btn-outline
-.dark-theme .zoom-icon { 
+.dark-theme .zoom-icon,
+.dark-theme .configtext,
+.dark-theme .xrtext { 
 color: var(--whites-lightest);
 fill: var(--whites-lightest);
 }
@@ -14319,7 +14323,7 @@ background-position: 50% 50%;
  margin-bottom:.5em;	
 }
 
-.xrtext {
+.xrtext h3, .configtext h3{
 font-size: 0.8rem;	
 line-height: 0.8rem;	
 padding: 1rem 1rem 0 0 ;
@@ -17946,10 +17950,13 @@ border-bottom: 1px solid #000;
 
 
 /* jquery-scroll-snap */
-body.lock-scroll{
+
+
+@media (max-width: 1199.98px) {
+body.lock-scroll {
   overflow: hidden;
 }
-
+}
 
 #theme-switcher {
 position: fixed; 
@@ -18508,9 +18515,15 @@ min-width: 100%;
 .xrtext {
 top: 0;
 right: 0;
-color: white;
 position: absolute;
 padding-right: 1rem;	
+}
+
+.configtext {
+top: 0;
+left: 0;
+position: absolute;
+padding-left: 1rem;	
 }
 /* .xr-auto:before {
 content: "3d View";

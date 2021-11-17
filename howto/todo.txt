@@ -4,22 +4,21 @@ function desktop (
 )
 
 function mobile (
-hide header on swipedown or prevent swipe
 )
 
 function both (
+
+evaluate title styles
 use akgxr popup (mobile) as reference for how to separate the ks configs
 injects for xr
 add 3d models
 enable vertical scolling on big xr
-lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
+orientationchange jumps + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
 pop-themes
 p-logo-new fixed?
-evaluate title styles
-snyggare loads / animations - slide w/ several owl-lazy's? 
-check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc
+check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
 process
-check all devices + browsers
+
 )
 
 function brands (
@@ -51,6 +50,9 @@ frames in premiere > transparent video
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
  xr hotspots
+ snyggare loads / animations - slide w/ several owl-lazy's? 
+optimzed bootstrap code 
+ 
 watch .git
 
 )
@@ -64,7 +66,6 @@ lighthouse: desktop: 72, 79
 lighthouse: mobile:	39, 
 )
 
-
 function changeLog (
 
 211028
@@ -73,9 +74,3 @@ added on-click trigger to about_slider_mobile in main.js
 
 /* removed class .zoom-container {height:100%;width:100%;} to create dynamic equal row heights */
 )
-
-2.36
-
-1919/800=2,39875	
-
-calc(765px * 0.4168);
