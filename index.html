@@ -1,16 +1,6 @@
 	<!doctype html> 
 <html lang="en">
 	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173208168-1"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-173208168-1');
-		</script> -->
-
 		<title> Pelle iDesign</title>  
 		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
 		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
@@ -20,11 +10,6 @@
 		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">		
-<!-- 		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
 		
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
@@ -5505,6 +5490,7 @@
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
+		<script> alert('css fix2')</script>
 		
 		<!-- zoom-icon function -->
 		<script>	
@@ -5760,8 +5746,6 @@
 
 		<!-- auto hide header -->
 		<script>
-			 		
-		console.log(1);
 		$('#header, #header-mobile').addClass('auto-hide-header'); 
 		
 		var didScroll;
@@ -5833,24 +5817,22 @@
 		<!-- fullscreen -->
 		<script>
 		
-$('.fullscreen').on('click', function () {
-
+		$('.fullscreen').on('click', function () {
 
 			 var docelem = document.documentElement;
-
-
-				  if (docelem.requestFullscreen) {
-						docelem.requestFullscreen();
-				  }
-				  else if (docelem.mozRequestFullScreen) {
-						docelem.mozRequestFullScreen();
-				  }
-				  else if (docelem.webkitRequestFullScreen) {
-						docelem.webkitRequestFullScreen();
-				  }
-				  else if (docelem.msRequestFullscreen) {
-						docelem.msRequestFullscreen();
-				  }
+			 
+			  if (docelem.requestFullscreen) {
+					docelem.requestFullscreen();
+			  }
+			  else if (docelem.mozRequestFullScreen) {
+					docelem.mozRequestFullScreen();
+			  }
+			  else if (docelem.webkitRequestFullScreen) {
+					docelem.webkitRequestFullScreen();
+			  }
+			  else if (docelem.msRequestFullscreen) {
+					docelem.msRequestFullscreen();
+			  }
 
 		});		
 		
