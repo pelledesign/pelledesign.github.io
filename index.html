@@ -38,7 +38,14 @@
 		
 		<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@900&display=swap" rel="stylesheet">
 
-
+		<link rel="stylesheet" href="css/animate.css">  
+		<link rel="stylesheet" href="css/owl.carousel.min.css">
+		<link rel="stylesheet" href="css/jquery.fancybox.min.css">	
+		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
+		<link rel="stylesheet" href="css/magnific.css">
+		<link rel="stylesheet" href="css/load-more-button.css">	
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/jquery-scroll-snap.css">
 <!-- 		<script>
 			$('.navbar .dropdown > a').click(function(){
 			 location.href = this.href;
@@ -47,7 +54,26 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
+		<script>
+		$(document).ready(function(){
+			$('#nav-icon3').click(function(){
+				$(this).toggleClass('open');
+			});
+		});
+		</script>	
 
+	
+		<!-- start test if touch device -->		
+		<script>
+		function is_touch_device() {  
+		try {  
+		 document.createEvent("TouchEvent");  
+		 return true;  
+		} catch (e) {  
+		 return false;  
+		}
+		}
+		</script>
 		
 		<!-- 		<script>
   $('body').find('iframe').addClass('lazy invisible fade-in');
@@ -183,15 +209,21 @@
 
 		<script type="text/javascript" src="js/lazyload.js"></script>
 		<script type="text/javascript" src="js/logos.js"></script>	
-
-
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/magnific.js"></script>	
 		<script src="js/owl.carousel2.js"></script>	
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.fancybox.min.js"></script>	<!-- only used for video popup -->
 		<script src="js/jquery.stellar.min.js"></script>		
-
+		<script src="js/rellax.min.js"></script>		
+		<script src="js/jquery.mousewheel.js"></script>
 		<script src="js/main.js"></script>	
-
+		<script src="js/stellar.js"></script>
+		<script src="js/load-more-button.js"></script>
+		<script src="js/jquery-scroll-snap.js"></script>
+<!-- 		<script src="js/smoothscroll.js"></script> -->
+		<script src="js/isInViewport.js"></script>
 		
 
 	</body>
