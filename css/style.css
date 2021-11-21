@@ -17832,12 +17832,6 @@ transform: translate(-50%, -50%);
 }
 
 
-/* hide/show header */
-
-/* body {
-    padding-top: 50px;
-} */
-
 .auto-hide-header {
     height: 50px;
     position: fixed;
@@ -17857,35 +17851,6 @@ display:flex;
 	
 }
 
-/* @media (max-width: 1199.98px) {
-header .container-fluid {
- border-bottom: 1px solid black;	
-}
-} */
-
-/* @media (min-width: 1200px) {
-#about {
-margin-top: -50px;	
-}
-} */
-
-/* @media (max-width: 1199.98px) {
-#about {
-padding-top: 3rem !important;	
-}
-} */
-
-/* @media (max-width: 1199.98px) {
-#hero {
-height: calc(100vh) !important;	
-}
-} */
-
-
-
-/* .dark-theme #bg-hero {
-background: url('../images/bg/lips.jfif');	
-} */
 
 @media (min-width:992px) {
 .light-theme #bg-hero {

@@ -15,7 +15,6 @@ fix this:
 							<div id="haglofs" class="item dark-theme">				
 								<div class="row h100 m0 c-all">		
 spinenr colors and start bg								
-fix grid - then speed insight
 injects for xr
 add 3d models
 evaluate title styles - haglofs is ref
@@ -53,7 +52,7 @@ belmar - finish model
 )
 
 function övrigt (
-why '?' in speed insights? "#grid"?
+
 frames in premiere > transparent video
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
@@ -65,15 +64,19 @@ watch .git
 
 )
 
-
-
 function pageSpeed (
 
+nov 21 desktop:35 mobile 27
+
+function old tests {
+	
 78
 52-57 with about slider
 speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43, 41 nov
 lighthouse: desktop: 72, 79	
-lighthouse: mobile:	39, 
+lighthouse: mobile:	39, 	
+}
+
 
 function trouble shooting speed insights & lighthouse (
 
