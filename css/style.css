@@ -18123,7 +18123,7 @@ color: var(--theme-color) !important;
 height:18vh;
 }
 
-@media (max-width:575px) { 
+/* @media (max-width:575px) { 
 #section-space {
 height:30vh;
 }
@@ -18133,7 +18133,7 @@ height:30vh;
 #section-space {
 display:none;
 }
-}
+} */
 
 @media (orientation:portrait) {
 #hero-container {
@@ -18153,11 +18153,11 @@ height:100vh;
 }
 }
 
-/* #hero {
+#hero {
 height: 100%;
 z-index:0;	
 }
- */
+
 .z3 {
 z-index:3;	
 }
