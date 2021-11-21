@@ -14051,6 +14051,7 @@ div.light-theme svg,
 .light-theme .overlay .zoom-icon
 .light-theme .overlay .btn,
 .light-theme .configtext h3,
+.light-theme a.info-icon,
 .light-theme .xrtext h3 {
 color: var(--contrast);
 fill:var(--contrast);
@@ -14165,7 +14166,8 @@ border-color: var(--contrast) !important;
 .medium-theme .ion-android-color-palette:before,
 .medium-theme .btn-outline,
 .medium-theme p.img-text.ion-ios-search-strong,
-.medium-theme div.ion-ios-plus.ion-ios-plus-color {
+.medium-theme div.ion-ios-plus.ion-ios-plus-color,
+.medium-theme a.info-icon {
 color: var(--contrast);
 fill:var(--contrast);
 }
@@ -14267,7 +14269,8 @@ background-position: 50% 50%;
 .dark-theme .zoom-icon,
 .dark-theme .configtext,
 .dark-theme .xrtext,
-.dark-theme .ion-ios-plus.ion-ios-plus-color
+.dark-theme .ion-ios-plus.ion-ios-plus-color,
+.dark-theme a.info-icon
  { 
 color: var(--whites-lightest);
 fill: var(--whites-lightest);
@@ -14330,7 +14333,6 @@ background-position: 50% 50%;
 .xrtext h3, .configtext h3{
 font-size: 0.8rem;	
 line-height: 0.8rem;	
-padding: 1rem 1rem 0 0 ;
 }
 
 /* .popup.medium-theme{
@@ -18148,8 +18150,8 @@ display:block;
 } */
 
 .light-theme-shadow:before {
--webkit-box-shadow: 0 0 20px #585858;	
-box-shadow: 0 0 20px #585858;		  
+-webkit-box-shadow: 0 0 20px #b0b0b0;	
+box-shadow: 0 0 20px #b0b0b0;		  
 overflow:hidden;	
 position: absolute;
 height: 100%;
@@ -18520,14 +18522,20 @@ min-width: 100%;
 top: 0;
 right: 0;
 position: absolute;
-padding-right: 1rem;	
+padding: 0.75rem;	
 }
 
 .configtext {
 top: 0;
 left: 0;
 position: absolute;
-padding-left: 1rem;	
+padding: 0.75rem;	
+}
+
+.config-open-large {
+top: 0;
+right: 0;
+position: absolute;		
 }
 /* .xr-auto:before {
 content: "3d View";

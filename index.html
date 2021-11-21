@@ -56,8 +56,7 @@
 		<!-- xr-auto & config-auto resize & texts -->
 		<script>
 		
-		$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
-		$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>');
+
 		
 		var xr_resize = function() {
 			var this_iframe;
@@ -68,9 +67,9 @@
 			
 			$('.xr-auto, .config-auto').each(function() {
 				var this_iframe = $(this);
+				var extra_space = '0';
 				this_iframe.addClass('test');
 				this_src = $(this).attr('src');
-				console.log(this_src);
 				
 				if (this_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') {
 				aspect_ratio = 899 / 829;
@@ -97,12 +96,16 @@
 				//alert('xr error');
 				}
 				
+				if (this_iframe.hasClass('config-auto')) {
+				extra_space = 40;
+				}
+				
 			 if (window.matchMedia("(max-width: 565px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width})
 			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width})
 			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
 			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
@@ -376,10 +379,10 @@
 		<div id="section-space" class="landscape-hidden"></div>
 		<!-- about -->
 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
-		<div id="about" class="snap light-theme-desktop dark-theme-touch relative hide-scroll section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
+		<div id="about" class="portfolio-section snap x-theme relative section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
 		<div id="bg-hero" class="c-absolute hw100"></div>
 			<div id="slider-container" class="col-auto h100 dropshadow">		
-				<div id="about-slider-mobile" class="about-slider owl-carousel">				
+				<div id="about-slider-mobile" class=" about-slider owl-carousel">				
 					<div class="item invisible fade-in-right">			
 						<div class="h100">
 							<div class="container c-md-up h100">
@@ -447,7 +450,7 @@
 						</div>
 					</div> -->
 					<div class="item c-md-up auto-scroll">
-						<div class="fadeout-top md-up-h"></div>					
+						<!-- <div class="fadeout-top md-up-h"></div>					 -->
 						<div id="myservices" class="container c-all h100">								
 								<div class="row h100 c-all text-box">
 									<div class="col-lg-5 mr-auto mb-lg-4 h-auto">
@@ -491,7 +494,7 @@
 										</div>
 									</div>									
 								</div>								
-							<div class="fadeout-btm md-up-h"></div>	
+							<!-- <div class="fadeout-btm md-up-h"></div>	 -->
 						</div>
 					</div>			
 				</div>	
@@ -786,87 +789,11 @@
 							</div>
 						</div>										
 					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">	
-						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>					
-						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="lg-up-h col-lg- col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto" style="max-height:100vh;">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy " style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-xs-12 col-xs-6-landscape">
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>	
-						</div>						
-						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="akg/xr/akgxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>
-						<div class="col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
-							<div class="item hw100 medium-theme">
-								<img src="akg/images/gallery/03.png" class="lazy cover">	
-							</div>	
-						</div>
-						<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape dark-theme">
-							<iframe
-							style="display:flex;"							
-							class="config-auto lazy invisible fade-in"		
-							data-src="akg/web/keyshot-configurator.html"												
-							frameborder="0"
-							scrolling="no"
-							>			
-							</iframe>	
-						</div>
-						<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape light-theme">
-							<iframe
-							style="display:flex;"							
-							class="config-auto lazy invisible fade-in"		
-							data-src="akg/web/keyshot-configurator.html"												
-							frameborder="0"
-							scrolling="no"
-							>			
-							</iframe>	
-						</div>
-						
-					</div>								
+							
 				</div>			
 			</div>			
 			<div id="section-space" class="landscape-hidden"></div>
-			<!-- <div class="dark-theme no-bg" style="padding: 9px;"> -->
-				<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
-			<!-- </div> -->			
+			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>			
 			<div class="text-box c-all txt-l lg-up-h relative fade-in-left x-theme x-shadow">
 					<div class="">
 						<h2 class="s-t ignore">"I think Pelle</h2>
@@ -1566,76 +1493,7 @@
 						</div>	
 					</div>
 				</div>
-				<div class="xl-up-h">
-						<div class="col-lg-12 x-theme">
-							<div class="item c-all">			
-								<div class="text-box c-all txt-l">
-									<div class="invisible fade-in">
-										<!-- <h2 class="mb-4 s-t ignore">Converse <strong>Suburban</strong></h2> -->
-										<p class="p0">Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
-										</p>
-										<div class="ShowMoreBox">
-											<div class="MoreText">
-												<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
-												</p>
-											</div>
-											<strong>
-												<p class="loadMoreBtn">More</p>
-											</strong>
-										</div>														
-									</div>
-								</div>
-							</div>										
-						</div>	 		
-					<div id="grid" class="item row m0 h100 relative x-theme">	
-					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 dark-theme">
-								<img src="" data-src="Converse/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 dark-theme">
-							<img src="" data-src="Converse/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 dark-theme">
-								<img src="" data-src="Converse/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 dark-theme">
-							<img src="" data-src="Converse/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="Converse/xr/conversexr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>	
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe
-							style="display:flex;"							
-							class="config-auto lazy invisible fade-in dark-theme"		
-							data-src="Converse/web/keyshot-configurator.html"												
-							frameborder="0"
-							scrolling="no"
-							>			
-							</iframe>	
-						</div>					
-					</div>				
-				</div>				
+				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
 			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
@@ -1728,81 +1586,7 @@
 						</div>							
 					</div>				
 				</div>
-				<div class="xl-up-h x-theme">	 	
-					<div class="col-lg-12 x-theme">
-						<div class="item c-all">			
-							<div class="text-box c-all txt-l">
-								<div class="invisible fade-in">
-									<!-- <h2 class="mb-4 s-t">POC <strong>Lobes</strong></h2> -->
-									<p class="p0">Cylindrical Ski Goggle Made During Internship at Poc<br>
-									<!-- <strong>Role - Redesign & Modelling</strong>  -->
-									</p>		  	
-									<div class="ShowMoreBox">
-										<div class="MoreText">
-											<p class="ignore">Cylindrical Ski Goggle Made During Internship at Poc</p>	
-										</div>
-										<strong>
-											<p class="loadMoreBtn">More</p>
-										</strong>
-									</div>														
-								</div>
-							</div>
-						</div>										
-					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 						
-						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="poc/xr//0_7.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>					
-						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="poc/xr//0_14.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="poc/xr//0_10.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="lg-up-h col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="poc/xr//0_7.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-12 col-md-12 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="poc/images/front.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
-						</div> -->
-	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover dark-theme" style="object-position: 100% 17%;">												
-						</div> -->
-						<!-- <div class="separator xl-up-h"></div>	 -->
-	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
-							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
-						</div>	 -->					
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="poc/xr/pocxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>						
-					</div>
-				</div>				
+			
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
 			<div id="spotify-title" class="desktop-hidden title x-theme row m0">
@@ -2232,62 +2016,7 @@
 					</div>					
 					</div>													 						 
 				</div>
-				<div class="xl-up-h">	 	
-						<div class="col-lg-12 x-theme">
-							<div class="item c-all">			
-								<div class="text-box c-all txt-l">
-									<div class="invisible fade-in">
-										<!-- <h2 class="mb-4 s-t ignore">Bagheera <strong>Shoe Design</strong></h2> -->
-												<p class="ignore">Position as product designer at Swedish Sports Company Bagheera<br>
-												</p>		
-										<div class="ShowMoreBox">
-											<div class="MoreText">
-	  
-												<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
-												</p>
-												<p class="txt-l text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>	
-											</div>
-											<strong>
-												<p class="loadMoreBtn">More</p>
-											</strong>
-										</div>														
-									</div>
-								</div>
-							</div>										
-						</div>				
-						<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 						
-							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-								<div class="item zoomable hw100 medium-theme">
-									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
-									<p class="img-text hidden"></p>
-								</div>			
-							</div>
-							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-								<div class="item zoomable hw100 medium-theme">
-									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
-									<p class="img-text hidden"></p>
-								</div>			
-							</div>
-							<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-								<div class="item zoomable hw100 medium-theme">
-									<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
-									<p class="img-text hidden"></p>
-								</div>			
-							</div>					
-
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-								<iframe 
-								id=""
-								style="display:flex;"
-								class="xr-auto"							
-								src="Bagheera/xr/bagheeraxr.html"																		
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>
-							</div>	
-						</div>
-				</div>				
+				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>	
 			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>			
@@ -2303,193 +2032,136 @@
 				</div>
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>			
-			<div id="haglofs" class="portfolio-section">
-				<div class="section-container">				
-					<div id="mixed-title" class="title x-theme row m0">
-						<div class="col-12 row m0 flex w100">
-							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
-							 <h3 class="h3 txt-l"><strong>MIXED </strong>Quick Projects</h3>
-							</div>	
+			<div id="haglofs">
+				<div id="mixed-title" class="desktop-hidden x-theme row m0 bg-none"> <!-- ignore -->
+					<div class="title row m0 flex w100">
+						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
+						 <h3 class="h3 txt-l text-xs-center"><strong>Haglöfs </strong>Radius</h3>
+						</div>	
+						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
+							<div class="c-100 justify-content-end">
+								<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
+								<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
+								<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
+								<a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
+							</div>
 						</div>
-					</div>
-					<div id="slider-container">
-						<div id="mixed-more" class="owl-carousel">							
-							<div id="haglofs" class="item dark-theme">				
-								<div class="row h100 m0 c-all">									
-									<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
-										<div class="rellax-logo haglofs-logo hw100" style="width:100% !important;"></div>
-									</div>							
-									<div class="col-lg-4 col-sm c-lg-up xs-down-h">
-										<div class="row c-lg">
-											<div class="col-lg-8 ppp2 txt-l">
+					</div>		
+				</div>
+				<div class="portfolio-section">
+					<div class="section-container slider-container">				
+							<div id="mixed-more" class="owl-carousel">							
+								<div class="item dark-theme">				
+									<div class="row h100 m0 c-all">									
+	<!-- 									<div class="rellax contain" data-rellax-speed="5" data-rellax-percentage="0.5">
+											<div class="rellax-logo haglofs-logo hw100" style="width:100% !important;"></div>
+										</div> -->							
+										<div class="col-lg-4 col-sm c-lg-up xs-down-h">
+											<div class="row c-lg">
+												<div class="col-lg-8 ppp2 txt-l">
+													<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
+													<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
+													<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+													</p>
+													<p><strong>Swipe Model to Rotate</strong></p>
+												</div>					
+											</div>
+										</div>					
+								<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 p0">
+									<iframe 
+									id=""
+									style="display:flex;"
+									class="xr-auto lazy"							
+									src=""																		
+									data-src="haglofs/xr/haglofs.html"																		
+									frameborder="0"
+									scrolling="no"
+									>
+									</iframe>
+								</div>						
+									</div>	
+								</div>					
+								<div class="item owl-hide-lg-up dark-theme owl-hide-touch">	
+									<div class="fadeout-top"></div>												
+									<div class="absolute hw100 c-all show-scroll">
+										<div class="text-box c-all txt-l">
+											<div>
 												<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
 												<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
 												<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
-												</p>
-												<p><strong>Swipe Model to Rotate</strong></p>
-											</div>					
-										</div>
-									</div>					
-							<div class="col-lg-8 col-md-6 col-sm-6 col-xs-12 p0">
-								<iframe 
-								id=""
-								style="display:flex;"
-								class="xr-auto"							
-								src="haglofs/xr/haglofs.html"																		
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>
-							</div>						
-								</div>	
-							</div>					
-<!-- 							<div class="item owl-hide-lg-up dark-theme">
-								<div class="loader dark-theme textoverlay">
-									<img src="" data-src="haglofs/images/knife_c.png" class="lazy cover invisible fade-in" style="object-position: 23% 70%;">
-									<div class="dark-theme overlay c-all desktop-hidden txt-c">
-										<div class="text-animate c-all">
-											<div class="h100">
-												<h2 class="s-t element-animate">Haglöfs <strong>Radius</strong></h2>
-													<p >Short bladed knife for Outdoor Equipment Company Haglöfs.
-													</p>
-													<div>
-													<p><span class="open-popup btn">Swipe to View</span></p>
-													</div>
+												</p>													
+												<div>
+												</div>
 											</div>
 										</div>
-									</div>							
-								</div>												
-							</div> -->
-							<div class="item owl-hide-lg-up dark-theme owl-hide-touch">	
-								<div class="fadeout-top"></div>												
-								<div class="absolute hw100 c-all show-scroll">
-									<div class="text-box c-all txt-l">
-										<div>
-											<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
-											<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
-											<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
-											</p>													
+									</div>
+									<div class="fadeout-btm"></div>																			
+								</div>									
+								<div id="alcon" class="item x-theme owl-hide-touch">				
+									<div class="row h100 m0">										
+										<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
+											<div class="rellax-logo alcon-logo hw100" style="width:100% !important;"></div>
+										</div>
+										<div class="col-lg-4 ml-auto c-all">
 											<div>
+												<span class="d-block text-uppercase">Alcon</span>
+												<h2 class="mb-4 s-t txt-l">Lens <strong>Container</strong></h2>
+												<p><a href="https://www.alcon.com/" target="_blank" title="Visit Alcon" class="btn btn-outline xs-down-h">Visit</a></p>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="fadeout-btm"></div>																			
-							</div>									
-							<div id="alcon" class="item x-theme owl-hide-touch">				
-								<div class="row h100 m0">										
-									<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-										<div class="rellax-logo alcon-logo hw100" style="width:100% !important;"></div>
-									</div>
-									<div class="col-lg-4 ml-auto c-all">
-										<div>
-											<span class="d-block text-uppercase">Alcon</span>
-											<h2 class="mb-4 s-t txt-l">Lens <strong>Container</strong></h2>
-											<p><a href="https://www.alcon.com/" target="_blank" title="Visit Alcon" class="btn btn-outline xs-down-h">Visit</a></p>
-										</div>
-									</div>
-									<div class="col-lg-7 col-md-12 col-sm col-xs-12 txt-c">
-										<div class="absolute w100" style="right:0;">
-											<div class="flex justify-content-end">
-												<a href="#alcon-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-												<a href="#alcon-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
+										<div class="col-lg-7 col-md-12 col-sm col-xs-12 txt-c">
+											<div class="absolute w100" style="right:0;">
+												<div class="flex justify-content-end">
+													<a href="#alcon-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
+													<a href="#alcon-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
+												</div>
 											</div>
-										</div>
-										<div class="col-lg-8 textoverlay hide-next">
-											<div class="loader">
-												<iframe 
-												class="lazy invisible fade-in soft-zoom" 
-												src="images/loaders/bars_fixed.svg"
-												data-src="alcon/xr/alconxr.html"																			
-												frameborder="0"
-												scrolling="no"
-												>
-												</iframe>											
+											<div class="col-lg-8 textoverlay hide-next">
+												<div class="loader">
+													<iframe 
+													class="lazy invisible fade-in soft-zoom" 
+													src="images/loaders/bars_fixed.svg"
+													data-src="alcon/xr/alconxr.html"																			
+													frameborder="0"
+													scrolling="no"
+													>
+													</iframe>											
+												</div>
 											</div>
-										</div>
-									</div>						
-								</div>	
-							</div>
-							<div class="item owl-hide-lg-up dark-theme owl-hide-touch">
-								<div class="fadeout-top"></div>												
-								<div class="absolute hw100 c-all show-scroll">
-									<div class="text-box c-all txt-l">
-										<div>
-											<h2 class="mb-4 s-t">Alcon <strong>Lens Container</strong></h2>	  
-											<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
-											<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
-											</p>													
-											<div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="fadeout-btm"></div>																		
-							</div>							
-							<div class="item x-theme h100 c-all">			
-							  <div class="col-lg-7">
-								 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
-								 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
-								 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
-							  </div>
-							</div>													
-						</div>
-						<div class="c-all view-btn">
-							<span class="more-btn btn btn-outline touch-hidden">more</span>	
-							<span class="more-btn desktop-hidden"></span>							
-						</div>				
-					</div>					
-				</div>
-				<div class="xl-up-h x-theme">	 	
-					<div class="col-lg-12 x-theme">
-						<div class="item c-all">			
-							<div class="text-box c-all txt-l  invisible fade-in-left">
-								<div class="">
-									<!-- <h2 class="s-t ignore">AKG <strong>K92</strong></h2> -->
-									<p class="p0"> Headphones for the Vienna based audio products company AKG.</p> 
-									<div class="ShowMoreBox">
-										<div class="MoreText">
-											<p>
-											My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>										
-											<p>
-											The result is the k92 headphones with an easily adjustable head band, weighing only 200g and with a modern retro style
-											</p>
-										</div>
-										<strong>
-											<p class="loadMoreBtn">More</p>
-										</strong>
+										</div>						
 									</div>	
 								</div>
+								<div class="item owl-hide-lg-up dark-theme owl-hide-touch">
+									<div class="fadeout-top"></div>												
+									<div class="absolute hw100 c-all show-scroll">
+										<div class="text-box c-all txt-l">
+											<div>
+												<h2 class="mb-4 s-t">Alcon <strong>Lens Container</strong></h2>	  
+												<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
+												<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+												</p>													
+												<div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="fadeout-btm"></div>																		
+								</div>							
+								<div class="item x-theme h100 c-all">			
+								  <div class="col-lg-7">
+									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+									 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+									 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+								  </div>
+								</div>													
 							</div>
-						</div>										
-					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>					
-						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="haglofs/xr/haglofs.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>																					
+							<div class="c-all view-btn">
+								<span class="more-btn btn btn-outline touch-hidden">more</span>	
+								<span class="more-btn desktop-hidden"></span>							
+							</div>								
 					</div>
-				</div>				
-			</div>
+
+				</div>	
 			<div id="section-space" class="landscape-hidden"></div>				
 			<div id="alcon" class="portfolio-section x-theme">
 				<div class="section-container">
@@ -2508,7 +2180,7 @@
 					</div>				
 					<div class="row h100 m0">										
 							<div class="item row owl-hide-lg-up x-theme m0">				
-								  <div class="ol-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape h100 loader">								
+								  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100 loader">								
 										<iframe 
 										id=""
 										style="display:flex;"
@@ -2531,56 +2203,7 @@
 					</div>
 
 				</div>
-					<div class="xl-up-h">
-							<div class="col-lg-12 x-theme">
-								<div class="item c-all">			
-									<div class="text-box c-all txt-l">
-										<div class="invisible fade-in">
-											<!-- <h2 class="mb-4 s-t txt-l ignore">Alcon <strong>Lens Container</strong></h2> -->
-												<p>Lens container for eye care products company Alcon.<br>
-												This projects was focused on the user experience for the lens wearer	
-												</p>	
-											<div class="ShowMoreBox">
-												<div class="MoreText">  
-													<p>Lens container for eye care products company Alcon.<br>
-													This projects was focused on the user experience for the lens wearer	
-													</p>	
-												</div>
-												<strong>
-												<p class="loadMoreBtn">More</p>
-												</strong>
-											</div>														
-										</div>
-									</div>
-								</div>										
-							</div>		 		
-						<div id="grid" class="item row m0 h100">			
-							<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-								<div class="item zoomable hw100 dark-theme">
-									<img src="" data-src="alcon/xr//25_0.png" class="lazy cover " style="object-position: 100% 17%;">	
-									<p class="img-text hidden"></p>
-								</div>			
-							</div>					
-							<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-								<div class="item zoomable hw100 dark-theme">
-								<img src="" data-src="alcon/xr//0_0.png" class="lazy  cover" style="object-position: 100% 17%;">		
-								<p class="img-text hidden"></p>					
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-								<div class="item zoomable hw100 dark-theme">
-									<img src="" data-src="alcon/xr//12_0.png" class="lazy cover " style="object-position: 100% 17%;">	
-									<p class="img-text hidden"></p>
-								</div>			
-							</div>
-							<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-								<div class="item zoomable hw100 dark-theme">
-								<img src="" data-src="alcon/xr//6_0.png" class="lazy  cover" style="object-position: 100% 17%;">		
-								<p class="img-text hidden"></p>					
-								</div>
-							</div>
-						</div>
-					</div>				
+				
 			</div>
 			
 			<div id="section-space" class="landscape-hidden"></div>			
@@ -2839,14 +2462,12 @@
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
 									<!-- <h2 class="s-t ignore">AKG <strong>K92</strong></h2> -->
-									<p class="p0"> Headphones for the Vienna based audio products company AKG.</p> 
+									<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
+										<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
+										
 									<div class="ShowMoreBox">
 										<div class="MoreText">
-											<p>
-											My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>										
-											<p>
-											The result is the k92 headphones with an easily adjustable head band, weighing only 200g and with a modern retro style
-											</p>
+											<p>Specialized creates bikes, components and bike equipment.</p>
 										</div>
 										<strong>
 											<p class="loadMoreBtn">More</p>
@@ -2856,66 +2477,7 @@
 							</div>
 						</div>										
 					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">		 <!-- container ml-auto mr-auto --> 	
-					
-						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="Specialized/xr//0_0.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>					
-						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="Specialized/xr//0_22.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="Specialized/xr//0_12.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-3 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 medium-theme">
-								<img src="" data-src="Specialized/xr//0_5.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-						<div class="col-lg-6 md-down-h loader c-all textoverlay zoom-container invisible fade-in h-auto">				
-							<div class="item zoomable hw100 pop-theme">
-								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div>
-<!-- 						<div class="col-lg-6 col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in">
-							<div class="item zoomable hw100 medium-theme">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy  cover" style="object-position: 100% 17%;">		
-							<p class="img-text hidden"></p>					
-							</div>
-						</div> -->
-	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover light-theme" style="object-position: 100% 17%;">												
-						</div> -->
-	<!-- 					<div class="col-lg-12 loader c-all textoverlay">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy invisible fade-in cover dark-theme" style="object-position: 100% 17%;">												
-						</div> -->
-						<!-- <div class="separator xl-up-h"></div>	 -->
-	<!-- 					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start pt-4">
-							<h3 class="h3  txt-l text-xs-center mb-0"><strong>3D </strong>View</h3>
-						</div>	 -->					
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="Specialized/xr/specializedxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
-						</div>
-					</div>
+
 				</div>				
 			</div>
 			<div id="belmar" class="portfolio-section blogBox moreBox" style="display:none;">
@@ -3680,50 +3242,49 @@
 				</div>
 			</div>				
 		</div>
-		<div id="page" class="c-all desktop-hidden">
-			<a href="process.html"><span class="btn btn-outline">page</span>	</a>
-		</div>
-		<div id="section-space" class="landscape-hidden"></div>		
-		<!-- <div class="separator touch-hidden"></div> -->
-		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
-		<div id="reviews" class="owl-carousel light-theme dark-theme-touch x-shadow">	
-	
-			<div class="item cover-portrait props c-100">			
-				<div class="text-box c-all txt-l">
-					<div class="">
-						<h2 class="s-t ignore">"I think Pelle</h2>
-						<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
-						<!-- <strong class="text-black">Jamie, PeoplePerHour</strong></p> -->
-						<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
-					</div>
-				</div>
-			</div>	
-			<div class="item cover-portrait props c-100">			
-				<div class="text-box c-all txt-l">
-					<div class="">
-						<h2 class="s-t ignore">"Pelle stayed</h2>
-						<p>with us at Bagheera AB, Sweden for a few years. <br>
-						His task was to design athletic shoes. He also joined the teams trips to our office in Xiamen China. <br>
-						He did a very good job and a few of his uppers are still classic styles in our program. </p>					
-						<p>I can definitely recommend Pelle"</p>
-						<!-- <strong class="text-black">Carl-Gustav Karlsson, Owner Bagheera AB</strong></p> 									 -->
-						<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
-					</div>
-				</div>
+			<div id="page" class="c-all desktop-hidden">
+				<a href="process.html"><span class="btn btn-outline">page</span>	</a>
 			</div>
-			<div class="item cover-portrait props c-100">			
-				<div class="text-box c-all txt-l">
-					<div class="">
-						<h2 class="s-t ignore">"I have used</h2>
-						<p> Pelle many times throughout the years for industrial design help. Pelle is very thorough, professional and great at what he does. Can absolutely recommend Pelle if you are looking for a world class designer."</p>
-						<!-- <strong class="text-black">Jamie, PeoplePerHour</strong></p> -->
-						<p><strong>Daniel B, Founder Brante Media</strong></p>					
+			<div id="section-space" class="landscape-hidden"></div>		
+			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
+			<div id="reviews" class="owl-carousel light-theme dark-theme-touch x-shadow">	
+		
+				<div class="item cover-portrait props c-100">			
+					<div class="text-box c-all txt-l">
+						<div class="">
+							<h2 class="s-t ignore">"I think Pelle</h2>
+							<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
+							<!-- <strong class="text-black">Jamie, PeoplePerHour</strong></p> -->
+							<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
+						</div>
+					</div>
+				</div>	
+				<div class="item cover-portrait props c-100">			
+					<div class="text-box c-all txt-l">
+						<div class="">
+							<h2 class="s-t ignore">"Pelle stayed</h2>
+							<p>with us at Bagheera AB, Sweden for a few years. <br>
+							His task was to design athletic shoes. He also joined the teams trips to our office in Xiamen China. <br>
+							He did a very good job and a few of his uppers are still classic styles in our program. </p>					
+							<p>I can definitely recommend Pelle"</p>
+							<!-- <strong class="text-black">Carl-Gustav Karlsson, Owner Bagheera AB</strong></p> 									 -->
+							<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
+						</div>
 					</div>
 				</div>
-			</div>				
-		</div>
-		<!-- <div class="separator touch-hidden"></div> -->
-		<div id="section-space" class="landscape-hidden"></div>
+				<div class="item cover-portrait props c-100">			
+					<div class="text-box c-all txt-l">
+						<div class="">
+							<h2 class="s-t ignore">"I have used</h2>
+							<p> Pelle many times throughout the years for industrial design help. Pelle is very thorough, professional and great at what he does. Can absolutely recommend Pelle if you are looking for a world class designer."</p>
+							<!-- <strong class="text-black">Jamie, PeoplePerHour</strong></p> -->
+							<p><strong>Daniel B, Founder Brante Media</strong></p>					
+						</div>
+					</div>
+				</div>				
+			</div>
+			<!-- <div class="separator touch-hidden"></div> -->
+			<div id="section-space" class="landscape-hidden"></div>
 		
 		<!-- start footer -->
 		<footer class="site-footer x-theme x-shadow m0 relative" role="contentinfo">    
@@ -5447,12 +5008,15 @@
 		
 		//must be placed before main.js as it needs classes from x-theme to be able to execute
 		
+		$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+		$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>');		
+		
 		var darkBg = '#242424';		
 		var lightBg = '#fff';
 		
 		if(is_touch_device()) {
-		var theme = 'dark-theme'; //	set theme for touch devices			
-		var this_bg = '#242424'; //	set theme for touch devices	
+		var theme = 'light-theme'; //	set theme for touch devices			
+		var this_bg = '#fff'; //	set theme for touch devices	
 		$('.x-theme-touch').addClass(theme);	
 		}
 		else
@@ -5831,9 +5395,12 @@
 		//}			
 		
 		// add class'snap' if not touch
-		//if(!is_touch_device()) {				
+		if(is_touch_device()) {				
+		$('#about').not('.ignore').addClass('snap');
+		}	
+		else {
 		$('.section-container').not('.ignore').addClass('snap');
-		//}			
+		}	
 		
 		$( '.snap' ).scrollSnap({
 		  //speed: 200

@@ -35,5 +35,5 @@ layoutsettings =
     "sizeTitlesFont": 10,
     "studioIconRelativeSize": 100,
     "studioTabName": "Combo",
-    "touchUIHeight": 7
+    "touchUIHeight": 9
 };
