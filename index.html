@@ -204,11 +204,11 @@
 		</header>		
 
 		<!-- scroll indicator -->
-<!-- 		<div class="scroll-indicator">
+		<div class="scroll-indicator">
 		  <div class="progress-container x-theme">
 			 <div class="progress-bar" id="myBar"></div>
 		  </div>
-		</div> -->
+		</div>
 		<!-- <div class="lg-up-h vh100"></div>	 -->
 		
 		<!-- hero -->
@@ -315,8 +315,7 @@
 						</div>			
 				</div>
 			</div>
-		</div>
-		
+		</div>		
 		<div id="section-space" class="landscape-hidden"></div>
 		
 		<!-- about -->
@@ -422,26 +421,26 @@
 		<div id="section-space" class="landscape-hidden"></div>	
 
 		<!-- start latest work --> 
-		<div id="akg-title" class="desktop-hidden x-theme row m0 bg-none" style="padding-left: 6px; padding-right: 6px;">
-			<div class="row m0 flex w100">
-				<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-				 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
-				 <h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3>
-				</div>	
-				<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-					<div class="c-100 justify-content-end">
-						<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-						<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-						<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-						<a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
-					</div>
-				</div>
-			</div>		
-		</div>	
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
-			<div id="akg" class="portfolio-section">		
-				<div class="section-container">
+			<div id="akg">
+				<div id="akg-title" class="desktop-hidden x-theme row m0 bg-none" style="padding-left: 6px; padding-right: 6px;">
+					<div class="row m0 flex w100">
+						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
+						 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
+						 <h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3>
+						</div>	
+						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
+							<div class="c-100 justify-content-end">
+								<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
+								<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
+								<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
+								<a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
+							</div>
+						</div>
+					</div>		
+				</div>				
+				<div class="portfolio-section">
 					<div id="akg-title" class="touch-hidden title row m0 medium-theme bg-none">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
@@ -458,7 +457,7 @@
 							</div>
 						</div>		
 					</div>	
-					<div id="slider-container">	
+					<div class="section-container slider-container">	
 						<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 						</div>						
@@ -649,11 +648,9 @@
 							<span class="more-btn btn btn-outline touch-hidden">next</span>
 							<span class="more-btn desktop-hidden"></span>
 						</div>	
-					</div>				
-				</div>	
-				<div class=" x-theme">	 	
-					<div class="col-lg-12 x-theme">
-						<div class="item c-all">			
+					</div>
+					<div id="grid" class="item row m0 h100 relative x-theme">	
+						<div class="col-lg-12 col-md-12 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto">						
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
 									<p class="p0"> Headphones for the Vienna based audio products company AKG.</p> 
@@ -670,10 +667,8 @@
 										</strong>
 									</div>	
 								</div>
-							</div>
-						</div>										
-					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">	
+							</div>		
+						</div>
 						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -736,10 +731,10 @@
 							scrolling="no"
 							>			
 							</iframe>	
-						</div>
-					</div>								
-				</div>			
-			</div>			
+						</div>		
+					</div>					
+				</div>											
+			</div>						
 			<div id="section-space" class="landscape-hidden"></div>
 			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>			
 			<div class="text-box c-all txt-l lg-up-h relative fade-in-left x-theme x-shadow">
@@ -749,24 +744,9 @@
 						<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
 					</div>
 			</div>	
-			<div id="section-space" class="landscape-hidden"></div>
-			<div id="converse-title" class="desktop-hidden x-theme row m0 bg-none" style="padding-left: 6px; padding-right: 6px;">
-				<div class="row m0 flex w100">
-					<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-					 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
-					</div>	
-					<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-						<div class="c-100 justify-content-end">
-							<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-							<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-							<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-							<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
-						</div>
-					</div>
-				</div>		
-			</div>				
-			<div id="converse" class="portfolio-section">
-				<div class="section-container">
+			<div id="section-space" class="landscape-hidden"></div>		
+			<div id="converse">
+				<div class="portfolio-section">
 					<div id="converse-title" class="touch-hidden title row m0 dark-theme">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
@@ -782,7 +762,7 @@
 							</div>
 						</div>		
 					</div>	
-					<div id="slider-container">			
+					<div class="section-container slider-container">			
 						<div id="converse-more" class="owl-carousel">					
 							<div class="item owl-hide-lg-up dark-theme">
 								<div class="cont">
@@ -1293,8 +1273,7 @@
 							<span class="more-btn desktop-hidden"></span>
 						</div>	
 					</div>
-				</div>
-				<div class="xl-up-h">
+					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1313,9 +1292,7 @@
 									</div>
 								</div>
 							</div>										
-						</div>	 		
-					<div id="grid" class="item row m0 h100 relative x-theme">	
-					
+						</div>	
 						<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 dark-theme">
 								<img src="" data-src="Converse/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -1360,9 +1337,9 @@
 							scrolling="no"
 							>			
 							</iframe>	
-						</div>					
-					</div>				
-				</div>				
+						</div>		
+					</div>											
+				</div>			
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
 			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
@@ -1388,7 +1365,7 @@
 				</div>
 			</div>			
 			<div id="poc" class="portfolio-section">
-				<div class="section-container">				
+				<div class="portfolio-section">				
 					<div id="poc-title" class="touch-hidden title row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1402,7 +1379,7 @@
 							</div>
 						</div>
 					</div>		
-					<div id="slider-container">
+					<div class="section-container slider-container">
 						<div id="poc-more" class="owl-carousel c-100">					
 							<div class="item hw100 dropshadow zoom-container dark-theme">
 								<div class="zoom-icon"></div>						
@@ -1443,28 +1420,26 @@
 							<a href="#poc-process-popup" class="fullscreen btn btn-outline open-popup">View</a>					
 							<a href="#pdf-poc" class="fullscreen btn btn-outline open-popup ">Pdf</a>									
 						</div>							
-					</div>				
-				</div>
-				<div class="xl-up-h x-theme">	 	
-					<div class="col-lg-12 x-theme">
-						<div class="item c-all">			
-							<div class="text-box c-all txt-l">
-								<div class="invisible fade-in">
-									<p class="p0">Cylindrical Ski Goggle Made During Internship at Poc<br>
-									</p>		  	
-									<div class="ShowMoreBox">
-										<div class="MoreText">
-											<p class="ignore">Cylindrical Ski Goggle Made During Internship at Poc</p>	
-										</div>
-										<strong>
-											<p class="loadMoreBtn">More</p>
-										</strong>
-									</div>														
+					</div>
+					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">
+						<div class="col-lg-12 x-theme">
+							<div class="item c-all">			
+								<div class="text-box c-all txt-l">
+									<div class="invisible fade-in">
+										<p class="p0">Cylindrical Ski Goggle Made During Internship at Poc<br>
+										</p>		  	
+										<div class="ShowMoreBox">
+											<div class="MoreText">
+												<p class="ignore">Cylindrical Ski Goggle Made During Internship at Poc</p>	
+											</div>
+											<strong>
+												<p class="loadMoreBtn">More</p>
+											</strong>
+										</div>														
+									</div>
 								</div>
-							</div>
-						</div>										
-					</div>			
-					<div id="grid" class="item row m0 h100 relative x-theme">						
+							</div>										
+						</div>					
 						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="poc/xr//0_7.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -1506,7 +1481,7 @@
 							>
 							</iframe>
 						</div>						
-					</div>
+					</div>					
 				</div>				
 			</div>
 			<div id="section-space" class="landscape-hidden"></div>
@@ -1524,7 +1499,7 @@
 				</div>
 			</div>				
 			<div id="spotify" class="portfolio-section light-theme bg-none">
-				<div class="section-container">				
+				<div class="portfolio-section">				
 					<div id="spotify-title" class="touch-hidden title on-top row m0">
 						<div class="col-12 row m0 flex w100">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -1538,7 +1513,7 @@
 							</div>
 						</div>
 					</div>		
-					<div id="slider-container">
+					<div class="section-container slider-container">
 							<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 								<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 							</div>						
@@ -2094,7 +2069,8 @@
 						</div>
 					</div>				
 				</div>
-				</div>	
+				</div>
+			</div>	
 			<div id="section-space" class="landscape-hidden"></div>				
 			<div id="alcon" class="portfolio-section x-theme">
 				<div class="section-container">
@@ -2185,8 +2161,7 @@
 							</div>
 						</div>
 					</div>				
-			</div>
-			
+			</div>			
 			<div id="section-space" class="landscape-hidden"></div>			
 			<div id="specialized" class="portfolio-section">	
 				<div id="" class="section-container invisible fade-in">				
@@ -4997,7 +4972,7 @@ function myFunction() {
 		</script>
 		
 		<script>
-		console.log('00');
+		console.log('01');
 		</script>
 	</body>
 </html>	

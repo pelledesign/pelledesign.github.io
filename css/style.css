@@ -17897,7 +17897,13 @@ height:100vh;
 }
 
 @media (max-height: 575px) and (orientation:portrait) {
-#spotify .section-container, #designprocess-slider .section-container, #designprocess-slider {
+#designprocess-slider .section-container, #designprocess-slider {
+height:100vh;
+}
+}
+
+@media (max-height: 575px) and (orientation:portrait) {
+#spotify .portfolio-section, #spotify .section-container {
 height:100vh;
 }
 }

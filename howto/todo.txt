@@ -14,6 +14,8 @@ fix this:
 						<div id="mixed-more" class="owl-carousel">							
 							<div id="haglofs" class="item dark-theme">				
 								<div class="row h100 m0 c-all">		
+
+remove / optimze jquery
 spinenr colors and start bg								
 injects for xr
 add 3d models
