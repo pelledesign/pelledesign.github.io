@@ -18153,12 +18153,12 @@ height:100vh;
 }
 }
 
-#hero {
+/* #hero {
 height: 100%;
 z-index:0;	
 }
-
-/* .z3 {
+ */
+.z3 {
 z-index:3;	
 }
 
@@ -18234,5 +18234,5 @@ color: rgb(176,176,176,0.6);
 
 .ion-ios-plus:before {
 font-size:21px;
-} */
+}
 
