@@ -65,6 +65,8 @@ watch .git
 
 )
 
+
+
 function pageSpeed (
 
 78
@@ -72,15 +74,35 @@ function pageSpeed (
 speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43, 41 nov
 lighthouse: desktop: 72, 79	
 lighthouse: mobile:	39, 
-)
 
 function trouble shooting speed insights & lighthouse (
 
-78
-52-57 with about slider
-speedtest best score: 36, 41, 36, 35, 37, 38, 41, 43, 41 nov
-lighthouse: desktop: 72, 79	
-lighthouse: mobile:	39, 
+36 working
+37 > not
+
+I faced the same problem in Wordpress site, I fixed all the jquery issues then it working fine again.
+
+Two things can interfere when using the lighthouse tool:
+
+Extensions used
+Cookies and cached files
+Therefore a 'workaround' here should be straightforward:
+
+Clearing browser data:
+Windows, Linux, or Chrome OS ➖ Ctrl + Shift + Del
+Mac ➖ ⌘ + Shift + Delete
+Using an Incognito window:
+Windows, Linux, or Chrome OS ➖ Ctrl + Shift + N
+Mac ➖ ⌘ + Shift + N
+
+A 15 second timeout has been introduced when considering the start of the page load. 
+If your page doesn’t respond or any content within ~15 seconds, Lighthouse will bail. T
+his will result in the NO_FCP error.
+
+Until you are able to get your page to load within this timeframe, you won’t be able to do a scan. 
+In most cases, if nothing appears on the page for 15 seconds, that means there is an issue on the server or a firewall is blocking access.
+)
+
 )
 
 function changeLog (
