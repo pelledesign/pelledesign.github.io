@@ -53,7 +53,7 @@ main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(eve
 	let element = jQuery(event.target);
 	let idx = event.item.index;
 	let element_item = element.find('.owl-item').eq(idx).find('.item');
-	let this_view_btn = $(this).closest('#slider-container').find('.view-btn');
+	let this_view_btn = $(this).closest('.slider-container').find('.view-btn');
 	let this_title = $(this).closest('.section-container').find('.title');	
 	
 	if (element_item.hasClass('light-theme')) {
@@ -213,12 +213,12 @@ $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
 
 /* prev & next buttons */
     $('.prev-btn').on('click',  function () {
-		let owl_id = $(this).closest('#slider-container').find('.owl-carousel').attr('id');			
+		let owl_id = $(this).closest('.slider-container').find('.owl-carousel').attr('id');			
         $('#' + owl_id).trigger('prev.owl.carousel');
 		/* console.log(owl_id); */		  
     });	
     $('.more-btn, .more-btn-text').on('click',  function () {
-		let owl_id = $(this).closest('#slider-container').find('.owl-carousel').attr('id');			
+		let owl_id = $(this).closest('.slider-container').find('.owl-carousel').attr('id');			
         $('#' + owl_id).trigger('next.owl.carousel');
 		/* console.log(owl_id);	 */	  
     });	
