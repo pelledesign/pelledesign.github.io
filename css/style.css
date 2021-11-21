@@ -18119,7 +18119,7 @@ color: var(--theme-color) !important;
 }
 }
 
-/* #section-space {
+#section-space {
 height:18vh;
 }
 
@@ -18133,8 +18133,8 @@ height:30vh;
 #section-space {
 display:none;
 }
-} */
-
+}
+/* 
 @media (orientation:portrait) {
 #hero-container {
 height: 65vh;	
@@ -18151,7 +18151,7 @@ height: 100vh;
 #hero-container {
 height:100vh;	
 }
-}
+} */
 
 #hero {
 height: 100%;
