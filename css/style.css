@@ -18119,11 +18119,11 @@ color: var(--theme-color) !important;
 }
 }
 
-#section-space {
+/* #section-space {
 height:18vh;
 }
 
-/* @media (max-width:575px) { 
+@media (max-width:575px) { 
 #section-space {
 height:30vh;
 }
