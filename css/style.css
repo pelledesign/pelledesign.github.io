@@ -18259,6 +18259,7 @@ fill:red;
 margin-left: 3px;
 /* margin-left: 3px; */
 }
+
 #grid > div:not(.separator):not(.ingore) { 
 padding:3px;
 padding-top:0;
@@ -18314,7 +18315,6 @@ color:#d9d2b3;
   width: 50vw;
   background-color: red;
   overflow: auto;
-}
 }
 
 
