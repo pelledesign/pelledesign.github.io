@@ -80,6 +80,15 @@ function trouble shooting speed insights & lighthouse (
 36 working
 37 > not
 
+https://stackoverflow.com/questions/55826735/how-to-fix-lighthouse-returned-error-no-fcp-when-running-google-page-speed-t
+
+function errors_36 {
+9 Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
+pelledesign.github.io/:35 The key "target-densitydpi" is not supported.
+DevTools failed to load source map: Could not load content for https://pelledesign.github.io/js/bootstrap.min.js.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE
+DevTools failed to load source map: Could not load content for https://pelledesign.github.io/js/isInViewport.js.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE	
+}
+
 I faced the same problem in Wordpress site, I fixed all the jquery issues then it working fine again.
 
 Two things can interfere when using the lighthouse tool:
