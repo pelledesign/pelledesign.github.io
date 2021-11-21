@@ -17898,7 +17898,6 @@ background: url('../images/bg/a.jpeg');
   overflow-y: scroll;
   border: 1px solid gray;
   scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(3rem);
   scroll-snap-type: y mandatory;
 }
 .scroller {
@@ -18173,7 +18172,7 @@ display:block;
 position:fixed;
 top:0;
 left:50%;
-transform: translateX(-50%;);	
+transform: translateX(-50%);	
 }
 
 #scroll {
@@ -18326,7 +18325,7 @@ display:none;
 .ShowMoreBox {
     margin-left:auto;
     margin-right:auto;
-    width:100%%;
+    width:100%;
 }
 
 .img_display_header {
@@ -18365,13 +18364,13 @@ color: var(--theme-color) !important;
 height:18vh;
 }
 
-@media and (max-width:575px) { 
+@media (max-width:575px) { 
 #section-space {
 height:30vh;
 }
 }
 
-@media and (orientation:landscape) { 
+@media (orientation:landscape) { 
 #section-space {
 display:none;
 }
