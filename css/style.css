@@ -18122,7 +18122,7 @@ color: var(--theme-color) !important;
 #section-space {
 height:18vh;
 }
-
+/* 
 @media (max-width:575px) { 
 #section-space {
 height:30vh;
@@ -18235,4 +18235,4 @@ color: rgb(176,176,176,0.6);
 .ion-ios-plus:before {
 font-size:21px;
 }
-
+ */
