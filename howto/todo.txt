@@ -16,10 +16,10 @@ fix this:
 								<div class="row h100 m0 c-all">		
 
 remove / optimze jquery
+fix shadows
 spinenr colors and start bg								
 injects for xr
 add 3d models
-evaluate title styles - haglofs is ref
 
 enable vertical scolling on tall xr
 orientationchange jumps https://css-tricks.com/content-jumping-avoid/ + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
