@@ -18134,7 +18134,7 @@ height:30vh;
 display:none;
 }
 }
-/* 
+
 @media (orientation:portrait) {
 #hero-container {
 height: 65vh;	
@@ -18151,7 +18151,7 @@ height: 100vh;
 #hero-container {
 height:100vh;	
 }
-} */
+}
 
 #hero {
 height: 100%;
