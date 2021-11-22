@@ -7,16 +7,9 @@ function mobile (
 )
 
 function both (
-fix this: 
-			<div class="portfolio-section">
-				<div class="section-container">				
-					<div id="slider-container">
-						<div id="mixed-more" class="owl-carousel">							
-							<div id="haglofs" class="item dark-theme">				
-								<div class="row h100 m0 c-all">		
 
 remove / optimze jquery
-fix shadows
+xrtext theme colors
 spinenr colors and start bg								
 injects for xr
 add 3d models
@@ -79,44 +72,6 @@ lighthouse: desktop: 72, 79
 lighthouse: mobile:	39, 	
 }
 
-
-function trouble shooting speed insights & lighthouse (
-
-36 working
-37 > not
-
-https://stackoverflow.com/questions/55826735/how-to-fix-lighthouse-returned-error-no-fcp-when-running-google-page-speed-t
-
-function errors_36 {
-9 Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'.
-pelledesign.github.io/:35 The key "target-densitydpi" is not supported.
-DevTools failed to load source map: Could not load content for https://pelledesign.github.io/js/bootstrap.min.js.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE
-DevTools failed to load source map: Could not load content for https://pelledesign.github.io/js/isInViewport.js.map: HTTP error: status code 404, net::ERR_HTTP_RESPONSE_CODE_FAILURE	
-}
-
-I faced the same problem in Wordpress site, I fixed all the jquery issues then it working fine again.
-
-Two things can interfere when using the lighthouse tool:
-
-Extensions used
-Cookies and cached files
-Therefore a 'workaround' here should be straightforward:
-
-Clearing browser data:
-Windows, Linux, or Chrome OS ➖ Ctrl + Shift + Del
-Mac ➖ ⌘ + Shift + Delete
-Using an Incognito window:
-Windows, Linux, or Chrome OS ➖ Ctrl + Shift + N
-Mac ➖ ⌘ + Shift + N
-
-A 15 second timeout has been introduced when considering the start of the page load. 
-If your page doesn’t respond or any content within ~15 seconds, Lighthouse will bail. T
-his will result in the NO_FCP error.
-
-Until you are able to get your page to load within this timeframe, you won’t be able to do a scan. 
-In most cases, if nothing appears on the page for 15 seconds, that means there is an issue on the server or a firewall is blocking access.
-)
-
 )
 
 function changeLog (
@@ -125,5 +80,7 @@ function changeLog (
 commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
 added on-click trigger to about_slider_mobile in main.js
 
-/* removed class .zoom-container {height:100%;width:100%;} to create dynamic equal row heights */
+211121
+Removed her-container-class for mobile as speed insight threw an error (?) speed: mobile 47 desktop 44
+fixed <!-- textoverlay  --> issue
 )

@@ -14046,9 +14046,7 @@ div.light-theme svg,
 .light-theme .overlay .btn-outline
 .light-theme .overlay .zoom-icon
 .light-theme .overlay .btn,
-.light-theme .configtext h3,
-.light-theme a.info-icon,
-.light-theme .xrtext h3 {
+.light-theme a.info-icon {
 color: var(--contrast);
 fill:var(--contrast);
 }
@@ -14263,8 +14261,6 @@ background-position: 50% 50%;
 .dark-theme .ion-android-color-palette:before,
 .dark-theme .btn-outline
 .dark-theme .zoom-icon,
-.dark-theme .configtext,
-.dark-theme .xrtext,
 .dark-theme .ion-ios-plus.ion-ios-plus-color,
 .dark-theme a.info-icon
  { 
@@ -18032,7 +18028,7 @@ fill:red;
 margin-left: 3px;
 }
 
-#grid > div:not(.separator):not(.ingore) { 
+#grid > div:not(.separator):not(.ignore) { 
 padding:3px;
 padding-top:0;
 padding-left:0;
@@ -18125,19 +18121,19 @@ color: var(--theme-color) !important;
 }
 }
 
-#akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #specialized, .info-box {
+#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:18vh;
 }
 
 
 @media (max-width:575px) { 
-#akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #specialized, .info-box {
+#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:30vh;
 }
 }
 
 @media (orientation:landscape) {
-#akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #specialized, .info-box {
+#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:0;
 }
 }
@@ -18220,6 +18216,7 @@ top: 0;
 right: 0;
 position: absolute;
 padding: 0.75rem;	
+z-index:1;
 }
 
 .configtext {
@@ -18227,6 +18224,7 @@ top: 0;
 left: 0;
 position: absolute;
 padding: 0.75rem;	
+z-index:1;
 }
 
 .config-open-large {

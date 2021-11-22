@@ -867,6 +867,18 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         b += z + "user-select: none;";
         s.setAttribute("style", b);
         v.appendChild(s);
+
+
+/*         xrtext = document.createElement("div");
+        xrtext.setAttribute("class", "xrtext");
+        b = "position: absolute;";
+        b = "top:  0px;";
+        b += "right: 0px;";
+        b += "overflow: hidden;";       
+		  b += "display:flex;";
+        b += z + "user-select: none;";
+        xrtext.setAttribute("style", b);
+        v.appendChild(xrtext); */
 		  
 
 

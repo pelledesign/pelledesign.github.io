@@ -53,7 +53,6 @@
 			$('.xr-auto, .config-auto').each(function() {
 				var this_iframe = $(this);
 				var extra_space = '0';
-				this_iframe.addClass('test');
 				this_src = $(this).attr('src');
 				
 				if (this_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') {
@@ -700,15 +699,17 @@
 							</div>	
 						</div>						
 						<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="akg/xr/akgxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
+							<div class="dark-theme">
+								<iframe 
+								id=""
+								style="display:flex;"
+								class="xr-auto"							
+								src="akg/xr/akgxr.html"																		
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+							</div>
 						</div>
 						<div class="lg-up-h col-lg- col-md-6 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto" style="max-height:100vh;">
 							<div class="item zoomable hw100 medium-theme">
@@ -717,6 +718,7 @@
 							</div>
 						</div>
 						<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
+						<div class="dark-theme">
 							<iframe
 							style="display:flex;"							
 							class="config-auto lazy invisible fade-in  dark-theme"		
@@ -725,6 +727,7 @@
 							scrolling="no"
 							>			
 							</iframe>	
+						</div>
 						</div>		
 					</div>					
 				</div>											
@@ -1326,26 +1329,30 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="Converse/xr/conversexr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="dark-theme">
+								<iframe 
+								id=""
+								style="display:flex;"
+								class="xr-auto"							
+								src="Converse/xr/conversexr.html"																		
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+							</div>
 						</div>	
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe
-							style="display:flex;"							
-							class="config-auto lazy invisible fade-in dark-theme"		
-							data-src="Converse/web/keyshot-configurator.html"												
-							frameborder="0"
-							scrolling="no"
-							>			
-							</iframe>	
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="dark-theme">
+								<iframe
+								style="display:flex;"							
+								class="config-auto lazy invisible fade-in dark-theme"		
+								data-src="Converse/web/keyshot-configurator.html"												
+								frameborder="0"
+								scrolling="no"
+								>			
+								</iframe>	
+							</div>
 						</div>		
 					</div>											
 				</div>			
@@ -1479,16 +1486,18 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>				
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="poc/xr/pocxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="light-theme">
+								<iframe 
+								id=""
+								style="display:flex;"
+								class="xr-auto"							
+								src="poc/xr/pocxr.html"																		
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+							</div>
 						</div>						
 					</div>					
 				</div>				
@@ -1884,16 +1893,18 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto"							
-							src="Bagheera/xr/bagheeraxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="light-theme">
+								<iframe 
+								id=""
+								style="display:flex;"
+								class="xr-auto"							
+								src="Bagheera/xr/bagheeraxr.html"																		
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+							</div>
 						</div>	
 					</div>					
 				</div>				
@@ -2050,18 +2061,16 @@
 								<span class="more-btn btn btn-outline touch-hidden">more</span>	
 								<span class="more-btn desktop-hidden"></span>							
 							</div>								
-					</div>
-				<div class="xl-up-h x-theme">	 	
-					<div class="col-lg-12 x-theme">
-						<div class="item c-all">			
+					</div>			
+						<div id="grid" class="item row m0 h100 relative x-theme">	
+						<div class="item col-lg-12 c-all">			
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
 									<p class="ignore">Short bladed knife for Outdoor Equipment Company Haglöfs.
 									</p>
 								</div>
 							</div>										
-						</div>			
-						<div id="grid" class="item row m0 h100 relative x-theme">				
+						</div>							
 							<div class="col-lg-6 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 								<div class="item zoomable hw100 medium-theme">
 									<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -2074,20 +2083,20 @@
 								<p class="img-text hidden"></p>					
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-								<iframe 
-								id=""
-								style="display:flex;"
-								class="xr-auto"							
-								src="haglofs/xr/haglofs.html"																		
-								frameborder="0"
-								scrolling="no"
-								>
-								</iframe>
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="light-theme">
+									<iframe 
+									id=""
+									style="display:flex;"
+									class="xr-auto"							
+									src="haglofs/xr/haglofs.html"																		
+									frameborder="0"
+									scrolling="no"
+									>
+									</iframe>
+								</div>
 							</div>																					
-						</div>
-					</div>				
-				</div>
+						</div>			
 				</div>
 			</div>								
 			<div id="alcon">
@@ -2104,7 +2113,7 @@
 						</div>
 					</div>
 				</div>			
-				<div class="portfolio-section">
+				<div class="portfolio-section x-theme">
 					<div id="alcon-title" class="touch-hidden title light-theme row m0">
 						<div class="col-12 row m0 flex">
 							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
@@ -2445,16 +2454,18 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape p0">
-							<iframe 
-							id=""
-							style="display:flex;"
-							class="xr-auto dark-theme"							
-							src="Specialized/xr/specializedxr.html"																		
-							frameborder="0"
-							scrolling="no"
-							>
-							</iframe>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
+							<div class="dark-theme">
+								<iframe 
+								id=""
+								style="display:flex;"
+								class="xr-auto dark-theme"							
+								src="Specialized/xr/specializedxr.html"																		
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>
+							</div>
 						</div>
 					</div>					
 				</div>				
@@ -3098,7 +3109,7 @@
 					</div>				
 				</div>
 			</div>
-			<div id="page" class="c-all desktop-hidden">
+			<div id="page" class="c-all desktop-hidden" style="    opacity: 0.05;">
 				<a href="process.html"><span class="btn btn-outline">page</span>	</a>
 			</div>			
 		</div>
@@ -4159,8 +4170,10 @@
 		
 		//must be placed before main.js as it needs classes from x-theme to be able to execute
 		
-		$('.xr-auto').closest('div').append('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
-		$('.config-auto').closest('div').append('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>');		
+		$('.xr-auto').closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong></strong>CMF</h3></div>');		
+		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>');
+
 		
 		var darkBg = '#242424';		
 		var lightBg = '#fff';
@@ -4665,32 +4678,29 @@
 		<script>
 		
 		if(is_touch_device()) {
-		var overlayClasses = $('.textoverlay, .textoverlay-mobile');		
-		}
-		else { 
-		var overlayClasses = $('.textoverlay, .textoverlay-desktop');	
-		}	
-		
+		var overlayClasses = $('.textoverlay, .textoverlay-mobile');	
 		overlayClasses.on('touchstart touchend',function(){						
 		$(this).find('img').not('.nofade').toggleClass('half img-opacity');
 		$(this).find('.overlay').toggleClass('img-opacity');
 		$(this).find('.text-animate').toggleClass('remove-margin');
-		});
-
+		});		
+		}
+		else { 
+		var overlayClasses = $('.textoverlay, .textoverlay-desktop');	
 		overlayClasses.on('mouseenter mouseleave',function(){ 
 		$(this).find('img').not('.nofade').toggleClass('half img-opacity');
 		$(this).find('.overlay').toggleClass('img-opacity');
 		$(this).find('.text-animate').toggleClass('remove-margin');
 		});
-
-
+		}	
+		
 		<!-- hide next button on touch  -->
 		$('.owl-carousel').on('touchstart',function(){
-		var viewBtn = $(this).closest('#slider-container').find('.view-btn');
+		var viewBtn = $(this).closest('.slider-container').find('.view-btn');
 		 viewBtn.addClass('invisible');
 		});
 		$('.owl-carousel').on('touchend',function(){
-		var viewBtn = $(this).closest('#slider-container').find('.view-btn');
+		var viewBtn = $(this).closest('.slider-container').find('.view-btn');
 		 viewBtn.removeClass('invisible');
 		});
 
