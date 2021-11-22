@@ -743,7 +743,7 @@
 				</div>	
 			</div>			
 			<div id="converse">
-					<div id="converse-title" class="landscape-hidden title row m0">
+					<div id="converse-title" class="desktop-hidden landscape-hidden title row m0">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
@@ -2062,7 +2062,7 @@
 								<span class="more-btn desktop-hidden"></span>							
 							</div>								
 					</div>			
-						<div id="grid" class="item row m0 h100 relative x-theme">	
+						<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
 						<div class="item col-lg-12 c-all">			
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
@@ -4152,9 +4152,9 @@
 		</div>
 		
 		<!-- loader -->
-		<div id="loader" class="show fullscreen dark-theme"><svg class="circular" width="48px" height="48px">
+		<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 		  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-		  <circle class="path theme-stroke" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+		  <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
 			 /></svg></div> 
 
 		<!-- up button -->
@@ -4175,28 +4175,30 @@
 		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>');
 
 		
-		var darkBg = '#242424';		
-		var lightBg = '#fff';
+		var theme;
+		var this_theme; 			
+		var this_bg;
 		
 		if(is_touch_device()) {
-		var theme = 'light-theme'; //	set theme for touch devices			
-		var this_bg = '#fff'; //	set theme for touch devices	
-		$('.x-theme-touch').addClass(theme);	
+		theme = 'light';	
+		themeElements = $('.x-theme-touch');	
 		}
 		else
 		{ 
-		var theme = 'light-theme'; // set theme for desktop devices	
-		var this_bg = '#fff';		
-		$('.x-theme-desktop').addClass(theme);
+		theme = 'light';
+		themeElements = $('.x-theme-desktop');
 		}		
 		
-		// apply chosen theme to elements - and mark clicked button with circle	
+		this_theme = theme + '-theme'; 			
+		this_bg = theme + 'Bg';
 		
-		$('body').css({"background-color": this_bg});
-		$('.' + theme + '-button').addClass('circle-shadow');
-		$('#hero').find('.item').addClass(theme);	
-		$('body').find(".x-theme, .info-box").addClass(theme);
-		$('.portfolio-section, .x-shadow, .info-box').addClass(theme + '-shadow');		
+		// apply chosen theme to elements - and mark clicked button with circle			
+		$('body').addClass(this_bg);
+		themeElements.addClass(this_theme);
+		$('.' + this_theme + '-button').addClass('circle-shadow');
+		$('#hero').find('.item').addClass(this_theme);	
+		$('body').find(".x-theme, .info-box").addClass(this_theme);
+		$('.portfolio-section, .x-shadow, .info-box').addClass(this_theme + '-shadow');		
 		$('body').find(".title").not('.ignore').addClass('bg-none');
 		
 		
@@ -4210,17 +4212,19 @@
 		var other_theme = 'dark-theme';
 		var this_button = $('.light-theme-button');
 		var other_button = $('.dark-theme-button');
-		var this_theme_clr = '#fff';
+		var this_theme_clr = 'lightBg';
+		var other_theme_clr = 'darkBg';
 		}
 		else if ($(this).hasClass('dark-theme-button')) {
 		var this_theme = 'dark-theme';
 		var other_theme = 'light-theme';
 		var this_button = $('.dark-theme-button');
 		var other_button = $('.light-theme-button');
-		var this_theme_clr = '#242424';
+		var this_theme_clr = 'darkBg';
+		var other_theme_clr = 'lightBg';
 		}
 		
-		$('body').css({"background-color": this_theme_clr});
+		$('body').removeClass(other_theme_clr).addClass(this_theme_clr);
 		other_button.removeClass('circle-shadow');
 		this_button.addClass('circle-shadow');
 		
@@ -4926,13 +4930,13 @@
 			var this_container = $(this).closest('.popup');
 			}
 			else {
-			var el = $(this).closest('.section-container').find('.owl-item.active').find('.item');
-			var this_container = $(this).closest('.section-container');
+			var el = $(this).closest('.portfolio-section').find('.owl-item.active').find('.item');
+			var this_container = $(this).closest('.portfolio-section');
 			}	
 			var tool_tip = $(this).data("tooltip");
 			
 			<!-- define tooltip colors			 -->
-			if(el.hasClass("dark-theme"))
+			if(el.hasClass("dark-theme") || el.hasClass("pop-theme"))
 			{
 			bgcolor ="rgba(0, 0, 0, 0.7)";
 			textcolor ="#fff";

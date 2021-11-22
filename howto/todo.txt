@@ -7,10 +7,7 @@ function mobile (
 )
 
 function both (
-
-remove / optimze jquery
-xrtext theme colors
-spinenr colors and start bg								
+fix cpu	- remove / optimze jquery				
 injects for xr
 add 3d models
 

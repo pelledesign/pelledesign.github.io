@@ -81,6 +81,13 @@ recommended 50 - 70 */
 /* <-----------------------------------------------------------				custom colors 			-----------------------------------------------------------------------------------------> */
 
 
+.darkBg {
+background-color: #242424;
+}
+
+.lightBg {
+background-color: #fff;
+}		
 
 
 /* SECOND STOP CLR original #cccccc -> c8cad0-> cacbce */ 
@@ -160,9 +167,7 @@ img.black-bg{
 	background-color:#212121;		
 }
 
-.theme-stroke {
-  stroke: var(--theme-color);		
-}
+
 
 /* fills */
 .theme-fill {
@@ -389,6 +394,30 @@ body {
   line-height: 1.8;
   /* color: #6c757d; */
   color: #404040;
+}
+
+body.darkBg #loader {
+background: #242424;	
+}
+
+body.darkBg #loader .path{
+stroke: var(--theme-color);	
+}
+
+body.darkBg #loader .path-bg{
+stroke:#eeeeee;
+}
+
+body.lightBg #loader {
+background: #fff;	
+}
+
+body.lightBg #loader .path{
+stroke:#f4b214;
+}
+
+body.lightBg #loader .path-bg{
+stroke:#eeeeee;
 }
 
 
@@ -12617,6 +12646,10 @@ margin-top: 3em;
   -webkit-animation: loader-dash 1.5s ease-in-out infinite;
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round;
+}
+
+.theme-stroke {
+  stroke: var(--theme-color);		
 }
 
 @-webkit-keyframes loader-rotate {
