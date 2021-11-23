@@ -50,31 +50,33 @@
 			var this_container_width;
 			var aspect_ratio;
 			var this_src;
+			var this_data_src;
 			
 			$('.xr-auto, .config-auto').each(function() {
 				var this_iframe = $(this);
 				var extra_space = '0';
-				this_src = $(this).attr('data-src');
+				this_src = $(this).attr('src');
+				this_data_src = $(this).attr('data-src');
 				
-				if (this_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') {
+				if (this_src =='akg/xr/akgxr.html' || this_data_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') || this_data_src == 'akg/web/keyshot-configurator.html') {
 				aspect_ratio = 899 / 829;
 				}
-				else if (this_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html') {
+				else if (this_src == 'Converse/xr/conversexr.html' || this_data_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html' || this_data_src == 'Converse/web/keyshot-configurator.html') {
 				aspect_ratio = 800 / 1919;
 				}
-				else if (this_src == 'poc/xr/pocxr.html') {
+				else if (this_src == 'poc/xr/pocxr.html' || this_data_src == 'poc/xr/pocxr.html') {
 				aspect_ratio = 1080 / 1920;
 				}
-				else if (this_src == 'Bagheera/xr/bagheeraxr.html') {
+				else if (this_src == 'Bagheera/xr/bagheeraxr.html' || this_data_src == 'Bagheera/xr/bagheeraxr.html') {
 				aspect_ratio = 890 / 1583;
 				}
-				else if (this_src == 'haglofs/xr/haglofs.html') {
+				else if (this_src == 'haglofs/xr/haglofs.html' || this_data_src == 'haglofs/xr/haglofs.html') {
 				aspect_ratio = 440 / 1600;
 				}
-				else if (this_src == 'alcon/xr/alconxr.html') {
+				else if (this_src == 'alcon/xr/alconxr.html' || this_data_src == 'alcon/xr/alconxr.html') {
 				aspect_ratio = 800 / 815;
 				}
-				else if (this_src == 'Specialized/xr/specializedxr.html') {
+				else if (this_src == 'Specialized/xr/specializedxr.html' || this_data_src == 'Specialized/xr/specializedxr.html') {
 				aspect_ratio = 829 / 799;
 				}
 				else {
