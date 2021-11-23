@@ -8,11 +8,11 @@
 var touchStatus = "";
 $('body').on('touchstart',function(){
 	touchStatus = 'pressing';
-	console.log('touchstart');		
+	//console.log('touchstart');		
 	});
 	$('body').on('touchend',function (){
 	touchStatus = 'released';
-	console.log('touchend');			
+	//console.log('touchend');			
 	});	
 	
 ( function( $ ){
@@ -78,7 +78,7 @@ $('body').on('touchstart',function(){
           settings.speed,
           function(){
             $( 'body.lock-scroll' ).removeClass( 'lock-scroll' );
-				console.log(direction);	// checking direction when snapping
+				//console.log(direction);	// checking direction when snapping
 				if ((direction == 'up') && (scrollTo > 500)) {
 				//$('header').removeClass('nav-down').addClass('nav-up');
 				$('header').removeClass('nav-down').addClass('nav-up');
@@ -118,7 +118,7 @@ $('body').on('touchstart',function(){
 		
       clearTimeout( scrollStop );
 		//touchStatus = 'pressning';
-			console.log(touchStatus);
+			//console.log(touchStatus);
       scrollStop = setTimeout( function(){
         snapScroll( $snap, scroll, direction ); 
       }, 600 ); // time to start of scroll 		

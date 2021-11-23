@@ -541,6 +541,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
             /* this.parentNode && (this.style.left = "16px", this.style.top = "16px") */	/* position spinner here top-left */
 				this.parentNode && (this.style.left = "50%", this.style.top = "50%", this.style.transform = "translate(-50%, -50%)") /* centered spinner */
         };
+		  a.p.setAttribute("id", "loader-icon");
         b = "position:absolute;";
         b += "left: 0px;";
         b += "top:  0px;";
@@ -942,6 +943,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         q.addEventListener("load", G, u);
         q.addEventListener("error", G, u);
         n = document.createElement("div");
+		  n.setAttribute("id", "iconcontainer");
         a.r = n;
         b = "top:  0px;";
         b += "left: 0px;";
@@ -995,9 +997,10 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
         }, a.S.onclick = function() {
             a.Wa()
         }, a.r.appendChild(a.S));
-        if (a.W) {
+        if (a.W) {								// xr swip animation
             /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && (J = p);
             a.M = document.createElement("div");
+				a.M.setAttribute("id", "swipeanimationcontainer");
             b = "position:absolute;";
 /*             b += "width: 92px;";
             b += "height: 92px;"; */
@@ -1008,7 +1011,7 @@ window.keyshotXR = function(X, w, G, Y, va, D, wa, xa, ya, za, Aa, K, L, Z, $, B
             b += "cursor: grab;"; /* iframe cursor same as 840 - old ew-resize*/
             a.M.setAttribute("style", b);
             a.X = document.createElement("img");
-            J ? a.X.setAttribute("src", "../../images/xr/xr_hand.gif") : a.X.setAttribute("src", "../../images/xr/xr_cursor.gif");				
+            J ? a.X.setAttribute("src", "") : a.X.setAttribute("src", ""); //../../images/xr/xr_hand.gif				
             /* J ? a.X.setAttribute("src", "../../images/xr/xr_hand.gif") : a.X.setAttribute("src", "../../images/loaders/bars.svg"); */	 
            /*  a.X.setAttribute("style", "position: absolute;top: 0px;left: 0px;width: 92px;height: 92px;"); */
 			   //a.X.setAttribute("style", "position: absolute;top: 0px;left: 0px;width: 60px;height: 60px;");

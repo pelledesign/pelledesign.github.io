@@ -25,7 +25,8 @@
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>	
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		
 <!-- 		<script> 
 		alert('css 16')
 		</script>	 -->	
@@ -53,7 +54,7 @@
 			$('.xr-auto, .config-auto').each(function() {
 				var this_iframe = $(this);
 				var extra_space = '0';
-				this_src = $(this).attr('src');
+				this_src = $(this).attr('data-src');
 				
 				if (this_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html') {
 				aspect_ratio = 899 / 829;
@@ -312,7 +313,7 @@
 				</div>
 			</div>
 		</div>		
-				
+					
 		<!-- about -->
 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
 		<div id="about" class="portfolio-section snap x-theme relative section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
@@ -450,7 +451,7 @@
 							</div>
 						</div>		
 					</div>	
-					<div class="section-container slider-container">	
+					<div class="xs-down-h section-container slider-container">	
 						<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
 							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
 						</div>						
@@ -643,6 +644,12 @@
 						</div>	
 					</div>
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+						<div class="col-xs-12 c-all invisible fade-in h-auto">				
+							<div class="item hw100 medium-theme">
+								<img src="" data-src="akg/images/gallery/04.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>						
 						<div class="col-lg-12 col-md-12 col-xs-12 loader c-all textoverlay zoom-container invisible fade-in h-auto">						
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
@@ -667,10 +674,22 @@
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>			
-						</div>					
+						</div>				
 						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="akg/images/gallery/02.png" class="lazy  cover" style="object-position: 100% 17%;">		
+							<p class="img-text hidden"></p>					
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
+							<div class="item zoomable hw100 dark-theme">
+							<img src="" data-src="akg/images/functions.svg" class="lazy  cover" style="object-position: 100% 17%;">		
+							<p class="img-text hidden"></p>					
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-4 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
+							<div class="item zoomable hw100 dark-theme">
+							<img src="" data-src="akg/images/gallery/onhead.jpg" class="lazy  cover" style="object-position: 100% 17%;">		
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
@@ -703,8 +722,9 @@
 								<iframe 
 								id=""
 								style="display:flex;"
-								class="xr-auto"							
-								src="akg/xr/akgxr.html"																		
+								class="xr-auto lazy"							
+								src=""																		
+								data-src="akg/xr/akgxr.html"																		
 								frameborder="0"
 								scrolling="no"
 								>
@@ -774,7 +794,7 @@
 							</div>
 						</div>		
 					</div>	
-					<div class="section-container slider-container">			
+					<div class="xs-down-h section-container slider-container">			
 						<div id="converse-more" class="owl-carousel">					
 							<div class="item owl-hide-lg-up dark-theme">
 								<div class="cont">
@@ -1252,7 +1272,6 @@
 														<div class="ignore model-controls">
 															<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon ion-information-circled"></div>
 															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-															<!-- 0 -->
 														</div>																										
 												</div>
 											</div>	
@@ -1286,6 +1305,12 @@
 						</div>	
 					</div>
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+						<div class="col-xs-12 loader c-all invisible fade-in h-auto">				
+							<div class="item hw100 dark-theme">
+								<img src="" data-src="Converse/images/gallery/02_2.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>	
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1334,8 +1359,9 @@
 								<iframe 
 								id=""
 								style="display:flex;"
-								class="xr-auto"							
-								src="Converse/xr/conversexr.html"																		
+								class="xr-auto lazy"							
+								src=""																		
+								data-src="Converse/xr/conversexr.html"																		
 								frameborder="0"
 								scrolling="no"
 								>
@@ -1395,7 +1421,7 @@
 							</div>
 						</div>
 					</div>		
-					<div class="section-container slider-container">
+					<div class="xs-down-h section-container slider-container">
 						<div id="poc-more" class="owl-carousel c-100">					
 							<div class="item hw100 dropshadow zoom-container dark-theme">
 								<div class="zoom-icon"></div>						
@@ -1438,6 +1464,12 @@
 						</div>							
 					</div>
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">
+						<div class="col-xs-12 loader c-all invisible fade-in h-auto">				
+							<div class="item hw100 dark-theme">
+								<img src="" data-src="poc/images/front.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1455,13 +1487,13 @@
 									</div>
 								</div>
 							</div>										
-						</div>					
+						</div>						
 						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="poc/xr//0_7.png" class="lazy cover " style="object-position: 100% 17%;">	
 								<p class="img-text hidden"></p>
 							</div>			
-						</div>					
+						</div>						
 						<div class="col-lg-4 col-md-6 col-xs-6 loader c-all textoverlay zoom-container invisible fade-in h-auto">
 							<div class="item zoomable hw100 medium-theme">
 							<img src="" data-src="poc/xr//0_14.png" class="lazy  cover" style="object-position: 100% 17%;">		
@@ -1491,8 +1523,9 @@
 								<iframe 
 								id=""
 								style="display:flex;"
-								class="xr-auto"							
-								src="poc/xr/pocxr.html"																		
+								class="xr-auto lazy"							
+								src=""																		
+								data-src="poc/xr/pocxr.html"																		
 								frameborder="0"
 								scrolling="no"
 								>
@@ -1593,7 +1626,7 @@
 							</div>
 						</div>
 					</div>		
-					<div class="section-container slider-container">
+					<div class="xs-down-h section-container slider-container">
 						<div id="bagheera-more" class="owl-carousel">
 							<div class="item row x-theme-touch medium-theme-desktop m0">				
 									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
@@ -1854,6 +1887,12 @@
 					</div>					
 					</div>	
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+						<div class="col-xs-12 sm-up-h loader c-all invisible fade-in h-auto">				
+							<div class="item hw100 dark-theme">
+								<img src="" data-src="Bagheera/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1898,8 +1937,9 @@
 								<iframe 
 								id=""
 								style="display:flex;"
-								class="xr-auto"							
-								src="Bagheera/xr/bagheeraxr.html"																		
+								class="xr-auto lazy"							
+								src=""																		
+								data-src="Bagheera/xr/bagheeraxr.html"																		
 								frameborder="0"
 								scrolling="no"
 								>
@@ -1954,7 +1994,7 @@
 							</div>
 						</div>		
 					</div>				
-					<div class="section-container slider-container">				
+					<div class="xs-down-h section-container slider-container">				
 							<div id="mixed-more" class="owl-carousel">							
 								<div class="item dark-theme">				
 									<div class="row h100 m0 c-all">															
@@ -2063,6 +2103,12 @@
 							</div>								
 					</div>			
 						<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+							<div class="col-xs-12 loader c-all invisible fade-in h-auto">				
+								<div class="item zoomable hw100 medium-theme">
+									<img src="" data-src="haglofs/xr/0_0.png" class="lazy cover " style="object-position: 100% 17%;">	
+									<p class="img-text hidden"></p>
+								</div>			
+							</div>							
 						<div class="item col-lg-12 c-all">			
 							<div class="text-box c-all txt-l  invisible fade-in-left">
 								<div class="">
@@ -2088,8 +2134,9 @@
 									<iframe 
 									id=""
 									style="display:flex;"
-									class="xr-auto"							
-									src="haglofs/xr/haglofs.html"																		
+									class="xr-auto lazy"							
+									src=""																		
+									data-src="haglofs/xr/haglofs.html"																		
 									frameborder="0"
 									scrolling="no"
 									>
@@ -2127,14 +2174,15 @@
 							</div>
 						</div>
 					</div>				
-					<div class="section-container slider-container">										
+					<div class="xs-down-h section-container slider-container">										
 						<div class="item row owl-hide-lg-up x-theme m0">				
 							  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100 loader">								
 									<iframe 
 									id=""
 									style="display:flex;"
-									class="xr-auto"							
-									src="alcon/xr/alconxr.html"																		
+									class="xr-auto lazy"							
+									src=""																		
+									data-src="alcon/xr/alconxr.html"																		
 									frameborder="0"
 									scrolling="no"
 									>
@@ -2150,7 +2198,13 @@
 							  </div>								  
 						</div>						
 					</div>
-					<div id="grid" class="xl-up-h item row m0 h100">		
+					<div id="grid" class="xl-up-h item row m0 h100">	
+						<div class="col-xs-12 sm-up-h loader c-all invisible fade-in h-auto">				
+							<div class="item zoomable hw100 dark-theme">
+								<img src="" data-src="alcon/xr/25_0.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -2229,7 +2283,7 @@
 							</div>
 						</div>
 					</div>	
-					<div class="section-container slider-container">
+					<div class="xs-down-h section-container slider-container">
 						<div id="specialized-more" class="owl-carousel">			
 							<div class="item row owl-hide-lg-up x-theme m0">
 									<div class="col-lg-6 col-xs-6 h100 c-all portrait-hidden">
@@ -2405,6 +2459,12 @@
 						</div>				
 					</div>
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+						<div class="col-xs-12 sm-up-h loader c-all invisible fade-in h-auto">				
+							<div class="item zoomable hw100 light-theme">
+								<img src="" data-src="Specialized/images/gallery/twisted.png" class="lazy cover " style="object-position: 100% 17%;">	
+								<p class="img-text hidden"></p>
+							</div>			
+						</div>					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l  invisible fade-in-left">
@@ -2454,19 +2514,20 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>					
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
+<!-- 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
 							<div class="dark-theme">
 								<iframe 
 								id=""
 								style="display:flex;"
-								class="xr-auto dark-theme"							
-								src="Specialized/xr/specializedxr.html"																		
+								class="xr-auto dark-theme lazy"							
+								src=""																		
+								data-src="Specialized/xr/specializedxr.html"																		
 								frameborder="0"
 								scrolling="no"
 								>
 								</iframe>
 							</div>
-						</div>
+						</div> -->
 					</div>					
 				</div>				
 			</div>
@@ -2486,7 +2547,7 @@
 							</div>
 						</div>
 					</div>		
-					<div id="slider-container">	
+					<div id="xs-down-h slider-container">	
 						<div id="belmar-more" class="owl-carousel c-100 dropshadow">						
 							<div class="item row m0 textoverlay-mobile light-theme">	
 								<div class="md-down-h col-lg-4 col-sm c-lg-up light-theme">
@@ -2550,7 +2611,7 @@
 				<a href="#" class="c-absolute xs-down-h more-btn-text btn btn-outline">More Designs</a>
 				<a href="#" class="c-absolute md-up-h more-btn-text btn btn-outline">Show More</a>
 			</div>	
-			<div id="designprocess-slider" class="portfolio-section snap col-lg-12">
+<!-- 			<div id="designprocess-slider" class="portfolio-section snap col-lg-12">
 				<div class="section-container">	
 					<div id="design-process-title" class="title row m0 x-theme">
 						<div class="col-12 flex">
@@ -3108,7 +3169,7 @@
 						</div>										
 					</div>				
 				</div>
-			</div>
+			</div> -->
 			<div id="page" class="c-all desktop-hidden" style="    opacity: 0.05;">
 				<a href="process.html"><span class="btn btn-outline">page</span>	</a>
 			</div>			
@@ -3134,7 +3195,7 @@
 							<p>with us at Bagheera AB, Sweden for a few years. <br>
 							His task was to design athletic shoes. He also joined the teams trips to our office in Xiamen China. <br>
 							He did a very good job and a few of his uppers are still classic styles in our program. </p>					
-							<p>I can definitely recommend Pelle"</p>									 -->
+							<p>I can definitely recommend Pelle"</p>
 							<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
 						</div>
 					</div>
@@ -4258,6 +4319,26 @@
 		<script src="js/jquery-scroll-snap.js"></script>
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
+		
+		<script>
+		  // loader
+		  var loader = function() {
+			 setTimeout(function() { 
+				if($('#loader').length > 0) {
+				  //$('#loader').removeClass('show');
+				  $('#loader').remove();
+				}
+			 }, 1);
+		  };
+		  loader();		
+		</script>
+
+		
+		<!-- verlok lazy load - don't use when owl carousel is used -->
+<!-- 		<script>
+		var lazyLoadInstance = new LazyLoad({
+		});
+		</script> -->
 
 		
 		<!-- zoom-icon function -->
@@ -4462,8 +4543,8 @@
 		var positioning_buttons = 'on top';
 		var positioning_title = 'on top';
 		}	
-		console.log(positioning_buttons);
-		console.log(positioning_title);
+		//console.log(positioning_buttons);
+		//console.log(positioning_title);
 		if (positioning_buttons == 'on top') {
 			//alert('on top');
 			$('.view-btn').addClass('on-top');
@@ -5027,7 +5108,7 @@ function myFunction() {
 		
 		<!-- console logs -->
 		<script>
-		console.log('03');
+		//console.log('03');
 		</script>
 	</body>
 </html>	

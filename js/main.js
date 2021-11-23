@@ -2,15 +2,7 @@
 
 	'use strict';
 
-  // loader
-  var loader = function() {
-    setTimeout(function() { 
-      if($('#loader').length > 0) {
-        $('#loader').removeClass('show');
-      }
-    }, 1);
-  };
-  loader();
+
 
 var
 hero_slider  = $('#hero-slider'),
@@ -132,7 +124,7 @@ var i_d =  $(this).attr('id');
 });
 
 /* remove loader + add animation when slide is done loading - Verlok - used also for popups */
-$('img.lazy, iframe.lazy').on('load',function(){
+/* $('img.lazy, iframe.lazy').on('load',function(){
 $(this).closest('.loader').removeClass('loader'); 
 
  if ($(this).hasClass('lazy-fade-in')){
@@ -149,7 +141,7 @@ $(this).closest('.loader').removeClass('loader');
 			});					
 		}, 100);			
  }	
-});
+}); */
 
 
 /* add slider element animations */
@@ -842,9 +834,9 @@ main_sliders.on('changed.owl.carousel', function(event) {
 	}
 
    if (thisSlide > lastSlide){
-       console.log('going right');
+       //console.log('going right');
    } else {
-      console.log('going left');
+      //console.log('going left');
    }
 	
 	//
