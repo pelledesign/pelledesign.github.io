@@ -10,7 +10,6 @@ function both (
 
 owl / verlok conflict				
 injects for xr
-add 3d models
 
 enable vertical scolling on tall xr
 orientationchange jumps https://css-tricks.com/content-jumping-avoid/ + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
