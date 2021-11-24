@@ -9563,6 +9563,18 @@ display:flex !important;
   height: auto !important;
 }
 
+@media (orientation: portrait) {
+.h-auto-pt {
+  height: auto !important;
+}
+}
+
+@media (orientation: landscape) {
+.h-auto-ls {
+  height: auto !important;
+}
+}
+
 .mw-100 {
   max-width: 100% !important;
 }
@@ -13837,25 +13849,25 @@ visibility:visible !important;
 }
 
 @media (orientation: landscape) {
-  .landscape-hidden {
+  .ls-h {
     display:none !important;
   }
 }
 
 @media screen and (max-width:575px) and (orientation: landscape) {
-  .landscape-xs-hidden {
+  .ls-xs-h {
     display:none !important;
   }
 }
 
 @media screen and (max-width:992px) and (orientation: landscape) {
-  .landscape-md-hidden {
+  .ls-md-h {
     display:none !important;
   }
 }
 
 @media (orientation: portrait) {
-  .portrait-hidden {
+  .pt-h {
     display:none !important;
   }
 }
@@ -13871,7 +13883,7 @@ visibility:visible !important;
   }
 } */
 @media (min-width: 576px) {
-  .s-up-h {
+  .sm-up-h {
     display:none !important;
   }
 }
@@ -13902,7 +13914,7 @@ visibility:visible !important;
   }
 }
 @media (max-width: 767px) {
-  .s-down-h {
+  .sm-down-h {
     display:none !important;
   }
 }
@@ -15698,6 +15710,14 @@ border-bottom: none;
 
 @media (orientation:portrait) {
 .cover-portrait {
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover;
+}
+}
+
+@media (orientation:landscape) {
+.cover-landscape {
   background-size: cover;
   background-position: center center;
   object-fit: cover;
@@ -17913,6 +17933,12 @@ height:65vh;
 }
 }
 
+@media (max-width:575px) {
+.section-container {
+display:none;
+}
+}
+
 @media (orientation:landscape) {
 .section-container {
 height:75vh;
@@ -17925,17 +17951,69 @@ height:100vh;
 }
 }
 
-@media (max-height: 575px) and (orientation:portrait) {
+@media (max-width: 575px) and (orientation:portrait) {
 #designprocess-slider .section-container, #designprocess-slider {
 height:100vh;
 }
 }
 
-@media (max-height: 575px) and (orientation:portrait) {
+@media (max-width: 575px) and (orientation:portrait) {
 #spotify .portfolio-section, #spotify .section-container {
 height:100vh;
 }
 }
+
+.section-hero{
+padding:3px;
+height: 60vh;
+}
+
+@media (max-width: 575px) and (orientation:landscape) {
+.section-hero {
+height:100vh;	
+}
+}
+
+@media (min-width: 576px) {
+  .section-hero {
+    display:none !important;
+  }
+}
+
+.section-hero-container {
+height:100%;	
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+
+}
+
+.section-hero-container > div {
+height:100%;
+display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+@media (orientation:portrait) {
+.hero-text {
+display:none !important;	
+}
+}
+
+.hero-text > div:first-child {
+overflow-y:auto !important;
+height:auto;
+max-height:50vh;
+padding-left: 1.75rem;
+padding-right: 1.75rem;
+}
+
+
+
 
 .more-btn.desktop-hidden {
 /* font-size: 3rem;  */
@@ -18067,6 +18145,11 @@ padding-top:0;
 padding-left:0;
 }
 
+/* @media (max-width: 768px) and (orientation:landscape) {
+#grid div:first-child {
+height:100vh;	
+} */
+
 .img-text {
 position: absolute;
 top: 50%;
@@ -18167,9 +18250,10 @@ margin-bottom:30vh;
 
 @media (orientation:landscape) {
 #about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
-margin-bottom:0;
+margin-bottom:20vh;
 }
 }
+
 
 @media (orientation:portrait) {
 #hero-container {
