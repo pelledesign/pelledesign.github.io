@@ -17,14 +17,14 @@ poc_more = $('#poc-more'),
 spotify_more  = $('#spotify-more'),
 bagheera_more  = $('#bagheera-more'),
 mixed_more  = $('#mixed-more'),
-mixed  = $('#mixed'),
+alcon  = $('#alcon-slider'),
 specialized_more  = $('#specialized-more'),
 belmar_more  = $('#belmar-more'),
 design_process  = $('#design-process'),
 reviews  = $('#reviews'),
 apa = design_process + $('#design-process'),
-all_sliders = $('#hero-slider, #about-slider, #akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process'),
-									 main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #specialized-more, #belmar-more, #design-process');
+all_sliders = $('#hero-slider, #about-slider, #akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #alcon-slider, #specialized-more, #belmar-more, #design-process'),
+									 main_sliders = $('#akg-more, #converse-more, #converse-gallery, #converse-cmf, #poc-more, #akg-gallery, #poc-process, #spotify-more, #bagheera-more, #mixed-more, #alcon-slider, #specialized-more, #belmar-more, #design-process');
 
 /* menu auto swipe */
 $('.go-to-about').on('click',function(){
@@ -618,7 +618,7 @@ navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevr
 }
 }	
 });
-mixed.owlCarousel({
+alcon.owlCarousel({
 rewind: true,	
 autoplay: false,
 autoHeight: true,

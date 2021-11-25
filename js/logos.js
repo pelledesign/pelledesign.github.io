@@ -7,7 +7,8 @@
 	  $(".akg-logo").load("akg/images/akg-logo.svg"); 			
 	  $(".converse-logo").load("Converse/images/converse-logo.svg"); 						
 	  $(".bagheera-logo").load("Bagheera/images/bagheera-logo.svg"); 						
-	  $(".poc-logo").load("poc/images/poc-logo.svg"); 				
+	  $(".poc-logo").load("poc/images/poc-logo.svg"); 
+	  $(".spotify-logo").load("spotify/images/spotify-logo.svg"); 				
 	  $(".specialized-logo").load("Specialized/images/specialized-logo.svg"); 				
 	  $(".haglofs-logo").load("haglofs/images/haglofs-logo.svg"); 				
 	  $(".alcon-logo").load("alcon/images/alcon-logo.svg"); 						

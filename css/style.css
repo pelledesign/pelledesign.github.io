@@ -12245,8 +12245,8 @@ color: transparent;
 
 
 .site-footer {
-  margin-top: 8em;
-  /* padding-top:4rem; */
+  /* margin-top: 8em; */
+  padding-top:4rem;
   background: var(--contrast-dark);
 }
 
@@ -17564,6 +17564,14 @@ height: auto; position: absolute; top: 50%; transform: translateY(-50%);
 opacity: 0.035;
 }
 
+.section-logo {	
+opacity: 0.035;
+height: 100%; 
+position: absolute; 
+top: 50%; 
+transform: translateY(-50%);	
+}
+
 .light-theme .rellax div svg {	
 opacity: 0.035;
 }
@@ -17958,7 +17966,7 @@ height:100vh;
 }
 
 @media (max-width: 575px) and (orientation:portrait) {
-#spotify .portfolio-section, #spotify .section-container {
+#spotify .section-container, #spotify .section-container {
 height:100vh;
 }
 }
@@ -17970,6 +17978,12 @@ height: 60vh;
 
 @media (max-width: 575px) and (orientation:landscape) {
 .section-hero {
+height:100vh;	
+}
+}
+
+@media (max-width: 575px) and (orientation:portrait) {
+#spotify .section-hero {
 height:100vh;	
 }
 }
@@ -18237,19 +18251,19 @@ color: var(--theme-color) !important;
 }
 }
 
-#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
+#hero-container, #about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:18vh;
 }
 
 
 @media (max-width:575px) { 
-#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
+#hero-container, #about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:30vh;
 }
 }
 
 @media (orientation:landscape) {
-#about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
+#hero-container, #about, #akg, #converse, #poc, #spotify, #bagheera, #haglofs, #alcon, #designprocess-slider, .info-box {
 margin-bottom:20vh;
 }
 }
@@ -18326,6 +18340,10 @@ width: 100%;
 height: 100%;	
 width: 1px; 
 min-width: 100%;
+}
+
+.config-auto {
+min-height:40vh;
 }
 
 .xrtext {

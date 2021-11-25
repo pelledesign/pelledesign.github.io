@@ -89,16 +89,16 @@
 				
 			 if (window.matchMedia("(max-width: 565px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
 			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
 			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
 			 } else if (window.matchMedia("(min-width: 992px)").matches) {
 				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width})
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
 			 }
 			 });	
 		}
@@ -118,7 +118,7 @@
 	<body> 
 
 		<!-- background logo -->
-		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed; fill: #a9a9a9; height: 75px; width: 75px;"></div>	
+		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
 		<!-- header -->
 		<header id="header" role="banner" class="nav-down x-theme lg-down-h">
@@ -320,7 +320,7 @@
 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
 		<div id="about" class="portfolio-section snap x-theme relative section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
 			<div id="bg-hero" class="c-absolute hw100"></div>
-			<div id="" class="slider-container col-auto h100 dropshadow">		
+			<div id="" class="slider-container col-auto h100">		
 				<div id="about-slider-mobile" class=" about-slider owl-carousel">				
 					<div class="item invisible fade-in-right">			
 						<div class="h100">
@@ -420,7 +420,7 @@
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
 			<div id="akg">
-				<div id="akg-title" class="desktop-hidden x-theme row m0 bg-none" style="padding-left: 6px; padding-right: 6px;">
+				<div id="akg-title" class="x-theme title row m0 bg-none" style="padding-left: 6px; padding-right: 6px;">
 					<div class="row m0 flex w100">
 						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 						 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
@@ -437,95 +437,10 @@
 					</div>		
 				</div>				
 				<div class="portfolio-section">
-					<div id="akg-title" class="touch-hidden title row m0 medium-theme bg-none">
-						<div class="row m0 flex w100">
-							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-							 <h3 class="m-h h3  txt-l text-xs-center"><strong>AKG  </strong>Over-Ear Headphones</h3>
-							 <h3 class="md-up-h h3 txt-l"><strong>AKG  </strong>Headphones</h3>
-							</div>	
-							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-								<div class="c-100 justify-content-end">
-									<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-									<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-									<a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
-								</div>
-							</div>
-						</div>		
-					</div>	
 					<div class="section-container slider-container">	
-						<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-							<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
-						</div>						
-						<div id="akg-more" class="owl-carousel">
-							<div class="item row owl-hide-lg-up medium-theme m0">				
-								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100 loader">								
-										<img class="owl-lazy contain" src="" data-src="akg/images/gallery/04.png">															
-								  </div>
-									<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
-										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
-											<h2 class="s-t element-animate">AKG <strong>K92</strong></h2>
-											<p> Headphones for Vienna based audio products company AKG. <br>
-											Retro styled light-weight and easy to handle headphones with focus on comfort.	
-											</p>	
-										</div>												  						
-								  </div>								  
-							</div>														
-							<div class="item owl-hide-md-up textoverlay dark-theme">	
-								<div class="absolute hide-on-click desktop-hidden">											
-									<div class="text-animate c-all txt-c">
-										<div class="h-auto">
-											<h2 class="mb-4 s-t ignore">3d<strong>Model</strong></h2>
-											<p>Swipe model to rotate</p>
-											<p><span class="open-popup btn">Click to View</span></p>
-										</div>
-									</div>												
-								</div>								
-								<div class="loader">
-									<iframe 
-									class="lazy invisible fade-in" 
-									data-src="akg/xr/akgxr.html"																			
-									frameborder="0"
-									scrolling="no"
-									>
-									</iframe>													
-								</div>	
-							</div>							
-							<div class="item owl-hide-lg-up auto-scroll dark-theme">
-								<div class="p-portrait col-lg-6 textoverlay">
-									<div class="loader">
-										<img src="" data-src="akg/images/functions.svg" class="owl-lazy">
-										<div class="dark-theme overlay c-all">
-											<div class="lg-up-h text-animate">
-												<div>
-													<img src="" data-src="akg/images/functions2_singlerow.svg" class="nofade owl-lazy" style="height: auto !important;">
-												</div>
-											</div>
-											<div class="col-md-10 xs-down-h text-animate">
-												<div>
-													<img src="" data-src="akg/images/functions2.svg" class="owl-lazy py-6">
-												</div>
-											</div>
-										</div>							
-									</div>	
-								</div>						
-							</div>
-							<div class="item owl-hide-md-up zoom-container light-theme">
-							<div class="zoom-icon"></div>
-								<div class="h100 textoverlay loader">
-								<img src="" data-src="akg/images/gallery/onhead.jpg" class="owl-lazy cover multiply">	
-										<div class="overlay c-all">
-											<div class="text-animate c-all">
-												<div>
-													<h3 class="h3">Final <strong>Product</strong></h3>
-													<p> <br> 
-													My mission was to create a design for a mid-range priced model, with the feel of their retro styled high-end range.</p>
-												</div>
-											</div>
-										</div>								
-								</div>
-							</div>								
-							<div class="item owl-hide-md-down x-theme bg-none">
+						<div class="section-logo akg-logo x-theme bg-none hw100"></div>					
+						<div id="akg-more" class="owl-carousel">												
+							<div class="item x-theme bg-none">
 								<div class="container row hw100 relative">						
 									<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
 										<div class="txt-l">
@@ -548,7 +463,7 @@
 									</div>			
 								</div>
 							</div>
-							<div class="item owl-hide-md-down x-theme bg-none">
+							<div class="item x-theme bg-none">
 									<div class="row c-lg hw100">
 										<div class="mr-auto ml-auto col-lg-9">  
 											<h2 class="mb-4 s-t">AKG <strong>K92</strong></h2>
@@ -561,7 +476,7 @@
 										</div>
 									</div>
 							</div>								
-							<div class="item owl-hide-md-down row m0 x-theme  bg-none">
+							<div class="item row m0 x-theme  bg-none">
 								<div class="col-lg-6 hw100">
 									<div class="hw100">
 										<div class="akg-functions1 hw100" style="padding:10%; position: absolute;"></div>				
@@ -573,7 +488,12 @@
 									</div>	
 								</div> 							
 							</div>
-							<div class="item owl-hide-lg-up medium-theme">										
+							<div class="item medium-theme row m0">										
+								<div class="zoom-icon loader"></div>
+								<img class="col-lg-6 owl-lazy multiply cover" src="" data-src="akg/images/gallery/sketch.jpg">						
+								<img class="col-lg-6 owl-lazy multiply cover flipx" src="" data-src="akg/images/gallery/sketch.jpg">						
+							</div>	
+							<div class="item medium-theme">										
 								<div class="absolute h100">
 									<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
 										<div class="animate scroll-down"></div>
@@ -600,7 +520,45 @@
 									</div>
 								</div>							
 							</div>					
-							<div class="item dark-theme" style="background-color:#000000d1">				
+							<div class="item row m0 dark-theme" style="background-color:#000000d1">				
+								<iframe 							
+								class="col-lg-6 ks-config lazy"
+								data-src="akg/web/keyshot-configurator.html"													
+								frameborder="0"
+								scrolling="no"
+								>			
+								</iframe>
+								<!-- <div class="xs-down-h col-lg-6 col-md-8 akg-webconfig-overlay"></div> -->
+								<div class="item medium-theme">										
+									<div class="absolute h100">
+										<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
+											<div class="animate scroll-down"></div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon loader"></div>
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/01.png">
+											</div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon loader"></div>
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/02.png">							
+											</div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon loader"></div>
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/03.png">
+											</div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon loader"></div>
+												<img class="owl-lazy" src="" data-src="akg/images/gallery/04.png">
+											</div>
+											<div class="slide zoom-container">
+												<div class="zoom-icon loader"></div>
+												<img class="owl-lazy cover" src="" data-src="akg/images/gallery/05.png">
+											</div>												
+										</div>
+									</div>							
+								</div>								
+															
+							</div>
+<!-- 							<div class="item dark-theme" style="background-color:#000000d1">				
 								<iframe 							
 								class="ks-config lazy"
 								data-src="akg/web/keyshot-configurator.html"													
@@ -609,8 +567,8 @@
 								>			
 								</iframe>
 								<div class="xs-down-h col-lg-6 col-md-8 akg-webconfig-overlay"></div>							
-							</div>
-							<div class="item owl-hide-xs-down light-theme bg-none">					
+							</div> -->
+							<div class="item light-theme bg-none">					
 								<div class="iframe-container c-all textoverlay ignore">
 									<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
 									<div class="model-controls">
@@ -645,7 +603,7 @@
 							<span class="more-btn desktop-hidden"></span>
 						</div>	
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container medium-theme">
 						  <div class="col-xs-12 col-xs-6-landscape loader">								
 								<img class="lazy contain" src="" data-src="akg/images/gallery/04.png">															
@@ -774,7 +732,7 @@
 				</div>	
 			</div>			
 			<div id="converse">
-					<div id="converse-title" class="title row m0" style="position:relative !important">
+					<div id="converse-title" class="title bg-none row m0" style="position:relative !important">
 						<div class="row m0 flex w100">
 							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
@@ -1315,7 +1273,7 @@
 							<span class="more-btn desktop-hidden"></span>
 						</div>	
 					</div>
-					<div class="section-hero">	
+					<div class="section-hero x-theme">	
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 loader">								
 								<img class="lazy cover" style="object-position: 13% 100%;" src="" data-src="Converse/images/gallery/02_2.png">															
@@ -1412,7 +1370,7 @@
 				</div>	
 			</div>			
 			<div id="poc">
-				<div id="poc-title" class="desktop-hidden title x-theme row m0">
+				<div id="poc-title" class="title x-theme bg-none row m0">
 					<div class="col-12 row m0 flex w100">
 						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="h3 txt-l"><strong>POC </strong>Ski Goggles</h3>
@@ -1425,21 +1383,9 @@
 						</div>
 					</div>
 				</div>				
-				<div class="portfolio-section">				
-					<div id="poc-title" class="touch-hidden title x-theme row m0">
-						<div class="col-12 row m0 flex w100">
-							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
-							 <h3 class="h3 txt-l"><strong>POC </strong>Ski Goggles</h3>
-							</div>	
-							<div class="col-lg-6 col-xs-4">  
-								<div class="c-100 justify-content-end">
-										<a href="#poc-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-										<a href="#poc-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									</div>
-							</div>
-						</div>
-					</div>		
+				<div class="portfolio-section">					
 					<div class="section-container slider-container">
+						<div class="section-logo poc-logo x-theme bg-none hw100"></div>
 						<div id="poc-more" class="owl-carousel c-100">					
 							<div class="item hw100 dropshadow zoom-container dark-theme">
 								<div class="zoom-icon"></div>						
@@ -1481,7 +1427,7 @@
 							<a href="#pdf-poc" class="fullscreen btn btn-outline open-popup ">Pdf</a>									
 						</div>							
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">	
 						  <div class="col-xs-12 col-xs-6-landscape loader">								
 								<img class="lazy" src="" data-src="poc/images/front.png">															
@@ -1563,7 +1509,7 @@
 				</div>				
 			</div>					
 			<div id="spotify">
-				<div id="spotify-title" class="desktop-hidden title x-theme row m0">
+				<div id="spotify-title" class="title x-theme bg-none row m0">
 					<div class="col-12 row m0 flex w100">
 						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>
@@ -1576,48 +1522,58 @@
 						</div>
 					</div>
 				</div>					
-				<div class="portfolio-section">				
-					<div id="spotify-title" class="touch-hidden title on-top row m0">
-						<div class="col-12 row m0 flex w100">
-							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
-							 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>
-							</div>	
-							<div class="col-lg-6 col-xs-4">  
-								<div class="c-100 justify-content-end">
-										<a href="#spotify-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-										<a href="#spotify-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									</div>
-							</div>
-						</div>
-					</div>		
-					<div class="vh100">
-							<div class="touch-hidden rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-								<div class="rellax-logo akg-logo x-theme bg-none hw100"></div>
-							</div>						
-						<div id="spotify-more" class="owl-carousel c-100 multiply">			
-									<div class="row m0 h100">	
-										<div class="col-lg-4 c-all touch-hidden">
-											<div class="row c-lg">
-												<div class="col-lg-8 ppp2 txt-l">
-													<h2 class="mb-4 s-t">SPOTIFY <strong>Colors</strong></h2>
-														<p>An exploration in how to communicate who we are through the sharing of digital music<br>
-														</p>		  
-														<p><a href="https://www.spotify.com/" target="_blank" title="Visit Spotify" class="btn btn-outline">Visit</a></p>																								
-												</div>					
-											</div>
-										</div>					
-										<div class="col-lg-8">
-											<div class="item video-container hw100 relative light-theme">
-												<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
-												<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
-												  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
-												</video>							
-												<div id="play-video" class="absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
-												
+				<div class="portfolio-section">					
+					<div class="portfolio-section">
+						<div class="section-container slider-container">	
+							<div class="section-logo spotify-logo x-theme bg-none"></div>	
+							<div id="spotify-more" class="owl-carousel c-100 multiply">			
+										<div class="row m0 h100">	
+											<div class="col-lg-4 c-all touch-hidden">
+												<div class="row c-lg">
+													<div class="col-lg-8 ppp2 txt-l">
+														<h2 class="mb-4 s-t">SPOTIFY <strong>Colors</strong></h2>
+															<p>An exploration in how to communicate who we are through the sharing of digital music<br>
+															</p>		  
+															<p><a href="https://www.spotify.com/" target="_blank" title="Visit Spotify" class="btn btn-outline">Visit</a></p>																								
+													</div>					
+												</div>
+											</div>					
+											<div class="col-lg-8">
+												<div class="item video-container hw100 relative light-theme">
+													<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
+													<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
+													  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+													</video>							
+													<div id="play-video" class="absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
+													
+												</div>						
 											</div>						
 										</div>						
-									</div>						
-						</div>						
+							</div>
+						</div>	
+						<div class="section-hero x-theme row m0 h10">	
+											<div class="col-lg-4 c-all touch-hidden">
+												<div class="row c-lg">
+													<div class="col-lg-8 ppp2 txt-l">
+														<h2 class="mb-4 s-t">SPOTIFY <strong>Colors</strong></h2>
+															<p>An exploration in how to communicate who we are through the sharing of digital music<br>
+															</p>		  
+															<p><a href="https://www.spotify.com/" target="_blank" title="Visit Spotify" class="btn btn-outline">Visit</a></p>																								
+													</div>					
+												</div>
+											</div>					
+											<div class="col-lg-8">
+												<div class="item video-container hw100 relative light-theme">
+													<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
+													<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
+													  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+													</video>							
+													<div id="play-video" class="absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
+													
+												</div>						
+											</div>						
+							</div>							  
+						</div>							
 						<div class="c-all view-btn">
 							<a href="#spotify-process-popup" class="fullscreen btn btn-outline open-popup">View</a>		
 							<a href="#pdf-spotify" class="fullscreen btn btn-outline open-popup">Pdf</a>								
@@ -1626,7 +1582,7 @@
 				</div>
 			</div>							
 			<div id="bagheera">
-				<div id="bagheera-title" class="desktop-hidden title x-theme bg-none row m0">
+				<div id="bagheera-title" class="title x-theme bg-none row m0">
 					<div class="col-12 row m0 flex">
 						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="m-h h3  txt-l"><strong>Bagheera </strong>/ Shoe Design</h3>
@@ -1639,20 +1595,7 @@
 						</div>
 					</div>
 				</div>			
-				<div class="portfolio-section">			
-					<div id="bagheera-title" class="touch-hidden title x-theme bg-none row m0">
-						<div class="col-12 row m0 flex">
-							<div class="col-lg-6 col-xs-8 c-all justify-content-start">
-							 <h3 class="m-h h3  txt-l"><strong>Bagheera </strong>/ Shoe Design</h3>
-							 <h3 class="md-up-h h3 txt-l"><strong>Bagheera </strong>Shoes</h3>
-							</div>	
-							<div class="col-lg-6 col-xs-4">  
-								<div class="c-100 justify-content-end">
-									<a href="#bagheera-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-								</div>
-							</div>
-						</div>
-					</div>		
+				<div class="portfolio-section">				
 					<div class="section-container slider-container">
 						<div id="bagheera-more" class="owl-carousel">
 							<div class="item row x-theme-touch medium-theme-desktop m0">				
@@ -1913,7 +1856,7 @@
 						<span class="more-btn desktop-hidden"></span>
 					</div>					
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">					
 						  <div class="col-xs-12 col-xs-6-landscape loader">								
 								<img class="lazy" src="" data-src="Bagheera/images/gallery/twisted.png">															
@@ -1998,7 +1941,7 @@
 				</div>	
 			</div>							
 			<div id="haglofs">
-				<div id="mixed-title" class="desktop-hidden x-theme row m0 bg-none">
+				<div id="mixed-title" class="x-theme bg-none row m0 bg-none">
 					<div class="title row m0 flex w100">
 						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
 						 <h3 class="h3 txt-l text-xs-center"><strong>Haglöfs </strong>Radius</h3>
@@ -2013,23 +1956,9 @@
 						</div>
 					</div>		
 				</div>
-				<div class="portfolio-section">
-					<div id="mixed-title" class="touch-hidden x-theme row m0 bg-none">
-						<div class="title row m0 flex w100">
-							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-							 <h3 class="h3 txt-l text-xs-center"><strong>Haglöfs </strong>Radius</h3>
-							</div>	
-							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-								<div class="c-100 justify-content-end">
-									<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-									<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-									<a href="#akg-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
-								</div>
-							</div>
-						</div>		
-					</div>				
-					<div class="section-container slider-container">				
+				<div class="portfolio-section">				
+					<div class="section-container slider-container">	
+						<div class="section-logo haglofs-logo x-theme bg-none"></div>		
 						<div id="mixed-more" class="owl-carousel">							
 							<div class="item dark-theme">				
 								<div class="row h100 m0 c-all">															
@@ -2137,7 +2066,7 @@
 							<span class="more-btn desktop-hidden"></span>							
 						</div>							
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 loader">								
 								<img class="lazy" src="" data-src="haglofs/xr/0_0.png">															
@@ -2183,7 +2112,8 @@
 				</div>
 			</div>								
 			<div id="alcon">
-				<div id="alcon-title" class="desktop-hidden light-theme row m0">
+				<div id="alcon-title" class="title desktop-hidden light-theme bg-none row m0">
+				
 					<div class="col-12 row m0 flex">
 						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class=" h3 txt-l"><strong>Alcon </strong>Lens Container</h3>
@@ -2210,31 +2140,54 @@
 							</div>
 						</div>
 					</div>				
-					<div class="section-container slider-container">										
-						<div class="item row owl-hide-lg-up x-theme m0">				
-							  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100 loader">								
-									<iframe 
-									id=""
-									style="display:flex;"
-									class="xr-auto lazy"							
-									src=""																		
-									data-src="alcon/xr/alconxr.html"																		
-									frameborder="0"
-									scrolling="no"
-									>
-									</iframe>											
-							  </div>
-								<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
-									<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
-										<h2 class="s-t element-animate">Alcon <strong>Lens Container</strong></h2>
-											<p>Lens container for eye care products company Alcon.<br>
-											This projects was focused on the user experience for the lens wearer	
-											</p>	
-									</div>												  						
-							  </div>								  
-						</div>						
+					<div class="section-container slider-container">	
+						<div id="alcon-slider" class="owl-carousel">							
+							<div class="item row x-theme m0">				
+								  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100 loader">								
+										<iframe 
+										id=""
+										style="display:flex;"
+										class="xr-auto lazy"							
+										src=""																		
+										data-src="alcon/xr/alconxr.html"																		
+										frameborder="0"
+										scrolling="no"
+										>
+										</iframe>											
+								  </div>
+									<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="s-t element-animate">Alcon <strong>Lens Container</strong></h2>
+												<p>Lens container for eye care products company Alcon.<br>
+												This projects was focused on the user experience for the lens wearer	
+												</p>	
+										</div>												  						
+								  </div>								  
+							</div>
+							<div class="item dark-theme">	
+								<div class="fadeout-top"></div>												
+								<div class="absolute hw100 c-all show-scroll">
+									<div class="text-box c-all txt-l">
+										<div>
+											<h2 class="mb-4 s-t">HAGLÖFS <strong>Knife</strong></h2>	  
+											<p> This knife was created for Outdoor Equipment company Haglöfs during my time at the Umeå Institute of Design as part of a form language project. </p>
+											<p> After breaking down the companys core form values, a moodboard was created to communicate the direction of the design and a sketching phase resulted in a few key concepts from which a final proposal was made as a physical prototype, and then refined digitally as a CAD model.	    		  
+											</p>													
+											<div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="fadeout-btm"></div>																			
+							</div>								
+						</div>					
+						<div class="c-all view-btn">
+							<span class="prev-btn btn btn-outline touch-hidden">prev</span>	
+							<span class="more-btn btn btn-outline touch-hidden">next</span>
+							<span class="more-btn desktop-hidden"></span>
+						</div>					
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 col-xs-6-landscape loader">								
 								<img class="lazy contain" src="" data-src="alcon/xr/25_0.png">															
@@ -2299,7 +2252,7 @@
 				</div>			
 			</div>									
 			<div id="specialized">	
-				<div id="specialized-title" class="desktop-hidden title row m0">
+				<div id="specialized-title" class="title x-theme bg-none row m0">
 					<div class="col-12 row m0 flex">
 						<div class="col-lg-6 col-md-8 col-xs-8 c-all justify-content-start">
 						 <h3 class="m-h h3 txt-l"> <strong>Specialized </strong> / Fullface MTB Helmet</h3>
@@ -2313,69 +2266,12 @@
 						</div>
 					</div>
 				</div>			
-				<div class="portfolio-section">				
-					<div id="specialized-title" class="touch-hidden title row m0">
-						<div class="col-12 row m0 flex">
-							<div class="col-lg-6 col-md-8 col-xs-8 c-all justify-content-start">
-							 <h3 class="m-h h3 txt-l"> <strong>Specialized </strong> / Fullface MTB Helmet</h3>
-							 <h3 class="md-up-h h3 txt-l"> <strong>Specialized </strong>MTB</h3>
-							</div>	
-							<div class="col-lg-6 col-xs-4">  
-								<div class="c-100 justify-content-end">
-									<a href="#specialized-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle invisible flip-in-y"></div></a>
-									<a href="#specialized-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>						
-								</div>
-							</div>
-						</div>
-					</div>	
+				<div class="portfolio-section">					
 					<div class="section-container slider-container">
-						<div id="specialized-more" class="owl-carousel">			
-							<div class="item row owl-hide-lg-up x-theme m0">
-									<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
-										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
-												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
-												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-												<p>Specialized creates bikes, components and bike equipment.</p>	
-										</div>												  						
-								  </div>								
-								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100 loader">								
-										<img class="owl-lazy contain" src="" data-src="Specialized/images/gallery/twisted.png">															
-								  </div>
-							  
-							</div>						
-							<div class="item owl-hide-lg-up zoom-container dark-theme">
-							<div class="zoom-icon"></div>	
-								<div class="loader textoverlay invisible zoom-in">																		
-									<img src="" data-src="Specialized/images/gallery/twisted.png" class="lazy">
-										<div class="overlay c-all">
-											<div class="text-animate c-all txt-c">
-											<div>
-												<h2 class="mb-4 s-t">MTB <strong>Helmet </strong></h2>								
-												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-												<p>Specialized creates bikes, components and bike equipment.</p>
-											</div>
-											</div>
-										</div>													
-								</div>	
-							</div>								
-								<div class="item owl-hide-lg-up dark-theme">
-									<div class="fadeout-top"></div>													
-									<div class="absolute hw100 c-all show-scroll">
-										<div class="text-box c-all txt-c">
-											<div>
-												<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
-												<p class="txt-c">Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
-												<p class="txt-c">Specialized creates bikes, components and bike equipment.</p>												
-											</div>
-										</div>
-									</div>
-									<div class="fadeout-btm"></div>																		
-								</div>												
-							<div class="item owl-hide-md-down pop-theme">				
-								<div class="row m0 hw100">										
-										<div class="rellax" data-rellax-speed="5" data-rellax-percentage="0.5">
-											<div class="rellax-logo specialized-logo hw100" style="height:100%"></div>
-										</div>								
+						<div class="section-logo specialized-logo x-theme bg-none hw100"></div>
+						<div id="specialized-more" class="owl-carousel">																													
+							<div class="item pop-theme">				
+								<div class="row m0 hw100">																		
 										<div class="col-lg-6 c-all txt-l">
 											<div>										
 												<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
@@ -2404,28 +2300,8 @@
 										<h3 class="h3 invisible fade-in-up txt-l"> <strong>Specialized </strong> Form Language</h3>		
 									</div>
 								</div>
-							</div>	
-							<div class="item owl-hide-lg-up textoverlay dark-theme">	
-									<div class="absolute hide-on-click desktop-hidden">											
-										<div class="text-animate c-all txt-c">
-											<div class="h-auto">
-												<h2 class="mb-4 s-t ignore">3d<strong>Model</strong></h2>
-												<p>Swipe model to rotate</p>
-												<p><span class="open-popup btn">Click to View</span></p>
-											</div>
-										</div>												
-									</div>									
-								<div class="loader">
-									<iframe 
-									class="lazy invisible fade-in" 
-									data-src="Specialized/xr/specializedxr.html"																			
-									frameborder="0"
-									scrolling="no"
-									>
-									</iframe>													
-								</div>	
-							</div>							
-							<div class="item owl-hide-xs-down row m0 absolute dark-theme">					
+							</div>								
+							<div class="item row m0 absolute dark-theme">					
 							  <div class="col-lg-6 h100 pr-0">
 								<div class="col-lg-12 textoverlay-desktop dark-theme">
 									<div class="zoom-container loader">
@@ -2462,7 +2338,7 @@
 								</div>					  						
 							  </div>
 							</div>					
-							<div class="item owl-hide-xs-down light-theme">
+							<div class="item light-theme">
 								<div class="row md-down-h">
 									<div class="col-12 flex">
 										<div class="col-lg-6">
@@ -2503,7 +2379,7 @@
 							<span class="more-btn desktop-hidden"></span>
 						</div>				
 					</div>
-					<div class="section-hero">
+					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 col-xs-6-landscape loader">								
 								<img class="lazy contain" src="" data-src="Specialized/images/gallery/twisted.png">															
@@ -4341,8 +4217,8 @@
 		this_button.addClass('circle-shadow');
 		
 		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
-		$('body').find(".x-theme, .fadeout-btm, .title").removeClass(other_theme).addClass(this_theme);
-		$('body').find('.portfolio-section, .x-shadow').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
+		$('body').find(".x-theme, .fadeout-btm, .title, .info-box").removeClass(other_theme).addClass(this_theme);
+		$('body').find('.portfolio-section, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
 					
 		$('nav').removeClass(other_theme).addClass(this_theme);	
 		
@@ -4592,7 +4468,7 @@
 		}
 		else {
 		var positioning_buttons = 'on top';
-		var positioning_title = 'on top';
+		var positioning_title = '';
 		}	
 		//console.log(positioning_buttons);
 		//console.log(positioning_title);
@@ -5062,8 +4938,9 @@
 			var this_container = $(this).closest('.popup');
 			}
 			else {
-			var el = $(this).closest('.portfolio-section').find('.owl-item.active').find('.item');
-			var this_container = $(this).closest('.portfolio-section');
+			var el = $(this).closest('.title').parent().find('.owl-item.active').find('.item');
+			//var el = $(this).closest('.portfolio-section').find('.owl-item.active').find('.item');
+			var this_container = $(this).closest('.title').parent().find('.portfolio-section');
 			}	
 			var tool_tip = $(this).data("tooltip");
 			

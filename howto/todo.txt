@@ -8,7 +8,8 @@ function mobile (
 
 function both (
 
-owl / verlok conflict				
+webconfig css
+speed insights > optimize code and media				
 injects for xr
 
 enable vertical scolling on tall xr
@@ -17,7 +18,6 @@ pop-themes
 p-logo-new fixed?
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
 process
-
 )
 
 function brands (
@@ -43,8 +43,9 @@ belmar - finish model
 
 )
 
-function övrigt (
+function later (
 
+owl / verlok conflict
 frames in premiere > transparent video
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
 update pdf portfolio 
@@ -58,7 +59,8 @@ watch .git
 
 function pageSpeed (
 
-nov 21 desktop:35 mobile 27
+nov 21 mobile:27 desktop:35 
+nov 25  mobile:46 desktop:47
 
 function cpu & gpu {
 //with ALL  scripts active - 0%	
