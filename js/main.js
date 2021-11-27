@@ -40,7 +40,7 @@ about_slider_mobile.trigger('to.owl.carousel', [2, 500]);
 
 /* change nav clr depending on slide bg */
 
-main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(event) {
+/* main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(event) {
 	
 	let element = jQuery(event.target);
 	let idx = event.item.index;
@@ -62,7 +62,7 @@ main_sliders.on('initialized.owl.carousel translated.owl.carousel', function(eve
 	  //alert('error');
 	}				  	
 });
-
+ */
 
 /* remove slides for screens and devices on initialize  */
 all_sliders.on('initialize.owl.carousel', function(event) {
@@ -143,6 +143,11 @@ $(this).closest('.loader').removeClass('loader');
  }	
 }); */
 
+/* poc-more autowidth */
+$('#poc-more').on('initialized.owl.carousel', function(event) {
+
+	$(this).find('.owl-item:eq(1), .owl-item:eq(2), .owl-item:eq(3), .owl-item:eq(4), .owl-item:eq(5)').css( 'width', 'auto' );
+	});
 
 /* add slider element animations */
 $('#about-slider').on('translate.owl.carousel', function(event) {
@@ -216,7 +221,7 @@ $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
     });	
 
 /* mousewheel sliders */
-$('#converse-gallery, #akg-gallery').on('mousewheel', '.owl-stage', function (e) {
+$('#converse-gallery, #akg-gallery, #poc-more').on('mousewheel', '.owl-stage', function (e) {
 	
 	var 
 	mouse_id =  $(this).closest('.owl-carousel').attr('id'),
@@ -502,15 +507,16 @@ responsive:{
 poc_more.owlCarousel({
 /* loop:true, */
 autoplay: false,
-autoHeight: true,
+/* autoWidth:true, */
+slideTransition: 'linear',
+
 lazyLoad : true,
 margin:0,
 stagePadding:0,
-nav:true,
+nav:false,
 items: 1,
-touchDrag: true,
-mouseDrag: true,
-dots:true,
+
+dots:false,
 navText : ["<p class='ion-chevron-left ion-icon-size'></p>","<p class='ion-chevron-right ion-icon-size'></p>"],
 responsive:{
 0:{
@@ -523,7 +529,7 @@ responsive:{
 },
 1000:{
   items:1,
-  nav:true
+  nav:false
 }
 }	
 });

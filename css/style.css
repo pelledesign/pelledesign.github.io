@@ -16352,49 +16352,6 @@ overflow-y:hidden !important;
 }
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 0px; /* also removes extra padding created by overflow:scroll/auto */
-  height:0px; /* also removes extra padding created by overflow:scroll/auto */
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-background: none;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: none;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-/* width */
-.add-scrollbar::-webkit-scrollbar {
-  width: 8px; /* also removes extra padding created by overflow:scroll/auto */
-  height:1px; /* also removes extra padding created by overflow:scroll/auto */
-}
-
-/* Track */
-.add-scrollbar::-webkit-scrollbar-track {
-background: none;
-}
-
-/* Handle */
-.add-scrollbar::-webkit-scrollbar-thumb {
-  background: none;	
-  outline: 1px solid #000;
-	outline-offset: -2px;
-}
-
-/* Handle on hover */
-.add-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: var(--contrast);	
-}
 
 .hide-scrollbar
 {
@@ -18399,15 +18356,17 @@ padding-left:9px;
   margin: 0 auto;
   display: grid;
   grid-auto-flow: column;
-  gap: 1rem;
+  /* gap: 1rem; */
+  gap: 0rem;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
   width: 100%;
   overflow-y: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x mandatory;
+/*   overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity; */
   margin-bottom: 1rem;
   position:relative;
+  scroll-behavior: smooth;
 }
 
 .horizontal-snap > img, .horizontal-snap > .item {
@@ -18425,3 +18384,147 @@ position:relative;
   object-fit: cover;
   /* border-radius: .5rem; */
 }	
+
+
+.css-slider {
+	display: flex;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	height: 75vh;  
+	width: 100%;
+	margin: 0 auto;
+}
+
+.css-slider .item {
+  height:100%;
+  width:auto;
+}
+
+.css-slider img {
+  width:auto;
+}
+
+.css-slider.horizontal-snap {
+padding-right:0 !important;
+padding-left:0 !important;
+padding:0;
+margin:0;
+}
+
+.item-list {
+  overflow: auto;
+  width: 100%; 
+}
+.i-con {
+height: 75vh;
+display: flex;
+position: relative;
+}
+
+.i-con .item {
+    height: 100%;
+    width: auto;
+}
+
+.i-con img {
+height: 100%;
+ width: auto; 
+}
+
+
+.apa {
+	width:100%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.items {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	font-size: 0;
+	cursor: pointer;
+	margin:0;
+	padding:0;
+	scroll-behavior: smooth;
+	
+	
+position: absolute;
+width: 100%;
+height: 100%;	
+}
+
+.slider-element {
+	display: inline-block;
+	user-select: none;
+	width: auto;
+	height: 100%;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0px; /* also removes extra padding created by overflow:scroll/auto */
+  height:0px; /* also removes extra padding created by overflow:scroll/auto */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* width */
+.add-scrollbar::-webkit-scrollbar {
+  width: 8px; /* also removes extra padding created by overflow:scroll/auto */
+  height:1px; /* also removes extra padding created by overflow:scroll/auto */
+}
+
+/* Track */
+.add-scrollbar::-webkit-scrollbar-track {
+background: none;
+}
+
+/* Handle */
+.add-scrollbar::-webkit-scrollbar-thumb {
+  background: none;	
+  outline: 1px solid #000;
+	outline-offset: -2px;
+}
+
+/* Handle on hover */
+.add-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--contrast);	
+}
+
+#poc-more .owl-stage {
+width: 100% !important;
+    display: flex;	
+	 /* transform: none !important; */
+}
+
+#poc-more .item img {
+width: auto;	
+}
+
+img.splide__slide  {
+width:auto !important;	
+}
+.splide__slide.is-active {
+background:rgb(255 255 255 / 60%);
+}
