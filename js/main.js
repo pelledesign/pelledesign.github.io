@@ -210,12 +210,12 @@ $(".disable-owl-swipe").on("touchstart mousedown", function(e) {
 
 /* prev & next buttons */
     $('.prev-btn').on('click',  function () {
-		let owl_id = $(this).closest('.slider-container').find('.owl-carousel').attr('id');			
+		let owl_id = $(this).closest('.section-container').find('.owl-carousel').attr('id');			
         $('#' + owl_id).trigger('prev.owl.carousel');
 		/* console.log(owl_id); */		  
     });	
     $('.more-btn, .more-btn-text').on('click',  function () {
-		let owl_id = $(this).closest('.slider-container').find('.owl-carousel').attr('id');			
+		let owl_id = $(this).closest('.section-container').find('.owl-carousel').attr('id');			
         $('#' + owl_id).trigger('next.owl.carousel');
 		/* console.log(owl_id);	 */	  
     });	
