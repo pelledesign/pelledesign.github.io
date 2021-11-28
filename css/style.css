@@ -18526,11 +18526,11 @@ width: 100% !important;
 width: auto;	
 }
 
-.splide__track ul > div {
+.splide__track ul > div:not(.ignore) {
 width: auto !important;	
 }
 
-.splide__track ul > .full {
+.splide__track ul > div.full {
 width: 100% !important;	
 }
 
@@ -18549,6 +18549,11 @@ right:0;
 width:20px;
 height:20px;
  */
+}
+
+.splide__slide svg {
+height:100% !important;
+width:auto !important;
 }
 
 /* .splide__slide.is-active:before {
