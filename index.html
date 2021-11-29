@@ -436,9 +436,10 @@
 					</div>		
 				</div>								
 				<div class="portfolio-section akg-splide dark-theme">
+				<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
 					  <div class="splide__track">
 							<ul class="splide__list">
-								<div class="splide__slide full item x-theme bg-none" style="width: 100% !important;">
+								<div class="splide__slide full item x-theme bg-none">
 									<div class="container row hw100 relative">						
 										<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
 											<div class="txt-l">
@@ -461,53 +462,56 @@
 										</div>			
 									</div>
 								</div>
-								<div class="splide__slide item row m0" style="background:#dfdfdf;">										
-									<div class="zoom-icon loader"></div>
-									<img class="col-lg-6 lazy exclusion cover" src="" data-src="akg/images/gallery/sketch.jpg">						
-									<img class="col-lg-6 lazy exclusion cover flipx" src="" data-src="akg/images/gallery/sketch.jpg">						
+								<div class="splide__slide item row m0" style="background:#dfdfdf; min-width:75vh">
+									<img class="exclusion cover flipx" src="" data-splide-lazy="akg/images/gallery/sketch.jpg">
 								</div>
-								<div class="splide__slide item dark-theme"><div class="akg-functions1 hw100 p-3"></div></div>								
-								<div class="splide__slide item dark-theme"><div class="akg-functions2 hw100 p-3"></div></div>								
-								<div class="splide__slide item dark-theme">
-									<div class="item medium-theme">										
-										<div class="h100">
-											<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
-												<div class="animate scroll-down"></div>
-												<div class="slide zoom-container dark-theme">
-													<div class="zoom-icon loader"></div>
-													<img class="lazy" src="" data-src="akg/images/gallery/01.png">
-												</div>
-												<div class="slide zoom-container dark-theme">
-													<div class="zoom-icon loader"></div>
-													<img class="lazy" src="" data-src="akg/images/gallery/02.png">							
-												</div>
-												<div class="slide zoom-container dark-theme">
-													<div class="zoom-icon loader"></div>
-													<img class="lazy" src="" data-src="akg/images/gallery/03.png">
-												</div>
-												<div class="slide zoom-container dark-theme">
-													<div class="zoom-icon loader"></div>
-													<img class="lazy" src="" data-src="akg/images/gallery/04.png">
-												</div>
-												<div class="slide zoom-container dark-theme">
-													<div class="zoom-icon loader"></div>
-													<img class="lazy cover" src="" data-src="akg/images/gallery/05.png">
-												</div>												
-											</div>
-										</div>							
-									</div>									
+								<div class="splide__slide item row m0" style="background:#dfdfdf; width: 75vh !important;">
+									<img class="exclusion cover" src="" data-splide-lazy="akg/images/gallery/sketch.jpg">
+								</div>
+								<div class="splide__slide item" style="width: calc(75vh * (152 / 150)) !important;">
+									<!-- <div class="akg-functions1 hw100 p-3"></div> -->
+									<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions.svg">
+								</div>
+								<div class="splide__slide item" style="width: 75vh !important;">
+									<!-- <div class="akg-functions1 hw100 p-3"></div> -->
+									<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions2.svg">
+								</div>															
+								<div class="splide__slide item" style="width: 75vh !important;">										
+									<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
+										<div class="animate scroll-down"></div>
+										<div class="slide zoom-container">
+											<div class="zoom-icon loader"></div>
+											<img class="lazy" src="" data-src="akg/images/gallery/01.png">
+										</div>
+										<div class="slide zoom-container dark-theme">
+											<div class="zoom-icon loader"></div>
+											<img class="lazy" src="" data-src="akg/images/gallery/02.png">							
+										</div>
+										<div class="slide zoom-container dark-theme">
+											<div class="zoom-icon loader"></div>
+											<img class="lazy" src="" data-src="akg/images/gallery/03.png">
+										</div>
+										<div class="slide zoom-container dark-theme">
+											<div class="zoom-icon loader"></div>
+											<img class="lazy" src="" data-src="akg/images/gallery/04.png">
+										</div>
+										<div class="slide zoom-container dark-theme">
+											<div class="zoom-icon loader"></div>
+											<img class="lazy cover" src="" data-src="akg/images/gallery/05.png">
+										</div>												
+									</div>														
 								</div>	
-								<div class="splide__slide item dark-theme">
+								<div class="splide__slide item " style="height:100%; width:calc(75vh * (829/899)) !important">
 									<iframe 		
-									style="height:100%; width:calc(75vh * (829/899)) !important"									
-									class="lazy"
-									data-src="akg/web/keyshot-configurator.html"													
+																		
+									class=""
+									data-splide-lazy="akg/web/keyshot-configurator.html"													
 									frameborder="0"
 									scrolling="no"
 									>			
 									</iframe>								
 								</div>
-								<div class="splide__slide item dark-theme">
+								<div class="splide__slide item" style="height:100%; width:calc(75vh * (829/899)) !important"	>
 									<div class="item h100">					
 										<div class="iframe-container c-all textoverlay ignore exclusion">
 											<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
@@ -519,7 +523,7 @@
 											</div>							
 											<iframe 
 											id="showonclick"
-											style="height:100%; width:calc(75vh * (829/899)) !important"	
+											
 											class="showonclick m-h unload-no-reload"
 											src="" 
 											data-src="akg/webgl/rendered.html"		
@@ -530,7 +534,7 @@
 										</div>	
 									</div>							
 								</div>
-								<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
+								<div class="splide__slide item dark-theme bg-none w100 ignore" style="width:100% !important;">
 									<div class="item  h100 c-all invisible fade-in">			
 									  <div class="col-lg-7">
 										 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
@@ -538,10 +542,12 @@
 										 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
 									  </div>
 									</div>						
-								</div>	
-								
+								</div>									
 							</ul>
 					  </div>
+					<div class="my-slider-progress">
+						<div class="my-slider-progress-bar"></div>
+					</div>					  
 				</div>
 					<div class="xl-up-h portfolio-section">
 						<div class="section-hero x-theme">
@@ -703,37 +709,79 @@
 				</div>	
 			</div>			
 			<div id="converse">
-					<div id="converse-title" class="title bg-none row m0" style="position:relative !important">
-						<div class="row m0 flex w100">
-							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
+				<div id="converse-title" class="title bg-none row m0" style="position:relative !important">
+					<div class="row m0 flex w100">
+						<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
+						 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
+						</div>	
+						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
+							<div class="c-100 justify-content-end">
+								<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
+								<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
+								<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
+								<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
+							</div>
+						</div>
+					</div>		
+				</div>	
+				<div class="portfolio-section converse-splide pop-theme">
+				  <div class="splide__track">
+						<ul class="splide__list">
+							<div class="splide__slide full item x-theme bg-none">
+								<div class="row m0 hw100 relative">						
+									<div class="col-lg-4 ml-auto c-all">
+										<div class="text-box">
+											<h2 class="mb-4 s-t" style="color:#8d2720">Converse <strong>Suburban</strong></h2>
+											<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+											</p>		  
+											<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
+											</p>
+											<p><strong>Swipe Model to Rotate</strong></p>
+										</div>
+									</div>
+									<div class="col-lg-8 col-md-12 col-sm">
+										<iframe 
+										class="invisible fade-in soft-zoom unload" 
+										data-splide-lazy="Converse/xr/conversexr.html"																			
+										frameborder="0"
+										scrolling="no"
+										>
+										</iframe>						
+									</div>			
+								</div>
 							</div>	
-							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-								<div class="c-100 justify-content-end">
-									<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-									<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-									<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
+							<div class="splide__slide full item x-theme bg-none">
+								<div class="cont">
+									<div class="middle dark-theme textoverlay">							
+										<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
+										<div class="dark-theme overlay c-all">
+											<div class="text-animate c-all">
+												<div>
+													<h3 class="h3">GALLERY <strong></strong></h3>
+													<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>		
-					</div>				
-				<div class="portfolio-section">
-<!-- 					<div id="converse-title" class="touch-hidden title row m0 dark-theme">
-						<div class="row m0 flex w100">
-							<div class="col-lg-6 col-md-6 col-xs-7 c-all justify-content-start">
-							 <h3 class="h3 txt-l text-xs-center"><strong>Converse </strong>Eyewear</h3>
-							</div>	
-							<div class="col-md-6 col-lg-6 col-xs-5 ml-auto">  
-								<div class="c-100 justify-content-end">
-									<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-									<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open invisible flip-in-y"></div></a>
-									<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette invisible flip-in-y"></div></a>
-									<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid invisible flip-in-y"></div></a>
-								</div>
+							
+							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
+								<div class="item  h100 c-all invisible fade-in">			
+								  <div class="col-lg-7">
+									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+									 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+									 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+								  </div>
+								</div>						
 							</div>
-						</div>		
-					</div> -->	
+						</ul>
+				  </div>
+					<div class="my-slider-progress">
+						<div class="my-slider-progress-bar2"></div>
+					</div>	
+				</div>				
+				<div class="portfolio-section hidden">	
 					<div class="section-container">			
 						<div id="converse-more" class="owl-carousel">					
 							<div class="item owl-hide-lg-up dark-theme">
@@ -1252,12 +1300,6 @@
 						</div>							  
 					</div>					
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
-<!-- 						<div class="col-xs-12 loader c-all invisible fade-in h-auto">				
-							<div class="item hw100 dark-theme">
-								<img src="" data-src="Converse/images/gallery/02_2.png" class="lazy cover " style="object-position: 100% 17%;">	
-								<p class="img-text hidden"></p>
-							</div>			
-						</div> -->	
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1369,60 +1411,21 @@
 							<div class="splide__slide"><img data-splide-lazy="poc/images/process/svg/07_square.svg" class="cover" style="object-position: left;"></div>							
 							<div class="splide__slide"><img data-splide-lazy="poc/images/process/svg/08_square.svg" class="cover" style="object-position: left;"></div>							
 							<div class="splide__slide"><img data-splide-lazy="poc/images/process/svg/09_square.svg" class="cover" style="object-position: left;"></div>							
-
+							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
+								<div class="item  h100 c-all invisible fade-in">			
+								  <div class="col-lg-7">
+									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+									 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+									 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+								  </div>
+								</div>						
+							</div>
 						</ul>
 				  </div>
+					<div class="my-slider-progress">
+						<div class="my-slider-progress-bar3"></div>
+					</div>	
 				</div>
-<!-- 				<div class="portfolio-section splide medium-theme">
-				  <div class="splide__track">
-						<ul class="splide__list">
-							<img src="" data-src="poc/images/process/svg/03_square.svg" class="lazy cover splide__slide" style="object-position: left;">	
-							<img src="" data-src="akg/images/gallery/03.png" class="lazy cover splide__slide">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy cover splide__slide">
-							<img src="" data-src="akg/images/gallery/05.png" class="lazy cover splide__slide">
-							<img src="" data-src="akg/images/gallery/03.png" class="lazy cover splide__slide">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy cover splide__slide">
-							<img src="" data-src="akg/images/gallery/05.png" class="lazy cover splide__slide">
-						</ul>
-				  </div>
-				</div> -->
-<!-- 						<div class="c-all view-btn">
-							<span class="splide-prev-btn btn btn-outline touch-hidden splide__arrow splide__arrow--prev">prev</span>	
-							<span class="splide-next-btn btn btn-outline touch-hidden">next</span>
-						</div> -->				
-<!-- 				<div class="apa">
-					<div class="i-con">
-					 <div class="items">
-						<div class="slider-element zoomable zoom-container textoverlay medium-theme">
-							<img src="" data-src="akg/images/gallery/01.png" class="lazy cover">		
-							<p class="img-text hidden"></p>					
-						</div>
-						<div class="slider-element h100 w-auto zoom-container dark-theme">												
-							<div class="slider-element h100 zoomable  medium-theme">
-								<img src="" data-src="poc/images/process/02.png" class="lazy" style="object-position: left;">	
-								<p class="img-text hidden"></p>
-							</div>																 
-						</div>				
-						<div class="slider-element zoomable zoom-container medium-theme">
-							<img src="" data-src="akg/images/gallery/02.png" class="lazy cover">		
-							<p class="img-text hidden"></p>					
-						</div>
-						<div class="slider-element zoomable zoom-container medium-theme">
-							<img src="" data-src="akg/images/gallery/03.png" class="lazy cover">		
-							<p class="img-text hidden"></p>					
-						</div>							
-						<div class="slider-element zoomable zoom-container medium-theme">
-							<img src="" data-src="akg/images/gallery/04.png" class="lazy cover">		
-							<p class="img-text hidden"></p>					
-						</div>							
-						<div class="slider-element zoomable zoom-container medium-theme">
-							<img src="" data-src="akg/images/gallery/05.png" class="lazy cover">		
-							<p class="img-text hidden"></p>					
-						</div>
-					 </div>
-					</div>
-				</div> -->
-
 				<script>
 
 				  $(document).ready(function() {
@@ -4433,11 +4436,11 @@
 		<script src="js/logos.js"></script>	
 		<script src="js/bootstrap.min.js"></script> <!-- needed for mobile menu -->
 		<script src="js/magnific.js"></script>	
-		<script src="js/owl.carousel2.js"></script>	
+		<!-- <script src="js/owl.carousel2.js"></script>	 -->
 		<script src="js/jquery.waypoints.min.js"></script>
 		<script src="js/jquery.stellar.min.js"></script>				
 		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/main.js"></script>	
+		<!-- <script src="js/main.js"></script>	 -->
 		<script src="js/stellar.js"></script>
 		<script src="js/load-more-button.js"></script>
 		<script src="js/jquery-scroll-snap.js"></script>
@@ -4447,29 +4450,62 @@
 		
 		<!-- splide -->
 		<script>
-		var splide = new Splide( '.poc-splide', {
+		var splide = new Splide( '.akg-splide', {
 			lazyLoad: 'nearby',
-			preloadPages: 1,
+			preloadPages: 2,
+			autoWidth: true,
 			wheel: true,
 			arrows: true,
+			pagination: false,	
 			waitForTransition: false,
 			drag   : 'free',
 			perPage: 1,
 		} );
-
+		var bar = splide.root.querySelector( '.my-slider-progress-bar' );		
+		  splide.on( 'mounted move', function () {
+			 var end = splide.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+		  } );	
 		splide.mount();
-
-		var splide2 = new Splide( '.akg-splide', {
+		
+		var splide2 = new Splide( '.converse-splide', {
 			lazyLoad: 'nearby',
-			preloadPages: 1,
+			preloadPages: 2,
+			autoWidth: true,
 			wheel: true,
 			arrows: true,
+			pagination: false,	
+			waitForTransition: false,
+			//drag   : 'free',
+			perPage: 1,
+		} );
+		var bar2 = splide2.root.querySelector( '.my-slider-progress-bar2' );		
+		  splide2.on( 'mounted move', function () {
+			 var end = splide2.Components.Controller.getEnd() + 1;
+			 bar2.style.width = String( 100 * ( splide2.index + 1 ) / end ) + '%';
+		  } );
+		splide2.mount();
+
+		var splide3 = new Splide( '.poc-splide', {
+			lazyLoad: 'nearby',
+			preloadPages: 2,
+			autoWidth: true,
+			wheel: true,
+			arrows: true,
+			pagination: false,	
 			waitForTransition: false,
 			drag   : 'free',
 			perPage: 1,
 		} );
+		var bar3 = splide3.root.querySelector( '.my-slider-progress-bar3' );		
+		  splide3.on( 'mounted move', function () {
+			 var end = splide3.Components.Controller.getEnd() + 1;
+			 bar3.style.width = String( 100 * ( splide3.index + 1 ) / end ) + '%';
+		  } );
+		splide3.mount();
+		
+		
 
-		splide2.mount();
 		</script>
 		
 		<script>
@@ -4487,10 +4523,10 @@
 
 		
 		<!-- verlok lazy load - don't use when owl carousel is used -->
-<!-- 		<script>
+		<script>
 		var lazyLoadInstance = new LazyLoad({
 		});
-		</script> -->
+		</script>
 
 		
 		<!-- zoom-icon function -->
@@ -4801,7 +4837,7 @@
 		$('#about').not('.ignore').addClass('snap');
 		}	
 		else {
-		$('.section-container').not('.ignore').addClass('snap');
+		$('.section-container, #akg .portfolio-section').not('.ignore').addClass('snap');
 		}	
 		
 		$( '.snap' ).scrollSnap({
