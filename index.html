@@ -436,7 +436,7 @@
 					</div>		
 				</div>	
 
-					<a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				
+					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
 <!-- 				<div class="portfolio-section akg-splide dark-theme">
 				<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
 					  <div class="splide__track">
@@ -741,7 +741,7 @@
 									</div>
 									<div class="col-lg-8 col-md-12 col-sm">
 										<iframe 
-										class="invisible fade-in soft-zoom unload" 
+										class="invisible fade-in soft-zoom" 
 										data-splide-lazy="Converse/xr/conversexr.html"																			
 										frameborder="0"
 										scrolling="no"
@@ -750,7 +750,10 @@
 									</div>			
 								</div>
 							</div>	
-							<div class="splide__slide full item x-theme bg-none textoverlay ">							
+							<div class="splide__slide full item x-theme bg-none">							
+								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
+							</div>
+							<div class="splide__slide full item x-theme bg-none textoverlay">							
 								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
@@ -758,6 +761,40 @@
 											<h3 class="h3">GALLERY <strong></strong></h3>
 											<a href="#converse-gallery-popup" title="Project Info" class="open-popup btn btn-outline">View</a>
 										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="splide__slide full item pop-theme bg-none textoverlay unload">							
+								<div class="hide-on-click desktop-hidden">											
+									<div class="text-animate c-all txt-c">
+										<div class="h-auto">
+											<h2 class="mb-4 s-t">Modeling <strong></strong></h2>
+												<p>Modeling made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear</p>
+												<p><span class="open-popup btn">Click to View</span></p>	
+										</div>
+									</div>												
+								</div>
+								<div class="h100">
+								<div class="cont">						
+									<div class="middle row m0 auto-scroll">									
+										<div class="col-lg-12 col-md-12 col-xs-12 textoverlay no-more-icon">
+											<div class="hw100">
+												<div class="iframe-container textoverlay">														
+													<iframe 
+													data-splide-lazy="Converse/webgl/measurements.html"
+													class="unload multiply"																																						
+													frameborder="0"
+													scrolling="no">			 	 
+													</iframe>
+														<div class="ignore model-controls">
+															<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon ion-information-circled"></div>
+															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+														</div>																										
+												</div>
+											</div>	
+										</div>					
+									</div>
 									</div>
 								</div>
 							</div>
@@ -3778,7 +3815,7 @@
 				<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
 					  <div class="splide__track">
 							<ul class="splide__list">
-								<div class="splide__slide full item x-theme bg-none">
+<!-- 								<div class="splide__slide full item x-theme bg-none">
 									<div class="container row hw100 relative">						
 										<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
 											<div class="txt-l">
@@ -3808,11 +3845,9 @@
 									<img class="exclusion cover" src="" data-splide-lazy="akg/images/gallery/sketch.jpg">
 								</div>
 								<div class="splide__slide item" style="width: calc(75vh * (152 / 150)) !important;">
-									<!-- <div class="akg-functions1 hw100 p-3"></div> -->
 									<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions.svg">
 								</div>
 								<div class="splide__slide item" style="width: 75vh !important;">
-									<!-- <div class="akg-functions1 hw100 p-3"></div> -->
 									<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions2.svg">
 								</div>															
 								<div class="splide__slide item" style="width: 75vh !important;">										
@@ -3881,7 +3916,7 @@
 										 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
 									  </div>
 									</div>						
-								</div>									
+								</div> -->									
 							</ul>
 					  </div>
 					<div class="my-slider-progress">
@@ -4962,6 +4997,8 @@
 			 bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
 		  } );	
 		splide.mount();
+
+
 		
 		var splide2 = new Splide( '.converse-splide', {
 			lazyLoad: 'nearby',
@@ -4979,7 +5016,52 @@
 			 var end = splide2.Components.Controller.getEnd() + 1;
 			 bar2.style.width = String( 100 * ( splide2.index + 1 ) / end ) + '%';
 		  } );
+
+		splide2.on( 'mounted', function () {
+		var splideId = '#'+splide2.root.id;
+		$(splideId).find('.splide__slide').first().addClass('last-slide');
+		console.log(splide2.index);
+		} );		  
+		  
 		splide2.mount();
+		
+		//------------------------------------//
+
+	
+		var lastVisited = 0; //start index
+		
+		splide2.on( 'moved', function () {
+		
+		var splideId = $('#'+splide2.root.id);
+		var thisIndex = splide2.index;		
+		var splideDirection;
+
+		if (thisIndex > lastVisited) { splideDirection = 'right';}
+		else {splideDirection = 'left';}
+		$(splideId).find('.is-active').hasClass('unload')				
+		lastVisited = thisIndex;
+		
+		if(splideDirection == 'right') {
+		splideId.find('.splide__slide').removeClass('last-visited');
+		splideId.find('.is-prev').addClass('last-visited');
+		}
+		else if (splideDirection == 'left') {
+		splideId.find('.splide__slide').removeClass('last-visited');
+		splideId.find('.is-next').addClass('last-visited');
+		}
+		if (splideId.find('.is-active').find('iframe').hasClass('unloaded')) {
+		//alert('unloaded');
+		var thisDataSplideSrc = splideId.find('.is-active').find('iframe').attr('data-splide-lazy');
+		console.log(thisDataSplideSrc);
+		splideId.find('.is-active').find('iframe').attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
+		}			
+		if ($('.last-visited').find('iframe').hasClass('unload')) {
+		console.log('last slide has class unload');
+		var thisSrc = $('.last-visited').find('iframe').attr('src');
+		console.log(thisSrc);
+		$('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
+		}	
+		});
 
 		var splide3 = new Splide( '.poc-splide', {
 			lazyLoad: 'nearby',
@@ -5518,7 +5600,9 @@
 		//alert(iframe);
 		$(this).closest('.iframe-container').find(".hide-this").addClass('hidden');	 
 		});
-	
+
+
+
 		</script>
 									
 		<!-- touch and desktop hidden  -->

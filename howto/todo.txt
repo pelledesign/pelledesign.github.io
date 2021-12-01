@@ -7,7 +7,7 @@ function mobile (
 )
 
 function both (
-dont't load owls for mobile
+remove owl
 webconfig css
 speed insights > optimize code and media				
 injects for xr
