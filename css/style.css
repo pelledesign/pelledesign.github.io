@@ -74,7 +74,7 @@ recommended 50 - 70 */
 --header-padding: 10px;  
 
 /* aspect ratios */
-
+--splide-height: 75vh;
 --akg-aspectratio: 829 / 899;
 }
 
@@ -14243,10 +14243,10 @@ color: var(--contrast);
 border: 2px solid #e0e0e0;	
 } */
 
-/* .loader{
-height:100%;
-width:100%;	
-} */
+.loader{
+/* height:100%;
+width:100%;	 */
+}
 
 
 .light-theme .zoom-container .zoom-icon {
@@ -18526,9 +18526,13 @@ width: 100% !important;
 width: auto;	
 }
 
-.splide__track ul > div:not(.ignore) {
-width: auto !important;	
+.splide-height {
+width: var(--splide-height) !important;	
 }
+
+/* .splide__track ul > div:not(.ignore) {
+width: auto !important;	
+} */
 
 .splide__track ul > div.full {
 width: 100% !important;	
