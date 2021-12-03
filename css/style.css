@@ -18598,15 +18598,25 @@ width:5px !important;
     transform: translateX(-50%);
     left: 50%;
 	 background: #efefef;
-  }
+  } 
   
+
   
-  .my-slider-progress-bar, .my-slider-progress-bar2, .my-slider-progress-bar3 {
+  .my-slider-progress-bar {
     background: #212122;
     height: 2px;
     transition: width 400ms ease;
     width: 0;
 }
+/*  .my-slider-progress.dark-theme {
+
+	 background: #363636;
+  }
+  
+  .my-slider-progress-bar {
+    background: #fff;
+
+} */
 
 
 
