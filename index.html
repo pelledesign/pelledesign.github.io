@@ -210,7 +210,7 @@
 		</div>
 				
 		<!-- hero --> <!-- <div class="lg-up-h vh100"></div>	 --> <!-- issue width height on hero-container -->
-		<div id="hero-container" class="col-full opacity-0-xs-down md-down-h">
+<!-- 		<div id="hero-container" class="col-full opacity-0-xs-down md-down-h">
 			<div class="row c-all hw100 m0">
 				<div class="about-splide x-theme col-lg-6 col-md-8">		
 				  <div class="splide__track">
@@ -286,9 +286,9 @@
 						<div class="my-slider-progress-bar"></div>
 					</div>	
 				</div>
-<!-- 				<div class="col-lg-6 col-md-8 h100">
+				<div class="col-lg-6 col-md-8 h100">
 					<img data-src="akg/images/gallery/05.png" class="cover-portrait hw100 lazy" style="object-position:bottom;">
-				</div> -->
+				</div>
 <!-- 				<div class="hero-splide x-theme splide-slider col-lg-6 col-md-8" data-splide='{"type":"loop","arrows":false,"autoplay":true,"preloadPages":1}'>		
 				  <div class="splide__track">
 						<ul class="splide__list">
@@ -343,7 +343,7 @@
 						</div>			
 				</div> -->
 			</div>
-		</div>		
+		</div>	 -->	
 					
 		<!-- about -->
 <!-- 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
@@ -462,7 +462,6 @@
 						</div>
 					</div>		
 				</div>	
-
 					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider xs-down-h">
 				<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -3752,6 +3751,14 @@
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 		<script src="js/splide.min.js"></script>
+
+		<script>
+			$('img').each(function () {
+				 if (this.data-splide-lazy.length > 0) {
+					  console.log('instances with data-splide-lazy');
+				 }
+			});		
+		</script>
 
 		<!-- splide -->
 		<script>
