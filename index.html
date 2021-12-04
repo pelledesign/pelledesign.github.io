@@ -288,7 +288,7 @@
 						<div class="my-slider-progress-bar"></div>
 					</div>	
 				</div>
-				<div class="hero-splide x-theme splide-slider col-lg-6 col-md-8" data-splide='{"type":"loop","arrows":false,"autoplay":true,"preloadPages":1}'>		
+<!-- 				<div class="hero-splide x-theme splide-slider col-lg-6 col-md-8" data-splide='{"type":"loop","arrows":false,"autoplay":true,"preloadPages":1}'>		
 				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full">
@@ -308,7 +308,7 @@
 					<div class="my-slider-progress hidden">
 						<div class="my-slider-progress-bar"></div>
 					</div>	
-				</div>					
+				</div>	 -->				
 <!-- 				<div id="hero" class="x-theme col-lg-6">
 						<div id="slider-container">			
 							<div id="hero-slider" class="owl-carousel">					
@@ -3831,6 +3831,7 @@
 			/* menu splide control */
 			let aboutSplide = new Splide( '.about-splide', {
 			arrows: false,
+			pagination: false,
 			} );				
 			aboutSplide.on( 'mounted', function () {
 				$('.about-splide .more-btn-text').on('click',function(){
