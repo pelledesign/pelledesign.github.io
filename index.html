@@ -3719,8 +3719,9 @@
 		<script src="js/isInViewport.js"></script>
 		<script src="js/splide.min.js"></script>
 
+		<!-- fade in on splide lazyload (the only function that controls this) -->
 		<script>
-		$('img').each(function () {
+		$('img, iframe').each(function () {
 		var thisImg = $(this);
 		if(thisImg.is('[data-splide-lazy]')) {
 		thisImg.addClass('invisible');
