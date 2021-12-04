@@ -3720,11 +3720,17 @@
 		<script src="js/splide.min.js"></script>
 
 		<script>
-			$('img').each(function () {
-				 if (this.data-splide-lazy.length > 0) {
-					  console.log('instances with data-splide-lazy');
-				 }
-			});		
+		$('img').each(function () {
+		var thisImg = $(this);
+		if(thisImg.is('[data-splide-lazy]')) {
+		thisImg.addClass('invisible');
+		thisImg.on('load',function(){
+		console.log('loaded');
+		thisImg.removeClass('invisible').addClass('fadeIn element-animated'); 
+		});
+		}
+		});	
+		
 		</script>
 
 		<!-- splide -->
@@ -3742,7 +3748,7 @@
 		   var splideDefaultOptions = 
 		  {
 			lazyLoad: 'nearby',
-			preloadPages: 2,
+			preloadPages: 0,
 			autoWidth: true,
 			wheel: true,
 			arrows: true,
