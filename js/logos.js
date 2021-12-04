@@ -1,6 +1,5 @@
 
-	$(function(){
-	   
+	$(function(){	   
 	  $(".text-logo-svg").load("images/icons/text-logo.svg"); 
 	  $(".next-play-circle").load("images/icons/next_play_circle.svg"); 			
 	  //$(".zoom-icon").load("images/icons/zoom-icon.svg"); 		
