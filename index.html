@@ -28,10 +28,7 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
-		
-<!-- 		<script> 
-		alert('css 16')
-		</script>	 -->	
+
 		<script> <!-- start test if touch device -->	
 		function is_touch_device() {  
 		try {  
@@ -58,7 +55,7 @@
 				var this_iframe = $(this);
 				var extra_space = '0';
 				this_src = $(this).attr('src');
-				this_data_src = $(this).attr('data-src');
+				data_splide_lazy = $(this).attr('data-src');
 				
 				if (this_src =='akg/xr/akgxr.html' || this_data_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html' || this_data_src == 'akg/web/keyshot-configurator.html') {
 				aspect_ratio = 899 / 829;
@@ -275,7 +272,8 @@
 												</div>
 											</div>										
 												<p class="m-h">Have a project that doesn't fit here? Just <a href="#contact-popup" class="open-popup"><strong>message me</strong></a>  and let's have a chat!</p> 
-												<p><a href="#contact-popup" class="btn btn-outline">Get In Touch</a><a href="#about" class="btn btn-outline go-to-about">Back</a>	</p>						
+												<p><a href="#contact-popup" class="btn btn-outline open-popup">Get In Touch</a><a href="#about" class="btn btn-outline go-to-about">Back</a>	</p>						
+												<!-- <a class="nav-link open-popup" href="#contact-popup">Contact</a> -->
 											</div>
 											
 										</div>								
@@ -287,6 +285,9 @@
 					<div class="my-slider-progress">
 						<div class="my-slider-progress-bar"></div>
 					</div>	
+				</div>
+				<div class="col-lg-6 col-md-8 h100">
+					<img data-src="akg/images/gallery/05.png" class="cover-portrait hw100 lazy" style="object-position:bottom;">
 				</div>
 <!-- 				<div class="hero-splide x-theme splide-slider col-lg-6 col-md-8" data-splide='{"type":"loop","arrows":false,"autoplay":true,"preloadPages":1}'>		
 				  <div class="splide__track">
@@ -3868,7 +3869,6 @@
 		var lazyLoadInstance = new LazyLoad({
 		});
 		</script>
-
 		
 		<!-- zoom-icon function -->
 		<script>	
