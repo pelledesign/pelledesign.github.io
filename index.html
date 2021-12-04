@@ -629,7 +629,7 @@
 								</div>
 							</div>
 							<div class="col-lg-3 col-md-4 col-xs-6 c-all textoverlay zoom-container invisible fade-in h-auto">
-								<div class="item zoomable hw100 dark-theme">
+								<div class="item zoomable hw100 light-theme">
 								<img src="" data-src="akg/images/gallery/onhead.jpg" class="lazy  cover" style="object-position: 100% 17%;">		
 								<p class="img-text hidden"></p>					
 								</div>
@@ -3859,7 +3859,7 @@
 			$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color');					
 			});
 		<!-- zoom-icon function -->		
-		$('.zoom-icon, .zoomable').on('', function() {
+		$('.zoom-icon, .zoomable').on('click', function() {
 			
 			// select popup background based on background of .item 	
 			if ($(this).closest('.item').hasClass('dark-theme')){
