@@ -2446,7 +2446,77 @@
 		</div>
 		
 		<!-- reviews -->
-		<div id="reviews-box">	
+		<div id="reviews-box" class="relative">	
+			<h3 class="h3 x-theme bg-none mb-0" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
+			<div id="reviews" class="reviews-splide light-theme dark-theme-touch x-shadow">
+					  <div class="splide__track h-auto">
+							<ul class="splide__list">
+								<div class="splide__slide item x-theme bg-none">
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"I think Pelle</h2>
+											<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
+											<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
+										</div>
+									</div>
+								</div>	
+								<div class="splide__slide item">			
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"Pelle stayed</h2>
+											<p>with us at Bagheera AB, Sweden for a few years. <br>
+											His task was to design athletic shoes. He also joined the teams trips to our office in Xiamen China. <br>
+											He did a very good job and a few of his uppers are still classic styles in our program. </p>					
+											<p>I can definitely recommend Pelle"</p>
+											<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
+										</div>
+									</div>
+								</div>
+								<div class="splide__slide item">			
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"I have used</h2>
+											<p> Pelle many times throughout the years for industrial design help. Pelle is very thorough, professional and great at what he does. Can absolutely recommend Pelle if you are looking for a world class designer."</p>
+											<p><strong>Daniel B, Founder Brante Media</strong></p>					
+										</div>
+									</div>
+								</div>
+								<div class="splide__slide item x-theme bg-none">
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"I think Pelle</h2>
+											<p> is a great designer, he was exceptionally responsive to my requests, and always was happy to accommodate changes. He worked quickly, but also to a very high quality of deliverable. He has a very good eye for detail and is collaborative - I would very much like to work with him again. My project incorporated branding, and industrial design"</p>
+											<a href="https://www.upwork.com/freelancers/~0125f770ebd9b1c52b" title="Upwork Profile" target="_blank" class=""><p><strong>Jamie, PeoplePerHour</strong></p></a>					
+										</div>
+									</div>
+								</div>	
+								<div class="splide__slide item">			
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"Pelle stayed</h2>
+											<p>with us at Bagheera AB, Sweden for a few years. <br>
+											His task was to design athletic shoes. He also joined the teams trips to our office in Xiamen China. <br>
+											He did a very good job and a few of his uppers are still classic styles in our program. </p>					
+											<p>I can definitely recommend Pelle"</p>
+											<a href="https://www.bagheera.se" title="Visit Bagheera" target="_blank" class=""><p><strong>C-G Karlsson, Owner Bagheera</strong></p></a>							
+										</div>
+									</div>
+								</div>
+								<div class="splide__slide item">			
+									<div class="text-box c-all txt-l">
+										<div class="">
+											<h2 class="s-t ignore">"I have used</h2>
+											<p> Pelle many times throughout the years for industrial design help. Pelle is very thorough, professional and great at what he does. Can absolutely recommend Pelle if you are looking for a world class designer."</p>
+											<p><strong>Daniel B, Founder Brante Media</strong></p>					
+										</div>
+									</div>
+								</div>								
+							</ul>
+					  </div>			
+				
+			</div>
+		</div>		
+<!-- 		<div id="reviews-box">	
 			<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
 			<div id="reviews" class="owl-carousel light-theme dark-theme-touch x-shadow">			
 				<div class="item cover-portrait props c-100">			
@@ -2480,7 +2550,7 @@
 					</div>
 				</div>				
 			</div>
-		</div>
+		</div> -->
 					
 		<!-- footer -->
 		<footer class="site-footer x-theme x-shadow m0 relative" role="contentinfo">    
@@ -3710,6 +3780,7 @@
 		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
 		<script src="js/isInViewport.js"></script>
 		<script src="js/splide.min.js"></script>
+		<script src="js/splide-autoscroll.js"></script>
 
 		<!-- fade in on splide lazyload (the only function that controls this) -->
 		<script>
@@ -3819,6 +3890,51 @@
 				});			
 			} );
 			aboutSplide.mount();		
+
+		<!-- reviews splide slider -->
+		if(is_touch_device()) {
+			let reviewsSplide = new Splide( '.reviews-splide', {
+			type: 'loop',			
+			autoplay: true,
+			pauseOnHover: true,
+			interval: 2000,
+			arrows: false,
+			pagination: false,
+		   perPage: 3,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				},
+				768: {
+					perPage: 2,
+				},
+			}
+			});				
+
+			reviewsSplide.mount(	);	
+		}		
+		else {
+			let reviewsSplide = new Splide( '.reviews-splide', {
+			type: 'loop',			
+			//autoplay: true,
+			pauseOnHover: true,
+			interval: 2000,
+			arrows: false,
+			pagination: false,
+		   perPage: 3,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				},
+				768: {
+					perPage: 2,
+				},
+			}
+			});				
+
+			reviewsSplide.mount(window.splide.Extensions);
+		}	
+		
 					
 		</script>
 		
