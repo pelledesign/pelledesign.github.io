@@ -8,6 +8,7 @@ function mobile (
 
 function both (
 remove all invisible classes and add with js
+open 3d in new window mobile
 webconfig css				
 injects for xr
 
