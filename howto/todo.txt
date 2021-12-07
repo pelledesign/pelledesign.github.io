@@ -7,9 +7,7 @@ function mobile (
 )
 
 function both (
-
-move all script in the middle of the html
-open 3d in new window mobile
+	
 webconfig css				
 injects for xr
 

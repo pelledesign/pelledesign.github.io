@@ -198,10 +198,6 @@
 			</div>
 		 </nav>
 		</header>		
-											<!-- <script>	
-												$(".p-logo-new").load("images/icons/p-logo-new.svg");
-												
-											</script> -->
 											
 		<!-- scroll indicator -->
 		<div class="scroll-indicator">
@@ -674,8 +670,7 @@
 								<img src="" data-src="akg/images/gallery/03.png" class="lazy " style="object-position: 100% 17%;">		
 								<p class="img-text hidden"></p>					
 								</div>
-							</div>
-							
+							</div>							
 							<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
 								<div class="dark-theme">
 									<iframe
@@ -687,6 +682,9 @@
 									>			
 									</iframe>	
 								</div>
+							</div>
+							<div class="item col-lg-6 col-md-6 col-xs-12 col-xs-6-landscape">
+<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="info-icon open-popup"><div class="ion-android-open "></div></a>
 							</div>
 							
 						</div>
@@ -759,39 +757,234 @@
 									</div>
 								</div>
 							</div>
-							<div class="splide__slide full item pop-theme textoverlay unload">							
-								<div class="hide-on-click desktop-hidden">											
-									<div class="text-animate c-all txt-c">
-										<div class="h-auto">
-											<h2 class="mb-4 s-t">Modeling <strong></strong></h2>
-												<p>Modeling made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear</p>
-												<p><span class="open-popup btn">Click to View</span></p>	
-										</div>
-									</div>												
+							<div class="splide__slide full item light-theme textoverlay iframe-container">																															
+								<iframe 
+								data-splide-lazy="Converse/webgl/measurements.html"
+								class="unload multiply"																																						
+								frameborder="0"
+								scrolling="no">			 	 
+								</iframe>
+								<div class="ignore model-controls">
+									<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon ion-information-circled"></div>
+									<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+								</div>																															
+							</div>
+							<div class="splide__slide full item light-theme textoverlay unload iframe-container c-all">							
+								<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
+								<div class="model-controls">
+									<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
+									<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
 								</div>
-								<div class="h100">
-								<div class="cont">						
-									<div class="middle row m0 auto-scroll">									
-										<div class="col-lg-12 col-md-12 col-xs-12 textoverlay no-more-icon">
-											<div class="hw100">
-												<div class="iframe-container textoverlay">														
-													<iframe 
-													data-splide-lazy="Converse/webgl/measurements.html"
-													class="unload multiply"																																						
-													frameborder="0"
-													scrolling="no">			 	 
-													</iframe>
-														<div class="ignore model-controls">
-															<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon ion-information-circled"></div>
-															<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
-														</div>																										
-												</div>
-											</div>	
-										</div>					
-									</div>
-									</div>
-								</div>
+								<div class="c-all view-btn overlay img-opacity bg hide-this">									
+								</div>								
+								<iframe 
+								id="showonclick"
+								class="showonclick m-h unload-no-reload"
+								data-src="Converse/webgl/rendered.html"		
+								frameborder="0"
+								scrolling="no">	 
+								</iframe>									
+								<iframe 
+								src=""
+								id="popup-iframe"
+								class="converse-wireframe-injec lazy hide-this multiply unload"
+								data-src="Converse/webgl/pen.html" 											
+								frameborder="0"
+								scrolling="no"
+								>	
+								</iframe>										
 							</div>							
+							<div class="splide__slide full item row m0 light-theme">							
+								<div class="col-lg-6 col-md-6 c-all textoverlay">
+									<img data-splide-lazy="Converse/images/process/01.jpg" class=" invisible fade-in cover hw100" style="object-position: 100% 17%;">												
+									<div class="md-up-h overlay c-all">
+										<div class="text-animate c-all txt-c">
+											<div>
+												<h3 class="h3">Brand <strong>Breakdown </strong></h3>
+												<p>Converse draws inspiration from the street & creative cultures</p>
+												<p>The brand radiates a relaxed attitude</p>
+												<p>Forms are built from lazy curves and simple geometrical shapes </p>
+												<p>Geometrical shapes & minimalism</p>
+											</div>
+										</div>
+									</div>
+									<div class="xs-down-h overlay c-all">
+										<div class="text-animate c-all txt-c">
+											<div>
+												<h3 class="h3">Relaxed <strong>Attitude </strong></h3>
+												<p>The brand radiates a relaxed attitude</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="xs-down-h col-lg-6 col-md-6 c-all hw100">
+									<div class="col-lg-6 textoverlay c-all padda">
+										<img data-splide-lazy="Converse/images/process/04.jpg" class="cover" style="object-position: 100% 17%;">												
+										<div class="overlay c-all">
+											<div class="text-animate c-all">
+												<div>
+													<h3 class="h3">Edgy & <strong>Artsy </strong></h3>
+													<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 md-down-h c-all">
+										<div class="row m0 h100">
+											<div class="padda col-lg-12 textoverlay h50">
+												<img data-splide-lazy="Converse/images/process/03.png" class="bg-offwhite">												
+												<div class="overlay c-all">
+													<div class="text-animate c-all">
+														<div>
+															<h3 class="h3">Simple & <strong>Lazy </strong></h3>
+														<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="padda col-lg-12 textoverlay h50">											
+												<div class="bg-offwhite h100">
+													<img data-splide-lazy="Converse/images/process/bag.jpg" class="multiply">	
+												</div>										
+												<div class="overlay c-all">
+													<div class="text-animate c-all">
+														<div>
+															<h3 class="h3">Minimal<strong>ism </strong></h3>
+															<p>Geometrical shapes & minimalism</p>	
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>									
+							</div>
+							<div class="splide__slide full item row m0 light-theme">							
+								<div class="col-lg-6 c-all hw100">
+									<div class="col-lg-6 c-all">
+										<div class="row m0 hw100">
+											<div class="padda col-lg-12 textoverlay h50">
+												<img data-splide-lazy="Converse/images/moodboard/coke.jpg" class=" cover bg-offwhite" style="object-position: 50% 33%;">												
+												<div class="overlay c-all">
+													<div class="col-lg-10 text-animate c-all">
+														<div>
+															<h3 class="h3">60s <strong>Coca Cola Design </strong></h3>
+															<p class="txt-c">Whats more American than Coca Cola? <br>
+															This sign might make you think of a worker in the 50s-60s in dirty jeans taking a break at Coca-cola machine</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="padda col-lg-12 textoverlay dark-theme h50">											
+												<img data-splide-lazy="Converse/images/moodboard/snakeskin.jpg" class=" cover">												
+												<div class="overlay c-all">
+													<div class="col-lg-10 text-animate c-all">
+														<div>
+															<h3 class="h3">Snake <strong>Skins Patterns </strong></h3>
+															<p class="txt-c">Timber Rattlesnake, Eastern Coachwhip, Cottonmouth, Eastern Garter Snake.<br>
+															when we're in the South, we should pay attention to the snakes</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6 c-all">
+										<div class="row m0 hw100">
+											<div class="padda col-lg-12 textoverlay dark-theme h50">
+												<img data-splide-lazy="Converse/images/moodboard/bbq.jpg" class=" cover bg-black">												
+												<div class="overlay c-all">
+													<div class="col-lg-10 text-animate c-all">
+														<div>
+															<h3 class="h3">Southern<strong> Cooking</strong></h3>
+															<p class="txt-c">Barbecue is strongly associated with Southern cooking and culture due to its long history and evolution in the region</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="padda col-lg-12 textoverlay dark-theme h50">											
+												<div class="hw100">
+													<img data-splide-lazy="Converse/images/moodboard/swamp.jpg" class=" cover">	
+												</div>										
+												<div class="overlay c-all">
+													<div class="col-lg-10 text-animate c-all">
+														<div>
+															<h3 class="h3">Swamps & <strong>Wetlands </strong></h3>
+															<p class="txt-c">Murky waters? Great inspiration for graphic textures</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+								<div class="md-down-h padda col-lg-6 c-all textoverlay">
+									<div class="desktop-hidden zoom-icon"></div>
+									<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
+									<img data-splide-lazy="Converse/images/moodboard/cotton.jpg" class=" cover" style="object-position: 100% 17%;">												
+									<div class="dark-theme overlay c-all">
+										<div class="text-animate c-all txt-c">
+											<div>
+												<h3 class="h3"><strong>The South</strong> of the 60s </h3>
+												<p>The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
+												<p>Here, a cotton field worker taking a break</p>
+											</div>
+										</div>
+									</div>
+								</div>										
+							</div>
+							<div class="splide__slide full item row m0 light-theme textoverlay c-all">							
+								<img data-splide-lazy="Converse/images/process/sketch01.jpg" class=" cover">	
+								<div class="overlay">
+									<div class="text-animate c-all">
+										<div>
+											<h3 class="h3">Sketch <strong>Work</strong></h3>
+											<p class="txt-c">Outtakes from the ideation process</p>
+										</div>
+									</div>
+								</div>										
+							</div>	
+							<div class="splide__slide full item row m0 light-theme ">							
+								<div class="col-lg-6 h100">
+									<div class="h100">
+										<div class="iframe-container textoverlay-desktop">															
+											<iframe 
+											data-splide-lazy="Converse/webgl/spherebuild.html"
+											class="unload"					
+											frameborder="0"
+											scrolling="no">			 	 
+											</iframe>
+											<div>
+												<div class="model-controls">
+													<div data-tooltip="#wireframe-info-popup" class="info-icon ion-information-circled"></div>
+													<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+												</div>	
+											</div>
+										</div>									
+									</div>	
+								</div>	
+								<div class="col-lg-6 textoverlay c-all hw100">
+									<img data-splide-lazy="Converse/images/process/head_square.jpg" class="cover absolute" style="object-position:0% 75%">						
+									<div class="overlay c-all">
+										<div class="col-lg-6 text-animate h-auto">
+											<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+											<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+											<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+										</div>
+									</div>
+								</div>										
+							</div>
+							<div class="splide__slide full item row m0 dark-theme ">							
+								<iframe 
+								id="popup-iframe"
+								class="ks-config"
+								data-splide-lazy="Converse/web/keyshot-configurator-alternate.html" 							
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>										
+							</div>	
+							
 							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
 								<div class="item  h100 c-all">			
 								  <div class="col-lg-7">
@@ -1514,6 +1707,18 @@
 												</p>	
 										</div>												  						
 								  </div>							
+							</div>	
+							<div class="splide__slide full item light-theme iframe-container">																															
+								<iframe 
+								data-splide-lazy="alcon/webgl/rendered.html"
+								class="unload multiply"																																						
+								frameborder="0"
+								scrolling="no">			 	 
+								</iframe>
+								<div class="ignore model-controls">
+									<div data-tooltip="#wireframe-info-popup" class=" ignore info-icon ion-information-circled"></div>
+									<div data-tooltip="#reload-iframe" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+								</div>																															
 							</div>							
 							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
 								<div class="item  h100 c-all">			
@@ -2789,19 +2994,6 @@
 					</div>	
 				</div>									 
 			</div>
-			<script>	
-				$(".converse-wireframe-inject").on("load", function() {
-				
-				themeclr ="dark";	
-				
-				$('#converse-wireframe-popup , #converse-wireframe-popup div.ion-information-circled').addClass(themeclr +"-theme-btn");
-				  head = $(".converse-wireframe-inject").contents().find("head");	
-					css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-				  $(head).append(css);
-				  
-					  
-				});
-			</script>
 			<div id="bagheera-xr-popup" class="popup mfp-hide light-theme">
 				<div class="col h100">
 					<div class="row m0 h100">
@@ -2958,19 +3150,6 @@
 					</div>	
 				</div>
 			</div>								 
-			<script>	
-				$(".poc-wireframe-inject2").on("load", function() {
-				
-				themeclr ="medium";	
-				
-				$('#poc-wireframe-popup , #poc-wireframe-popup div.ion-information-circled').addClass(themeclr +"-theme-btn");
-				  head = $(".poc-wireframe-inject2").contents().find("head");	
-					css = '<link type="text/css" rel="stylesheet" href="../../css/' + themeclr +'-theme.css">';
-				  $(head).append(css);
-				  
-					  $("#poc-wireframe-popup").removeClass("loader");
-				});
-			</script>
 			<div id="spotify-xr-popup" class="popup mfp-hide light-theme">
 				<div class="col h100">
 					<div class="row m0 upper h100">	
@@ -3346,10 +3525,10 @@
 					<p>Tap - Start/reverse turn table</p>
 				</div>
 			</div>	
-			<div id="reload-iframe">
+			<div id="reload-iframe" class="touch-hidden">
 			<p>Reload Wireframe</p>
 			</div>
-			<div id="reload-model">
+			<div id="reload-model" class="touch-hidden">
 			Reload Model
 			</div>	
 			<div id="webconfig-info-popup">
@@ -3641,6 +3820,7 @@
 			lazyLoad: 'nearby',
 			preloadPages: 0,
 			autoWidth: true,
+			rewind: true,
 			//wheel: true,
 			arrows: true,
 			pagination: false,	

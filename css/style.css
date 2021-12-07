@@ -18365,6 +18365,7 @@ position: absolute;
 
 .ion-ios-plus {
 color: rgb(176,176,176,0.6);	
+z-index:3;
 }
 
 .ion-ios-plus:before {
