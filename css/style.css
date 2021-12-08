@@ -13856,6 +13856,11 @@ opacity:0 !important;
 transition: .3s ease;
 }
 
+.opacity-05 {
+opacity:0.5 !important;	
+transition: .3s ease;
+}
+
 @media (max-width: 576px) {
 .opacity-0-xs-down {
 opacity:0 !important;	
@@ -18315,7 +18320,7 @@ fill: var(--converse-pop-theme-text) !important;
 background-color: var(--converse-pop-theme-bg-opacity);	
 }
 
-#specialized .pop-theme {
+#specialized .pop-theme, .pop-theme.specialized {
 background-color: var(--specialized-pop-theme-bg) !important;	
 }
 

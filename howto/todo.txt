@@ -8,8 +8,8 @@ function mobile (
 
 function both (
 	
-fix all splide widths for pre lazy load	
 speed mobile	
+fix all splide widths for pre lazy load	
 webconfig css				
 p-logo-new fixed?
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
