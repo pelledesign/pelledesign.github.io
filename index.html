@@ -427,12 +427,12 @@
 					</div>		
 				</div>	
 					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
-				<div class="akg-splide portfolio-section  dark-theme splide-slider xs-down-h">
+				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
 					<div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item x-theme bg-none">
-								<div class="container row hw100 relative">						
+								<div class="container-xl-up row m0 hw100 relative mr-auto ml-auto">						
 									<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
 										<div class="txt-l">
 											<span class="d-block text-uppercase">Product Design</span>
@@ -460,13 +460,13 @@
 							<div class="splide__slide item row m0" style="background:#dfdfdf; width: 75vh !important;">
 								<img class="exclusion cover" src="" data-splide-lazy="akg/images/gallery/sketch.jpg" >
 							</div>
-							<div class="splide__slide item" style="width: calc(75vh * (152 / 150)) !important;">
-								<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions.svg">
+							<div class="splide__slide item max-vw100" style="width: calc(75vh * (152 / 150)) !important;">
+								<img class="exclusion" src="" data-splide-lazy="akg/images/functions.svg">
 							</div>
-							<div class="splide__slide item" style="width: 75vh !important;">
+							<div class="splide__slide item max-vw100" style="width: 75vh !important;">
 								<img class="exclusion cover" src="" data-splide-lazy="akg/images/functions2.svg">
 							</div>															
-							<div class="splide__slide item" style="width: 75vh !important;">										
+							<div class="splide__slide item max-vw100" style="width: 75vh !important;">										
 								<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
 									<div class="animate scroll-down"></div>
 									<div class="slide zoom-container">
@@ -491,7 +491,7 @@
 									</div>												
 								</div>														
 							</div>	
-							<div class="splide__slide item " style="height:100%; width:calc(75vh * (829/899)) !important">
+							<div class="splide__slide item max-vw100" style="height:100%; width:calc(75vh * (829/899)) !important">
 								<iframe 		
 																	
 								class=""
@@ -501,7 +501,7 @@
 								>			
 								</iframe>								
 							</div>
-							<div class="splide__slide item" style="height:100%; width:calc(75vh * (829/899)) !important"	>
+							<div class="splide__slide item max-vw100" style="height:100%; width:calc(75vh * (829/899)) !important"	>
 								<div class="item h100">					
 									<div class="iframe-container c-all textoverlay ignore exclusion">
 										<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
@@ -3823,9 +3823,14 @@
 			//wheel: true,
 			drag: 'free',
 			arrows: true,
-			pagination: false,	
+			pagination: false,
 			waitForTransition: false,
 			perPage: 1,
+			breakpoints: {
+				575: {
+					pagination: true,
+				},
+			}			
 		  }
 				  
 			var splide = new Splide( splideElement, splideDefaultOptions );
