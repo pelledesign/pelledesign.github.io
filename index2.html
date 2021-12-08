@@ -16,10 +16,92 @@
 		<link rel="stylesheet" href="css/splide.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+
+
+		<script> <!-- start test if touch device -->	
+		function is_touch_device() {  
+		try {  
+		 document.createEvent("TouchEvent");  
+		 return true;  
+		} catch (e) {  
+		 return false;  
+		}
+		}
+		</script>		
 		
+		<!-- xr-auto & config-auto resize & texts -->
+		<script>
+				
+		var xr_resize = function() {
+			var this_iframe;
+			//var this_iframe_is = $('.xr-auto');
+			var this_container_width;
+			var aspect_ratio;
+			var this_src;
+			var this_data_src;
+			
+			$('.xr-auto, .config-auto').each(function() {
+				var this_iframe = $(this);
+				var extra_space = '0';
+				this_src = $(this).attr('src');
+				this_data_src = $(this).attr('data-src');
+				
+				if (this_src =='akg/xr/akgxr.html' || this_data_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html' || this_data_src == 'akg/web/keyshot-configurator.html') {
+				aspect_ratio = 899 / 829;
+				}
+				else if (this_src == 'Converse/xr/conversexr.html' || this_data_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html' || this_data_src == 'Converse/web/keyshot-configurator.html') {
+				aspect_ratio = 800 / 1919;
+				}
+				else if (this_src == 'poc/xr/pocxr.html' || this_data_src == 'poc/xr/pocxr.html') {
+				aspect_ratio = 1080 / 1920;
+				}
+				else if (this_src == 'Bagheera/xr/bagheeraxr.html' || this_data_src == 'Bagheera/xr/bagheeraxr.html') {
+				aspect_ratio = 890 / 1583;
+				}
+				else if (this_src == 'haglofs/xr/haglofs.html' || this_data_src == 'haglofs/xr/haglofs.html') {
+				aspect_ratio = 440 / 1600;
+				}
+				else if (this_src == 'alcon/xr/alconxr.html' || this_data_src == 'alcon/xr/alconxr.html') {
+				aspect_ratio = 800 / 815;
+				}
+				else if (this_src == 'Specialized/xr/specializedxr.html' || this_data_src == 'Specialized/xr/specializedxr.html') {
+				aspect_ratio = 829 / 799;
+				}
+				else {
+				//alert('xr error');
+				}
+				
+				if (this_iframe.hasClass('config-auto')) {
+				extra_space = 40;
+				}
+				
+			 if (window.matchMedia("(max-width: 565px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
+			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
+			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
+			 } else if (window.matchMedia("(min-width: 992px)").matches) {
+				var this_container_width = this_iframe.closest('div').width();	
+			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
+			 }
+			 });	
+		}
+
+		$(document).ready(function() {  
+			xr_resize();
+		});
+
+		$(window).on('resize', function(){    							
+			xr_resize();	
+		}).resize()// trigger on page load
+		</script>			
 	</head>	
 	<body> 
-		<script> console.log('skeleton3')</script>
+		<script> console.log('skeleton0')</script>
 		<!-- background logo -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -38,7 +120,7 @@
 								<p>4</p>							
 							</div>
 							<div class="splide__slide" style="width:75vh">
-								<img class="cover" data-splide-lazy="akg/images/gallery/sketch.jpg">
+								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
 							</div>								
 						</ul>
 					</div>
