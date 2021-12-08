@@ -1,118 +1,16 @@
 	<!doctype html> 
 <html lang="en">
-	<head>
-		<title> Pelle iDesign</title>  
-		<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg">
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">		
-		
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-		<meta charset="utf-8">
-		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	  
+	<head>	  
 		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" href="css/animate.css">  
-		<link rel="stylesheet" href="css/owl.carousel.min.css">
-		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
-		<link rel="stylesheet" href="css/magnific.css">
-		<link rel="stylesheet" href="css/load-more-button.css">	
+		<link rel="stylesheet" href="css/animate.css">  	
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/splide.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-
-
-		<script> <!-- start test if touch device -->	
-		function is_touch_device() {  
-		try {  
-		 document.createEvent("TouchEvent");  
-		 return true;  
-		} catch (e) {  
-		 return false;  
-		}
-		}
-		</script>		
-		
-		<!-- xr-auto & config-auto resize & texts -->
-		<script>
-				
-		var xr_resize = function() {
-			var this_iframe;
-			//var this_iframe_is = $('.xr-auto');
-			var this_container_width;
-			var aspect_ratio;
-			var this_src;
-			var this_data_src;
-			
-			$('.xr-auto, .config-auto').each(function() {
-				var this_iframe = $(this);
-				var extra_space = '0';
-				this_src = $(this).attr('src');
-				this_data_src = $(this).attr('data-src');
-				
-				if (this_src =='akg/xr/akgxr.html' || this_data_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html' || this_data_src == 'akg/web/keyshot-configurator.html') {
-				aspect_ratio = 899 / 829;
-				}
-				else if (this_src == 'Converse/xr/conversexr.html' || this_data_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html' || this_data_src == 'Converse/web/keyshot-configurator.html') {
-				aspect_ratio = 800 / 1919;
-				}
-				else if (this_src == 'poc/xr/pocxr.html' || this_data_src == 'poc/xr/pocxr.html') {
-				aspect_ratio = 1080 / 1920;
-				}
-				else if (this_src == 'Bagheera/xr/bagheeraxr.html' || this_data_src == 'Bagheera/xr/bagheeraxr.html') {
-				aspect_ratio = 890 / 1583;
-				}
-				else if (this_src == 'haglofs/xr/haglofs.html' || this_data_src == 'haglofs/xr/haglofs.html') {
-				aspect_ratio = 440 / 1600;
-				}
-				else if (this_src == 'alcon/xr/alconxr.html' || this_data_src == 'alcon/xr/alconxr.html') {
-				aspect_ratio = 800 / 815;
-				}
-				else if (this_src == 'Specialized/xr/specializedxr.html' || this_data_src == 'Specialized/xr/specializedxr.html') {
-				aspect_ratio = 829 / 799;
-				}
-				else {
-				//alert('xr error');
-				}
-				
-				if (this_iframe.hasClass('config-auto')) {
-				extra_space = 40;
-				}
-				
-			 if (window.matchMedia("(max-width: 565px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 992px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 }
-			 });	
-		}
-
-		$(document).ready(function() {  
-			xr_resize();
-		});
-
-		$(window).on('resize', function(){    							
-			xr_resize();	
-		}).resize()// trigger on page load
-		</script>			
+		<script src="js/jquery-migrate-3.0.1.min.js"></script>		
 	</head>	
 	<body> 
-		<script> console.log('all scripts gone')</script>
+		<script> console.log('all scripts gone + more')</script>
 		<!-- background logo -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -140,103 +38,7 @@
 					</div>					  
 				</div>	
 		
-					
-		<!-- loader -->
-		<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-		  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-		  <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-			 /></svg></div> 
-
-		<!-- up button -->
-		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
 		
-		<!-- .loader --> 		
-		<script>		
-		$('img, iframe').addClass("loader").not('.zoom-icon');			
-		$('img, iframe').on('load',function(){
-		$(this).closest('.loader').removeClass('loader').addClass('hw100 loader-removed'); 
-		});		
-		</script>
-	
-		<!-- x-theme + theme-switcher + dropshadow -->			
-		<script>
-		
-		//must be placed before main.js as it needs classes from x-theme to be able to execute
-		
-		$('.xr-auto').closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
-		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong></strong>CMF</h3></div>');		
-		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open "></div></a>');
-
-		
-		var theme;
-		var this_theme; 			
-		var this_bg;
-		
-		if(is_touch_device()) {
-		theme = 'light';	
-		themeElements = $('.x-theme-touch');	
-		}
-		else
-		{ 
-		theme = 'light';
-		themeElements = $('.x-theme-desktop');
-		}		
-		
-		this_theme = theme + '-theme'; 			
-		this_bg = theme + 'Bg';
-		
-		// apply chosen theme to elements - and mark clicked button with circle			
-		$('body').addClass(this_bg);
-		themeElements.addClass(this_theme);
-		$('.' + this_theme + '-button').addClass('circle-shadow');
-		$('#hero').find('.item').addClass(this_theme);	
-		$('body').find(".x-theme, .info-box, .view-btn, .my-slider-progress").addClass(this_theme);
-		$('.portfolio-section, .x-shadow, .info-box').addClass(this_theme + '-shadow');		
-		$('body').find(".title").not('.ignore').addClass('bg-none');
-		
-		
-		// on theme btn click - mark this btn - if this .item has class x-theme - remove current theme - and apply new theme			
-		
-		//dark-theme button
-		$('.light-theme-button, .dark-theme-button').on('click',function(){
-		
-		if ($(this).hasClass('light-theme-button')) {
-		var this_theme = 'light-theme';
-		var other_theme = 'dark-theme';
-		var this_button = $('.light-theme-button');
-		var other_button = $('.dark-theme-button');
-		var this_theme_clr = 'lightBg';
-		var other_theme_clr = 'darkBg';
-		}
-		else if ($(this).hasClass('dark-theme-button')) {
-		var this_theme = 'dark-theme';
-		var other_theme = 'light-theme';
-		var this_button = $('.dark-theme-button');
-		var other_button = $('.light-theme-button');
-		var this_theme_clr = 'darkBg';
-		var other_theme_clr = 'lightBg';
-		}
-		
-		$('body').removeClass(other_theme_clr).addClass(this_theme_clr);
-		other_button.removeClass('circle-shadow');
-		this_button.addClass('circle-shadow');
-		
-		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
-		$('body').find(".x-theme, .fadeout-btm, .title, .info-box, .view-btn, .my-slider-progress").removeClass(other_theme).addClass(this_theme);
-		$('body').find('.portfolio-section, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
-					
-		$('nav').removeClass(other_theme).addClass(this_theme);	
-		
-		// if the active slide has x-theme class - only then change the colors of prev/next buttons
-		$(".owl-item.active").each(function(){		
-		  if ($(this).find('.item').hasClass('x-theme')) {				
-			$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass(other_theme).addClass(this_theme);				
-		  }
-		});			
-	});	
-				
-		</script>
-				
 <!-- 		<script src="js/lazyload.js"></script>
 		<script src="js/logos.js"></script>	
 		<script src="js/bootstrap.min.js"></script>
@@ -401,19 +203,6 @@
 					
 		</script>
 		
-		<!-- loader -->
-		<script>
-		  // loader
-		  var loader = function() {
-			 setTimeout(function() { 
-				if($('#loader').length > 0) {
-				  //$('#loader').removeClass('show');
-				  $('#loader').remove();
-				}
-			 }, 1);
-		  };
-		  loader();		
-		</script>
 
 	</body>
 </html>	
