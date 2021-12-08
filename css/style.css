@@ -18604,7 +18604,7 @@ width: auto !important;
 } */
 
 .splide__track ul > div.full {
-width: 100% !important;	
+width: 100vw !important;	
 }
 
 .splide__track {
