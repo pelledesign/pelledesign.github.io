@@ -9,6 +9,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="css/animate.css">  	
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/splide.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
@@ -16,7 +19,7 @@
 		
 	</head>	
 	<body> 
-		<script> console.log('skeleton2')</script>
+		<script> console.log('skeleton3')</script>
 		<!-- background logo -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -44,8 +47,20 @@
 					</div>					  
 				</div>	
 	
+<!-- 		<script src="js/lazyload.js"></script>
+		<script src="js/logos.js"></script>	
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/magnific.js"></script>	
+		<script src="js/jquery.waypoints.min.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>				
+		<script src="js/jquery.mousewheel.js"></script>
+		<script src="js/stellar.js"></script>
+		<script src="js/load-more-button.js"></script>
+		<script src="js/jquery-scroll-snap.js"></script>
+		<script src="js/smoothscroll.js"></script>
+		<script src="js/isInViewport.js"></script> -->
 		<script src="js/splide.min.js"></script>
-		<script src="js/splide-autoscroll.js"></script>
+<!-- 		<script src="js/splide-autoscroll.js"></script> -->
 
 
 		<!-- splide -->
@@ -86,7 +101,42 @@
 			var bar = splide.root.querySelector(getBar);	
 			var end = splide.Components.Controller.getEnd() + 1;
 			bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
-			});					
+			});
+
+			
+			var lastVisited = 0; //start index
+			splide.on( 'moved', function () {
+			
+			var splideId = $('#'+splide.root.id);			
+			var thisIndex = splide.index;		
+			var lastVisited = splide.Components.Controller.getIndex( true );		
+			
+			console.log(splide.Components.Elements.root.classList[0], splide.index, 'last visited index is: ', lastVisited);
+
+			if (thisIndex > lastVisited) {
+			splideId.find('.splide__slide').removeClass('last-visited');
+			splideId.find('.is-prev').addClass('last-visited');			
+			}
+			else {
+			splideId.find('.splide__slide').removeClass('last-visited');
+			splideId.find('.is-next').addClass('last-visited');			
+			}
+					
+			lastVisited = thisIndex;
+			var thisIframe = splideId.find('.is-active').find('iframe');
+			if (thisIframe.hasClass('unloaded')) {
+			var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
+			console.log(thisDataSplideSrc);
+			thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
+			}	
+					
+			else if (splideId.find('.last-visited').find('iframe').hasClass('unload')) {			
+			var thisSrc = splideId.find('.last-visited').find('iframe').attr('src');
+			console.log('last slide has class unload and its src is: ', thisSrc);
+			splideId.find('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
+			}	
+			});
+					
 		   splide.mount();
 
 		  };
@@ -96,6 +146,67 @@
 		}
 
 
+			/* menu splide control */
+			let aboutSplide = new Splide( '.about-splide', {
+			arrows: false,
+			pagination: false,
+			} );				
+			aboutSplide.on( 'mounted', function () {
+				$('.about-splide .more-btn-text').on('click',function(){
+					aboutSplide.go('+${i}');			
+				});
+				$('.go-to-about').on('click',function(){
+					aboutSplide.go(0);			
+				});
+				$('.go-to-services').on('click',function(){
+					aboutSplide.go(2);
+				});			
+			} );
+			aboutSplide.mount();		
+
+		<!-- reviews splide slider -->
+		if(is_touch_device()) {
+			let reviewsSplide = new Splide( '.reviews-splide', {
+			type: 'loop',			
+			autoplay: true,
+			pauseOnHover: true,
+			interval: 2000,
+			arrows: false,
+			pagination: false,
+		   perPage: 3,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				},
+				768: {
+					perPage: 2,
+				},
+			}
+			});				
+
+			reviewsSplide.mount(	);	
+		}		
+		else {
+			let reviewsSplide = new Splide( '.reviews-splide', {
+			type: 'loop',			
+			//autoplay: true,
+			pauseOnHover: true,
+			interval: 2000,
+			arrows: false,
+			pagination: false,
+		   perPage: 3,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				},
+				768: {
+					perPage: 2,
+				},
+			}
+			});				
+
+			reviewsSplide.mount(window.splide.Extensions);
+		}	
 		
 					
 		</script>
