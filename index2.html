@@ -16,14 +16,10 @@
 		<link rel="stylesheet" href="css/splide.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-
-
 	
-		
-		
 	</head>	
 	<body> 
-		<script> console.log('skeleton1')</script>
+		<script> console.log('skeleton2')</script>
 		<!-- background logo -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -50,19 +46,6 @@
 						<div class="my-slider-progress-bar"></div>
 					</div>					  
 				</div>	
-	
-<!-- 		<script src="js/lazyload.js"></script>
-		<script src="js/logos.js"></script>	
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/magnific.js"></script>	
-		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>				
-		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/stellar.js"></script>
-		<script src="js/load-more-button.js"></script>
-		<script src="js/jquery-scroll-snap.js"></script>
-		<script src="js/smoothscroll.js"></script>
-		<script src="js/isInViewport.js"></script> -->
 		<script src="js/splide.min.js"></script>
 <!-- 		<script src="js/splide-autoscroll.js"></script> -->
 
@@ -150,67 +133,6 @@
 		}
 
 
-			/* menu splide control */
-			let aboutSplide = new Splide( '.about-splide', {
-			arrows: false,
-			pagination: false,
-			} );				
-			aboutSplide.on( 'mounted', function () {
-				$('.about-splide .more-btn-text').on('click',function(){
-					aboutSplide.go('+${i}');			
-				});
-				$('.go-to-about').on('click',function(){
-					aboutSplide.go(0);			
-				});
-				$('.go-to-services').on('click',function(){
-					aboutSplide.go(2);
-				});			
-			} );
-			aboutSplide.mount();		
-
-		<!-- reviews splide slider -->
-		if(is_touch_device()) {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
-
-			reviewsSplide.mount(	);	
-		}		
-		else {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			//autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
-
-			reviewsSplide.mount(window.splide.Extensions);
-		}	
 		
 					
 		</script>
