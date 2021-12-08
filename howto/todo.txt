@@ -8,12 +8,9 @@ function mobile (
 
 function both (
 	
+fix all splide widths for pre lazy load	
+speed mobile	
 webconfig css				
-injects for xr
-
-enable vertical scolling on tall xr
-orientationchange jumps https://css-tricks.com/content-jumping-avoid/ + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"	
-pop-themes
 p-logo-new fixed?
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
 process
@@ -43,7 +40,8 @@ belmar - finish model
 )
 
 function later (
-
+pop-themes
+orientationchange jumps https://css-tricks.com/content-jumping-avoid/ + lock phone orientation? on popup open? om popup innehåll är landscape by nature then open popup in forced landscape view - or add "please rotae icon"
 owl / verlok conflict
 frames in premiere > transparent video
 skisser med ren bakgrund - overlay effekt enbart på marker osv +new video sketch
@@ -51,6 +49,7 @@ update pdf portfolio
  xr hotspots
  snyggare loads / animations - slide w/ several owl-lazy's? 
 optimzed bootstrap code 
+enable vertical scrolling on tall xr
  
 watch .git
 

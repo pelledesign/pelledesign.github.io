@@ -18294,19 +18294,19 @@ background-color: var(--specialized-pop-theme-bg) !important;
 background-color: var(--specialized-pop-theme-bg-opacity);	
 }
 
-.splide-slider div.tooltip-position.dark {
+.splide-slider div.tooltip-position.dark, .popup.dark-theme .tooltip-position.dark{
 
  background-color: rgba(0, 0, 0, 0.7);
  color: rgb(255, 255, 255);	
 }
 
-.splide-slider div.tooltip-position.light {
+.splide-slider div.tooltip-position.light, .popup.light-theme .tooltip-position.light {
 
  background-color: rgba(255, 255, 255, 0.9);
  color: #000;	
 }
 
-.splide-slider div.tooltip-position.medium {
+.splide-slider div.tooltip-position.medium, .popup.medium-theme .tooltip-position.medium {
 
  background-color: rgba(228, 229, 231, 0.9);
  color: #000;	
@@ -18397,12 +18397,12 @@ padding-left:9px;
   grid-auto-flow: column;
   /* gap: 1rem; */
   gap: 0rem;
-  padding-right: 1rem !important;
-  padding-left: 1rem !important;
+/*   padding-right: 1rem !important;
+  padding-left: 1rem !important; */
   width: 100%;
   overflow-y: auto;
-/*   overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity; */
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
   margin-bottom: 1rem;
   position:relative;
   scroll-behavior: smooth;
