@@ -112,7 +112,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('no fades autoscroll3')</script>
+		<script> console.log('test')</script>
 		<!-- background logo -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
@@ -3746,7 +3746,7 @@
 									</script>
 
 		<!-- fade in on splide lazyload (the only function that controls this) -->
-<!-- 		<script>
+		<script>
 		$('img, iframe').each(function () {
 		var thisImg = $(this);
 		
@@ -3765,7 +3765,7 @@
 		});
 		}
 		});	
-		</script> -->
+		</script>
 		
 <!-- 		<script>
 		$('img, iframe').each(function () {
@@ -3823,49 +3823,14 @@
 			var bar = splide.root.querySelector(getBar);	
 			var end = splide.Components.Controller.getEnd() + 1;
 			bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
-			});
-
-			
-			var lastVisited = 0; //start index
-			splide.on( 'moved', function () {
-			
-			var splideId = $('#'+splide.root.id);			
-			var thisIndex = splide.index;		
-			var lastVisited = splide.Components.Controller.getIndex( true );		
-			
-			console.log(splide.Components.Elements.root.classList[0], splide.index, 'last visited index is: ', lastVisited);
-
-			if (thisIndex > lastVisited) {
-			splideId.find('.splide__slide').removeClass('last-visited');
-			splideId.find('.is-prev').addClass('last-visited');			
-			}
-			else {
-			splideId.find('.splide__slide').removeClass('last-visited');
-			splideId.find('.is-next').addClass('last-visited');			
-			}
-					
-			lastVisited = thisIndex;
-			var thisIframe = splideId.find('.is-active').find('iframe');
-			if (thisIframe.hasClass('unloaded')) {
-			var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
-			console.log(thisDataSplideSrc);
-			thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
-			}	
-					
-			else if (splideId.find('.last-visited').find('iframe').hasClass('unload')) {			
-			var thisSrc = splideId.find('.last-visited').find('iframe').attr('src');
-			console.log('last slide has class unload and its src is: ', thisSrc);
-			splideId.find('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
-			}	
-			});
-					
+			});					
 		   splide.mount();
 
 		  };
 		}
 		for (var j = 0; j < splides.length; j++) {
 		  funcs[j]();
-		}				
+		}					
 		</script>
 		
 		<!-- loader -->
