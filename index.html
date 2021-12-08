@@ -112,7 +112,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('no fades autoscroll ro extra spliders')</script>
+		<script> console.log('no fades autoscroll2')</script>
 		<!-- background logo -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
@@ -3867,6 +3867,45 @@
 		  funcs[j]();
 		}
 
+
+			/* menu splide control */
+			let aboutSplide = new Splide( '.about-splide', {
+			arrows: false,
+			pagination: false,
+			} );				
+			aboutSplide.on( 'mounted', function () {
+				$('.about-splide .more-btn-text').on('click',function(){
+					aboutSplide.go('+${i}');			
+				});
+				$('.go-to-about').on('click',function(){
+					aboutSplide.go(0);			
+				});
+				$('.go-to-services').on('click',function(){
+					aboutSplide.go(2);
+				});			
+			} );
+			aboutSplide.mount();		
+
+		<!-- reviews splide slider -->
+			let reviewsSplide = new Splide( '.reviews-splide', {
+			type: 'loop',			
+			autoplay: true,
+			pauseOnHover: true,
+			interval: 2000,
+			arrows: false,
+			pagination: false,
+		   perPage: 3,
+			breakpoints: {
+				575: {
+					perPage: 1,
+				},
+				768: {
+					perPage: 2,
+				},
+			}
+			});				
+
+			reviewsSplide.mount(	);	
 
 					
 		</script>
