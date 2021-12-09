@@ -112,7 +112,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('no poc')</script>
+		<script> console.log('fixed lazy load')</script>
 		<!-- background logo -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
@@ -408,7 +408,7 @@
 				</div>	
 			</div>	
 		</div> -->			
-				
+<div class="sm-up-h vh100"></div>				
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -455,6 +455,18 @@
 									</div>			
 								</div>
 							</div>
+							<div class="splide__slide full item row m0">
+									<div class="col-lg-6 col-xs-6 h100 c-all pt-h mr-auto ml-auto ">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+											<p>Position as product designer at Swedish Sports Company Bagheera<br>
+											</p>		  
+											<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
+											</p>
+											<p class="txt-l text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>	
+										</div>												  						
+								  </div>	
+							</div>							
 							<div class="splide__slide item" style="background:#dfdfdf; width:75vh">
 								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
 							</div>
@@ -729,8 +741,8 @@
 									</div>
 									<div class="col-lg-8 col-md-12 col-sm">
 										<iframe 
-										class="soft-zoom" 
-										data-splide-lazy="Converse/xr/conversexr.html"																			
+										class="soft-zoom lazy" 
+										data-src="Converse/xr/conversexr.html"																			
 										frameborder="0"
 										scrolling="no"
 										>
@@ -739,10 +751,10 @@
 								</div>
 							</div>	
 							<div class="splide__slide full item bg-none">							
-								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
+								<img src="" data-src="Converse/images/gallery/01.png" class="absolute cover lazy" style="object-position: 100% 75%;">												
 							</div>
 							<div class="splide__slide full item bg-none textoverlay">							
-								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
+								<img src="" data-src="Converse/images/gallery/01.png" class="absolute cover lazy" style="object-position: 100% 75%;">												
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<div>
@@ -1359,9 +1371,21 @@
 										</div>												  						
 								  </div>	
 								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100">							
-										<img class="contain" src="" data-splide-lazy="Bagheera/images/gallery/twisted.png">									
+										<img class="contain lazy" data-src="Bagheera/images/gallery/twisted.png">									
 							
 								  </div>
+							</div>
+							<div class="splide__slide full item row m0">
+									<div class="col-lg-6 col-xs-6 h100 c-all pt-h mr-auto ml-auto ">
+										<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
+											<h2 class="mb-4 s-t">Bagheera <strong>Shoe Design</strong></h2>
+											<p>Position as product designer at Swedish Sports Company Bagheera<br>
+											</p>		  
+											<p>Examples of the design process of one of many running, hiking, walking, & trail-running styles made during my time as a product designer at Swedish Sports Company Bagheera.
+											</p>
+											<p class="txt-l text-md-left pb-5"><a href="https://www.bagheera.se/" target="_blank" title="Visit Bagheera" class="btn btn-outline">Visit</a></p>	
+										</div>												  						
+								  </div>	
 							</div>							
 							<div class="splide__slide full item row m0">
 								<div class="col-lg-6 h100">
@@ -1574,8 +1598,8 @@
 									<iframe 
 									id=""
 									style="display:flex;"
-									class="xr-auto"																																		
-									data-splide-lazy="haglofs/xr/haglofs.html"																		
+									class="xr-auto lazy"																																		
+									data-src="haglofs/xr/haglofs.html"																		
 									frameborder="0"
 									scrolling="no"
 									>
@@ -1819,7 +1843,7 @@
 								</div>						
 							</div>
 							<div class="splide__slide full item">													
-								<img class="bg-black" data-splide-lazy	="Specialized/images/gallery/specialized.jpg">
+								<img class="bg-black lazy" data-src	="Specialized/images/gallery/specialized.jpg">
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<h3 class="h3 txt-l"> <strong>Specialized </strong> Form Language</h3>		
@@ -2089,7 +2113,7 @@
 									  <div class="col-lg-6 h100 soft-zoom touch-hidden">
 										<div class="col-lg-12 textoverlay-mobile">
 											<div class="hw100">									
-												<img data-splide-lazy="images/process/user.jpg" class=" flipx cover ">
+												<img data-src="images/process/user.jpg" class="lazy flipx cover ">
 												<div class="overlay c-all h100">
 													<div class="col-lg-8 text-animate txt-l">
 														<div>
