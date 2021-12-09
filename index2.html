@@ -99,7 +99,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('clean')</script>
+		<script> console.log('clean2')</script>
 
 	<div class="akg-splide portfolio-section  dark-theme splide-slider">
 		<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -129,7 +129,7 @@
 
 
 		<script src="js/splide.min.js"></script>
-		<script src="js/splide-autoscroll.js"></script>
+		<!-- <script src="js/splide-autoscroll.js"></script> -->
 
 		
 
@@ -234,49 +234,7 @@
 			} );
 			aboutSplide.mount();		
 
-		<!-- reviews splide slider -->
-		if(is_touch_device()) {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
 
-			reviewsSplide.mount(	);	
-		}		
-		else {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			//autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
-
-			reviewsSplide.mount(window.splide.Extensions);
-		}	
 
 					
 		</script>
