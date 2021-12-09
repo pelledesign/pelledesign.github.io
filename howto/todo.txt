@@ -7,7 +7,8 @@ function mobile (
 )
 
 function both (
-	
+
+more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
 speed mobile	
 fix all splide widths for pre lazy load	
 webconfig css				

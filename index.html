@@ -112,7 +112,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('test')</script>
+		<script> console.log('doc write')</script>
 		<!-- background logo -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
@@ -427,31 +427,7 @@
 					</div>		
 				</div>	
 					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
-				<div class="akg-splide portfolio-section  dark-theme splide-slider">
-					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
-					<div class="splide__track">
-						<ul class="splide__list">
-							<div class="splide__slide full item dark-theme bg-none w100 ignore">		
-								<p>1</p>		
-							</div>
-							<div class="splide__slide full item dark-theme bg-none w100 ignore">		
-								<p>2</p>							
-							</div>
-							<div class="splide__slide full item dark-theme bg-none w100 ignore">				
-								<p>3</p>							
-							</div>
-							<div class="splide__slide full item dark-theme bg-none w100 ignore">				
-								<p>4</p>							
-							</div>
-							<div class="splide__slide" style="width:75vh">
-								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
-							</div>								
-						</ul>
-					</div>
-					<div class="my-slider-progress">
-						<div class="my-slider-progress-bar"></div>
-					</div>					  
-				</div>
+
 				<div class="akg-splide portfolio-section  dark-theme splide-slider">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
 					<div class="splide__track">
@@ -3713,37 +3689,137 @@
 				
 		</script>
 				
-		<script src="js/lazyload.js"></script>
-		<script src="js/logos.js"></script>	
-		<script src="js/bootstrap.min.js"></script> <!-- needed for mobile menu -->	
-		<script src="js/magnific.js"></script>	
-		<script src="js/jquery.waypoints.min.js"></script>
-		<script src="js/jquery.stellar.min.js"></script>				
-		<script src="js/jquery.mousewheel.js"></script>
-		<script src="js/stellar.js"></script>
-		<script src="js/load-more-button.js"></script>
-		<script src="js/jquery-scroll-snap.js"></script>
-		<script src="js/smoothscroll.js"></script> <!-- needed for mobile devices -->
-		<script src="js/isInViewport.js"></script>
-		<script src="js/splide.min.js"></script>
-		<script src="js/splide-autoscroll.js"></script>
+<!-- <script>
+if(is_touch_device()) {
 
-									<script>	
-									
-										//inject iframe styles & spinners
-									if(!is_touch_device()) {
-												
-										$(".babba").on("load", function() {
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "js/lazyload.js";
+    document.body.appendChild(script);
 
-										  let head = $(this).contents().find("head");	
-										  let col_one = $(this).contents().find("#one");	
-										  let css_col = '<div id="cmf-text-box touch-hidden"><h2 class="mb-4 s-t">CMF <strong>Bundle</strong></h2><p>Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p><p>Try it out in the example below by selecting different cmf swatches for different part.</p></div>';
-										  $(col_one).prepend(css_col);			
-											$(this).contents().find("h3").remove();										  
-										
-										});
-									}							
-									</script>
+    var script2 = document.createElement('script');
+    script2.type = "text/javascript";
+    script2.src = "js/logos.js";
+    document.body.appendChild(script2);
+
+    var script3 = document.createElement('script');
+    script3.type = "text/javascript";
+    script3.src = "js/bootstrap.min.js";
+    document.body.appendChild(script3);
+
+    var script4 = document.createElement('script');
+    script4.type = "text/javascript";
+    script4.src = "js/magnific.js";
+    document.body.appendChild(script4);
+
+    var script5 = document.createElement('script');
+    script5.type = "text/javascript";
+    script5.src = "js/jquery.waypoints.min.js";
+    document.body.appendChild(script5);
+
+    var script6 = document.createElement('script');
+    script6.type = "text/javascript";
+    script6.src = "js/jquery.stellar.min.js";
+    document.body.appendChild(script6);
+	 
+    var script7 = document.createElement('script');
+    script7.type = "text/javascript";
+    script7.src = "js/jquery.mousewheel.js";
+    document.body.appendChild(script7);
+
+    var script8 = document.createElement('script');
+    script8.type = "text/javascript";
+    script8.src = "js/stellar.js";
+    document.body.appendChild(script8);    
+	 
+	 var script9 = document.createElement('script');
+    script9.type = "text/javascript";
+    script9.src = "js/load-more-button.js";
+    document.body.appendChild(script9);    
+	 
+	 var script10 = document.createElement('script');
+    script10.type = "text/javascript";
+    script10.src = "js/jquery-scroll-snap.js";
+    document.body.appendChild(script10);    
+	 
+	 var script11 = document.createElement('script');
+    script11.type = "text/javascript";
+    script11.src = "js/smoothscroll.js";
+    document.body.appendChild(script11);    
+	 
+	 var script12 = document.createElement('script');
+    script12.type = "text/javascript";
+    script12.src = "js/isInViewport.js";
+    document.body.appendChild(script12);    
+	 
+	 var script13 = document.createElement('script');
+    script13.type = "text/javascript";
+    script13.src = "js/splide.min.js";
+    document.body.appendChild(script13);    
+	 
+	 var script14 = document.createElement('script');
+    script14.type = "text/javascript";
+    script14.src = "js/splide-autoscroll.js";
+    document.body.appendChild(script14);
+}
+else {
+    // Skip loading it
+    setTimeout(doTheNextThing, 10);
+}
+</script> -->
+<script>
+if(is_touch_device()) {
+
+document.write('<script src="js/lazyload.js"><\/script>');
+document.write('<script src="js/logos.js"><\/script>');
+document.write('<script src="js/bootstrap.min.js"><\/script>');
+document.write('<script src="js/magnific.js"><\/script>');
+document.write('<script src="js/jquery.waypoints.min.js"><\/script>');
+document.write('<script src="js/jquery.stellar.min.js"><\/script>');
+document.write('<script src="js/jquery.mousewheel.js"><\/script>');
+document.write('<script src="js/stellar.js"><\/script>');
+document.write('<script src="js/load-more-button.js"><\/script>');
+document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
+document.write('<script src="js/smoothscroll.js"><\/script>');
+document.write('<script src="js/isInViewport.js"><\/script>');
+document.write('<script src="js/splide.min.js"><\/script>');
+document.write('<script src="js/splide-autoscroll.js"><\/script>');
+}
+else {
+document.write('<script src="js/lazyload.js"><\/script>');
+document.write('<script src="js/logos.js"><\/script>');
+document.write('<script src="js/bootstrap.min.js"><\/script>');
+document.write('<script src="js/magnific.js"><\/script>');
+document.write('<script src="js/jquery.waypoints.min.js"><\/script>');
+document.write('<script src="js/jquery.stellar.min.js"><\/script>');
+document.write('<script src="js/jquery.mousewheel.js"><\/script>');
+document.write('<script src="js/stellar.js"><\/script>');
+document.write('<script src="js/load-more-button.js"><\/script>');
+document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
+document.write('<script src="js/smoothscroll.js"><\/script>');
+document.write('<script src="js/isInViewport.js"><\/script>');
+document.write('<script src="js/splide.min.js"><\/script>');
+document.write('<script src="js/splide-autoscroll.js"><\/script>');
+}
+</script>
+
+
+<script>	
+
+	//inject iframe styles & spinners
+if(!is_touch_device()) {
+			
+	$(".babba").on("load", function() {
+
+	  let head = $(this).contents().find("head");	
+	  let col_one = $(this).contents().find("#one");	
+	  let css_col = '<div id="cmf-text-box touch-hidden"><h2 class="mb-4 s-t">CMF <strong>Bundle</strong></h2><p>Lastly, when all changes and iterations are agreed upon, I can create an interactive bundle of color, material and finish options for you where you may explore different options yourself!</p><p>Try it out in the example below by selecting different cmf swatches for different part.</p></div>';
+	  $(col_one).prepend(css_col);			
+		$(this).contents().find("h3").remove();										  
+	
+	});
+}							
+</script>
 
 		<!-- fade in on splide lazyload (the only function that controls this) -->
 		<script>
