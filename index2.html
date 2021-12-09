@@ -99,7 +99,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('clean2')</script>
+		<script> console.log('clean3')</script>
 
 	<div class="akg-splide portfolio-section  dark-theme splide-slider">
 		<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
@@ -216,23 +216,7 @@
 		}
 
 
-			/* menu splide control */
-			let aboutSplide = new Splide( '.about-splide', {
-			arrows: false,
-			pagination: false,
-			} );				
-			aboutSplide.on( 'mounted', function () {
-				$('.about-splide .more-btn-text').on('click',function(){
-					aboutSplide.go('+${i}');			
-				});
-				$('.go-to-about').on('click',function(){
-					aboutSplide.go(0);			
-				});
-				$('.go-to-services').on('click',function(){
-					aboutSplide.go(2);
-				});			
-			} );
-			aboutSplide.mount();		
+	
 
 
 
