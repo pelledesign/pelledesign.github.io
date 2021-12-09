@@ -7,6 +7,7 @@ function mobile (
 )
 
 function both (
+remove some splide slides before loaded in dom
 two first splide slides are now verlok lazy loaded - the rest splide lazy loaded - so the first two slides are loaded just before they're in sight (set px in lazyload.js)
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
 speed mobile: srcsets	https://stackoverflow.com/questions/19634463/what-is-an-srcset-attribute-in-img-tag-and-how-to-use-it#:~:text=srcset%20allows%20you%20to%20define,on%20the%20actual%20device's%20resolution.&text=The%20actual%20width%20of%20the,%2C%201.5x%20%2C%202x%20etc.
