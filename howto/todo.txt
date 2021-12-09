@@ -16,6 +16,12 @@ check all website backups & pick the best - test light / dark theme & decide whi
 process
 )
 
+function splide issue (
+	
+splide script ok	
+	
+)
+
 function brands (
 
 /* converse */
