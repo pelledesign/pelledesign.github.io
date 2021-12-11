@@ -16,9 +16,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet"> -->
+		<link rel="stylesheet" href="css/raleway2.css">
 
-		<link rel="stylesheet" href="css/animate.css">  
+		  
 <!-- 		<link rel="stylesheet" href="css/owl.carousel.min.css"> -->
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
 		<link rel="stylesheet" href="css/magnific.css">
@@ -114,7 +115,7 @@
 	<body> 
 		<script> console.log('height + min-height')</script>
 		<!-- background logo -->
-		<div class="hw100"><p style="color:white; user-select:none;">Pelle iDesign</p></div>		
+		<div class="hw100"><p style="color:white; user-select:none;">Pelle iDesign</p></div>		<!-- print someting to avoid fcp error -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		<!-- header -->
 		<header id="header" role="banner" class="nav-down x-theme lg-down-h">
@@ -366,10 +367,10 @@
 										</div>												  						
 								  </div>	
 							</div>							
-							<div class="splide__slide item" style="background:#dfdfdf; width:75vh">
+							<div class="splide__slide item" style="width:75vh">
 								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
 							</div>
-							<div class="splide__slide item row m0" style="background:#dfdfdf; width: 75vh !important;">
+							<div class="splide__slide item row m0" style="width: 75vh !important;">
 								<img class="cover" data-splide-lazy="akg/images/gallery/sketch.jpg" >
 							</div>
 							<div class="splide__slide item max-vw100" style="width: calc(75vh * (152 / 150)) !important;">
@@ -3620,34 +3621,42 @@
 		document.write('<script src="js/logos.js"><\/script>');
 		document.write('<script src="js/bootstrap.min.js"><\/script>');
 		document.write('<script src="js/magnific.js"><\/script>');
-		<!-- document.write('<script src="js/jquery.waypoints.min.js"><\/script>'); -->
-		<!-- document.write('<script src="js/jquery.stellar.min.js"><\/script>'); -->
-		<!-- document.write('<script src="js/jquery.mousewheel.js"><\/script>'); -->
-		<!-- document.write('<script src="js/stellar.js"><\/script>'); -->
 		document.write('<script src="js/load-more-button.js"><\/script>');
-		<!-- document.write('<script src="js/jquery-scroll-snap.js"><\/script>'); -->
 		document.write('<script src="js/smoothscroll.js"><\/script>');
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/splide.min.js"><\/script>');
-		<!-- document.write('<script src="js/splide-autoscroll.js"><\/script>'); -->
 		}
 		else {
 		document.write('<script src="js/lazyload.js"><\/script>');
 		document.write('<script src="js/logos.js"><\/script>');
 		document.write('<script src="js/bootstrap.min.js"><\/script>');
 		document.write('<script src="js/magnific.js"><\/script>');
-		<!-- document.write('<script src="js/jquery.waypoints.min.js"><\/script>'); -->
-		<!-- document.write('<script src="js/jquery.stellar.min.js"><\/script>'); -->
 		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
-		<!-- document.write('<script src="js/stellar.js"><\/script>'); -->
 		document.write('<script src="js/load-more-button.js"><\/script>');
 		document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
-		<!-- document.write('<script src="js/smoothscroll.js"><\/script>'); -->
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/splide.min.js"><\/script>');
 		document.write('<script src="js/splide-autoscroll.js"><\/script>');
 		}
 		</script>
+
+<!-- 		<script>
+		if(is_touch_device()) {
+const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "js/lazyload.js";
+    script.async = false;
+    //script.dataset.cfasync = false;  
+    document.body.appendChild(script);
+    script.addEventListener("load", () => {
+      console.log("Script added successfully");
+      //resolve();
+    });
+		}
+		else {
+
+		}
+		</script> -->
 
 
 <script>	
