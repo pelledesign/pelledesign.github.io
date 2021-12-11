@@ -18592,6 +18592,12 @@ width: 100% !important;
 width: auto;	
 }
 
+.splide-slider, .about-splide, .splide__track {
+height:100%;	
+}
+
+
+
 .splide-height {
 width: var(--splide-height) !important;	
 }
@@ -18606,6 +18612,14 @@ width: 100% !important;
 
 .splide__track {
 height:75vh;	
+}
+
+.about-splide, .splide__track {
+height:100%;	
+}
+
+.about-splide, .splide__slide {
+	
 }
 
 img.splide__slide  {
