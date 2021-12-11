@@ -361,6 +361,7 @@ html {
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
   background-color:#fff;
+  height:100%;
 }
 
 @-ms-viewport {
@@ -386,7 +387,7 @@ body {
   touch-action: auto;
   overflow-x:hidden;
   
-  height:100%;
+  
 
 }
 
