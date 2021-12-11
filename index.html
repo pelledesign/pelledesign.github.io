@@ -110,7 +110,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('height + min-height')</script>
+		<script> console.log('lazy pdf')</script>
 		<!-- background logo -->
 		<div class="hw100"><p style="color:white; user-select:none;">Pelle iDesign</p></div>		<!-- print someting to avoid fcp error -->
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
@@ -3331,15 +3331,15 @@
 			<div id="pdf" class="popup mfp-hide dark-theme">
 				<iframe
 				id=""
-				class=""
-				src="pdf/Design_Work_by_Pelle Skogsberg.pdf#view=FitH"
+				class="lazy"
+				data-src="pdf/Design_Work_by_Pelle Skogsberg.pdf#view=FitH"
 				style="padding:5%;">
 				</iframe>				
 			</div>
 			<div id="pdf-poc" class="popup mfp-hide dark-theme">
 				<iframe
 				id=""
-				class="" src="poc/pdf/poc.pdf"
+				class="lazy" data-src="poc/pdf/poc.pdf"
 				style="padding:5%;">
 				</iframe>				
 			</div>
