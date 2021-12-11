@@ -385,6 +385,8 @@ body {
   -ms-touch-action: auto;
   touch-action: auto;
   overflow-x:hidden;
+  
+  height:100%;
 
 }
 
@@ -396,6 +398,7 @@ body {
   line-height: 1.8;
   /* color: #6c757d; */
   color: #404040;
+  min-height:100%;
 }
 
 body.darkBg #loader {
