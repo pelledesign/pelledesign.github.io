@@ -17932,7 +17932,7 @@ height: 100%;
 }
 
 @media (orientation:portrait) {
-.section-container {
+.splide-slider  {
 height:65vh;
 }
 }
@@ -17944,7 +17944,7 @@ display:none;
 }
 
 @media (orientation:landscape) {
-.section-container {
+.splide-slider  {
 height:75vh;
 }
 }
