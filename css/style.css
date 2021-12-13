@@ -18732,3 +18732,6 @@ img.loaded, iframe.loaded {
 opacity: 1;
 }
 
+.hero-splide .splide__track, .hero-splide .splide__list {
+	height:100%;
+}
