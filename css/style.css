@@ -17651,9 +17651,7 @@ background-color: #545454;
 background-color: #d7d7d7;
 }
 
-img:not([src]):not([srcset]) {
-  visibility: hidden;
-}
+
 
 .arrow-left, .arrow-right {
 background:none !important; 	
@@ -18718,4 +18716,8 @@ display:none;
 } */
 /* .ad-wrapper.loaded {
   height: 100px;
+} */
+/* 
+img:not([src]):not([srcset]) {
+  visibility: hidden;
 } */

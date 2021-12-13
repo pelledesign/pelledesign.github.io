@@ -16,17 +16,80 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
+		<link rel="stylesheet" href="css/raleway2.css">		 
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/magnific.css">
+		<link rel="stylesheet" href="css/load-more-button.css">	
+		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
+		<link rel="stylesheet" href="css/splide.min.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-			
+
+		<script> <!-- start test if touch device -->	
+		function is_touch_device() {  
+		try {  
+		 document.createEvent("TouchEvent");  
+		 return true;  
+		} catch (e) {  
+		 return false;  
+		}
+		}
+		</script>		
+		
+		
 	</head>	
 	<body> 
+		<script> console.log('lazy pdf')</script>
 
-		<!-- background logo -->
+		  <div class="col-xs-12 col-xs-6-landscape vh75 dark-theme">								
+				<img class="" src="" data-src="poc/images/front.png">															
+		  </div>
 
-<div style="height:1000px; width:100%; background:red;"><p>apa</p></div>		
-		<!-- header -->
+		<!-- write scripts for mobile / desktop -->
+		<script>
+		if(is_touch_device()) {
+
+		document.write('<script src="js/lazyload.js"><\/script>');
+		document.write('<script src="js/logos.js"><\/script>');
+		document.write('<script src="js/bootstrap.min.js"><\/script>');
+		document.write('<script src="js/magnific.js"><\/script>');
+		document.write('<script src="js/load-more-button.js"><\/script>');
+		document.write('<script src="js/smoothscroll.js"><\/script>');
+		document.write('<script src="js/isInViewport.js"><\/script>');
+		document.write('<script src="js/splide.min.js"><\/script>');
+		}
+		else {
+		document.write('<script src="js/lazyload.js"><\/script>');
+		document.write('<script src="js/logos.js"><\/script>');
+		document.write('<script src="js/bootstrap.min.js"><\/script>');
+		document.write('<script src="js/magnific.js"><\/script>');
+		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
+		document.write('<script src="js/load-more-button.js"><\/script>');
+		document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
+		document.write('<script src="js/isInViewport.js"><\/script>');
+		document.write('<script src="js/splide.min.js"><\/script>');
+		document.write('<script src="js/splide-autoscroll.js"><\/script>');
+		}
+		</script>
+
+		<!-- fade in on splide lazyload (the only function that controls this) -->
+		<script>
+		$('img, iframe').each(function () {
+		var el = $(this);
+		
+
+		el.addClass('invisible');
+
+
+		});	
+		</script>
+
+		
+		<!-- verlok lazy load - don't use when owl carousel is used -->
+		<script>
+		var lazyLoadInstance = new LazyLoad({
+		});
+		</script>
 
 	</body>
 </html>	

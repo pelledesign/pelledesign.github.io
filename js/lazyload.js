@@ -21,7 +21,7 @@
             elements_selector: ".lazy",
             container: e || t ? document : null,
             //threshold: 300,
-            threshold: 800, 			//A number of pixels representing the outer distance off the scrolling area from which to start loading the elements.
+            threshold: 100, 			//A number of pixels representing the outer distance off the scrolling area from which to start loading the elements.
             thresholds: null,
             data_src: "src",
             data_srcset: "srcset",
