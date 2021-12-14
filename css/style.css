@@ -18633,15 +18633,9 @@ padding-left:5rem;
 padding-right:5rem;	
 } */
 
-.splide__slide.is-active {
+/* .splide__slide.is-active {
 background:rgb(255 255 255 / 3%);
-/* position:absolute;
-top:0;
-right:0;
-width:20px;
-height:20px;
- */
-}
+} */
 
 .splide__slide svg {
 height:100% !important;

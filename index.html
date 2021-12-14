@@ -108,7 +108,7 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('tisdag')</script>
+		<script> console.log('better lazy')</script>
 		
 		<!-- background logo -->
 		<div class="hw100 desktop-remove"><p style="color:white; user-select:none;">Pelle iDesign</p></div>		<!-- print someting to avoid fcp error -->
@@ -205,7 +205,7 @@
 		  </div>
 		</div>
 				
-		<!-- hero --> <!-- <div class="lg-up-h vh100"></div>	 --> <!-- issue width height on hero-container -->
+		<!-- hero -->
 		<div id="hero-container" class="col-full vh100">
 			<div class="row c-all hw100 m0">
 				<div class="about-splide x-theme col-lg-6 col-md-8 h100">		
@@ -310,6 +310,7 @@
 				</div> -->					
 			</div>
 		</div>								
+
 		<!-- about -->
 <!-- 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
 		<div id="about" class="portfolio-section snap x-theme relative section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
@@ -409,6 +410,7 @@
 				</div>	
 			</div>	
 		</div> -->							
+
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
 			<div class="centerscroll" id="portfolio"></div>		
@@ -429,7 +431,7 @@
 					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider touch-remove">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
-					<div id="babb" class="splide__track">
+					<div class="splide__track">
 						<ul class="splide__list">
 							<div  class="splide__slide full item x-theme bg-none ">
 								<div class="container-xl-up row m0 hw100 relative mr-auto ml-auto">						
@@ -445,8 +447,8 @@
 									</div>
 									<div class="col-lg-7 col-md-12 col-sm col-xs-12 textoverlay-desktop" style="text-align:center;">
 										<iframe 
-										class="soft-zoom" 
-										data-splide-lazy="akg/xr/akgxr.html"																			
+										class="lazy soft-zoom" 
+										data-src="akg/xr/akgxr.html"																			
 										frameborder="0"
 										scrolling="no"
 										>
@@ -467,7 +469,7 @@
 								  </div>	
 							</div> -->							
 							<div class="splide__slide item" style="width:75vh">
-								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
+								<img class="cover flipx lazy" data-src="akg/images/gallery/sketch.jpg">
 							</div>
 							<div class="splide__slide item row m0" style="width: 75vh !important;">
 								<img class="cover" data-splide-lazy="akg/images/gallery/sketch.jpg" >
@@ -740,8 +742,8 @@
 									</div>
 									<div class="col-lg-8 col-md-12 col-sm">
 										<iframe 
-										class="soft-zoom" 
-										data-splide-lazy="Converse/xr/conversexr.html"																			
+										class="lazy soft-zoom" 
+										data-src="Converse/xr/conversexr.html"																			
 										frameborder="0"
 										scrolling="no"
 										>
@@ -750,9 +752,9 @@
 								</div>
 							</div>	
 							<div class="splide__slide full item bg-none">							
-								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover " style="object-position: 100% 75%;">												
+								<img src="" data-src="Converse/images/gallery/01.png" class="lazy absolute cover " style="object-position: 100% 75%;">												
 							</div>
-							<div class="splide__slide full item bg-none textoverlay">							
+<!-- 							<div class="splide__slide full item bg-none textoverlay">							
 								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
@@ -762,7 +764,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="splide__slide full item light-theme textoverlay iframe-container">																															
 								<iframe 
 								data-splide-lazy="Converse/webgl/measurements.html"
@@ -775,7 +777,7 @@
 									<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 								</div>																															
 							</div>
-							<div class="splide__slide full item light-theme textoverlay unload iframe-container c-all">							
+<!-- 							<div class="splide__slide full item light-theme textoverlay unload iframe-container c-all">							
 								<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
 								<div class="model-controls">
 									<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
@@ -795,6 +797,31 @@
 								id="popup-iframe"
 								class="converse-wireframe-injec hide-this multiply unload"
 								data-splide-lazy="Converse/webgl/pen.html" 											
+								frameborder="0"
+								scrolling="no"
+								>	
+								</iframe>										
+							</div> -->
+							<div class="splide__slide full item light-theme textoverlay unload iframe-container c-all">							
+								<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
+								<div class="model-controls">
+									<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
+									<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
+								</div>
+								<div class="c-all view-btn overlay img-opacity bg hide-this">									
+								</div>								
+								<iframe 
+								id="showonclick"
+								class="showonclick m-h unload-no-reload"
+								data-src="Converse/webgl/rendered.html"		
+								frameborder="0"
+								scrolling="no">	 
+								</iframe>									
+								<iframe 
+								src=""
+								id="popup-iframe"
+								class="converse-wireframe-injec lazy hide-this multiply unload"
+								data-src="Converse/webgl/pen.html" 											
 								frameborder="0"
 								scrolling="no"
 								>	
@@ -1130,8 +1157,8 @@
 										<div class="col-lg-8 textoverlay">
 											<div class="hw100">								
 												<iframe 
-												class="soft-zoom" 
-												data-splide-lazy="poc/xr/pocxr.html"																				
+												class="lazy soft-zoom" 
+												data-src="poc/xr/pocxr.html"																				
 												frameborder="0"
 												scrolling="no"
 												>
@@ -1140,7 +1167,7 @@
 										</div>						
 									</div>													 
 							</div>								
-							<div class="splide__slide dark-theme "><img data-splide-lazy="poc/images/process/02.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme "><img data-src="poc/images/process/02.png" class="lazy cover" style="object-position: left;"></div>							
 							<div class="splide__slide full item dark-theme bg-none textoverlay unload">							
 								<div class="hide-on-click desktop-hidden">											
 									<div class="text-animate c-all txt-c">
@@ -1316,7 +1343,7 @@
 										<div class="item video-container hw100 relative">
 											<img src="" data-splide-lazy="spotify/images/bg.jpg" class="cover relative hidden">							
 											<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
-											  <source class="" data-splide-lazy="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+											  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
 											</video>							
 											<div id="play-video" class="dark-theme bg-none absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
 											
@@ -1370,7 +1397,7 @@
 										</div>												  						
 								  </div>	
 								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100">							
-										<img class="contain" data-splide-lazy="Bagheera/images/gallery/twisted.png">									
+										<img class="lazy contain" data-src="Bagheera/images/gallery/twisted.png">									
 							
 								  </div>
 							</div>
@@ -1597,8 +1624,8 @@
 									<iframe 
 									id=""
 									style="display:flex;"
-									class="xr-auto"																																		
-									data-splide-lazy="haglofs/xr/haglofs.html"																		
+									class="lazy xr-auto"																																		
+									data-src="haglofs/xr/haglofs.html"																		
 									frameborder="0"
 									scrolling="no"
 									>
@@ -1688,9 +1715,9 @@
 										<iframe 
 										id=""
 										style="display:flex;"
-										class="xr-auto"							
+										class="lazy xr-auto"							
 										src=""																		
-										data-splide-lazy="alcon/xr/alconxr.html"																		
+										data-src="alcon/xr/alconxr.html"																		
 										frameborder="0"
 										scrolling="no"
 										>
@@ -1832,8 +1859,8 @@
 								<div class="col-lg-6 textoverlay">
 									<div class="hw100">
 										<iframe 
-										class="soft-zoom" 
-										data-splide-lazy="Specialized/xr/specializedxr.html"																						
+										class="lazy soft-zoom" 
+										data-src="Specialized/xr/specializedxr.html"																						
 										frameborder="0"
 										scrolling="no"
 										>
@@ -1842,7 +1869,7 @@
 								</div>						
 							</div>
 							<div class="splide__slide full item">													
-								<img class="bg-black" data-splide-lazy	="Specialized/images/gallery/specialized.jpg">
+								<img class="lazy bg-black" data-src="Specialized/images/gallery/specialized.jpg">
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<h3 class="h3 txt-l"> <strong>Specialized </strong> Form Language</h3>		
@@ -3811,7 +3838,7 @@
 		   var splideDefaultOptions = 
 		  {
 			lazyLoad: 'nearby',
-			preloadPages: 2,
+			preloadPages: 0,
 			autoWidth: true,
 			rewind: true,
 			//wheel: true,
@@ -3973,7 +4000,7 @@
 		<!-- verlok lazy load - don't use when owl carousel is used -->
 		<script>
 		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('babb')
+		//container: document.getElementById('babb')
 		});
 		</script>
 
