@@ -108,10 +108,11 @@
 		</script>			
 	</head>	
 	<body> 
-		<script> console.log('lazy pdf')</script>
+		<script> console.log('tisdag')</script>
 		
 		<!-- background logo -->
 		<div class="hw100 desktop-remove"><p style="color:white; user-select:none;">Pelle iDesign</p></div>		<!-- print someting to avoid fcp error -->
+		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		<div class="p-logo-new c-absolute desktop-hidden" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	
 		
 		<!-- header -->
@@ -308,7 +309,7 @@
 					</div>	
 				</div> -->					
 			</div>
-		</div>							
+		</div>								
 		<!-- about -->
 <!-- 		<h3 class="h3 x-theme bg-none mb-0 desktop-hidden" style="font-size:1rem; padding:9px;">About</h3>
 		<div id="about" class="portfolio-section snap x-theme relative section-auto-padding lg-up-h" style="min-height: 100vh; height:auto !important;">
@@ -428,7 +429,7 @@
 					<!-- <a href="#akg-slider-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>				 -->
 				<div class="akg-splide portfolio-section  dark-theme splide-slider touch-remove">
 					<div class="section-logo akg-logo dark-theme bg-none hw100"></div>
-					<div id="akg-lazy" class="splide__track">
+					<div id="babb" class="splide__track">
 						<ul class="splide__list">
 							<div  class="splide__slide full item x-theme bg-none ">
 								<div class="container-xl-up row m0 hw100 relative mr-auto ml-auto">						
@@ -444,8 +445,8 @@
 									</div>
 									<div class="col-lg-7 col-md-12 col-sm col-xs-12 textoverlay-desktop" style="text-align:center;">
 										<iframe 
-										class="lazy soft-zoom" 
-										data-src="akg/xr/akgxr.html"																			
+										class="soft-zoom" 
+										data-splide-lazy="akg/xr/akgxr.html"																			
 										frameborder="0"
 										scrolling="no"
 										>
@@ -466,41 +467,41 @@
 								  </div>	
 							</div> -->							
 							<div class="splide__slide item" style="width:75vh">
-								<img class="cover flipx lazy" data-src="akg/images/gallery/sketch.jpg">
+								<img class="cover flipx" data-splide-lazy="akg/images/gallery/sketch.jpg">
 							</div>
 							<div class="splide__slide item row m0" style="width: 75vh !important;">
-								<img class="cover lazy" data-src="akg/images/gallery/sketch.jpg" >
+								<img class="cover" data-splide-lazy="akg/images/gallery/sketch.jpg" >
+							</div>
+							<div class="splide__slide item max-vw100" style="width: calc(75vh * (152 / 150)) !important;">
+								<img class="" data-splide-lazy="akg/images/functions.svg">
 							</div>
 							<div class="splide__slide item max-vw100" style="width: 75vh !important;">
-								<img class="lazy" data-src="akg/images/functions.svg">
-							</div>
-							<div class="splide__slide item max-vw100" style="width: 75vh !important;">
-								<img class="cover lazy" data-src="akg/images/functions2.svg">
+								<img class="cover" data-splide-lazy="akg/images/functions2.svg">
 							</div>															
 							<div class="splide__slide item max-vw100" style="width: 75vh !important;">										
 								<div class="viewer mandatory scrolldown-container show-scroll pb-0">		
 									<div class="animate scroll-down"></div>
 									<div class="slide zoomable dark-theme">
-										<img class=" lazy" src="" data-src="akg/images/gallery/01.png">
+										<img class="" src="" data-splide-lazy="akg/images/gallery/01.png">
 									</div>
 									<div class="slide zoomable dark-theme">
-										<img class=" lazy" src="" data-src="akg/images/gallery/02.png">							
+										<img class="" src="" data-splide-lazy="akg/images/gallery/02.png">							
 									</div>
 									<div class="slide zoomable dark-theme">
-										<img class=" lazy" src="" data-src="akg/images/gallery/03.png">
+										<img class="" src="" data-splide-lazy="akg/images/gallery/03.png">
 									</div>
 									<div class="slide zoomable dark-theme">
-										<img class=" lazy" src="" data-src="akg/images/gallery/04.png">
+										<img class="" src="" data-splide-lazy="akg/images/gallery/04.png">
 									</div>
 									<div class="slide zoomable dark-theme">
-										<img class=" cover lazy" src="" data-src="akg/images/gallery/05.png">
+										<img class=" cover" src="" data-splide-lazy="akg/images/gallery/05.png">
 									</div>												
 								</div>														
 							</div>	
 							<div class="splide__slide item max-vw100" style="height:100%; width:calc(75vh * (829/899)) !important">
 								<iframe 																			
-								class=" lazy"
-								data-src="akg/web/keyshot-configurator.html"													
+								class=""
+								data-splide-lazy="akg/web/keyshot-configurator.html"													
 								frameborder="0"
 								scrolling="no"
 								>			
@@ -521,11 +522,11 @@
 										
 										class="showonclick m-h unload-no-reload"
 										src="" 
-										data-src="akg/webgl/rendered.html"		
+										data-splide-lazy="akg/webgl/rendered.html"		
 										frameborder="0"
 										scrolling="no">	 
 										</iframe>
-										<img src="" data-src="akg/images/gallery/model.png" class="lazy hide-this" style="object-position: 50% 70%; position:absolute;">						
+										<img src="" data-splide-lazy="akg/images/gallery/model.png" class="hide-this" style="object-position: 50% 70%; position:absolute;">						
 									</div>	
 								</div>							
 							</div>
@@ -723,7 +724,7 @@
 				</div>	
 				<div class="converse-splide portfolio-section pop-theme splide-slider touch-remove">
 				<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%"></div>
-				  <div id="converse-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item  bg-none">
 								<div class="row m0 hw100 relative">						
@@ -739,8 +740,8 @@
 									</div>
 									<div class="col-lg-8 col-md-12 col-sm">
 										<iframe 
-										class="soft-zoom lazy" 
-										data-src="Converse/xr/conversexr.html"																			
+										class="soft-zoom" 
+										data-splide-lazy="Converse/xr/conversexr.html"																			
 										frameborder="0"
 										scrolling="no"
 										>
@@ -749,10 +750,10 @@
 								</div>
 							</div>	
 							<div class="splide__slide full item bg-none">							
-								<img src="" data-src="Converse/images/gallery/01.png" class="absolute cover lazy" style="object-position: 100% 75%;">												
+								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover " style="object-position: 100% 75%;">												
 							</div>
 							<div class="splide__slide full item bg-none textoverlay">							
-								<img src="" data-src="Converse/images/gallery/01.png" class="absolute cover lazy" style="object-position: 100% 75%;">												
+								<img src="" data-splide-lazy="Converse/images/gallery/01.png" class="absolute cover" style="object-position: 100% 75%;">												
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<div>
@@ -764,8 +765,8 @@
 							</div>
 							<div class="splide__slide full item light-theme textoverlay iframe-container">																															
 								<iframe 
-								data-src="Converse/webgl/measurements.html"
-								class="unload multiply lazy"																																						
+								data-splide-lazy="Converse/webgl/measurements.html"
+								class="unload multiply"																																						
 								frameborder="0"
 								scrolling="no">			 	 
 								</iframe>
@@ -785,15 +786,15 @@
 								<iframe 
 								id="showonclick"
 								class="showonclick m-h unload-no-reload"
-								data-src="Converse/webgl/rendered.html"		
+								data-splide-lazy="Converse/webgl/rendered.html"		
 								frameborder="0"
 								scrolling="no">	 
 								</iframe>									
 								<iframe 
 								src=""
 								id="popup-iframe"
-								class="converse-wireframe-injec lazy hide-this multiply unload"
-								data-src="Converse/webgl/pen.html" 											
+								class="converse-wireframe-injec hide-this multiply unload"
+								data-splide-lazy="Converse/webgl/pen.html" 											
 								frameborder="0"
 								scrolling="no"
 								>	
@@ -801,7 +802,7 @@
 							</div>							
 							<div class="splide__slide full item row m0 light-theme">							
 								<div class="col-lg-6 col-md-6 c-all textoverlay">
-									<img data-src="Converse/images/process/01.jpg" class="lazy invisible fade-in cover hw100" style="object-position: 100% 17%;">												
+									<img data-splide-lazy="Converse/images/process/01.jpg" class=" invisible fade-in cover hw100" style="object-position: 100% 17%;">												
 									<div class="md-up-h overlay c-all">
 										<div class="text-animate c-all txt-c">
 											<div>
@@ -824,7 +825,7 @@
 								</div>
 								<div class="xs-down-h col-lg-6 col-md-6 c-all hw100">
 									<div class="col-lg-6 textoverlay c-all padda">
-										<img data-src="Converse/images/process/04.jpg" class="cover lazy" style="object-position: 100% 17%;">												
+										<img data-splide-lazy="Converse/images/process/04.jpg" class="cover" style="object-position: 100% 17%;">												
 										<div class="overlay c-all">
 											<div class="text-animate c-all">
 												<div>
@@ -837,7 +838,7 @@
 									<div class="col-lg-6 md-down-h c-all">
 										<div class="row m0 h100">
 											<div class="padda col-lg-12 textoverlay h50">
-												<img data-src="Converse/images/process/03.png" class="lazy bg-offwhite">												
+												<img data-splide-lazy="Converse/images/process/03.png" class="bg-offwhite">												
 												<div class="overlay c-all">
 													<div class="text-animate c-all">
 														<div>
@@ -849,7 +850,7 @@
 											</div>
 											<div class="padda col-lg-12 textoverlay h50">											
 												<div class="bg-offwhite h100">
-													<img data-src="Converse/images/process/bag.jpg" class="lazy multiply">	
+													<img data-splide-lazy="Converse/images/process/bag.jpg" class="multiply">	
 												</div>										
 												<div class="overlay c-all">
 													<div class="text-animate c-all">
@@ -869,7 +870,7 @@
 									<div class="col-lg-6 c-all">
 										<div class="row m0 hw100">
 											<div class="padda col-lg-12 textoverlay h50">
-												<img data-src="Converse/images/moodboard/coke.jpg" class="lazy cover bg-offwhite" style="object-position: 50% 33%;">												
+												<img data-splide-lazy="Converse/images/moodboard/coke.jpg" class=" cover bg-offwhite" style="object-position: 50% 33%;">												
 												<div class="overlay c-all">
 													<div class="col-lg-10 text-animate c-all">
 														<div>
@@ -881,7 +882,7 @@
 												</div>
 											</div>
 											<div class="padda col-lg-12 textoverlay dark-theme h50">											
-												<img data-src="Converse/images/moodboard/snakeskin.jpg" class="lazy cover">												
+												<img data-splide-lazy="Converse/images/moodboard/snakeskin.jpg" class=" cover">												
 												<div class="overlay c-all">
 													<div class="col-lg-10 text-animate c-all">
 														<div>
@@ -897,7 +898,7 @@
 									<div class="col-lg-6 c-all">
 										<div class="row m0 hw100">
 											<div class="padda col-lg-12 textoverlay dark-theme h50">
-												<img data-src="Converse/images/moodboard/bbq.jpg" class="lazy cover bg-black">												
+												<img data-splide-lazy="Converse/images/moodboard/bbq.jpg" class=" cover bg-black">												
 												<div class="overlay c-all">
 													<div class="col-lg-10 text-animate c-all">
 														<div>
@@ -909,7 +910,7 @@
 											</div>
 											<div class="padda col-lg-12 textoverlay dark-theme h50">											
 												<div class="hw100">
-													<img data-src="Converse/images/moodboard/swamp.jpg" class="lazy cover">	
+													<img data-splide-lazy="Converse/images/moodboard/swamp.jpg" class=" cover">	
 												</div>										
 												<div class="overlay c-all">
 													<div class="col-lg-10 text-animate c-all">
@@ -926,7 +927,7 @@
 								<div class="md-down-h padda col-lg-6 c-all textoverlay">
 									<div class="desktop-hidden"></div>
 									<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
-									<img data-src="Converse/images/moodboard/cotton.jpg" class="lazy cover" style="object-position: 100% 17%;">												
+									<img data-splide-lazy="Converse/images/moodboard/cotton.jpg" class=" cover" style="object-position: 100% 17%;">												
 									<div class="dark-theme overlay c-all">
 										<div class="text-animate c-all txt-c">
 											<div>
@@ -939,7 +940,7 @@
 								</div>										
 							</div>
 							<div class="splide__slide full item row m0 light-theme textoverlay c-all">							
-								<img data-src="Converse/images/process/sketch01.jpg" class="lazy cover">	
+								<img data-splide-lazy="Converse/images/process/sketch01.jpg" class=" cover">	
 								<div class="overlay">
 									<div class="text-animate c-all">
 										<div>
@@ -954,8 +955,8 @@
 									<div class="h100">
 										<div class="iframe-container textoverlay-desktop">															
 											<iframe 
-											data-src="Converse/webgl/spherebuild.html"
-											class="lazy unload"					
+											data-splide-lazy="Converse/webgl/spherebuild.html"
+											class="unload"					
 											frameborder="0"
 											scrolling="no">			 	 
 											</iframe>
@@ -969,7 +970,7 @@
 									</div>	
 								</div>	
 								<div class="col-lg-6 textoverlay c-all hw100">
-									<img data-src="Converse/images/process/head_square.jpg" class="lazy cover absolute" style="object-position:0% 75%">						
+									<img data-splide-lazy="Converse/images/process/head_square.jpg" class="cover absolute" style="object-position:0% 75%">						
 									<div class="overlay c-all">
 										<div class="col-lg-6 text-animate h-auto">
 											<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
@@ -982,8 +983,8 @@
 							<div class="splide__slide full item row m0 dark-theme ">							
 								<iframe 
 								id="popup-iframe"
-								class="lazy ks-config"
-								data-src="Converse/web/keyshot-configurator-alternate.html" 							
+								class="ks-config"
+								data-splide-lazy="Converse/web/keyshot-configurator-alternate.html" 							
 								frameborder="0"
 								scrolling="no"
 								>
@@ -1112,7 +1113,7 @@
 				</div>
 				<div class="poc-splide portfolio-section dark-theme splide-slider touch-remove">
 					<div class="section-logo poc-logo dark-theme bg-none hw100"></div>
-					<div id="poc-lazy" class="splide__track">
+					<div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full dark-theme bg-none">																		
 									<div class="row m0 h100">	
@@ -1129,8 +1130,8 @@
 										<div class="col-lg-8 textoverlay">
 											<div class="hw100">								
 												<iframe 
-												class="lazy soft-zoom" 
-												data-src="poc/xr/pocxr.html"																				
+												class="soft-zoom" 
+												data-splide-lazy="poc/xr/pocxr.html"																				
 												frameborder="0"
 												scrolling="no"
 												>
@@ -1139,7 +1140,7 @@
 										</div>						
 									</div>													 
 							</div>								
-							<div class="splide__slide full dark-theme "><img data-src="poc/images/process/02.png" class="cover lazy" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme "><img data-splide-lazy="poc/images/process/02.png" class="cover" style="object-position: left;"></div>							
 							<div class="splide__slide full item dark-theme bg-none textoverlay unload">							
 								<div class="hide-on-click desktop-hidden">											
 									<div class="text-animate c-all txt-c">
@@ -1157,8 +1158,8 @@
 											<div class="hw100">
 												<div class="iframe-container textoverlay" style="background:#fff;">														
 													<iframe 
-													data-src="poc/webgl/pen.html"
-													class="lazy unload difference"																																						
+													data-splide-lazy="poc/webgl/pen.html"
+													class="unload difference"																																						
 													frameborder="0"
 													scrolling="no">			 	 
 													</iframe>
@@ -1173,16 +1174,16 @@
 									</div>
 								</div>
 							</div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/03.png" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/04.png" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/05.png" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/06.png" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/07.png" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/svg/03_square.svg" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/svg/06_square.svg" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/svg/07_square.svg" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/svg/08_square.svg" class="lazy cover" style="object-position: left;"></div>							
-							<div class="splide__slide full dark-theme"><img data-src="poc/images/process/svg/09_square.svg" class="lazy cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/03.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/04.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/05.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/06.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/07.png" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/svg/03_square.svg" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/svg/06_square.svg" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/svg/07_square.svg" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/svg/08_square.svg" class="cover" style="object-position: left;"></div>							
+							<div class="splide__slide dark-theme"><img data-splide-lazy="poc/images/process/svg/09_square.svg" class="cover" style="object-position: left;"></div>							
 							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
 								<div class="item  h100 c-all">			
 								  <div class="col-lg-7">
@@ -1198,7 +1199,7 @@
 						<div class="my-slider-progress-bar"></div>
 					</div>	
 				</div>							
-				<div class="portfolio-section desktop-hidden">					
+				<div class="portfolio-section">					
 
 					<div class="section-hero x-theme">
 						<div class="section-hero-container dark-theme">	
@@ -1215,7 +1216,7 @@
 						  </div>
 						</div>								  
 					</div>					
-					<div id="grid" class="item row m0 h100 relative x-theme">				
+					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">				
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1297,7 +1298,7 @@
 				</div>		
 				<div class="portfolio-section spotify-splide medium-theme">
 					<div class="section-logo spotify-logo dark-theme bg-none hw100" style="height:75%"></div>
-				  <div id="spotify-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item medium-theme">
 								<div class="row m0 h100">	
@@ -1313,9 +1314,9 @@
 									</div>					
 									<div class="col-lg-8">
 										<div class="item video-container hw100 relative">
-											<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
+											<img src="" data-splide-lazy="spotify/images/bg.jpg" class="cover relative hidden">							
 											<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait multiply" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
-											  <source class="lazy" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+											  <source class="" data-splide-lazy="spotify/animations/renamed_m4v_to_mp4.mp4"/>
 											</video>							
 											<div id="play-video" class="dark-theme bg-none absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
 											
@@ -1355,7 +1356,7 @@
 				</div>
 				<div class="bagheera-splide portfolio-section medium-theme splide-slider touch-remove">
 					<div class="section-logo bagheera-logo light-theme bg-none hw100" style="height:75%"></div>
-				  <div id="bagheera-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item row m0">
 									<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
@@ -1369,7 +1370,7 @@
 										</div>												  						
 								  </div>	
 								  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100">							
-										<img class="contain lazy" data-src="Bagheera/images/gallery/twisted.png">									
+										<img class="contain" data-splide-lazy="Bagheera/images/gallery/twisted.png">									
 							
 								  </div>
 							</div>
@@ -1388,19 +1389,19 @@
 							<div class="splide__slide full item row m0">
 								<div class="col-lg-6 h100">
 									<div class="col-lg-12 textoverlay-desktop light-theme zoomable">								
-										<img data-src="Bagheera/images/gallery/twisted.png" class="lazy cover">						
+										<img data-splide-lazy="Bagheera/images/gallery/twisted.png" class="cover">						
 									</div>								
 								</div>	
 								<div class="col-lg-6 md-down-h h100">
 									<div id="outer">
 									  <div id="inner_fixed">
 											<div class="col-lg-12 textoverlay light-theme zoomable">		
-													<img data-src="Bagheera/images/gallery/top.png" class="lazy cover">		
+													<img data-splide-lazy="Bagheera/images/gallery/top.png" class="cover">		
 											</div>
 									  </div>
 									  <div id="inner_remaining" class="pt-0">
 											<div class="col-lg-12 textoverlay light-theme zoomable">		
-													<img data-src="Bagheera/images/gallery/blue.jpg" class="lazy cover">		
+													<img data-splide-lazy="Bagheera/images/gallery/blue.jpg" class="cover">		
 											</div>
 									  </div>
 									</div>					  						
@@ -1409,7 +1410,7 @@
 							<div class="splide__slide splide-height item row m0">
 								<div class="textoverlay">
 									<div class="light-theme">
-										<img data-src="Bagheera/images/process/01_square_black.svg" class="lazy">
+										<img data-splide-lazy="Bagheera/images/process/01_square_black.svg">
 										<div class="light-theme overlay c-all">
 											<div class="ppp">
 											<h3 class="h3">DESIGN <strong>PROCESS </strong></h3>
@@ -1422,7 +1423,7 @@
 								</div>									  						
 							</div>	
 							<div class="splide__slide splide-height item row m0 textoverlay">
-								<img data-src="Bagheera/images/process/03_square1.png" class="lazy">
+								<img data-splide-lazy="Bagheera/images/process/03_square1.png" >
 								<div class="overlay c-all">
 									<div class="ppp">
 								<h3 class="h3">3D <strong>MODEL </strong></h3>
@@ -1432,7 +1433,7 @@
 							</div>
 							<div class="splide__slide splide-height item row m0 textoverlay">
 								<div class="light-theme c-all">
-									<img data-src="Bagheera/images/process/06.png" class="lazy">
+									<img data-splide-lazy="Bagheera/images/process/06.png">
 									<div class="overlay c-all">
 										<div class="ppp">
 									<h3 class="h3">CMF <strong> </strong></h3>
@@ -1442,7 +1443,7 @@
 								</div>															  						
 							</div>
 							<div class="splide__slide splide-height item textoverlay dark-theme">
-										<img data-src="Bagheera/images/process/02_square.svg" class="lazy">
+										<img data-splide-lazy="Bagheera/images/process/02_square.svg">
 										<div class="dark-theme overlay c-all">
 											<div class="ppp">
 										<h3 class="h3">PATTERN <strong>MAKING </strong></h3>
@@ -1451,7 +1452,7 @@
 										</div>																				  						
 							</div>	
 							<div class="splide__slide splide-height item textoverlay dark-theme">						
-								<img data-src="Bagheera/images/process/06.png" class="lazy">
+								<img data-splide-lazy="Bagheera/images/process/06.png">
 								<div class="overlay c-all">
 									<div class="ppp">
 								<h3 class="h3">CMF <strong> </strong></h3>
@@ -1578,7 +1579,7 @@
 				</div>
 				<div class="haglofs-splide portfolio-section haglofs-splide dark-theme splide-slider touch-remove">
 					<div class="section-logo haglofs-logo dark-theme bg-none hw100" style="height:75%"></div>
-				  <div id="haglofs-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item row m0">													
 								<div class="col-lg-4 col-sm">
@@ -1596,8 +1597,8 @@
 									<iframe 
 									id=""
 									style="display:flex;"
-									class="xr-auto lazy"																																		
-									data-src="haglofs/xr/haglofs.html"																		
+									class="xr-auto"																																		
+									data-splide-lazy="haglofs/xr/haglofs.html"																		
 									frameborder="0"
 									scrolling="no"
 									>
@@ -1680,16 +1681,16 @@
 					</div>
 				</div>
 				<div class="alcon-splide portfolio-section dark-theme splide-slider touch-remove">
-				  <div id="alcon-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item row m0 dark-theme">													
 								  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100">								
 										<iframe 
 										id=""
 										style="display:flex;"
-										class="xr-auto lazy"							
+										class="xr-auto"							
 										src=""																		
-										data-src="alcon/xr/alconxr.html"																		
+										data-splide-lazy="alcon/xr/alconxr.html"																		
 										frameborder="0"
 										scrolling="no"
 										>
@@ -1705,9 +1706,12 @@
 								  </div>							
 							</div>	
 							<div class="splide__slide full item light-theme iframe-container">																															
+							<p>add slide</p>
+							</div>
+							<div class="splide__slide full item light-theme iframe-container">																															
 								<iframe 
-								data-src="alcon/webgl/rendered.html"
-								class="lazy unload multiply"																																						
+								data-splide-lazy="alcon/webgl/rendered.html"
+								class="unload multiply"																																						
 								frameborder="0"
 								scrolling="no">			 	 
 								</iframe>
@@ -1814,7 +1818,7 @@
 				</div>
 				<div class="specialized-splide portfolio-section pop-theme splide-slider touch-remove">
 					<div class="section-logo specialized-logo light-theme bg-none hw100" style="height:75%"></div>
-				  <div id="specialized-lazy" class="splide__track">
+				  <div class="splide__track">
 						<ul class="splide__list">
 							<div class="splide__slide full item row m0">													
 								<div class="col-lg-6 c-all txt-l">
@@ -1828,8 +1832,8 @@
 								<div class="col-lg-6 textoverlay">
 									<div class="hw100">
 										<iframe 
-										class="lazy soft-zoom" 
-										data-src="Specialized/xr/specializedxr.html"																						
+										class="soft-zoom" 
+										data-splide-lazy="Specialized/xr/specializedxr.html"																						
 										frameborder="0"
 										scrolling="no"
 										>
@@ -1838,7 +1842,7 @@
 								</div>						
 							</div>
 							<div class="splide__slide full item">													
-								<img class="bg-black lazy" data-src="Specialized/images/gallery/specialized.jpg">
+								<img class="bg-black" data-splide-lazy	="Specialized/images/gallery/specialized.jpg">
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<h3 class="h3 txt-l"> <strong>Specialized </strong> Form Language</h3>		
@@ -1847,25 +1851,34 @@
 							</div>	
 							<div class="splide__slide full item row m0">													
 							  <div class="col-lg-6 h100 pr-0 dark-theme zoomable">										
-										<img data-src="Specialized/images/gallery/twisted.png" class="lazy cover">												
+										<img data-splide-lazy="Specialized/images/gallery/twisted.png" class=" cover">												
 							  </div>
 								<div class="col-lg-6 m0 md-down-h h100">
 								<div id="outer">
 								  <div id="inner_fixed">
 										<div class="col-lg-12 dark-theme zoomable">
-											<img data-src="Specialized/images/gallery/shield.png" class="lazy cover">							
+											<img data-splide-lazy="Specialized/images/gallery/shield.png" class=" cover">							
 										</div>
 								  </div>
 								  <div id="inner_remaining">
 										<div class="col-lg-12 zoomable dark-theme pt-0">
-											<img data-src="Specialized/images/gallery/logos.png" class="lazy cover">								
+											<img data-splide-lazy="Specialized/images/gallery/logos.png" class=" cover">								
 										</div>
 								  </div>
 								</div>					  						
 							  </div>				
 							</div>
-							<div class="splide__slide full item row m0 pop-theme">													
-						
+							<div class="splide__slide full item row m0">													
+								<div class="row md-down-h">
+									<div class="col-12 flex">
+										<div class="col-lg-6">
+										 <h3 class="h3 txt-l s-t m-h"><strong>3d Model</strong></h3>
+										</div>	
+										<div class="col-lg-6">  
+										 <h3 class="h3 txt-r s-t"><strong>Converse </strong>Eyewear</h3>
+										</div>
+									</div>
+								</div>						
 								<div class="iframe-container c-all textoverlay-inverse relative">
 									<span class="show-shaded btn btn-outline hide-this">Load 3d</span>	
 									<div class="model-controls no-bg">
@@ -1874,16 +1887,16 @@
 									</div>						
 									<iframe 
 									id="showonclick"
-									class="showonclick m-h unload multiply"
+									class="showonclick m-h unload"
 									src="" 
-									data-src="Specialized/webgl/rendered.html"		
+									data-splide-lazy="Specialized/webgl/rendered.html"		
 									frameborder="0"
 									scrolling="no">	 
 									</iframe>
-									<img src="" data-src="Specialized/images/gallery/wire.png" class="lazy hide-this absolute multiply" style="object-position: 50% 70%;">						
+									<img src="" data-splide-lazy="Specialized/images/gallery/wire.png" class="hide-this absolute" style="object-position: 50% 70%;">						
 								</div>					
 							</div>							
-							<div class="splide__slide item light-theme bg-none w100 ignore" style="width:100% !important;">
+							<div class="splide__slide item dark-theme w100 ignore" style="width:100% !important;">
 								<div class="item  h100 c-all">			
 								  <div class="col-lg-7">
 									 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
@@ -3722,8 +3735,7 @@
 	});	
 				
 		</script>
-
-			
+				
 		<!-- write scripts for mobile / desktop -->
 		<script>
 		if(is_touch_device()) {
@@ -3752,21 +3764,19 @@
 		</script>
 
 		<!-- fade in on splide lazyload (the only function that controls this) -->
-<!-- 		<script>
+		<script>
 		$('img, iframe').each(function () {
 		var el = $(this);
 		
-		//if(el.is('[data-splide-lazy]') || el.hasClass('lazy')) {
+		if(el.is('[data-splide-lazy]') || el.hasClass('lazy')) {
 		el.addClass('invisible');
 		el.on('load',function(){
 		console.log('loaded');
 		el.removeClass('invisible').addClass('fadeIn element-animated'); 
 		});
-		//}
+		}
 		});	
-		</script> -->
-
-
+		</script>
 		
 <!-- 		<script>
 		$('img, iframe').each(function () {
@@ -3801,7 +3811,7 @@
 		   var splideDefaultOptions = 
 		  {
 			lazyLoad: 'nearby',
-			preloadPages: 0,
+			preloadPages: 2,
 			autoWidth: true,
 			rewind: true,
 			//wheel: true,
@@ -3872,7 +3882,7 @@
 			lastVisited = thisIndex;
 			var thisIframe = splideId.find('.is-active').find('iframe');
 			if (thisIframe.hasClass('unloaded')) {
-			var thisDataSplideSrc = thisIframe.attr('data-src');
+			var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
 			console.log(thisDataSplideSrc);
 			thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
 			}	
@@ -3880,7 +3890,7 @@
 			else if (splideId.find('.last-visited').find('iframe').hasClass('unload')) {			
 			var thisSrc = splideId.find('.last-visited').find('iframe').attr('src');
 			console.log('last slide has class unload and its src is: ', thisSrc);
-			splideId.find('.last-visited').find('iframe').attr('src','').attr('data-src', thisSrc).removeClass('unload').addClass('unloaded');
+			splideId.find('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
 			}	
 			});
 					
@@ -3891,6 +3901,7 @@
 		for (var j = 0; j < splides.length; j++) {
 		  funcs[j]();
 		}
+
 
 			/* menu splide control */
 			let aboutSplide = new Splide( '.about-splide', {
@@ -3908,21 +3919,7 @@
 					aboutSplide.go(2);
 				});			
 			} );
-			aboutSplide.mount();	
-
-			/* hero splide */
-			let heroSplide = new Splide( '.hero-splide', {
-			//lazyLoad: true,
-			arrows: false,
-			pagination: false,
-			autoPlay: true,
-			type: 'loop',
-			rewind: false,
-			waitForTransition: false,
-			} );				
-
-			heroSplide.mount();	
-	
+			aboutSplide.mount();		
 
 		<!-- reviews splide slider -->
 		if(is_touch_device()) {
@@ -3974,50 +3971,14 @@
 
 		
 		<!-- verlok lazy load - don't use when owl carousel is used -->
-		
 		<script>
 		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('akg-lazy')
+		container: document.getElementById('babb')
 		});
 		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('converse-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('poc-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('spotify-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('bagheera-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('haglofs-lazy')
-		});
-		</script>		
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('alcon-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		container: document.getElementById('specialized-lazy')
-		});
-		</script>
-		<script>
-		var lazyLoadInstance = new LazyLoad({
 
+		<script>
+		var lazyLoadInstance = new LazyLoad({
 		});
 		</script>
 		
