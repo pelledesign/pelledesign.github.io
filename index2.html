@@ -40,13 +40,36 @@
 			
 	</head>	
 	<body> 
-    <div id="my-keen-slider" class="keen-slider" style="max-width: 100vw; background: rgb(249, 190, 91); height:75vh;">
+    <div id="converse" class="keen-slider pop-theme" style="max-width: 100vw; height:75vh;">
 	 <div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.3"></div>
 	 
+      <div class="keen-slider__slide" style="min-width: 100%; max-width: 100%">
+			<div class="row m0 hw100 relative">						
+				<div class="col-lg-4 ml-auto c-all">
+					<div class="text-box">
+						<h2 class="mb-4 s-t" style="color:#8d2720">Converse <strong>Suburban</strong></h2>
+						<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+						</p>		  
+						<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
+						</p>
+						<p><strong>Swipe Model to Rotate</strong></p>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-12 col-sm">
+					<iframe 
+					class="lazy soft-zoom" 
+					data-src="Converse/xr/conversexr.html"																			
+					frameborder="0"
+					scrolling="no"
+					>
+					</iframe>						
+				</div>			
+			</div>
+</div>
       <div class="keen-slider__slide multiply" style="min-width: 100%; max-width: 100%">
 			<img data-src="Converse/images/process/sketch01.jpg" class="lazy cover" style="">
       </div>
-      <div class="keen-slider__slide multiply" style="min-width: 100%; max-width: 100%">
+      <div class="keen-slider__slide multiply" style="min-width: 75vh; max-width: 75vh;">
 			<img data-src="akg/images/gallery/sketch_white.jpg" class="lazy cover" style="">
       </div>
       <div class="keen-slider__slide" style="min-width: 100%; max-width: 100%">
@@ -331,6 +354,8 @@ function navigation(slider) {
     })
   }
 
+
+
   slider.on("created", () => {
     markup()
     updateClasses()
@@ -349,12 +374,77 @@ function navigation(slider) {
   })
 }
 
-var slider = new KeenSlider("#my-keen-slider", {
+      function WheelControls(slider) {
+        var touchTimeout
+        var position
+        var wheelActive
+
+        function dispatch(e, name) {
+          position.x -= e.deltaX
+          position.y -= e.deltaY
+          slider.container.dispatchEvent(
+            new CustomEvent(name, {
+              detail: {
+                x: position.x,
+                y: position.y,
+              },
+            })
+          )
+        }
+
+        function wheelStart(e) {
+          position = {
+            x: e.pageX,
+            y: e.pageY,
+          }
+          dispatch(e, "ksDragStart")
+        }
+
+        function wheel(e) {
+          dispatch(e, "ksDrag")
+        }
+
+        function wheelEnd(e) {
+          dispatch(e, "ksDragEnd")
+        }
+
+        function eventWheel(e) {
+          e.preventDefault()
+          if (!wheelActive) {
+            wheelStart(e)
+            wheelActive = true
+          }
+          wheel(e)
+          clearTimeout(touchTimeout)
+          touchTimeout = setTimeout(() => {
+            wheelActive = false
+            wheelEnd(e)
+          }, 50)
+        }
+
+        slider.on("created", () => {
+          slider.container.addEventListener("wheel", eventWheel, {
+            passive: false,
+          })
+        })
+      }
+
+var slider = new KeenSlider("#converse", {
         loop: true,
         mode: "free",
         rtl: false,
         slides: { perView: "auto" },
-}, [navigation])
+}, [navigation, WheelControls])
+
+slider.on('slideChanged', function(){
+console.log('dd');
+var apa = slider.container;
+console.log(apa);
+});
+
+
+$('.arrow--left').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
+$('.arrow--right').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
     </script>
 <!--     <script>
       var slider = new KeenSlider("#my-keen-slider", {
@@ -400,126 +490,7 @@ var slider = new KeenSlider("#my-keen-slider", {
 		});
 		});			
 		</script>	 -->	
-		<script>
-	var slider = document.getElementById('slider'),
-    sliderItems = document.getElementById('items'),
-    prev = document.getElementById('prev'),
-    next = document.getElementById('next');
 
-slide(slider, sliderItems, prev, next);
-
-function slide(wrapper, items, prev, next) {
-  var posX1 = 0,
-      posX2 = 0,
-      posInitial,
-      posFinal,
-      threshold = 100,
-      slides = items.getElementsByClassName('slide'),
-      slidesLength = slides.length,
-      slideSize = items.getElementsByClassName('slide')[0].offsetWidth,
-      firstSlide = slides[0],
-      lastSlide = slides[slidesLength - 1],
-      cloneFirst = firstSlide.cloneNode(true),
-      cloneLast = lastSlide.cloneNode(true),
-      index = 0,
-      allowShift = true;
-  
-  // Clone first and last slide
-  items.appendChild(cloneFirst);
-  items.insertBefore(cloneLast, firstSlide);
-  wrapper.classList.add('loaded');
-  
-  // Mouse and Touch events
-  items.onmousedown = dragStart;
-  
-  // Touch events
-  items.addEventListener('touchstart', dragStart);
-  items.addEventListener('touchend', dragEnd);
-  items.addEventListener('touchmove', dragAction);
-  
-  // Click events
-  prev.addEventListener('click', function () { shiftSlide(-1) });
-  next.addEventListener('click', function () { shiftSlide(1) });
-  
-  // Transition events
-  items.addEventListener('transitionend', checkIndex);
-  
-  function dragStart (e) {
-    e = e || window.event;
-    e.preventDefault();
-    posInitial = items.offsetLeft;
-    
-    if (e.type == 'touchstart') {
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX1 = e.clientX;
-      document.onmouseup = dragEnd;
-      document.onmousemove = dragAction;
-    }
-  }
-
-  function dragAction (e) {
-    e = e || window.event;
-    
-    if (e.type == 'touchmove') {
-      posX2 = posX1 - e.touches[0].clientX;
-      posX1 = e.touches[0].clientX;
-    } else {
-      posX2 = posX1 - e.clientX;
-      posX1 = e.clientX;
-    }
-    items.style.left = (items.offsetLeft - posX2) + "px";
-  }
-  
-  function dragEnd (e) {
-    posFinal = items.offsetLeft;
-    if (posFinal - posInitial < -threshold) {
-      shiftSlide(1, 'drag');
-    } else if (posFinal - posInitial > threshold) {
-      shiftSlide(-1, 'drag');
-    } else {
-      items.style.left = (posInitial) + "px";
-    }
-
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-  
-  function shiftSlide(dir, action) {
-    items.classList.add('shifting');
-    
-    if (allowShift) {
-      if (!action) { posInitial = items.offsetLeft; }
-
-      if (dir == 1) {
-        items.style.left = (posInitial - slideSize) + "px";
-        index++;      
-      } else if (dir == -1) {
-        items.style.left = (posInitial + slideSize) + "px";
-        index--;      
-      }
-    };
-    
-    allowShift = false;
-  }
-    
-  function checkIndex (){
-    items.classList.remove('shifting');
-
-    if (index == -1) {
-      items.style.left = -(slidesLength * slideSize) + "px";
-      index = slidesLength - 1;
-    }
-
-    if (index == slidesLength) {
-      items.style.left = -(1 * slideSize) + "px";
-      index = 0;
-    }
-    
-    allowShift = true;
-  }
-}	
-		</script>
 		<!-- splide -->
 		<script>
 		

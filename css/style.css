@@ -18305,7 +18305,7 @@ z-index:3;
 background: #212121;
 }
 
-#converse .pop-theme {
+#converse .pop-theme, #converse.pop-theme {
 background-color: var(--converse-pop-theme-bg);	
 }
 
@@ -18794,7 +18794,7 @@ max-width:500px !important;
     position: absolute;
 	 background:red;
 align-items: center;
-    background: #ccc;
+    background: #212121;
     border: 0;
     border-radius: 50%;
     cursor: pointer;
@@ -18821,6 +18821,12 @@ align-items: center;
     right: 0;
 	 }
 	 
+	 .arrow svg {
+fill:#fff;
+padding: 21%;
+	 }
+	 
 .navigation-wrapper {
 position:relative;	
 }
+
