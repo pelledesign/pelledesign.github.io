@@ -18313,7 +18313,7 @@ background-color: var(--converse-pop-theme-bg);
 color: var(--converse-pop-theme-text) !important;	
 }
 
-#converse .pop-theme svg {
+#converse .pop-theme .section-logo svg, #converse.pop-theme .section-logo svg {
 fill: var(--converse-pop-theme-text) !important;	
 }
 
