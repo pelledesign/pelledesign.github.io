@@ -18813,14 +18813,16 @@ align-items: center;
 	 }
 	 
 	.arrow.arrow--left {
-
-    left: 0;
+transform: scaleX(-1);
+    left: 0.5em;
 	 }
 	 .arrow.arrow--right {
 
-    right: 0;
+    right: 0.5em;
 	 }
-	 
+/* .arrow--disabled {
+opacity:0;	
+} */	 
 	 .arrow svg {
 fill:#fff;
 padding: 21%;
