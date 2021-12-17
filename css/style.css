@@ -17141,7 +17141,7 @@ background: linear-gradient(217deg, rgba(193,193,193,.8), rgba(255,0,0,0) 70.71%
   scroll-snap-type: y mandatory;
 }
 
-.slide:not(#poc-process-popup .slide):not(#spotify-process-popup .slide) {
+.css-slide:not(#poc-process-popup .css-slide):not(#spotify-process-popup .css-slide) {
 position:relative;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
@@ -17153,7 +17153,7 @@ position:relative;
   scroll-snap-stop: normal;
 } */
 
-.slide.snap-desktop {
+.css-slide.snap-desktop {
 position:relative;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
