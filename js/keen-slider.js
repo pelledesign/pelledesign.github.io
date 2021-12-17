@@ -732,7 +732,7 @@
 								var a = i.options.defaultAnimation;
 								i.animator.start([{
 									distance: r,
-									duration: f(e || a, "duration", 500),
+									duration: f(e || a, "duration", 1000),
 									easing: f(e || a, "easing", (function(n) {
 										return 1 + --n * n * n * n * n
 									}))
