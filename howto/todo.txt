@@ -7,7 +7,7 @@ function mobile (
 )
 
 function both (
-
+choppy transition anmatio due to lazy load of iframes
 photo style as in bookmark
 swipe body up down xr?
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
