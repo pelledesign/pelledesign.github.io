@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
 		<link rel="stylesheet" href="css/splide.min.css">
+		<link rel="stylesheet" href="css/keen-slider.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
@@ -724,7 +725,275 @@
 						</div>
 					</div>		
 				</div>	
-				<div class="converse-splide portfolio-section pop-theme splide-slider touch-remove">
+				<div class="keen-slider pop-theme" style="max-width: 100vw; height:75vh; overflow: visible;">
+					<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
+					<div class="slide" style="min-width: 100%; max-width: 100%">
+						<div class="row m0 hw100 relative">						
+							<div class="col-lg-4 ml-auto c-all">
+								<div class="text-box">
+									<h2 class="mb-4 s-t" style="color:#8d2720">Converse <strong>Suburban</strong></h2>
+									<p>Spherical shades designed with industry standard methods for optics and with accurate anatomical measurements.<br>
+									</p>		  
+									<p>My task was to analyze the brand's form language and create a product not already in the their arsenal, using southern suburban U.S as a contrasting theme to Converse's expression.		  
+									</p>
+									<p><strong>Swipe Model to Rotate</strong></p>
+								</div>
+							</div>
+							<div class="col-lg-8 col-md-12 col-sm">
+								<iframe 
+								class="lazy soft-zoom" 
+								data-src="Converse/xr/conversexr.html"																			
+								frameborder="0"
+								scrolling="no"
+								>
+								</iframe>						
+							</div>			
+						</div>
+					</div>
+					<div class="slide" style="min-width: 100%; max-width: 100%">
+						<img src="" data-src="Converse/images/gallery/01.png" class="lazy absolute cover " style="object-position: 100% 75%;">
+					</div>
+					<div class="slide iframe multiply" style="min-width: 100%; max-width: 100%">
+						<iframe 
+						data-src="Converse/webgl/measurements.html"
+						class="lazy unload multiply"																																						
+						frameborder="0"
+						scrolling="no">			 	 
+						</iframe>
+						<div class="ignore model-controls">
+							<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
+							<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+						</div>	
+					</div>	
+					<div class="slide iframe multiply textoverlay unload iframe-container" style="min-width: 100%; max-width: 100%">
+						<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
+						<div class="model-controls">
+							<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
+							<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
+						</div>
+						<div class="c-all view-btn overlay img-opacity bg hide-this">									
+						</div>								
+						<iframe 
+						id="showonclick"
+						class="showonclick m-h unload-no-reload"
+						data-src="Converse/webgl/rendered.html"		
+						frameborder="0"
+						scrolling="no">	 
+						</iframe>									
+						<iframe 
+						src=""
+						id="popup-iframe"
+						class="converse-wireframe-injec lazy hide-this multiply unload"
+						data-src="Converse/webgl/pen.html" 											
+						frameborder="0"
+						scrolling="no"
+						>	
+						</iframe>	
+					</div>
+					<div class="slide row m0 light-theme" style="min-width: 100%; max-width: 100%">
+						<div class="col-lg-6 col-md-6 c-all textoverlay">
+							<img data-src="Converse/images/process/01.jpg" class="lazy invisible fade-in cover hw100" style="object-position: 100% 17%;">												
+							<div class="md-up-h overlay c-all">
+								<div class="text-animate c-all txt-c">
+									<div>
+										<h3 class="h3">Brand <strong>Breakdown </strong></h3>
+										<p>Converse draws inspiration from the street & creative cultures</p>
+										<p>The brand radiates a relaxed attitude</p>
+										<p>Forms are built from lazy curves and simple geometrical shapes </p>
+										<p>Geometrical shapes & minimalism</p>
+									</div>
+								</div>
+							</div>
+							<div class="xs-down-h overlay c-all">
+								<div class="text-animate c-all txt-c">
+									<div>
+										<h3 class="h3">Relaxed <strong>Attitude </strong></h3>
+										<p>The brand radiates a relaxed attitude</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="xs-down-h col-lg-6 col-md-6 c-all hw100">
+							<div class="col-lg-6 textoverlay c-all padda">
+								<img data-src="Converse/images/process/04.jpg" class="lazy cover" style="object-position: 100% 17%;">												
+								<div class="overlay c-all">
+									<div class="text-animate c-all">
+										<div>
+											<h3 class="h3">Edgy & <strong>Artsy </strong></h3>
+											<p class="txt-c">Converse draws inspiration from the street & creative cultures</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 md-down-h c-all">
+								<div class="row m0 h100">
+									<div class="padda col-lg-12 textoverlay h50">
+										<img data-src="Converse/images/process/03.png" class="lazy bg-offwhite">												
+										<div class="overlay c-all">
+											<div class="text-animate c-all">
+												<div>
+													<h3 class="h3">Simple & <strong>Lazy </strong></h3>
+												<p class="txt-c">Forms are built from lazy curves and simple geometrical shapes </p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="padda col-lg-12 textoverlay h50">											
+										<div class="bg-offwhite h100">
+											<img data-src="Converse/images/process/bag.jpg" class="lazy multiply">	
+										</div>										
+										<div class="overlay c-all">
+											<div class="text-animate c-all">
+												<div>
+													<h3 class="h3">Minimal<strong>ism </strong></h3>
+													<p>Geometrical shapes & minimalism</p>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>		
+					</div>
+					<div class="slide row m0 light-theme" style="min-width: 100%; max-width: 100%">
+						<div class="col-lg-6 c-all hw100">
+							<div class="col-lg-6 c-all">
+								<div class="row m0 hw100">
+									<div class="padda col-lg-12 textoverlay h50">
+										<img data-src="Converse/images/moodboard/coke.jpg" class="lazy cover bg-offwhite" style="object-position: 50% 33%;">												
+										<div class="overlay c-all">
+											<div class="col-lg-10 text-animate c-all">
+												<div>
+													<h3 class="h3">60s <strong>Coca Cola Design </strong></h3>
+													<p class="txt-c">Whats more American than Coca Cola? <br>
+													This sign might make you think of a worker in the 50s-60s in dirty jeans taking a break at Coca-cola machine</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="padda col-lg-12 textoverlay dark-theme h50">											
+										<img data-src="Converse/images/moodboard/snakeskin.jpg" class="lazy cover">												
+										<div class="overlay c-all">
+											<div class="col-lg-10 text-animate c-all">
+												<div>
+													<h3 class="h3">Snake <strong>Skins Patterns </strong></h3>
+													<p class="txt-c">Timber Rattlesnake, Eastern Coachwhip, Cottonmouth, Eastern Garter Snake.<br>
+													when we're in the South, we should pay attention to the snakes</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 c-all">
+								<div class="row m0 hw100">
+									<div class="padda col-lg-12 textoverlay dark-theme h50">
+										<img data-src="Converse/images/moodboard/bbq.jpg" class="lazy cover bg-black">												
+										<div class="overlay c-all">
+											<div class="col-lg-10 text-animate c-all">
+												<div>
+													<h3 class="h3">Southern<strong> Cooking</strong></h3>
+													<p class="txt-c">Barbecue is strongly associated with Southern cooking and culture due to its long history and evolution in the region</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="padda col-lg-12 textoverlay dark-theme h50">											
+										<div class="hw100">
+											<img data-src="Converse/images/moodboard/swamp.jpg" class="lazy cover">	
+										</div>										
+										<div class="overlay c-all">
+											<div class="col-lg-10 text-animate c-all">
+												<div>
+													<h3 class="h3">Swamps & <strong>Wetlands </strong></h3>
+													<p class="txt-c">Murky waters? Great inspiration for graphic textures</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>								
+						<div class="md-down-h padda col-lg-6 c-all textoverlay">
+							<div class="desktop-hidden"></div>
+							<div class="desktop-hidden ion-android-add-circle tap-icon"></div>
+							<img data-src="Converse/images/moodboard/cotton.jpg" class="lazy cover" style="object-position: 100% 17%;">												
+							<div class="dark-theme overlay c-all">
+								<div class="text-animate c-all txt-c">
+									<div>
+										<h3 class="h3"><strong>The South</strong> of the 60s </h3>
+										<p>The inspiration for this project comes from the southern suburban U.S in the and 60s</p>
+										<p>Here, a cotton field worker taking a break</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide textoverlay" style="min-width: 100%; max-width: 100%">
+						<img data-src="Converse/images/process/sketch01.jpg" class="lazy cover multiply">	
+						<div class="overlay">
+							<div class="text-animate c-all">
+								<div>
+									<h3 class="h3">Sketch <strong>Work</strong></h3>
+									<p class="txt-c">Outtakes from the ideation process</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide row m0" style="min-width: 100%; max-width: 100%">
+						<div class="col-lg-6 h100">
+							<div class="h100">
+								<div class="iframe-container textoverlay-desktop">															
+									<iframe 
+									data-src="Converse/webgl/spherebuild.html"
+									class="lazy unload"					
+									frameborder="0"
+									scrolling="no">			 	 
+									</iframe>
+									<div>
+										<div class="model-controls">
+											<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled"></div>
+											<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+										</div>	
+									</div>
+								</div>									
+							</div>	
+						</div>	
+						<div class="col-lg-6 textoverlay c-all hw100">
+							<img data-src="Converse/images/process/head_square.jpg" class="lazy cover absolute" style="object-position:0% 75%">						
+							<div class="overlay c-all">
+								<div class="col-lg-6 text-animate h-auto">
+									<h3 class="h3">HEAD SCAN <strong>& MODELING </strong></h3>
+									<p>Using several different 3d scans from different ethnicities and gender, average dimensions were extracted as a starting point for the modeling</p>
+									<p>The modeling was then made on a tilted sphere where the sphere / lens normal has an axial tilt of 8.3 degrees in the x-plane and 15 degrees in the y-plane - staying within industry standards for eyewear<br></p>																																
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="slide row m0" style="min-width: 100%; max-width: 100%">
+						<iframe 
+						id="popup-iframe"
+						class="lazy ks-config"
+						data-src="Converse/web/keyshot-configurator-alternate.html" 							
+						frameborder="0"
+						scrolling="no"
+						>
+						</iframe>
+					</div>
+					<div class="slide" style="min-width: 100%; max-width: 100%">
+						<div class="item  h100 c-all">			
+						  <div class="col-lg-7">
+							 <h3 class="txt-c mb-4 font-weight-normal"><div class="m-h inline">Do You </div>Have A Fun Project In Mind?</h3>
+							 <p class="txt-c mb-5">Drop me a message and let's have a chat!</p>           
+							 <p class="mb-0 txt-c"><a href="#contact-popup" class="btn btn-outline px-4 py-3 open-popup">Get In Touch</a></p>          
+						  </div>
+						</div>
+					</div>						
+					<div class="my-slider-progress">
+						<div class="my-slider-progress-bar"></div>
+					</div>			
+				</div>
+<!-- 				<div class="converse-splide portfolio-section pop-theme splide-slider touch-remove hidden">
 				<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%"></div>
 				  <div class="splide__track">
 						<ul class="splide__list">
@@ -996,7 +1265,7 @@
 					<div class="my-slider-progress">
 						<div class="my-slider-progress-bar"></div>
 					</div>	
-				</div>				
+				</div> -->				
 				<div class="portfolio-section">	
 					<div class="section-hero x-theme">	
 						<div class="section-hero-container dark-theme">
@@ -3739,6 +4008,7 @@
 		document.write('<script src="js/smoothscroll.js"><\/script>');
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/splide.min.js"><\/script>');
+		document.write('<script src="js/keen-slider.js"><\/script>');
 		}
 		else {
 		document.write('<script src="js/lazyload.js"><\/script>');
@@ -3751,6 +4021,7 @@
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/splide.min.js"><\/script>');
 		document.write('<script src="js/splide-autoscroll.js"><\/script>');
+		document.write('<script src="js/keen-slider.js"><\/script>');
 		}
 		</script>
 
@@ -3786,6 +4057,193 @@
 		});
 		});			
 		</script>	 -->	
+
+		<!-- keen slider -->
+		<script>
+
+		<!-- navigation -->
+		function navigation(slider) {
+		  let wrapper, dots, arrowLeft, arrowRight
+
+		  function markup(remove) {
+			 wrapperMarkup(remove)
+			 dotMarkup(remove)
+			 arrowMarkup(remove)
+		  }
+
+		  function removeElement(elment) {
+			 elment.parentNode.removeChild(elment)
+		  }
+		  function createDiv(className) {
+			 var div = document.createElement("div")
+			 var classNames = className.split(" ")
+			 classNames.forEach((name) => div.classList.add(name))
+			 return div
+		  }
+
+		  function arrowMarkup(remove) {
+			 if (remove) {
+				removeElement(arrowLeft)
+				removeElement(arrowRight)
+				return
+			 }
+			 arrowLeft = createDiv("arrow arrow--left")
+			 arrowLeft.addEventListener("click", () => slider.prev())
+			 arrowRight = createDiv("arrow arrow--right")
+			 arrowRight.addEventListener("click", () => slider.next())
+
+			 wrapper.appendChild(arrowLeft)
+			 wrapper.appendChild(arrowRight)
+		  }
+
+		  function wrapperMarkup(remove) {
+			 if (remove) {
+				var parent = wrapper.parentNode
+				while (wrapper.firstChild)
+				  parent.insertBefore(wrapper.firstChild, wrapper)
+				removeElement(wrapper)
+				return
+			 }
+			 wrapper = createDiv("navigation-wrapper")
+			 slider.container.parentNode.appendChild(wrapper)
+			 wrapper.appendChild(slider.container)
+		  }
+
+		  function dotMarkup(remove) {
+			 if (remove) {
+				removeElement(dots)
+				return
+			 }
+			 dots = createDiv("dots")
+			 slider.track.details.slides.forEach((_e, idx) => {
+				var dot = createDiv("dot")
+				dot.addEventListener("click", () => slider.moveToIdx(idx))
+				dots.appendChild(dot)
+			 })
+			 wrapper.appendChild(dots)
+		  }
+
+		  function updateClasses() {
+			 var slide = slider.track.details.rel
+			 slide === 0
+				? arrowLeft.classList.add("arrow--disabled")
+				: arrowLeft.classList.remove("arrow--disabled")
+			 slide === slider.track.details.slides.length - 1
+				? arrowRight.classList.add("arrow--disabled")
+				: arrowRight.classList.remove("arrow--disabled")
+			 Array.from(dots.children).forEach(function (dot, idx) {
+				idx === slide
+				  ? dot.classList.add("dot--active")
+				  : dot.classList.remove("dot--active")
+			 })
+		  }
+
+			
+			var initBar = function (){
+			var thisSlider = $(slider.container);
+			var getBar = thisSlider.find('.my-slider-progress-bar');
+			var end = slider.track.details.maxIdx;
+			var sliderIndex = slider.track.details.rel + 1;
+			var barWidth = (sliderIndex / end) * 100;
+			getBar.css({'width': barWidth + '%'})
+			}
+
+			var lastIndex = '0'
+
+			var unloadIframe = function (){
+			var thisSlide = $(slider.slides[slider.track.details.rel]);
+			var upcomingSlideIndex = slider.animator.targetIdx;	
+			//var thisSlideIndex = slider.track.details.rel;
+			console.log('going to: ',upcomingSlideIndex, 'last slide was: ',lastIndex);
+			var lastSlide = $(slider.slides[lastIndex]);
+			//console.log('last slide was: ',lastSlide);
+			
+			if (lastSlide.find('iframe').hasClass('unload')) {
+			console.log('last slide got iframe');		
+			var thisSrc = lastSlide.find('iframe').attr('src');
+			console.log('last slide has class unload and its src is: ', thisSrc);
+			lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).removeClass('unload').addClass('unloaded');			
+			}
+			else {		
+			console.log('last slide got no iframe');
+			}
+			lastIndex = upcomingSlideIndex;
+
+			
+			if (thisSlide.find('iframe').hasClass('unloaded')) {
+			console.log('got class unloaded');
+			console.log(thisSlide);			
+			var dataSrc = thisSlide.find('iframe').attr('data-src');
+			console.log(dataSrc);
+			thisSlide.find('iframe').attr('src',dataSrc).removeClass('unloaded').addClass('unload');	
+			//var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
+			//console.log(thisDataSplideSrc);
+			//thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');		
+			}			
+		}			
+
+		  slider.on("created", () => {
+			 markup()
+			 updateClasses()
+			 console.log('');
+			 initBar();
+			 		$('.arrow--left').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
+		$('.arrow--right').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
+		  })
+		  slider.on("optionsChanged", () => {
+			 console.log(2)
+			 markup(true)
+			 markup()
+			 updateClasses()
+		  })
+		  slider.on("slideChanged", () => {
+			 updateClasses()
+			 initBar();	  
+			 unloadIframe()
+		  })
+
+		  slider.on("destroyed", () => {
+			 markup(true)
+		  })
+		  
+		}
+
+		function myscroll(slider) {
+		var thisSlider = $(slider.container);
+			thisSlider.on('mousewheel',  function (e) {
+			//console.log('ok');
+				 if (e.deltaY>0) {
+					  slider.next()
+				 } else {
+					  slider.prev()
+				 }
+				 e.preventDefault();
+			});
+		}
+
+		var funcs = [];
+		var splides = document.querySelectorAll('.keen-slider');
+
+		for (let i = 0; i < splides.length; i++) {
+
+		  funcs[i] = function() {
+			let splideElement = splides[i];			  				  
+			var slider = new KeenSlider( splideElement , {
+			  loop: false,
+			  mode: "free",
+			  rtl: false,
+			  slides: { perView: "auto" },
+			  }, [navigation, myscroll]) //navigation, myscroll
+		  };
+		}
+		for (var j = 0; j < splides.length; j++) {
+		  funcs[j]();
+		}
+
+
+
+
+		</script>
 
 		<!-- splide -->
 		<script>
@@ -3968,10 +4426,6 @@
 		});
 		</script>
 
-		<script>
-		var lazyLoadInstance = new LazyLoad({
-		});
-		</script>
 		
 		<!-- zoom-icon function -->
 		<script>	

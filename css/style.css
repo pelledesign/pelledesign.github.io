@@ -18813,8 +18813,10 @@ align-items: center;
 	 }
 	 
 	.arrow.arrow--left {
-transform: scaleX(-1);
     left: 0.5em;
+	 }
+	 .arrow.arrow--left svg{
+transform: scaleX(-1);
 	 }
 	 .arrow.arrow--right {
 

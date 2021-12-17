@@ -759,7 +759,7 @@
 				mode: "snap",
 				renderMode: "precision",
 				rubberband: !0,
-				selector: ".keen-slider__slide"
+				selector: ".slide"
 			}), b, h, g], e || [], !0))
 		} catch (n) {
 			console.error(n)
