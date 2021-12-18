@@ -18114,21 +18114,19 @@ background-position: center center !important;
 background-size:contain !important;
 }
 
-.p-logo-new {
- padding: 8px;	
-}
+
 
 header .p-logo-new {
  max-width:100px;
 }
 
 .p-logo-new {
- padding: 8px;	
+ padding: 12px;	
  transition: 0.15s all ease;
 }
 
 .p-logo-new:hover {
-padding:6px;
+padding:10px;
 }
 
 #hero-slider .p-logo-new {
