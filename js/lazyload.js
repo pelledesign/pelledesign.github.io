@@ -1,3 +1,22 @@
+		
+		var deviceThreshold;
+		
+		function is_touch_device() {  
+		try {  
+		 document.createEvent("TouchEvent");  
+		 return true;  
+		} catch (e) {  
+		 return false;  
+		}
+		}
+		
+		if(is_touch_device()) {
+		deviceThreshold = 300;
+		}
+		else {
+		deviceThreshold = 1000;
+		}
+
 ! function(n, t) {
     "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (n = n || self).LazyLoad = t()
 }(this, (function() {
@@ -21,7 +40,7 @@
             elements_selector: ".lazy",
             container: e || t ? document : null,
             //threshold: 300,
-            threshold: 1000, 			//A number of pixels representing the outer distance off the scrolling area from which to start loading the elements.
+            threshold: deviceThreshold, 			//A number of pixels representing the outer distance off the scrolling area from which to start loading the elements.
             thresholds: null,
             data_src: "src",
             data_srcset: "srcset",
