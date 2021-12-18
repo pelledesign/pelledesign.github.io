@@ -1,4 +1,4 @@
-.keen-slider:not([data-keen-slider-disabled]) {
+.keen:not([data-keen-slider-disabled]), .keen-slider:not([data-keen-slider-disabled]) {
   align-content: flex-start;
   display: flex;
   overflow: hidden;
@@ -13,15 +13,20 @@
   -webkit-tap-highlight-color: transparent;
   width: 100%;
 }
-.keen-slider:not([data-keen-slider-disabled]) .keen-slider__slide {
+.keen:not([data-keen-slider-disabled]) .slide, .keen-slider:not([data-keen-slider-disabled]) .slide {
   position: relative;
   overflow: hidden;
   width: 100%;
   min-height: 100%;
 }
-.keen-slider:not([data-keen-slider-disabled])[data-keen-slider-v] {
+.keen:not([data-keen-slider-disabled])[data-keen-slider-v], .keen-slider:not([data-keen-slider-disabled])[data-keen-slider-v] {
   flex-wrap: wrap;
 }
-.keen-slider:not([data-keen-slider-disabled])[data-keen-slider-moves] * {
+.keen:not([data-keen-slider-disabled])[data-keen-slider-moves] *, .keen-slider:not([data-keen-slider-disabled])[data-keen-slider-moves] * {
   pointer-events: none;
+}
+
+
+.navigation-wrapper {
+height:100%;	
 }
