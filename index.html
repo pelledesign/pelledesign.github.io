@@ -31,7 +31,7 @@
 		
 	</head>	
 	<body> 
-		<script> console.log('good! dunno')</script>
+		<script> console.log('good! df')</script>
 				<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
@@ -3589,7 +3589,34 @@
 
 		<!-- up button -->
 		<!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button> -->
+
+		<!-- remove stuff -->
+		<script>
+		if(is_touch_device()) {
+		console.log('ssss');
+		$('.touch-remove').remove();
+		}
+		else {
+		$('.desktop-remove').remove();
+		}
 		
+		var viewportWidth = $(window).width();
+
+		if(viewportWidth <= 575) {
+		$('.xs-down-remove').remove();
+		}
+		if(viewportWidth <= 767) {
+		$('.sm-down-remove').remove();
+		}
+		if(viewportWidth <= 991) {
+		$('.md-down-remove').remove();
+		}
+		if(viewportWidth <= 1199) {
+		console.log('ok');
+		$('.lg-down-remove').remove();
+		}
+		
+		</script>		
 		<!-- loading icon  --> 		
 		<script>		
 		$('img, iframe').addClass("loader").not('.zoom-icon');			
@@ -4203,33 +4230,7 @@
 		</script>
 			
 
-		<!-- remove stuff -->
-		<script>
-		if(is_touch_device()) {
-		console.log(ssss);
-		$('.touch-remove').remove();
-		}
-		else {
-		$('.desktop-remove').remove();
-		}
-		
-		var viewportWidth = $(window).width();
 
-		if(viewportWidth <= 575) {
-		$('.xs-down-remove').remove();
-		}
-		if(viewportWidth <= 767) {
-		$('.sm-down-remove').remove();
-		}
-		if(viewportWidth <= 991) {
-		$('.md-down-remove').remove();
-		}
-		if(viewportWidth <= 1199) {
-		console.log('ok');
-		$('.lg-down-remove').remove();
-		}
-		
-		</script>
 		<!-- scroll snap - for body -->		
 		<script>
 		//alert('poc ok?2');
