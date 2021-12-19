@@ -1122,6 +1122,7 @@
 			</div>					
 			<div id="spotify" class="brand-section">
 				<div id="spotify-title" class="title x-theme bg-none row m0">
+
 					<div class="col-12 row m0 flex w100">
 						<div class="col-lg-6 col-xs-8 c-all justify-content-start">
 						 <h3 class="h3 txt-l"><strong>SPOTIFY </strong>Colors</h3>
@@ -1134,7 +1135,33 @@
 						</div>
 					</div>
 				</div>
-				<div class="keen-slider medium-theme" style="max-width: 100vw; height:75vh; overflow: visible;">
+				<div class="desktop-remove relative vh75 medium-theme">
+					<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
+<!-- 					<div class="row m0 multiply">
+						<div class="col-lg-4 c-all">
+							<div class="row c-lg">
+								<div class="col-lg-8 ppp2 txt-l">
+									<h2 class="mb-4 s-t">SPOTIFY <strong>Colors</strong></h2>
+										<p>An exploration in how to communicate who we are through the sharing of digital music<br>
+										</p>		  
+										<p><a href="https://www.spotify.com/" target="_blank" title="Visit Spotify" class="btn btn-outline">Visit</a></p>																								
+								</div>					
+							</div>
+						</div> -->					
+						<div class="col-lg-8 col-xs-12 hw100 multiply">
+							<div class="item video-container hw100 relative">
+								<img src="" data-src="spotify/images/bg.jpg" class="lazy cover relative hidden">							
+								<video id="spotify-video" playsinline muted class="lazy hw100 cover-portrait" data-poster="spotify/animations/poster.png" style="position: absolute; top: 0; left: 0;">
+								  <source class="lazy multiply" data-src="spotify/animations/renamed_m4v_to_mp4.mp4"/>
+								</video>							
+								<div id="play-video" class="dark-theme bg-none absolute hw100 c-all" style="top:0; left:0;"><p class=""><a class="btn btn-outline next-play-text invisible">Play Again</a></p></div>			
+								
+							</div>						
+						</div>
+					</div>
+
+				</div>				
+				<div class="keen-slider medium-theme touch-remove" style="max-width: 100vw; height:75vh; overflow: visible;">
 					<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 					<div class="slide row m0 multiply" style="min-width: 100%; max-width: 100%">
 						<div class="col-lg-4 c-all touch-hidden">
@@ -3595,6 +3622,7 @@
 		document.write('<script src="js/bootstrap.min.js"><\/script>');
 		document.write('<script src="js/magnific.js"><\/script>');
 		document.write('<script src="js/load-more-button.js"><\/script>');
+		document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
 		document.write('<script src="js/smoothscroll.js"><\/script>');
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		<!-- document.write('<script src="js/splide.min.js"><\/script>'); -->
@@ -3836,7 +3864,7 @@
 			  mode: "free",
 			  rtl: false,
 			  slides: { perView: "auto" },
-			  }, [navigation, myscroll]) //navigation, myscroll
+			  }, [navigation]) //navigation, myscroll
 		  };
 		}
 		for (var j = 0; j < sliders.length; j++) {
@@ -3870,7 +3898,6 @@
 		  slides: { perView: "1" },
 		  }, [
 		  (reviews_slider) => {
-		  console.log('test');
             let timeout
             let mouseOver = false
             function clearNextTimeout() {
