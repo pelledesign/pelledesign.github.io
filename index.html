@@ -17,7 +17,17 @@
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
 		<link rel="stylesheet" href="css/raleway2.css">		 
-
+		<script> <!-- start test if touch device -->	
+		function is_touch_device() {  
+		try {  
+		 document.createEvent("TouchEvent");  
+		 return true;  
+		} catch (e) {  
+		 return false;  
+		}
+		}
+		
+		</script>	
 		
 	</head>	
 	<body> 
@@ -29,20 +39,30 @@
 		<link rel="stylesheet" href="css/keen-slider.css">
 		
 		<!-- background logo -->
-		<div class="hw100 x-theme c-all"><p style="user-select:none;">You know what to do..</p></div>		<!-- print someting to avoid fcp error -->
+		<div class="hw100 x-theme c-all pt-h"><p style="user-select:none;">You know what to do..</p></div>		<!-- print someting to avoid fcp error -->
+		<div class="hw100">
+		<svg class="c-absolute ls-h" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;" x="0px" y="0px"
+			  viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+		<g>
+			<path d="M115.416,287.568C84.688,221.673,53.963,155.781,23.235,89.886c-2.789-5.983-2.927-10.97-0.476-17.1
+				c2.696-6.733,5.391-13.467,8.088-20.202c1.167-2.917,5.257-3.03,6.583-0.182c38.486,82.533,76.972,165.067,115.458,247.599
+				c-5.987,0-11.974,0-17.958,0C126.563,300.001,118.953,295.152,115.416,287.568z"/>
+			<path d="M204.426,300.001c-14.309,0-19.97-3.607-26.016-16.575C135.148,190.651,91.888,97.878,48.626,5.104
+				C47.516,2.726,49.253,0,51.878,0c43.103,0,86.204,0,129.305,0c51.159,0,93.671,39.436,97.505,90.45
+				c0.385,5.141,0.387,10.313-0.012,15.452c-0.207,2.649-0.521,5.289-0.942,7.913c-0.43,2.664-0.974,5.31-1.628,7.928
+				c-0.664,2.648-1.444,5.269-2.34,7.849c-0.904,2.602-1.928,5.164-3.071,7.671c-2.297,5.046-5.071,9.878-8.298,14.389
+				c-3.219,4.498-6.886,8.68-10.941,12.443c-2.199,2.044-4.512,3.963-6.922,5.754c-2.889,2.142-5.915,4.1-9.028,5.903
+				c-3.221,1.862-6.531,3.559-9.91,5.112c-3.465,1.599-6.998,3.047-10.579,4.362c-3.64,1.344-7.326,2.554-11.047,3.646
+				c-0.748,0.223-1.499,0.438-2.249,0.645c-3.384,0.954-6.961-0.688-8.445-3.874c-3.285-7.044-6.57-14.091-9.855-21.137
+				c15.746-3.67,35.378-9.482,48.126-21.098c13.514-12.31,19.314-30.279,18.676-47.932c-1.346-37.243-31.702-66.77-69.038-66.77
+				c-29.961,0-59.917,0-89.876,0c42.168,90.431,84.338,180.863,126.506,271.294C213.349,300.001,208.888,300.001,204.426,300.001z"/>
+		</g>
+		</svg>
+</div>		
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
-		<script> <!-- start test if touch device -->	
-		function is_touch_device() {  
-		try {  
-		 document.createEvent("TouchEvent");  
-		 return true;  
-		} catch (e) {  
-		 return false;  
-		}
-		}
-		</script>		
+	
 		
 		<!-- xr-auto & config-auto resize & texts -->
 		<script>
@@ -193,25 +213,9 @@
 		}
 		</script>		
 		<!-- <div class="p-logo-new c-absolute desktop-remove" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	 -->
-<!-- 		<svg class="c-absolute desktop-remove" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;" x="0px" y="0px"
-			  viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-		<g>
-			<path d="M115.416,287.568C84.688,221.673,53.963,155.781,23.235,89.886c-2.789-5.983-2.927-10.97-0.476-17.1
-				c2.696-6.733,5.391-13.467,8.088-20.202c1.167-2.917,5.257-3.03,6.583-0.182c38.486,82.533,76.972,165.067,115.458,247.599
-				c-5.987,0-11.974,0-17.958,0C126.563,300.001,118.953,295.152,115.416,287.568z"/>
-			<path d="M204.426,300.001c-14.309,0-19.97-3.607-26.016-16.575C135.148,190.651,91.888,97.878,48.626,5.104
-				C47.516,2.726,49.253,0,51.878,0c43.103,0,86.204,0,129.305,0c51.159,0,93.671,39.436,97.505,90.45
-				c0.385,5.141,0.387,10.313-0.012,15.452c-0.207,2.649-0.521,5.289-0.942,7.913c-0.43,2.664-0.974,5.31-1.628,7.928
-				c-0.664,2.648-1.444,5.269-2.34,7.849c-0.904,2.602-1.928,5.164-3.071,7.671c-2.297,5.046-5.071,9.878-8.298,14.389
-				c-3.219,4.498-6.886,8.68-10.941,12.443c-2.199,2.044-4.512,3.963-6.922,5.754c-2.889,2.142-5.915,4.1-9.028,5.903
-				c-3.221,1.862-6.531,3.559-9.91,5.112c-3.465,1.599-6.998,3.047-10.579,4.362c-3.64,1.344-7.326,2.554-11.047,3.646
-				c-0.748,0.223-1.499,0.438-2.249,0.645c-3.384,0.954-6.961-0.688-8.445-3.874c-3.285-7.044-6.57-14.091-9.855-21.137
-				c15.746-3.67,35.378-9.482,48.126-21.098c13.514-12.31,19.314-30.279,18.676-47.932c-1.346-37.243-31.702-66.77-69.038-66.77
-				c-29.961,0-59.917,0-89.876,0c42.168,90.431,84.338,180.863,126.506,271.294C213.349,300.001,208.888,300.001,204.426,300.001z"/>
-		</g>
-		</svg>	 -->	
+	
 		<!-- header -->
-<!-- 		<header id="header-mobile" role="banner" class="">
+		<header id="header-mobile" role="banner" class="">
 		 <nav class="navbar navbar-transparent navbar-expand-xl p0 x-theme">
 			<div class="container-fluid" style="align-items: normal;">
 			  <a href="index.html" class="text-logo lg-down-h" style="max-height:50px;  line-height:50px; flex: 1; display: flex; justify-content: left; font-size:12px">Pelle Skogsberg/ Industrial Designer</a>
@@ -251,7 +255,7 @@
 			  </div>
 			</div>
 		 </nav>
-		</header>		 -->
+		</header>		
 											
 		<!-- scroll indicator -->
 <!-- 		<div class="scroll-indicator">
@@ -4202,6 +4206,7 @@
 		<!-- remove stuff -->
 		<script>
 		if(is_touch_device()) {
+		console.log(ssss);
 		$('.touch-remove').remove();
 		}
 		else {
