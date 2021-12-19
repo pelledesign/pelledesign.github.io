@@ -17,11 +17,11 @@
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
 		<link rel="stylesheet" href="css/raleway2.css">		 
-		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">	
-		<link rel="stylesheet" href="css/splide.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- <link rel="stylesheet" href="css/splide.min.css"> -->
 		<link rel="stylesheet" href="css/keen-slider.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -106,7 +106,87 @@
 		$(window).on('resize', function(){    							
 			xr_resize();	
 		}).resize()// trigger on page load
-		</script>			
+		</script>	
+
+
+
+		<!-- header	 -->
+		<script>
+		
+		<!-- lock body on nav open -->	
+
+		
+		/* header */
+			
+			/* $('nav .dropdown').hover(function(){
+				var $this = $(this);
+				$this.addClass('show');
+				$this.find('> a').attr('aria-expanded', true);
+				$this.find('.dropdown-menu').addClass('show');
+			}, function(){
+				var $this = $(this);
+					$this.removeClass('show');
+					$this.find('> a').attr('aria-expanded', false);
+					$this.find('.dropdown-menu').removeClass('show');
+			}); */
+
+		/* hide expanded menu on body and header links click*/
+		$('body').on('click', ":not(header, header *)", function(){
+			$('.navbar-collapse').removeClass('show');
+			  if ($('.navbar-toggler').hasClass('open')) {
+				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
+				  
+			  }	
+			//$('.navbar-toggler collapsed').removeClass('show');
+		});
+
+		$('header a.nav-link').on('click',  function(){
+			$('.navbar-collapse').removeClass('show');
+			$('.navbar-toggler').removeClass('open').addClass('collapsed');
+			$('body').toggleClass('lock-scroll');
+		});
+		</script>
+
+		<!-- auto hide header -->
+		<script>
+		$('#header, #header-mobile').addClass('auto-hide-header'); 
+		
+		var didScroll;
+		var last_st = 0;
+		var delta = 100; //def 5
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			 didScroll = true;
+		});
+
+		setInterval(function() {
+			 if (didScroll) {
+				  hasScrolled();
+				  didScroll = false;
+			 }
+		}, 250);
+
+		function hasScrolled() {
+			 var st = $(this).scrollTop();
+			 
+			 // Make sure they scroll more than delta
+			 if(Math.abs(last_st - st) <= delta)
+				  return;
+			 
+			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
+			 if (st > last_st && st > navbarHeight){
+				$('header').removeClass('nav-down').addClass('nav-up');							  
+			 
+			 } else {
+				  if(st + $(window).height() < $(document).height()) {
+						$('header').removeClass('nav-up').addClass('nav-down');
+				  }	  
+			 }
+			 
+			 last_st = st;	
+		}
+		</script>		
 	</head>	
 	<body> 
 		<script> console.log('converse only + removed hero')</script>
@@ -132,52 +212,12 @@
 		</g>
 		</svg>		
 		<!-- header -->
-		<header id="header" role="banner" class="nav-down x-theme lg-down-h">
-		 <nav class="navbar navbar-transparent navbar-expand-xl h100 p0">
-			<div class="container-fluid h100" style="align-items: normal; padding-left:1%; padding-right:1%;">
-			  <!-- <a href="index.html" class="text-logo" style="max-height:50px;  line-height:50px; flex: 1; display: flex; justify-content: left; font-size:12px">Pelle / iDesign</a> -->
-			  <a href="index.html" class="text-logo" style="max-height:50px;  line-height:50px; flex: 1; display: flex; justify-content: left; font-size:12px">Pelle Skogsberg/ Industrial Designer</a>
-			  <!-- <a href="index.html" class="text-logo p-logo-new" style="max-height:50px; flex: 1; display: flex; justify-content: center;"></a> -->
-			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
-				 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
-				 <span class="navbar-toggler-icon"></span>
-			  </button>				
-			  <div class="collapse navbar-collapse" id="navbarsExample0" style="flex: 1; display: flex; justify-content: right;">
-				 <ul class="navbar-nav pl-md-5 ml-auto c-all">								
-<!-- 					<li class="nav-item">
-					  <a class="nav-link go-to-about" href="#about">About</a>
-					</li>	
-					<li class="nav-item">
-					  <a class="nav-link" href="#portfolio">Latest Work</a>
-					</li>	
-					<li class="nav-item">									
-					  <a href="#designprocess-slider" title="Project Info" class="nav-link">How I Work</a>
-					</li>			
-					<li class="nav-item">
-					  <a class="nav-link go-to-services" href="#about">Services</a>
-					</li>			
-					<li class="nav-item">
-					  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
-					</li>
-					<li class="nav-item">
-					  <a class="nav-link open-popup fullscreen" href="#pdf">View Pdf</a>              
-					</li> -->
-					<li class="nav-item flex-xl-up c-lg">
-					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
-						<div id="theme-switcher-menu" class=" flex justify-content-center">
-						<div id="" class="dark-theme-button theme-circle dark"></div>
-						<div id="" class="light-theme-button theme-circle light"></div>					
-						</div>							  
-					</li>
-				 </ul>
-			  </div>
-			</div>
-		 </nav>
-		</header>
-		<header id="header-mobile" role="banner" class="xl-up-h">
+		<header id="header-mobile" role="banner" class="">
 		 <nav class="navbar navbar-transparent navbar-expand-xl p0 x-theme">
 			<div class="container-fluid" style="align-items: normal;">
-			  <a href="index.html" class="text-logo-svg" style=" padding-bottom: 9px;"></a>
+			  <!-- <a href="index.html" class="text-logo-svg xl-up-h" style=" padding-bottom: 9px;"></a> -->
+			  <a href="index.html" class="text-logo lg-down-h" style="max-height:50px;  line-height:50px; flex: 1; display: flex; justify-content: left; font-size:12px">Pelle Skogsberg/ Industrial Designer</a>
+			  <a href="index.html" class="text-logo xl-up-h" style="max-height:50px;  line-height:40px; flex: 1; display: flex; justify-content: left; font-size:23px">Pelle iDesign</a>
 			  <button id="nav-icon3" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample06"
 				 aria-controls="navbarsExample06" aria-expanded="false" aria-label="Toggle navigation">
 					<span></span>
@@ -187,19 +227,19 @@
 			  </button>						  
 			  <div class="collapse navbar-collapse" id="navbarsExample06">
 				 <ul class="navbar-nav pl-md-5 ml-auto c-all">			
-					<li class="nav-item">
+					<li class="nav-item lg-up-h">
 					  <a class="nav-link go-to-about" href="index.html#about">About</a>
 					</li>						 
-					<li class="nav-item">
+					<li class="nav-item lg-up-h">
 					  <a class="nav-link" href="index.html#portfolio">Latest Work</a>
 					</li>	
-					<li class="nav-item">									
+					<li class="nav-item lg-up-h">									
 					  <a href="index.html#designprocess-slider" title="Project Info" class="nav-link">How I Work</a>
 					</li>			
-					<li class="nav-item">
+					<li class="nav-item lg-up-h">
 					  <a class="nav-link go-to-services" href="#about">Services</a>
 					</li>			
-					<li class="nav-item">
+					<li class="nav-item lg-up-h">
 					  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
 					</li>		
 					<li class="nav-item flex-xl-up c-lg">
@@ -3674,15 +3714,7 @@
 		  loader();		
 		</script>
 
-		<!-- remove stuff -->
-		<script>
-		if(is_touch_device()) {
-		$('.touch-remove').remove();
-		}
-		else {
-		$('.desktop-remove').remove();
-		}
-		</script>
+
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -4492,84 +4524,33 @@
 
 		</script>
 			
-		<!-- header	 -->
+
+		<!-- remove stuff -->
 		<script>
-		
-		<!-- lock body on nav open -->	
-
-		
-		/* header */
-			
-			/* $('nav .dropdown').hover(function(){
-				var $this = $(this);
-				$this.addClass('show');
-				$this.find('> a').attr('aria-expanded', true);
-				$this.find('.dropdown-menu').addClass('show');
-			}, function(){
-				var $this = $(this);
-					$this.removeClass('show');
-					$this.find('> a').attr('aria-expanded', false);
-					$this.find('.dropdown-menu').removeClass('show');
-			}); */
-
-		/* hide expanded menu on body and header links click*/
-		$('body').on('click', ":not(header, header *)", function(){
-			$('.navbar-collapse').removeClass('show');
-			  if ($('.navbar-toggler').hasClass('open')) {
-				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
-				  
-			  }	
-			//$('.navbar-toggler collapsed').removeClass('show');
-		});
-
-		$('header a.nav-link').on('click',  function(){
-			$('.navbar-collapse').removeClass('show');
-			$('.navbar-toggler').removeClass('open').addClass('collapsed');
-			$('body').toggleClass('lock-scroll');
-		});
-		</script>
-
-		<!-- auto hide header -->
-		<script>
-		$('#header, #header-mobile').addClass('auto-hide-header'); 
-		
-		var didScroll;
-		var last_st = 0;
-		var delta = 100; //def 5
-		var navbarHeight = $('header').outerHeight();
-
-		$(window).scroll(function(event){
-			 didScroll = true;
-		});
-
-		setInterval(function() {
-			 if (didScroll) {
-				  hasScrolled();
-				  didScroll = false;
-			 }
-		}, 250);
-
-		function hasScrolled() {
-			 var st = $(this).scrollTop();
-			 
-			 // Make sure they scroll more than delta
-			 if(Math.abs(last_st - st) <= delta)
-				  return;
-			 
-			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
-			 if (st > last_st && st > navbarHeight){
-				$('header').removeClass('nav-down').addClass('nav-up');							  
-			 
-			 } else {
-				  if(st + $(window).height() < $(document).height()) {
-						$('header').removeClass('nav-up').addClass('nav-down');
-				  }	  
-			 }
-			 
-			 last_st = st;	
+		if(is_touch_device()) {
+		$('.touch-remove').remove();
 		}
-		</script>
+		else {
+		$('.desktop-remove').remove();
+		}
+		
+		var viewportWidth = $(window).width();
 
+		if(viewportWidth <= 575) {
+		$('.xs-down-remove').remove();
+		}
+		if(viewportWidth <= 767) {
+		$('.sm-down-remove').remove();
+		}
+		if(viewportWidth <= 991) {
+		$('.md-down-remove').remove();
+		}
+		if(viewportWidth <= 1199) {
+		console.log('ok');
+		$('.lg-down-remove').remove();
+		}
+		
+		</script>
 		<!-- scroll snap - for body -->		
 		<script>
 		//alert('poc ok?2');
