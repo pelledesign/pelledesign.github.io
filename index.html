@@ -26,6 +26,13 @@
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
 
+		<!-- loader -->
+		<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+		  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+		  <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+			 /></svg>
+		</div> 
+
 		<script> <!-- start test if touch device -->	
 		function is_touch_device() {  
 		try {  
@@ -192,7 +199,7 @@
 		<script> console.log('converse only + removed hero')</script>
 		
 		<!-- background logo -->
-		<div class="hw100 x-theme c-all"><p style="user-select:none;">You know what to do..</p></div>		<!-- print someting to avoid fcp error -->
+		<div class="hw100 c-all"><p style="user-select:none; color #212121">You know what to do..</p></div>		<!-- print someting to avoid fcp error -->
 		<!-- <div class="p-logo-new c-absolute desktop-remove" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	 -->
 		<svg class="c-absolute desktop-remove" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;" x="0px" y="0px"
 			  viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
@@ -213,7 +220,7 @@
 		</svg>		
 
 		<!-- header -->
-		<header id="header-mobile" role="banner" class="">
+		<header id="header" role="banner">
 		 <nav class="navbar navbar-transparent navbar-expand-xl p0 x-theme">
 			<div class="container-fluid" style="align-items: normal;">
 			  <!-- <a href="index.html" class="text-logo-svg xl-up-h" style=" padding-bottom: 9px;"></a> -->
@@ -257,11 +264,11 @@
 		</header>		
 											
 		<!-- scroll indicator -->
-		<div class="scroll-indicator">
+<!-- 		<div class="scroll-indicator">
 		  <div class="progress-container x-theme">
 			 <div class="progress-bar" id="myBar"></div>
 		  </div>
-		</div>
+		</div> -->
 				
 		<!-- hero -->
 		<div id="hero-container" class="col-full vh100">
@@ -339,7 +346,6 @@
 				</div> -->					
 			</div>
 		</div>								
-
 
 		<!-- start latest work --> 
 		<div id="porfolio-gallery">
@@ -3694,11 +3700,7 @@
 			</div>
 		</div>
 		
-		<!-- loader -->
-		<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-		  <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-		  <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-			 /></svg></div> 
+
 
 		<!-- loader -->
 		<script>
@@ -3706,15 +3708,12 @@
 		  var loader = function() {
 			 setTimeout(function() { 
 				if($('#loader').length > 0) {
-				  //$('#loader').removeClass('show');
 				  $('#loader').remove();
 				}
 			 }, 1);
 		  };
 		  loader();		
 		</script>
-
-
 
 		<!-- up button -->
 		<button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button>
@@ -3851,24 +3850,6 @@
 		});	
 		</script>
 		
-<!-- 		<script>
-		$('img, iframe').each(function () {
-		var thisImg = $(this);
-		thisImg.addClass('invisible');
-		
-		thisImg.on('load',function(){
-			if(thisImg.is('[data-splide-lazy]')) {				
-			console.log('loaded');
-			thisImg.removeClass('invisible').addClass('fadeIn element-animated'); 
-			}
-			else if (thisImg.hasClass('lazy')) {
-			console.log('lazy loaded');
-			thisImg.removeClass('invisible').addClass('fadeIn element-animated');
-			}
-		});
-		});			
-		</script>	 -->	
-
 		<!-- keen slider -->
 		<script>
 
@@ -4123,179 +4104,7 @@
 
 
 		</script>
-
-		<!-- splide -->
-<!-- 		<script>
-		
-		var funcs = [];
-		var splides = document.querySelectorAll('.splide-slider');
-		
-		for (let i = 0; i < splides.length; i++) {
-
-		  funcs[i] = function() {
-			let splideElement = splides[i];
-			var splideClassname = splideElement.classList[0];	
-			  
-		   var splideDefaultOptions = 
-		  {
-			lazyLoad: 'nearby',
-			preloadPages: 0,
-			autoWidth: true,
-			rewind: true,
-			//wheel: true,
-			keyboard: true,
-			//direction: 'ttb',
-			//drag: 'free',
-			arrows: true,
-			pagination: false,
-			waitForTransition: false,
-			//perPage: 1,
-			breakpoints: {
-				575: {
-					pagination: true,
-				},
-			}			
-		  }
-				  
-			var splide = new Splide( splideElement, splideDefaultOptions );
 			
-			splide.on( 'mounted', function () {
-				if ($(window).width() < 576) {
-				$('.splide-hide-xs-down').remove();
-				}
-				
-				if ($(window).width() < 992) {
-				$('.splide-hide-md-down').remove();
-				}
-
-				if ($(window).width() > 767) {
-				$('.splide-hide-md-up').remove();
-				}
-				
-				if ($(window).width() > 991) {
-				$('.splide-hide-lg-up').remove();
-				}
-
-				if(window.innerHeight > window.innerWidth){
-				$('.splide-hide-portrait').remove();
-				}
-			});
-
-			splide.on( 'mounted move', function () {
-			var getBar = '.'+ splideClassname + ' .my-slider-progress-bar';
-			var bar = splide.root.querySelector(getBar);	
-			var end = splide.Components.Controller.getEnd() + 1;
-			bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
-			});
-
-			
-			var lastVisited = 0; //start index
-			splide.on( 'moved', function () {
-			
-			var splideId = $('#'+splide.root.id);			
-			var thisIndex = splide.index;		
-			var lastVisited = splide.Components.Controller.getIndex( true );		
-			
-			console.log(splide.Components.Elements.root.classList[0], splide.index, 'last visited index is: ', lastVisited);
-
-			if (thisIndex > lastVisited) {
-			splideId.find('.splide__slide').removeClass('last-visited');
-			splideId.find('.is-prev').addClass('last-visited');			
-			}
-			else {
-			splideId.find('.splide__slide').removeClass('last-visited');
-			splideId.find('.is-next').addClass('last-visited');			
-			}
-					
-			lastVisited = thisIndex;
-			var thisIframe = splideId.find('.is-active').find('iframe');
-			if (thisIframe.hasClass('unloaded')) {
-			var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
-			console.log(thisDataSplideSrc);
-			thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
-			}	
-					
-			else if (splideId.find('.last-visited').find('iframe').hasClass('unload')) {			
-			var thisSrc = splideId.find('.last-visited').find('iframe').attr('src');
-			console.log('last slide has class unload and its src is: ', thisSrc);
-			splideId.find('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
-			}	
-			});
-					
-		   splide.mount();
-
-		  };
-		}
-		for (var j = 0; j < splides.length; j++) {
-		  funcs[j]();
-		}
-
-
-			
-			let aboutSplide = new Splide( '.about-splide', {
-			arrows: false,
-			pagination: false,
-			} );				
-			aboutSplide.on( 'mounted', function () {
-				$('.about-splide .more-btn-text').on('click',function(){
-					aboutSplide.go('+${i}');			
-				});
-				$('.go-to-about').on('click',function(){
-					aboutSplide.go(0);			
-				});
-				$('.go-to-services').on('click',function(){
-					aboutSplide.go(2);
-				});			
-			} );
-			aboutSplide.mount();		
-
-		
-		if(is_touch_device()) {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
-
-			reviewsSplide.mount(	);	
-		}		
-		else {
-			let reviewsSplide = new Splide( '.reviews-splide', {
-			type: 'loop',			
-			//autoplay: true,
-			pauseOnHover: true,
-			interval: 2000,
-			arrows: false,
-			pagination: false,
-		   perPage: 3,
-			breakpoints: {
-				575: {
-					perPage: 1,
-				},
-				768: {
-					perPage: 2,
-				},
-			}
-			});				
-
-			reviewsSplide.mount(window.splide.Extensions);
-		}	
-
-					
-		</script> -->
-				
 		<!-- verlok lazy load - don't use when owl carousel is used -->
 		<script>
 		var lazyLoadInstance = new LazyLoad({
@@ -4574,11 +4383,11 @@
 		</script>
 
 		<!-- scroll snap  - for desktop popups -->		
-		<script>
+<!-- 		<script>
 		if(!is_touch_device()) {
 		$( '#spotify-process-popup .slide, #poc-process-popup .slide' ).addClass('snap-desktop');
 		}			
-		</script>
+		</script> -->
 
 		<!-- fullscreen -->
 		<script>
