@@ -165,87 +165,11 @@
 		}).resize()// trigger on page load
 		</script>	
 
-		<!-- header	 -->
-		<script>
 		
-		<!-- lock body on nav open -->	
-
-		
-		/* header */
-			
-			/* $('nav .dropdown').hover(function(){
-				var $this = $(this);
-				$this.addClass('show');
-				$this.find('> a').attr('aria-expanded', true);
-				$this.find('.dropdown-menu').addClass('show');
-			}, function(){
-				var $this = $(this);
-					$this.removeClass('show');
-					$this.find('> a').attr('aria-expanded', false);
-					$this.find('.dropdown-menu').removeClass('show');
-			}); */
-
-		/* hide expanded menu on body and header links click*/
-		$('body').on('click', ":not(header, header *)", function(){
-			$('.navbar-collapse').removeClass('show');
-			  if ($('.navbar-toggler').hasClass('open')) {
-				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
-				  
-			  }	
-			//$('.navbar-toggler collapsed').removeClass('show');
-		});
-
-		$('header a.nav-link').on('click',  function(){
-			$('.navbar-collapse').removeClass('show');
-			$('.navbar-toggler').removeClass('open').addClass('collapsed');
-			$('body').toggleClass('lock-scroll');
-		});
-		</script>
-
-		<!-- auto hide header -->
-		<script>
-		$('#header, #header-mobile').addClass('auto-hide-header'); 
-		
-		var didScroll;
-		var last_st = 0;
-		var delta = 100; //def 5
-		var navbarHeight = $('header').outerHeight();
-
-		$(window).scroll(function(event){
-			 didScroll = true;
-		});
-
-		setInterval(function() {
-			 if (didScroll) {
-				  hasScrolled();
-				  didScroll = false;
-			 }
-		}, 250);
-
-		function hasScrolled() {
-			 var st = $(this).scrollTop();
-			 
-			 // Make sure they scroll more than delta
-			 if(Math.abs(last_st - st) <= delta)
-				  return;
-			 
-			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
-			 if (st > last_st && st > navbarHeight){
-				$('header').removeClass('nav-down').addClass('nav-up');							  
-			 
-			 } else {
-				  if(st + $(window).height() < $(document).height()) {
-						$('header').removeClass('nav-up').addClass('nav-down');
-				  }	  
-			 }
-			 
-			 last_st = st;	
-		}
-		</script>		
 		<!-- <div class="p-logo-new c-absolute desktop-remove" style="position:fixed;  fill: #d1d1d1; height: 75px; width: 75px;"></div>	 -->
 	
 		<!-- header -->
-		<header id="header-mobile" role="banner" class="">
+		<header id="header" role="banner" class="">
 		 <nav class="navbar navbar-transparent navbar-expand-xl p0 x-theme">
 			<div class="container-fluid" style="align-items: normal;">
 			  <a href="index.html" class="text-logo lg-down-h" style="max-height:50px;  line-height:50px; flex: 1; display: flex; justify-content: left; font-size:12px">Pelle Skogsberg/ Industrial Designer</a>
@@ -729,7 +653,7 @@
 						</div>
 						<div class="slide row m0 light-theme" style="min-width: 100%; max-width: 100%">
 							<div class="col-lg-6 col-md-6 c-all textoverlay">
-								<img data-src="Converse/images/process/01.jpg" class="lazy invisible fade-in cover hw100" style="object-position: 100% 17%;">												
+								<img data-src="Converse/images/process/01.jpg" class="lazy cover hw100" style="object-position: 100% 17%;">												
 								<div class="md-up-h overlay c-all">
 									<div class="text-animate c-all txt-c">
 										<div>
@@ -1590,7 +1514,7 @@
 						  </div>
 							<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
 								<div class="col-lg-8 text-animate txt-l auto-scroll add-scrollbar h-auto" style="max-height:50vh;">
-									<h2 class="s-t element-animate">Alcon <strong>Lens Container</strong></h2>
+									<h2 class="s-t">Alcon <strong>Lens Container</strong></h2>
 										<p>Lens container for eye care products company Alcon.<br>
 										This projects was focused on the user experience for the lens wearer	
 										</p>	
@@ -2417,7 +2341,7 @@
 		<!-- reviews -->
 		<div id="reviews-box" class="relative">	
 			<h3 class="h3 x-theme bg-none mb-0" style="font-size:1rem; padding:9px;"><strong>Re</strong>Wievs</h3>
-				<div class="reviews-slider keen light-theme" style="max-width: 100vw; overflow: visible;">	 
+				<div class="reviews-slider keen light-theme" style="max-width: 100vw; overflow-y: visible;">	 
 					<div class="slide">
 						<div class="text-box c-all txt-l">
 							<div class="">
@@ -3498,7 +3422,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		document.write('<script src="js/bootstrap.min.js"><\/script>');
 		document.write('<script src="js/magnific.js"><\/script>');
 		document.write('<script src="js/load-more-button.js"><\/script>');
-		document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
+		//document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
 		document.write('<script src="js/smoothscroll.js"><\/script>');
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/keen-slider.js"><\/script>');
@@ -3722,7 +3646,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		
 		var reviews_slider = new KeenSlider( '.reviews-slider' , {
 		  loop: true,
-		  mode: "free",
+		  mode: "snap",
 		  rtl: false,
         breakpoints: {
           "(min-width: 575px)": {
@@ -3836,7 +3760,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		
 		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
 		$('body').find(".x-theme, .fadeout-btm, .title, .info-box, .view-btn, .my-slider-progress").removeClass(other_theme).addClass(this_theme);
-		$('body').find('.portfolio-section, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
+		$('body').find('.portfolio-section, .keen-slider, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
 					
 		$('nav').removeClass(other_theme).addClass(this_theme);	
 		
@@ -3864,7 +3788,83 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		});	
 		</script>
 		
+		<!-- header	 -->
+		<script>
+		
+		<!-- lock body on nav open -->	
 
+		
+		/* header */
+			
+			/* $('nav .dropdown').hover(function(){
+				var $this = $(this);
+				$this.addClass('show');
+				$this.find('> a').attr('aria-expanded', true);
+				$this.find('.dropdown-menu').addClass('show');
+			}, function(){
+				var $this = $(this);
+					$this.removeClass('show');
+					$this.find('> a').attr('aria-expanded', false);
+					$this.find('.dropdown-menu').removeClass('show');
+			}); */
+
+		/* hide expanded menu on body and header links click*/
+		$('body').on('click', ":not(header, header *)", function(){
+			$('.navbar-collapse').removeClass('show');
+			  if ($('.navbar-toggler').hasClass('open')) {
+				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
+				  
+			  }	
+			//$('.navbar-toggler collapsed').removeClass('show');
+		});
+
+		$('header a.nav-link').on('click',  function(){
+			$('.navbar-collapse').removeClass('show');
+			$('.navbar-toggler').removeClass('open').addClass('collapsed');
+			$('body').toggleClass('lock-scroll');
+		});
+		</script>
+
+		<!-- auto hide header -->
+		<script>
+		$('#header, #header-mobile').addClass('auto-hide-header'); 
+		
+		var didScroll;
+		var last_st = 0;
+		var delta = 100; //def 5
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			 didScroll = true;
+		});
+
+		setInterval(function() {
+			 if (didScroll) {
+				  hasScrolled();
+				  didScroll = false;
+			 }
+		}, 250);
+
+		function hasScrolled() {
+			 var st = $(this).scrollTop();
+			 
+			 // Make sure they scroll more than delta
+			 if(Math.abs(last_st - st) <= delta)
+				  return;
+			 
+			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
+			 if (st > last_st && st > navbarHeight){
+				$('header').removeClass('nav-down').addClass('nav-up');							  
+			 
+			 } else {
+				  if(st + $(window).height() < $(document).height()) {
+						$('header').removeClass('nav-up').addClass('nav-down');
+				  }	  
+			 }
+			 
+			 last_st = st;	
+		}
+		</script>
 				
 		<!-- verlok lazy load - don't use when owl carousel is used -->
 		<script>
@@ -4106,15 +4106,16 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		
 		// add class'snap' if not touch
 		if(is_touch_device()) {				
-		$('#about').not('.ignore').addClass('snap');
+		//$('#about').not('.ignore').addClass('snap');
 		}	
 		else {
-		$('.section-container, #akg .portfolio-section').not('.ignore').addClass('snap');
-		}	
-		
+		$('.keen-slider').not('.ignore').addClass('snap');
 		$( '.snap' ).scrollSnap({
 		  //speed: 200
 		});
+		}	
+		
+
 		
 		</script>
 
