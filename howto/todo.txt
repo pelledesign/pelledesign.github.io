@@ -7,16 +7,17 @@ function mobile (
 )
 
 function both (
+fix lazy container again
+byt till snyggare typsnitt
+Minimize CLS lazy load
 choppy transition anmatio due to lazy load of iframes
 photo style as in bookmark
 swipe body up down xr?
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
-speed mobile: srcsets	https://stackoverflow.com/questions/19634463/what-is-an-srcset-attribute-in-img-tag-and-how-to-use-it#:~:text=srcset%20allows%20you%20to%20define,on%20the%20actual%20device's%20resolution.&text=The%20actual%20width%20of%20the,%2C%201.5x%20%2C%202x%20etc.
 webconfig css				
 p-logo-new fixed?
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
 process
-lazyload svg? for fills etc
 lek med starka färger
 )
 
@@ -60,6 +61,7 @@ update pdf portfolio
  snyggare loads / animations - slide w/ several owl-lazy's? 
 optimzed bootstrap code 
 enable vertical scrolling on tall xr
+speed mobile: srcsets	https://stackoverflow.com/questions/19634463/what-is-an-srcset-attribute-in-img-tag-and-how-to-use-it#:~:text=srcset%20allows%20you%20to%20define,on%20the%20actual%20device's%20resolution.&text=The%20actual%20width%20of%20the,%2C%201.5x%20%2C%202x%20etc. 
  
 watch .git
 
