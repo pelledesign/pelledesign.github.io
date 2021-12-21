@@ -2,6 +2,8 @@
 	$(function(){	   
 	$(".p-logo-new").load("images/icons/p-logo-new.svg");
 	  $(".text-logo-svg").load("images/icons/text-logo.svg"); 
+	  $(".thecuts").load("images/icons/thecuts.svg");
+	  $(".thecuts2").load("images/icons/thecuts2.svg").addClass('loaded');
 	  $(".next-play-circle").load("images/icons/next_play_circle.svg"); 			
 	  //$(".zoom-icon").load("images/icons/zoom-icon.svg"); 		
 	  $(".akg-logo").load("akg/images/akg-logo.svg"); 			

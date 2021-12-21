@@ -18876,3 +18876,12 @@ img:not([src]):not([srcset]) {
 }
 
 /* .svgloader svg {fill:red;} */
+
+.thecuts2 {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.thecuts2.loaded {
+opacity: 1;
+}
