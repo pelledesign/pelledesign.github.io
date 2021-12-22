@@ -18724,9 +18724,9 @@ display:none;
   height: 100px;
 } */
 
-img.lazy, iframe.lazy {
+img.lazy, iframe.lazy, img.keen-lazy, iframe.keen-lazy {
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 1.5s;
 }
 
 img.apa, iframe.apa {
@@ -18735,7 +18735,7 @@ img.apa, iframe.apa {
 }
 
 
-img.loaded, iframe.loaded {
+img.loaded, iframe.loaded, img.keen-lazy.loaded, iframe.keen-lazy.loaded {
 opacity: 1;
 }
 
