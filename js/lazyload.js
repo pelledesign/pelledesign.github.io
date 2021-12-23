@@ -14,7 +14,7 @@
 		deviceThreshold = 300;
 		}
 		else {
-		deviceThreshold = 1000;
+		deviceThreshold = 500;
 		}
 
 ! function(n, t) {

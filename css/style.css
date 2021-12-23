@@ -18729,13 +18729,9 @@ img.lazy, iframe.lazy, img.keen-lazy, iframe.keen-lazy {
   transition: opacity 1.5s;
 }
 
-img.apa, iframe.apa {
-  opacity: 0;
-  transition: opacity 1s;
-}
 
 
-img.loaded, iframe.loaded, img.keen-lazy.loaded, iframe.keen-lazy.loaded {
+img.loaded, iframe.loaded, img.keen-lazy.keen-loaded, iframe.keen-lazy.keen-loaded {
 opacity: 1;
 }
 
