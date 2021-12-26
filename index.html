@@ -224,11 +224,12 @@
 		</div> -->
 				
 		<!-- hero -->
-<!-- 		<div id="hero-container" class="col-full vh100">
+		<div id="hero-container" class="portfolio-section h-auto col-full">
 			<div class="row c-all hw100 m0">
-				<div class="col-lg-6 h100">
+				<div class="col-lg-12 h100">
 				<div class="about-slider keen x-theme">		 
-							<div class="slide full text-box  hw100" style="min-width: 100%; max-width: 100%">
+							<div class="slide full text-box  hw100 col-lg-6" style="min-width: 100%; max-width: 100%">
+							  <div class="col-lg-6 mr-auto ml-auto">
 								<span class=" d-block text-uppercase text-secondary">About</span>
 								<h2 class="mb-4">I'm an <strong>Industrial Designer</strong> Who Brings Your Ideas Alive</h2>					  
 								<p>I am Pelle Skogsberg. <br>With 10 years of experience in product design, my background includes designing products for brands such as 
@@ -238,6 +239,7 @@
 								<a href="https://www.haglofs.com/" target="_blank"><strong>Haglöfs</strong></a> - in various fields like consumer products, sports products, shoe design, audio products & more.</p>						  
 								<p class="more-btn-text btn btn-outline">Learn More</p>	
 								<a class="btn btn-outline" href="#portfolio">Latest Work</a>	
+							  </div>
 							</div>
 							<div class="slide full text-box  hw100"  style="min-width: 100%; max-width: 100%">
 								<span class="xs-down-h d-block text-uppercase text-secondary">Process</span>
@@ -295,7 +297,7 @@
 				</div>
 				</div>			
 			</div>
-		</div>	 -->							
+		</div>								
 
 
 		<!-- start latest work --> 
@@ -632,7 +634,21 @@
 						<div class="slide dark" style="min-width: 100%; max-width: 100%">
 							<img src="" data-src="Converse/images/gallery/01.png" class="isvisible-lazy absolute cover " style="object-position: 50% 75%;">
 						</div>
+						
 						<div class="slide light iframe multiply" style="min-width: 100%; max-width: 100%">
+							<iframe 
+							data-src="Converse/webgl/pen_stopped.html"
+							class="keen-lazy unload multiply"																																						
+							frameborder="0"
+							scrolling="no">			 	 
+							</iframe>
+							<div class="ignore model-controls">
+								<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
+								<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
+							</div>	
+						</div>	
+
+<!-- 						<div class="slide light iframe multiply" style="min-width: 100%; max-width: 100%">
 							<iframe 
 							data-src="Converse/webgl/measurements.html"
 							class="keen-lazy unload multiply"																																						
@@ -643,8 +659,8 @@
 								<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
 								<div data-tooltip="#reload-model" onclick="reloadiframe()" class="info-icon ion-refresh"></div>	
 							</div>	
-						</div>	
-						<div class="slide iframe multiply textoverlay unload iframe-container" style="min-width: 100%; max-width: 100%">
+						</div>	 -->
+<!-- 						<div class="slide iframe multiply textoverlay unload iframe-container" style="min-width: 100%; max-width: 100%">
 							<span class="show-shaded btn btn-outline hide-this">Load 3d - 19mb</span>	
 							<div class="model-controls">
 								<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
@@ -668,7 +684,7 @@
 							scrolling="no"
 							>	
 							</iframe>	
-						</div>
+						</div> -->
 						<div class="slide row m0 light-theme" style="min-width: 100%; max-width: 100%">
 							<div class="col-lg-6 col-md-6 c-all textoverlay">
 								<img data-src="Converse/images/process/01.jpg" class="keen-lazy cover hw100" style="object-position: 100% 17%;">												
@@ -872,7 +888,25 @@
 							<div class="my-slider-progress-bar"></div>
 						</div>			
 					</div>
-				</div>				
+				</div>	
+<!-- 				<div class="col-lg-12" style="height:50vh;">
+					<div class="model-controls">
+						<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled invisible flip-in-y"></div>
+						<div data-tooltip="#reload-model"  class="info-icon ion-refresh invisible flip-in-y"></div>	 
+					</div>
+					<div class="c-all view-btn hide-this">									
+					</div>																
+					<iframe 
+					src=""
+					id="popup-iframe"
+					class="converse-wireframe-injec lazy hide-this multiply unload"
+					data-src="Converse/webgl/pen.html" 											
+					frameborder="0"
+					scrolling="no"
+					>	
+					</iframe>	
+				</div> -->
+				
 					<div class="section-hero x-theme">	
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12">								
@@ -881,6 +915,7 @@
 						</div>							  
 					</div>					
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">	
+					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -3745,7 +3780,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 			getBar.css({'width': barWidth + '%'})
 			}
 
-			var lastIndex = '0'
+			
 
 			var unloadIframe = function (){
 			var thisSlide = $(slider.slides[slider.track.details.rel]);
@@ -3774,45 +3809,67 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 			var dataSrc = thisSlide.find('iframe').attr('data-src');
 			console.log(dataSrc);
 			thisSlide.find('iframe').attr('src',dataSrc).removeClass('unloaded').addClass('unload');	
-			console.log('keen-reloaded: ',thisSlide.find('iframe').attr('src'));
-			//var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
-			//console.log(thisDataSplideSrc);
-			//thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');		
+			console.log('keen-reloaded: ',thisSlide.find('iframe').attr('src'));	
 			}			
-		}	
-		
+		}
+
+
+
 		var keenlazyLoadstart = function (){
 			var thisSlide = $(slider.slides[slider.track.details.rel]); 
 			var nextSlide = $(slider.slides[slider.track.details.rel +1]); 
 			var dataSrc = thisSlide.find('.keen-lazy').attr('data-src');
 			var dataSrcNext = nextSlide.find('.keen-lazy').attr('data-src');
 			thisSlide.find('.keen-lazy').each(function() {
-				dataSrc = $(this).attr('data-src'); // this will output the value for data-src in console
+				dataSrc = $(this).attr('data-src'); 
 				$(this).attr('src', dataSrc); 
 				console.log('keen-loaded: ', dataSrc);
 			})				
 			nextSlide.find('.keen-lazy').each(function() {
-				dataSrc = $(this).attr('data-src'); // this will output the value for data-src in console
+				dataSrc = $(this).attr('data-src');
 				$(this).attr('src', dataSrc); 
 				console.log('keen-loaded: ', dataSrc);
 			})	
 			}
 
+		var lastIndex = '0';
+
 		var keenlazyLoad = function (){
-			var dataSrc;
-			var nextSlide = $(slider.slides[slider.track.details.rel + 1]);
-			//var nextnextSlide = $(slider.slides[slider.track.details.rel + 2]);
+			
+			var thisSlide = $(slider.slides[slider.track.details.rel]);
+			var upcomingSlideIndex = slider.animator.targetIdx;	
+			var lastlastIndex;
+			var lastSlide = $(slider.slides[lastIndex]);
+			var nextIndex;			
+					
+			if (upcomingSlideIndex > lastIndex) {
+			lastlastIndex = lastIndex - 1;
+			nextIndex = upcomingSlideIndex + 1;
+			sliderDir = 'right';			
+			}
+			else {
+			lastlastIndex = lastIndex + 1;
+			nextIndex = upcomingSlideIndex - 1;	
+			sliderDir = 'left';	
+			}
+						
+			var nextSlide = $(slider.slides[nextIndex]);
+			var lastlastSlide = $(slider.slides[lastlastIndex]);
+			
+			console.log('Going to index:',upcomingSlideIndex, 'Upcoming index is:',nextIndex, 'Tail-index is:',lastIndex, 'Tail2-index is:',lastlastIndex, 'Slide direction is:',sliderDir);
+			
 			nextSlide.find('.keen-lazy').each(function() {
-				dataSrc = $(this).attr('data-src'); // this will output the value for data-src in console
+				var dataSrc = $(this).attr('data-src');
 				$(this).attr('src', dataSrc).removeClass('keen-lazy'); 
 				console.log('keen-loaded: ', dataSrc);
 			})
-			//var dataSrcNext = nextnextSlide.find('.keen-lazy').attr('data-src');
-			//console.log(dataSrc);
-			//nextSlide.find('.keen-lazy').attr('src', dataSrc);
-			//nextnextSlide.find('.keen-lazy').attr('src', dataSrcNext).addClass('pellelazyloaded');
-			}			
 
+	
+			lastIndex = upcomingSlideIndex;			
+			lastsliderDir = sliderDir;			
+			
+		}	
+	
 			var checkTheme;
 			
 			var check_theme = function (){
@@ -3861,7 +3918,7 @@ keenlazyLoadstart();
 		  slider.on("slideChanged", () => {
 			 updateClasses()
 			 initBar();	  
-			 unloadIframe()
+			 keenlazyLoad();
 			 
 			 var thisSlider = $(slider.container);
 			 var thisSlide = $(slider.slides[slider.track.details.rel]);
@@ -3880,7 +3937,7 @@ keenlazyLoadstart();
 			 thisSlider.removeClass('dark-theme pop-theme light-theme medium-theme').addClass(checkTheme + '-theme');
 			 }
 			 //console.log(checkTheme);
-				keenlazyLoad();			 
+							 
 		  })
 		  slider.on("animationEnded", () => {
 		//console.log('ended');
@@ -3926,7 +3983,7 @@ keenlazyLoadstart();
 			let splideElement = sliders[i];			  				  
 			var slider = new KeenSlider( splideElement , {
 			  loop: false,
-			  mode: "free",
+			  mode: "free-snap", //'snap' | 'free' | 'free-snap'
 			  rtl: false,
 			  slides: { perView: "auto" },
 			  }, [navigation2]) //, myscroll		  
@@ -3937,12 +3994,12 @@ keenlazyLoadstart();
 		}
 
 
-		//var about_slider = new KeenSlider( '.about-slider' , {
-		  //loop: false,
-		 // mode: "free",
-		 // rtl: false,
-		  //slides: { perView: "1" },
-		  //}, [buttonNav])
+		var about_slider = new KeenSlider( '.about-slider' , {
+		  loop: false,
+		  mode: "free",
+		  rtl: false,
+		  slides: { perView: "1" },
+		  }, [buttonNav])
 		
 		
 		var reviews_slider = new KeenSlider( '.reviews-slider' , {
@@ -4379,9 +4436,9 @@ keenlazyLoadstart();
 						$('.checkvisibility').each(function(){
 							 if ( $(this).is(":in-viewport") ){
 							 
-							 var secondSlide = $(this).find('.slide').eq(1).find('.isvisible-lazy');
-							 secondSlide.each(function() {
-							 if (!secondSlide.hasClass('isvisible-lazyloaded')) {;
+							 var secondSlide = $(this).find('.slide').eq(1);
+							 secondSlide.find('.isvisible-lazy').each(function() {
+							 if (!secondSlide.hasClass('isvisible-lazyloaded')) {
 							 dataSrc = $(this).attr('data-src'); // this will output the value for data-src in console
 							 $(this).attr('src', dataSrc).addClass('isvisible-lazyloaded'); 
 							 console.log('isvisible lazyloaded: ', dataSrc);

@@ -1,0 +1,43 @@
+		var unloadIframe2 = function (){
+		
+			var thisSlide = $(slider.slides[slider.track.details.rel]);
+			var upcomingSlideIndex = slider.animator.targetIdx;	
+			var direction;
+			var lastlastIndex;
+			
+			if (upcomingSlideIndex > lastIndex) {
+			direction = 'right';
+			lastlastIndex = lastIndex - 1;
+			console.log('going right');			
+			}
+			else {
+			direction = 'left';
+			lastlastIndex = lastIndex + 1;
+			console.log('going left');
+			}
+			
+			console.log('going to: ',upcomingSlideIndex, 'last slide was: ',lastIndex, 'last last slide was: ',lastlastIndex);
+			var lastSlide = $(slider.slides[lastIndex]);
+			var lastlastSlide = $(slider.slides[lastlastIndex]);
+			//console.log('last slide was: ',lastSlide);
+			
+			if (lastSlide.find('iframe').hasClass('unload') && !lastSlide.find('iframe').hasClass('unloaded')) {	
+			var thisSrc = lastSlide.find('iframe').attr('src');		
+			lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy').addClass('unloaded');
+			var lastDataSrc = lastSlide.find('iframe').attr('data-src');
+			console.log('keen-unloaded: ', lastDataSrc);			
+			}
+			if (lastlastSlide.find('iframe').hasClass('unload')  && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
+			console.log('dd');
+			var thisSrc = lastlastSlide.find('iframe').attr('data-src');
+			lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+			var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
+			console.log('keen-unloaded: ', lastlastSlideDataSrc);			
+			}			
+			else {		
+			}
+			lastIndex = upcomingSlideIndex;
+
+			
+
+		}	
