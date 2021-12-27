@@ -14903,16 +14903,16 @@ figure img {
 
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (max-width: 575px) {
   .container {
-  padding-right: 15px;
-  padding-left: 15px;	  
+  padding-right: 8px;
+  padding-left: 8px;	  
     max-width: 540px;
   }
 }
