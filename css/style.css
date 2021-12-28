@@ -3695,6 +3695,24 @@ max-width: 100% !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
+.dark-theme .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #333;
+  background-clip: padding-box;
+  border: 1px solid #3c3c3c;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
 @media screen and (prefers-reduced-motion: reduce) {
   .form-control {
     -webkit-transition: none;
@@ -5903,6 +5921,41 @@ input[type="button"].btn-block {
 
 /* ---------------------------------------------------------------------------		navbar 		----------------------------------------------------------------------------------- */	
 
+header .navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: 400;
+  color: #fff;
+}
+
+header .navbar-brand.absolute {
+  position: absolute;
+}
+
+@media (max-width: 991.98px) {
+  header .navbar-brand.absolute {
+    position: relative;
+  }
+}
+
+header .navbar-brand span {
+  color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+  header .navbar-nav {
+    padding-left: 0 !important;
+	 height:calc(100vh - 50px);
+  }
+}
+
+@media (min-width: 768px) {
+  header .navbar-nav {
+    padding-left: 0 !important;
+	 height: auto;
+  }
+}
+
 .navbar {
   position: relative;
   display: -webkit-box;
@@ -5961,6 +6014,14 @@ input[type="button"].btn-block {
   list-style: none;
 }
 
+
+@media (min-width: 768px) {
+.navbar-nav {
+  -ms-flex-direction: initial;
+  flex-direction: initial;
+}
+}
+
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
@@ -5992,6 +6053,12 @@ input[type="button"].btn-block {
 
 .navbar-collapse.show {
 height:calc(100vh - 46px);
+}
+
+@media (min-width: 768px) {
+.navbar-collapse.show {
+height:auto;
+}
 }
 
 .navbar-toggler {
@@ -11429,33 +11496,7 @@ header.dark-theme {
 
 
 
-header .navbar-brand {
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  font-weight: 400;
-  color: #fff;
-}
 
-header .navbar-brand.absolute {
-  position: absolute;
-}
-
-@media (max-width: 991.98px) {
-  header .navbar-brand.absolute {
-    position: relative;
-  }
-}
-
-header .navbar-brand span {
-  color: #fff;
-}
-
-@media (max-width: 1199.98px) {
-  header .navbar-nav {
-    padding-left: 0 !important;
-	 height:calc(100vh - 50px);
-  }
-}
 
 /* @media (max-width: 1199.98px) {
   header {
@@ -14370,7 +14411,8 @@ background-color: var(--contrast);
 
 nav.dark-theme {
 /* background-color: var(--contrast-dark); */
-background-color: rgb(33 33 33 / 90%);
+/* background-color: rgb(33 33 33 / 90%); */
+background-color: #212121;
 }
 
 .dark-theme .hide-on-click{
@@ -14911,8 +14953,8 @@ figure img {
 
 @media (max-width: 575px) {
   .container {
-  padding-right: 8px;
-  padding-left: 8px;	  
+  padding-right: 3px;
+  padding-left: 3px;	  
     max-width: 540px;
   }
 }
@@ -16607,6 +16649,7 @@ background-color: rgba(228, 229, 231,.9);
 
 
 .dark-theme.overlay a,
+.dark-theme label,
 .dark-theme.overlay  h1,
 .dark-theme.overlay h2,
 .dark-theme.overlay h3,
@@ -17877,7 +17920,7 @@ border-bottom: 1px solid #000;
 
 
 @media (max-width: 1199.98px) {
-body.lock-scroll {
+	body.lock-scroll {
   overflow: hidden;
 }
 }
@@ -18452,7 +18495,14 @@ padding-left:9px;
 
 .horizontal-snap > img, .horizontal-snap > .item {
   scroll-snap-align: center;
-  height:100vw;
+  height:75vh;
+	width:100vw;
+}
+@media (orientation:landscape) {
+.horizontal-snap > img, .horizontal-snap > .item {
+  scroll-snap-align: center;
+  height:100vh;
+
 }
 
 .horizontal-snap > .item {
@@ -18460,7 +18510,7 @@ position:relative;
 }
 
 .horizontal-snap img, .horizontal-snap .item {
-  width: 90vw;
+/*   width: 90vw; */
   max-width: none;
   object-fit: cover;
   /* border-radius: .5rem; */
@@ -18881,4 +18931,10 @@ img:not([src]):not([srcset]) {
 
 .thecuts2.loaded {
 opacity: 1;
+}
+
+@media (max-width:575px) { 
+.thecuts2 {
+max-width:45%;	
+}
 }

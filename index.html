@@ -188,20 +188,27 @@
 			  </button>						  
 			  <div class="collapse navbar-collapse" id="navbarsExample06">
 				 <ul class="navbar-nav pl-md-5 ml-auto c-all">			
-					<li class="nav-item lg-up-h">
+					<li class="nav-item">
 					  <a class="nav-link go-to-about" href="index.html#about">About</a>
 					</li>						 
-					<li class="nav-item lg-up-h">
+					<li class="nav-item">
 					  <a class="nav-link" href="index.html#portfolio">Latest Work</a>
 					</li>	
-					<li class="nav-item lg-up-h">									
+					<li class="nav-item">									
 					  <a href="index.html#designprocess-slider" title="Project Info" class="nav-link">How I Work</a>
 					</li>			
-					<li class="nav-item lg-up-h">
+					<li class="nav-item">
 					  <a class="nav-link go-to-services" href="#about">Services</a>
 					</li>			
-					<li class="nav-item lg-up-h">
+					<li class="nav-item">
 					  <a class="nav-link open-popup" href="#contact-popup">Contact</a>              
+					</li>
+<!-- 					<li class="nav-item">
+					  <a class="nav-link open-popup" href="#pdf">Pdf</a>              
+					</li> -->
+					<li class="nav-item">
+					  <a class="nav-link open-popup" href="#pdf">Pdf</a>              
+					  <!-- <a class="nav-link" href="pdf/Design_Work_by_Pelle Skogsberg.pdf">Pdf</a>               -->
 					</li>		
 					<li class="nav-item flex-xl-up c-lg">
 					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
@@ -458,7 +465,7 @@
 								</div>			
 							</div>
 						</div>						
-						<div class="horizontal-snap m0 ls-h">
+						<div class="horizontal-snap m0">
 						
 							<div class="item zoomable textoverlay medium-theme">
 								<img src="" data-src="akg/images/gallery/01.png" class="lazy cover">		
@@ -1015,7 +1022,7 @@
 				</div>
 				<div class="portfolio-section">					
 				<div class="navigation-wrapper">		
-					<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+					<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh;">
 						<div class="section-logo poc-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 						<div class="slide" style="min-width: 100%; max-width: 100%">
 							<div class="row m0 h100">	
@@ -1043,7 +1050,7 @@
 							</div>
 						</div>
 						<div class="slide dark-theme " style="min-width: calc(75vh * (2846 / 1600)); max-width: calc(75vh * (2846 / 1600)))"><img data-src="poc/images/process/02.png" class="isvisible-lazy" style="object-position: left;"></div>							
-						<div class="slide" style="min-width: 100%; max-width: 100%">							
+						<div class="slide touch-remove" style="min-width: 100%; max-width: 100%">							
 							<div class="hide-on-click desktop-hidden">											
 								<div class="text-animate c-all txt-c">
 									<div class="h-auto">
@@ -1133,7 +1140,35 @@
 									</div>
 								</div>
 							</div>										
-						</div>						
+						</div>	
+						<div class="horizontal-snap m0 xl-up-h">
+						
+							<div class="item zoomable textoverlay medium-theme">
+								<img src="" data-src="poc/images/process/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/gallery/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/gallery/03.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/gallery/04.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/gallery/05.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+						  <img data-src="akg/images/gallery/01.png" class="lazy medium-theme">
+						  <img data-src="akg/images/gallery/02.png"  class="lazy medium-theme">
+						  <img data-src="akg/images/gallery/03.png"  class="lazy medium-theme">
+						  <img data-src="akg/images/gallery/04.png"  class="lazy medium-theme">
+						  <img data-src="akg/images/gallery/05.png"  class="lazy medium-theme">
+						</div>							
 						<div class="col-lg-4 col-md-6 col-xs-6 c-all textoverlay h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="poc/xr//0_7.png" class="lazy cover " style="object-position: 100% 17%;">	
@@ -3253,7 +3288,7 @@
 				<iframe
 				id=""
 				class="lazy"
-				data-src="pdf/Design_Work_by_Pelle Skogsberg.pdf#view=FitH"
+				data-src="pdf/Design_Work_by_Pelle Skogsberg.pdf"
 				style="padding:5%;">
 				</iframe>				
 			</div>
@@ -3278,7 +3313,7 @@
 $('img, iframe').attr('src', 'images/loaders/three-dots.svg')		
 		</script>	 -->
 		<!-- tooltips -->
-<!-- 		<div id="tooltips">
+		<div id="tooltips">
 			<div id="icon-project-info-popup">
 			Project Info
 			</div>
@@ -3339,16 +3374,16 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 					<p>Use the color selector to explore different color, material and finish configurations</p>						  					  						  
 				</div>  
 			</div>
-			<div id="contact-popup" class="popup mfp-hide c-lg light-theme auto-scroll invisible zoom-in">
+			<div id="contact-popup" class="popup mfp-hide c-lg x-theme auto-scroll">
 				<div class="c-lg">
 					<div class="container">
 						<div class="section" id="contact">
 							<div>
-								<h3 class="mb-4 s-t align-items-center justify-content-center txt-c">Contact&nbsp; <strong>Me</strong></h3>
-								<div class="row">
+								<h3 class="mb-4 s-t align-items-center justify-content-center txt-c">Contact<!-- &nbsp; <strong>Me</strong> --></h3>
+								<div class="row m0">
 									<div class="col-md mb-5 order-2 text-box">
 										<form action="https://formspree.io/xknqbela" method="post">
-											<div class="row">
+											<div class="row m0">
 												<div class="col-md-6 form-group">
 													 <label for="name">Name</label>
 													 <input type="text" id="name" name="name" class="form-control">
@@ -3358,23 +3393,23 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 													 <input type="text" id="phone" name="phone" class="form-control">
 												</div>
 											</div>
-											<div class="row">
+											<div class="row m0">
 												<div class="col-md-12 form-group">
 												</div>
 											</div>
-											<div class="row">
+											<div class="row m0">
 												<div class="col-md-12 form-group">
 													 <label for="email">Email</label>
 													 <input type="email" id="email" name="_replyto" class="form-control">
 												</div>
 											</div>
-											<div class="row">
+											<div class="row m0">
 												<div class="col-md-12 form-group">
 													 <label for="message">Write Message</label>
 													 <textarea name="message" id="message" class="form-control" cols="30" rows="8"></textarea>
 												</div>
 											</div>
-											<div class="row">
+											<div class="row m0">
 												<div class="col-md-6-left form-group">
 													<input type="submit" value="Send Message" class="btn btn-primary px-3 py-3">
 												</div>
@@ -3435,7 +3470,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 			<div id="renderings-info">
 			<p> Renderings are as opposed to rough sketches, more detailed drawings that are typically drawn when we want to explore a concept further and more in detail - to  explain functions, form, color, material and so on.</p>
 			</div>
-		</div> -->
+		</div>
 		
 		<!-- up button -->
 		<!-- <button onclick="topFunction()" id="myBtn" title="Go to top"><div class="ion-android-arrow-dropup-circle md-down-h"></div></button> -->
@@ -4190,7 +4225,7 @@ keenlazyLoadstart();
 		$('header a.nav-link').on('click',  function(){
 			$('.navbar-collapse').removeClass('show');
 			$('.navbar-toggler').removeClass('open').addClass('collapsed');
-			$('body').toggleClass('lock-scroll');
+			//$('body').toggleClass('lock-scroll');
 		});
 		</script>
 
@@ -4239,6 +4274,10 @@ keenlazyLoadstart();
 		<script>
 
 		var lazyLoadInstance = new LazyLoad({
+		});
+
+		var lazyLoadInstancePdf = new LazyLoad({
+		container: document.querySelector("#pdf")
 		});
 
 
