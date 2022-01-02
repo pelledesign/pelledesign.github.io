@@ -7,6 +7,7 @@ function mobile (
 )
 
 function both (
+if refreshed browser and slider is in view, isvisible lazyload wont's show ass this is depending on a scroll action
 
 animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes
 show on click..

@@ -18914,8 +18914,12 @@ max-width:500px !important;
 transform: scaleX(-1);
 	 }
 	 .arrow.arrow--right {
-
     right: 0.5em;
+	 }
+@media (max-width:991px) { 
+	 .arrow.arrow--left, .arrow.arrow--right {
+    display:none;
+	 }
 	 }
 /* .arrow--disabled {
 opacity:0;	
