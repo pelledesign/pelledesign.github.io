@@ -18049,6 +18049,7 @@ display: -ms-flexbox;
 display: flex;
 -ms-flex-wrap: wrap;
 flex-wrap: wrap;
+justify-content: center;
 
 }
 
@@ -18487,23 +18488,40 @@ padding-left:9px;
   width: 100%;
   overflow-y: auto;
   overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
+  /* scroll-snap-type: x proximity; */
+  scroll-snap-type: unset;
   margin-bottom: 1rem;
   position:relative;
   scroll-behavior: smooth;
 }
 
-.horizontal-snap > img, .horizontal-snap > .item {
-  scroll-snap-align: center;
-  height:75vh;
-	width:100vw;
+.horizontal-snap img{
+width: auto;
 }
-@media (orientation:landscape) {
+
+@media (orientation:portrait) {
+.horizontal-snap  {
+  scroll-snap-align: center;
+  height:50vh;
+	width:100%;
+	display:flex;
+}
+}
+
+@media (orientation:portrait) {
+.horizontal-snap.small {
+  scroll-snap-align: center;
+  height:25vh;
+	width:100%;
+	display:flex;
+}
+}
+/* @media (orientation:landscape) {
 .horizontal-snap > img, .horizontal-snap > .item {
   scroll-snap-align: center;
   height:100vh;
 
-}
+} */
 
 .horizontal-snap > .item {
 position:relative;
