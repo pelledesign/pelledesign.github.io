@@ -18424,7 +18424,7 @@ min-width: 100%;
 }
 
 .config-auto {
-min-height:40vh;
+/* min-height:40vh; */
 }
 
 .xrtext {
@@ -18490,7 +18490,7 @@ padding-left:9px;
   overscroll-behavior-x: contain;
   /* scroll-snap-type: x proximity; */
   scroll-snap-type: unset;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   position:relative;
   scroll-behavior: smooth;
 }
@@ -18508,7 +18508,26 @@ width: auto;
 }
 }
 
+
 @media (orientation:portrait) {
+.horizontal-snap.small {
+  scroll-snap-align: center;
+  height:25vh;
+	width:100%;
+	display:flex;
+}
+}
+
+@media (orientation:landscape) {
+.horizontal-snap  {
+  scroll-snap-align: center;
+  height:50vh;
+	width:100%;
+	display:flex;
+}
+}
+
+@media (orientation:landscape) {
 .horizontal-snap.small {
   scroll-snap-align: center;
   height:25vh;
