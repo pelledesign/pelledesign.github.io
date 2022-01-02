@@ -441,8 +441,7 @@
 										<div class="c-all view-btn overlay img-opacity hide-this z999">												
 										</div>							
 										<iframe 
-										id="showonclick"
-										class="showonclick m-h unload-no-reload"
+										class="showonclick unload m-h"
 										data-src="akg/webgl/rendered.html"		
 										frameborder="0"
 										scrolling="no">	 
@@ -3566,198 +3565,19 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 		document.write('<script src="js/keen-slider.js"><\/script>');
 		}
 		</script>
+		
+		<!-- scroll down 1px on load/refresh nto activate isvisible func -->
+		<script>
+			$(window).on('load', function(){
+			$(window).scrollTop($(window).scrollTop()+1);
+			});
+		</script>
 
 		<!-- keen slider -->
 		<script>
-
-		<!-- navigation -->
-		function navigation(slider) {
-		  let wrapper, dots, arrowLeft, arrowRight
-
-		  function markup(remove) {
-			 wrapperMarkup(remove)
-			 dotMarkup(remove)
-			 arrowMarkup(remove)
-		  }
-
-		  function removeElement(elment) {
-			 elment.parentNode.removeChild(elment)
-		  }
-		  function createDiv(className) {
-			 var div = document.createElement("div")
-			 var classNames = className.split(" ")
-			 classNames.forEach((name) => div.classList.add(name))
-			 return div
-		  }
-
-		  function arrowMarkup(remove) {
-			 if (remove) {
-				removeElement(arrowLeft)
-				removeElement(arrowRight)
-				return
-			 }
-			 arrowLeft = createDiv("arrow arrow--left")
-			 arrowLeft.addEventListener("click", () => slider.prev())
-			 arrowRight = createDiv("arrow arrow--right")
-			 arrowRight.addEventListener("click", () => slider.next())
-
-			 wrapper.appendChild(arrowLeft)
-			 wrapper.appendChild(arrowRight)
-		  }
-
-		  function wrapperMarkup(remove) {
-			 if (remove) {
-				var parent = wrapper.parentNode
-				while (wrapper.firstChild)
-				  parent.insertBefore(wrapper.firstChild, wrapper)
-				removeElement(wrapper)
-				return
-			 }
-			 wrapper = createDiv("navigation-wrapper")
-			 slider.container.parentNode.appendChild(wrapper)
-			 wrapper.appendChild(slider.container)
-			 wrapper.appendChild(slider.container)
-		  }
-
-		  function dotMarkup(remove) {
-			 if (remove) {
-				removeElement(dots)
-				return
-			 }
-			 dots = createDiv("dots")
-			 slider.track.details.slides.forEach((_e, idx) => {
-				var dot = createDiv("dot")
-				dot.addEventListener("click", () => slider.moveToIdx(idx))
-				dots.appendChild(dot)
-			 })
-			 wrapper.appendChild(dots)
-		  }
-
-		  function updateClasses() {
-			 var slide = slider.track.details.rel
-			 slide === 0
-				? arrowLeft.classList.add("arrow--disabled")
-				: arrowLeft.classList.remove("arrow--disabled")
-			 slide === slider.track.details.slides.length - 1
-				? arrowRight.classList.add("arrow--disabled")
-				: arrowRight.classList.remove("arrow--disabled")
-			 Array.from(dots.children).forEach(function (dot, idx) {
-				idx === slide
-				  ? dot.classList.add("dot--active")
-				  : dot.classList.remove("dot--active")
-			 })
-		  }
-
-			
-			var initBar = function (){
-			var thisSlider = $(slider.container);
-			var getBar = thisSlider.closest('.navigation-wrapper').find('.my-slider-progress-bar');
-			var end = slider.track.details.maxIdx;
-			var sliderIndex = slider.track.details.rel + 1;
-			var barWidth = (sliderIndex / end) * 100;
-			getBar.css({'width': barWidth + '%'})
-			}
-
-			var lastIndex = '0'
-
-			var unloadIframe = function (){
-			var thisSlide = $(slider.slides[slider.track.details.rel]);
-			var upcomingSlideIndex = slider.animator.targetIdx;	
-			//var thisSlideIndex = slider.track.details.rel;
-			console.log('going to: ',upcomingSlideIndex, 'last slide was: ',lastIndex);
-			var lastSlide = $(slider.slides[lastIndex]);
-			//console.log('last slide was: ',lastSlide);
-			
-			if (lastSlide.find('iframe').hasClass('unload')) {
-			console.log('last slide got iframe');		
-			var thisSrc = lastSlide.find('iframe').attr('src');
-			console.log('last slide has class unload and its src is: ', thisSrc);
-			lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).removeClass('unload').addClass('unloaded');			
-			}
-			else {		
-			console.log('last slide got no iframe');
-			}
-			lastIndex = upcomingSlideIndex;
-
-			
-			if (thisSlide.find('iframe').hasClass('unloaded')) {
-			console.log('got class unloaded');
-			console.log(thisSlide);			
-			var dataSrc = thisSlide.find('iframe').attr('data-src');
-			console.log(dataSrc);
-			thisSlide.find('iframe').attr('src',dataSrc).removeClass('unloaded').addClass('unload');	
-			//var thisDataSplideSrc = thisIframe.attr('data-splide-lazy');
-			//console.log(thisDataSplideSrc);
-			//thisIframe.attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');		
-			}			
-		}	
-
-			var checkTheme;
-			
-			var check_theme = function (){
-			var thisSlider = $(slider.container);
-			if(thisSlider.hasClass('pop-theme')){
-				checkTheme = 'pop'; 				
-			 }
-			 if(thisSlider.hasClass('light-theme')){
-				checkTheme = 'light'; 			
-			 }
-			 if(thisSlider.hasClass('dark-theme')){
-				checkTheme = 'dark'; 				
-			 }
-			 if(thisSlider.hasClass('medium-theme')){
-				checkTheme = 'medium'; 				
-			 }			
-		}	
 		
-					
-		  slider.on("created", () => {
-			 markup()
-			 updateClasses()
-			 console.log('');
-			 initBar();
-			 check_theme();
-			 var thisSlider = $(slider.container);
-			 thisSlider.closest('.navigation-wrapper').find('.arrow--left').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');
-			 thisSlider.closest('.navigation-wrapper').find('.arrow--right').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');			 
-			 //console.log(checkTheme);
-		  })
-		  slider.on("optionsChanged", () => {
-			 console.log(2)
-			 markup(true)
-			 markup()
-			 updateClasses()
-		  })
-		  slider.on("slideChanged", () => {
-			 updateClasses()
-			 initBar();	  
-			 unloadIframe()
-			 
-			 var thisSlider = $(slider.container);
-			 var thisSlide = $(slider.slides[slider.track.details.rel]);
-
-			 if(thisSlide.hasClass('pop') && checkTheme != 'pop-theme'){
-			 thisSlider.removeClass('light-theme dark-theme medium-theme').addClass('pop-theme');
-			 }
-			 else if(thisSlide.hasClass('dark') && checkTheme != 'dark-theme'){
-			 thisSlider.removeClass('light-theme pop-theme medium-theme').addClass('dark-theme');
-			 }
-			 else if(thisSlide.hasClass('light') && checkTheme != 'light-theme'){
-			 thisSlider.removeClass('dark-theme pop-theme medium-theme').addClass('light-theme');
-			 }
-			 else {
-			 console.log('slide has NO theme');
-			 thisSlider.removeClass('dark-theme pop-theme light-theme medium-theme').addClass(checkTheme + '-theme');
-			 }
-			 //console.log(checkTheme);
-		  })
-
-		  slider.on("destroyed", () => {
-			 markup(true)
-		  })
-		  
-		}
-		<!------------------------------------------------------- nav 2 --------------------------------------------------------------------->		
+		
+		
 		function navigation2(slider) {
 		  let wrapper, dots, arrowLeft, arrowRight
 
@@ -3834,7 +3654,6 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 				  : dot.classList.remove("dot--active")
 			 })
 		  }
-
 			
 			var initBar = function (){
 			var thisSlider = $(slider.container);
@@ -3844,42 +3663,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 			var barWidth = (sliderIndex / end) * 100;
 			getBar.css({'width': barWidth + '%'})
 			}
-
-			
-
-			var unloadIframe = function (){
-			var thisSlide = $(slider.slides[slider.track.details.rel]);
-			var upcomingSlideIndex = slider.animator.targetIdx;	
-			//var thisSlideIndex = slider.track.details.rel;
-			//console.log('going to: ',upcomingSlideIndex, 'last slide was: ',lastIndex);
-			var lastSlide = $(slider.slides[lastIndex]);
-			//console.log('last slide was: ',lastSlide);
-			
-			if (lastSlide.find('iframe').hasClass('unload')) {
-			//console.log('last slide got iframe');		
-			var thisSrc = lastSlide.find('iframe').attr('src');
-			//console.log('last slide has class unload and its src is: ', thisSrc);
-			lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).removeClass('unload').addClass('unloaded');
-			var lastDataSrc = lastSlide.find('iframe').attr('data-src');
-			console.log('keen-unloaded: ', lastDataSrc);			
-			}
-			else {		
-			//console.log('last slide got no iframe');
-			}
-			lastIndex = upcomingSlideIndex;
-
-			
-			if (thisSlide.find('iframe').hasClass('unloaded')) {
-			//console.log(thisSlide);			
-			var dataSrc = thisSlide.find('iframe').attr('data-src');
-			console.log(dataSrc);
-			thisSlide.find('iframe').attr('src',dataSrc).removeClass('unloaded').addClass('unload');	
-			console.log('keen-reloaded: ',thisSlide.find('iframe').attr('src'));	
-			}			
-		}
-
-
-
+		
 		var keenlazyLoadstart = function (){
 			var thisSlide = $(slider.slides[slider.track.details.rel]); 
 			var nextSlide = $(slider.slides[slider.track.details.rel +1]); 
@@ -3906,6 +3690,7 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 			var lastlastIndex;
 			var lastSlide = $(slider.slides[lastIndex]);
 			var nextIndex;			
+			var lastsliderDir = 'right';			
 					
 			if (upcomingSlideIndex > lastIndex) {
 			lastlastIndex = lastIndex - 1;
@@ -3928,11 +3713,46 @@ $('img, iframe').attr('src', 'images/loaders/three-dots.svg')
 				$(this).attr('src', dataSrc).removeClass('keen-lazy'); 
 				console.log('keen-loaded: ', dataSrc);
 			})
-
-	
-			lastIndex = upcomingSlideIndex;			
-			lastsliderDir = sliderDir;			
 			
+			<!-- if same direction - unload tail 1 -->
+			if (lastsliderDir == sliderDir){
+			console.log('same');
+				//if (lastSlide.find('iframe').hasClass('unload') && !lastSlide.find('iframe').hasClass('unloaded')) {	
+				//var thisSrc = lastSlide.find('iframe').attr('data-src');
+				//lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				//var lastSlideDataSrc = lastSlide.find('iframe').attr('data-src');
+				//console.log('keen-unloaded (tail 1): ', lastSlideDataSrc);			
+				//}
+
+				if (lastlastSlide.find('iframe').hasClass('unload') && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
+				var thisSrc = lastlastSlide.find('iframe').attr('data-src');
+				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
+				console.log('keen-unloaded (tail 2): ', lastlastSlideDataSrc);			
+				}
+				
+			}
+			
+			<!-- if changed direction - unload tail 1  and tail 2 if they're not already unloaded-->
+			else {
+			console.log('different');
+				
+				//if (lastSlide.find('iframe').hasClass('unload') && !lastSlide.find('iframe').hasClass('unloaded')) {	
+				//var thisSrc = lastSlide.find('iframe').attr('data-src');
+				//lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy unloaded');
+				//var lastSlideDataSrc = lastSlide.find('iframe').attr('data-src');
+				//console.log('keen-unloaded (tail 1): ', lastSlideDataSrc);			
+				//}	
+				
+				if (lastlastSlide.find('iframe').hasClass('unload') && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
+				var thisSrc = lastlastSlide.find('iframe').attr('data-src');
+				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
+				console.log('keen-unloaded (tail 2): ', lastlastSlideDataSrc);			
+				}				
+			}		
+			lastIndex = upcomingSlideIndex;			
+			lastsliderDir = sliderDir;						
 		}	
 	
 			var checkTheme;
@@ -4683,7 +4503,7 @@ keenlazyLoadstart();
 		
 		$(".show-shaded").on("click", function() {
 		iframe = $(this).closest('.iframe-container').find('.showonclick').first();			
-		iframe.attr("src", iframe.data("src"));
+		iframe.attr("src", iframe.data("src")).addClass('showonclick-loaded');
 		$(this).closest('.iframe-container').find('.model-controls').removeClass('invisible');
 		//alert(iframe);
 		$(this).closest('.iframe-container').find(".hide-this").addClass('hidden');	 
