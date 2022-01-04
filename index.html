@@ -30,8 +30,6 @@
 		
 	</head>	
 	<body> 
-		<script> console.log('transp')</script>
-
 		<link rel="stylesheet" href="css/style.css">
 	
 		<!-- background logo -->
@@ -194,7 +192,18 @@
 			</div>
 		 </nav>
 		</header>		
-													
+<script>
+$('header').on('touchstart', function(e) {
+console.log('tt')
+        var current = $(window).scrollTop();
+        $(window).scroll(function(event) {
+            $(window).scrollTop(current);
+        });
+    });
+    $('header').on('touchend', function(e) {
+        $(window).off('scroll');
+    });
+</script>													
 		<!-- hero -->
 		<h3 class="h3 x-theme">About</h3>
 		<div id="hero-container" class="portfolio-section h-auto col-full">
@@ -544,7 +553,7 @@
 									</div>
 								</div>							
 						</div>	
-						<div class="horizontal-snap small m0 xl-up-h">						
+						<div class="horizontal-snap small m0">						
 							<div class="item zoomable textoverlay medium-theme">
 								<img src="" data-src="akg/images/01.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
@@ -1152,7 +1161,7 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
 							<div class="dark-theme">
 								<iframe 
 								id=""
@@ -1166,7 +1175,7 @@
 								</iframe>
 							</div>
 						</div>	
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
 							<div class="dark-theme">
 								<iframe
 								style="display:flex;"							
@@ -4625,20 +4634,18 @@ keenlazyLoadstart();
 		</script>	
 		
 		<!-- background select -->
-<!-- 		<script>
+		<script>
 			//bg select buttons
-			$('#' + brand + '-xr-popup #bg-button').click(function(){
-				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("dark-theme");
+			$('.popup #bg-button').click(function(){
+				 $(this).closest('.popup').removeClass("dark-theme light-theme medium-theme").addClass("dark-theme");
+			});			
+			$('.popup #bg-button2').click(function(){
+				 $(this).closest('.popup').removeClass("dark-theme light-theme medium-theme").addClass("light-theme");
 			});
-			$('#' + brand + '-xr-popup #bg-button2').click(function(){
-				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("light-theme");
-			});
-			$('#' + brand + '-xr-popup #bg-button3').click(function(){
-				 $('#' + brand + '-xr-popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
-			});				  		
-			});
-									
-		</script> -->
+			$('.popup #bg-button3').click(function(){
+				 $(this).closest('.popup').removeClass("dark-theme light-theme medium-theme").addClass("medium-theme");
+			});									
+		</script>
 				
 		<!-- magnific -->		
 		<script>
