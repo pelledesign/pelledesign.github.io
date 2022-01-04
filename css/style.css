@@ -18908,13 +18908,15 @@ max-width:500px !important;
 	 }
 	 
 	.arrow.arrow--left {
-    left: 0.5em;
+    /* left: 0.5em; */
+    left: -3em;
 	 }
 	 .arrow.arrow--left svg{
 transform: scaleX(-1);
 	 }
 	 .arrow.arrow--right {
-    right: 0.5em;
+    /* right: 0.5em; */
+    right: -3em;
 	 }
 @media (max-width:991px) { 
 	 .arrow.arrow--left, .arrow.arrow--right {
@@ -18979,3 +18981,19 @@ opacity: 1;
 max-width:45%;	
 }
 }
+
+#the-canvas {
+  border: 1px solid black;
+  direction: ltr;
+}
+
+#porfolio-gallery {
+padding-left:10vw; padding-right:10vw;	
+}
+
+@media (max-width:991px) { 
+#porfolio-gallery {
+padding-left:3vw; padding-right:3vw;	
+}
+}
+

@@ -1,6 +1,11 @@
 
 function both (
-
+info icon on popup, keen-slide and separate container
+clean up script bits
+nav is open when scrolled
+set width on containers to avoid strange lazy loading touch
+unload wireframe on notvisible
+keen-lazy not working when swiping fast
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
 animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes
 show on click.. 

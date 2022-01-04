@@ -1,0 +1,128 @@
+		<!-- splide -->
+		<script>
+		
+			Splide.defaults = {
+				lazyLoad: 'nearby',
+				preloadPages: 2,
+				autoWidth: true,
+				wheel: true,
+				arrows: true,
+				pagination: false,	
+				waitForTransition: false,
+				//drag   : 'free',
+				perPage: 1,
+			}
+			
+			var splide = new Splide( '.akg-splide', {
+			} );
+			var bar = splide.root.querySelector( '.my-slider-progress-bar' );		
+			  splide.on( 'mounted move', function () {
+				 var end = splide.Components.Controller.getEnd() + 1;
+				 bar.style.width = String( 100 * ( splide.index + 1 ) / end ) + '%';
+			  } );	
+			splide.mount();
+			
+			var splide2 = new Splide( '.converse-splide', {} );				
+			splide2.on( 'mounted move', function () {
+			var bar = splide2.root.querySelector( '.converse-splide .my-slider-progress-bar' );
+			var end = splide2.Components.Controller.getEnd() + 1;
+			bar.style.width = String( 100 * ( splide2.index + 1 ) / end ) + '%';
+			} );			
+			splide2.on( 'mounted', function () {
+			var splideId = '#'+splide2.root.id;
+			$(splideId).find('.splide__slide').first().addClass('last-slide');
+			console.log(splide2.index);
+			} );		  			  
+			splide2.mount();
+			
+			var splide3 = new Splide( '.poc-splide', {} );				
+			splide3.on( 'mounted move', function () {
+			 var bar = splide3.root.querySelector( '.poc-splide .my-slider-progress-bar' );
+			 var end = splide3.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide3.index + 1 ) / end ) + '%';
+			} );
+			splide3.mount();
+
+			var splide4 = new Splide( '.spotify-splide', {} );					
+			splide4.on( 'mounted move', function () {
+			 var bar = splide4.root.querySelector( '.spotify-splide .my-slider-progress-bar' );	
+			 var end = splide4.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide4.index + 1 ) / end ) + '%';
+			} );
+			splide4.mount();
+
+			var splide5 = new Splide( '.bagheera-splide', {} );					
+			splide5.on( 'mounted move', function () {
+			 var bar = splide5.root.querySelector( '.bagheera-splide .my-slider-progress-bar' );
+			 var end = splide5.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide5.index + 1 ) / end ) + '%';
+			} );
+			splide5.mount();
+
+			var splide6 = new Splide( '.haglofs-splide', {} );					
+			splide6.on( 'mounted move', function () {
+			 var bar = splide6.root.querySelector( '.haglofs-splide .my-slider-progress-bar' );
+			 var end = splide6.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide6.index + 1 ) / end ) + '%';
+			} );
+			splide6.mount();
+
+			var splide7 = new Splide( '.alcon-splide', {} );					
+			splide7.on( 'mounted move', function () {
+			 var bar = splide7.root.querySelector( '.alcon-splide .my-slider-progress-bar' );
+			 var end = splide7.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide7.index + 1 ) / end ) + '%';
+			} );
+			splide7.mount();
+
+			var splide8 = new Splide( '.specialized-splide', {} );					
+			splide8.on( 'mounted move', function () {
+			 var bar = splide8.root.querySelector( '.specialized-splide .my-slider-progress-bar' );
+			 var end = splide8.Components.Controller.getEnd() + 1;
+			 bar.style.width = String( 100 * ( splide8.index + 1 ) / end ) + '%';
+			} );
+			splide8.mount();
+
+			
+			//unload iframe		
+			var lastVisited = 0; //start index
+			var whatsThis = splide2.Components.Elements.root;
+			splide2.on( 'moved', function () {
+			
+			console.log(whatsThis);
+			var splideId = $('#'+splide2.root.id);
+			var thisIndex = splide2.index;		
+			var splideDirection;
+
+			if (thisIndex > lastVisited) { splideDirection = 'right';}
+			else {splideDirection = 'left';}
+			$(splideId).find('.is-active').hasClass('unload')				
+			lastVisited = thisIndex;
+			
+			if(splideDirection == 'right') {
+			splideId.find('.splide__slide').removeClass('last-visited');
+			splideId.find('.is-prev').addClass('last-visited');
+			}
+			else if (splideDirection == 'left') {
+			splideId.find('.splide__slide').removeClass('last-visited');
+			splideId.find('.is-next').addClass('last-visited');
+			}
+			if (splideId.find('.is-active').find('iframe').hasClass('unloaded')) {
+			//alert('unloaded');
+			var thisDataSplideSrc = splideId.find('.is-active').find('iframe').attr('data-splide-lazy');
+			console.log(thisDataSplideSrc);
+			splideId.find('.is-active').find('iframe').attr('src',thisDataSplideSrc).removeClass('unloaded').addClass('unload');
+			}			
+			if ($('.last-visited').find('iframe').hasClass('unload')) {
+			console.log('last slide has class unload');
+			var thisSrc = $('.last-visited').find('iframe').attr('src');
+			console.log(thisSrc);
+			$('.last-visited').find('iframe').attr('src','').attr('data-splide-lazy', thisSrc).removeClass('unload').addClass('unloaded');
+			}	
+			});
+
+			//test section
+			
+			
+		
+		</script>
