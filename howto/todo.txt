@@ -1,14 +1,14 @@
 
 function both (
-info icon on popup, keen-slide and separate container
-clean up script bits
+loading icon - splide icon?
+background select
 nav is open when scrolled
 set width on containers to avoid strange lazy loading touch
 unload wireframe on notvisible
 keen-lazy not working when swiping fast
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
 animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes
-show on click.. 
+show on click with keen-reload
 swipe body up down xr?
 webconfig css				
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
@@ -101,5 +101,4 @@ removed line 743 i lazyload
 commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
 added on-click trigger to about_slider_mobile in main.js
 )
-
 

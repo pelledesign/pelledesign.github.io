@@ -1,0 +1,69 @@
+		<script>	
+		
+		$(".info-icon").hover(function(e) {
+			
+			var tool_tip = $(this).data("tooltip");
+			var addTheme;			
+			
+			<!-- variables -->
+			if ($(this).parents().hasClass('popup')) {
+			var el = $(this).closest('.popup');
+			var this_container = $(this).closest('.popup');
+			}
+			else if ($(this).parents().hasClass('slide')) {
+			var el = $(this).closest('.brand-section').find('.slide.active');
+			var this_container = $(this).closest('.brand-section').find('.slide.active');
+			var checkContainer = 'slider';
+			}
+						
+			<!-- define tooltip colors			 -->
+			if(el.hasClass("pop-theme")) {
+			addTheme = 'pop';
+			}
+			else if(el.hasClass("dark-theme")) {
+			addTheme = 'dark';
+			}
+			else if(el.hasClass("light-theme")) { 
+			addTheme = 'light';
+			}
+			else if(el.hasClass("medium-theme")) { 
+			addTheme = 'medium';
+			}
+			else if (checkContainer == 'slider') { 
+				if (this_container.hasClass("pop-theme")) {
+				addTheme = 'pop';
+				}
+				else if(this_container.hasClass("dark-theme")) {
+				addTheme = 'dark';
+				}
+				else if(this_container.hasClass("light-theme")) {
+				addTheme = 'light';
+				}
+				else if(this_container.hasClass("medium-theme")) {
+				addTheme = 'medium';
+				}
+				console.log('added fallback theme from container');
+			}		
+			else
+			{ 
+			alert('error');
+			};
+						
+			this_container.prepend($(tool_tip)).find($(tool_tip)).addClass('tooltip-position').addClass(addTheme).removeClass('hidden').css({
+				'height': '100%',
+				'width': '100%',
+				//backgroundColor: bgcolor,
+				//color: textcolor,		
+			}).stop().show(100);
+
+			
+			//enables closing of the infobox on mobile as this is a hoverfunction
+			if(is_touch_device()) {
+			this_container.find('.tooltip-position').css( 'pointer-events', 'auto' ) 
+			 }				
+			
+			}, function() {
+			$($(this).data("tooltip")).addClass('hidden').removeClass('pop dark light medium');				
+			});	
+	
+		</script>

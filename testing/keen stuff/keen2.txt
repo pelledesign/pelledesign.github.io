@@ -1,0 +1,52 @@
+		var keenlazyLoad = function (){
+			
+			var thisSlide = $(slider.slides[slider.track.details.rel]);
+			var upcomingSlideIndex = slider.animator.targetIdx;	
+			var lastlastIndex;
+			var lastSlide = $(slider.slides[lastIndex]);
+			var nextIndex;			
+			var lastsliderDir = 'right';			
+					
+			if (upcomingSlideIndex > lastIndex) {
+			lastlastIndex = lastIndex - 1;
+			nextIndex = upcomingSlideIndex + 1;
+			sliderDir = 'right';			
+			}
+			else {
+			lastlastIndex = lastIndex + 1;
+			nextIndex = upcomingSlideIndex - 1;	
+			sliderDir = 'left';	
+			}
+						
+			var nextSlide = $(slider.slides[nextIndex]);
+			var lastlastSlide = $(slider.slides[lastlastIndex]);
+			
+			console.log('Going to index:',upcomingSlideIndex, 'Upcoming index is:',nextIndex, 'Tail-index is:',lastIndex, 'Tail2-index is:',lastlastIndex, 'Slide direction is:',sliderDir);
+			
+			nextSlide.find('.keen-lazy').each(function() {
+				var dataSrc = $(this).attr('data-src');
+				$(this).attr('src', dataSrc).removeClass('keen-lazy'); 
+				console.log('keen-loaded: ', dataSrc);
+			})
+			
+			if (lastsliderDir == sliderDir){
+			console.log('same');
+				if (lastSlide.find('iframe').hasClass('unload') && !lastSlide.find('iframe').hasClass('unloaded')) {	
+				var thisSrc = lastSlide.find('iframe').attr('data-src');
+				lastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				var lastSlideDataSrc = lastSlide.find('iframe').attr('data-src');
+				console.log('keen-unloaded: ', lastSlideDataSrc);			
+				}				
+			}
+			else {
+			console.log('different');
+				if (lastlastSlide.find('iframe').hasClass('unload') && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
+				var thisSrc = lastlastSlide.find('iframe').attr('data-src');
+				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
+				console.log('keen-unloaded: ', lastlastSlideDataSrc);			
+				}				
+			}		
+			lastIndex = upcomingSlideIndex;			
+			lastsliderDir = sliderDir;						
+		}	

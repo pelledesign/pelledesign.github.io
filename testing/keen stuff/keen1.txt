@@ -1,0 +1,34 @@
+		var keenlazyLoad = function (){
+			
+			var thisSlide = $(slider.slides[slider.track.details.rel]);
+			var upcomingSlideIndex = slider.animator.targetIdx;	
+			var lastlastIndex;
+			var lastSlide = $(slider.slides[lastIndex]);
+			var nextIndex;			
+					
+			if (upcomingSlideIndex > lastIndex) {
+			lastlastIndex = lastIndex - 1;
+			nextIndex = upcomingSlideIndex + 1;
+			sliderDir = 'right';			
+			}
+			else {
+			lastlastIndex = lastIndex + 1;
+			nextIndex = upcomingSlideIndex - 1;	
+			sliderDir = 'left';	
+			}
+						
+			var nextSlide = $(slider.slides[nextIndex]);
+			var lastlastSlide = $(slider.slides[lastlastIndex]);
+			
+			console.log('Going to index:',upcomingSlideIndex, 'Upcoming index is:',nextIndex, 'Tail-index is:',lastIndex, 'Tail2-index is:',lastlastIndex, 'Slide direction is:',sliderDir);
+			
+			nextSlide.find('.keen-lazy').each(function() {
+				var dataSrc = $(this).attr('data-src');
+				$(this).attr('src', dataSrc).removeClass('keen-lazy'); 
+				console.log('keen-loaded: ', dataSrc);
+			})
+	
+			lastIndex = upcomingSlideIndex;			
+			lastsliderDir = sliderDir;			
+			
+		}
