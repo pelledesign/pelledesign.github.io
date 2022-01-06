@@ -3,12 +3,9 @@ function both (
 can't mousedrag/scroll on css slider
 keen-lazy not working when swiping fast - set size on containers? + set width on containers to avoid strange lazy loading touch
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
-animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - unload on keen transition end?
-webconfig css				
+animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - unload on keen transition end?			
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
 show on click with keen-reload
-loading icon - splide icon?
-
 )
 
 
@@ -36,6 +33,7 @@ belmar - finish model
 )
 
 function later (
+loading icon - splide icon?
 Minimize CLS lazy load
 swipe body up down xr?
 lek med starka färger
