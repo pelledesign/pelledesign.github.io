@@ -1,16 +1,13 @@
 
 function both (
-fix zoomed image popup proportions - use intrinsic size?
-unload wireframe on notvisible
-keen-lazy not working when swiping fast
+can't mousedrag/scroll on css slider
+keen-lazy not working when swiping fast - set size on containers? + set width on containers to avoid strange lazy loading touch
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
-set width on containers to avoid strange lazy loading touch
-animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes
-loading icon - splide icon?
-show on click with keen-reload
-swipe body up down xr?
+animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - unload on keen transition end?
 webconfig css				
 check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
+show on click with keen-reload
+loading icon - splide icon?
 
 )
 
@@ -40,6 +37,7 @@ belmar - finish model
 
 function later (
 Minimize CLS lazy load
+swipe body up down xr?
 lek med starka färger
 byt till snyggare typsnitt
 photo style as in bookmark

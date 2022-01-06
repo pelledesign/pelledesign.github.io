@@ -44,7 +44,8 @@
 }
 
 html, body {
-    height: auto;
+    /* height: auto; */
+    height: 100%;
 }
 
 
@@ -61,8 +62,8 @@ body {
 }
 
 #main {
-    /* height: 100%; */
-    height: auto;
+    height: 100%;
+    /* height: auto; */
     width: 100%;
     overflow: hidden;
     display: flex;	 

@@ -401,20 +401,19 @@
 								</div>
 								<div class="slide item" style="height:100%; min-width:calc(75vh * (829/899)) !important; max-width:calc(75vh * (829/899)) !important">
 									<div class="iframe-container c-all textoverlay ignore exclusion">
-										<span class="show-shaded btn btn-outline hide-this">Load 3d - 57mb</span>	
-										<div class="model-controls">
+										<span class="show-shaded btn btn-outline">Load 3d - 57mb</span>	
+										<div class="model-controls invisible">
 											<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled "></div>
 											<div data-tooltip="#reload-model"  class="info-icon ion-refresh "></div>	 
-										</div>
-										<div class="c-all view-btn overlay img-opacity hide-this z999">												
 										</div>							
 										<iframe 
 										class="showonclick unload m-h"
+										style="z-index: 999;"
 										data-src="akg/webgl/rendered.html"		
 										frameborder="0"
 										scrolling="no">	 
 										</iframe>
-										<img data-src="akg/images/model.png" class="keen-lazy hide-this" style="object-position: 50% 70%; position:absolute;">						
+										<img data-src="akg/images/model.png" class="keen-lazy" style="object-position: 50% 70%; position:absolute;">						
 									</div>								
 								</div>										
 								<div class="slide" style="min-width: 100%; max-width: 100%">
@@ -519,9 +518,7 @@
 										<div class="model-controls">
 											<div data-tooltip="#modelcontrols-info-popup" class="info-icon ion-information-circled "></div>
 											<div data-tooltip="#reload-model"  class="info-icon ion-refresh "></div>	 
-										</div>
-										<div class="c-all view-btn overlay img-opacity hide-this z999">												
-										</div>							
+										</div>						
 										<iframe 
 										class="showonclick unload m-h"
 										data-src="akg/webgl/rendered.html"		
@@ -729,7 +726,7 @@
 					<div class="navigation-wrapper">	
 						<div class="keen-slider checkvisibility pop-theme touch-remove" style="max-width: 100vw; height:75vh; height: calc(80vw * (9/16)) !important">
 							<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		
-							<div class="slide light light-theme" style="min-width: 100%; max-width: 100%">
+							<div class="slide light zoomable light-theme" style="min-width: 100%; max-width: 100%">
 								<img data-src="Converse/images/01.svg" class="lazy" style="object-position: 50% 75%;">
 							</div>
 							<div class="slide light light-theme" style="min-width: 100%; max-width: 100%">
@@ -1109,7 +1106,7 @@
 						>
 						</iframe>						
 					</div>	
-						<div class="light-theme multiply col-lg-12 vh75 iframe-container">
+						<div id="kakk" class="light-theme multiply col-lg-12 vh75 iframe-container">
 							<iframe 
 							data-src="Converse/webgl/pen.html"
 							class="lazy unload multiply"																																						
@@ -4056,7 +4053,8 @@ $('header').on('touchstart', function(e) {
 
 				if (lastlastSlide.find('iframe').hasClass('unload') && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
 				var thisSrc = lastlastSlide.find('iframe').attr('data-src');
-				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc);
+				lastlastSlide.find('iframe').not('.showonclick').addClass('keen-lazy');
 				var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
 				console.log('keen-unloaded (tail 2): ', lastlastSlideDataSrc);			
 				}
@@ -4076,7 +4074,8 @@ $('header').on('touchstart', function(e) {
 				
 				if (lastlastSlide.find('iframe').hasClass('unload') && !lastlastSlide.find('iframe').hasClass('unloaded')) {	
 				var thisSrc = lastlastSlide.find('iframe').attr('data-src');
-				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc).addClass('keen-lazy');
+				lastlastSlide.find('iframe').attr('src','').attr('data-src', thisSrc);
+				lastlastSlide.find('iframe').not('.showonclick').addClass('keen-lazy');
 				var lastlastSlideDataSrc = lastlastSlide.find('iframe').attr('data-src');
 				console.log('keen-unloaded (tail 2): ', lastlastSlideDataSrc);			
 				}				
@@ -4287,18 +4286,21 @@ keenlazyLoadstart();
 		
 		<!-- image zoom -->
 		<script>	
-		
-		<!-- ion-ios-plus -->
-		//$('.zoom-icon').addClass('ion-ios-search-strong');	
-		
-		//show zoom icon on touch / add zoom-icon 
+			//$('.zoomable').find('img').on('load',function(){
+			//var apas = this.naturalWidth;
+			//console.log(apas); 
+			//});	
+			//show zoom icon on touch / add zoom-icon 
 			$('.zoomable').prepend('<div class="ion-ios-plus c-absolute"></div>');
+			
+			//animations
 			$('.zoomable').on('touchstart touchend mouseenter mouseleave',function(){
 			$(this).find('img').toggleClass( 'opacity-05' );
 			$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color');					
 			});
+			
 		<!-- zoom-icon function -->		
-		$('.zoom-icon, .zoomable').on('click', function() {
+		$('.zoomable').on('click', function() { <!-- .zoom-icon,  -->
 			var brand ="";
 			// select popup background based on background of .item 	
 			if ($(this).hasClass('dark-theme') || $(this).closest('.horizontal-snap').hasClass('dark-theme')){
@@ -4320,6 +4322,7 @@ keenlazyLoadstart();
 	
 			console.log(theme)
 			}
+			<!-- fallback theme -->
 			else {
 			var bg = '#fff';		
 			var theme = 'light-theme';		
@@ -4341,11 +4344,17 @@ keenlazyLoadstart();
 			};
 
 			//create popup
-			var src = $(this).closest('.zoomable').find('img').first().attr("src");
+			var img = $(this).find('img').first();
+			var src = img.attr("src");
+			var nWidth = img.prop('naturalWidth')
+			var nHeight = img.prop('naturalHeight')
+			var iAspectratio = nWidth / nHeight;
+			console.log(nWidth,'x',nHeight);
+			//console.log(src);
 			var modal;
-			var scrollwidth = '99vh'
+			var scrollwidth = '99vh';
 			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-			modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">&#215;</button></div>').css({
+			modal = $('<div id="scroll" class='+theme+'><div class="scroll-container hw100" style="overflow-x:scroll"><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'; width: calc(97vh * '+iAspectratio+');"></div><button class="mfp-close">&#215;</button></div></div>').css({
 			  //backgroundColor: bg,
 			  backgroundSize: bgsize,
 			}).addClass(brand).click(function(){
@@ -4353,18 +4362,19 @@ keenlazyLoadstart();
 			}).appendTo('body');
 
 			//scroll image to center position
-			var imglength = $(this).next('img').width();	
-			var $container = $("#scroll");
-			var $img = $("#scroll div");
+			//var imglength = $(this).next('img').width();	
+			var $container = $(".scroll-container");
+			var $img = $(".scroll-container div");
 			var cWidth = $container.width();
-			var iWidth = $img.width();
+			var iWidth = $img.width();			
 			var left = (iWidth - cWidth) / 2; 
 
 			$container.scrollLeft(left);
 
 			$('body').on('keyup.modal-close', function(e){
 			if(e.key==='Escape'){ removeModal(); } 
-			});	
+			});
+
 			});
 		</script>
 						
@@ -4435,6 +4445,18 @@ keenlazyLoadstart();
 							 }																		
 						})
 
+						$('#kakk').each(function(){
+							 if ( !$(this).is(":in-viewport") ){							 
+							console.log('not in viewport');
+							$("#kakk iframe").contents().find('body').addClass('jajj').keypress();
+							 } else {
+							 //$('#kakk iframe').click();
+							 $("#kakk iframe").contents().find('body').addClass('jajj').click();
+							 
+							console.log('is in viewport');
+							 }																		
+						})
+
 				 }, 250));
 			});
 			
@@ -4453,6 +4475,11 @@ keenlazyLoadstart();
 			
 		</script>
 		<script>
+		
+
+$('#kakk iframe').on('click', function() {
+//console.log('ooo')
+});		
 		//open video	
 		  $('.open-video').on('click',function(){
 		  $('.open-video').addClass('hidden');
@@ -4511,7 +4538,8 @@ keenlazyLoadstart();
 		iframe.attr("src", iframe.data("src")).addClass('showonclick-loaded');
 		$(this).closest('.iframe-container').find('.model-controls').removeClass('invisible');
 		//alert(iframe);
-		$(this).closest('.iframe-container').find(".hide-this").addClass('hidden');	 
+ 		$(this).closest('.iframe-container').find(".show-shaded").addClass('hidden');	 
+ 		//$(this).closest('.iframe-container').find("img").addClass('hidden');	 
 		});
 
 
@@ -4590,12 +4618,12 @@ keenlazyLoadstart();
 			 $(this).find('div').removeClass("flipInY element-animated");
 		  });
 		  
-		  $('.zoom-icon').on('mouseenter',function(){
-			 $(this).addClass('info-icon-hover');
-		  });
-			 $('.zoom-icon').on('mouseleave',function(){
-			 $(this).removeClass('info-icon-hover');
-		  });
+		  //$('.zoom-icon').on('mouseenter',function(){
+			 //$(this).addClass('info-icon-hover');
+		  //});
+			 //$('.zoom-icon').on('mouseleave',function(){
+			 //$(this).removeClass('info-icon-hover');
+		  ///});
 		  
 		  $('.soft-zoom').on('mouseenter',function(){
 			 $(this).removeClass("fade-in fadeIn element-animated zoomOutVisible animated-fast").addClass('zoomInVisible animated-fast'); //remove animate.css classes that are already there, or they will trigger again
