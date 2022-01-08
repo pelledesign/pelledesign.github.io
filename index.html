@@ -1106,7 +1106,7 @@
 						>
 						</iframe>						
 					</div>	
-						<div id="kakk" class="light-theme multiply col-lg-12 vh75 iframe-container">
+						<div class="animate-in-view light-theme multiply col-lg-12 vh75 iframe-container">
 							<iframe 
 							data-src="Converse/webgl/pen.html"
 							class="lazy unload multiply"																																						
@@ -1300,8 +1300,66 @@
 							<div class="my-slider-progress-bar"></div>
 						</div>			
 					</div>
-				</div>					
-					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">				
+				</div>			
+						<div class="horizontal-snap m0"  style="background: #bdd6ff">						
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+						</div>	
+						<div class="horizontal-snap small m0 light-theme">						
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable">
+								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+						</div>	
+					<div class="relative dark-theme">
+						<iframe 
+						class="xr-auto lazy soft-zoom" 
+						data-src="poc/xr/pocxr.html"																			
+						frameborder="0"
+						scrolling="no"
+						>
+						</iframe>						
+					</div>	
+						<div class="animate-in-view light-theme multiply col-lg-12 vh75 iframe-container">
+							<iframe 
+							data-src="poc/webgl/pen.html"
+							class="lazy unload multiply difference"																																						
+							frameborder="0"
+							scrolling="no">			 	 
+							</iframe>
+							<div class="ignore model-controls">
+								<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
+								<div data-tooltip="#reload-model" class="info-icon ion-refresh"></div>	
+							</div>	
+						</div>						
+					<div id="grid" class="item row m0 h100 relative dark-theme xl-up-h" style="background:#fff !important;"> 	
+					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1817,7 +1875,7 @@
 						  </div>
 						</div>
 					</div>
-					<div class="slide" style="min-width: 100%; max-width: 100%">
+					<div class="slide light-theme" style="min-width: 100%; max-width: 100%">
 						<iframe 
 						data-src="alcon/webgl/rendered.html"
 						class="keen-lazy unload multiply"																																						
@@ -4445,13 +4503,13 @@ keenlazyLoadstart();
 							 }																		
 						})
 
-						$('#kakk').each(function(){
+						$('.animate-in-view').each(function(){
 							 if ( !$(this).is(":in-viewport") ){							 
 							console.log('not in viewport');
-							$("#kakk iframe").contents().find('body').addClass('jajj').keypress();
+							$(this).find("iframe").contents().find('body').addClass('jajj').keypress();
 							 } else {
-							 //$('#kakk iframe').click();
-							 $("#kakk iframe").contents().find('body').addClass('jajj').click();
+							 //$('.animate-in-view iframe').click();
+							 $(this).find("iframe").contents().find('body').addClass('jajj').click();
 							 
 							console.log('is in viewport');
 							 }																		
@@ -4477,7 +4535,7 @@ keenlazyLoadstart();
 		<script>
 		
 
-$('#kakk iframe').on('click', function() {
+$('.animate-in-view iframe').on('click', function() {
 //console.log('ooo')
 });		
 		//open video	

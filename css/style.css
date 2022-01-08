@@ -18134,7 +18134,7 @@ content: '';
 display:block;
 }
 
-.light-theme-shadow:before {
+.light-theme-shadow:before, #scroll:before {
 -webkit-box-shadow: 0 0 20px #b0b0b0;	
 box-shadow: 0 0 20px #b0b0b0;		  
 overflow:hidden;	
