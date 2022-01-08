@@ -18134,7 +18134,7 @@ content: '';
 display:block;
 }
 
-.light-theme-shadow:before, #scroll:before {
+.light-theme-shadow:before {
 -webkit-box-shadow: 0 0 20px #b0b0b0;	
 box-shadow: 0 0 20px #b0b0b0;		  
 overflow:hidden;	
@@ -18145,6 +18145,17 @@ content: '';
 display:block;
 mix-blend-mode:color-burn;
 }
+
+/* #scroll:before {
+-webkit-box-shadow: 0 0 20px #b0b0b0;	
+box-shadow: 0 0 20px #b0b0b0;		  
+position: absolute;
+height: 100%;
+width: 100%;
+content: '';
+display:block;
+mix-blend-mode:color-burn;
+} */
 
 
 .img-close {
