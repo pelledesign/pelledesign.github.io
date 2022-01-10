@@ -1,6 +1,6 @@
 
 function both (
-can't mousedrag/scroll on css slider
+can't mousedrag/scroll on css slider - make one css-slider with mouse drag and scroll - and not have to enter fixed widths for iage containers because of keens translate
 keen-lazy not working when swiping fast - set size on containers? + set width on containers to avoid strange lazy loading touch
 more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device	
 animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - unload on keen transition end? = get rid of keen exept for "process?" - define what should be in there			
