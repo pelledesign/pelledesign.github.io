@@ -18591,6 +18591,7 @@ width: auto;
 
 .horizontal-snap > .item {
 position:relative;
+width:100%;
 }
 
 
