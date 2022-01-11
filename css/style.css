@@ -18541,6 +18541,7 @@ padding-left:9px;
   padding-left: 1rem !important; */
   width: auto;
   overflow-x: auto;
+  overflow-y: hidden;
   overscroll-behavior-x: contain;
   /* scroll-snap-type: x proximity; */
   scroll-snap-type: unset;
@@ -18574,7 +18575,6 @@ width: auto;
 }
 }
 
-
 .horizontal-snap.small {
   scroll-snap-align: center;
   height:25vh;
@@ -18582,21 +18582,11 @@ width: auto;
 	display:flex;
 }
 
-/* @media (orientation:landscape) {
-.horizontal-snap > img, .horizontal-snap > .item {
-  scroll-snap-align: center;
-  height:100vh;
-
-} */
-
 .horizontal-snap > .item {
 position:relative;
 height:100%;
-/* width:100%; */
-/* max-width:100%; */
 width:auto;
 }
-
 
 @media (orientation:portrait) {
 .horizontal-snap .item.contain-item, .horizontal-snap .item.contain-item img {
