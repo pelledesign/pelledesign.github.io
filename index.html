@@ -32,7 +32,7 @@
 	<body> 
 		<link rel="stylesheet" href="css/style.css">
 	<script>
-	console.log('no touch header')
+	console.log('no touch body on nav open')
 	</script>
 		<!-- background logo -->
 		<div class="hw100 vh100 x-theme c-all"><p class="" style="user-select:none; color:transparent">The Cuts Industrial Design</p></div>		<!-- print someting to avoid fcp error -->
@@ -4009,83 +4009,7 @@ var scrolled = 0;
 				
 		</script>
 		
-		<!-- header	 -->
-		<script>
-$('header').on('touchstart', function(e) {
-        var current = $(window).scrollTop();
-        $(window).scroll(function(event) {
-            $(window).scrollTop(current);
-        });
-    });
-    $('header').on('touchend', function(e) {
-        $(window).off('scroll');
-    });
-	 
-		/* hide expanded menu on body and header links click*/
-		$('body').on('click', ":not(header, header *)", function(){
-			$('.navbar-collapse').removeClass('show');
-			  if ($('.navbar-toggler').hasClass('open')) {
-				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
-				  
-			  }	
-			//$('.navbar-toggler collapsed').removeClass('show');
-		});
 
-		$('header a.nav-link').on('click',  function(){
-			$('.navbar-collapse').removeClass('show');
-			$('.navbar-toggler').removeClass('open').addClass('collapsed');
-			//$('body').toggleClass('lock-scroll');
-		});
-		
-		<!-- auto hide header -->
-		$('#header, #header-mobile').addClass('auto-hide-header'); 
-		
-		var didScroll;
-		var last_st = 0;
-		var delta = 100; //def 5
-		var navbarHeight = $('header').outerHeight();
-
-		$(window).scroll(function(event){
-			 didScroll = true;
-		});
-
-		setInterval(function() {
-			 if (didScroll) {
-				  hasScrolled();
-				  didScroll = false;
-			 }
-		}, 250);
-
-		function hasScrolled() {
-			 var st = $(this).scrollTop();
-			 
-			 // Make sure they scroll more than delta
-			 if(Math.abs(last_st - st) <= delta)
-				  return;
-
-			//$(function(){
-			//	function delayed_hide(){
-			//		$('header').addClass('hidden');	
-			//	};
-			//	window.setTimeout( delayed_hide, 500 );
-			//});
-			 
-			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
-			 if (st > last_st && st > navbarHeight){
-				$('header').addClass('nav-up');
-				//delayed_hide();				
-				
-			 
-			 } else {
-				  if(st + $(window).height() < $(document).height()) {
-						$('header').removeClass('hidden').removeClass('nav-up');
-				  }	  
-			 }
-			 
-			 last_st = st;	
-		}		
-		
-		</script>
 		
 		<!-- keen slider & keen lazy -->
 		<script>
@@ -4480,10 +4404,74 @@ keenlazyLoadstart();
           },		  
 		  ])
 
-$('header .nav-up').addEventListener('touchstart', function(e){
-  e.preventDefault();
-});
 
+
+		</script>
+
+		<!-- header	 -->
+		<script>
+		$('#nav-icon3').on('click', function(){
+$('body').toggleClass('no-touch');
+		});		
+		$('body').on('click', ":not(header, header *)", function(){
+
+	 
+		/* hide expanded menu on body and header links click*/
+			$('.navbar-collapse').removeClass('show');
+			  if ($('.navbar-toggler').hasClass('open')) {
+				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
+				  
+			  }	
+			//$('.navbar-toggler collapsed').removeClass('show');
+		});
+
+		$('header a.nav-link').on('click',  function(){
+			$('.navbar-collapse').removeClass('show');
+			$('.navbar-toggler').removeClass('open').addClass('collapsed');
+			//$('body').toggleClass('lock-scroll');
+		});
+		
+		<!-- auto hide header -->
+		$('#header, #header-mobile').addClass('auto-hide-header'); 
+		
+		var didScroll;
+		var last_st = 0;
+		var delta = 100; //def 5
+		var navbarHeight = $('header').outerHeight();
+
+		$(window).scroll(function(event){
+			 didScroll = true;
+		});
+
+		setInterval(function() {
+			 if (didScroll) {
+				  hasScrolled();
+				  didScroll = false;
+			 }
+		}, 250);
+
+		function hasScrolled() {
+			 var st = $(this).scrollTop();
+			 
+			 // Make sure they scroll more than delta
+			 if(Math.abs(last_st - st) <= delta)
+				  return;
+			 
+			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
+			 if (st > last_st && st > 50){
+			 console.log('bapa');
+				$('header').addClass('nav-up');				
+			 
+			 } else {
+				  if(st + $(window).height() < $(document).height()) {
+				  console.log('apa');
+						$('header').removeClass('nav-up').addClass('nav-down');
+				  }	  
+			 }
+			 
+			 last_st = st;	
+		}		
+		
 		</script>
 				
 		<!-- verlok lazy load -->
