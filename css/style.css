@@ -18539,7 +18539,7 @@ padding-left:9px;
   gap: 0rem;
 /*   padding-right: 1rem !important;
   padding-left: 1rem !important; */
-  width: 100%;
+  width: auto;
   overflow-y: auto;
   overscroll-behavior-x: contain;
   /* scroll-snap-type: x proximity; */
@@ -18561,22 +18561,9 @@ width: auto;
 .horizontal-snap  {
   scroll-snap-align: center;
   height:50vh;
-	width:100%;
 	display:flex;
 }
 }
-
-@media (orientation:portrait) {
-.horizontal-snap  {
-  scroll-snap-align: center;
-  height:50vh;
-	width:100%;
-	display:flex;
-}
-}
-
-
-
 
 @media (orientation:landscape) {
 .horizontal-snap  {
@@ -18606,12 +18593,6 @@ width: auto;
 position:relative;
 }
 
-.horizontal-snap img, .horizontal-snap .item {
-/*   width: 90vw; */
-  max-width: none;
-  object-fit: cover;
-  /* border-radius: .5rem; */
-}	
 
 @media (orientation:portrait) {
 .horizontal-snap .item.contain-item, .horizontal-snap .item.contain-item img {

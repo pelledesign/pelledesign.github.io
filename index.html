@@ -31,7 +31,9 @@
 	</head>	
 	<body> 
 		<link rel="stylesheet" href="css/style.css">
-	
+	<script>
+	console.log('width tests')
+	</script>
 		<!-- background logo -->
 		<div class="hw100 vh100 x-theme c-all"><p class="" style="user-select:none; color:transparent">The Cuts Industrial Design</p></div>		<!-- print someting to avoid fcp error -->
 		<div class="hw100 ls-h hidden">
@@ -4060,14 +4062,23 @@ $('header').on('touchstart', function(e) {
 			 // Make sure they scroll more than delta
 			 if(Math.abs(last_st - st) <= delta)
 				  return;
+
+			//$(function(){
+			//	function delayed_hide(){
+			//		$('header').addClass('hidden');	
+			//	};
+			//	window.setTimeout( delayed_hide, 500 );
+			//});
 			 
 			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
 			 if (st > last_st && st > navbarHeight){
-				$('header').removeClass('nav-down').addClass('nav-up');							  
+				$('header').addClass('nav-up');
+				//delayed_hide();				
+				
 			 
 			 } else {
 				  if(st + $(window).height() < $(document).height()) {
-						$('header').removeClass('nav-up').addClass('nav-down');
+						$('header').removeClass('hidden').removeClass('nav-up');
 				  }	  
 			 }
 			 
