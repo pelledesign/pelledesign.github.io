@@ -17827,6 +17827,7 @@ transform: translate(-50%, -50%);
 .nav-up {
     /* top: -50px; */
 	 opacity:0;
+	 pointer-events:none;
 }
 
 .theme-desktop {

@@ -1,8 +1,6 @@
 
 function both (
 
-/* keen-lazy not working when swiping fast - set size on containers? + set width on containers to avoid strange lazy loading touch */ < container width issue
-
 hide header after opacity 0
 compare layout with pdf - use pdf
 can't mousedrag/scroll on css slider - make one css-slider with mouse drag and scroll - and not have to enter fixed widths for image containers because of keens translate

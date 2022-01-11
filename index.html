@@ -1304,10 +1304,10 @@
 				</div>	
 				<div class="navigation-wrapper">		
 					<div class="scrollable-slider keen pop-theme touch-hidden" style="height:50vh;">	 
-						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<!-- <div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							 -->
 		
 					</div>
@@ -4480,7 +4480,9 @@ keenlazyLoadstart();
           },		  
 		  ])
 
-
+$('header .nav-up').addEventListener('touchstart', function(e){
+  e.preventDefault();
+});
 
 		</script>
 				
