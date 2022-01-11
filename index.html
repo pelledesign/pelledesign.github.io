@@ -4411,7 +4411,7 @@ keenlazyLoadstart();
 		<!-- header	 -->
 		<script>
 		$('#nav-icon3').on('click', function(){
-$('body').toggleClass('no-touch');
+			$('body').toggleClass('no-touch');
 		});		
 		$('body').on('click', ":not(header, header *)", function(){
 
@@ -4419,16 +4419,14 @@ $('body').toggleClass('no-touch');
 		/* hide expanded menu on body and header links click*/
 			$('.navbar-collapse').removeClass('show');
 			  if ($('.navbar-toggler').hasClass('open')) {
-				  $('.navbar-toggler').removeClass('open').addClass('collapsed');
-				  
+				  $('.navbar-toggler').removeClass('open').addClass('collapsed');  
 			  }	
-			//$('.navbar-toggler collapsed').removeClass('show');
 		});
 
 		$('header a.nav-link').on('click',  function(){
 			$('.navbar-collapse').removeClass('show');
 			$('.navbar-toggler').removeClass('open').addClass('collapsed');
-			//$('body').toggleClass('lock-scroll');
+			$('body').removeClass('no-touch');
 		});
 		
 		<!-- auto hide header -->
