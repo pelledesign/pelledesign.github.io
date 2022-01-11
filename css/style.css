@@ -18540,7 +18540,7 @@ padding-left:9px;
 /*   padding-right: 1rem !important;
   padding-left: 1rem !important; */
   width: auto;
-  overflow-y: auto;
+  overflow-x: auto;
   overscroll-behavior-x: contain;
   /* scroll-snap-type: x proximity; */
   scroll-snap-type: unset;
@@ -18592,7 +18592,8 @@ width: auto;
 .horizontal-snap > .item {
 position:relative;
 /* width:100%; */
-max-width:100%;
+/* max-width:100%; */
+width:auto;
 }
 
 
