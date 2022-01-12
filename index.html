@@ -62,11 +62,13 @@
 			
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
+		<!-- <script src="js/dragdealer.js"></script> -->
 		<link rel="stylesheet" href="css/keen-slider.css">
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">		
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/animate.css">
+		<!-- <link rel="stylesheet" href="css/dragdealer.css"> -->
 
 		<!-- xr-auto & config-auto resize & texts -->
 		<script>
@@ -181,11 +183,13 @@
 					<li class="desktop-hidden nav-item">
 					  <a class="nav-link open-popup" href="#pdf-mobile">Pdf</a> 
 					</li>		
-					<li class="nav-item flex-xl-up c-lg">
+					<li class="nav-item flex-xl-up c-lg" style="display:inline-flex;">
 					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
 						<div id="theme-switcher-menu" class=" flex justify-content-center">
-						<div id="" class="dark-theme-button theme-circle dark"></div>
-						<div id="" class="light-theme-button theme-circle light"></div>					
+						<p class="nav-link pb light-theme-button" style="padding-bottom: 0 !important; cursor:pointer;">Light</p>
+						<p class="nav-link pb dark-theme-button" style="padding-bottom: 0 !important;  cursor:pointer;">Dark</p>
+<!-- 						<div id="" class="dark-theme-button theme-circle dark"></div>
+						<div id="" class="light-theme-button theme-circle light"></div> -->					
 						</div>							  
 					</li>				
 				 </ul>
@@ -1014,6 +1018,22 @@
 							</div>			
 						</div>
 					</div>
+				<div class="navigation-wrapper arrows-in dark-theme">		
+					<div class="keen-slider scrollable medium keen touch-hidden">	 
+						<div class="slide zoomable"><img data-src="Converse/images/01.png" class="lazy"></div>							
+						<div class="slide zoomable"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
+						<div class="slide zoomable" style=""><img data-src="Converse/images/03.png" class="lazy"></div>							
+						<div class="slide zoomable" style=""><img data-src="Converse/images/04.png" class="lazy"></div>														
+					</div>
+				</div>
+				<div class="navigation-wrapper arrows-in light-theme">		
+					<div class="keen-slider scrollable small keen touch-hidden">	 
+						<div class="slide zoomable"><img data-src="Converse/images/01.png" class="lazy"></div>							
+						<div class="slide zoomable"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
+						<div class="slide zoomable" style=""><img data-src="Converse/images/03.png" class="lazy"></div>							
+						<div class="slide zoomable" style=""><img data-src="Converse/images/04.png" class="lazy"></div>									
+					</div>
+				</div>					
 						<div class="horizontal-snap m0 xl-up-h medium-theme">						
 							<div class="item zoomable textoverlay" style="width:auto;">
 								<img data-src="Converse/images/01.svg" class="lazy" style="object-position: 50% 75%;">		
@@ -1183,7 +1203,7 @@
 					</div>
 				</div>
 				<div class="portfolio-section">															
-					<div class="section-hero x-theme">
+					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container medium-theme">	
 						  <div class="col-xs-12 col-xs-6-landscape">								
 								<img class="lazy" src="" data-src="poc/images/front.png">															
@@ -1198,7 +1218,7 @@
 						  </div>
 						</div>								  
 					</div>
-						<div class="col-lg-12 x-theme">
+						<div class="col-lg-12 x-theme xl-up-h">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
 									<div>
@@ -1217,7 +1237,7 @@
 							</div>										
 						</div>						
 				<div class="navigation-wrapper">		
-					<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+					<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh; background: #afb3ff !important;">
 						<div class="section-logo poc-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 						<div class="slide" style="min-width: 100%; max-width: 100%">
 							<div class="row m0 h100">	
@@ -1302,19 +1322,109 @@
 						</div>			
 					</div>
 				</div>	
-				<div class="navigation-wrapper">		
-					<div class="scrollable-slider keen pop-theme touch-hidden" style="height:50vh;">	 
+				<div class="navigation-wrapper arrows-in pop-theme">		
+					<div class="keen-slider keen pop-theme touch-hidden">	 
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
+					</div>
+				</div>
+				<div class="navigation-wrapper arrows-in light-theme">		
+					<div class="keen-slider scrollable medium keen pop-theme touch-hidden">	 
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<!-- <div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							 -->
-		
+						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
 					</div>
 				</div>	
-<!-- 					<div class="scrollthiscontainer">
-						<div id="scrollthis"  class="horizontal-snap m0"  style="background: #bdd6ff"	>						
-							<div class="item contain-item zoomable pop-theme">
+				<div class="navigation-wrapper arrows-in light-theme">		
+					<div class="keen-slider scrollable small keen touch-hidden">	 
+						<div class="slide zoomable light-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable light-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable light-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable light-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
+					</div>
+				</div>	
+<!-- 				<div class="scrollthiscontainer arrows-in">
+					<div id="scrollthis"  class="horizontal-snap small m0  light-theme">						
+						<div class="item contain-item zoomable">
+							<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item contain-item">
+							<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+					</div>	
+					<div id="arrowtest" class="arrow arrow--right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+					<div id="arrowtest" class="arrow arrow--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+				</div> -->
+<!-- <div id="demo-simple-slider" class="dragdealer scrollthiscontainer arrows-in" style="height:25vh; overflow:hidden;"> 
+  <div class="handle red-bar horizontal-snap" style="height:100%; width:auto;">
+						<div class="item contain-item">
+							<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item contain-item">
+							<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>							
+						<div class="item">
+							<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
+							<p class="img-text hidden"></p>					
+						</div>  
+  </div>
+</div>	 -->			
+<!-- 						<div class="horizontal-snap small m0 light-theme">						
+							<div class="item zoomable">
 								<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
 							</div>
@@ -1329,28 +1439,8 @@
 							<div class="item zoomable">
 								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
-							</div>
-						</div>	
-						<div id="arrowtest" class="arrow arrow--right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
-					</div>	 -->
-						<div class="horizontal-snap small m0 light-theme">						
-							<div class="item zoomable">
-								<img src="" data-src="poc/xr//0_7.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							<div class="item zoomable">
-								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
 							</div>							
-							<div class="item zoomable">
-								<img src="" data-src="poc/xr//0_14.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>							
-							<div class="item zoomable">
-								<img src="" data-src="poc/xr//0_10.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>							
-						</div>	
+						</div>	 -->
 					<div class="relative dark-theme">
 						<iframe 
 						class="xr-auto lazy soft-zoom" 
@@ -3898,25 +3988,81 @@
 		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
 		}
 		</script>
-<script>
+<!-- <script>
+
+let isDown = false;
+let startX;
+let scrollLeft;
+const slider = document.querySelector('#scrollthis');
+
+const end = () => {
+	isDown = false;
+  slider.classList.remove('active');
+}
+
+const start = (e) => {
+  isDown = true;
+  slider.classList.add('active');
+  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;	
+}
+
+const move = (e) => {
+	if(!isDown) return;
+
+  e.preventDefault();
+  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
+  const dist = (x - startX);
+  slider.scrollLeft = scrollLeft - dist;
+}
+
+(() => {
+	slider.addEventListener('mousedown', start);
+	slider.addEventListener('touchstart', start);
+
+	slider.addEventListener('mousemove', move);
+	slider.addEventListener('touchmove', move);
+
+	slider.addEventListener('mouseleave', end);
+	slider.addEventListener('mouseup', end);
+	slider.addEventListener('touchend', end);
+})();
+	var current_pos = 0;
 $('#scrollthis').on('mousewheel', function(event) {
     console.log(event.deltaX, event.deltaY, event.deltaFactor);
 	 var delta = Math.max(-1, Math.min(1, (event.originalEvent.wheelDelta || -event.originalEvent.detail)));
+	var scroll_this = $(this);
 
-        $(this).scrollLeft( $(this).scrollLeft() - ( delta * 400 ) );
+		if (event.deltaY > 0) {  
+		var toscroll = current_pos + 400;
+       scroll_this.css('transform', 'translateX(-'+toscroll+'px)');
+		 current_pos = toscroll;
+			toscroll = toscroll + 400;
+			console.log(current_pos);
         event.preventDefault();
+		}  
 });
 
 
 
-</script>
-<!-- <script>
+</script> -->
+<script>
+var toscroll = 400;
 $('.scrollthiscontainer #arrowtest').on('click', function(event) {
 
-var scrolled = 0;
-        $(this).closest('.scrollthiscontainer').find('#scrollthis').scrollLeft( 400 );
+
+       $(this).closest('.scrollthiscontainer').find('#scrollthis').scrollLeft( toscroll );       
         event.preventDefault();
+		  
+		  toscroll = toscroll + 400;
+
+
+
+		  
 });
+</script>
+<!-- <script>
+new Dragdealer('demo-simple-slider');
 </script> -->
 		<!-- x-theme + theme-switcher + dropshadow -->			
 		<script>
@@ -3960,7 +4106,7 @@ var scrolled = 0;
 		// apply chosen theme to elements - and mark clicked button with circle			
 		$('body').addClass(this_bg);
 		themeElements.addClass(this_theme);
-		$('.' + this_theme + '-button').addClass('circle-shadow');
+		$('.' + this_theme + '-button').addClass('underline');
 		$('#hero').find('.item').addClass(this_theme);	
 		$('body').find(".x-theme, .info-box, .view-btn, .my-slider-progress").addClass(this_theme);
 		$('.portfolio-section, .keen-slider, .x-shadow, .info-box').addClass(this_theme + '-shadow');		
@@ -3968,8 +4114,9 @@ var scrolled = 0;
 		
 		
 		// on theme btn click - mark this btn - if this .item has class x-theme - remove current theme - and apply new theme			
-		
-		//dark-theme button
+			
+
+	//text-theme button
 		$('.light-theme-button, .dark-theme-button').on('click',function(){
 		
 		if ($(this).hasClass('light-theme-button')) {
@@ -3990,8 +4137,10 @@ var scrolled = 0;
 		}
 		
 		$('body').removeClass(other_theme_clr).addClass(this_theme_clr);
-		other_button.removeClass('circle-shadow');
-		this_button.addClass('circle-shadow');
+		//other_button.removeClass('circle-shadow');
+		//this_button.addClass('circle-shadow');
+		other_button.removeClass('underline');
+		this_button.addClass('underline');
 		
 		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
 		$('body').find(".x-theme, .fadeout-btm, .title, .info-box, .view-btn, .my-slider-progress").removeClass(other_theme).addClass(this_theme);
@@ -4229,8 +4378,8 @@ var scrolled = 0;
 			 var thisSlider = $(slider.container);
 			 thisSlider.closest('.navigation-wrapper').append('<div class="arrow arrow--left"></div>');
 			 thisSlider.closest('.navigation-wrapper').append('<div class="arrow arrow--right"></div>');
-			 thisSlider.closest('.navigation-wrapper').find('.arrow--right').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');					 
-			 thisSlider.closest('.navigation-wrapper').find('.arrow--left').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');	
+			 <!-- thisSlider.closest('.navigation-wrapper').find('.arrow--right').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');					  -->
+			 <!-- thisSlider.closest('.navigation-wrapper').find('.arrow--left').prepend('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg>');	 -->
 			 
 			 thisSlider.closest('.navigation-wrapper').find('.arrow--right').on('click', function() {
 			 slider.next()
@@ -4311,8 +4460,8 @@ keenlazyLoadstart();
 
 		function myscroll(slider) {
 		var thisSlider = $(slider.container);
+			if (thisSlider.hasClass('scrollable')){
 			thisSlider.on('mousewheel',  function (e) {
-			//console.log('ok');
 				 if (e.deltaY>0) {
 					  slider.next()
 				 } else {
@@ -4320,6 +4469,8 @@ keenlazyLoadstart();
 				 }
 				 e.preventDefault();
 			});
+			}		
+
 		}
 
 		var funcs = [];
@@ -4328,12 +4479,38 @@ keenlazyLoadstart();
 		for (let i = 0; i < sliders.length; i++) {
 
 		  funcs[i] = function() {
-			let splideElement = sliders[i];			  				  
+			let splideElement = sliders[i];
+			var splide_element = $(splideElement);
+			var add_scroll;
+			
+			if (splide_element.hasClass('scrollable')){
+			console.log('got scrollable');
+			addscroll = 'myscroll';
+			var slides_amount = 2;
+			}
+			else  {
+			addscroll = '';
+			}
+
+
+			if (splide_element.hasClass('medium')){
+			console.log('medium');
+			var slides_amount = 2;
+			}
+			else if (splide_element.hasClass('small')){
+			console.log('small');
+			var slides_amount = 3;
+			}
+			else {
+			console.log('auto');
+			var slides_amount = 'auto';
+			}
+						
 			var slider = new KeenSlider( splideElement , {
 			  loop: false,
 			  mode: "free-snap", //'snap' | 'free' | 'free-snap'
 			  rtl: false,
-			  slides: { perView: "auto" },
+			  slides: { perView: slides_amount },
 			  }, [navigation2, myscroll]) //, myscroll		  
 		  };
 		}
@@ -4349,12 +4526,7 @@ keenlazyLoadstart();
 		  slides: { perView: "1" },
 		  }, [buttonNav])
 
-		  var scrollable_slider = new KeenSlider( '.scrollable-slider' , {
-		  loop: false,
-		  mode: "free",
-		  rtl: false,
-		  slides: { perView: "2" },
-		  }, [navigation2, myscroll])
+
 		
 		
 		var reviews_slider = new KeenSlider( '.reviews-slider' , {
@@ -4403,9 +4575,6 @@ keenlazyLoadstart();
             reviews_slider.on("updated", nextTimeout)
           },		  
 		  ])
-
-
-
 		</script>
 
 		<!-- header	 -->
@@ -4457,12 +4626,10 @@ keenlazyLoadstart();
 			 
 			 // If they scrolled down and are past the navbar, add class .nav-up. This is necessary so you never see what is "behind" the navbar.
 			 if (st > last_st && st > 50){
-			 console.log('bapa');
 				$('header').addClass('nav-up');				
 			 
 			 } else {
 				  if(st + $(window).height() < $(document).height()) {
-				  console.log('apa');
 						$('header').removeClass('nav-up').addClass('nav-down');
 				  }	  
 			 }

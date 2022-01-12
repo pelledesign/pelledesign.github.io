@@ -1,15 +1,17 @@
 
 function both (
 
-hide header after opacity 0
-compare layout with pdf - use pdf
-can't mousedrag/scroll on css slider - make one css-slider with mouse drag and scroll - and not have to enter fixed widths for image containers because of keens translate
-more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device			
-check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
+decide layout for all portfoliosections
 
 IFRAMES
 show on click with keen-reload - decide first what'll be in the sliders
 animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - uZnload on keen transition end? = get rid of keen exept for "process?" - define what should be in there. OR ANIMATE= 0 WHEN NOT VISIBLE!	
+	
+
+more secure istouchdevice - atm its used on laptops with touchscreen support as well: https://stackoverflow.com/questions/3514784/what-is-the-best-way-to-detect-a-mobile-device			
+check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
+compare layout with pdf - use pdf
+
 )
 
 
@@ -37,6 +39,7 @@ belmar - finish model
 )
 
 function later (
+can't mousedrag/scroll on css slider - make one css-slider with mouse drag and scroll - and not have to enter fixed widths for image containers because of keens translate
 loading icon - splide icon?
 Minimize CLS lazy load
 swipe body up down xr?

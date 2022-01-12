@@ -4,7 +4,8 @@
 	  $(".text-logo-svg").load("images/icons/text-logo.svg"); 
 	  $(".thecuts").load("images/icons/thecuts.svg");
 	  $(".thecuts2").load("images/icons/thecuts2.svg").addClass('loaded');
-	  $(".next-play-circle").load("images/icons/next_play_circle.svg"); 			
+	  //$(".next-play-circle").load("images/icons/next_play_circle.svg");
+	  $(".arrow").load("images/icons/arrow.svg"); 			
 	  //$(".zoom-icon").load("images/icons/zoom-icon.svg"); 		
 	  $(".akg-logo").load("akg/images/akg-logo.svg"); 			
 	  $(".converse-logo").load("Converse/images/converse-logo.svg"); 						
