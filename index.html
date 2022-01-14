@@ -16,7 +16,22 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	  
-		<link rel="stylesheet" href="css/raleway2.css">		 
+		<link rel="stylesheet" href="css/raleway2.css">	
+
+<style>	
+.mediamatch { background: blueviolet }
+.mediamatch::after{ content: "I don't know what you are using to click" }
+
+@media (any-pointer: coarse) {
+  .mediamatch { background: crimson }
+  .mediamatch::after{ content: "Your primary input mechanism is a finger" }  
+}
+
+@media (any-pointer: fine) {
+  .mediamatch { background: goldenrod }
+  .mediamatch::after{ content: "Your primary input mechanism is a mouse" }
+}
+</style>			
 		<script> <!-- start test if touch device -->	
 		function is_touch_device() {  
 		try {  
@@ -25,15 +40,42 @@
 		} catch (e) {  
 		 return false;  
 		}
-		}	
+		}
+
+if(window.matchMedia("(any-pointer: coarse)").matches) {
+    console.log('has touchscreen (any-pointer: coarse)');
+}
+else	{
+console.log('has no touchscreen (any-pointer: coarse)');
+}	
+
+/* At least one input mechanism of the device includes an accurate pointing device. */
+if(window.matchMedia("(any-pointer: fine)").matches) {
+    console.log('has mouse or touchpad (pointer:fine)');
+}
+else {
+    console.log('has NO mouse or touchpad (any-pointer:fine)');
+}
+
+/* The device does not include any pointing device. */
+if(window.matchMedia("(any-pointer: none)").matches) {
+    console.log('has no mouse or touchpad (any-pointer: none)');
+}
+
+if(window.matchMedia("(any-hover: hover)").matches) {
+    console.log('Can hover ()');
+}
+
+	
 		</script>	
 		
 	</head>	
 	<body> 
+	
 		<link rel="stylesheet" href="css/style.css">
-	<script>
-	console.log('no touch body on nav open')
-	</script>
+<!-- 		<script>
+		console.log('no touch body on nav open')
+		</script> -->
 		<!-- background logo -->
 		<div class="hw100 vh100 x-theme c-all"><p class="" style="user-select:none; color:transparent">The Cuts Industrial Design</p></div>		<!-- print someting to avoid fcp error -->
 		<div class="hw100 ls-h hidden">
@@ -58,17 +100,14 @@
 			<div class="c-absolute thecuts2" style="position:fixed;" x="0px" y="0px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
 			</div>
 		</div>
-
 			
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
-		<!-- <script src="js/dragdealer.js"></script> -->
 		<link rel="stylesheet" href="css/keen-slider.css">
 		<link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">		
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/animate.css">
-		<!-- <link rel="stylesheet" href="css/dragdealer.css"> -->
 
 		<!-- xr-auto & config-auto resize & texts -->
 		<script>
@@ -184,10 +223,11 @@
 					  <a class="nav-link open-popup" href="#pdf-mobile">Pdf</a> 
 					</li>		
 					<li class="nav-item flex-xl-up c-lg" style="display:inline-flex;">
-					  <p class="nav-link pb" style="padding-bottom: 0 !important;">Theme</p>    
+					  <!-- <p class="nav-link pb" style="padding-bottom: 0 !important; padding-right: 6px !important;">Theme</p>     -->
 						<div id="theme-switcher-menu" class=" flex justify-content-center">
-						<p class="nav-link pb light-theme-button" style="padding-bottom: 0 !important; cursor:pointer;">Light</p>
-						<p class="nav-link pb dark-theme-button" style="padding-bottom: 0 !important;  cursor:pointer;">Dark</p>
+						<p class="nav-link pb light-theme-button" style="padding-bottom: 0 !important; cursor: pointer; padding-right: 3px !important;">Light</p>
+						<p class="nav-link pb" style="padding-bottom: 0 !important; cursor: pointer; padding-right: 3px !important; padding-left: 0 !important;">/</p>
+						<p class="nav-link pb dark-theme-button" style="    padding-bottom: 0 !important; cursor: pointer; padding: 0; padding: 0; padding-left: 0 !important;">Dark</p>
 <!-- 						<div id="" class="dark-theme-button theme-circle dark"></div>
 						<div id="" class="light-theme-button theme-circle light"></div> -->					
 						</div>							  
@@ -197,10 +237,11 @@
 			</div>
 		 </nav>
 		</header>		
-												
+<div class="mediamatch">	
+</div>												
 		<!-- hero -->
 		<h3 class="h3 x-theme">About</h3>
-		<div id="hero-container" class="portfolio-section h-auto col-full">
+		<div id="hero-container" class="portfolio-section brand-section h-auto col-full">
 			<div class="row c-all hw100 m0">
 				<div class="col-lg-12 h100">
 				<div class="about-slider keen x-theme">		 
@@ -335,8 +376,8 @@
 							</div>		
 						</div>
 						<h3 class="h3 s-t x-theme bg-none mb-0 ls-h" style="font-size:0.8rem; padding:9px; padding-left:1rem; letter-spacing: 3px;">Process</h3>		
-						<div class="navigation-wrapper" style="">	
-							<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+						<div class="navigation-wrapper">	
+							<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh;">
 								<div class="section-logo akg-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 								<div class="slide" style="min-width: 100%; max-width: 100%">
 									<div class="container-xl-up row m0 hw100 relative mr-auto ml-auto">						
@@ -589,7 +630,69 @@
 								<img src="" data-src="akg/images/04.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
 							</div>														
-						</div>											
+						</div>
+						<div class="navigation-wrapper show-mobile arrows-in medium-theme">		
+							<div class="keen-slider scrollable small four keen">	 
+								<div class="slide zoomable"><img data-src="akg/images/01.png" class="lazy"></div>							
+								<div class="slide zoomable"><img data-src="akg/images/02.png" class="lazy"></div>							
+								<div class="slide zoomable"><img data-src="akg/images/03.png" class="lazy"></div>							
+								<div class="slide zoomable"><img data-src="akg/images/04.png" class="lazy"></div>							
+								<div class="slide zoomable"><img data-src="akg/images/05.png" class="lazy"></div>							
+								<div class="slide zoomable dark-theme"><img data-src="akg/images/functions.svg" class="lazy"></div>							
+								<div class="slide zoomable light-theme"><img data-src="akg/images/onhead.jpg" class="lazy"></div>							
+								
+							</div>
+						</div>
+<!-- 						<div class="scrollthiscontainer arrows-in">
+							<div id="scrollthis"  class="horizontal-snap small m0  light-theme">						
+							<div class="item zoomable textoverlay medium-theme">
+								<img src="" data-src="akg/images/01.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/03.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/04.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/05.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>								
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/01.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable dark-theme">
+								<img src="" data-src="akg/images/functions.svg" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/onhead.jpg" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/03.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/04.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							</div>	
+							<div id="arrowtest" class="arrow arrow--right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+							<div id="arrowtest" class="arrow arrow--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+						</div> -->						
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
 							<div class="dark-theme">
 								<iframe 
@@ -729,7 +832,7 @@
 								</div>
 							</div>										
 						</div>					
-					<div class="navigation-wrapper touch-remove">	
+					<div class="navigation-wrapper">	
 						<div class="keen-slider checkvisibility pop-theme" style="max-width: 100vw; height:75vh; height: calc(80vw * (9/16)) !important">
 							<div class="section-logo converse-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		
 							<div class="slide light zoomable light-theme" style="min-width: 100%; max-width: 100%">
@@ -1237,7 +1340,7 @@
 							</div>										
 						</div>						
 				<div class="navigation-wrapper">		
-					<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh; background: #afb3ff !important;">
+					<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh; background: #afb3ff !important;">
 						<div class="section-logo poc-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 						<div class="slide" style="min-width: 100%; max-width: 100%">
 							<div class="row m0 h100">	
@@ -1322,15 +1425,7 @@
 						</div>			
 					</div>
 				</div>	
-				<div class="navigation-wrapper arrows-in pop-theme">		
-					<div class="keen-slider keen pop-theme touch-hidden">	 
-						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
-						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
-					</div>
-				</div>
+
 				<div class="navigation-wrapper arrows-in light-theme">		
 					<div class="keen-slider scrollable medium keen pop-theme touch-hidden">	 
 						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
@@ -1339,7 +1434,16 @@
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
 					</div>
-				</div>	
+				</div>
+				<div class="navigation-wrapper arrows-in pop-theme">		
+					<div class="keen-slider keen pop-theme touch-hidden">	 
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
+						<div class="slide pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>									
+					</div>
+				</div>				
 				<div class="navigation-wrapper arrows-in light-theme">		
 					<div class="keen-slider scrollable small keen touch-hidden">	 
 						<div class="slide zoomable light-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
@@ -1580,7 +1684,7 @@
 				</div>
 				<div class="portfolio-section">					
 					<div class="navigation-wrapper">				
-						<div id="spotify-slider-lazy" class="keen-slider medium-theme touch-remove" style="max-width: 100vw; height:75vh;">
+						<div id="spotify-slider-lazy" class="keen-slider medium-theme" style="max-width: 100vw; height:75vh;">
 							<div class="section-logo spotify-logo bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 							<div class="slide row m0 multiply" style="min-width: 100%; max-width: 100%">
 								<div class="col-lg-4 c-all touch-hidden">
@@ -1618,7 +1722,25 @@
 							</div>			
 						</div>
 					</div>
-				</div>																						
+				<div class="navigation-wrapper arrows-in dark-theme">		
+					<div class="keen-slider scrollable medium four keen touch-hidden">	 
+						<div class="slide zoomable"><img data-src="spotify/xr//0_0.png" class="lazy cover"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_7.png" class="lazy"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_26.png" class="lazy"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_35.png" class="lazy"></div>																				
+					</div>
+				</div>
+				<div class="navigation-wrapper arrows-in light-theme">		
+					<div class="keen-slider scrollable small five keen touch-hidden">	 
+						<div class="slide zoomable"><img data-src="spotify/xr//0_0.png" class="lazy cover"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_7.png" class="lazy cover"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_26.png" class="lazy cover"></div>																				
+						<div class="slide zoomable"><img data-src="spotify/xr//0_35.png" class="lazy cover"></div>							
+						<div class="slide zoomable"><img data-src="spotify/xr//0_35.png" class="lazy cover"></div>							
+					</div>
+				</div>							
+				</div>
+			
 			</div>							
 			<div id="bagheera" class="brand-section">
 				<div id="bagheera-title" class="title x-theme bg-none row m0">
@@ -1636,7 +1758,7 @@
 				</div>
 				<div class="portfolio-section">	
 					<div class="navigation-wrapper">				
-						<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+						<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh;">
 							<div class="section-logo bagheera-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 							<div class="slide row m0" style="min-width: 100%; max-width: 100%">
 								<div class="col-lg-6 col-xs-6 h100 c-all pt-h">
@@ -1726,8 +1848,29 @@
 								<div class="my-slider-progress-bar"></div>
 							</div>			
 						</div>
-					</div>									
-					<div class="section-hero x-theme">
+					</div>
+					<div class="navigation-wrapper arrows-in dark-theme">		
+						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
+						</div>
+					</div>
+					<div class="navigation-wrapper arrows-in light-theme">		
+						<div class="keen-slider scrollable small five keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
+						</div>
+					</div>					
+					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container dark-theme">					
 						  <div class="col-xs-12 col-xs-6-landscape">								
 								<img class="lazy" src="" data-src="Bagheera/images/twisted.png">															
@@ -1837,10 +1980,8 @@
 								</iframe>
 							</div>
 						</div>	
-					</div>
-
-						
-				</div>				
+					</div>			
+				</div>	
 			</div>			
 			<div class="info-container">	
 				<h3 class="h3 x-theme"><strong>Re</strong>Wievs</h3>
@@ -1873,7 +2014,7 @@
 				</div>
 				<div class="portfolio-section">
 					<div class="navigation-wrapper">				
-					<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+					<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh;">
 						<div class="section-logo haglofs-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 						<div class="slide row m0" style="min-width: 100%; max-width: 100%">
 							<div class="col-lg-4 col-sm">
@@ -1913,12 +2054,34 @@
 						</div>			
 					</div>
 					</div>					
-					<div class="section-hero x-theme">
+					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12">								
 								<img class="lazy" src="" data-src="haglofs/xr/0_0.png">															
 						  </div>	
 						</div>							  
+					</div>
+					<div class="navigation-wrapper arrows-in dark-theme">		
+						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+						</div>
+					</div>
+					<div class="navigation-wrapper arrows-in light-theme">		
+						<div class="keen-slider scrollable small five keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>																									
+						</div>
 					</div>					
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">								
 						<div class="item col-lg-12 c-all">			
@@ -1975,7 +2138,7 @@
 				</div>
 				<div class="portfolio-section x-theme">
 				<div class="navigation-wrapper">
-				<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+				<div class="keen-slider checkvisibility dark-theme" style="max-width: 100vw; height:75vh;">
 					<div class="section-logo alcon-logo dark-theme bg-none hw100" style="height:75%; opacity:0.04"></div>		 
 					<div class="slide row m0" style="min-width: 100%; max-width: 100%">
 					  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100">								
@@ -2032,7 +2195,7 @@
 					</div>			
 				</div>
 				</div>							
-					<div class="section-hero x-theme">
+					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 col-xs-6-landscape">								
 								<img class="lazy contain" src="" data-src="alcon/xr/25_0.png">															
@@ -2046,7 +2209,29 @@
 								</div>												  						
 						  </div>
 						</div>								  
-					</div>					
+					</div>
+					<div class="navigation-wrapper arrows-in dark-theme">		
+						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
+						</div>
+					</div>
+					<div class="navigation-wrapper arrows-in light-theme">		
+						<div class="keen-slider scrollable small five keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>																								
+						</div>
+					</div>						
 					<div id="grid" class="xl-up-h item row m0 h100">					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
@@ -2149,7 +2334,7 @@
 				</div>
 				<div class="portfolio-section">
 					<div class="navigation-wrapper">				
-						<div class="keen-slider checkvisibility dark-theme touch-remove" style="max-width: 100vw; height:75vh;">
+						<div class="keen-slider checkvisibility dark-theme " style="max-width: 100vw; height:75vh;">
 							<div class="section-logo specialized-logo dark-theme bg-none hw100" style="height:75%; width:100%; opacity:0.04"></div>		 
 							<div class="slide row m0" style="min-width: 100%; max-width: 100%">
 										<div class="col-lg-6 c-all txt-l">
@@ -2231,7 +2416,7 @@
 							</div>			
 						</div>
 					</div>						
-					<div class="section-hero x-theme">
+					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12 col-xs-6-landscape">								
 								<img class="lazy contain" src="" data-src="Specialized/images/twisted.png">															
@@ -2243,7 +2428,31 @@
 								</div>												  						
 						  </div>
 						</div>
-					</div>					
+					</div>	
+					<div class="navigation-wrapper arrows-in dark-theme">		
+						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_5.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_5.png" class="lazy"></div>
+						</div>
+					</div>
+					<div class="navigation-wrapper arrows-in light-theme">		
+						<div class="keen-slider scrollable small five keen touch-hidden">	 
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_5.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="Specialized/xr//0_5.png" class="lazy"></div>																							
+						</div>
+					</div>						
 					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
@@ -3920,8 +4129,9 @@
 		
 		<!-- hide & remove -->
 		<script>
-		if(is_touch_device()) {
+			if(is_touch_device()) {
 		$('.touch-remove').remove();
+		//$('.keen-slider').remove();
 		}
 		else {
 		$('.desktop-remove').remove();
@@ -3970,7 +4180,6 @@
 		document.write('<script src="js/bootstrap.min.js"><\/script>');
 		document.write('<script src="js/magnific.js"><\/script>');
 		document.write('<script src="js/load-more-button.js"><\/script>');
-		//document.write('<script src="js/jquery-scroll-snap.js"><\/script>');
 		document.write('<script src="js/smoothscroll.js"><\/script>');
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/keen-slider.js"><\/script>');
@@ -3982,13 +4191,12 @@
 		document.write('<script src="js/magnific.js"><\/script>');
 		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
 		document.write('<script src="js/load-more-button.js"><\/script>');
-		<!-- document.write('<script src="js/jquery-scroll-snap.js"><\/script>'); -->
 		document.write('<script src="js/isInViewport.js"><\/script>');
 		document.write('<script src="js/keen-slider.js"><\/script>');
 		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
 		}
 		</script>
-<!-- <script>
+<script>
 
 let isDown = false;
 let startX;
@@ -4045,7 +4253,7 @@ $('#scrollthis').on('mousewheel', function(event) {
 
 
 
-</script> -->
+</script>
 <script>
 var toscroll = 400;
 $('.scrollthiscontainer #arrowtest').on('click', function(event) {
@@ -4157,9 +4365,7 @@ new Dragdealer('demo-simple-slider');
 	});	
 				
 		</script>
-		
-
-		
+				
 		<!-- keen slider & keen lazy -->
 		<script>
 		
@@ -4387,7 +4593,7 @@ new Dragdealer('demo-simple-slider');
 			 thisSlider.closest('.navigation-wrapper').find('.arrow--left').on('click', function() {
 			 slider.prev()
 			 });			 		 
-keenlazyLoadstart();
+			keenlazyLoadstart();
 			 //console.log(checkTheme);
 		  })
 		  slider.on("optionsChanged", () => {
@@ -4430,8 +4636,7 @@ keenlazyLoadstart();
 
 		  slider.on("destroyed", () => {
 			 markup(true)
-		  })
-		  
+		  })		  
 		}
 		
 		function myscroll(slider) {
@@ -4460,6 +4665,8 @@ keenlazyLoadstart();
 
 		function myscroll(slider) {
 		var thisSlider = $(slider.container);
+			
+			//if container has class 'scrollable' then enable scrolling
 			if (thisSlider.hasClass('scrollable')){
 			thisSlider.on('mousewheel',  function (e) {
 				 if (e.deltaY>0) {
@@ -4470,7 +4677,6 @@ keenlazyLoadstart();
 				 e.preventDefault();
 			});
 			}		
-
 		}
 
 		var funcs = [];
@@ -4479,32 +4685,37 @@ keenlazyLoadstart();
 		for (let i = 0; i < sliders.length; i++) {
 
 		  funcs[i] = function() {
+		  
 			let splideElement = sliders[i];
 			var splide_element = $(splideElement);
-			var add_scroll;
 			
-			if (splide_element.hasClass('scrollable')){
-			console.log('got scrollable');
-			addscroll = 'myscroll';
+			//set slides amount depending on class
+
+			
+			if (splide_element.hasClass('one')){
+			var slides_amount = 1;
+			}
+			else if (splide_element.hasClass('two')){
 			var slides_amount = 2;
 			}
-			else  {
-			addscroll = '';
+			else if (splide_element.hasClass('three')){
+			var slides_amount = 3;
 			}
-
-
-			if (splide_element.hasClass('medium')){
-			console.log('medium');
+			else if (splide_element.hasClass('four')){
+			var slides_amount = 4;
+			}
+			else if (splide_element.hasClass('five')){
+			var slides_amount = 5;
+			}
+			else if (splide_element.hasClass('medium')){
 			var slides_amount = 2;
 			}
 			else if (splide_element.hasClass('small')){
-			console.log('small');
 			var slides_amount = 3;
 			}
 			else {
-			console.log('auto');
 			var slides_amount = 'auto';
-			}
+			}		
 						
 			var slider = new KeenSlider( splideElement , {
 			  loop: false,
@@ -4518,16 +4729,12 @@ keenlazyLoadstart();
 		  funcs[j]();
 		}
 
-
 		var about_slider = new KeenSlider( '.about-slider' , {
 		  loop: false,
-		  mode: "free",
+		  mode: "snap",
 		  rtl: false,
 		  slides: { perView: "1" },
 		  }, [buttonNav])
-
-
-		
 		
 		var reviews_slider = new KeenSlider( '.reviews-slider' , {
 		  loop: true,

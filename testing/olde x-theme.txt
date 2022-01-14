@@ -1,0 +1,130 @@
+		<!-- x-theme + theme-switcher + dropshadow -->			
+		<script>
+
+		<!-- specific dark and light themes for desktop / touch -->
+		if(is_touch_device()) {
+		$( '.dark-theme-touch' ).addClass('dark-theme');
+		$( '.light-theme-touch' ).addClass('light-theme');
+		$( '.medium-theme-touch' ).addClass('medium-theme');
+		}		
+		else {
+		$( '.dark-theme-desktop' ).addClass('dark-theme');
+		$( '.light-theme-desktop' ).addClass('light-theme');
+		$( '.medium-theme-desktop' ).addClass('medium-theme');
+		}	
+		
+		//must be placed before main.js as it needs classes from x-theme to be able to execute
+		
+		$('.xr-auto').closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
+		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong></strong>CMF</h3></div>');		
+		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open "></div></a>');
+
+		
+		var theme;
+		var this_theme; 			
+		var this_bg;
+		
+		if(is_touch_device()) {
+		theme = 'light';	
+		themeElements = $('.x-theme-touch');	
+		}
+		else
+		{ 
+		theme = 'light';
+		themeElements = $('.x-theme-desktop');
+		}		
+		
+		this_theme = theme + '-theme'; 			
+		this_bg = theme + 'Bg';
+		
+		// apply chosen theme to elements - and mark clicked button with circle			
+		$('body').addClass(this_bg);
+		themeElements.addClass(this_theme);
+		$('.' + this_theme + '-button').addClass('circle-shadow');
+		$('#hero').find('.item').addClass(this_theme);	
+		$('body').find(".x-theme, .info-box, .view-btn, .my-slider-progress").addClass(this_theme);
+		$('.portfolio-section, .keen-slider, .x-shadow, .info-box').addClass(this_theme + '-shadow');		
+		$('body').find(".title").not('.ignore').addClass('bg-none');
+		
+		
+		// on theme btn click - mark this btn - if this .item has class x-theme - remove current theme - and apply new theme			
+		
+		//dark-theme button
+		$('.light-theme-button, .dark-theme-button').on('click',function(){
+		
+		if ($(this).hasClass('light-theme-button')) {
+		var this_theme = 'light-theme';
+		var other_theme = 'dark-theme';
+		var this_button = $('.light-theme-button');
+		var other_button = $('.dark-theme-button');
+		var this_theme_clr = 'lightBg';
+		var other_theme_clr = 'darkBg';
+		}
+		else if ($(this).hasClass('dark-theme-button')) {
+		var this_theme = 'dark-theme';
+		var other_theme = 'light-theme';
+		var this_button = $('.dark-theme-button');
+		var other_button = $('.light-theme-button');
+		var this_theme_clr = 'darkBg';
+		var other_theme_clr = 'lightBg';
+		}
+		
+		$('body').removeClass(other_theme_clr).addClass(this_theme_clr);
+		other_button.removeClass('circle-shadow');
+		this_button.addClass('circle-shadow');
+		
+		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
+		$('body').find(".x-theme, .fadeout-btm, .title, .info-box, .view-btn, .my-slider-progress").removeClass(other_theme).addClass(this_theme);
+		$('body').find('.portfolio-section, .keen-slider, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
+					
+		$('nav').removeClass(other_theme).addClass(this_theme);	
+		
+		// if the active slide has x-theme class - only then change the colors of prev/next buttons
+		$(".owl-item.active").each(function(){		
+		  if ($(this).find('.item').hasClass('x-theme')) {				
+			$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass(other_theme).addClass(this_theme);				
+		  }
+		});			
+	});	
+
+	//text-theme button
+		$('.light-theme-button, .dark-theme-button').on('click',function(){
+		
+		if ($(this).hasClass('light-theme-button')) {
+		var this_theme = 'light-theme';
+		var other_theme = 'dark-theme';
+		var this_button = $('.light-theme-button');
+		var other_button = $('.dark-theme-button');
+		var this_theme_clr = 'lightBg';
+		var other_theme_clr = 'darkBg';
+		}
+		else if ($(this).hasClass('dark-theme-button')) {
+		var this_theme = 'dark-theme';
+		var other_theme = 'light-theme';
+		var this_button = $('.dark-theme-button');
+		var other_button = $('.light-theme-button');
+		var this_theme_clr = 'darkBg';
+		var other_theme_clr = 'lightBg';
+		}
+		
+		$('body').removeClass(other_theme_clr).addClass(this_theme_clr);
+		//other_button.removeClass('circle-shadow');
+		//this_button.addClass('circle-shadow');
+		other_button.removeClass('underline');
+		this_button.addClass('underline');
+		
+		$('#hero').find('.item').removeClass(other_theme).addClass(this_theme);
+		$('body').find(".x-theme, .fadeout-btm, .title, .info-box, .view-btn, .my-slider-progress").removeClass(other_theme).addClass(this_theme);
+		$('body').find('.portfolio-section, .keen-slider, .x-shadow, .info-box').removeClass(other_theme + '-shadow').addClass(this_theme + '-shadow');											
+					
+		$('nav').removeClass(other_theme).addClass(this_theme);	
+		
+		// if the active slide has x-theme class - only then change the colors of prev/next buttons
+		$(".owl-item.active").each(function(){		
+		  if ($(this).find('.item').hasClass('x-theme')) {				
+			$(this).closest('#slider-container').find(".view-btn").not('.hide-this').removeClass(other_theme).addClass(this_theme);				
+		  }
+		});			
+	});	
+				
+		</script>

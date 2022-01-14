@@ -1,0 +1,85 @@
+		<!-- image zoom -->
+		<script>	
+		
+			//show zoom icon on touch / add zoom-icon 
+			$('.zoomable').prepend('<div class="ion-ios-plus c-absolute"></div>');
+			
+			//animations
+			$('.zoomable').on('touchstart touchend mouseenter mouseleave',function(){
+			$(this).find('img').toggleClass( 'opacity-05' );
+			$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color');					
+			});
+			
+		<!-- zoom-icon function -->		
+		$('.zoomable').on('click', function() { <!-- .zoom-icon,  -->
+			var brand ="";
+			// select popup background based on background of .item 	
+			if ($(this).hasClass('dark-theme') || $(this).closest('.horizontal-snap').hasClass('dark-theme')){
+			var bg = '#141414';
+			var theme = 'dark-theme';			
+			}
+			else if ($(this).hasClass('light-theme') || $(this).closest('.horizontal-snap').hasClass('light-theme')){
+			var bg = '#fff';
+			var theme = 'light-theme';			
+			}
+			else if ($(this).hasClass('medium-theme') || $(this).closest('.horizontal-snap').hasClass('medium-theme')){
+			var bg = '#e7e8e9'; 
+			var theme = 'medium-theme';	
+			}
+			else if ($(this).hasClass('pop-theme')){
+			var brand = $(this).closest('.brand-section').attr('id');
+			var bg = '#e7e8e9'; 
+			var theme = 'pop-theme';
+	
+			console.log(theme)
+			}
+			<!-- fallback theme -->
+			else {
+			var bg = '#fff';		
+			var theme = 'light-theme';		
+			alert('no bg');
+			};
+
+			//check if image got blend-mode
+			var blendmode = '';
+			if($(this).closest('.item').find('img').hasClass('multiply')){
+				 var blendmode = 'multiply';
+			}		
+
+			//select contain or cover depending on screen orientation 		
+			if(window.innerHeight > window.innerWidth){
+				 var bgsize = 'cover';
+			}	 
+			else {
+			var bgsize = 'contain' 
+			};
+
+			//create popup
+			var src = $(this).closest('.zoomable').find('img').first().attr("src");
+			var modal;
+			var scrollwidth = '99vh'
+			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+			modal = $('<div id="scroll" class='+theme+'><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'"></div><button class="mfp-close">&#215;</button></div>').css({
+			  //backgroundColor: bg,
+			  backgroundSize: bgsize,
+			}).addClass(brand).click(function(){
+			  removeModal();
+			}).appendTo('body');
+
+			//scroll image to center position
+			var imglength = $(this).next('img').width();	
+			var $container = $("#scroll");
+			var $img = $("#scroll div");
+			var cWidth = $container.width();
+			var iWidth = $img.width();
+			var intrinsicWidth = $(this).next('img').attr('class');
+			console.log(iWidth, intrinsicWidth);
+			var left = (iWidth - cWidth) / 2; 
+
+			$container.scrollLeft(left);
+
+			$('body').on('keyup.modal-close', function(e){
+			if(e.key==='Escape'){ removeModal(); } 
+			});	
+			});
+		</script>
