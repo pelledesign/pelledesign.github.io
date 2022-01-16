@@ -19,22 +19,219 @@
 		<link rel="stylesheet" href="css/raleway2.css">		 
 
 <style>	
-body { background: blueviolet }
-body::after{ content: "I don't know what you are using to click" }
+      body,
+      html {
+        color: #fff;
+        text-align: center;
+        background: #efefef;
+        font-family: Helvetica, sans-serif;
+        margin: 0;
+      }
 
-@media (any-pointer: coarse) {
-  body { background: crimson }
-  body::after{ content: "Your primary input mechanism is a finger" }  
-}
+      .grid-container {
+        background: #efefef;
+        font-family: 'Rubik', sans-serif;
+      }
 
-@media (any-pointer: fine) {
-  body { background: goldenrod }
-  body::after{ content: "Your primary input mechanism is a mouse" }
-}
+      @supports (display: grid) {
+        .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto 1fr auto;
+          grid-template-areas: "header header header" "title title footer" "main main main";
+        }
+        @media screen and (max-width: 500px) {
+          .grid-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: 0.3fr 1fr auto 1fr;
+            grid-template-areas: "header" "title" "main" "footer";
+          }
+        }
+
+        .grid-item {
+          color: #fff;
+          background: skyblue;
+          padding: 3.5em 1em;
+          font-size: 1em;
+          font-weight: 700;
+        }
+
+        .header {
+          background-color: #092a37;
+          grid-area: header;
+          padding: 1em;
+        }
+
+        .title {
+          color: #555;
+          background-color: #f4fbfd;
+          grid-area: title;
+        }
+
+        .main {
+          color: #959595;
+          background-color: white;
+          grid-area: main;
+          padding: 0;
+          overflow-x: scroll;
+          overflow-y: hidden;
+        }
+
+        .footer {
+          background-color: #5bbce4;
+          grid-area: footer;
+          padding: 0.6em;
+        }
+
+        .items {
+          position: relative;
+          width: 100%;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          white-space: nowrap;
+          transition: all 0.2s;
+          transform: scale(0.98);
+          will-change: transform;
+          user-select: none;
+          cursor: pointer;
+        }
+
+        .items.active {
+          background: rgba(255, 255, 255, 0.3);
+          cursor: grabbing;
+          cursor: -webkit-grabbing;
+        }
+
+        .item {
+          display: inline-block;
+          background: skyblue;
+          min-height: 250px;
+          min-width: 400px;
+          margin: 2em 1em;
+        }
+        @media screen and (max-width: 500px) {
+          .item {
+            min-height: 200px;
+            min-width: 200px;
+          }
+        }
+      }
+      a {
+        display: block;
+        color: #c9e9f6;
+        text-decoration: underline;
+        margin: 1em auto;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+
+      p {
+        text-align: left;
+        text-indent: 20px;
+        font-weight: 100;
+      }
+
+      i {
+        color: skyblue;
+      }
+      
+      .credit, .credit a {
+        color:#666;
+        line-height: 100%;
+        display: inline-block;
+        font-size:12px;
+      }
 </style>	
 		
 	</head>	
 	<body> 
+  <div class="grid-container">
+  
+  
+    <main class="grid-item main">
+      <div class="items">
+        <div class="item item1"></div>
+        <div class="item item2"></div>
+        <div class="item item3"></div>
+        <div class="item item4"></div>
+        <div class="item item5"></div>
+        <div class="item item6"></div>
+        <div class="item item7"></div>
+        <div class="item item8"></div>
+        <div class="item item9"></div>
+        <div class="item item10"></div>
+      </div>
+  
+    </main>
+  
+  </div>
 
+  <div class="credit" >
+  A momentum drag example, based on <a href="https://codepen.io/toddwebdev/pen/yExKoj" >CodePen Home
+Horizontal Click and Drag Scrolling with JS</a> by <a href="https://codepen.io/toddwebdev" >ToddWebDev</a>. 
+</div>
+<script>
+  const slider = document.querySelector('.items');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    cancelMomentumTracking();
+  });
+  
+  
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  
+  
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    beginMomentumTracking();
+  });
+  
+  
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    var prevScrollLeft = slider.scrollLeft;
+    slider.scrollLeft = scrollLeft - walk;
+    velX = slider.scrollLeft - prevScrollLeft;
+  });
+  
+  // Momentum 
+  
+  var velX = 0;
+  var momentumID;
+  
+  slider.addEventListener('wheel', (e) => {
+    cancelMomentumTracking();
+  });  
+  
+  function beginMomentumTracking(){
+    cancelMomentumTracking();
+    momentumID = requestAnimationFrame(momentumLoop);
+  }
+  function cancelMomentumTracking(){
+    cancelAnimationFrame(momentumID);
+  }
+  function momentumLoop(){
+    slider.scrollLeft += velX;
+    velX *= 0.95; 
+    if (Math.abs(velX) > 0.5){
+      momentumID = requestAnimationFrame(momentumLoop);
+    }
+  }
+</script>
 	</body>
 </html>	

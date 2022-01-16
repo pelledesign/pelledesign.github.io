@@ -79,6 +79,10 @@ recommended 50 - 70 */
 /* aspect ratios */
 --splide-height: 75vh;
 --akg-aspectratio: 829 / 899;
+
+--medium-slider-height: 50vh;
+--small-slider-height: 25vh;
+
 }
 
 /* <-----------------------------------------------------------				custom colors 			-----------------------------------------------------------------------------------------> */
@@ -17326,6 +17330,10 @@ width:50%;
 height:100%;	
 }
 
+.w100 {	
+width:100%;	
+}
+
 .h75 {	
 height:75%;	
 }
@@ -18571,11 +18579,11 @@ display:none;
   overflow-x: auto;
   overflow-y: hidden;
   overscroll-behavior-x: contain;
-  /* scroll-snap-type: x proximity; */
-  scroll-snap-type: unset;
+  /* scroll-snap-type: x mandatory; */
+  /* scroll-snap-type: unset; */
   /* margin-bottom: 1rem; */
   position:relative;
-  scroll-behavior: smooth;
+
 }
 
 #grid .horizontal-snap {
@@ -19104,9 +19112,14 @@ border-color: transparent transparent transparent #007bff;
 transition: all .3s ease;	
 }
 
+#scrollthis .active{
+background:red !important;
+}
+
 .scrollthiscontainer {
 position:relative;
 overflow:hidden;	
+width:100%;
 }
 
 .scrollable-slider {
@@ -19114,12 +19127,14 @@ height:50vh;
 }
 
 .scrollable-slider.medium, .keen-slider.medium {
-height:50vh;	
-height:auto;	
+height:var(--medium-slider-height);		
+/* height:auto;	 */
 }
 
+
+
 .scrollable-slider.small, .keen-slider.small {
-height:25vh;	
+height:var(--small-slider-height);	
 }
 
 .underline {
@@ -19127,3 +19142,32 @@ text-decoration: underline !important;
 text-decoration: underline !important;	
 }
 
+.keen-slider.experiment {
+display: grid !important;
+display: -webkit-inline-box !important;
+grid-gap: 1rem;
+    grid-auto-flow: column;	
+}
+
+.keen-slider.experiment .slide {
+min-width:auto !important;
+max-width:none !important;
+width:auto !important;
+}
+
+/* #scrollthis .item {
+scroll-snap-align: start;
+} */
+
+.keen-slider .slide img {
+height: 100%;  
+/* width: auto; */
+width: 100%;
+}
+
+/* default */
+/* #akg-slider .slide { min-width: calc(var(--small-slider-height)*1);}	 */
+
+/* #akg-slider .slide:nth-child(5) { min-width: calc(var(--small-slider-height)*(1366/768));}	 */
+
+	

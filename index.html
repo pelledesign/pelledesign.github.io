@@ -42,30 +42,7 @@
 		}
 		}
 
-if(window.matchMedia("(any-pointer: coarse)").matches) {
-    console.log('has touchscreen (any-pointer: coarse)');
-}
-else	{
-console.log('has no touchscreen (any-pointer: coarse)');
-}	
-
-/* At least one input mechanism of the device includes an accurate pointing device. */
-if(window.matchMedia("(any-pointer: fine)").matches) {
-    console.log('has mouse or touchpad (pointer:fine)');
-}
-else {
-    console.log('has NO mouse or touchpad (any-pointer:fine)');
-}
-
-/* The device does not include any pointing device. */
-if(window.matchMedia("(any-pointer: none)").matches) {
-    console.log('has no mouse or touchpad (any-pointer: none)');
-}
-
-if(window.matchMedia("(any-hover: hover)").matches) {
-    console.log('Can hover ()');
-}
-
+	
 	
 		</script>	
 		
@@ -237,8 +214,8 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 			</div>
 		 </nav>
 		</header>		
-<div class="mediamatch">	
-</div>												
+<!-- <div class="mediamatch">	
+</div>	 -->											
 		<!-- hero -->
 		<h3 class="h3 x-theme">About</h3>
 		<div id="hero-container" class="portfolio-section brand-section h-auto col-full">
@@ -585,7 +562,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 									</div>
 								</div>							
 						</div>	
-						<div class="horizontal-snap small m0">						
+<!-- 						<div class="horizontal-snap small m0 xl-up-h">						
 							<div class="item zoomable textoverlay medium-theme">
 								<img src="" data-src="akg/images/01.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
@@ -630,69 +607,31 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 								<img src="" data-src="akg/images/04.png" class="lazy cover">		
 								<p class="img-text hidden"></p>					
 							</div>														
-						</div>
+						</div> -->
 						<div class="navigation-wrapper show-mobile arrows-in medium-theme">		
-							<div class="keen-slider scrollable small four keen">	 
+							<div id="akg-slider" class="keen-slider scrollable small keen" data-slides="0000">	 
+								<div class="slide zoomable"><img data-src="akg/images/01.png" class="lazy"></div>							
 								<div class="slide zoomable"><img data-src="akg/images/01.png" class="lazy"></div>							
 								<div class="slide zoomable"><img data-src="akg/images/02.png" class="lazy"></div>							
 								<div class="slide zoomable"><img data-src="akg/images/03.png" class="lazy"></div>							
-								<div class="slide zoomable"><img data-src="akg/images/04.png" class="lazy"></div>							
+								<div class="slide zoomable" data-props="1366/768"><img data-src="Converse/images/01.svg" class="lazy"></div>							
+								<div class="slide zoomable" data-props="835/1024"><img data-src="akg/images/04.png" class="lazy"></div>							
 								<div class="slide zoomable"><img data-src="akg/images/05.png" class="lazy"></div>							
-								<div class="slide zoomable dark-theme"><img data-src="akg/images/functions.svg" class="lazy"></div>							
-								<div class="slide zoomable light-theme"><img data-src="akg/images/onhead.jpg" class="lazy"></div>							
-								
+								<div class="slide zoomable dark-theme" data-props="152/150"><img data-src="akg/images/functions.svg" class="lazy"></div>							
+								<div class="slide zoomable light-theme"><img data-src="akg/images/onhead.jpg" class="lazy"></div>	
+<!-- 								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/01.png" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/01.png" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/02.png" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/03.png" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: calc(25vh*(1366/768))!important;"><img data-src="Converse/images/01.svg" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/04.png" class="lazy"></div>							
+								<div class="slide zoomable" style="min-width: 25vh!important;"><img data-src="akg/images/05.png" class="lazy"></div>							
+								<div class="slide zoomable dark-theme" style="min-width: 25vh!important;"><img data-src="akg/images/functions.svg" class="lazy"></div>							
+								<div class="slide zoomable light-theme" style="min-width: 25vh!important;"><img data-src="akg/images/onhead.jpg" class="lazy"></div>	 -->														
 							</div>
 						</div>
-<!-- 						<div class="scrollthiscontainer arrows-in">
-							<div id="scrollthis"  class="horizontal-snap small m0  light-theme">						
-							<div class="item zoomable textoverlay medium-theme">
-								<img src="" data-src="akg/images/01.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/02.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/03.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>							
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/04.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>							
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/05.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>								
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/01.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>	
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/02.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							<div class="item zoomable dark-theme">
-								<img src="" data-src="akg/images/functions.svg" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>	
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/onhead.jpg" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>	
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/03.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							<div class="item zoomable medium-theme">
-								<img src="" data-src="akg/images/04.png" class="lazy cover">		
-								<p class="img-text hidden"></p>					
-							</div>
-							</div>	
-							<div id="arrowtest" class="arrow arrow--right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
-							<div id="arrowtest" class="arrow arrow--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
-						</div> -->						
+
+
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
 							<div class="dark-theme">
 								<iframe 
@@ -776,7 +715,62 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 								<p class="img-text hidden"></p>
 							</div>	
 						</div>	 -->							
-					</div>											
+					</div>
+<!-- 						<div class="scrollthiscontainer arrows-in">
+							<div id="scrollthis"  class="horizontal-snap small m0  light-theme">						
+							<div class="item col-xl-3 col-xs-6 zoomable textoverlay medium-theme">
+								<img src="" data-src="akg/images/01.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item col-xl-3 col-xs-6 zoomable medium-theme">
+								<img src="" data-src="akg/images/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item col-xl-3 col-xs-12 zoomable medium-theme">
+								<img src="" data-src="akg/images/03.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item col-xl-3 zoomable medium-theme">
+								<img src="" data-src="akg/images/04.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item col-xl-3 zoomable medium-theme">
+								<img src="" data-src="akg/images/05.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable textoverlay">
+								<img data-src="Converse/images/01.svg" class="lazy" style="object-position: 50% 75%;">		
+								<p class="img-text hidden"></p>					
+							</div>							
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/01.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/02.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable dark-theme">
+								<img src="" data-src="akg/images/functions.svg" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/onhead.jpg" class="lazy cover multiply">		
+								<p class="img-text hidden"></p>					
+							</div>	
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/03.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							<div class="item zoomable medium-theme">
+								<img src="" data-src="akg/images/04.png" class="lazy cover">		
+								<p class="img-text hidden"></p>					
+							</div>
+							</div>	
+							<div id="arrowtest" class="arrow arrow--right"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+							<div id="arrowtest" class="arrow arrow--left"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40"><path d="m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z"></path></svg></div>							
+						</div> -->
+					
 				</div>					
 			</div>			
 			<div class="info-container">	
@@ -1122,19 +1116,19 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 				<div class="navigation-wrapper arrows-in dark-theme">		
-					<div class="keen-slider scrollable medium keen touch-hidden">	 
-						<div class="slide zoomable"><img data-src="Converse/images/01.png" class="lazy"></div>							
-						<div class="slide zoomable"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
-						<div class="slide zoomable" style=""><img data-src="Converse/images/03.png" class="lazy"></div>							
-						<div class="slide zoomable" style=""><img data-src="Converse/images/04.png" class="lazy"></div>														
+					<div class="keen-slider scrollable medium keen touch-hidden"  data-slides="1220">	 
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/01.png" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/03.png" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/04.png" class="lazy"></div>														
 					</div>
 				</div>
 				<div class="navigation-wrapper arrows-in light-theme">		
-					<div class="keen-slider scrollable small keen touch-hidden">	 
-						<div class="slide zoomable"><img data-src="Converse/images/01.png" class="lazy"></div>							
-						<div class="slide zoomable"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
-						<div class="slide zoomable" style=""><img data-src="Converse/images/03.png" class="lazy"></div>							
-						<div class="slide zoomable" style=""><img data-src="Converse/images/04.png" class="lazy"></div>									
+					<div class="keen-slider scrollable small keen"  data-slides="0220">	 
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/01.png" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/03.png" class="lazy"></div>							
+						<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/04.png" class="lazy"></div>									
 					</div>
 				</div>					
 						<div class="horizontal-snap m0 xl-up-h medium-theme">						
@@ -1280,7 +1274,8 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>		
 					</div>											
 				</div>			
-			</div>			
+			</div>
+			
 			<div class="info-container">	
 				<h3 class="h3 x-theme">About</h3>
 				<div class="info-box"> 					
@@ -1427,7 +1422,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 				</div>	
 
 				<div class="navigation-wrapper arrows-in light-theme">		
-					<div class="keen-slider scrollable medium keen pop-theme touch-hidden">	 
+					<div class="keen-slider scrollable medium keen pop-theme touch-hidden"  data-slides="1122">	 
 						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
@@ -1436,7 +1431,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 					</div>
 				</div>
 				<div class="navigation-wrapper arrows-in pop-theme">		
-					<div class="keen-slider keen pop-theme touch-hidden">	 
+					<div class="keen-slider small keen pop-theme touch-hidden" data-slides="1345">	 
 						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable pop-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
@@ -1445,7 +1440,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 					</div>
 				</div>				
 				<div class="navigation-wrapper arrows-in light-theme">		
-					<div class="keen-slider scrollable small keen touch-hidden">	 
+					<div class="keen-slider scrollable small keen touch-hidden"  data-slides="1123">	 
 						<div class="slide zoomable light-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable light-theme"><img data-src="poc/xr//0_7.png" class="lazy"></div>							
 						<div class="slide zoomable light-theme" style=""><img data-src="poc/xr//0_7.png" class="lazy"></div>							
@@ -1723,7 +1718,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 				<div class="navigation-wrapper arrows-in dark-theme">		
-					<div class="keen-slider scrollable medium four keen touch-hidden">	 
+					<div class="keen-slider scrollable medium four keen touch-hidden"  data-slides="1234">	 
 						<div class="slide zoomable"><img data-src="spotify/xr//0_0.png" class="lazy cover"></div>																				
 						<div class="slide zoomable"><img data-src="spotify/xr//0_7.png" class="lazy"></div>																				
 						<div class="slide zoomable"><img data-src="spotify/xr//0_26.png" class="lazy"></div>																				
@@ -1731,7 +1726,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 					</div>
 				</div>
 				<div class="navigation-wrapper arrows-in light-theme">		
-					<div class="keen-slider scrollable small five keen touch-hidden">	 
+					<div class="keen-slider scrollable small five keen touch-hidden"  data-slides="1235">	 
 						<div class="slide zoomable"><img data-src="spotify/xr//0_0.png" class="lazy cover"></div>																				
 						<div class="slide zoomable"><img data-src="spotify/xr//0_7.png" class="lazy cover"></div>																				
 						<div class="slide zoomable"><img data-src="spotify/xr//0_26.png" class="lazy cover"></div>																				
@@ -1772,7 +1767,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 									</div>												  						
 							  </div>	
 							  <div class="col-lg-6 col-xs-12 col-xs-6-landscape h100">							
-									<img class="lazy contain" data-src="Bagheera/images/twisted.png">									
+									<img class="lazy contain" style="width:100%;" data-src="Bagheera/images/twisted.png">									
 							  </div>
 							</div>					
 							<div class="slide row m0" style="min-width: 100%; max-width: 100%">
@@ -1850,7 +1845,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+						<div class="keen-slider scrollable medium four keen touch-hidden"  data-slides="1234">	 
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
@@ -1860,7 +1855,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small five keen touch-hidden">	 
+						<div class="keen-slider scrollable small keen touch-hidden"  data-slides="1235">	 
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
@@ -2062,7 +2057,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>							  
 					</div>
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+						<div class="keen-slider scrollable medium keen touch-hidden"  data-slides="1233">	 
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
@@ -2073,7 +2068,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small five keen touch-hidden">	 
+						<div class="keen-slider scrollable small five keen touch-hidden"  data-slides="1245">	 
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
@@ -2211,7 +2206,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>								  
 					</div>
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+						<div class="keen-slider scrollable medium keen touch-hidden"  data-slides="1223">	 
 							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
@@ -2222,7 +2217,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small five keen touch-hidden">	 
+						<div class="keen-slider scrollable small keen touch-hidden"  data-slides="1234">	 
 							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
@@ -2430,7 +2425,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>	
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium four keen touch-hidden">	 
+						<div class="keen-slider scrollable medium keen touch-hidden"  data-slides="1234">	 
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
@@ -2442,7 +2437,7 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small five keen touch-hidden">	 
+						<div class="keen-slider scrollable small keen touch-hidden"  data-slides="1245">	 
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_22.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_12.png" class="lazy"></div>
@@ -4170,6 +4165,42 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 		//$(this).closest('.loader').removeClass('loader').addClass('hw100 loader-removed'); 
 		//});		
 		</script>
+
+		<script>
+
+		$('.keen-slider').each(function(){
+			var height;
+
+			if ($(this).hasClass('small')) {
+			var height = '30';
+			}
+			else if ($(this).hasClass('medium')) {
+			var height = '50';
+			}	
+			//remember to set data-slide to 0 to use fixed widths! otherwise keen will override the css
+			
+			//set slider height
+			$(this).css('height', height + 'vh');
+			
+			//set width from data-props else set width to height
+			$(this).find('.slide').each(function(){
+				var el = $(this);
+			
+				if (el.attr('data-props')){
+				
+					dataProps = el.attr('data-props');
+					var toParse = dataProps.split('/')[0];
+					var toParse2 = dataProps.split('/')[1];									
+					var ratio = parseFloat(toParse) / parseFloat(toParse2);	
+					
+					el.css({minWidth: height * ratio +'vh'});
+				}
+				else {
+					el.css({minWidth: height * 1 +'vh'});
+				}
+			});
+		});
+</script>
 				
 		<!-- write scripts for mobile / desktop -->
 		<script>
@@ -4196,65 +4227,10 @@ if(window.matchMedia("(any-hover: hover)").matches) {
 		document.write('<script src="js/jquery.mousewheel.js"><\/script>');
 		}
 		</script>
-<script>
-
-let isDown = false;
-let startX;
-let scrollLeft;
-const slider = document.querySelector('#scrollthis');
-
-const end = () => {
-	isDown = false;
-  slider.classList.remove('active');
-}
-
-const start = (e) => {
-  isDown = true;
-  slider.classList.add('active');
-  startX = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;	
-}
-
-const move = (e) => {
-	if(!isDown) return;
-
-  e.preventDefault();
-  const x = e.pageX || e.touches[0].pageX - slider.offsetLeft;
-  const dist = (x - startX);
-  slider.scrollLeft = scrollLeft - dist;
-}
-
-(() => {
-	slider.addEventListener('mousedown', start);
-	slider.addEventListener('touchstart', start);
-
-	slider.addEventListener('mousemove', move);
-	slider.addEventListener('touchmove', move);
-
-	slider.addEventListener('mouseleave', end);
-	slider.addEventListener('mouseup', end);
-	slider.addEventListener('touchend', end);
-})();
-	var current_pos = 0;
-$('#scrollthis').on('mousewheel', function(event) {
-    console.log(event.deltaX, event.deltaY, event.deltaFactor);
-	 var delta = Math.max(-1, Math.min(1, (event.originalEvent.wheelDelta || -event.originalEvent.detail)));
-	var scroll_this = $(this);
-
-		if (event.deltaY > 0) {  
-		var toscroll = current_pos + 400;
-       scroll_this.css('transform', 'translateX(-'+toscroll+'px)');
-		 current_pos = toscroll;
-			toscroll = toscroll + 400;
-			console.log(current_pos);
-        event.preventDefault();
-		}  
-});
 
 
 
-</script>
-<script>
+<!-- <script>
 var toscroll = 400;
 $('.scrollthiscontainer #arrowtest').on('click', function(event) {
 
@@ -4268,7 +4244,7 @@ $('.scrollthiscontainer #arrowtest').on('click', function(event) {
 
 		  
 });
-</script>
+</script> -->
 <!-- <script>
 new Dragdealer('demo-simple-slider');
 </script> -->
@@ -4691,37 +4667,50 @@ new Dragdealer('demo-simple-slider');
 			
 			//set slides amount depending on class
 
-			
-			if (splide_element.hasClass('one')){
-			var slides_amount = 1;
+			if (splide_element.attr('data-slides')) {
+				var dataSlides = splide_element.attr('data-slides');
+				//console.log(dataSlides);
+
+				// get numbers
+				var slides_xs_down = Number(String(dataSlides).charAt(0));
+				var slides_md_down = Number(String(dataSlides).charAt(1));
+				var slides_lg_down = Number(String(dataSlides).charAt(2));
+				var slides_xl_down = Number(String(dataSlides).charAt(3));
+				
+				if (slides_xs_down == 0) {
+				slides_xs_down = 'auto';
+				}
+				if (slides_md_down == 0) {
+				slides_md_down = 'auto';
+				}
+				if (slides_lg_down == 0) {
+				slides_lg_down = 'auto';
+				}
+				if (slides_xl_down == 0) {
+				slides_xl_down = 'auto';
+				}				 
+				//console.log(slides_xs_down, slides_md_down, slides_lg_down, slides_xl_down);					
 			}
-			else if (splide_element.hasClass('two')){
-			var slides_amount = 2;
-			}
-			else if (splide_element.hasClass('three')){
-			var slides_amount = 3;
-			}
-			else if (splide_element.hasClass('four')){
-			var slides_amount = 4;
-			}
-			else if (splide_element.hasClass('five')){
-			var slides_amount = 5;
-			}
-			else if (splide_element.hasClass('medium')){
-			var slides_amount = 2;
-			}
-			else if (splide_element.hasClass('small')){
-			var slides_amount = 3;
-			}
-			else {
-			var slides_amount = 'auto';
-			}		
-						
+				
 			var slider = new KeenSlider( splideElement , {
 			  loop: false,
 			  mode: "free-snap", //'snap' | 'free' | 'free-snap'
 			  rtl: false,
-			  slides: { perView: slides_amount },
+			  //slides: { perView: slides_amount },
+			  breakpoints: {
+				 '(min-width: 992px)': {
+					slides: { perView: slides_xl_down },
+				 },
+				 '(max-width: 991px)': {
+					slides: { perView: 'auto' },
+				 },
+				 '(max-width: 768px)': {
+					slides: { perView: slides_md_down },
+				 },
+				 '(max-width: 575px)': {
+					slides: { perView: slides_xs_down },
+				 },
+			  },			  
 			  }, [navigation2, myscroll]) //, myscroll		  
 		  };
 		}
@@ -4782,6 +4771,8 @@ new Dragdealer('demo-simple-slider');
             reviews_slider.on("updated", nextTimeout)
           },		  
 		  ])
+		  		  
+		  
 		</script>
 
 		<!-- header	 -->
@@ -5048,7 +5039,23 @@ new Dragdealer('demo-simple-slider');
 					$(this).closest('.video-container').find('.next-play-circle, .next-play-text').removeClass('invisible').addClass('fade-in');
 				 });
 			  });
-			
+
+
+			$('#scrollthis').scroll(function() {
+				 clearTimeout($.data(this, 'scrollTimer'));
+				 $.data(this, 'scrollTimer', setTimeout(function() {
+
+						$('#scrollthis .item').each(function(){
+							 if ( $(this).is(":in-viewport") ){
+								$(this).addClass('is-visible');		
+							 } 
+							 else {
+							$(this).removeClass('is-visible');
+							 }																		
+						})
+
+				 }, 250));
+			});			
 		</script>
 		<script>
 		
