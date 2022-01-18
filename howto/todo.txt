@@ -1,9 +1,10 @@
 
 function both (
-remove istouchdevice + horizontal-snap + decide layout for all portfoliosections
-make prrocess 50vh for xs - add class 'i.e '
-image-zoom scroll on desktop (shrink viewport to see)
 
+fiexed widths, such as data-props="2000" - then resize - doest update due to 'px' being added - change to %
+emove all max-width min
+decide layout for all portfoliosections
+image-zoom scroll on desktop (shrink viewport to see)
 
 IFRAMES
 show on click with keen-reload - decide first what'll be in the sliders

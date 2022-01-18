@@ -583,7 +583,7 @@
 
 		function u(n, t, i) {
 			var e = i ? "height" : "width";
-			null !== t && (t += "px"), n.style["min-" + e] = t, n.style["max-" + e] = t
+			//null !== t && (t += "px"), n.style["min-" + e] = t, n.style["max-" + e] = t
 		}
 
 		function s(t, i, e) {
