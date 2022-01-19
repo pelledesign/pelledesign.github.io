@@ -1,8 +1,10 @@
 
 function both (
 
-fiexed widths, such as data-props="2000" - then resize - doest update due to 'px' being added - change to %
-emove all max-width min
+fix lazy load
+akg right arrow not working
+auto height/width iframes
+
 decide layout for all portfoliosections
 image-zoom scroll on desktop (shrink viewport to see)
 
