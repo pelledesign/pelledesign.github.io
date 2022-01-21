@@ -2,7 +2,7 @@
 		//var deviceThreshold = 500;
 		var windowHeight = $(window).height();
 		var deviceThreshold = windowHeight / 2 
-		console.log('threshold is: ', deviceThreshold)
+		//console.log('threshold is: ', deviceThreshold)
 		
 ! function(n, t) {
     "object" == typeof exports && "undefined" != typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define(t) : (n = n || self).LazyLoad = t()

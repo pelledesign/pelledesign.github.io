@@ -1,8 +1,6 @@
 
 function both (
-
-fix lazy load
-akg right arrow not working
+grid
 auto height/width iframes
 
 decide layout for all portfoliosections
@@ -106,5 +104,9 @@ removed line 743 i lazyload
 211028
 commented out 2 preventdefaults in owl.carousel2.js due to browser throwing an error 
 added on-click trigger to about_slider_mobile in main.js
+
+
+220119
+removed keenlazyLoadstart(); in slider.on created
 )
 

@@ -16361,6 +16361,10 @@ height:60vh !important;
 height:50vh !important	
 }
 
+.vh30{
+height:30vh !important	
+}
+
 
 .min-vh70 {
 min-height:70vh !important;	
@@ -18311,6 +18315,7 @@ fill:red;
 
 #grid { 
 margin-left: 3px;
+background:#fff;
 }
 
 #grid > div:not(.separator):not(.ignore) { 
@@ -19039,9 +19044,9 @@ max-width:500px !important;
 /* .arrow--disabled {
 opacity:0;	
 } */	 
-	 .arrow svg {
+/* 	 .arrow svg {
 fill:#212121 !important;
-	 }
+	 } */
 	.pop-theme .arrow svg {
 fill:#ffffff99 !important;
 	 }
@@ -19117,12 +19122,18 @@ max-width:45%;
 }
 
 #porfolio-gallery {
---portfolio-padding: 10vw;	
+--portfolio-padding: 3vw;	
 }
 
-@media (max-width:991px) { 
+/* @media (max-width:991px) { 
 #porfolio-gallery {
 --portfolio-padding: 3vw;	
+}
+} */
+
+@media (min-width:992px) and (orientation:landscape) { 
+#porfolio-gallery {
+--portfolio-padding: 10vw;	
 }
 }
 
@@ -19241,7 +19252,7 @@ height:var(--slider-height);
 
 
 
-@media (max-width:576px) {
+@media (max-width:575px) {
 	
 	.keen-slider[data-xs="1"] .slide {
 	  /* background-color: red !important; */
@@ -19417,6 +19428,39 @@ height:var(--slider-height);
   min-width: calc(var(--slider-height) * 16/9);
 }
 
+.reviews-slider .slide {
+  min-width: 100%;
+}
+
+@media (max-width:575px) {
+.reviews-slider .slide {
+  min-width: 100%;
+}
+}
+
+@media (min-width:576px) {
+.reviews-slider .slide {
+  min-width: 100%;
+}
+}
+
+@media (min-width:768px) {
+.reviews-slider .slide {
+min-width: 50%;
+}
+}
+@media (min-width:992px) {
+.reviews-slider .slide {
+min-width: 33.3333%;
+}
+}
+
+@media (min-width:1200px) {
+.reviews-slider .slide {
+min-width: 25%;
+}
+}
+
 @media (min-width:576px) {
 .keen-slider .slide.full {
 min-width: 100%;
@@ -19452,4 +19496,34 @@ display:none;
 
 }
 }
-	
+
+.configtext, .xrtext {
+width:100%;
+}
+
+
+.configtext a {
+display: block;
+right: 0;
+position: absolute;
+top: 0;	
+}
+
+
+.xrtext a {
+display: block;
+left: 0;
+position: absolute;
+top: 0;	
+}
+.xrtext h3 {
+text-align:right !important;
+}
+
+iframe {
+height: 100%;
+								left: 0;
+								position: absolute;
+								top: 0;
+								width: 100%;	
+}

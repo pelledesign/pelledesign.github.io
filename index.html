@@ -38,77 +38,6 @@
 		<link rel="stylesheet" href="css/load-more-button.css">	
 		<link rel="stylesheet" href="css/magnific.css">
 		<link rel="stylesheet" href="css/animate.css">
-
-		<!-- xr-auto & config-auto resize & texts -->
-		<script>
-				
-		var xr_resize = function() {
-			var this_iframe;
-			//var this_iframe_is = $('.xr-auto');
-			var this_container_width;
-			var aspect_ratio;
-			var this_src;
-			var this_data_src;
-			
-			$('.xr-auto, .config-auto').each(function() {
-				var this_iframe = $(this);
-				var extra_space = '0';
-				this_src = $(this).attr('src');
-				this_data_src = $(this).attr('data-src');
-				
-				if (this_src =='akg/xr/akgxr.html' || this_data_src =='akg/xr/akgxr.html' || this_src == 'akg/web/keyshot-configurator.html' || this_data_src == 'akg/web/keyshot-configurator.html') {
-				aspect_ratio = 899 / 829;
-				}
-				else if (this_src == 'Converse/xr/conversexr.html' || this_data_src == 'Converse/xr/conversexr.html' || this_src == 'Converse/web/keyshot-configurator.html' || this_data_src == 'Converse/web/keyshot-configurator.html') {
-				aspect_ratio = 800 / 1919;
-				}
-				else if (this_src == 'poc/xr/pocxr.html' || this_data_src == 'poc/xr/pocxr.html') {
-				aspect_ratio = 1080 / 1920;
-				}
-				else if (this_src == 'Bagheera/xr/bagheeraxr.html' || this_data_src == 'Bagheera/xr/bagheeraxr.html') {
-				aspect_ratio = 890 / 1583;
-				}
-				else if (this_src == 'haglofs/xr/haglofs.html' || this_data_src == 'haglofs/xr/haglofs.html') {
-				aspect_ratio = 440 / 1600;
-				}
-				else if (this_src == 'alcon/xr/alconxr.html' || this_data_src == 'alcon/xr/alconxr.html') {
-				aspect_ratio = 800 / 815;
-				}
-				else if (this_src == 'Specialized/xr/specializedxr.html' || this_data_src == 'Specialized/xr/specializedxr.html') {
-				aspect_ratio = 829 / 799;
-				}
-				else {
-				//alert('xr error');
-				}
-				
-				if (this_iframe.hasClass('config-auto')) {
-				extra_space = 40;
-				}
-				
-			 if (window.matchMedia("(max-width: 565px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 566px) and (max-width: 767px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio + extra_space,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 } else if (window.matchMedia("(min-width: 992px)").matches) {
-				var this_container_width = this_iframe.closest('div').width();	
-			  this_iframe.css({'height': this_container_width * aspect_ratio,'width': this_container_width,'max-height': '100%', 'max-width': '100%'})
-			 }
-			 });	
-		}
-
-		$(document).ready(function() {  
-			xr_resize();
-		});
-
-		$(window).on('resize', function(){    							
-			xr_resize();	
-		}).resize()// trigger on page load
-		</script>	
 		
 		<!-- header -->
 		<header id="header" role="banner" class="">
@@ -248,10 +177,9 @@
 						</div>	
 						<div class="col-md-6 col-lg-6 col-xs-5 ml-auto opacity">  
 							<div class="c-100 justify-content-end">
-								<a href="#converse-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
-								<a href="#converse-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open "></div></a>
-								<a href="#converse-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette "></div></a>
-								<a href="#converse-gallery-popup" data-tooltip="#icon-info-gallery-popup" class="info-icon open-popup"><div class="ion-grid "></div></a>
+								<a href="#akg-xr-popup" data-tooltip="#icon-info-3d-popup" class="info-icon open-popup"><div class="ion-android-add-circle"></div></a>
+								<a href="#akg-model-popup" data-tooltip="#icon-info-model-popup" class="xs-down-h info-icon open-popup"><div class="ion-android-open "></div></a>
+								<a href="#akg-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon open-popup"><div class="ion-android-color-palette "></div></a>
 							</div>
 						</div>
 					</div>		
@@ -296,12 +224,12 @@
 						<div class="navigation-wrapper">	
 							<div class="keen-slider checkvisibility dark-theme" data-xs="1" data-sm="1" data-lg="1" data-xl="1">
 								<div class="section-logo akg-logo dark-theme bg-none hw100"></div>		
-								<div class="slide zoomable full medium-theme md-up-h">
+								<div class="slide zoomable full medium-theme md-up-remove">
 									<img class="lazy cover multiply" data-src="akg/images/01.png">
 								</div>								
 								<div class="slide full md-down-h">
 									<div class="container-xl-up row m0 hw100 relative mr-auto ml-auto">						
-										<div class="col-lg-4 ml-auto mb-5-md-down c-all xs-down-h">
+										<div class="col-lg-4 ml-auto mb-5-md-down c-all">
 											<div class="txt-l">
 												<span class="d-block text-uppercase">Product Design</span>
 												<h2 class="s-t">AKG <strong>Over-ear Headphones</strong></h2>
@@ -388,9 +316,15 @@
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
-							<div class="dark-theme">
+							<div class="dark-theme" style="padding-bottom: calc(829/799 * 100%);">
 								<iframe 
 								id=""
+								style="height: 100%;
+								left: 0;
+								position: absolute;
+								top: 0;
+								width: 100%;
+								"
 								class="xr-auto lazy flex"							
 								src=""																		
 								data-src="akg/xr/akgxr.html"																		
@@ -400,9 +334,15 @@
 								</iframe>
 							</div>
 						</div>						
-						<div class="item col-md-6 col-xs-12 col-xs-6-landscape">
-							<div class="dark-theme">
-								<iframe							
+						<div class="item col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
+							<div class="dark-theme" style="padding-bottom: calc(829/799 * 100%);">
+								<iframe		
+								style="height: 100%;
+								left: 0;
+								position: absolute;
+								top: 0;
+								width: 100%;
+								"								
 								class="config-auto lazy dark-theme flex"		
 								data-src="akg/web/keyshot-configurator.html"												
 								frameborder="0"
@@ -718,23 +658,16 @@
 							</div>			
 						</div>
 					</div>
-					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium keen" data-xs="1" data-sm="2" data-lg="2" data-xl="auto">	 
-							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/01.png" class="lazy"></div>							
-							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
-							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/03.png" class="lazy"></div>							
-							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/04.png" class="lazy"></div>														
-						</div>
-					</div>
-					<div class="navigation-wrapper arrows-in light-theme">		
+
+<!-- 					<div class="navigation-wrapper arrows-in light-theme">		
 						<div class="keen-slider scrollable small keen"  data-xs="1" data-sm="4" data-lg="4" data-xl="5">	 
 							<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/01.png" class="lazy"></div>							
 							<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
 							<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/03.png" class="lazy"></div>							
 							<div class="slide zoomable" data-props="1920/1080"><img data-src="Converse/images/04.png" class="lazy"></div>									
 						</div>
-					</div>					
-					<div class="relative dark-theme">
+					</div>	 -->				
+<!-- 					<div class="relative dark-theme">
 						<iframe 
 						class="xr-auto lazy soft-zoom" 
 						data-src="Converse/xr/conversexr.html"																			
@@ -742,8 +675,8 @@
 						scrolling="no"
 						>
 						</iframe>						
-					</div>	
-					<div class="animate-in-view light-theme multiply col-lg-12 vh75 iframe-container">
+					</div> -->	
+					<div class="animate-in-view xs-down-h light-theme multiply col-lg-12 vh75 iframe-container">
 						<iframe 
 						data-src="Converse/webgl/pen.html"
 						class="lazy unload multiply"																																						
@@ -754,8 +687,28 @@
 							<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
 							<div data-tooltip="#reload-model" class="info-icon ion-refresh"></div>	
 						</div>	
+					</div>
+					<div class="animate-in-view xs-down-h light-theme multiply col-lg-12 vh50 iframe-container">
+						<iframe 
+						data-src="Converse/webgl/rendered.html"
+						class="lazy unload multiply"																																						
+						frameborder="0"
+						scrolling="no">			 	 
+						</iframe>
+						<div class="ignore model-controls">
+							<div data-tooltip="#modelcontrols-info-popup" class=" ignore info-icon ion-information-circled"></div>
+							<div data-tooltip="#reload-model" class="info-icon ion-refresh"></div>	
+						</div>	
 					</div>									
-					<div id="grid" class="item row m0 h100 relative x-theme">					
+					<div id="grid" class="item row m0 h100 relative">		
+					<div class="navigation-wrapper arrows-in">		
+						<div class="keen-slider scrollable medium keen  dark-theme" data-xs="1" data-sm="2" data-lg="2" data-xl="auto">	 
+							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/01.png" class="lazy"></div>							
+							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/02_2.png"  style="object-position: 13% 46%;" class="lazy"></div>							
+							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/03.png" class="lazy"></div>							
+							<div class="slide zoomable" data-props="16/9"><img data-src="Converse/images/04.png" class="lazy"></div>														
+						</div>
+					</div>					
 						<div class="col-lg-6 col-md-6 col-xs-6 c-all textoverlay h-auto">				
 							<div class="item zoomable hw100 dark-theme">
 								<img src="" data-src="Converse/images/01.png" class="lazy cover " >	
@@ -781,7 +734,7 @@
 							</div>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-							<div class="dark-theme">
+							<div class="dark-theme"  style="padding-bottom: calc(498/1200* 100%);">
 								<iframe 
 								id=""
 								class="xr-auto lazy flex"							
@@ -794,7 +747,7 @@
 							</div>
 						</div>	
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-							<div class="dark-theme">
+							<div class="dark-theme" style="padding-bottom: calc(498/1200* 100%);">
 								<iframe							
 								class="config-auto lazy dark-theme flex"		
 								data-src="Converse/web/keyshot-configurator.html"												
@@ -962,7 +915,7 @@
 						</div>			
 					</div>		
 					<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-						<div class="light-theme">
+						<div class="light-theme" style="padding-bottom: calc(1080/1920 * 100%);">
 							<iframe 							
 							class="xr-auto lazy"							
 							src=""																		
@@ -1099,19 +1052,19 @@
 							<div class="slide full row m0">
 								<div class="col-lg-6 h100">
 									<div class="col-lg-12 textoverlay-desktop light-theme zoomable">								
-										<img data-src="Bagheera/images/twisted.png" class="isvisible-lazy cover">						
+										<img data-src="Bagheera/images/twisted.png" class="lazy cover">						
 									</div>								
 								</div>	
 								<div class="col-lg-6 md-down-h h100">
 									<div id="outer">
 									  <div id="inner_fixed">
 											<div class="col-lg-12 textoverlay light-theme zoomable">		
-													<img data-src="Bagheera/images/top.png" class="isvisible-lazy cover">		
+													<img data-src="Bagheera/images/top.png" class="lazy cover">		
 											</div>
 									  </div>
 									  <div id="inner_remaining" class="pt-0">
 											<div class="col-lg-12 textoverlay light-theme zoomable">		
-													<img data-src="Bagheera/images/blue.jpg" class="isvisible-lazy cover">		
+													<img data-src="Bagheera/images/blue.jpg" class="lazy cover">		
 											</div>
 									  </div>
 									</div>					  						
@@ -1171,7 +1124,7 @@
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium keen"  data-xs="1" data-sm="2" data-lg="3" data-xl="4">	 
+						<div class="keen-slider scrollable medium keen h-auto"  data-xs="1" data-sm="2" data-lg="3" data-xl="4">	 
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																																								
@@ -1227,7 +1180,7 @@
 							</div>			
 						</div>	
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small keen dark-theme"  data-xs="2" data-sm="2" data-lg="3" data-xl="5">	 
+						<div class="keen-slider scrollable small keen dark-theme h-auto"  data-xs="2" data-sm="2" data-lg="3" data-xl="5">	 
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
 							<div class="slide zoomable"><img data-src="Bagheera/images/twisted.png" class="lazy"></div>																										
@@ -1238,7 +1191,7 @@
 						</div>
 					</div>											
 						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-							<div class="medium-theme">
+							<div class="medium-theme" style="padding-bottom: calc(890/1583* 100%);">
 								<iframe 
 								class="xr-auto lazy"							
 								src=""																		
@@ -1285,7 +1238,7 @@
 					<div class="navigation-wrapper">				
 					<div class="keen-slider checkvisibility dark-theme"  data-xs="1" data-sm="1" data-lg="1" data-xl="1">
 						<div class="section-logo haglofs-logo dark-theme bg-none hw100"></div>		 
-						<div class="slide full row m0 xs-down-h">
+						<div class="slide full row m0 lg-down-h">
 							<div class="col-lg-4 col-sm">
 								<div class="row c-lg">
 									<div class="col-lg-8 ppp2 txt-l">
@@ -1306,7 +1259,8 @@
 								>
 								</iframe>
 							</div>
-						</div>						
+						</div>
+						<div class="slide zoomable"><img data-src="haglofs/xr/0_0.png" class="lazy xl-up-h"></div>						
 						<div class="slide full">
 							<div class="item  h100 c-all">			
 							  <div class="col-lg-7">
@@ -1321,15 +1275,23 @@
 						</div>			
 					</div>
 					</div>					
-					<div class="section-hero x-theme xl-up-h">
+<!-- 					<div class="section-hero x-theme xl-up-h">
 						<div class="section-hero-container dark-theme">
 						  <div class="col-xs-12">								
 								<img class="lazy" src="" data-src="haglofs/xr/0_0.png">															
 						  </div>	
 						</div>							  
-					</div>
+					</div> -->
+						<div class="item col-lg-12 c-all">			
+							<div class="text-box c-all txt-l">
+								<div class="">
+									<p class="ignore">Short bladed knife for Outdoor Equipment Company Haglöfs.
+									</p>
+								</div>
+							</div>										
+						</div>					
 					<div class="navigation-wrapper arrows-in dark-theme">		
-						<div class="keen-slider scrollable medium keen"  data-xs="1" data-sm="2" data-lg="3" data-xl="3">	 
+						<div class="keen-slider scrollable medium keen h-auto"  data-xs="1" data-sm="1" data-lg="3" data-xl="2">	 
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
@@ -1340,7 +1302,7 @@
 						</div>
 					</div>
 					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small five keen"  data-xs="1" data-sm="2" data-lg="4" data-xl="5">	 
+						<div class="keen-slider scrollable small five keen h-auto"  data-xs="1" data-sm="2" data-lg="2" data-xl="3">	 
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>
@@ -1350,15 +1312,8 @@
 							<div class="slide zoomable"><img data-src="haglofs/images/blade.png" class="lazy"></div>																									
 						</div>
 					</div>					
-					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">								
-						<div class="item col-lg-12 c-all">			
-							<div class="text-box c-all txt-l">
-								<div class="">
-									<p class="ignore">Short bladed knife for Outdoor Equipment Company Haglöfs.
-									</p>
-								</div>
-							</div>										
-						</div>							
+					<div id="grid" class="item row m0 h100 relative x-theme">								
+						
 						<div class="col-lg-6 col-md-6 col-xs-6 c-all textoverlay h-auto">				
 							<div class="item zoomable hw100 medium-theme">
 								<img src="" data-src="akg/images/01.png" class="lazy cover ">	
@@ -1371,8 +1326,8 @@
 							<p class="img-text hidden"></p>					
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-12 col-sm-6 col-xs-12">
-							<div class="light-theme">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="dark-theme" style="padding-bottom: calc(440/1600 * 100%);">
 								<iframe 
 								class="xr-auto lazy"							
 								src=""																		
@@ -1403,10 +1358,10 @@
 				</div>
 				<div class="portfolio-section x-theme">
 				<div class="navigation-wrapper">
-					<div class="keen-slider checkvisibility dark-theme md-down-h">
+					<div class="keen-slider checkvisibility dark-theme">
 						<div class="section-logo alcon-logo dark-theme bg-none hw100"></div>		 
 						<div class="slide full row m0">
-						  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape hw100">								
+						  <div class="col-lg-6 col-md-12 col-sm-6 col-xs-12 col-xs-6-landscape hw100">								
 								<iframe 
 								class="lazy xr-auto"							
 								src=""																		
@@ -1458,7 +1413,7 @@
 						</div>			
 					</div>
 				</div>							
-					<div class="navigation-wrapper arrows-in dark-theme">		
+<!-- 					<div class="navigation-wrapper arrows-in dark-theme">		
 						<div class="keen-slider scrollable medium keen"  data-xs="1" data-sm="2" data-lg="2" data-xl="3">	 
 							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
@@ -1468,19 +1423,7 @@
 							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
 							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
 						</div>
-					</div>
-					<div class="navigation-wrapper arrows-in light-theme">		
-						<div class="keen-slider scrollable small keen"  data-xs="2" data-sm="2" data-lg="3" data-xl="4">	 
-							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
-							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>																								
-						</div>
-					</div>						
-					<div id="grid" class="xl-up-h item row m0 h100">					
+					</div> -->
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1501,7 +1444,20 @@
 									</div>
 								</div>
 							</div>										
-						</div>								
+						</div>						
+					<div class="navigation-wrapper arrows-in light-theme">		
+						<div class="keen-slider scrollable small keen"  data-xs="2" data-sm="2" data-lg="3" data-xl="4">	 
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//0_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//25_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//12_0.png" class="lazy"></div>
+							<div class="slide zoomable"><img data-src="alcon/xr//6_0.png" class="lazy"></div>																								
+						</div>
+					</div>						
+					<div id="grid" class="xl-up-h item row m0 h100">					
+							
 						<div class="col-lg-6 col-md-6 col-xs-6 c-all textoverlay h-auto">				
 							<div class="item zoomable hw100 dark-theme">
 								<img src="" data-src="alcon/xr//25_0.png" class="lazy cover ">	
@@ -1582,10 +1538,10 @@
 				</div>
 				<div class="portfolio-section">
 					<div class="navigation-wrapper">				
-						<div class="keen-slider checkvisibility dark-theme">
+						<div class="keen-slider checkvisibility dark-theme" data-xs="1" data-sm="1" data-lg="1" data-xl="1">
 							<div class="section-logo specialized-logo dark-theme bg-none hw100"></div>		 
-							<div class="slide row m0">
-										<div class="col-lg-6 c-all txt-l">
+							<div class="slide full row m0">
+										<div class="col-lg-6 pt-h c-all txt-l">
 											<div>										
 												<h2 class="mb-4 s-t">FULLFACE<strong> MTB HELMET </strong></h2>								
 												<p>Exercise in form and modeling, just for fun and practise. <strong>[wip]</strong></p>
@@ -1606,7 +1562,7 @@
 										</div>
 							</div>				
 							<div class="slide">
-								<img class="isvisible-lazy bg-black" data-src="Specialized/images/specialized.jpg">
+								<img class="lazy bg-black" data-src="Specialized/images/specialized.jpg">
 								<div class="dark-theme overlay c-all">
 									<div class="text-animate c-all">
 										<h3 class="h3 txt-l"> <strong>Specialized </strong> Form Language</h3>		
@@ -1701,7 +1657,7 @@
 							<div class="slide zoomable"><img data-src="Specialized/xr//0_5.png" class="lazy"></div>																							
 						</div>
 					</div>						
-					<div id="grid" class="xl-up-h item row m0 h100 relative x-theme">					
+					<div id="grid" class="item row m0 h100 relative x-theme">					
 						<div class="col-lg-12 x-theme">
 							<div class="item c-all">			
 								<div class="text-box c-all txt-l">
@@ -1744,14 +1700,14 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>
-						<div class="col-lg-3 col-md-6 col-xs-12 c-all textoverlay h-auto">				
+						<div class="col-lg-6 col-md-6 col-xs-12 c-all textoverlay h-auto">				
 							<div class="item zoomable hw100 pop-theme">
 								<img src="" data-src="Specialized/xr//0_5.png" class="lazy cover ">	
 								<p class="img-text hidden"></p>
 							</div>			
 						</div>						
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xs-6-landscape">
-							<div class="dark-theme">
+							<div class="dark-theme" style="padding-bottom: calc(829/799 * 100%);">
 								<iframe 
 								class="xr-auto dark-theme lazy"							
 								src=""																		
@@ -2757,7 +2713,7 @@
 							</div>	
 						</div>
 						<div class="col-lg-6 col-md-6 textoverlay">
-							<div class="hw100">								
+							<div class="hw100" style="padding-bottom: calc(1080/1920 * 100%);">								
 								<iframe 
 								class="lazy soft-zoom" 
 								data-src="poc/xr/pocxr.html"																				
@@ -3399,10 +3355,20 @@
 		
 		//must be placed before main.js as it needs classes from x-theme to be able to execute
 		
-		$('.xr-auto').closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');		
-		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong></strong>CMF</h3></div>');		
-		$('.config-auto').closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>CMF </strong></h3></div><a href="#akg-webconfig-popup" style="display: block; right: 0; position: absolute; top: 0;" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open "></div></a>');
+		//$('.xr-auto').closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');	
 
+	  $(".xr-auto").each(function(){
+			var brand = $(this).closest('.brand-section').attr('id');
+			//console.log('config src is ', brand);
+			$(this).closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l mb-0"><strong>3D </strong>View</h3><a href="#'+brand+'-xr-popup" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open "></div></a></div>');		 
+			//$(this).closest('div').prepend('<div class="xrtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong>3D </strong>View</h3></div>');	
+	  });
+		
+	  $(".config-auto").each(function(){
+			var brand = $(this).closest('.brand-section').attr('id');
+			$(this).closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l mb-0"><strong>CMF </strong></h3><a href="#'+brand+'-webconfig-popup" data-tooltip="#icon-info-config-popup" class="info-icon config-open-large open-popup"><div class="ion-android-open "></div></a></div>');		 
+			//$(this).closest('div').prepend('<div class="configtext"><h3 class="h3 txt-l text-xs-center mb-0"><strong></strong>CMF</h3></div>');
+	  });
 		
 		var theme = 'light';
 		var this_theme; 			
@@ -3692,7 +3658,7 @@
 			 thisSlider.closest('.navigation-wrapper').find('.arrow--left').on('click', function() {
 			 slider.prev()
 			 });			 		 
-			keenlazyLoadstart();
+			//keenlazyLoadstart();
 			 //console.log(checkTheme);
 		  })
 		  slider.on("optionsChanged", () => {
@@ -3813,18 +3779,7 @@
 		  loop: true,
 		  mode: "snap",
 		  rtl: false,
-        breakpoints: {
-          "(min-width: 575px)": {
-            slides: { perView: 1},
-          },
-          "(min-width: 768px)": {
-            slides: { perView: 2},
-          },
-          "(min-width: 992px)": {
-            slides: { perView: 3},
-          },
-        },		  
-		  slides: { perView: "1" },
+		  slides: { perView: "auto" },
 		  }, [
 		  (reviews_slider) => {
             let timeout
@@ -3925,6 +3880,7 @@
 		<script>
 
 		var lazyLoadInstance = new LazyLoad({
+		//container: document.querySelector("#bapp")
 		});
 
 		var lazyLoadInstancePdf = new LazyLoad({
@@ -4098,7 +4054,7 @@
 
 						$('.animate-in-view').each(function(){
 							 if ( !$(this).is(":in-viewport") ){							 
-							console.log('not in viewport');
+							//fconsole.log('not in viewport');
 							$(this).find("iframe").contents().find('body').addClass('jajj').keypress();
 							 } else {
 							 //$('.animate-in-view iframe').click();
