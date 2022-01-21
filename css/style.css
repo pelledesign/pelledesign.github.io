@@ -13314,9 +13314,9 @@ figure figcaption {
   height: 400px;
 }
 
-/* .portfolio-section {
-  background: #90a8af;
-} */
+.portfolio-section {
+  background: #fff;
+}
 
 .work-thumb {
   display: block;
@@ -18092,13 +18092,13 @@ height:100vh;
 }
 
 .section-hero{
-padding:3px;
+/* padding:3px; */
 height: 60vh;
 }
 
-@media (max-width: 575px) and (orientation:landscape) {
+@media (max-width: 767px) and (orientation:landscape) {
 .section-hero {
-height:100vh;	
+height:95vh;	
 }
 }
 
@@ -18316,12 +18316,14 @@ fill:red;
 #grid { 
 margin-left: 3px;
 background:#fff;
+padding-top:3px;
 }
 
 #grid > div:not(.separator):not(.ignore) { 
 padding:3px;
 padding-top:0;
 padding-left:0;
+max-height:95vh;
 }
 
 /* @media (max-width: 768px) and (orientation:landscape) {
@@ -19103,7 +19105,7 @@ img:not([src]):not([srcset]) {
 .thecuts2 {
   opacity: 0;
   transition: opacity 1s;
-  max-width:250px
+  max-width:20%;
 }
 
 .thecuts2.loaded {
@@ -19215,6 +19217,7 @@ width: 100%;
 
 .keen-slider {
 height:var(--slider-height);
+max-height:100vh;
 }
 
 @media (max-width:576px) and (orientation:portrait) {
