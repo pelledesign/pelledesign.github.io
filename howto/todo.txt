@@ -1,8 +1,8 @@
 
 function both (
-image-zoom bgs
-grid
-about ugly<
+
+fadout too slow
+about ugly
 kee buttons / slider indicator small
 
 decide layout for all portfoliosections
