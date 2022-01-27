@@ -1,9 +1,8 @@
 
 function both (
 
-fadout too slow
+webgl stop
 about ugly
-kee buttons / slider indicator small
 
 decide layout for all portfoliosections
 image-zoom scroll on desktop (shrink viewport to see)

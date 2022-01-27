@@ -1,0 +1,120 @@
+<script>
+
+<!-- draggable -->
+  const slider = document.querySelector('#scrollthis');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+    cancelMomentumTracking();
+  });
+  
+  
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  
+  
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+    beginMomentumTracking();
+  });
+  
+  
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 1; //scroll-fast
+    var prevScrollLeft = slider.scrollLeft;
+    slider.scrollLeft = scrollLeft - walk;
+    velX = slider.scrollLeft - prevScrollLeft;
+  });
+  
+  // Momentum 
+  
+  var velX = 0;
+  var momentumID;
+  
+  slider.addEventListener('wheel', (e) => {
+    cancelMomentumTracking();
+  });  
+  
+  function beginMomentumTracking(){
+    cancelMomentumTracking();
+    momentumID = requestAnimationFrame(momentumLoop);
+  }
+  function cancelMomentumTracking(){
+    cancelAnimationFrame(momentumID);
+  }
+  function momentumLoop(){
+    slider.scrollLeft += velX;
+    velX *= 0.95; 
+    if (Math.abs(velX) > 0.5){
+      momentumID = requestAnimationFrame(momentumLoop);
+    }
+  }
+
+
+	<!-- scroll-behaviour -->
+	$('#scrollthis').on('touch mousewheel', function(event) {
+	$(this).css("scroll-behavior","smooth");
+	});
+	
+	$('#scrollthis').on('mousedown', function(event) {
+	$(this).css("scroll-behavior","unset");
+	});
+
+	<!-- mousewheel -->
+	$('#scrollthis').find('.item').eq(0).addClass('active');	
+	var pos = 0;
+	
+	$('#scrollthis').on('mousewheel', function(event) {
+	
+		var el = $(this);
+		var amount = $('#scrollthis .item').length;
+		var delta = Math.max(-1, Math.min(1, (event.originalEvent.wheelDelta || -event.originalEvent.detail)));
+		var thisIndex;
+		
+		el.find('.item').eq(11).addClass('last-item');
+console.log('last item position is: ', el.find('.item').eq(11).position().left)		
+		
+		if (event.deltaY > 0) {	
+			thisIndex = el.find('.item.active').index();
+			console.log('thisIndex is: ', thisIndex);
+			if (!(thisIndex + 2 > amount)) {
+				el.find('.active').removeClass('active');
+				el.find('.item').eq(thisIndex + 1).addClass('active');		
+				
+				el.animate({scrollLeft: pos + $('.active').position().left}, 0);
+
+				pos = pos + $('.active').position().left
+				console.log('active slide position is: ', pos);
+				event.preventDefault();								
+			}		
+		} 
+		else if (event.deltaY < 0) {  
+			var thisIndex = el.find('.item.active').index();
+			console.log('thisIndex is: ', thisIndex);
+			upComingIndex = el.find('.item.active').index() - 1;
+			console.log('thisIndex is: ', thisIndex, 'Upcoming Index is: ', upComingIndex);
+			if (!(upComingIndex - 1 < -1)) {			
+			el.find('.active').removeClass('active'); //removes it before it's used
+			el.find('.item').eq(thisIndex - 1).addClass('active');
+			}
+			el.animate({scrollLeft: pos + $('.active').position().left}, 0);
+
+
+		pos = pos + $('.active').position().left
+		console.log('active slide position is: ', pos);
+		event.preventDefault();			
+		} 				
+	})
+</script>

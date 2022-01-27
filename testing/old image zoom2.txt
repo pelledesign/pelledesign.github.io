@@ -1,0 +1,93 @@
+		<!-- image zoom -->
+		<script>	
+			//$('.zoomable').find('img').on('load',function(){
+			//var apas = this.naturalWidth;
+			//console.log(apas); 
+			//});	
+			//show zoom icon on touch / add zoom-icon 
+			$('.zoomable').prepend('<div class="ion-ios-plus c-absolute"></div>');
+			
+			//animations
+			$('.zoomable').on('touchstart touchend mouseenter mouseleave',function(){
+			$(this).find('img').toggleClass( 'opacity-05' );
+			$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color');					
+			});
+			
+		<!-- zoom-icon function -->		
+		$('.zoomable').on('click', function() { <!-- .zoom-icon,  -->
+			var brand ="";
+			// select popup background based on background of .item 	
+			if ($(this).hasClass('dark-theme') || $(this).closest('.horizontal-snap').hasClass('dark-theme')){
+			var bg = '#141414';
+			var theme = 'dark-theme';			
+			}
+			else if ($(this).hasClass('light-theme') || $(this).closest('.horizontal-snap').hasClass('light-theme')){
+			var bg = '#fff';
+			var theme = 'light-theme';			
+			}
+			else if ($(this).hasClass('medium-theme') || $(this).closest('.horizontal-snap').hasClass('medium-theme')){
+			var bg = '#e7e8e9'; 
+			var theme = 'medium-theme';	
+			}
+			else if ($(this).hasClass('pop-theme')){
+			var brand = $(this).closest('.brand-section').attr('id');
+			var bg = '#e7e8e9'; 
+			var theme = 'pop-theme';
+	
+			console.log(theme)
+			}
+			<!-- fallback theme -->
+			else {
+			var bg = '#fff';		
+			var theme = 'light-theme';		
+			alert('no bg');
+			};
+
+			//check if image got blend-mode
+			var blendmode = '';
+			if($(this).closest('.item').find('img').hasClass('multiply')){
+				 var blendmode = 'multiply';
+			}		
+
+			//select contain or cover depending on screen orientation 		
+			if(window.innerHeight > window.innerWidth){
+				 var bgsize = 'cover';
+			}	 
+			else {
+			var bgsize = 'contain' 
+			};
+
+			//create popup
+			var img = $(this).find('img').first();
+			var src = img.attr("src");
+			var nWidth = img.prop('naturalWidth')
+			var nHeight = img.prop('naturalHeight')
+			var iAspectratio = nWidth / nHeight;
+			console.log(nWidth,'x',nHeight);
+			//console.log(src);
+			var modal;
+			var scrollwidth = '99vh';
+			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
+			modal = $('<div id="scroll" class='+theme+'><div class="scroll-container hw100" style="overflow-x:scroll"><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'; width: calc(97vh * '+iAspectratio+');"></div><button class="mfp-close">&#215;</button></div></div>').css({
+			  //backgroundColor: bg,
+			  backgroundSize: bgsize,
+			}).addClass(brand).click(function(){
+			  removeModal();
+			}).appendTo('body');
+
+			//scroll image to center position
+			//var imglength = $(this).next('img').width();	
+			var $container = $(".scroll-container");
+			var $img = $(".scroll-container div");
+			var cWidth = $container.width();
+			var iWidth = $img.width();			
+			var left = (iWidth - cWidth) / 2; 
+
+			$container.scrollLeft(left);
+
+			$('body').on('keyup.modal-close', function(e){
+			if(e.key==='Escape'){ removeModal(); } 
+			});
+
+			});
+		</script>

@@ -1,0 +1,24 @@
+						<script>
+							var height = '40';
+							
+							//set slider height
+							$('#akg-slider').css('height', height + 'vh');
+							
+							//set width from data-props else set width to height
+							$('#akg-slider .slide').each(function(){
+								var el = $(this);
+							
+								if (el.attr('data-props')){
+								
+									dataProps = el.attr('data-props');
+									var toParse = dataProps.split('/')[0];
+									var toParse2 = dataProps.split('/')[1];									
+									var ratio = parseFloat(toParse) / parseFloat(toParse2);	
+									
+									el.css({minWidth: height * ratio +'vh'});
+								}
+								else {
+									el.css({minWidth: height * 1 +'vh'});
+								}
+							});
+						</script>
