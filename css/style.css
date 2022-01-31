@@ -94,10 +94,12 @@ recommended 50 - 70 */
 .darkBg {
 /* background-color: #242424; */
 background-color: #212121;
+transition: background-color 1s;
 }
 
 .lightBg {
 background-color: #fff;
+transition: background-color 1s;
 }		
 
 
@@ -13801,6 +13803,17 @@ opacity:0.5 !important;
 transition: .3s ease;
 }
 
+/* @media (min-width: 576px) {
+.slide.full .opacity-05 {
+opacity:1 !important;	
+transition: .3s ease;
+}
+
+.slide.full  .ion-ios-plus{
+display:none;
+}
+} */
+
 @media (max-width: 576px) {
 .opacity-0-xs-down {
 opacity:0 !important;	
@@ -16824,6 +16837,13 @@ padding:70px;
 }
 }
 
+@media (min-width:768px) { 
+.text-box-lg {	
+padding:10%;
+/* overflow-y:auto; */
+}
+}
+
 .text-animate {
 transition: .3s ease;
 overflow-y:scroll;
@@ -16846,7 +16866,7 @@ height:100%;
 
 .text-animate > div:first-child > *:first-child:not(.ignore),
 .text-box > div:first-child > *:first-child:not(.ignore) {
-padding-top:90px;	
+padding-top:40px;	
 }
 
 
@@ -18317,10 +18337,10 @@ padding-right:2rem;
 }
 }
 
-#myservices h2, #myservices h3 {
+/* #myservices h2, #myservices h3 {
 color:#d9d2b3;	
 }
-
+ */
 #reviews-slider p {
 	font-size:11px;
 }
@@ -19564,8 +19584,9 @@ text-align:right !important;
 
 iframe {
 height: 100%;
-								left: 0;
-								position: absolute;
-								top: 0;
-								width: 100%;	
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;	
 }
+

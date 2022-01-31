@@ -1,11 +1,13 @@
 
 function both (
 
+image-zoom scroll on desktop (shrink viewport to see) - or use max-width
+
+export all portfolio slides as  16/9 svg
 webgl stop
 about ugly
 
 decide layout for all portfoliosections
-image-zoom scroll on desktop (shrink viewport to see)
 
 IFRAMES
 show on click with keen-reload - decide first what'll be in the sliders
