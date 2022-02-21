@@ -1,22 +1,21 @@
 
 function both (
 
-image-zoom scroll on desktop (shrink viewport to see) - or use max-width
-
+remove xr, iframes buttons on top
 export all portfolio slides as  16/9 svg
-webgl stop
-about ugly
+image-zoom scroll on desktop (shrink viewport to see) - or use max-width
 
 decide layout for all portfoliosections
 
-IFRAMES
-show on click with keen-reload - decide first what'll be in the sliders
-animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - uZnload on keen transition end? = get rid of keen exept for "process?" - define what should be in there. OR ANIMATE= 0 WHEN NOT VISIBLE!	
-	
-check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
-compare layout with pdf - use pdf
-drag web tools screen to detect anomalities
+	function iframes (
+	show on click with keen-reload - decide first what'll be in the sliders
+	animated iframes - where + lazy unload + choppy transition anmatio due to lazy load of iframes - uZnload on keen transition end? = get rid of keen exept for "process?" - define what should be in there. OR ANIMATE= 0 WHEN NOT VISIBLE!	
+	)
 
+	function finsish (
+	check all website backups & pick the best - test light / dark theme & decide which is best for desktop & mobile - gråsvart som bild i tfn etc + check all devices + browsers
+	compare layout with pdf - use pdf
+	drag web tools screen to detect anomalities)
 )
 
 
@@ -113,3 +112,4 @@ added on-click trigger to about_slider_mobile in main.js
 removed keenlazyLoadstart(); in slider.on created
 )
 
+683x768
