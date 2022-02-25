@@ -18331,11 +18331,12 @@ padding-top:var(--grid-padding);
 /* padding-bottom:3px; */
 }
 
+
 #grid > div:not(.separator):not(.ignore) { 
 padding: var(--grid-padding);
 padding-top:0;
 padding-left:0;
-max-height:95vh;
+/* max-height:95vh; */
 }
 
 
@@ -19612,3 +19613,19 @@ top: 0;
 width: 100%;	
 }
 
+/* stroke {
+fill:blue !important;	
+}
+path {
+fill:green !important;	
+
+} */
+
+#poc svg #fillthis path{
+stroke: none !important;	
+fill: orange !important;
+}
+#poc svg #strokethis path{
+stroke: yellow !important;	
+fill: none !important;
+}
