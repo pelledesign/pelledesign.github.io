@@ -30,14 +30,7 @@
 		  
 	});
 
-	$(".svg-lazy").each(function() {  
-		var el = $(this); 
-		el.on('load', function() {
-		var svgUrl = el.attr('data-svg');
-		console.log(svgUrl);
-		el.closest('div').load(svgUrl); 		  
-	});
-	});
+
 
 /* 	$(".svg-lazy").on('load', function() {  
 		var el = $(this); 

@@ -1112,7 +1112,7 @@
 								<p class="img-text hidden"></p>
 							</div>			
 						</div> -->
-							<div class="row m0 dark-theme h-auto">
+							<div class="imgbox dark-theme h-auto">
 								<div class="col-lg-6 flare zoomable">
 									<img data-src="images/1x1.png" class="lazy svg-lazy" data-svg="poc/images/01_half_1.svg">
 								</div>	
@@ -3791,7 +3791,7 @@
 			var nextSlide = $(slider.slides[nextIndex]);
 			var lastlastSlide = $(slider.slides[lastlastIndex]);
 			
-			console.log('Going to index:',upcomingSlideIndex, 'Upcoming index is:',nextIndex, 'Tail-index is:',lastIndex, 'Tail2-index is:',lastlastIndex, 'Slide direction is:',sliderDir);
+			//console.log('Going to index:',upcomingSlideIndex, 'Upcoming index is:',nextIndex, 'Tail-index is:',lastIndex, 'Tail2-index is:',lastlastIndex, 'Slide direction is:',sliderDir);
 			
 			nextSlide.find('.lazy').each(function() {
 				var dataSrc = $(this).attr('data-src');
@@ -3890,7 +3890,7 @@
 		  slider.on("slideChanged", () => {
 			 updateClasses()
 			 initBar();	  
-			 keenlazyLoad();
+			 //keenlazyLoad();
 			 
 			 var thisSlider = $(slider.container);
 			 var thisSlide = $(slider.slides[slider.track.details.rel]);
@@ -4083,7 +4083,7 @@
 		
 		</script>
 				
-		<!-- verlok lazy load -->
+		<!-- verlok & svg lazy load -->
 		<script>
 
 		var lazyLoadInstance = new LazyLoad({
@@ -4094,42 +4094,46 @@
 		container: document.querySelector("#pdf")
 		});
 
-
+	$(".svg-lazy").each(function() {  
+		var el = $(this); 
+		el.on('load', function() {
+		var svgUrl = el.attr('data-svg');
+		//console.log(svgUrl);
+		el.closest('div').load(svgUrl); 		  
+	});
+	});
 		
 		</script>
 		
 		<!-- image zoom -->
 		<script>	
-
-			//show zoom icon on touch / add zoom-icon 
-			//$('.zoomable').prepend('<div class="ion-ios-plus c-absolute"></div>');
-
 			
          $(".zoomable").each(function(){
 			var el =  $(this);
 			var getimagesize = $(this).width();
-			console.log(getimagesize);
-		if  (getimagesize < 1000) { 			
-			el.prepend('<div class="ion-ios-plus c-absolute hidden"></div>');
-		}	
+
+			if  (getimagesize < 1000) { 			
+				el.prepend('<div class="ion-ios-plus c-absolute hidden"></div>');
+			}	
          });	
 			
 			$('.zoomable').on('touchstart touchend mouseenter mouseleave',function(){
 			var getimagesize = $(this).width();
 			if  (getimagesize < 1000) { 			
-						$(this).find('img').toggleClass( 'opacity-05' );
-						$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color').toggleClass('hidden');			
+				$(this).find('img').toggleClass( 'opacity-05' );
+				$(this).find('.ion-ios-plus').toggleClass('ion-ios-plus-color').toggleClass('hidden');			
 			}			
 			});			
-			//animations
 
 			
 		<!-- zoom-icon function -->		
-		$('.zoomable').on('click', function() { <!-- .zoom-icon,  -->
+		$('.zoomable').on('click', function() {
 			var brand ="";
 			var getimagesize = $(this).width();
-			console.log(getimagesize);
-		if  (getimagesize < 1000) { 	
+			//console.log(getimagesize);
+		if  (getimagesize < 1000) { 
+			var brand = $(this).closest('.brand-section').attr('id');		
+			
 			// select popup background based on background of .item 	
 			if ($(this).hasClass('dark-theme') || $(this).closest('.horizontal-snap').hasClass('dark-theme') || $(this).closest('.navigation-wrapper').hasClass('dark-child')){
 			var bg = '#141414';
@@ -4143,12 +4147,9 @@
 			var bg = '#e7e8e9'; 
 			var theme = 'medium-theme';	
 			}
-			else if ($(this).hasClass('pop-theme') || $(this).closest('.navigation-wrapper').hasClass('pop-child')){
-			var brand = $(this).closest('.brand-section').attr('id');
+			else if ($(this).hasClass('pop-theme') || $(this).closest('.navigation-wrapper').hasClass('pop-child')){			
 			var bg = '#e7e8e9'; 
-			var theme = 'pop-theme';
-	
-			console.log(theme)
+			var theme = 'pop-theme';			
 			}
 			<!-- fallback theme -->
 			else {
@@ -4156,7 +4157,8 @@
 			var theme = 'light-theme';		
 			console.log('no bg');
 			};
-
+			console.log(theme, getimagesize)
+			
 			//check if image got blend-mode
 			var blendmode = '';
 			if($(this).closest('.item').find('img').hasClass('multiply')){
@@ -4165,15 +4167,23 @@
 
 			//select contain or cover depending on screen orientation 		
 			if(window.innerHeight > window.innerWidth){
-				 var bgsize = 'cover';
+		   var bgsize = 'cover';
 			}	 
 			else {
 			var bgsize = 'contain' 
 			};
 
 			//create popup
+
 			var img = $(this).find('img').first();
-			if($(img).length) { /* code if found */ } else { console.log('not found')}
+			//var svgEl = $(this).find('svg').clone();
+			var imgBox = $(this).closest('.imgbox').clone();
+			var svgItems = $('svg').length;
+			var svgWidth = $(this).find('svg').attr('width');
+			var svgHeight = $(this).find('svg').attr('height');
+			console.log('svg props', svgWidth, svgHeight, 'amount: ', svgItems);
+			
+
 			var src = img.attr("src");
 			var nWidth = img.prop('naturalWidth')
 			var nHeight = img.prop('naturalHeight')
@@ -4181,14 +4191,12 @@
 			console.log(nWidth,'x',nHeight);
 			//console.log(src);
 			var modal;
-			var scrollwidth = '99vh';
 			function removeModal(){ modal.remove(); $('body').off('keyup.modal-close'); }
-			modal = $('<div id="scroll" class='+theme+'><div class="scroll-container hw100" style="overflow-x:scroll"><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'; width: calc(97vh * '+iAspectratio+');"></div><button class="mfp-close">&#215;</button></div></div>').css({
-			  //backgroundColor: bg,
-			  backgroundSize: bgsize,
-			}).addClass(brand).click(function(){
+			modal = $('<div id="scroll" class='+theme+'><div id='+brand+' class="scroll-container hw100" style="overflow-x:scroll"><div class="scroll-inner" style="background: url(' + src +'); mix-blend-mode: '+blendmode+'; width: calc(97vh * '+iAspectratio+');"></div><button class="mfp-close">&#215;</button></div></div>').addClass(brand).click(function(){
 			  removeModal();
 			}).appendTo('body');
+			//svgEl.appendTo('.scroll-inner');
+			imgBox.appendTo('.scroll-inner').find('.zoomable').removeClass('zoomable');
 
 			//scroll image to center position
 			//var imglength = $(this).next('img').width();	
@@ -4203,10 +4211,10 @@
 			$('body').on('keyup.modal-close', function(e){
 			if(e.key==='Escape'){ removeModal(); } 
 			});
-}
-else {
-console.log('stopped image zoom: size too large')
-}
+			}
+			else {
+			console.log('stopped image zoom: size too large')
+			}
 			});
 		</script>
 				
@@ -4655,4 +4663,4 @@ babbe.find('.tooltip-position').removeClass('bregg');
 		</script>
 
 	</body>
-</html>	
+</html>		

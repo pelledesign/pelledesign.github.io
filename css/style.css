@@ -19623,9 +19623,18 @@ fill:green !important;
 
 #poc svg #fillthis path{
 stroke: none !important;	
-fill: orange !important;
+fill: red !important;
 }
 #poc svg #strokethis path{
 stroke: yellow !important;	
 fill: none !important;
+}
+
+.imgbox {
+margin:0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;	
 }
